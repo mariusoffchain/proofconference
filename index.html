@@ -57,6 +57,7 @@ nav {
   padding: 0 20px !important;
   margin-top: 14px;
 }
+.nav-mobile-cta { display: none; }
 
 /* ══════════════════════════════════════
    HERO — split noir/blanc
@@ -353,10 +354,9 @@ nav {
 }
 
 .prog-item {
-  display: grid; grid-template-columns: 80px 1fr;
-  padding: 14px 0;
+  display: block;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(255,255,255,0.04);
-  gap: 0; align-items: start;
 }
 .prog-item:last-child { border-bottom: none; }
 
@@ -365,7 +365,7 @@ nav {
   font-size: 9px; letter-spacing: 0.15em;
   text-transform: uppercase; opacity: 0.35;
   font-family: 'JetBrains Mono', monospace;
-  padding-top: 3px;
+  margin-bottom: 4px;
 }
 
 .prog-item-title {
@@ -560,6 +560,17 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 0 24px; }
   .nav-links { display: none; }
+  .nav-mobile-cta {
+    display: inline-block !important;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 900;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black); background: var(--white);
+    padding: 6px 14px; margin-left: auto;
+    white-space: nowrap;
+  }
+  .hero-logo-big { max-width: 150px !important; margin-bottom: 24px !important; }
   .hero, .about-split, .venue-split, .tickets-split { grid-template-columns: 1fr; }
   .hero-left { min-height: 60vw; }
   .prog-block { grid-template-columns: 1fr; }
@@ -584,6 +595,7 @@ footer {
     <li><a href="#venue">&lt;venue&gt;</a></li>
     <li><a href="#tickets" class="nav-cta">&lt;get ticket&gt;</a></li>
   </ul>
+  <a href="#tickets" class="nav-mobile-cta">&lt;get ticket&gt;</a>
 </nav>
 
 
@@ -670,10 +682,8 @@ footer {
     <div class="prog-block-right">
       <div class="prog-item">
         <span class="prog-type">event</span>
-        <div>
-          <div class="prog-item-title">Doors open + welcome drinks</div>
+                  <div class="prog-item-title">Doors open + welcome drinks</div>
           <div class="prog-item-desc">Meet the community. The real conversations start here.</div>
-        </div>
       </div>
     </div>
   </div>
@@ -691,10 +701,8 @@ footer {
     <div class="prog-block-right">
       <div class="prog-item">
         <span class="prog-type">talk</span>
-        <div>
-          <div class="prog-item-title" style="color:var(--c-priv)">Proof of Privacy <span class="prog-badge" style="border-color:var(--c-priv);color:var(--c-priv)">40 min</span></div>
+                  <div class="prog-item-title" style="color:var(--c-priv)">Proof of Privacy <span class="prog-badge" style="border-color:var(--c-priv);color:var(--c-priv)">40 min</span></div>
           <div class="prog-item-desc">Why encryption is a fundamental right. How VPNs and Tor protect your identity. What Chat Control means for the future of private communication in Europe.</div>
-        </div>
       </div>
     </div>
   </div>
@@ -712,31 +720,26 @@ footer {
     <div class="prog-block-right">
       <div class="prog-item">
         <span class="prog-type">talk</span>
-        <div>
-          <div class="prog-item-title" style="color:var(--c-dece)">Why decentralization matters <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
+                  <div class="prog-item-title" style="color:var(--c-dece)">Why decentralization matters <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
           <div class="prog-item-desc">How centralized platforms collect your data, silence you — and why decentralization is the structural fix.</div>
         </div>
       </div>
       <div class="prog-item">
         <span class="prog-type">workshop</span>
-        <div>
-          <div class="prog-item-title">Run your own server <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">30 min</span></div>
+                  <div class="prog-item-title">Run your own server <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">30 min</span></div>
           <div class="prog-item-desc">Hands-on: Umbrel or Linux node setup. No third party required.</div>
         </div>
       </div>
       <div class="prog-item">
         <span class="prog-type">talk</span>
-        <div>
-          <div class="prog-item-title">Nostr: own your identity <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
+                  <div class="prog-item-title">Nostr: own your identity <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
           <div class="prog-item-desc">A censorship-resistant protocol. Why it matters for free expression.</div>
         </div>
       </div>
       <div class="prog-item">
         <span class="prog-type">workshop</span>
-        <div>
-          <div class="prog-item-title">Create your Nostr keypair <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
+                  <div class="prog-item-title">Create your Nostr keypair <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
           <div class="prog-item-desc">Set up a client, send your first note. Own your identity.</div>
-        </div>
       </div>
     </div>
   </div>
@@ -754,17 +757,14 @@ footer {
     <div class="prog-block-right">
       <div class="prog-item">
         <span class="prog-type">talk</span>
-        <div>
-          <div class="prog-item-title" style="color:var(--c-mono)">Proof of Work <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">40 min</span></div>
+                  <div class="prog-item-title" style="color:var(--c-mono)">Proof of Work <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">40 min</span></div>
           <div class="prog-item-desc">Inflation, the end of cash, CBDCs, and how KYC/AML frameworks enable financial surveillance.</div>
         </div>
       </div>
       <div class="prog-item">
         <span class="prog-type">workshop</span>
-        <div>
-          <div class="prog-item-title">Your first Bitcoin wallet <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">30 min</span></div>
+                  <div class="prog-item-title">Your first Bitcoin wallet <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">30 min</span></div>
           <div class="prog-item-desc">Self-custodial wallet, first sats. Money no one can freeze, seize, or inflate away.</div>
-        </div>
       </div>
     </div>
   </div>
@@ -781,10 +781,8 @@ footer {
     <div class="prog-block-right">
       <div class="prog-item">
         <span class="prog-type">until 01:00</span>
-        <div>
-          <div class="prog-item-title">The real conversations begin</div>
+                  <div class="prog-item-title">The real conversations begin</div>
           <div class="prog-item-desc">Resources, next steps, community links. Then drinks.</div>
-        </div>
       </div>
     </div>
   </div>

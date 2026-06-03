@@ -570,7 +570,19 @@ footer {
     padding: 6px 14px; margin-left: auto;
     white-space: nowrap;
   }
-  .hero-logo-big { max-width: 150px !important; margin-bottom: 24px !important; }
+  .hero-logo-big { max-width: 150px !important; margin-bottom: 0 !important; }
+  .hero-left {
+    min-height: 50vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 40px 32px !important;
+    gap: 0 !important;
+  }
+  .hero-date { font-size: 32px !important; margin-top: 32px !important; }
+  .hero-location { font-size: 18px !important; }
   .hero, .about-split, .venue-split, .tickets-split { grid-template-columns: 1fr; }
   .hero-left { min-height: 60vw; }
   .prog-block { grid-template-columns: 1fr; }

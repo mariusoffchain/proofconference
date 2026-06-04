@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="PROOF &lt;conference&gt; — Vilnius, September 27, 2026" />
+<meta property="og:description" content="A half-day conference on privacy, decentralization, and financial sovereignty. Talks + workshops. Vilnius, Lithuania." />
+<meta property="og:image" content="https://proofconference.com/proof-conference-thumbnail.jpg" />
+<meta property="og:url" content="https://proofconference.com" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PROOF &lt;conference&gt; — Vilnius, September 27, 2026" />
+<meta name="twitter:description" content="A half-day conference on privacy, decentralization, and financial sovereignty." />
+<meta name="twitter:image" content="https://proofconference.com/proof-conference-thumbnail.jpg" />
+<title>PROOF &lt;conference&gt; — September 27, 2026 · Vilnius</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #080808; color: #f0ece4; font-family: 'JetBrains Mono', monospace; overflow-x: hidden; }
+
+/* ── PALETTE ── */
+:root {
+  --black:   #080808;
+  --warm:    #0f0d0a;
+  --white:   #f0ece4;
+  --off:     #e8e4dc;
+  --muted:   rgba(240,236,228,0.45);
+  --c-priv:  #00c896;   /* vert  — privacy */
+  --c-dece:  #8b5cf6;   /* violet — décentralisation */
+  --c-mono:  #f5a623;   /* orange — monnaie */
+  --border:  rgba(240,236,228,0.08);
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px;
+  background: rgba(8,8,8,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* nav-logo is now text */
+
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav-links a {
+  font-family: 'Righteous', sans-serif;
+  font-size: 15px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(240,236,228,0.4); text-decoration: none;
+  padding: 0 16px; line-height: 60px;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  opacity: 1 !important;
+  margin-left: 8px;
+  line-height: 32px !important;
+  padding: 0 20px !important;
+  margin-top: 14px;
+}
+.nav-mobile-cta { display: none; }
+
+/* ══════════════════════════════════════
+   HERO — split noir/blanc
+══════════════════════════════════════ */
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.hero-left {
+  background: var(--white); color: var(--black);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 64px 56px;
+  position: relative; overflow: hidden;
+}
+
+.hero-left-noise {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    135deg, transparent, transparent 40px,
+    rgba(0,0,0,0.015) 40px, rgba(0,0,0,0.015) 80px
+  );
+}
+
+.hero-logo-big {
+  width: 100%; max-width: 300px;
+  filter: invert(1);
+  margin-bottom: 48px;
+  position: relative; z-index: 1;
+}
+
+.hero-date {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900; line-height: 1;
+  text-transform: uppercase; letter-spacing: 0.01em;
+  position: relative; z-index: 1;
+  margin-bottom: 6px;
+}
+
+.hero-location {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; opacity: 0.4;
+  position: relative; z-index: 1;
+}
+
+.hero-right {
+  background: var(--black);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 64px 56px;
+}
+
+.hero-tagline {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(52px, 6.5vw, 96px);
+  font-weight: 900; line-height: 0.9;
+  text-transform: uppercase; letter-spacing: -0.01em;
+  margin-bottom: 36px;
+}
+
+.hero-tagline em {
+  font-style: normal;
+  -webkit-text-stroke: 1px var(--white);
+  color: transparent;
+}
+
+.hero-desc {
+  font-size: 13px; line-height: 1.85;
+  color: var(--muted); max-width: 340px;
+  margin-bottom: 40px;
+}
+
+.hero-tw-word {
+  display: inline;
+  font-style: normal;
+  -webkit-text-stroke: 1px var(--white);
+  color: transparent;
+}
+.tw-cursor {
+  display: inline-block; width: 3px;
+  background: var(--white);
+  animation: twblink 1s step-end infinite;
+  vertical-align: baseline; margin-left: 3px;
+  height: 0.75em;
+}
+@keyframes twblink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.hero-btn {
+  display: inline-block;
+  font-family: 'Righteous', sans-serif;
+  font-size: 18px; font-weight: 900;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black); background: var(--white);
+  padding: 14px 36px; width: fit-content;
+  transition: opacity 0.2s;
+}
+.hero-btn:hover { opacity: 0.85; }
+
+
+/* ══════════════════════════════════════
+   ABOUT — split inversé blanc/noir
+══════════════════════════════════════ */
+.about-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+}
+
+.about-left {
+  background: var(--black);
+  padding: 88px 56px;
+}
+
+.about-right {
+  background: var(--white); color: var(--black);
+  padding: 88px 56px;
+}
+
+.sec-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.22em;
+  text-transform: uppercase; opacity: 0.35;
+  margin-bottom: 20px;
+}
+
+.about-left h2, .about-right h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 900; line-height: 0.95;
+  text-transform: uppercase; letter-spacing: 0.01em;
+  margin-bottom: 32px;
+}
+
+.about-left p { font-size: 13px; line-height: 1.9; color: var(--muted); max-width: 400px; }
+.about-left p strong { color: var(--white); font-weight: 500; }
+.about-left p + p { margin-top: 16px; }
+
+.about-right p { font-size: 13px; line-height: 1.9; color: rgba(8,8,8,0.55); max-width: 400px; }
+.about-right p strong { color: var(--black); font-weight: 500; }
+
+.stats {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: rgba(8,8,8,0.12);
+  border: 1px solid rgba(8,8,8,0.12);
+  margin-top: 48px;
+}
+
+.about-right .stats { background: rgba(8,8,8,0.12); border-color: rgba(8,8,8,0.12); }
+
+.stat { padding: 28px 20px; text-align: center; background: var(--white); }
+.about-left .stat { background: var(--black); }
+
+.stat-n {
+  display: block;
+  font-family: 'Righteous', sans-serif;
+  font-size: 52px; font-weight: 900; line-height: 1;
+  margin-bottom: 6px;
+}
+
+.about-right .stat-n { color: var(--black); }
+.about-left .stat-n { color: var(--white); }
+
+.stat-l {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em;
+  text-transform: uppercase; opacity: 0.35;
+}
+
+
+/* ══════════════════════════════════════
+   SPEAKERS — fond noir, cards
+══════════════════════════════════════ */
+.speakers-section {
+  background: var(--warm);
+  padding: 96px 56px;
+  border-top: 1px solid var(--border);
+}
+
+.speakers-section .sec-label { color: rgba(240,236,228,0.35); }
+
+.speakers-section h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 900; line-height: 0.95;
+  text-transform: uppercase; margin-bottom: 48px;
+}
+
+.speakers-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.spk {
+  background: var(--warm);
+  padding: 36px 28px;
+  position: relative; overflow: hidden;
+  transition: background 0.2s;
+}
+
+.spk::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.spk:hover { background: rgba(255,255,255,0.03); }
+.spk:hover::before { transform: scaleX(1); }
+
+.spk-handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.1em;
+  margin-bottom: 10px; opacity: 0.35;
+}
+
+.spk-name {
+  font-family: 'Righteous', sans-serif;
+  font-size: 30px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.02em;
+  line-height: 1; margin-bottom: 14px;
+}
+
+.spk-topic { font-size: 11px; line-height: 1.7; color: var(--muted); }
+.spk-tba { opacity: 0.25; font-style: italic; }
+
+
+/* ══════════════════════════════════════
+   PROGRAM — 3 blocs colorés en split
+══════════════════════════════════════ */
+.program-section {
+  border-top: 1px solid var(--border);
+}
+
+.prog-header {
+  padding: 64px 56px 48px;
+  background: var(--black);
+}
+
+.prog-header .sec-label { color: rgba(240,236,228,0.35); }
+
+.prog-header h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 900; line-height: 0.95;
+  text-transform: uppercase;
+}
+
+/* Each thematic block: split left label / right content */
+.prog-block {
+  display: grid; grid-template-columns: 1fr 2fr;
+  border-top: 1px solid var(--border);
+}
+
+.prog-block-left {
+  padding: 48px 56px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--border);
+}
+
+.prog-block-right {
+  padding: 48px 56px;
+  background: var(--warm);
+}
+
+.prog-time {
+  font-family: 'Righteous', sans-serif;
+  font-size: 56px; font-weight: 900;
+  line-height: 1; letter-spacing: 0.01em;
+}
+
+.prog-block-name {
+  font-family: 'Righteous', sans-serif;
+  font-size: 22px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  line-height: 1.1; margin-top: 12px;
+}
+
+.prog-color-bar {
+  width: 32px; height: 3px; margin-top: 20px;
+}
+.prog-proof {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.1em;
+  margin-top: 10px; margin-bottom: 2px;
+  opacity: 0.8;
+}
+
+.prog-item {
+  display: block;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.prog-item:last-child { border-bottom: none; }
+
+.prog-type {
+  display: block;
+  font-size: 9px; letter-spacing: 0.15em;
+  text-transform: uppercase; opacity: 0.35;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 4px;
+}
+
+.prog-item-title {
+  font-family: 'Righteous', sans-serif;
+  font-size: 22px; font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.02em;
+  line-height: 1.05; margin-bottom: 5px;
+}
+
+.prog-item-desc {
+  font-size: 11px; line-height: 1.7;
+  color: var(--muted);
+}
+
+.prog-badge {
+  font-size: 9px; letter-spacing: 0.08em;
+  border: 1px solid; padding: 1px 6px;
+  margin-left: 8px; opacity: 0.5;
+  vertical-align: middle; font-family: 'JetBrains Mono', monospace;
+}
+
+/* Color theming per block */
+.block-priv .prog-time,
+.block-priv .prog-block-name { color: var(--c-priv); }
+.block-priv .prog-color-bar { background: var(--c-priv); }
+.block-priv .prog-badge { border-color: var(--c-priv); color: var(--c-priv); }
+.block-priv .spk::before { background: var(--c-priv); }
+
+.block-dece .prog-time,
+.block-dece .prog-block-name { color: var(--c-dece); }
+.block-dece .prog-color-bar { background: var(--c-dece); }
+.block-dece .prog-badge { border-color: var(--c-dece); color: var(--c-dece); }
+
+.block-mono .prog-time,
+.block-mono .prog-block-name { color: var(--c-mono); }
+.block-mono .prog-color-bar { background: var(--c-mono); }
+.block-mono .prog-badge { border-color: var(--c-mono); color: var(--c-mono); }
+
+/* Opening/closing — neutral */
+.block-open .prog-time { color: rgba(240,236,228,0.6); }
+.block-open .prog-block-name { color: rgba(240,236,228,0.4); }
+
+
+/* ══════════════════════════════════════
+   VENUE — split noir/blanc
+══════════════════════════════════════ */
+.venue-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+}
+
+.venue-left {
+  background: var(--white); color: var(--black);
+  padding: 80px 56px;
+}
+
+.venue-right {
+  background: var(--black);
+  padding: 0; overflow: hidden;
+}
+
+.venue-left .sec-label { color: rgba(8,8,8,0.4); }
+
+.venue-left h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 900; line-height: 0.95;
+  text-transform: uppercase; margin-bottom: 40px;
+}
+
+.venue-detail { margin-bottom: 24px; }
+.venue-lbl {
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; opacity: 0.35;
+  margin-bottom: 6px;
+}
+.venue-val {
+  font-family: 'Righteous', sans-serif;
+  font-size: 22px; font-weight: 700;
+  text-transform: uppercase; line-height: 1.2;
+}
+.venue-val small {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 400;
+  text-transform: none; opacity: 0.4;
+  display: block; margin-top: 3px;
+}
+
+.venue-map {
+  width: 100%; height: 100%; min-height: 400px;
+}
+.venue-map iframe {
+  width: 100%; height: 100%; border: none;
+  filter: invert(1) hue-rotate(180deg) saturate(0.2) brightness(0.85);
+  opacity: 0.8; display: block;
+}
+
+
+/* ══════════════════════════════════════
+   TICKETS — split blanc/noir
+══════════════════════════════════════ */
+.tickets-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+}
+
+.tickets-left {
+  background: var(--black);
+  padding: 88px 56px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.tickets-left .sec-label { color: rgba(240,236,228,0.35); }
+
+.tickets-left h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 900; line-height: 0.9;
+  text-transform: uppercase; margin-bottom: 24px;
+}
+
+.tickets-left p { font-size: 13px; color: var(--muted); line-height: 1.8; max-width: 340px; }
+
+.tickets-right {
+  background: var(--white); color: var(--black);
+  padding: 88px 56px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.ticket-price {
+  font-family: 'Righteous', sans-serif;
+  font-size: 112px; font-weight: 900; line-height: 1;
+  margin-bottom: 4px;
+}
+.ticket-cur { font-size: 48px; font-weight: 700; opacity: 0.4; }
+
+.ticket-includes {
+  list-style: none; margin: 24px 0 36px;
+}
+.ticket-includes li {
+  font-size: 12px; line-height: 1.6;
+  color: rgba(8,8,8,0.55);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(8,8,8,0.08);
+}
+.ticket-includes li::before { content: '→ '; opacity: 0.4; }
+
+.ticket-btn {
+  display: block;
+  font-family: 'Righteous', sans-serif;
+  font-size: 22px; font-weight: 900;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white); background: var(--black);
+  padding: 18px 36px; text-align: center;
+  transition: opacity 0.2s;
+}
+.ticket-btn:hover { opacity: 0.8; }
+
+.ticket-note {
+  margin-top: 12px;
+  font-size: 10px; opacity: 0.3; letter-spacing: 0.05em; text-align: center;
+}
+
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 56px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 10px; letter-spacing: 0.1em;
+  color: rgba(240,236,228,0.2);
+  background: var(--black);
+}
+
+
+/* ══════════════════════════════════════
+   REVEAL ANIMATION
+══════════════════════════════════════ */
+.rev {
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.rev.vis { opacity: 1; transform: none; }
+
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .nav-mobile-cta {
+    display: inline-block !important;
+    font-family: 'Righteous', sans-serif;
+    font-size: 13px; font-weight: 900;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black); background: var(--white);
+    padding: 6px 14px; margin-left: auto;
+    white-space: nowrap;
+  }
+  .hero-logo-big { max-width: 150px !important; margin-bottom: 0 !important; }
+  .hero-left {
+    min-height: 50vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 40px 32px !important;
+    gap: 0 !important;
+  }
+  .hero-date { font-size: 32px !important; margin-top: 32px !important; }
+  .hero-location { font-size: 18px !important; }
+  .hero, .about-split, .venue-split, .tickets-split { grid-template-columns: 1fr; }
+  .hero-left { min-height: 60vw; }
+  .prog-block { grid-template-columns: 1fr; }
+  .prog-block-left { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 24px; }
+  .prog-block-right { padding: 32px 24px !important; min-width: 0; overflow: hidden; box-sizing: border-box; }
+  .prog-item { min-width: 0; overflow-wrap: anywhere; }
+  .prog-item-title {
+    font-size: 17px !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.1 !important;
+  }
+  .prog-item-desc {
+    font-size: 11px !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .prog-time { font-size: 44px !important; }
+  .prog-block-name { font-size: 18px !important; }
+  .prog-badge {
+    display: inline-block !important;
+    margin-top: 4px;
+    margin-left: 0 !important;
+    font-size: 8px !important;
+  }
+  .speakers-grid { grid-template-columns: 1fr 1fr; }
+  .speakers-section, .prog-header { padding: 64px 24px 40px; }
+  .tickets-left, .tickets-right, .about-left, .about-right, .venue-left { padding: 64px 24px; }
+  .venue-map { min-height: 280px; }
+}
+
+.nav-logo-text {
+  font-family: 'Righteous', sans-serif;
+  font-size: 28px;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.hero-logo-text-big {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(64px, 14vw, 160px);
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--black);
+  letter-spacing: 0.01em;
+  margin-bottom: 32px;
+}
+.hero-logo-conf {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(13px, 2.5vw, 20px);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: rgba(8,8,8,0.45);
+  margin-top: 8px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo-text">PROOF</span>
+  <ul class="nav-links">
+    <li><a href="#about">&lt;about&gt;</a></li>
+    <li><a href="#speakers">&lt;speakers&gt;</a></li>
+    <li><a href="#program">&lt;program&gt;</a></li>
+    <li><a href="#venue">&lt;venue&gt;</a></li>
+    <li><a href="#tickets" class="nav-cta">&lt;get ticket&gt;</a></li>
+  </ul>
+  <a href="#tickets" class="nav-mobile-cta">&lt;get ticket&gt;</a>
+</nav>
+
+
+<!-- HERO — blanc gauche / noir droite -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-left-noise"></div>
+    <div class="hero-logo-text-big">PROOF<span class="hero-logo-conf">&lt;conference&gt;</span></div>
+    <div class="hero-date">27 September<br>2026</div>
+    <div class="hero-location">Vilnius, Lithuania</div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-tagline">Take back<br>your<br><span class="hero-tw-word" id="tw-hero"><span class="tw-cursor"></span></span></div>
+    <p class="hero-desc">A half-day conference on privacy, decentralization, and financial sovereignty. Talks + workshops.</p>
+    <a href="#tickets" class="hero-btn">Get your ticket — €10</a>
+  </div>
+</section>
+
+
+<!-- ABOUT — noir gauche / blanc droite -->
+<section class="about-split" id="about">
+  <div class="about-left">
+    <p class="sec-label rev">About</p>
+    <h2 class="rev">Mass surveillance.<br>Data exploitation.<br>Centralized control.</h2>
+    <p class="rev">PROOF is a conference about the tools that let individuals <strong>take back their autonomy</strong> — online, socially, and financially.</p>
+    <p class="rev">No hype. No ideology. Just practical knowledge, real tools, and honest conversations.</p>
+  </div>
+  <div class="about-right">
+    <p class="sec-label rev" style="color:rgba(8,8,8,0.4)">What to expect</p>
+    <h2 class="rev">Talks + workshops.</h2>
+    <p class="rev">Every session pairs a keynote with a workshop you may repeat on your own device. Whether you're a developer or just a curious citizen, you will leave that conference with something real.</p>
+    <div class="stats rev">
+      <div class="stat"><span class="stat-n">3</span><span class="stat-l">thematic blocks</span></div>
+      <div class="stat"><span class="stat-n">~100</span><span class="stat-l">attendees</span></div>
+      <div class="stat"><span class="stat-n">4.5h</span><span class="stat-l">of content</span></div>
+  </div>
+</section>
+
+
+<!-- SPEAKERS -->
+<section class="speakers-section" id="speakers">
+  <p class="sec-label rev">Speakers</p>
+  <h2 class="rev">People who know<br>their stuff.</h2>
+  <div class="speakers-grid rev">
+    <div class="spk block-priv" style="border-top: 2px solid var(--c-priv)">
+      <div class="spk-handle">@speaker_one</div>
+      <div class="spk-name">Jane Doe</div>
+      <div class="spk-topic">Online privacy, encryption, and why the tools that protect your data are more important than ever.</div>
+    </div>
+    <div class="spk block-mono" style="border-top: 2px solid var(--c-mono)">
+      <div class="spk-handle">@speaker_two</div>
+      <div class="spk-name">John Smith</div>
+      <div class="spk-topic">Monetary sovereignty — why sound money matters and how Bitcoin changes the relationship between citizens and the state.</div>
+    </div>
+    <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
+      <div class="spk-handle">@speaker_three</div>
+      <div class="spk-name">Alex Rivera</div>
+      <div class="spk-topic">Decentralized infrastructure — running your own services, owning your data, cutting out platforms that profit from both.</div>
+    </div>
+    <div class="spk" style="border-top: 2px solid rgba(255,255,255,0.08)">
+      <div class="spk-handle">TBA</div>
+      <div class="spk-name spk-tba">Speaker #4</div>
+      <div class="spk-topic spk-tba">Announcement coming soon.</div>
+  </div>
+</section>
+
+
+<!-- PROGRAM -->
+<section class="program-section" id="program">
+  <div class="prog-header">
+    <p class="sec-label">Program</p>
+    <h2>September 27, 2026</h2>
+  </div>
+
+  <!-- Opening -->
+  <div class="prog-block block-open rev">
+    <div class="prog-block-left">
+      <div>
+        <div class="prog-time">13:00</div>
+        <div class="prog-block-name">Opening</div>
+        <div class="prog-color-bar" style="background:rgba(240,236,228,0.15)"></div>
+      </div>
+    </div>
+    <div class="prog-block-right">
+      <div class="prog-item">
+        <span class="prog-type">event</span>
+        <div class="prog-item-title">Doors open + welcome drinks</div>
+        <div class="prog-item-desc">Meet the community. The real conversations start here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy -->
+  <div class="prog-block block-priv rev">
+    <div class="prog-block-left">
+      <div>
+        <div class="prog-time">14:00</div>
+        <div class="prog-proof" style="color:var(--c-priv)">Proof of Privacy</div>
+        <div class="prog-block-name">Online<br>Privacy</div>
+        <div class="prog-color-bar"></div>
+      </div>
+    </div>
+    <div class="prog-block-right">
+      <div class="prog-item">
+        <span class="prog-type">talk</span>
+        <div class="prog-item-title" style="color:var(--c-priv)">Proof of Privacy <span class="prog-badge" style="border-color:var(--c-priv);color:var(--c-priv)">40 min</span></div>
+        <div class="prog-item-desc">Why encryption is a fundamental right. How VPNs and Tor protect your identity. What Chat Control means for the future of private communication in Europe.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Décentralisation -->
+  <div class="prog-block block-dece rev">
+    <div class="prog-block-left">
+      <div>
+        <div class="prog-time">14:40</div>
+        <div class="prog-proof" style="color:var(--c-dece)">Proof of Ownership</div>
+        <div class="prog-block-name">Cutting out<br>the Middlemen</div>
+        <div class="prog-color-bar"></div>
+      </div>
+    </div>
+    <div class="prog-block-right">
+      <div class="prog-item">
+        <span class="prog-type">talk</span>
+        <div class="prog-item-title" style="color:var(--c-dece)">Why decentralization matters <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
+        <div class="prog-item-desc">How centralized platforms collect your data, silence you — and why decentralization is the structural fix.</div>
+      </div>
+      <div class="prog-item">
+        <span class="prog-type">workshop</span>
+        <div class="prog-item-title">Run your own server <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">30 min</span></div>
+        <div class="prog-item-desc">Hands-on: Umbrel or Linux node setup. No third party required.</div>
+      </div>
+      <div class="prog-item">
+        <span class="prog-type">talk</span>
+        <div class="prog-item-title">Nostr: own your identity <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
+        <div class="prog-item-desc">A censorship-resistant protocol. Why it matters for free expression.</div>
+      </div>
+      <div class="prog-item">
+        <span class="prog-type">workshop</span>
+        <div class="prog-item-title">Create your Nostr keypair <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
+        <div class="prog-item-desc">Set up a client, send your first note. Own your identity.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monnaie -->
+  <div class="prog-block block-mono rev">
+    <div class="prog-block-left">
+      <div>
+        <div class="prog-time">16:00</div>
+        <div class="prog-proof" style="color:var(--c-mono)">Proof of Work</div>
+        <div class="prog-block-name">Monetary<br>Sovereignty</div>
+        <div class="prog-color-bar"></div>
+      </div>
+    </div>
+    <div class="prog-block-right">
+      <div class="prog-item">
+        <span class="prog-type">talk</span>
+        <div class="prog-item-title" style="color:var(--c-mono)">Proof of Work <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">40 min</span></div>
+        <div class="prog-item-desc">Inflation, the end of cash, CBDCs, and how KYC/AML frameworks enable financial surveillance.</div>
+      </div>
+      <div class="prog-item">
+        <span class="prog-type">workshop</span>
+        <div class="prog-item-title">Your first Bitcoin wallet <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">30 min</span></div>
+        <div class="prog-item-desc">Self-custodial wallet, first sats. Money no one can freeze, seize, or inflate away.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="prog-block block-open rev">
+    <div class="prog-block-left">
+      <div>
+        <div class="prog-time">17:30</div>
+        <div class="prog-block-name">Closing +<br>After Party</div>
+        <div class="prog-color-bar" style="background:rgba(240,236,228,0.15)"></div>
+      </div>
+    </div>
+    <div class="prog-block-right">
+      <div class="prog-item">
+        <span class="prog-type">until 01:00</span>
+        <div class="prog-item-title">The real conversations begin</div>
+        <div class="prog-item-desc">Resources, next steps, community links. Then drinks.</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- VENUE — blanc gauche / carte droite -->
+<section class="venue-split" id="venue">
+  <div class="venue-left">
+    <p class="sec-label rev">Venue</p>
+    <h2 class="rev">Vilnius,<br>Lithuania</h2>
+    <div class="venue-detail rev">
+      <div class="venue-lbl">Location</div>
+      <div class="venue-val">Vilnius, Lithuania<small>Exact venue TBA — details sent to ticket holders</small></div>
+    </div>
+    <div class="venue-detail rev">
+      <div class="venue-lbl">Date & Time</div>
+      <div class="venue-val">Saturday, Sept 27<small>Doors open at 13:00</small></div>
+    </div>
+    <div class="venue-detail rev">
+      <div class="venue-lbl">Capacity</div>
+      <div class="venue-val">~100 attendees</div>
+    </div>
+  </div>
+  <div class="venue-right">
+    <div class="venue-map">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=25.2,54.6,25.4,54.75&layer=mapnik&marker=54.6872,25.2797" loading="lazy" title="Vilnius, Lithuania"></iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- TICKETS — noir gauche / blanc droite -->
+<section class="tickets-split" id="tickets">
+  <div class="tickets-left">
+    <p class="sec-label rev">Tickets</p>
+    <h2 class="rev">Secure<br>your<br>spot.</h2>
+    <p class="rev">Limited to ~100 attendees. Payment link coming soon — follow us on Nostr for updates.</p>
+  </div>
+  <div class="tickets-right">
+    <div class="ticket-price rev"><span class="ticket-cur">€</span>10</div>
+    <ul class="ticket-includes rev">
+      <li>Full conference access — all talks + workshops</li>
+      <li>Welcome drinks at 13:00</li>
+      <li>After party until 01:00</li>
+      <li>Community resources & next steps</li>
+    </ul>
+    <a href="#" class="ticket-btn rev">Get your ticket</a>
+    <p class="ticket-note rev">// payment link coming soon</p>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; — Vilnius 2026</span>
+  <span>no cookies · no tracking · no bullshit</span>
+  <span>contact</span>
+</footer>
+
+
+<script>
+// Typewriter
+const twWords = [
+  { word: 'Work',        color: '#f5a623' },
+  { word: 'Humanity',    color: '#8b5cf6' },
+  { word: 'Freedom',     color: '#00c896' },
+  { word: 'Privacy',     color: '#00c896' },
+  { word: 'Sovereignty', color: '#8b5cf6' },
+];
+let twWi = 0, twCi = 0, twDel = false;
+
+function twTick() {
+  const el = document.getElementById('tw-hero');
+  if (!el) return;
+  const { word, color } = twWords[twWi];
+  el.style.webkitTextStroke = '1px ' + color;
+  el.style.color = 'transparent';
+  if (!twDel) {
+    twCi++;
+    el.innerHTML = word.slice(0, twCi) + '<span class="tw-cursor" style="background:' + color + '"></span>';
+    if (twCi === word.length) { twDel = true; setTimeout(twTick, 2200); return; }
+  } else {
+    twCi--;
+    el.innerHTML = word.slice(0, twCi) + '<span class="tw-cursor" style="background:' + color + '"></span>';
+    if (twCi === 0) { twDel = false; twWi = (twWi + 1) % twWords.length; }
+  }
+  setTimeout(twTick, twDel ? 40 : 75);
+}
+setTimeout(twTick, 600);
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('vis'), i * 60);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07 });
+
+document.querySelectorAll('.rev').forEach(el => obs.observe(el));
+
+// Nav active state
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-links a[href^="#"]');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  links.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur
+      ? 'rgba(240,236,228,0.9)' : 'rgba(240,236,228,0.35)';
+  });
+});
+</script>
+</body>
+</html>

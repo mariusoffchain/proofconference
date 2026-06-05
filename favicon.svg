@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #080808; }
+    .txt-main { fill: #f0ece4; }
+    .txt-sub { fill: rgba(240,236,228,0.45); }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f0ece4; }
+      .txt-main { fill: #080808; }
+      .txt-sub { fill: rgba(8,8,8,0.45); }
+    }
+  </style>
+
+  <rect width="64" height="64" rx="6" class="bg"/>
+
+  <text
+    x="32" y="36"
+    font-family="Arial Narrow, Arial, sans-serif"
+    font-weight="900"
+    font-size="20"
+    class="txt-main"
+    text-anchor="middle"
+    letter-spacing="0"
+  >PROOF</text>
+
+  <text
+    x="32" y="50"
+    font-family="monospace"
+    font-size="7"
+    class="txt-sub"
+    text-anchor="middle"
+    letter-spacing="0.3"
+  >&lt;conf&gt;</text>
+
+</svg>

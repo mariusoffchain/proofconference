@@ -292,6 +292,21 @@ nav {
 .spk:hover { background: rgba(255,255,255,0.03); }
 .spk:hover::before { transform: scaleX(1); }
 
+.spk-photo-wrap {
+  width: calc(100% + 56px);
+  margin: -36px -28px 24px;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.spk-photo {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(20%);
+}
+
 .spk-handle {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px; letter-spacing: 0.1em;
@@ -307,6 +322,21 @@ nav {
 
 .spk-topic { font-size: 11px; line-height: 1.7; color: var(--muted); }
 .spk-tba { opacity: 0.25; font-style: italic; }
+
+.spk-links {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-top: 16px;
+}
+.spk-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--muted);
+  border: 1px solid rgba(240,236,228,0.12);
+  padding: 3px 8px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.spk-link:hover { color: var(--white); border-color: rgba(240,236,228,0.4); }
 
 
 /* ══════════════════════════════════════
@@ -466,9 +496,9 @@ nav {
   text-transform: uppercase; line-height: 1.2;
 }
 .venue-val small {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; font-weight: 400;
-  text-transform: none; opacity: 0.4;
+  font-family: 'Righteous', sans-serif;
+  font-size: 22px; font-weight: 700;
+  text-transform: uppercase; opacity: 0.4;
   display: block; margin-top: 3px;
 }
 
@@ -481,6 +511,51 @@ nav {
   opacity: 0.8; display: block;
 }
 
+.venue-left-photos {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin: 40px -56px -80px;
+}
+.venue-left-photos img {
+  width: 100%; height: 200px;
+  object-fit: cover; display: block;
+}
+@media (max-width: 768px) {
+  .venue-left-photos { margin: 32px -24px -64px; }
+  .venue-left-photos img { height: 150px; }
+}
+
+
+/* ══════════════════════════════════════
+   PARTNERS
+══════════════════════════════════════ */
+.partners-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+}
+.partners-left {
+  background: var(--white); color: var(--black);
+  padding: 64px 56px;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  border-right: 1px solid rgba(8,8,8,0.08);
+}
+.partners-right {
+  background: var(--black);
+  padding: 64px 56px;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+}
+.partners-left .sec-label { color: rgba(8,8,8,0.4); opacity: 1; }
+.partners-left a, .partners-right a { display: block; }
+.partner-logo-bringin { width: 300px; max-width: 100%; height: auto; display: block; filter: brightness(0); }
+.partner-logo-offchain { width: 380px; max-width: 100%; height: auto; display: block; filter: brightness(0) invert(1); }
+@media (max-width: 768px) {
+  .partners-split { grid-template-columns: 1fr; }
+  .partners-left, .partners-right { padding: 56px 24px; }
+  .partner-logo-bringin { width: 220px; }
+  .partner-logo-offchain { width: 280px; }
+}
 
 /* ══════════════════════════════════════
    TICKETS — split blanc/noir
@@ -737,20 +812,36 @@ footer {
   <p class="sec-label rev" id="label-speakers">Speakers</p>
   <h2 class="rev" id="speakers-h2">People who know<br>their stuff.</h2>
   <div class="speakers-grid rev">
-    <div class="spk block-priv" style="border-top: 2px solid var(--c-priv)">
-      <div class="spk-handle">@speaker_one</div>
-      <div class="spk-name">Jane Doe</div>
-      <div class="spk-topic" id="spk-topic-1">Online privacy, encryption, and why the tools that protect your data are more important than ever.</div>
-    </div>
     <div class="spk block-mono" style="border-top: 2px solid var(--c-mono)">
-      <div class="spk-handle">@speaker_two</div>
-      <div class="spk-name">John Smith</div>
-      <div class="spk-topic" id="spk-topic-2">Monetary sovereignty: why sound money matters and how Bitcoin changes the relationship between citizens and the state.</div>
+      <div class="spk-photo-wrap"><img src="../linas.jpg" alt="Linas K." class="spk-photo"></div>
+      <div class="spk-handle">@linasantlinijos</div>
+      <div class="spk-name">Linas K.</div>
+      <div class="spk-topic" id="spk-topic-1">Former editor-in-chief of Cryptonews.com and editor-in-chief at Verslo žinios.</div>
+      <div class="spk-links">
+        <a href="https://x.com/linasantlinijos" target="_blank" rel="noopener" class="spk-link">X</a>
+        <a href="https://primal.net/p/npub16dhmmh36deug9adwwhvplxc87ecc9qyafpuejx5h8q63hnuwd8kqq039te" target="_blank" rel="noopener" class="spk-link">Nostr</a>
+      </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-handle">@speaker_three</div>
-      <div class="spk-name">Alex Rivera</div>
-      <div class="spk-topic" id="spk-topic-3">Decentralized infrastructure: running your own services, owning your data, cutting out platforms that profit from both.</div>
+      <div class="spk-photo-wrap"><img src="../mariusoffchain.jpeg" alt="Marius Off-Chain" class="spk-photo"></div>
+      <div class="spk-handle">@mariusoffchain</div>
+      <div class="spk-name">Marius Off-Chain</div>
+      <div class="spk-topic" id="spk-topic-2">Independent journalist specialized in Bitcoin and sovereignty tools, and founder of Offchain Media.</div>
+      <div class="spk-links">
+        <a href="https://x.com/mariusoffchain" target="_blank" rel="noopener" class="spk-link">X</a>
+        <a href="https://www.linkedin.com/in/marius-off-chain-5a166118b/" target="_blank" rel="noopener" class="spk-link">LinkedIn</a>
+        <a href="https://primal.net/p/npub1yxkvnuk32mw0tvw36u48x008k7anrlytv4rrp6pcrkeytq2uusdqdmw8a5" target="_blank" rel="noopener" class="spk-link">Nostr</a>
+      </div>
+    </div>
+    <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
+      <div class="spk-photo-wrap"><img src="../keypleb.jpg" alt="Keypleb" class="spk-photo" style="transform: scale(1.6); transform-origin: center 30%;"></div>
+      <div class="spk-handle">@keypleb</div>
+      <div class="spk-name">Keypleb</div>
+      <div class="spk-topic" id="spk-topic-3">Founder of Code Orange Dev School, a Bitcoin education initiative focused on helping grow the next generation of developers.</div>
+      <div class="spk-links">
+        <a href="https://x.com/keypleb" target="_blank" rel="noopener" class="spk-link">X</a>
+        <a href="https://primal.net/p/nprofile1qqszh43kydgua9jq0h0ed0uvqq54n0d0utf92v8hax8rgk3xxlnnjrgvpj022" target="_blank" rel="noopener" class="spk-link">Nostr</a>
+      </div>
     </div>
     <div class="spk" style="border-top: 2px solid rgba(255,255,255,0.08)">
       <div class="spk-handle">TBA</div>
@@ -890,7 +981,7 @@ footer {
     <h2 class="rev" id="venue-h2">Vilnius,<br>Lithuania</h2>
     <div class="venue-detail rev">
       <div class="venue-lbl">Location</div>
-      <div class="venue-val" id="venue-loc-val">Vilnius, Lithuania<small>Exact venue TBA, details sent to ticket holders</small></div>
+      <div class="venue-val" id="venue-loc-val">Nova — Kastytis<small>V. Gerulaičio g. 10, Vilnius</small></div>
     </div>
     <div class="venue-detail rev">
       <div class="venue-lbl">Date & Time</div>
@@ -900,11 +991,32 @@ footer {
       <div class="venue-lbl">Capacity</div>
       <div class="venue-val" id="venue-cap-val">~100 attendees</div>
     </div>
+    <div class="venue-left-photos rev">
+      <img src="../venue-interior.jpeg" alt="Kastytis room interior">
+      <img src="../venue-exterior.jpeg" alt="Nova building, V. Gerulaičio g. 10">
+    </div>
   </div>
   <div class="venue-right">
     <div class="venue-map">
-      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=25.2,54.6,25.4,54.75&layer=mapnik&marker=54.6872,25.2797" loading="lazy" title="Vilnius, Lithuania"></iframe>
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=25.258,54.706,25.298,54.727&layer=mapnik&marker=54.7165,25.2782" loading="lazy" title="Nova, V. Gerulaičio g. 10, Vilnius"></iframe>
     </div>
+  </div>
+</section>
+
+
+<!-- PARTNERS -->
+<section class="partners-split">
+  <div class="partners-left">
+    <p class="sec-label">Our only sponsor</p>
+    <a href="https://bringin.app/" target="_blank" rel="noopener">
+      <img src="../bringin-logo.svg" alt="Bringin" class="partner-logo-bringin">
+    </a>
+  </div>
+  <div class="partners-right">
+    <p class="sec-label">Organized by</p>
+    <a href="https://www.offchain.media/" target="_blank" rel="noopener">
+      <img src="../off-chain-media-logo.svg" alt="Off-Chain Media" class="partner-logo-offchain">
+    </a>
   </div>
 </section>
 

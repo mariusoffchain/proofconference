@@ -340,7 +340,7 @@ nav {
 
 
 /* ══════════════════════════════════════
-   PROGRAM — 3 blocs colorés en split
+   PROGRAM — Thread timeline
 ══════════════════════════════════════ */
 .program-section {
   border-top: 1px solid var(--border);
@@ -360,101 +360,87 @@ nav {
   text-transform: uppercase;
 }
 
-/* Each thematic block: split left label / right content */
-.prog-block {
-  display: grid; grid-template-columns: 1fr 2fr;
-  border-top: 1px solid var(--border);
+.tl-body {
+  background: var(--black);
+  padding: 48px 56px 80px;
 }
 
-.prog-block-left {
-  padding: 48px 56px;
-  display: flex; flex-direction: column;
-  justify-content: space-between;
+.tl-inner { max-width: 720px; margin: 0 auto; }
+
+.tl-row {
+  display: grid; grid-template-columns: 96px 1fr;
+  padding-bottom: 24px;
+}
+.tl-row:last-child { padding-bottom: 0; }
+
+.tl-l {
+  padding-right: 24px; text-align: right;
   border-right: 1px solid var(--border);
+  position: relative; padding-top: 3px;
 }
 
-.prog-block-right {
-  padding: 48px 56px;
-  background: var(--warm);
+.tl-l::after {
+  content: '';
+  position: absolute; right: -4px; top: 7px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--black); border: 1px solid rgba(240,236,228,0.2);
 }
+.tl-row.priv .tl-l::after { background: var(--c-priv); border-color: var(--c-priv); box-shadow: 0 0 10px rgba(0,200,150,0.3); }
+.tl-row.dece .tl-l::after { background: var(--c-dece); border-color: var(--c-dece); box-shadow: 0 0 10px rgba(139,92,246,0.3); }
+.tl-row.mono .tl-l::after { background: var(--c-mono); border-color: var(--c-mono); box-shadow: 0 0 10px rgba(245,166,35,0.3); }
 
-.prog-time {
-  font-family: 'Righteous', sans-serif;
-  font-size: 56px; font-weight: 900;
-  line-height: 1; letter-spacing: 0.01em;
-}
-
-.prog-block-name {
-  font-family: 'Righteous', sans-serif;
-  font-size: 22px; font-weight: 900;
-  text-transform: uppercase; letter-spacing: 0.04em;
-  line-height: 1.1; margin-top: 12px;
-}
-
-.prog-color-bar {
-  width: 32px; height: 3px; margin-top: 20px;
-}
-.prog-proof {
+.tl-time {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; letter-spacing: 0.1em;
-  margin-top: 10px; margin-bottom: 2px;
-  opacity: 0.8;
+  font-size: 11px; letter-spacing: 0.08em;
+  color: var(--muted); font-variant-numeric: tabular-nums;
 }
 
-.prog-item {
-  display: block;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-.prog-item:last-child { border-bottom: none; }
+.tl-r { padding-left: 24px; }
 
-.prog-type {
-  display: block;
-  font-size: 9px; letter-spacing: 0.15em;
-  text-transform: uppercase; opacity: 0.35;
+.tl-section {
   font-family: 'JetBrains Mono', monospace;
-  margin-bottom: 4px;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
 }
+.tl-row.priv .tl-section { color: var(--c-priv); }
+.tl-row.dece .tl-section { color: var(--c-dece); }
+.tl-row.mono .tl-section { color: var(--c-mono); }
 
-.prog-item-title {
+.tl-card {
+  background: rgba(240,236,228,0.03); border: 1px solid var(--border);
+  padding: 10px 14px; margin-bottom: 5px;
+}
+.tl-card:last-child { margin-bottom: 0; }
+
+.tl-row.priv .tl-card { border-left: 2px solid var(--c-priv); }
+.tl-row.dece .tl-card { border-left: 2px solid var(--c-dece); }
+.tl-row.mono .tl-card { border-left: 2px solid var(--c-mono); }
+
+.tl-card-top { display: flex; align-items: baseline; gap: 10px; }
+
+.tl-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); min-width: 54px; flex-shrink: 0;
+}
+.tl-title {
   font-family: 'Righteous', sans-serif;
-  font-size: 22px; font-weight: 900;
+  font-size: 15px; font-weight: 900;
   text-transform: uppercase; letter-spacing: 0.02em;
-  line-height: 1.05; margin-bottom: 5px;
+  color: var(--white); flex: 1; line-height: 1.2;
 }
-
-.prog-item-desc {
-  font-size: 11px; line-height: 1.7;
-  color: var(--muted);
-}
-
-.prog-badge {
+.tl-dur {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 9px; letter-spacing: 0.08em;
-  border: 1px solid; padding: 1px 6px;
-  margin-left: 8px; opacity: 0.5;
-  vertical-align: middle; font-family: 'JetBrains Mono', monospace;
+  color: var(--muted); white-space: nowrap; flex-shrink: 0;
+}
+.tl-desc {
+  font-size: 11px; line-height: 1.65; color: var(--muted);
+  margin-top: 6px; padding-left: 64px;
 }
 
-/* Color theming per block */
-.block-priv .prog-time,
-.block-priv .prog-block-name { color: var(--c-priv); }
-.block-priv .prog-color-bar { background: var(--c-priv); }
-.block-priv .prog-badge { border-color: var(--c-priv); color: var(--c-priv); }
+/* Speaker hover bar (speakers section) */
 .block-priv .spk::before { background: var(--c-priv); }
-
-.block-dece .prog-time,
-.block-dece .prog-block-name { color: var(--c-dece); }
-.block-dece .prog-color-bar { background: var(--c-dece); }
-.block-dece .prog-badge { border-color: var(--c-dece); color: var(--c-dece); }
-
-.block-mono .prog-time,
-.block-mono .prog-block-name { color: var(--c-mono); }
-.block-mono .prog-color-bar { background: var(--c-mono); }
-.block-mono .prog-badge { border-color: var(--c-mono); color: var(--c-mono); }
-
-/* Opening/closing — neutral */
-.block-open .prog-time { color: rgba(240,236,228,0.6); }
-.block-open .prog-block-name { color: rgba(240,236,228,0.4); }
 
 
 /* ══════════════════════════════════════
@@ -690,31 +676,8 @@ footer {
   .hero-location { font-size: 18px !important; }
   .hero, .about-split, .venue-split, .tickets-split { grid-template-columns: 1fr; }
   .hero-left { min-height: 60vw; }
-  .prog-block { grid-template-columns: 1fr; }
-  .prog-block-left { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 24px; }
-  .prog-block-right { padding: 32px 24px !important; min-width: 0; overflow: hidden; box-sizing: border-box; }
-  .prog-item { min-width: 0; overflow-wrap: anywhere; }
-  .prog-item-title {
-    font-size: 17px !important;
-    letter-spacing: 0 !important;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    hyphens: auto;
-    line-height: 1.1 !important;
-  }
-  .prog-item-desc {
-    font-size: 11px !important;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-  .prog-time { font-size: 44px !important; }
-  .prog-block-name { font-size: 18px !important; }
-  .prog-badge {
-    display: inline-block !important;
-    margin-top: 4px;
-    margin-left: 0 !important;
-    font-size: 8px !important;
-  }
+  .tl-body { padding: 32px 24px 56px; }
+  .tl-desc { padding-left: 0; }
   .speakers-grid { grid-template-columns: 1fr 1fr; }
   .speakers-section, .prog-header { padding: 64px 24px 40px; }
   .tickets-left, .tickets-right, .about-left, .about-right, .venue-left { padding: 64px 24px; }
@@ -874,121 +837,119 @@ footer {
 
 <!-- PROGRAM -->
 <section class="program-section" id="program">
-  <div class="prog-header">
+  <div class="prog-header rev">
     <p class="sec-label" id="label-program">Program</p>
     <h2 id="program-h2">September 27, 2026</h2>
   </div>
 
-  <!-- Opening -->
-  <div class="prog-block block-open rev">
-    <div class="prog-block-left">
-      <div>
-        <div class="prog-time">13:00</div>
-        <div class="prog-block-name" id="prog-opening-title">Opening</div>
-        <div class="prog-color-bar" style="background:rgba(240,236,228,0.15)"></div>
-      </div>
-    </div>
-    <div class="prog-block-right">
-      <div class="prog-item">
-        <span class="prog-type">event</span>
-        <div class="prog-item-title" id="prog-opening-item">Doors open + welcome drinks</div>
-        <div class="prog-item-desc" id="prog-opening-desc">Meet the community. The real conversations start here.</div>
-      </div>
-    </div>
-  </div>
+  <div class="tl-body rev">
+    <div class="tl-inner">
 
-  <!-- Privacy -->
-  <div class="prog-block block-priv rev">
-    <div class="prog-block-left">
-      <div>
-        <div class="prog-time">14:00</div>
-        <div class="prog-proof" id="prog-priv-proof" style="color:var(--c-priv)">Proof of Privacy</div>
-        <div class="prog-block-name" id="prog-priv-block">Online<br>Privacy</div>
-        <div class="prog-color-bar"></div>
+      <div class="tl-row open">
+        <div class="tl-l"><div class="tl-time">13:00</div></div>
+        <div class="tl-r">
+          <div class="tl-section" id="prog-opening-title">Opening</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">event</span>
+              <span class="tl-title" id="prog-opening-item">Doors open + welcome drinks</span>
+            </div>
+            <div class="tl-desc" id="prog-opening-desc">Meet the community. The real conversations start here.</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="prog-block-right">
-      <div class="prog-item">
-        <span class="prog-type">talk</span>
-        <div class="prog-item-title" id="prog-priv-title">Proof of Privacy <span class="prog-badge" style="border-color:var(--c-priv);color:var(--c-priv)">40 min</span></div>
-        <div class="prog-item-desc" id="prog-priv-desc">Why encryption is a fundamental right. How VPNs and Tor protect your identity. What Chat Control means for the future of private communication in Europe.</div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Décentralisation -->
-  <div class="prog-block block-dece rev">
-    <div class="prog-block-left">
-      <div>
-        <div class="prog-time">14:40</div>
-        <div class="prog-proof" id="prog-dece-proof" style="color:var(--c-dece)">Proof of Ownership</div>
-        <div class="prog-block-name" id="prog-dece-block">Cutting out<br>the Middlemen</div>
-        <div class="prog-color-bar"></div>
+      <div class="tl-row priv">
+        <div class="tl-l"><div class="tl-time">14:00</div></div>
+        <div class="tl-r">
+          <div class="tl-section" id="prog-priv-block">Online Privacy</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">talk</span>
+              <span class="tl-title" id="prog-priv-title">Proof of Privacy</span>
+              <span class="tl-dur">40 min</span>
+            </div>
+            <div class="tl-desc" id="prog-priv-desc">Why encryption is a fundamental right. How VPNs and Tor protect your identity. What Chat Control means for the future of private communication in Europe.</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="prog-block-right">
-      <div class="prog-item">
-        <span class="prog-type">talk</span>
-        <div class="prog-item-title" id="prog-dece-title-1">Why decentralization matters <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
-        <div class="prog-item-desc" id="prog-dece-desc-1">How centralized platforms collect your data, silence you. Decentralization is the structural fix.</div>
-      </div>
-      <div class="prog-item">
-        <span class="prog-type">workshop</span>
-        <div class="prog-item-title" id="prog-dece-title-2">Run your own server <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">30 min</span></div>
-        <div class="prog-item-desc" id="prog-dece-desc-2">Hands-on: Umbrel or Linux node setup. No third party required.</div>
-      </div>
-      <div class="prog-item">
-        <span class="prog-type">talk</span>
-        <div class="prog-item-title" id="prog-dece-title-3">Nostr: own your identity <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
-        <div class="prog-item-desc" id="prog-dece-desc-3">A censorship-resistant protocol. Why it matters for free expression.</div>
-      </div>
-      <div class="prog-item">
-        <span class="prog-type">workshop</span>
-        <div class="prog-item-title" id="prog-dece-title-4">Create your Nostr keypair <span class="prog-badge" style="border-color:var(--c-dece);color:var(--c-dece)">15 min</span></div>
-        <div class="prog-item-desc" id="prog-dece-desc-4">Set up a client, send your first note. Own your identity.</div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Monnaie -->
-  <div class="prog-block block-mono rev">
-    <div class="prog-block-left">
-      <div>
-        <div class="prog-time">16:00</div>
-        <div class="prog-proof" id="prog-mono-proof" style="color:var(--c-mono)">Proof of Work</div>
-        <div class="prog-block-name" id="prog-mono-block">Monetary<br>Sovereignty</div>
-        <div class="prog-color-bar"></div>
+      <div class="tl-row dece">
+        <div class="tl-l"><div class="tl-time">14:40</div></div>
+        <div class="tl-r">
+          <div class="tl-section" id="prog-dece-block">Cutting out the Middlemen</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">talk</span>
+              <span class="tl-title" id="prog-dece-title-1">Why decentralization matters</span>
+              <span class="tl-dur">15 min</span>
+            </div>
+            <div class="tl-desc" id="prog-dece-desc-1">How centralized platforms collect your data, silence you. Decentralization is the structural fix.</div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">workshop</span>
+              <span class="tl-title" id="prog-dece-title-2">Run your own server</span>
+              <span class="tl-dur">30 min</span>
+            </div>
+            <div class="tl-desc" id="prog-dece-desc-2">Hands-on: Umbrel or Linux node setup. No third party required.</div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">talk</span>
+              <span class="tl-title" id="prog-dece-title-3">Nostr: own your identity</span>
+              <span class="tl-dur">15 min</span>
+            </div>
+            <div class="tl-desc" id="prog-dece-desc-3">A censorship-resistant protocol. Why it matters for free expression.</div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">workshop</span>
+              <span class="tl-title" id="prog-dece-title-4">Create your Nostr keypair</span>
+              <span class="tl-dur">15 min</span>
+            </div>
+            <div class="tl-desc" id="prog-dece-desc-4">Set up a client, send your first note. Own your identity.</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="prog-block-right">
-      <div class="prog-item">
-        <span class="prog-type">talk</span>
-        <div class="prog-item-title" id="prog-mono-title-1">Proof of Work <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">40 min</span></div>
-        <div class="prog-item-desc" id="prog-mono-desc-1">Inflation, the end of cash, CBDCs, and how KYC/AML frameworks enable financial surveillance.</div>
-      </div>
-      <div class="prog-item">
-        <span class="prog-type">workshop</span>
-        <div class="prog-item-title" id="prog-mono-title-2">Your first Bitcoin wallet <span class="prog-badge" style="border-color:var(--c-mono);color:var(--c-mono)">30 min</span></div>
-        <div class="prog-item-desc" id="prog-mono-desc-2">Self-custodial wallet, first sats. Money no one can freeze, seize, or inflate away.</div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Closing -->
-  <div class="prog-block block-open rev">
-    <div class="prog-block-left">
-      <div>
-        <div class="prog-time">17:30</div>
-        <div class="prog-block-name" id="prog-close-block">Closing +<br>After Party</div>
-        <div class="prog-color-bar" style="background:rgba(240,236,228,0.15)"></div>
+      <div class="tl-row mono">
+        <div class="tl-l"><div class="tl-time">16:00</div></div>
+        <div class="tl-r">
+          <div class="tl-section" id="prog-mono-block">Monetary Sovereignty</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">talk</span>
+              <span class="tl-title" id="prog-mono-title-1">Proof of Work</span>
+              <span class="tl-dur">40 min</span>
+            </div>
+            <div class="tl-desc" id="prog-mono-desc-1">Inflation, the end of cash, CBDCs, and how KYC/AML frameworks enable financial surveillance.</div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">workshop</span>
+              <span class="tl-title" id="prog-mono-title-2">Your first Bitcoin wallet</span>
+              <span class="tl-dur">30 min</span>
+            </div>
+            <div class="tl-desc" id="prog-mono-desc-2">Self-custodial wallet, first sats. Money no one can freeze, seize, or inflate away.</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="prog-block-right">
-      <div class="prog-item">
-        <span class="prog-type">until 01:00</span>
-        <div class="prog-item-title" id="prog-close-title">The real conversations begin</div>
-        <div class="prog-item-desc" id="prog-close-desc">Resources, next steps, community links. Then drinks.</div>
+
+      <div class="tl-row open">
+        <div class="tl-l"><div class="tl-time">17:30</div></div>
+        <div class="tl-r">
+          <div class="tl-section" id="prog-close-block">Closing + After Party</div>
+          <div class="tl-card">
+            <div class="tl-card-top">
+              <span class="tl-type">until 01:00</span>
+              <span class="tl-title" id="prog-close-title">The real conversations begin</span>
+            </div>
+            <div class="tl-desc" id="prog-close-desc">Resources, next steps, community links. Then drinks.</div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 

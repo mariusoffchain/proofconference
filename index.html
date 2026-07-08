@@ -132,7 +132,7 @@ nav {
 
 .hero-tagline {
   font-family: 'Righteous', sans-serif;
-  font-size: clamp(52px, 6.5vw, 96px);
+  font-size: clamp(50px, 6.3vw, 94px);
   font-weight: 900; line-height: 0.95;
   text-transform: uppercase; letter-spacing: -0.01em;
   margin-bottom: 36px;
@@ -634,6 +634,18 @@ nav {
   margin-top: 12px;
   font-size: 10px; opacity: 0.3; letter-spacing: 0.05em; text-align: center;
 }
+.ticket-bebop {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(240,236,228,0.12);
+  display: flex; align-items: center; gap: 40px;
+}
+.ticket-bebop-logo { height: 96px; width: auto; display: block; flex-shrink: 0; }
+.ticket-bebop-text {
+  font-family: 'Righteous', sans-serif;
+  font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); line-height: 1.4;
+}
 
 
 /* ══════════════════════════════════════
@@ -1047,6 +1059,10 @@ footer {
     <p class="sec-label rev" id="label-tickets">Bilietai</p>
     <h2 class="rev">Secure<br>your<br>spot.</h2>
     <p class="rev" id="tickets-p">Ribota vieta ~100 dalyvių. Mokėjimo nuoroda netrukus. Sekite mus Nostr.</p>
+    <div class="ticket-bebop rev">
+      <img src="bebop-dark.svg" alt="Be-Bop" class="ticket-bebop-logo">
+      <span class="ticket-bebop-text">Payments accepted through Be-Bop, the open source sales toolbox</span>
+    </div>
   </div>
   <div class="tickets-right">
     <div class="ticket-price rev"><span class="ticket-cur">€</span>10</div>
@@ -1057,7 +1073,6 @@ footer {
       <li>Community resources & next steps</li>
     </ul>
     <a href="#" class="ticket-btn rev" id="ticket-btn">Gauk bilietą</a>
-    <p class="ticket-note rev" id="ticket-note">// mokėjimo nuoroda netrukus</p>
   </div>
 </section>
 

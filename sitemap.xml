@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://proofconference.com/</loc>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/en/"/>
+  </url>
+  <url>
+    <loc>https://proofconference.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/en/"/>
+  </url>
+</urlset>

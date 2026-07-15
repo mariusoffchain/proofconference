@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,49 @@
 <meta name="twitter:title" content="PROOF &lt;conference&gt; — Vilnius, 2026 m. rugsėjo 27 d." />
 <meta name="twitter:description" content="A half-day conference on privacy, decentralization, and financial sovereignty." />
 <meta name="twitter:image" content="https://proofconference.com/proof-conference-thumbnail.jpg" />
-<title>PROOF &lt;conference&gt; — September 27, 2026 · Vilnius</title>
+<title>PROOF &lt;conference&gt; — 2026 m. rugsėjo 27 d. · Vilnius</title>
+<meta name="description" content="Pusdienis renginys apie privatumą, decentralizaciją ir finansinį suverenitetą. Pranešimai ir dirbtuvės. Vilnius, Lietuva. 2026 m. rugsėjo 27 d.">
+<link rel="canonical" href="https://proofconference.com/">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://proofconference.com/en/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "PROOF <conference>",
+  "startDate": "2026-09-27T13:00:00+03:00",
+  "endDate": "2026-09-28T01:00:00+03:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "description": "A half-day conference on privacy, decentralization, and financial sovereignty. Talks + workshops.",
+  "image": "https://proofconference.com/proof-conference-thumbnail.jpg",
+  "url": "https://proofconference.com/",
+  "location": {
+    "@type": "Place",
+    "name": "Nova — Kastytis",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "V. Gerulaičio g. 10",
+      "addressLocality": "Vilnius",
+      "addressCountry": "LT"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "10",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/PreOrder",
+    "url": "https://proofconference.com/#tickets"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Off-Chain Media",
+    "url": "https://www.offchain.media/"
+  }
+}
+</script>
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -652,11 +694,18 @@ footer {
 /* ══════════════════════════════════════
    REVEAL ANIMATION
 ══════════════════════════════════════ */
-.rev {
+/* Cachés uniquement si JS est actif — sans JS (Tor Safest…) tout reste visible */
+.js .rev {
   opacity: 0; transform: translateY(12px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.rev.vis { opacity: 1; transform: none; }
+.js .rev.vis { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .rev { opacity: 1; transform: none; transition: none; }
+  .tw-cursor { animation: none; }
+}
 
 
 /* ══════════════════════════════════════
@@ -755,7 +804,7 @@ footer {
     <li><a href="#venue" id="nav-venue">&lt;vieta&gt;</a></li>
     <li><a href="#tickets" class="nav-cta" id="nav-cta">&lt;bilietas&gt;</a></li>
   </ul>
-  <a href="#tickets" class="nav-mobile-cta">&lt;get ticket&gt;</a>
+  <a href="#tickets" class="nav-mobile-cta">&lt;bilietas&gt;</a>
   <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/en'">EN</button>
 </nav>
 
@@ -771,7 +820,7 @@ footer {
   <div class="hero-right">
     <div class="hero-tagline"><span id="hero-tagline-text">Atgauk<br>savo<br></span><span class="hero-tw-word" id="tw-hero"><span class="tw-cursor"></span></span></div>
     <p class="hero-desc" id="hero-desc">Pusdienis renginys apie privatumą, decentralizaciją ir finansinį suverenitetą. Pranešimai ir dirbtuvės.</p>
-    <a href="#tickets" class="hero-btn">Get your ticket €10</a>
+    <a href="#tickets" class="hero-btn">Gauk bilietą €10</a>
   </div>
 </section>
 
@@ -792,6 +841,7 @@ footer {
       <div class="stat"><span class="stat-n">3</span><span class="stat-l" id="stat-l-1">teminiai blokai</span></div>
       <div class="stat"><span class="stat-n">~100</span><span class="stat-l" id="stat-l-2">dalyvių</span></div>
       <div class="stat"><span class="stat-n">4.5h</span><span class="stat-l" id="stat-l-3">turinio</span></div>
+    </div>
   </div>
 </section>
 
@@ -799,10 +849,10 @@ footer {
 <!-- SPEAKERS -->
 <section class="speakers-section" id="speakers">
   <p class="sec-label rev" id="label-speakers">Pranešėjai</p>
-  <h2 class="rev" id="speakers-h2">People who know<br>their stuff.</h2>
+  <h2 class="rev" id="speakers-h2">Žmonės, kurie<br>išmano savo sritį.</h2>
   <div class="speakers-grid rev">
     <div class="spk block-mono" style="border-top: 2px solid var(--c-mono)">
-      <div class="spk-photo-wrap"><img src="linas.jpg" alt="Linas K." class="spk-photo"></div>
+      <div class="spk-photo-wrap"><img src="linas.jpg" alt="Linas K." class="spk-photo" loading="lazy" decoding="async"></div>
       <div class="spk-handle">@linasantlinijos</div>
       <div class="spk-name">Linas K.</div>
       <div class="spk-topic" id="spk-topic-1">Buvęs Cryptonews.com ir „Verslo žinių" portalo vyriausiasis redaktorius.</div>
@@ -812,7 +862,7 @@ footer {
       </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-photo-wrap"><img src="mariusoffchain.jpeg" alt="Marius Off-Chain" class="spk-photo"></div>
+      <div class="spk-photo-wrap"><img src="mariusoffchain.jpeg" alt="Marius Off-Chain" class="spk-photo" loading="lazy" decoding="async"></div>
       <div class="spk-handle">@mariusoffchain</div>
       <div class="spk-name">Marius Off-Chain</div>
       <div class="spk-topic" id="spk-topic-2">Nepriklausomas žurnalistas, specializuojantis Bitcoin ir suverenumo įrankių srityje, ir „Offchain Media" įkūrėjas.</div>
@@ -823,7 +873,7 @@ footer {
       </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-photo-wrap"><img src="keypleb.jpg" alt="Keypleb" class="spk-photo" style="transform: scale(1.6); transform-origin: center 30%;"></div>
+      <div class="spk-photo-wrap"><img src="keypleb.jpg" alt="Keypleb" class="spk-photo" loading="lazy" decoding="async" style="transform: scale(1.6); transform-origin: center 30%;"></div>
       <div class="spk-handle">@keypleb</div>
       <div class="spk-name">Keypleb</div>
       <div class="spk-topic" id="spk-topic-3">„Code Orange Dev School" įkūrėjas — Bitcoin edukacijos iniciatyva, skirta padėti ugdyti kitą kūrėjų kartą.</div>
@@ -833,7 +883,7 @@ footer {
       </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-photo-wrap"><img src="piktas.jpg" alt="Piktas" class="spk-photo"></div>
+      <div class="spk-photo-wrap"><img src="piktas.jpg" alt="Piktas" class="spk-photo" loading="lazy" decoding="async"></div>
       <div class="spk-handle">piktas@nostrblebs.com</div>
       <div class="spk-name">Piktas</div>
       <div class="spk-topic" id="spk-topic-4">Poker žaidėjas, kurį įtikino Bitcoin.</div>
@@ -845,6 +895,7 @@ footer {
       <div class="spk-handle">&nbsp;</div>
       <div class="spk-name spk-tba">More to come</div>
       <div class="spk-topic spk-tba">Paskelbsime netrukus.</div>
+    </div>
   </div>
 </section>
 
@@ -976,20 +1027,20 @@ footer {
     <p class="sec-label rev" id="label-venue">Vieta</p>
     <h2 class="rev" id="venue-h2">Vilnius,<br>Lietuva</h2>
     <div class="venue-detail rev">
-      <div class="venue-lbl">Location</div>
+      <div class="venue-lbl">Vieta</div>
       <div class="venue-val" id="venue-loc-val">Nova — Kastytis<small>V. Gerulaičio g. 10, Vilnius</small></div>
     </div>
     <div class="venue-detail rev">
-      <div class="venue-lbl">Date & Time</div>
-      <div class="venue-val" id="venue-date-val">Šeštadienis, rugs. 27<small>Durys atidaromos 13:00</small></div>
+      <div class="venue-lbl">Data ir laikas</div>
+      <div class="venue-val" id="venue-date-val">Sekmadienis, rugs. 27<small>Durys atidaromos 13:00</small></div>
     </div>
     <div class="venue-detail rev">
-      <div class="venue-lbl">Capacity</div>
+      <div class="venue-lbl">Vietų skaičius</div>
       <div class="venue-val" id="venue-cap-val">~100 dalyvių</div>
     </div>
     <div class="venue-left-photos rev">
-      <img src="venue-interior.jpeg" alt="Kastytis room interior">
-      <img src="venue-exterior.jpeg" alt="Nova building, V. Gerulaičio g. 10">
+      <img src="venue-interior.jpeg" loading="lazy" decoding="async" alt="Kastytis room interior">
+      <img src="venue-exterior.jpeg" loading="lazy" decoding="async" alt="Nova building, V. Gerulaičio g. 10">
     </div>
   </div>
   <div class="venue-right">
@@ -1002,13 +1053,13 @@ footer {
 <!-- PARTNERS -->
 <section class="partners-split">
   <div class="partners-left">
-    <p class="sec-label">Our only sponsor</p>
+    <p class="sec-label">Vienintelis rėmėjas</p>
     <a href="https://bringin.app/" target="_blank" rel="noopener">
       <img src="bringin-logo.svg" alt="Bringin" class="partner-logo-bringin">
     </a>
   </div>
   <div class="partners-right">
-    <p class="sec-label">Organized by</p>
+    <p class="sec-label">Organizuoja</p>
     <a href="https://www.offchain.media/" target="_blank" rel="noopener">
       <img src="off-chain-media-logo.svg" alt="Off-Chain Media" class="partner-logo-offchain">
     </a>
@@ -1020,11 +1071,11 @@ footer {
 <section class="tickets-split" id="tickets">
   <div class="tickets-left">
     <p class="sec-label rev" id="label-tickets">Bilietai</p>
-    <h2 class="rev">Secure<br>your<br>spot.</h2>
+    <h2 class="rev">Užsitikrink<br>savo<br>vietą.</h2>
     <p class="rev" id="tickets-p">Ribota vieta ~100 dalyvių. Mokėjimo nuoroda netrukus. Sekite mus Nostr.</p>
     <div class="ticket-bebop rev">
       <img src="bebop-dark.svg" alt="Be-Bop" class="ticket-bebop-logo">
-      <span class="ticket-bebop-text">Payments accepted through Be-Bop, the open source sales toolbox</span>
+      <span class="ticket-bebop-text">Mokėjimai priimami per Be-Bop — atviro kodo pardavimų įrankį</span>
     </div>
   </div>
   <div class="tickets-right">
@@ -1033,7 +1084,7 @@ footer {
       <li id="ticket-item-1">Visas konferencijos priėjimas, visi pranešimai ir dirbtuvės</li>
       <li id="ticket-item-2">Sveikinamieji gėrimai 13:00</li>
       <li id="ticket-item-3">Vakarėlis iki 01:00</li>
-      <li>Community resources & next steps</li>
+      <li>Bendruomenės ištekliai ir tolesni žingsniai</li>
     </ul>
     <a href="https://tickets.proofconference.com/" class="ticket-btn rev" id="ticket-btn">Gauk bilietą</a>
   </div>
@@ -1062,7 +1113,7 @@ const obs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.rev').forEach(el => obs.observe(el));
 
 // Nav active state
-const sections = document.querySelectorAll('section[id], div[id]');
+const sections = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('.nav-links a[href^="#"]');
 window.addEventListener('scroll', () => {
   let cur = '';
@@ -1100,7 +1151,9 @@ function twTick() {
   }
   setTimeout(twTick, twDel ? 40 : 75);
 }
-setTimeout(twTick, 600);
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  setTimeout(twTick, 600);
+}
 </script>
 </body>
 </html>

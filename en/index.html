@@ -9,13 +9,55 @@
 <meta property="og:title" content="PROOF &lt;conference&gt; — Vilnius, September 27, 2026" />
 <meta property="og:description" content="A half-day conference on privacy, decentralization, and financial sovereignty. Talks + workshops. Vilnius, Lithuania." />
 <meta property="og:image" content="https://proofconference.com/proof-conference-thumbnail.jpg" />
-<meta property="og:url" content="https://proofconference.com" />
+<meta property="og:url" content="https://proofconference.com/en/" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="PROOF &lt;conference&gt; — Vilnius, September 27, 2026" />
 <meta name="twitter:description" content="A half-day conference on privacy, decentralization, and financial sovereignty." />
 <meta name="twitter:image" content="https://proofconference.com/proof-conference-thumbnail.jpg" />
 <title>PROOF &lt;conference&gt; — September 27, 2026 · Vilnius</title>
+<meta name="description" content="A half-day conference on privacy, decentralization, and financial sovereignty. Talks + workshops. Vilnius, Lithuania. September 27, 2026.">
+<link rel="canonical" href="https://proofconference.com/en/">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://proofconference.com/en/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "PROOF <conference>",
+  "startDate": "2026-09-27T13:00:00+03:00",
+  "endDate": "2026-09-28T01:00:00+03:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "description": "A half-day conference on privacy, decentralization, and financial sovereignty. Talks + workshops.",
+  "image": "https://proofconference.com/proof-conference-thumbnail.jpg",
+  "url": "https://proofconference.com/en/",
+  "location": {
+    "@type": "Place",
+    "name": "Nova — Kastytis",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "V. Gerulaičio g. 10",
+      "addressLocality": "Vilnius",
+      "addressCountry": "LT"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "10",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/PreOrder",
+    "url": "https://proofconference.com/en/#tickets"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Off-Chain Media",
+    "url": "https://www.offchain.media/"
+  }
+}
+</script>
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -638,11 +680,18 @@ footer {
 /* ══════════════════════════════════════
    REVEAL ANIMATION
 ══════════════════════════════════════ */
-.rev {
+/* Hidden only when JS is on — without JS (Tor Safest…) everything stays visible */
+.js .rev {
   opacity: 0; transform: translateY(12px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.rev.vis { opacity: 1; transform: none; }
+.js .rev.vis { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .rev { opacity: 1; transform: none; transition: none; }
+  .tw-cursor { animation: none; }
+}
 
 
 /* ══════════════════════════════════════
@@ -778,6 +827,7 @@ footer {
       <div class="stat"><span class="stat-n">3</span><span class="stat-l" id="stat-l-1">thematic blocks</span></div>
       <div class="stat"><span class="stat-n">~100</span><span class="stat-l" id="stat-l-2">attendees</span></div>
       <div class="stat"><span class="stat-n">4.5h</span><span class="stat-l" id="stat-l-3">of content</span></div>
+    </div>
   </div>
 </section>
 
@@ -788,7 +838,7 @@ footer {
   <h2 class="rev" id="speakers-h2">People who know<br>their stuff.</h2>
   <div class="speakers-grid rev">
     <div class="spk block-mono" style="border-top: 2px solid var(--c-mono)">
-      <div class="spk-photo-wrap"><img src="../linas.jpg" alt="Linas K." class="spk-photo"></div>
+      <div class="spk-photo-wrap"><img src="../linas.jpg" alt="Linas K." class="spk-photo" loading="lazy" decoding="async"></div>
       <div class="spk-handle">@linasantlinijos</div>
       <div class="spk-name">Linas K.</div>
       <div class="spk-topic" id="spk-topic-1">Former editor-in-chief of Cryptonews.com and editor-in-chief at Verslo žinios.</div>
@@ -798,7 +848,7 @@ footer {
       </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-photo-wrap"><img src="../mariusoffchain.jpeg" alt="Marius Off-Chain" class="spk-photo"></div>
+      <div class="spk-photo-wrap"><img src="../mariusoffchain.jpeg" alt="Marius Off-Chain" class="spk-photo" loading="lazy" decoding="async"></div>
       <div class="spk-handle">@mariusoffchain</div>
       <div class="spk-name">Marius Off-Chain</div>
       <div class="spk-topic" id="spk-topic-2">Independent journalist specialized in Bitcoin and sovereignty tools, and founder of Offchain Media.</div>
@@ -809,7 +859,7 @@ footer {
       </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-photo-wrap"><img src="../keypleb.jpg" alt="Keypleb" class="spk-photo" style="transform: scale(1.6); transform-origin: center 30%;"></div>
+      <div class="spk-photo-wrap"><img src="../keypleb.jpg" alt="Keypleb" class="spk-photo" loading="lazy" decoding="async" style="transform: scale(1.6); transform-origin: center 30%;"></div>
       <div class="spk-handle">@keypleb</div>
       <div class="spk-name">Keypleb</div>
       <div class="spk-topic" id="spk-topic-3">Founder of Code Orange Dev School, a Bitcoin education initiative focused on helping grow the next generation of developers.</div>
@@ -819,7 +869,7 @@ footer {
       </div>
     </div>
     <div class="spk block-dece" style="border-top: 2px solid var(--c-dece)">
-      <div class="spk-photo-wrap"><img src="../piktas.jpg" alt="Piktas" class="spk-photo"></div>
+      <div class="spk-photo-wrap"><img src="../piktas.jpg" alt="Piktas" class="spk-photo" loading="lazy" decoding="async"></div>
       <div class="spk-handle">piktas@nostrblebs.com</div>
       <div class="spk-name">Piktas</div>
       <div class="spk-topic" id="spk-topic-4">Poker player convinced about Bitcoin.</div>
@@ -831,6 +881,7 @@ footer {
       <div class="spk-handle">&nbsp;</div>
       <div class="spk-name spk-tba">More to come</div>
       <div class="spk-topic spk-tba">Announcement coming soon.</div>
+    </div>
   </div>
 </section>
 
@@ -967,15 +1018,15 @@ footer {
     </div>
     <div class="venue-detail rev">
       <div class="venue-lbl">Date & Time</div>
-      <div class="venue-val" id="venue-date-val">Saturday, Sept 27<small>Doors open at 13:00</small></div>
+      <div class="venue-val" id="venue-date-val">Sunday, Sept 27<small>Doors open at 13:00</small></div>
     </div>
     <div class="venue-detail rev">
       <div class="venue-lbl">Capacity</div>
       <div class="venue-val" id="venue-cap-val">~100 attendees</div>
     </div>
     <div class="venue-left-photos rev">
-      <img src="../venue-interior.jpeg" alt="Kastytis room interior">
-      <img src="../venue-exterior.jpeg" alt="Nova building, V. Gerulaičio g. 10">
+      <img src="../venue-interior.jpeg" loading="lazy" decoding="async" alt="Kastytis room interior">
+      <img src="../venue-exterior.jpeg" loading="lazy" decoding="async" alt="Nova building, V. Gerulaičio g. 10">
     </div>
   </div>
   <div class="venue-right">
@@ -1049,7 +1100,7 @@ const obs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.rev').forEach(el => obs.observe(el));
 
 // Nav active state
-const sections = document.querySelectorAll('section[id], div[id]');
+const sections = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('.nav-links a[href^="#"]');
 window.addEventListener('scroll', () => {
   let cur = '';
@@ -1087,7 +1138,9 @@ function twTick() {
   }
   setTimeout(twTick, twDel ? 40 : 75);
 }
-setTimeout(twTick, 600);
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  setTimeout(twTick, 600);
+}
 </script>
 </body>
 </html>

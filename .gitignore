@@ -1,0 +1,6 @@
+.DS_Store
+
+# Documents internes — ne jamais publier sur proofconference.com
+Alice*.md
+alice-smoke-test/
+.claude/

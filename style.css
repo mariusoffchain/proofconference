@@ -10,8 +10,8 @@ body { background: #080808; color: #f0ece4; font-family: 'JetBrains Mono', monos
   --off:     #e8e4dc;
   --muted:   rgba(240,236,228,0.45);
   --c-priv:  #00c896;   /* vert  — privacy */
-  --c-dece:  #8b5cf6;   /* violet — décentralisation */
-  --c-mono:  #f5a623;   /* orange — monnaie */
+  --c-dece:  #8b5cf6;   /* violet — décentralisation / auto-hébergement */
+  --c-mono:  #f5a623;   /* orange — monnaie (inclut bitcoin) */
   --border:  rgba(240,236,228,0.08);
 }
 
@@ -338,6 +338,11 @@ nav {
   text-transform: uppercase;
 }
 
+.prog-note {
+  font-size: 12px; line-height: 1.6; color: var(--muted);
+  margin-top: 16px; max-width: 560px;
+}
+
 .tl-body {
   background: var(--black);
   padding: 48px 56px 80px;
@@ -366,7 +371,7 @@ nav {
   background: var(--black); border: 1px solid rgba(240,236,228,0.2);
 }
 .tl-row.priv .tl-l::after { background: var(--c-priv); border-color: var(--c-priv); box-shadow: 0 0 10px rgba(0,200,150,0.3); }
-.tl-row.dece .tl-l::after { background: var(--c-dece); border-color: var(--c-dece); box-shadow: 0 0 10px rgba(139,92,246,0.3); }
+.tl-row.auto .tl-l::after { background: var(--c-dece); border-color: var(--c-dece); box-shadow: 0 0 10px rgba(139,92,246,0.3); }
 .tl-row.mono .tl-l::after { background: var(--c-mono); border-color: var(--c-mono); box-shadow: 0 0 10px rgba(245,166,35,0.3); }
 
 .tl-time {
@@ -383,7 +388,7 @@ nav {
   color: var(--muted); margin-bottom: 8px;
 }
 .tl-row.priv .tl-section { color: var(--c-priv); }
-.tl-row.dece .tl-section { color: var(--c-dece); }
+.tl-row.auto .tl-section { color: var(--c-dece); }
 .tl-row.mono .tl-section { color: var(--c-mono); }
 
 .tl-card {
@@ -393,7 +398,7 @@ nav {
 .tl-card:last-child { margin-bottom: 0; }
 
 .tl-row.priv .tl-card { border-left: 2px solid var(--c-priv); }
-.tl-row.dece .tl-card { border-left: 2px solid var(--c-dece); }
+.tl-row.auto .tl-card { border-left: 2px solid var(--c-dece); }
 .tl-row.mono .tl-card { border-left: 2px solid var(--c-mono); }
 
 .tl-card-top { display: flex; align-items: baseline; gap: 10px; }
@@ -685,6 +690,8 @@ footer a:hover { color: var(--white); }
   .hero-left { min-height: 60vw; }
   .tl-body { padding: 32px 24px 56px; }
   .tl-desc { padding-left: 0; }
+  .tl-card-top { flex-wrap: wrap; }
+  .tl-type { flex-basis: 100%; }
   .speakers-grid { grid-template-columns: 1fr 1fr; }
   .speakers-section, .prog-header { padding: 64px 24px 40px; }
   .tickets-left, .tickets-right, .about-left, .about-right, .venue-left { padding: 64px 24px; }

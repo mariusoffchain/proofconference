@@ -702,10 +702,11 @@ footer a:hover { color: var(--white); }
 
 .nav-logo-text {
   font-family: 'Righteous', sans-serif;
-  font-size: 28px;
+  font-size: clamp(18px, 6vw, 28px);
   color: var(--white);
   letter-spacing: 0.04em;
   line-height: 1;
+  white-space: nowrap;
   text-transform: uppercase;
 }
 .hero-logo-text-big {

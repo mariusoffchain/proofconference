@@ -496,13 +496,21 @@ nav {
    PARTNERS
 ══════════════════════════════════════ */
 .partners-split {
-  display: grid; grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
   border-top: 1px solid var(--border);
+}
+
+.partners-bebop {
+  background: var(--black);
+  padding: 64px 40px;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  border-right: 1px solid rgba(240,236,228,0.08);
 }
 
 .partners-left {
   background: var(--white); color: var(--black);
-  padding: 64px 56px;
+  padding: 64px 40px;
   display: flex; flex-direction: column;
   justify-content: center; align-items: flex-start;
   border-right: 1px solid rgba(8,8,8,0.08);
@@ -510,14 +518,20 @@ nav {
 
 .partners-right {
   background: var(--black);
-  padding: 64px 56px;
+  padding: 64px 40px;
   display: flex; flex-direction: column;
   justify-content: center; align-items: flex-start;
 }
 
+.partners-bebop .sec-label { max-width: 220px; }
+
 .partners-left .sec-label { color: rgba(8,8,8,0.4); opacity: 1; }
 
-.partners-left a, .partners-right a { display: block; }
+.partners-bebop a, .partners-left a, .partners-right a { display: block; }
+
+.partner-logo-bebop {
+  width: 240px; max-width: 100%; height: auto; display: block;
+}
 
 .partner-logo-bringin {
   width: 300px; max-width: 100%; height: auto; display: block;
@@ -531,7 +545,8 @@ nav {
 
 @media (max-width: 768px) {
   .partners-split { grid-template-columns: 1fr; }
-  .partners-left, .partners-right { padding: 56px 24px; }
+  .partners-bebop, .partners-left, .partners-right { padding: 56px 24px; }
+  .partner-logo-bebop { width: 200px; }
   .partner-logo-bringin { width: 220px; }
   .partner-logo-offchain { width: 280px; }
 }
@@ -601,20 +616,6 @@ nav {
   margin-top: 12px;
   font-size: 10px; opacity: 0.3; letter-spacing: 0.05em; text-align: center;
 }
-.ticket-bebop {
-  margin-top: 32px;
-  padding-top: 32px;
-  border-top: 1px solid rgba(240,236,228,0.12);
-  display: flex; align-items: center; gap: 40px;
-}
-.ticket-bebop-logo { height: 96px; width: auto; display: block; flex-shrink: 0; }
-.ticket-bebop-text {
-  font-family: 'Righteous', sans-serif;
-  font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--muted); line-height: 1.4;
-}
-
-
 /* ══════════════════════════════════════
    FOOTER
 ══════════════════════════════════════ */

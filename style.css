@@ -407,7 +407,9 @@ nav {
   font-family: 'JetBrains Mono', monospace;
   font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--muted); min-width: 54px; flex-shrink: 0;
+  display: flex; flex-direction: column; gap: 2px;
 }
+.tl-type-b::before { content: '+ '; }
 .tl-title {
   font-family: 'Righteous', sans-serif;
   font-size: 15px; font-weight: 900;
@@ -691,7 +693,8 @@ footer a:hover { color: var(--white); }
   .tl-body { padding: 32px 24px 56px; }
   .tl-desc { padding-left: 0; }
   .tl-card-top { flex-wrap: wrap; }
-  .tl-type { flex-basis: 100%; }
+  .tl-type { flex-basis: 100%; display: block; }
+  .tl-type-b::before { content: ' + '; }
   .speakers-grid { grid-template-columns: 1fr 1fr; }
   .speakers-section, .prog-header { padding: 64px 24px 40px; }
   .tickets-left, .tickets-right, .about-left, .about-right, .venue-left { padding: 64px 24px; }

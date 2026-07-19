@@ -339,8 +339,8 @@ nav {
 }
 
 .prog-note {
-  font-size: 12px; line-height: 1.6; color: var(--muted);
-  margin-top: 16px; max-width: 560px;
+  font-size: 20px; line-height: 1.6; color: var(--white);
+  margin: 24px auto 0; max-width: 640px; text-align: center;
 }
 
 .tl-body {

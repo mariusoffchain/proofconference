@@ -68,6 +68,7 @@ nav {
   justify-content: flex-end;
   padding: 64px 56px;
   position: relative; overflow: hidden;
+  container-type: inline-size;
 }
 
 .hero-left-noise {
@@ -246,17 +247,33 @@ nav {
   text-transform: uppercase; margin-bottom: 48px;
 }
 
+/* Cap and centre heading + grid together, otherwise the heading stays
+   pinned left while the capped grid centres itself on wide screens. */
+.speakers-section .sec-label,
+.speakers-section h2,
 .speakers-grid {
-  display: grid; grid-template-columns: repeat(4,1fr);
+  max-width: 1280px;
+  margin-left: auto; margin-right: auto;
+}
+
+/* Column count steps down with width so a card never gets wide enough
+   to blow the portrait up - photo height follows card width. */
+.speakers-grid {
+  display: grid; grid-template-columns: repeat(5,1fr);
   gap: 1px; background: var(--border);
   border: 1px solid var(--border);
 }
 
+@media (max-width: 1199px) { .speakers-grid { grid-template-columns: repeat(4,1fr); } }
+@media (max-width: 991px)  { .speakers-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 559px)  { .speakers-grid { grid-template-columns: repeat(2,1fr); } }
+
 .spk {
   background: var(--warm);
-  padding: 36px 28px;
+  padding: 26px 20px;
   position: relative; overflow: hidden;
   transition: background 0.2s;
+  display: flex; flex-direction: column;
 }
 
 .spk::before {
@@ -270,18 +287,21 @@ nav {
 .spk:hover { background: rgba(255,255,255,0.03); }
 .spk:hover::before { transform: scaleX(1); }
 
+/* Square frame: the crop stays identical at every viewport width.
+   A fluid width + fixed height made the ratio drift, shifting faces. */
 .spk-photo-wrap {
-  width: calc(100% + 56px);
-  margin: -36px -28px 24px;
-  height: 220px;
+  width: calc(100% + 40px);
+  margin: -26px -20px 18px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   flex-shrink: 0;
+  background: rgba(255,255,255,0.03);
 }
 .spk-photo {
   display: block;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 28%;
   filter: grayscale(20%);
 }
 
@@ -293,13 +313,22 @@ nav {
 
 .spk-name {
   font-family: 'Righteous', sans-serif;
-  font-size: 30px; font-weight: 900;
+  font-size: 20px; font-weight: 900;
   text-transform: uppercase; letter-spacing: 0.02em;
-  line-height: 1; margin-bottom: 14px;
+  line-height: 1.05; margin-bottom: 12px;
+  overflow-wrap: break-word;
 }
 
 .spk-topic { font-size: 11px; line-height: 1.7; color: var(--muted); }
 .spk-tba { opacity: 0.25; font-style: italic; }
+
+/* 5th slot: empty frame keeps the row aligned with the real portraits */
+.spk-photo-ph {
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px; color: rgba(240,236,228,0.12);
+}
+.spk-photo-ph::after { content: '?'; }
 
 .spk-links {
   display: flex; gap: 6px; flex-wrap: wrap;
@@ -327,6 +356,7 @@ nav {
 .prog-header {
   padding: 64px 56px 48px;
   background: var(--black);
+  text-align: center;
 }
 
 .prog-header .sec-label { color: rgba(240,236,228,0.35); }
@@ -339,8 +369,8 @@ nav {
 }
 
 .prog-note {
-  font-size: 20px; line-height: 1.6; color: var(--white);
-  margin: 24px auto 0; max-width: 640px; text-align: center;
+  font-size: 16px; line-height: 1.6; color: var(--white);
+  margin: 20px auto 0; max-width: 640px; text-align: center;
 }
 
 .tl-body {
@@ -694,7 +724,6 @@ footer a:hover { color: var(--white); }
   .tl-card-top { flex-wrap: wrap; }
   .tl-type { flex-basis: 100%; display: block; }
   .tl-type-b::before { content: ' '; }
-  .speakers-grid { grid-template-columns: 1fr 1fr; }
   .speakers-section, .prog-header { padding: 64px 24px 40px; }
   .tickets-left, .tickets-right, .about-left, .about-right, .venue-left { padding: 64px 24px; }
   .venue-map { min-height: 280px; }
@@ -711,7 +740,13 @@ footer a:hover { color: var(--white); }
 }
 .hero-logo-text-big {
   font-family: 'Righteous', sans-serif;
-  font-size: clamp(64px, 14vw, 160px);
+  /* Sized against the left panel, not the viewport: 14vw measured the full
+     window while the text only owns half of it, so PROOF got clipped.
+     Righteous renders PROOF at ~3.46x the font-size, making 28.9cqw the
+     hard ceiling - 27cqw leaves a little slack. vw line is the fallback
+     for browsers without container query units. */
+  font-size: clamp(48px, 10vw, 140px);
+  font-size: clamp(48px, 27cqw, 160px);
   font-weight: 400;
   line-height: 0.9;
   text-transform: uppercase;

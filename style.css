@@ -454,6 +454,14 @@ nav {
   font-size: 11px; line-height: 1.65; color: var(--muted);
   margin-top: 6px; padding-left: 64px;
 }
+.tl-speaker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: 4px; padding-left: 64px;
+}
+.tl-row.priv .tl-speaker { color: var(--c-priv); }
+.tl-row.auto .tl-speaker { color: var(--c-dece); }
+.tl-row.mono .tl-speaker { color: var(--c-mono); }
 
 /* Speaker hover bar (speakers section) */
 .block-priv .spk::before { background: var(--c-priv); }

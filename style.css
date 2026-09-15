@@ -787,3 +787,10 @@ footer a:hover { color: var(--white); }
 }
 .lang-btn:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
 .lang-btn.lt { color: var(--white); border-color: var(--white); }
+
+
+/* ══════════════════════════════════════
+   SUBPAGES (ex. /konkursas) — first block sits under the fixed nav
+══════════════════════════════════════ */
+.page-top { padding-top: 60px; }
+.tickets-left .hero-btn { margin-top: 28px; }

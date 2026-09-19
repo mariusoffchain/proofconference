@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo privatumo gidas · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos gidas: visi patarimai, įrankiai ir tolesni žingsniai, padedantys susigrąžinti privatumą, savarankiškumą ir pinigus.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="#privacy">&lt;privatumas&gt;</a></li>
+    <li><a href="#autonomy">&lt;autonomija&gt;</a></li>
+    <li><a href="#work">&lt;darbas&gt;</a></li>
+  </ul>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/'">EN</button>
+</nav>
+
+
+<!-- HEADER -->
+<section class="program-section page-top">
+  <div class="prog-header">
+    <p class="sec-label">&lt;book&gt;</p>
+    <h2>Tavo privatumo<br>gidas</h2>
+    <p class="prog-note">Viskas, ką rekomendavome PROOF konferencijoje, vienoje vietoje. Pažymėk, ką jau padarei: tavo pažanga saugoma tik šioje naršyklėje. Be paskyros, be slapukų, be sekimo.</p>
+  </div>
+</section>
+
+
+<!-- TOOLBAR : progression + filtre par effort -->
+<div class="bk-toolbar">
+  <div class="bk-toolbar-in">
+    <div class="bk-progress">
+      <span>Pažanga <strong id="bk-done">0 / 17</strong></span>
+      <div class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></div>
+    </div>
+    <div class="bk-filters">
+      <button class="bk-filter" data-filter="all" aria-pressed="true">Visi</button>
+      <button class="bk-filter" data-filter="1" aria-pressed="false">5 min.</button>
+      <button class="bk-filter" data-filter="2" aria-pressed="false">1 val.</button>
+      <button class="bk-filter" data-filter="3" aria-pressed="false">Savaitgalis</button>
+    </div>
+    <button class="bk-reset" id="bk-reset" data-confirm="Ištrinti visą pažangą?">Išvalyti</button>
+  </div>
+</div>
+
+
+<!-- PROOF OF PRIVACY -->
+<section class="bk-block priv" id="privacy" data-block="priv">
+  <div class="bk-inner">
+    <div class="bk-block-head">
+      <p class="bk-label">&lt;01&gt; privatumas</p>
+      <span class="bk-count">0 / 6</span>
+    </div>
+    <h2>Proof of Privacy</h2>
+    <p class="bk-intro">Sumažink tai, ką kiti gali apie tave sužinoti. Pradėk nuo pagrindų: žinučių, slaptažodžių, naršyklės.</p>
+    <p class="bk-talks-label">PROOF scenoje</p>
+    <ul class="bk-talks">
+      <li><span class="bk-talk-by">Satoshine</span>Kodėl nuo tavo raktų priklauso tavo interneto sauga</li>
+    </ul>
+    <ul class="bk-list">
+      <li class="bk-item" data-id="priv-signal" data-effort="1">
+        <label class="bk-check" for="priv-signal"><input type="checkbox" id="priv-signal"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-signal">Perkelk pokalbius į „Signal“</label><span class="bk-effort">5 min.</span></div>
+          <p class="bk-why">Visi pokalbiai automatiškai šifruojami ištisiniu šifravimu, kodas atviras, o metaduomenų beveik nerenkama. Pradėk nuo penkių žmonių, su kuriais bendrauji dažniausiai.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-browser" data-effort="1">
+        <label class="bk-check" for="priv-browser"><input type="checkbox" id="priv-browser"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-browser">Pasirink naršyklę, kuri blokuoja sekiklius</label><span class="bk-effort">5 min.</span></div>
+          <p class="bk-why">Naršyklė mato viską, ką darai internete. Pasirink tokią, kuri sekiklius blokuoja automatiškai, ir pakeisk numatytąją paieškos sistemą.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">Firefox</a> · <a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave</a> · <a href="https://mullvad.net/browser" target="_blank" rel="noopener noreferrer">Mullvad Browser</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-passwords" data-effort="2">
+        <label class="bk-check" for="priv-passwords"><input type="checkbox" id="priv-passwords"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-passwords">Naudok slaptažodžių tvarkyklę</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">Vienas stiprus pagrindinis slaptažodis ir unikalus slaptažodis kiekvienai svetainei. Nutekėjus vienos paslaugos duomenims, kitos lieka saugios.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a> · <a href="https://keepassxc.org/" target="_blank" rel="noopener noreferrer">KeePassXC</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-2fa" data-effort="2">
+        <label class="bk-check" for="priv-2fa"><input type="checkbox" id="priv-2fa"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-2fa">Įjunk dviejų veiksnių autentifikavimą, tik ne per SMS</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">SMS kodus galima perimti perkėlus tavo numerį į svetimą SIM kortelę. Naudok autentifikavimo programėlę arba aparatinį saugos raktą, pirmiausia el. paštui, bankui ir biržoms.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://getaegis.app/" target="_blank" rel="noopener noreferrer">Aegis</a> · <a href="https://ente.io/auth/" target="_blank" rel="noopener noreferrer">Ente Auth</a> · <a href="https://www.yubico.com/" target="_blank" rel="noopener noreferrer">YubiKey</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-alias" data-effort="2">
+        <label class="bk-check" for="priv-alias"><input type="checkbox" id="priv-alias"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-alias">Naudok el. pašto pseudonimus</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">Kiekvienai paslaugai atskiras adresas: iškart matai, kas nutekino tavo duomenis, o tikrasis adresas lieka privatus.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">SimpleLogin</a> · <a href="https://addy.io/" target="_blank" rel="noopener noreferrer">addy.io</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-network" data-effort="2">
+        <label class="bk-check" for="priv-network"><input type="checkbox" id="priv-network"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-network">Apsaugok savo interneto srautą</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">Interneto teikėjas ir viešas „Wi-Fi“ mato, kokiose svetainėse lankaisi. Patikimas VPN arba „mixnet“ tinklas šiuos metaduomenis paslepia.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://nym.com/" target="_blank" rel="noopener noreferrer">NymVPN</a> · <a href="https://mullvad.net/" target="_blank" rel="noopener noreferrer">Mullvad VPN</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- PROOF OF AUTONOMY -->
+<section class="bk-block auto" id="autonomy" data-block="auto">
+  <div class="bk-inner">
+    <div class="bk-block-head">
+      <p class="bk-label">&lt;02&gt; autonomija</p>
+      <span class="bk-count">0 / 5</span>
+    </div>
+    <h2>Proof of Autonomy</h2>
+    <p class="bk-intro">Mažiau priklausyk nuo platformų, kurios gali tave užblokuoti. Valdyk savo tapatybę, duomenis ir įrankius.</p>
+    <p class="bk-talks-label">PROOF scenoje</p>
+    <ul class="bk-talks">
+      <li><span class="bk-talk-by">Alexis Roussel</span>Kaip „kareivis-pilietis" gali padėti decentralizuoti pasaulį: Rusijos invazijos į Ukrainą pamokos</li>
+      <li><span class="bk-talk-by">Marius Off-Chain</span>Kaip perkurti socialinius tinklus be juos valdančios įmonės naudojant Nostr</li>
+    </ul>
+    <ul class="bk-list">
+      <li class="bk-item" data-id="auto-nostr" data-effort="1">
+        <label class="bk-check" for="auto-nostr"><input type="checkbox" id="auto-nostr"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-nostr">Susikurk „Nostr“ tapatybę</label><span class="bk-effort">5 min.</span></div>
+          <p class="bk-why">Raktų pora vietoj paskyros: jokia įmonė negali tavęs užblokuoti ar parduoti tavo auditorijos. Pirmiausia pasek konferencijos pranešėjus.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://primal.net/" target="_blank" rel="noopener noreferrer">Primal</a> · <a href="https://damus.io/" target="_blank" rel="noopener noreferrer">Damus</a> · <a href="https://github.com/vitorpamplona/amethyst" target="_blank" rel="noopener noreferrer">Amethyst</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-keys" data-effort="2">
+        <label class="bk-check" for="auto-keys"><input type="checkbox" id="auto-keys"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-keys">Pasidaryk privačių raktų atsargines kopijas</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">Raktai yra tavo tapatybė ir tavo pinigai. Užsirašyk juos ant popieriaus, laikyk dviejose vietose ir niekada nesaugok ekrano nuotraukose ar debesyje.</p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-opensource" data-effort="2">
+        <label class="bk-check" for="auto-opensource"><input type="checkbox" id="auto-opensource"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-opensource">Pakeisk vieną „Big Tech“ paslaugą atvira alternatyva</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">Pasirink vieną: el. paštą, žemėlapius, užrašus arba debesų saugyklą. Keičiant po vieną paslaugą, nauji įpročiai prigyja.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a> · <a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer">Organic Maps</a> · <a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-selfhost" data-effort="3">
+        <label class="bk-check" for="auto-selfhost"><input type="checkbox" id="auto-selfhost"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-selfhost">Paleisk pirmąją paslaugą savo serveryje</label><span class="bk-effort">Savaitgalis</span></div>
+          <p class="bk-why">Nedidelis namų serveris suteikia nuosavą debesį, nuotraukų atsargines kopijas, o vėliau ir nuosavą Bitcoin mazgą.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a> · <a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a> · <a href="https://yunohost.org/" target="_blank" rel="noopener noreferrer">YunoHost</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-phone" data-effort="3">
+        <label class="bk-check" for="auto-phone"><input type="checkbox" id="auto-phone"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-phone">Susigrąžink telefono kontrolę</label><span class="bk-effort">Savaitgalis</span></div>
+          <p class="bk-why">Šiandien peržiūrėk programėlių leidimus. Kai pasiruoši, pereik prie sistemos be „Google“ paslaugų.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://grapheneos.org/" target="_blank" rel="noopener noreferrer">GrapheneOS</a> · <a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- PROOF OF WORK -->
+<section class="bk-block mono" id="work" data-block="mono">
+  <div class="bk-inner">
+    <div class="bk-block-head">
+      <p class="bk-label">&lt;03&gt; darbas</p>
+      <span class="bk-count">0 / 6</span>
+    </div>
+    <h2>Proof of Work</h2>
+    <p class="bk-intro">Pinigai, kurių niekas negali įšaldyti ar nuvertinti, kol raktus laikai tu.</p>
+    <p class="bk-talks-label">PROOF scenoje</p>
+    <ul class="bk-talks">
+      <li><span class="bk-talk-by">Linas K.</span>CBDC, KYC ir kova dėl monetarinio privatumo</li>
+      <li><span class="bk-talk-by">Piktas</span>Kodėl centralizuoti pinigai neveikia: kaip Bitcoin tapo alternatyva</li>
+    </ul>
+    <ul class="bk-list">
+      <li class="bk-item" data-id="mono-wallet" data-effort="1">
+        <label class="bk-check" for="mono-wallet"><input type="checkbox" id="mono-wallet"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-wallet">Įsidiek savarankiško saugojimo bitkoinų piniginę</label><span class="bk-effort">5 min.</span></div>
+          <p class="bk-why">Ne tavo raktai, ne tavo monetos. Savarankiško saugojimo piniginėje savo bitkoinus valdai tik tu.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://phoenix.acinq.co/" target="_blank" rel="noopener noreferrer">Phoenix</a> · <a href="https://bluewallet.io/" target="_blank" rel="noopener noreferrer">BlueWallet</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-lightning" data-effort="1">
+        <label class="bk-check" for="mono-lightning"><input type="checkbox" id="mono-lightning"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-lightning">Atlik pirmąjį „Lightning“ mokėjimą</label><span class="bk-effort">5 min.</span></div>
+          <p class="bk-why">Akimirksniu ir beveik nemokamai. Išbandyk konferencijoje: čia tikrai atsiras, kas mielai atsiųs tau pirmuosius satošius.</p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-seed" data-effort="2">
+        <label class="bk-check" for="mono-seed"><input type="checkbox" id="mono-seed"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-seed">Tinkamai išsaugok atkūrimo frazę</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">12 arba 24 žodžiai ant popieriaus ar plieno, tik ne internete. Niekada jų nefotografuok ir neįvesk jokioje svetainėje. Tada išbandyk atkūrimą.</p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-bringin" data-effort="2">
+        <label class="bk-check" for="mono-bringin"><input type="checkbox" id="mono-bringin"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-bringin">Sujunk eurus ir bitkoinus</label><span class="bk-effort">1 val.</span></div>
+          <p class="bk-why">Konferencijos rėmėjas „Bringin“ susieja IBAN sąskaitą eurais su savarankiško saugojimo „Lightning“ pinigine, todėl gali keisti eurus į bitkoinus ir atgal, nepalikdamas monetų biržoje.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-hardware" data-effort="3">
+        <label class="bk-check" for="mono-hardware"><input type="checkbox" id="mono-hardware"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-hardware">Perkelk santaupas į aparatinę piniginę</label><span class="bk-effort">Savaitgalis</span></div>
+          <p class="bk-why">Sumoms, kurių nesinešiotum kišenėje, raktus laikyk atskirame, prie interneto neprijungtame įrenginyje, pirktame tiesiai iš gamintojo.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://bitbox.swiss/" target="_blank" rel="noopener noreferrer">BitBox02</a> · <a href="https://coldcard.com/" target="_blank" rel="noopener noreferrer">Coldcard</a> · <a href="https://trezor.io/" target="_blank" rel="noopener noreferrer">Trezor</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-node" data-effort="3">
+        <label class="bk-check" for="mono-node"><input type="checkbox" id="mono-node"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-node">Paleisk savo mazgą</label><span class="bk-effort">Savaitgalis</span></div>
+          <p class="bk-why">Pats tikrink savo transakcijas, užuot pasitikėjęs svetimu serveriu. Nepasitikėk, tikrink.</p>
+          <p class="bk-tools">Įrankiai: <a href="https://bitcoincore.org/" target="_blank" rel="noopener noreferrer">Bitcoin Core</a> · <a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a> · <a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a></p>
+        </div>
+      </li>
+    </ul>
+    <p class="bk-alldone" id="bk-alldone" hidden>Viskas atlikta. Suverenitetas susigrąžintas.</p>
+    <p class="bk-disclaimer">Tai tik atspirties taškai, ne garantijos. Nė vienas čia paminėtas įrankis nemoka už vietą sąraše, išskyrus atvejus, kai nurodytas rėmėjas. Kiekvieną įrankį pasitikrink pats: nepasitikėk, tikrink.</p>
+  </div>
+</section>
+
+
+<!-- APRÈS LA CONFÉRENCE - noir gauche / blanc droite -->
+<section class="about-split bk-after" id="next">
+  <div class="about-left">
+    <p class="sec-label">Kas toliau</p>
+    <h2>Po<br>konferencijos</h2>
+    <p>Pranešimų skaidrės ir įrašai bus paskelbti čia po <strong>rugsėjo 27 d.</strong></p>
+    <p>Pasilik bilietą: QR kodas galios ir toliau, o šis puslapis bus pildomas.</p>
+  </div>
+  <div class="about-right">
+    <p class="sec-label" style="color:rgba(8,8,8,0.4)">Bendruomenė</p>
+    <h2>Palaikykime<br>ryšį</h2>
+    <p>Turi klausimų, pastebėjai klaidą ar žinai įrankį, kurį turėtume pridėti? Rašyk adresu <a href="mailto:contact@proofconference.com" style="color:inherit">contact@proofconference.com</a> arba prisijunk prie <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener noreferrer" style="color:inherit">„Facebook“ grupės</a>.</p>
+    <p class="sec-label" style="color:rgba(8,8,8,0.4);margin-top:40px">Vienintelis rėmėjas</p>
+    <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer"><img src="/bringin-logo.svg" alt="Bringin" style="width:200px;display:block"></a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

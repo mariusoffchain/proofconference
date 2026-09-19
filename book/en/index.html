@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Your privacy guide · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference guide: every tip, tool and next step to take back your privacy, your autonomy and your money.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="#privacy">&lt;privacy&gt;</a></li>
+    <li><a href="#autonomy">&lt;autonomy&gt;</a></li>
+    <li><a href="#work">&lt;work&gt;</a></li>
+  </ul>
+  <button class="lang-btn" id="lang-btn" onclick="window.location.href='/book/'">LT</button>
+</nav>
+
+
+<!-- HEADER -->
+<section class="program-section page-top">
+  <div class="prog-header">
+    <p class="sec-label">&lt;book&gt;</p>
+    <h2>Your privacy<br>guide</h2>
+    <p class="prog-note">Everything we recommended at PROOF, in one place. Tick off what you have done: your progress is saved only in this browser. No account, no cookies, no tracking.</p>
+  </div>
+</section>
+
+
+<!-- TOOLBAR : progression + filtre par effort -->
+<div class="bk-toolbar">
+  <div class="bk-toolbar-in">
+    <div class="bk-progress">
+      <span>Progress <strong id="bk-done">0 / 17</strong></span>
+      <div class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></div>
+    </div>
+    <div class="bk-filters">
+      <button class="bk-filter" data-filter="all" aria-pressed="true">All</button>
+      <button class="bk-filter" data-filter="1" aria-pressed="false">5 min</button>
+      <button class="bk-filter" data-filter="2" aria-pressed="false">1 hour</button>
+      <button class="bk-filter" data-filter="3" aria-pressed="false">Weekend</button>
+    </div>
+    <button class="bk-reset" id="bk-reset" data-confirm="Clear all your progress?">Reset</button>
+  </div>
+</div>
+
+
+<!-- PROOF OF PRIVACY -->
+<section class="bk-block priv" id="privacy" data-block="priv">
+  <div class="bk-inner">
+    <div class="bk-block-head">
+      <p class="bk-label">&lt;01&gt; privacy</p>
+      <span class="bk-count">0 / 6</span>
+    </div>
+    <h2>Proof of Privacy</h2>
+    <p class="bk-intro">Reduce what others can learn about you. Start with the basics: messages, passwords, browser.</p>
+    <p class="bk-talks-label">On stage at PROOF</p>
+    <ul class="bk-talks">
+      <li><span class="bk-talk-by">Satoshine</span>Why Your Internet Security Depends on Your Keys</li>
+    </ul>
+    <ul class="bk-list">
+      <li class="bk-item" data-id="priv-signal" data-effort="1">
+        <label class="bk-check" for="priv-signal"><input type="checkbox" id="priv-signal"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-signal">Move your chats to Signal</label><span class="bk-effort">5 min</span></div>
+          <p class="bk-why">End-to-end encrypted by default, open source, and it collects almost no metadata. Start with the five people you talk to most.</p>
+          <p class="bk-tools">Tools: <a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-browser" data-effort="1">
+        <label class="bk-check" for="priv-browser"><input type="checkbox" id="priv-browser"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-browser">Switch to a browser that blocks trackers</label><span class="bk-effort">5 min</span></div>
+          <p class="bk-why">Your browser sees everything you do online. Pick one that blocks trackers by default, and change the default search engine.</p>
+          <p class="bk-tools">Tools: <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener noreferrer">Firefox</a> · <a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave</a> · <a href="https://mullvad.net/browser" target="_blank" rel="noopener noreferrer">Mullvad Browser</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-passwords" data-effort="2">
+        <label class="bk-check" for="priv-passwords"><input type="checkbox" id="priv-passwords"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-passwords">Use a password manager</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">One strong master password, and a unique password for every site. A leak on one service no longer opens the others.</p>
+          <p class="bk-tools">Tools: <a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a> · <a href="https://keepassxc.org/" target="_blank" rel="noopener noreferrer">KeePassXC</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-2fa" data-effort="2">
+        <label class="bk-check" for="priv-2fa"><input type="checkbox" id="priv-2fa"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-2fa">Turn on two-factor authentication, without SMS</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">SMS codes can be hijacked with a SIM swap. Use an authenticator app or a hardware key, starting with email, banking and exchanges.</p>
+          <p class="bk-tools">Tools: <a href="https://getaegis.app/" target="_blank" rel="noopener noreferrer">Aegis</a> · <a href="https://ente.io/auth/" target="_blank" rel="noopener noreferrer">Ente Auth</a> · <a href="https://www.yubico.com/" target="_blank" rel="noopener noreferrer">YubiKey</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-alias" data-effort="2">
+        <label class="bk-check" for="priv-alias"><input type="checkbox" id="priv-alias"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-alias">Use email aliases</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">A different address for each service: you see who leaked your data, and your real address stays private.</p>
+          <p class="bk-tools">Tools: <a href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">SimpleLogin</a> · <a href="https://addy.io/" target="_blank" rel="noopener noreferrer">addy.io</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="priv-network" data-effort="2">
+        <label class="bk-check" for="priv-network"><input type="checkbox" id="priv-network"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="priv-network">Protect your network traffic</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">Your internet provider and public wifi see which sites you visit. A trustworthy VPN or a mixnet hides that metadata.</p>
+          <p class="bk-tools">Tools: <a href="https://nym.com/" target="_blank" rel="noopener noreferrer">NymVPN</a> · <a href="https://mullvad.net/" target="_blank" rel="noopener noreferrer">Mullvad VPN</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- PROOF OF AUTONOMY -->
+<section class="bk-block auto" id="autonomy" data-block="auto">
+  <div class="bk-inner">
+    <div class="bk-block-head">
+      <p class="bk-label">&lt;02&gt; autonomy</p>
+      <span class="bk-count">0 / 5</span>
+    </div>
+    <h2>Proof of Autonomy</h2>
+    <p class="bk-intro">Depend less on platforms that can lock you out. Own your identity, your data and your tools.</p>
+    <p class="bk-talks-label">On stage at PROOF</p>
+    <ul class="bk-talks">
+      <li><span class="bk-talk-by">Alexis Roussel</span>How the &ldquo;Soldier-Citizen&rdquo; Can Help Decentralize the World: Lessons from Russia&rsquo;s Invasion of Ukraine</li>
+      <li><span class="bk-talk-by">Marius Off-Chain</span>Rebuilding Social Media Without a Company in Charge using Nostr</li>
+    </ul>
+    <ul class="bk-list">
+      <li class="bk-item" data-id="auto-nostr" data-effort="1">
+        <label class="bk-check" for="auto-nostr"><input type="checkbox" id="auto-nostr"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-nostr">Create your Nostr identity</label><span class="bk-effort">5 min</span></div>
+          <p class="bk-why">A key pair instead of an account: no company can ban you or sell your audience. Follow the conference speakers to get started.</p>
+          <p class="bk-tools">Tools: <a href="https://primal.net/" target="_blank" rel="noopener noreferrer">Primal</a> · <a href="https://damus.io/" target="_blank" rel="noopener noreferrer">Damus</a> · <a href="https://github.com/vitorpamplona/amethyst" target="_blank" rel="noopener noreferrer">Amethyst</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-keys" data-effort="2">
+        <label class="bk-check" for="auto-keys"><input type="checkbox" id="auto-keys"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-keys">Back up your private keys</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">Your keys are your identity and your money. Write them down on paper, keep them in two places, never in a screenshot or in the cloud.</p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-opensource" data-effort="2">
+        <label class="bk-check" for="auto-opensource"><input type="checkbox" id="auto-opensource"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-opensource">Replace one Big Tech service with an open alternative</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">Pick one: email, maps, notes or cloud storage. Switching one service at a time is how the habit sticks.</p>
+          <p class="bk-tools">Tools: <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a> · <a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer">Organic Maps</a> · <a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-selfhost" data-effort="3">
+        <label class="bk-check" for="auto-selfhost"><input type="checkbox" id="auto-selfhost"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-selfhost">Self-host your first service</label><span class="bk-effort">Weekend</span></div>
+          <p class="bk-why">A small home server gives you your own cloud, your own photo backups and, later, your own Bitcoin node.</p>
+          <p class="bk-tools">Tools: <a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a> · <a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a> · <a href="https://yunohost.org/" target="_blank" rel="noopener noreferrer">YunoHost</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="auto-phone" data-effort="3">
+        <label class="bk-check" for="auto-phone"><input type="checkbox" id="auto-phone"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="auto-phone">Take back control of your phone</label><span class="bk-effort">Weekend</span></div>
+          <p class="bk-why">Review your app permissions today. When you are ready, move to a system without Google services.</p>
+          <p class="bk-tools">Tools: <a href="https://grapheneos.org/" target="_blank" rel="noopener noreferrer">GrapheneOS</a> · <a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- PROOF OF WORK -->
+<section class="bk-block mono" id="work" data-block="mono">
+  <div class="bk-inner">
+    <div class="bk-block-head">
+      <p class="bk-label">&lt;03&gt; work</p>
+      <span class="bk-count">0 / 6</span>
+    </div>
+    <h2>Proof of Work</h2>
+    <p class="bk-intro">Money that nobody can freeze or debase, as long as you hold the keys.</p>
+    <p class="bk-talks-label">On stage at PROOF</p>
+    <ul class="bk-talks">
+      <li><span class="bk-talk-by">Linas K.</span>CBDCs, KYC, and the Fight for Monetary Privacy</li>
+      <li><span class="bk-talk-by">Piktas</span>Why Centralized Money Fails: How Bitcoin Became an Alternative</li>
+    </ul>
+    <ul class="bk-list">
+      <li class="bk-item" data-id="mono-wallet" data-effort="1">
+        <label class="bk-check" for="mono-wallet"><input type="checkbox" id="mono-wallet"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-wallet">Install a self-custody Bitcoin wallet</label><span class="bk-effort">5 min</span></div>
+          <p class="bk-why">Not your keys, not your coins. With a self-custody wallet, only you control your bitcoin.</p>
+          <p class="bk-tools">Tools: <a href="https://phoenix.acinq.co/" target="_blank" rel="noopener noreferrer">Phoenix</a> · <a href="https://bluewallet.io/" target="_blank" rel="noopener noreferrer">BlueWallet</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-lightning" data-effort="1">
+        <label class="bk-check" for="mono-lightning"><input type="checkbox" id="mono-lightning"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-lightning">Make your first Lightning payment</label><span class="bk-effort">5 min</span></div>
+          <p class="bk-why">Instant and almost free. Try it at the conference: someone here will happily send you your first sats.</p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-seed" data-effort="2">
+        <label class="bk-check" for="mono-seed"><input type="checkbox" id="mono-seed"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-seed">Back up your seed phrase properly</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">12 or 24 words on paper or steel, offline, never photographed, never typed into a website. Then test the recovery.</p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-bringin" data-effort="2">
+        <label class="bk-check" for="mono-bringin"><input type="checkbox" id="mono-bringin"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-bringin">Connect your euros and your bitcoin</label><span class="bk-effort">1 hour</span></div>
+          <p class="bk-why">Bringin, the conference sponsor, links a euro IBAN to a self-custodial Lightning wallet, so you can move between euros and bitcoin without leaving coins on an exchange.</p>
+          <p class="bk-tools">Tools: <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-hardware" data-effort="3">
+        <label class="bk-check" for="mono-hardware"><input type="checkbox" id="mono-hardware"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-hardware">Move your savings to a hardware wallet</label><span class="bk-effort">Weekend</span></div>
+          <p class="bk-why">For amounts you would not carry in your pocket, keep the keys on a dedicated offline device, bought directly from the manufacturer.</p>
+          <p class="bk-tools">Tools: <a href="https://bitbox.swiss/" target="_blank" rel="noopener noreferrer">BitBox02</a> · <a href="https://coldcard.com/" target="_blank" rel="noopener noreferrer">Coldcard</a> · <a href="https://trezor.io/" target="_blank" rel="noopener noreferrer">Trezor</a></p>
+        </div>
+      </li>
+      <li class="bk-item" data-id="mono-node" data-effort="3">
+        <label class="bk-check" for="mono-node"><input type="checkbox" id="mono-node"><span class="bk-box"></span></label>
+        <div class="bk-body">
+          <div class="bk-top"><label class="bk-title" for="mono-node">Run your own node</label><span class="bk-effort">Weekend</span></div>
+          <p class="bk-why">Verify your own transactions instead of trusting someone else's server. Don't trust, verify.</p>
+          <p class="bk-tools">Tools: <a href="https://bitcoincore.org/" target="_blank" rel="noopener noreferrer">Bitcoin Core</a> · <a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a> · <a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a></p>
+        </div>
+      </li>
+    </ul>
+    <p class="bk-alldone" id="bk-alldone" hidden>All done. Sovereignty taken back.</p>
+    <p class="bk-disclaimer">These are starting points, not guarantees. No tool listed here pays to be listed, except where a sponsor is named. Always check a tool yourself: don't trust, verify.</p>
+  </div>
+</section>
+
+
+<!-- APRÈS LA CONFÉRENCE - noir gauche / blanc droite -->
+<section class="about-split bk-after" id="next">
+  <div class="about-left">
+    <p class="sec-label">What's next</p>
+    <h2>After the<br>conference</h2>
+    <p>Slides and recordings of the talks will be published here after <strong>September 27</strong>.</p>
+    <p>Keep your ticket: the QR code stays valid and this page will keep growing.</p>
+  </div>
+  <div class="about-right">
+    <p class="sec-label" style="color:rgba(8,8,8,0.4)">Community</p>
+    <h2>Stay in<br>touch</h2>
+    <p>Questions, corrections, a tool we should add? Write to <a href="mailto:contact@proofconference.com" style="color:inherit">contact@proofconference.com</a> or join the <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener noreferrer" style="color:inherit">Facebook group</a>.</p>
+    <p class="sec-label" style="color:rgba(8,8,8,0.4);margin-top:40px">Sole sponsor</p>
+    <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer"><img src="/bringin-logo.svg" alt="Bringin" style="width:200px;display:block"></a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

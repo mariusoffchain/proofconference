@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Hardware wallets · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page mono page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Work · Chapter 15</p>
+    <h1>Hardware wallets</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>A phone wallet is fine for pocket money, not for savings. A hardware wallet is a small dedicated device that keeps your private keys offline and signs transactions inside itself, so that malware on your computer or phone never sees them. There are several good ones, with different trade-offs. It does not replace your seed backup (chapter 12): the device can break, the backup is what saves you.</p>
+<h2>The problem</h2>
+<p>Your phone is online all day. It runs dozens of apps, receives links from strangers, connects to public wifi and installs updates from many companies. Your computer is no better. Each of these is a door, and a wallet app on the same machine keeps its keys behind those doors.</p>
+<p>For the amount you would carry in a physical purse, that risk is acceptable, and the convenience is worth it. For savings, it is not. Malware that reads a wallet file, replaces an address in the clipboard or records the screen exists and is sold as a ready-made product. A Bitcoin transaction cannot be reversed, and there is no support desk to call.</p>
+<p>The answer is not to become a security expert. It is to move the keys to a place where none of this can reach them.</p>
+<h2>How it works</h2>
+<p>A hardware wallet, more precisely called a <strong>signing device</strong>, is a tiny computer with one job. It generates your seed, stores the private keys on its own chip, and never lets them out.</p>
+<p>When you want to send bitcoin, the work is split in two:</p>
+<ol>
+<li>An app on your computer or phone prepares the transaction. This app only knows your public information: it can show your balance and build a payment, but it cannot spend.</li>
+<li>The transaction goes to the device, by cable, QR code or memory card. The device shows the amount and the destination address on its own screen. You check, you confirm with a physical button, and it signs inside the device. Only the signature comes back.</li>
+</ol>
+<p>If your computer is infected, the malware sees a signed transaction, never a key. The device screen is the one you trust, which is why you always read it.</p>
+<p>One thing does not change: the seed is still the real wallet. The device is only a safe tool to use it. You still need the backup from chapter 12.</p>
+<h2>Choose your device</h2>
+<p>All the devices below do the job. They differ in openness, price, comfort and how isolated they are. "Air-gapped" means the device never needs to be plugged into a computer: transactions travel by QR code or memory card.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Maker</th>
+<th>Strengths</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BitBox02</strong></td>
+<td>BitBox (Shift Crypto), Switzerland</td>
+<td>Open source, simple, a Bitcoin-only edition exists</td>
+<td>Connects by cable, not air-gapped</td>
+</tr>
+<tr>
+<td><strong>Coldcard</strong></td>
+<td>Coinkite, Canada</td>
+<td>Bitcoin-only, air-gapped, many advanced security options</td>
+<td>For advanced users. The code is public, but its licence restricts reuse</td>
+</tr>
+<tr>
+<td><strong>Trezor</strong></td>
+<td>SatoshiLabs, Czech Republic</td>
+<td>The open source pioneer, easy, widely supported</td>
+<td>Connects by cable. Supports many other coins unless you choose Bitcoin-only firmware</td>
+</tr>
+<tr>
+<td><strong>Blockstream Jade</strong></td>
+<td>Blockstream</td>
+<td>Affordable, open source, can work air-gapped with QR codes</td>
+<td>Its PIN protection relies on a server (Blockstream's, or your own)</td>
+</tr>
+<tr>
+<td><strong>Foundation Passport</strong></td>
+<td>Foundation Devices, USA</td>
+<td>Open source, air-gapped, comfortable to use</td>
+<td>Among the more expensive</td>
+</tr>
+<tr>
+<td><strong>SeedSigner</strong></td>
+<td>Community project</td>
+<td>Build it yourself from standard parts, open source, stateless: it stores no seed at all</td>
+<td>You assemble it, and you load your seed at every use. Not a first device</td>
+</tr>
+<tr>
+<td><strong>Ledger</strong></td>
+<td>Ledger, France</td>
+<td>Popular, supports many coins, uses a secure chip</td>
+<td>Firmware not fully open source. In 2020 its customer database leaked: contact details of hundreds of thousands of buyers</td>
+</tr>
+</tbody>
+</table></div>
+<p>You also need companion software. You can use the maker's own app, or an independent wallet that works with most devices: Sparrow Wallet, Electrum (computer), Nunchuk (computer and phone) or BlueWallet (phone). All four are open source. An independent wallet means you do not depend on the maker's app staying available.</p>
+<p>For larger amounts, the next level is <strong>multi-signature</strong>: a wallet that needs, for example, two devices out of three to sign. Using devices from different makers means no single flaw or single theft can empty it. It is more work. Master one device first.</p>
+<p>A reasonable setup for most people: an open source device with a Bitcoin-only firmware, bought new, used with Sparrow or the maker's app. Which one is up to you.</p>
+<h2>Step by step</h2>
+<p>The logic is the same for every device. Only the screens differ.</p>
+<ol>
+<li><strong>Buy directly from the maker or an official reseller.</strong> Never second hand, never from a marketplace seller.</li>
+<li><strong>Inspect and verify.</strong> Check the packaging and its seals, then connect the device through the official app, downloaded from the maker's website. The app checks the device and installs genuine, signed firmware.</li>
+<li><strong>Generate a new seed on the device.</strong> The words must appear on the device screen, for the first time, in front of you. Never use words that came printed in the box.</li>
+<li><strong>Back it up</strong> on paper or metal, as explained in chapter 12. Set a PIN on the device.</li>
+<li><strong>Send a small test amount</strong> to the first receive address.</li>
+<li><strong>Wipe the device and restore it from your backup.</strong> If the test amount reappears, your backup works. This is the only real proof, and the best moment to do it is when almost nothing is at stake.</li>
+<li><strong>Move the rest,</strong> in one or several transactions.</li>
+<li><strong>Verify the receive address on the device screen, every time.</strong> The computer screen can lie. The device screen is the one you trust.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Buying from marketplaces.</strong> A device that passed through unknown hands may have been modified. The small saving is not worth it.</li>
+<li><strong>Accepting a seed card that arrives filled in.</strong> It is a scam, always. The person who printed those words is waiting for your deposit.</li>
+<li><strong>Typing the seed into a computer "to update".</strong> No real update, app or support agent ever needs your seed. The words are only ever entered on the device itself.</li>
+<li><strong>Skipping the test restore.</strong> An untested backup is a hope, not a backup. You want to find the wrong word now, not in five years.</li>
+<li><strong>Using your home address for delivery without thinking.</strong> Customer lists leak. Consider a pickup point or a parcel locker.</li>
+<li><strong>Trusting emails that claim to be from the manufacturer.</strong> After a leak, buyers receive convincing phishing: fake security alerts, fake updates, even fake replacement devices by post. Go to the official website yourself, never through a link.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. A signing device is this idea made physical.</li>
+<li><strong>Independent checks of wallets and devices:</strong> WalletScrutiny (walletscrutiny.com) tests whether the published code matches what you actually install.</li>
+<li><strong>Connecting a device to an independent wallet:</strong> the Sparrow Wallet documentation (sparrowwallet.com/docs).</li>
+<li><strong>Step-by-step device guides:</strong> Bitcoiner.Guide (bitcoiner.guide).</li>
+<li><strong>Next chapter:</strong> running your own node.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="hardware-wallet-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-1" aria-label="Decide what amount is &quot;savings&quot; for you and no longer belongs on a phone"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-1">Decide what amount is "savings" for you and no longer belongs on a phone</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-2" aria-label="Choose a device from the table and order it from the maker, to a pickup point"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-2">Choose a device from the table and order it from the maker, to a pickup point</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-3" aria-label="Set it up with a new seed and a backup, then send a test amount"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-3">Set it up with a new seed and a backup, then send a test amount</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-4" aria-label="Wipe the device and restore it from the backup"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-4">Wipe the device and restore it from the backup</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-5" aria-label="Verify the address on the device screen at every receive"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-5">Verify the address on the device screen at every receive</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/bitcoin-privacy/"><span>Previous</span>Privacy in Bitcoin</a>
+<a class="bk-next" href="/book/en/node/"><span>Next</span>Running your own node</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

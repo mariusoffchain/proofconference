@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Your browser and your searches · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page priv page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Privacy · Chapter 3</p>
+    <h1>Your browser and your searches</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Your browser and your search engine see more of your life than any other software, and the ones on your device were chosen for you by a business deal. Switch to a browser that blocks tracking, add one good content blocker, and pick a search engine that does not build a profile of you. It takes less than an hour, and you feel the difference immediately: fewer ads, faster pages.</p>
+<h2>The problem</h2>
+<p>Your browser is the window through which you do almost everything: read the news, look up symptoms, compare loans, plan trips. Most pages you open also load invisible code from dozens of other companies: advertising networks, analytics services, social media buttons. These <strong>trackers</strong> note what you are reading and add it to a profile built over years.</p>
+<p>Your searches are even more revealing. You ask a search engine things you would not ask your doctor, your partner or your best friend.</p>
+<p>Yet the browser and the search engine on your device were not chosen by you. Google pays billions every year, to Apple above all, and to others including Mozilla, to be the default search engine, because most people never change a default. It is a business decision made for you.</p>
+<p>Private or incognito mode does not solve this. It only stops your own device from keeping the history and cookies once you close the window. Websites, trackers, your internet provider and your employer's network see exactly the same as before.</p>
+<h2>How it works</h2>
+<p>Trackers recognise you in three main ways.</p>
+<ul>
+<li><strong>Third-party cookies.</strong> A cookie is a small file a site stores in your browser. When the same advertising company is present on thousands of sites, its cookie follows you from one to the next. Several browsers now block or isolate these by default. Chrome, the most used browser, still allows them.</li>
+<li><strong>Fingerprinting.</strong> Your browser reveals many small details: screen size, language, time zone, installed fonts, graphics hardware. Each one is ordinary. Combined, they are often unique to you. Nothing is stored on your device, so deleting cookies changes nothing.</li>
+<li><strong>Your accounts.</strong> If you stay logged in to Google or Facebook, every page that contains their code can be linked to your real name.</li>
+</ul>
+<p>The defences follow the same logic. <strong>Block:</strong> a content blocker refuses to load known trackers at all. <strong>Isolate:</strong> the browser gives every site its own separate cookie storage, so nothing follows you. <strong>Look like everyone else:</strong> some browsers make all their users appear identical, so a fingerprint identifies nobody.</p>
+<p>Your IP address also identifies you. That is the subject of chapter 5.</p>
+<h2>Choose your browser</h2>
+<p>No browser is perfect. Look at who builds it, what it blocks without any setup, and what you give up.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Who is behind it</th>
+<th>Strengths</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Firefox</strong></td>
+<td>Mozilla, owned by a non-profit foundation</td>
+<td>Its own engine, independent from Google's Chromium. Strong protection in Strict mode. Runs the full uBlock Origin. Computer and phone.</td>
+<td>A few settings to change first. Sends usage data by default. Most of Mozilla's income comes from its search deal with Google.</td>
+</tr>
+<tr>
+<td><strong>Brave</strong></td>
+<td>Brave Software, a for-profit US company</td>
+<td>Blocks ads and trackers with no setup. Works with nearly every site. Computer and phone.</td>
+<td>Promotes its own products: a crypto wallet, reward ads, a paid VPN. You can turn them off. Built on Google's Chromium engine.</td>
+</tr>
+<tr>
+<td><strong>Mullvad Browser</strong></td>
+<td>Built by the Tor Project with Mullvad, a Swedish VPN company</td>
+<td>Strong anti-fingerprinting: all users look the same. No usage data sent. Free, no VPN required.</td>
+<td>Computer only. Forgets everything when closed. Some sites break.</td>
+</tr>
+<tr>
+<td><strong>LibreWolf</strong></td>
+<td>A community of volunteers</td>
+<td>Firefox with strict settings already applied, usage data removed, uBlock Origin included.</td>
+<td>Computer only. Small team. On some systems you handle updates yourself.</td>
+</tr>
+<tr>
+<td><strong>Tor Browser</strong></td>
+<td>The Tor Project, a non-profit</td>
+<td>Hides your IP address by passing through three relays. The strongest anonymity.</td>
+<td>Slow. Many sites show extra checks or block it. Not made for your everyday logged-in accounts.</td>
+</tr>
+</tbody>
+</table></div>
+<p>For blocking, the reference is <strong>uBlock Origin</strong>: free, open source, and with no paid exceptions for advertisers. It works fully in Firefox and the browsers built on it. Chrome now only allows a limited version, uBlock Origin Lite. Brave has its own blocker built in. Resist installing more: every extension can read the pages you visit, and an unusual set of extensions makes your fingerprint more unique.</p>
+<p>A reasonable setup for most people: <strong>Firefox or Brave for everyday life</strong>, plus <strong>Mullvad Browser or Tor Browser</strong> for the searches you want kept apart from your identity.</p>
+<h2>Choose your search engine</h2>
+<p>Changing your search engine takes one minute and is one of the most effective steps in this book. None of the options below builds an advertising profile of you, but they differ in where their results come from and how they earn money.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Search engine</th>
+<th>Where results come from</th>
+<th>How it earns money</th>
+<th>Good to know</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DuckDuckGo</strong></td>
+<td>Mostly Bing, plus its own sources</td>
+<td>Ads based on the words you type, not on a profile</td>
+<td>US company. The easiest switch.</td>
+</tr>
+<tr>
+<td><strong>Brave Search</strong></td>
+<td>Its own independent index</td>
+<td>Ads</td>
+<td>Same company as the Brave browser.</td>
+</tr>
+<tr>
+<td><strong>Startpage</strong></td>
+<td>Google results, requested without your identity</td>
+<td>Ads that are not personalised</td>
+<td>Dutch company. Since 2019 its majority owner is System1, a US advertising group.</td>
+</tr>
+<tr>
+<td><strong>Kagi</strong></td>
+<td>Its own index plus several other sources</td>
+<td>Paid subscription, no ads</td>
+<td>US company. Needs an account. You are the customer, not the product.</td>
+</tr>
+<tr>
+<td><strong>SearXNG</strong></td>
+<td>Combines many engines at once</td>
+<td>Nothing: it is free, open-source software</td>
+<td>Host it yourself or use a public instance (list at searx.space). You then trust whoever runs that instance.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Try one for two weeks before judging. Results for local Lithuanian searches can vary from one engine to another, and nothing stops you from using a second engine for the occasional difficult query.</p>
+<h2>Step by step</h2>
+<p>The example uses Firefox on a computer, because it exists on every system and is independent from Google's engine. The same logic applies to the others. Names of settings may move slightly between versions.</p>
+<ol>
+<li><strong>Install it</strong> from mozilla.org or your system's official store.</li>
+<li><strong>Raise the protection.</strong> In Settings, Privacy &amp; Security, set Enhanced Tracking Protection to Strict.</li>
+<li><strong>Force encrypted connections.</strong> On the same page, turn on HTTPS-Only Mode in all windows.</li>
+<li><strong>Stop sending usage data.</strong> Still on the same page, in the section about Firefox data collection, untick the boxes.</li>
+<li><strong>Change the search engine.</strong> In Settings, Search, choose your new default. If it is not in the list, visit the search engine's site and add it from the address bar.</li>
+<li><strong>Install uBlock Origin</strong> from the official add-ons site (addons.mozilla.org). Keep its default settings. They are good.</li>
+<li><strong>Bring your bookmarks.</strong> Use the import tool in the bookmarks menu to copy bookmarks from your old browser. Do not import saved passwords: they belong in your password manager (chapter 2).</li>
+<li><strong>Make it the default, on your phone too.</strong> Set the new browser as default on your computer, then repeat the same choices on your phone. On Android, Firefox also accepts uBlock Origin.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Believing incognito mode makes you invisible.</strong> It hides your browsing from the people who share your device, and from nobody else.</li>
+<li><strong>Installing ten privacy extensions.</strong> Each one can read your pages, and together they make you stand out. One good content blocker is enough.</li>
+<li><strong>Staying logged in to Google or Facebook all day in your main browser.</strong> Keep those accounts in a second browser, and the link between your name and your browsing is broken.</li>
+<li><strong>Clicking "Accept all" out of habit.</strong> Look for "Reject all". uBlock Origin can also hide most cookie banners: turn on the cookie notices lists in its settings.</li>
+<li><strong>Pushing every setting to the maximum.</strong> If half your sites break, you will go back to the old browser within a week. Protection you keep is better than protection you abandon.</li>
+<li><strong>Ignoring updates.</strong> The browser is the program most exposed to the internet. Restart it when it asks.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "How the 'Soldier-Citizen' Can Help Decentralize the World", by Alexis Roussel. Why open-source tools that no single company controls matter far beyond your own screen.</li>
+<li><strong>Test your browser:</strong> Cover Your Tracks, by the Electronic Frontier Foundation (coveryourtracks.eff.org), shows how unique your fingerprint is.</li>
+<li><strong>Compare in detail:</strong> Privacy Guides, "Desktop Browsers" and "Search Engines" (privacyguides.org).</li>
+<li><strong>Next chapter:</strong> your email and your aliases.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="browser-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-1" aria-label="Change the default search engine on your computer and your phone"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-1">Change the default search engine on your computer and your phone</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="browser-2" aria-label="Install a browser that blocks tracking and make it your default"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-2">Install a browser that blocks tracking and make it your default</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-3" aria-label="Add uBlock Origin, and remove the extensions you do not really use"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-3">Add uBlock Origin, and remove the extensions you do not really use</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-4" aria-label="Move your Google and Facebook sessions to a second browser"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-4">Move your Google and Facebook sessions to a second browser</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-5" aria-label="Test your browser on coveryourtracks.eff.org"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-5">Test your browser on coveryourtracks.eff.org</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/passwords/"><span>Previous</span>Your passwords and your accounts</a>
+<a class="bk-next" href="/book/en/email/"><span>Next</span>Your email and your aliases</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

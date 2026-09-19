@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Nostr: social media without a company in charge · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page auto page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Autonomy · Chapter 7</p>
+    <h1>Nostr: social media without a company in charge</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>On a platform, your profile, your posts and your audience belong to the company. Nostr is an open protocol where your identity is a key pair that you hold, and where many independent servers and apps carry your posts. You can change app or server at any time and keep your name and your followers. It is smaller and rougher than the big platforms, and it takes one evening to try.</p>
+<h2>The problem</h2>
+<p>A social network looks like a public square, but it is a private building. The owner can remove you, with or without a reason, and years of posts and contacts go with the account. It can also reduce how many people see you without telling you, a practice often called a shadow ban.</p>
+<p>Even when nothing goes wrong, you do not decide what you see. An algorithm does, and it is tuned for the time you spend and the advertising you watch, not for your interests. When the algorithm or the owner changes, your reach changes with it.</p>
+<p>Your audience is not yours either. You cannot take your followers to another service, which is exactly why leaving is so hard. And the business model is you: what you read, like and write feeds an advertising profile.</p>
+<p>None of this requires bad intentions. It is simply what happens when one company stands between everyone.</p>
+<h2>How it works</h2>
+<p>Nostr is a protocol, like email or the web, not a company or an app. It has four simple parts:</p>
+<ul>
+<li><strong>Your identity is a key pair</strong> (chapter 6). The public key, which starts with <strong>npub</strong>, is your address: share it freely. The private key, which starts with <strong>nsec</strong>, is your secret: it proves that you are you.</li>
+<li><strong>Your posts are signed notes.</strong> Each one carries a signature made with your nsec, so anyone can check it is really yours and was not modified.</li>
+<li><strong>Relays</strong> are simple servers that store notes and forward them. Anyone can run one. You publish to several at once, so no single relay can silence you.</li>
+<li><strong>Clients</strong> are the apps that show all this. They all read the same network.</li>
+</ul>
+<p>Because your identity lives in your key and not in an app, you can change client or relay and keep your profile, your posts and your followers.</p>
+<p>Nostr also has <strong>zaps</strong>: small Lightning payments (Part 3) sent directly to a person or a post. It is a way to support someone without advertising and without a platform taking a share.</p>
+<h2>Choose your client</h2>
+<p>Be clear about what you get. The network is much smaller than the big platforms. Spam exists, and some apps feel unfinished. There is no password reset. And there is no real deletion: you can ask relays to delete a note, but they are free to ignore you, so treat every post as permanent and public.</p>
+<p>All the clients below are open source and show the same network. Try two or three.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Client</th>
+<th>Platform</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primal</strong></td>
+<td>iOS, Android, web</td>
+<td>The smoothest start. Fast because it uses its own caching servers, which puts one company in the middle for convenience. Has a built-in Lightning wallet: check in the app whether it is custodial, this has changed over time.</td>
+</tr>
+<tr>
+<td><strong>Damus</strong></td>
+<td>iOS</td>
+<td>The classic iPhone client. Simple, close to what Twitter looked like.</td>
+</tr>
+<tr>
+<td><strong>Amethyst</strong></td>
+<td>Android</td>
+<td>The most features. Works well with the Amber signer. Can feel overwhelming at first.</td>
+</tr>
+<tr>
+<td><strong>Yakihonne</strong></td>
+<td>iOS, Android, web</td>
+<td>Strong on long articles and curated content.</td>
+</tr>
+<tr>
+<td><strong>Iris</strong></td>
+<td>Web, mobile</td>
+<td>Light and quick to try in a browser.</td>
+</tr>
+<tr>
+<td><strong>Coracle</strong></td>
+<td>Web</td>
+<td>Fine control over relays and over whose content you see.</td>
+</tr>
+<tr>
+<td><strong>noStrudel</strong></td>
+<td>Web</td>
+<td>For the curious who want to explore everything the protocol can do.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: <strong>one mobile client</strong> for everyday use (Primal, Damus or Amethyst) and <strong>one web client</strong> on your computer, used through a signer.</p>
+<h2>Protect your nsec</h2>
+<p>Your nsec is your whole identity. If it leaks, someone can post as you forever, and you cannot change it like a password. So the rule is simple: <strong>never paste your nsec into a website you do not know,</strong> and paste it in as few places as possible.</p>
+<p>The clean solution is a <strong>signer</strong>: a small app that keeps the key and signs on behalf of your clients. The client asks, the signer signs, and the client never sees the key. Several options exist:</p>
+<ul>
+<li><strong>Amber</strong> on Android: an open source signer app that other Nostr apps call when they need a signature.</li>
+<li><strong>A browser extension</strong> such as nos2x or Alby, for web clients on your computer.</li>
+<li><strong>A remote signer</strong>, often called an nsec bunker: the key stays on one device or server, and your apps connect to it over Nostr.</li>
+</ul>
+<p>On iPhone the choice is smaller, and a remote signer is the usual route.</p>
+<p>Then back up the nsec like any key in chapter 6: on paper in two places, or in your password manager while the account has little value.</p>
+<h2>Step by step</h2>
+<p>The example uses a mobile client. The logic is the same in all of them.</p>
+<ol>
+<li><strong>Create your keys in one client.</strong> Install it, choose "create account". No email and no phone number are needed: the app generates the key pair on your phone.</li>
+<li><strong>Back up the nsec immediately.</strong> You find it in the settings, under keys or account. Do this before you post anything.</li>
+<li><strong>Fill the profile:</strong> name, picture, a short description. Remember it is public.</li>
+<li><strong>Optional: add a human-readable address</strong> (called NIP-05). It looks like an email address, name@domain, and shows that your key is linked to that domain. Some services offer one, or you can use your own domain. It is not a login.</li>
+<li><strong>Follow people.</strong> Search for the PROOF speakers by name, add a few starter accounts that your client suggests, and follow some hashtags. An empty feed on day one is normal.</li>
+<li><strong>Add a second client with a signer.</strong> Install a signer, import your nsec once, then log in to a web client through it. Your profile and followers are already there: this is the portability you came for.</li>
+<li><strong>Connect a Lightning wallet for zaps.</strong> Add a Lightning address to your profile to receive, and link a wallet to send. Part 3 explains the wallets.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Pasting your nsec into every new app you try.</strong> Each copy is a risk. Use a signer, or test new apps with a second, throwaway key.</li>
+<li><strong>Thinking Nostr is private.</strong> Notes are public by design. Direct messages vary from app to app, and may reveal who writes to whom. For private conversations, use a messenger from chapter 1.</li>
+<li><strong>Posting what you may want to delete.</strong> Deletion is a request, not a guarantee.</li>
+<li><strong>Depending on a single relay.</strong> Publish to several, run by different operators. That is where the resistance to censorship comes from.</li>
+<li><strong>Expecting the big platforms on day one.</strong> The network is smaller. It becomes interesting once you follow thirty or forty active people.</li>
+<li><strong>Keeping money in a wallet built for zaps.</strong> A zap wallet is for small amounts. Savings belong elsewhere (Part 3).</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Rebuilding Social Media Without a Company in Charge using Nostr", by Marius Off-Chain.</li>
+<li><strong>A beginner guide:</strong> nostr.how.</li>
+<li><strong>A directory of clients, signers and tools:</strong> nostrapps.com.</li>
+<li><strong>The protocol itself,</strong> for the curious: the NIPs repository (github.com/nostr-protocol/nips).</li>
+<li><strong>Next chapter:</strong> replacing Big Tech services, one at a time.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="nostr-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-1" aria-label="Install one client and create your keys"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-1">Install one client and create your keys</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-2" aria-label="Back up your nsec on paper or in your password manager"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-2">Back up your nsec on paper or in your password manager</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-3" aria-label="Fill your profile and follow the PROOF speakers"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-3">Fill your profile and follow the PROOF speakers</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="nostr-4" aria-label="Install a signer and log in to a second client through it"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-4">Install a signer and log in to a second client through it</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-5" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="nostr-5" aria-label="Add a Lightning address to your profile and send your first zap"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-5">Add a Lightning address to your profile and send your first zap</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/keys/"><span>Previous</span>Keys instead of accounts</a>
+<a class="bk-next" href="/book/en/big-tech/"><span>Next</span>Replacing Big Tech services, one at a time</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

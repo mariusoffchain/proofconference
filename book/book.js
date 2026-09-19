@@ -1,7 +1,7 @@
-// PROOF book. The checklist (chapter 04) keeps its state only in this browser (localStorage).
+// PROOF book. Checklist state (chapter pages + recap page) lives only in this browser (localStorage).
 // No server, no tracking.
 (function () {
-  var KEY = 'proof-book-v1';
+  var KEY = 'proof-book-v2';
   var items = Array.prototype.slice.call(document.querySelectorAll('.bk-cl-item'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.bk-cl-group'));
 
@@ -11,8 +11,11 @@
   function save(ids) {
     try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {}
   }
+  try { localStorage.removeItem('proof-book-v1'); } catch (e) {}
 
+  // Recap page only: counters per part, progress bar, "all done" banner
   function refresh() {
+    if (!groups.length) return;
     var total = items.length, done = 0;
     groups.forEach(function (group) {
       var n = group.querySelectorAll('.bk-cl-item.done').length;
@@ -31,23 +34,32 @@
   var state = load();
   items.forEach(function (item) {
     var box = item.querySelector('input[type="checkbox"]');
-    if (state.indexOf(item.dataset.id) !== -1) { box.checked = true; item.classList.add('done'); }
+    var id = item.dataset.id;
+    if (state.indexOf(id) !== -1) { box.checked = true; item.classList.add('done'); }
     box.addEventListener('change', function () {
       item.classList.toggle('done', box.checked);
-      save(items.filter(function (i) { return i.classList.contains('done'); })
-                .map(function (i) { return i.dataset.id; }));
+      // A page only shows part of the checklist: update this id, keep the others
+      var ids = load().filter(function (x) { return x !== id; });
+      if (box.checked) ids.push(id);
+      save(ids);
       refresh();
     });
   });
   refresh();
 
-  // Effort filter on the checklist: all / 1 (5 min) / 2 (1 hour) / 3 (weekend)
+  // Effort filter (recap page): all / 1 (5 min) / 2 (1 hour) / 3 (weekend)
   var filters = Array.prototype.slice.call(document.querySelectorAll('.bk-filter'));
   filters.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var f = btn.dataset.filter;
       filters.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
       items.forEach(function (item) { item.hidden = f !== 'all' && item.dataset.effort !== f; });
+      Array.prototype.forEach.call(document.querySelectorAll('.bk-cl-group .bk-cl'), function (list) {
+        var empty = !list.querySelector('.bk-cl-item:not([hidden])');
+        list.hidden = empty;
+        var title = list.previousElementSibling;
+        if (title && title.classList.contains('bk-cl-chapter')) title.hidden = empty;
+      });
       groups.forEach(function (group) {
         group.hidden = !group.querySelector('.bk-cl-item:not([hidden])');
       });
@@ -65,7 +77,7 @@
     refresh();
   });
 
-  // Title typewriter, same behaviour as the home page hero: one word per block, in the block color
+  // Cover title typewriter, same behaviour as the home page hero: one word per part, in the part color
   var tw = document.getElementById('bk-tw');
   if (tw && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var words = tw.dataset.words.split('|');
@@ -87,7 +99,7 @@
     setTimeout(tick, 2200);
   }
 
-  // Offline: the guide must open even when the venue wifi is saturated
+  // Offline: the whole book is cached, it must open even when the venue wifi is saturated
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/book/sw.js', { scope: '/book/' }).catch(function () {});
   }

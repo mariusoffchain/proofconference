@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Privacy in Bitcoin · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page mono page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Work · Chapter 14</p>
+    <h1>Privacy in Bitcoin</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Bitcoin is not anonymous. Every transaction is public forever, and an address is only a pseudonym: once it is linked to your name, the money connected to it can be followed by anyone. A few habits remove most of this exposure: fresh addresses, separate wallets, labelled coins, your own node, and Lightning for everyday spending. None of them is difficult, and none of them changes your legal or tax obligations.</p>
+<h2>The problem</h2>
+<p>Your bank statement is seen by you and your bank. The Bitcoin ledger is seen by everyone, and it never forgets.</p>
+<p>As long as nobody knows which addresses are yours, this is harmless. But the link is made easily: an exchange that verified your identity knows where you withdrew your coins. An online shop knows your name and shipping address and sees the address you paid from. A donation address published on a website is public by definition. Analytics companies make a business of collecting these links, grouping addresses by owner and selling the result.</p>
+<p>From that moment, past and future activity connected to that address can be followed. The merchant you paid may see what you have left. So may an employer, a landlord, or a curious acquaintance. This is not only embarrassing. People known to hold bitcoin have been targeted by criminals, at home. Nobody should be able to look up your savings. That is a question of physical safety, not of having something to hide.</p>
+<h2>How it works</h2>
+<p>Think of your bitcoin not as an account balance but as separate coins of different sizes, like banknotes in a purse. Each coin you received sits on the public ledger with its amount and its address.</p>
+<p>Three simple patterns reveal a lot:</p>
+<ul>
+<li><strong>Address reuse.</strong> If you receive ten payments on the same address, anyone can see all ten, add them up, and watch when they move.</li>
+<li><strong>Merged inputs.</strong> When you pay, your wallet may combine several coins into one transaction, like paying with two banknotes. An observer concludes that both coins belong to the same person. One coin with your name on it now identifies the other.</li>
+<li><strong>Change.</strong> If you pay 30 with a coin of 50, the remaining 20 comes back to a new address of yours. Observers can often guess which output is the change, and keep following you.</li>
+</ul>
+<p>Analysts combine these guesses, which are called heuristics. They are not always right, but they are good enough to build a profile. Good privacy habits simply give them less to work with.</p>
+<h2>KYC and what it implies</h2>
+<p>KYC means "know your customer": the identity verification that regulated exchanges must perform. You send a copy of your ID, often a selfie and a proof of address. This is a legal duty for the company, and using such a service is perfectly normal.</p>
+<p>But understand what it creates: a permanent link between your identity and your coins, stored in a company database. The company can see where you withdraw. And databases leak. A leaked list of people who hold bitcoin, with home addresses, is exactly what a criminal wants.</p>
+<p>There is another way to acquire bitcoin: peer-to-peer markets, where you trade directly with another person and no central company collects your documents. This is legal in most places, but rules differ between countries, so check yours. Your tax obligations remain exactly the same, however you acquired your coins. Keep your own records.</p>
+<h2>Choose your privacy habits</h2>
+<p>Privacy in Bitcoin is not one tool. It is a set of habits, and each one helps on its own. Start at the top of the table.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Habit</th>
+<th>Tools</th>
+<th>Effort</th>
+<th>What you gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Never reuse an address</strong></td>
+<td>Any modern wallet gives a fresh address for every payment</td>
+<td>None</td>
+<td>Payments you receive cannot be added up by an observer</td>
+</tr>
+<tr>
+<td><strong>Separate wallets for separate purposes</strong></td>
+<td>Any wallet: savings, spending, KYC coins, non-KYC coins</td>
+<td>Low</td>
+<td>One identified payment does not expose everything else</td>
+</tr>
+<tr>
+<td><strong>Label your coins and use coin control</strong></td>
+<td>Sparrow Wallet, Nunchuk, Electrum (all open source)</td>
+<td>Medium</td>
+<td>You decide which coin pays, and you never merge coins by accident</td>
+</tr>
+<tr>
+<td><strong>Connect to your own node</strong></td>
+<td>See chapter 16</td>
+<td>High (a weekend)</td>
+<td>No outside server learns which addresses are yours</td>
+</tr>
+<tr>
+<td><strong>Use Lightning for everyday spending</strong></td>
+<td>See chapter 13</td>
+<td>Low</td>
+<td>Individual payments are not written on the public ledger</td>
+</tr>
+<tr>
+<td><strong>Use Tor in your wallet</strong></td>
+<td>Sparrow, Electrum and several others have a Tor or proxy setting</td>
+<td>Low</td>
+<td>The server you connect to does not see your IP address</td>
+</tr>
+<tr>
+<td><strong>Peer-to-peer acquisition</strong></td>
+<td>Peach (mobile app, run by a Swiss company), Bisq (desktop, open source, no company in the middle), RoboSats (open source, over Tor and Lightning), Hodl Hodl (web platform run by a company, multi-signature escrow)</td>
+<td>Medium</td>
+<td>No identity documents stored in an exchange database</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two limits to know. Lightning protects the payer better than the receiver, and a custodial Lightning wallet sees all your payments. And peer-to-peer platforms are not available everywhere: check that they operate in your country.</p>
+<p>You will also hear about collaborative transactions, such as coinjoin and payjoin, where several people build one transaction together so that the usual guesses stop working. These techniques exist, but their tools and their legal context are changing, and a beginner does not need to start there.</p>
+<p>A reasonable setup for most people: fresh addresses, one wallet per purpose, labels from the first day, and Lightning for small payments. Add your own node when you are ready.</p>
+<h2>Step by step</h2>
+<p>The example uses Sparrow Wallet on a computer. Nunchuk and Electrum offer the same functions under slightly different names.</p>
+<ol>
+<li><strong>Create one wallet per purpose.</strong> For example: savings, spending, and a separate wallet for coins that came from an exchange with identity verification.</li>
+<li><strong>Receive on a fresh address every time.</strong> The Receive screen offers a new one automatically. Never copy an old address from your history.</li>
+<li><strong>Label every payment when it arrives.</strong> Write where it came from: "exchange, March", "sold my bike to Tomas". In six months you will not remember.</li>
+<li><strong>Choose which coin pays.</strong> Before sending, open the list of your coins (Sparrow calls it UTXOs), select the one that fits, and send from it. Avoid combining coins from different sources.</li>
+<li><strong>Label the change.</strong> The coin that comes back to you inherits the history of the payment. Note it.</li>
+<li><strong>Pay small things over Lightning</strong> (chapter 13), and keep on-chain transactions for larger, rarer movements.</li>
+<li><strong>Turn on Tor</strong> in the wallet's server or network settings if you still use a public server. Later, replace the public server with your own node (chapter 16).</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Posting addresses or balances publicly.</strong> A screenshot of your wallet on social media links your name to your coins forever.</li>
+<li><strong>Merging KYC and non-KYC coins.</strong> One transaction that combines them tells every observer they belong to the same person. Keep them in separate wallets.</li>
+<li><strong>Reusing a donation address.</strong> A single static address shows every donor what all the others gave, and what you did with it. Use a tool that generates a new address per donor, or Lightning.</li>
+<li><strong>Believing a VPN makes Bitcoin private.</strong> A VPN hides your IP address from a server. It does nothing about the ledger, which is public for everyone.</li>
+<li><strong>Talking about how much you own.</strong> The best analytics tool is still a conversation. Nobody needs to know the number, online or at a dinner.</li>
+<li><strong>Aiming for perfection and doing nothing.</strong> Labels and separate wallets from today are worth more than an advanced setup you never finish.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "CBDCs, KYC, and the Fight for Monetary Privacy", by Linas K. Why private money matters, and what identity verification changes.</li>
+<li><strong>The reference text:</strong> the "Privacy" page of the Bitcoin Wiki (en.bitcoin.it). Long, but complete.</li>
+<li><strong>Practical guides:</strong> Bitcoiner.Guide, by BitcoinQ+A (bitcoiner.guide), and the Sparrow Wallet documentation (sparrowwallet.com/docs) for labels and coin control.</li>
+<li><strong>Next chapter:</strong> hardware wallets.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="bitcoin-privacy-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-1" aria-label="Check that your wallet shows a fresh address for every payment"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-1">Check that your wallet shows a fresh address for every payment</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-2" aria-label="Remove any balance or address you have posted publicly"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-2">Remove any balance or address you have posted publicly</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-3" aria-label="Create separate wallets for savings, spending and exchange withdrawals"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-3">Create separate wallets for savings, spending and exchange withdrawals</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-4" aria-label="Label every coin you own with its origin"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-4">Label every coin you own with its origin</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-5" aria-label="Connect your wallet to your own node, after chapter 16"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-5">Connect your wallet to your own node, after chapter 16</label>
+        <span class="bk-effort">Weekend</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/lightning-and-euros/"><span>Previous</span>Lightning and euros in everyday life</a>
+<a class="bk-next" href="/book/en/hardware-wallet/"><span>Next</span>Hardware wallets</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Taking back control of your phone · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page auto page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Autonomy · Chapter 9</p>
+    <h1>Taking back control of your phone</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Your phone knows more about you than any other object you own. You can remove most of what it leaks in one evening, on the phone you already have, without installing anything: permissions, advertising ID, location, lock screen, SIM PIN, updates. That is level 1, and it is enough for most people. Level 2 is for the curious: alternative app stores, and Android systems that run without Google.</p>
+<h2>The problem</h2>
+<p>Your phone is the most complete sensor you own. It knows where you sleep and where you work. It holds your contacts, your photos, your payments, often your health data, and it carries a microphone and a camera everywhere you go.</p>
+<p>Apps ask for far more than they need. A flashlight app has no use for your contacts, and a game has no use for your precise location. Many ask anyway, because data can be sold. Inside many free apps sit small pieces of advertising code that report to the same few companies.</p>
+<p>To connect those reports, your phone carries an <strong>advertising ID</strong>: a number shared with every app, so that what you do in one app can be linked to what you do in another.</p>
+<p>And two companies, Google and Apple, control almost every phone: the system, the app store, and the default services running on top.</p>
+<h2>How it works</h2>
+<p>Four ideas explain almost everything.</p>
+<ul>
+<li><strong>Permissions.</strong> An app cannot reach your location, camera, microphone, contacts or photos unless the system allows it. You are the one who grants it, and you can take it back at any time. This is your strongest lever.</li>
+<li><strong>The advertising ID.</strong> It is a setting, not a law of nature. You can reset it, and on current phones you can delete it or refuse tracking entirely.</li>
+<li><strong>The app store as gatekeeper.</strong> The store decides which apps exist for you, requires an account, and knows everything you install. On Android you may install apps from other sources. On iPhone this is far more restricted, even in the European Union.</li>
+<li><strong>System versus services.</strong> Android itself is open source. What most people call "Android" is that system plus Google's apps and services, which run with deep privileges. The two can be separated, and that is what alternative systems do. iOS cannot be separated from Apple, but much of what it sends to iCloud can be switched off or encrypted.</li>
+</ul>
+<h2>Choose your level</h2>
+<p><strong>Level 1</strong> is for any phone, today. It costs nothing and breaks nothing. It is the "Step by step" section below.</p>
+<p><strong>Level 2</strong> replaces the store, or the whole system. Here are the honest trade-offs.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>System</th>
+<th>Runs on</th>
+<th>Strength</th>
+<th>Trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stock Android or iOS, hardened</strong></td>
+<td>Your current phone</td>
+<td>No risk, everything keeps working</td>
+<td>Google or Apple remain in the picture</td>
+</tr>
+<tr>
+<td><strong>GrapheneOS</strong></td>
+<td>Google Pixel phones only, for now</td>
+<td>Strongest security. Google Play is optional and runs as an ordinary app without special privileges</td>
+<td>You must buy a Pixel. Some apps refuse to run</td>
+</tr>
+<tr>
+<td><strong>CalyxOS</strong></td>
+<td>Pixels, some Fairphone and Motorola models</td>
+<td>Gentler start, uses microG (an open-source replacement for Google services)</td>
+<td>Updates stopped for about a year and resumed in 2026. Check the current pace</td>
+</tr>
+<tr>
+<td><strong>LineageOS</strong></td>
+<td>Hundreds of models, including older ones</td>
+<td>Gives old phones a second life</td>
+<td>Security depends on the device and its volunteer maintainer. No Google by default</td>
+</tr>
+<tr>
+<td><strong>/e/OS (Murena)</strong></td>
+<td>Many models, also sold preinstalled</td>
+<td>No installation needed if you buy one. Made by a European company</td>
+<td>Security updates can arrive later than on the others</td>
+</tr>
+</tbody>
+</table></div>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>App source</th>
+<th>What it is</th>
+<th>Trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>F-Droid</strong></td>
+<td>Catalogue of open-source apps only, no account</td>
+<td>Updates can be slow. Smaller choice</td>
+</tr>
+<tr>
+<td><strong>Aurora Store</strong></td>
+<td>Open-source client for Google Play, usable without your own Google account</td>
+<td>Free apps only in anonymous mode. Not endorsed by Google, can break</td>
+</tr>
+<tr>
+<td><strong>Obtainium</strong></td>
+<td>Fetches updates directly from the developer's release page</td>
+<td>You decide whom to trust. No review in between</td>
+</tr>
+<tr>
+<td><strong>Accrescent</strong></td>
+<td>Security-focused store</td>
+<td>Very small catalogue</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable path for most people: do level 1 now, add F-Droid if you use Android, and consider a different system when you next change phones.</p>
+<h2>Banking apps and other things that may break</h2>
+<p>Be clear about this before level 2. Some apps check whether the phone is certified by Google and refuse to run if it is not. Banking apps, payment apps, some government and identity apps, and a few games are the usual cases. Contactless payment with Google Wallet does not work on alternative systems.</p>
+<p>Many banking apps do work, especially on GrapheneOS with Google Play installed as an ordinary app. But nobody can promise it for your bank, and an update can change it.</p>
+<p>People handle it in a few ways:</p>
+<ul>
+<li>They check community compatibility lists for their bank before switching.</li>
+<li>They use the bank's website and a physical card instead of the app.</li>
+<li>They keep the old phone at home, on wifi, only for banking and official apps.</li>
+<li>They choose a bank whose app works.</li>
+</ul>
+<p>Rules for installing apps outside Google Play are also changing on certified Android phones. Check the current state before you rely on it.</p>
+<h2>Step by step</h2>
+<p>Level 1, on the phone you have. Menu names vary between brands and versions, so use the search bar in Settings if you cannot find one.</p>
+<ol>
+<li><strong>Remove what you do not use.</strong> Go through your apps and uninstall every one you have not opened in months. An app that is gone collects nothing.</li>
+<li><strong>Audit permissions.</strong> Android: Settings, Privacy, Permission manager. iPhone: Settings, Privacy &amp; Security. Go through Location, Microphone, Camera, Contacts and Photos, and ask for each app: does it really need this? If in doubt, refuse. The app will ask again if it matters.</li>
+<li><strong>Limit location.</strong> Choose "While using the app" instead of "Always", and turn off precise location for everything except maps and navigation. A weather app only needs your city.</li>
+<li><strong>Remove the advertising ID.</strong> Android: in the privacy or Google settings, open Ads and choose "Delete advertising ID". iPhone: Settings, Privacy &amp; Security, Tracking, turn off "Allow Apps to Request to Track".</li>
+<li><strong>Strengthen the lock.</strong> Use a PIN of at least six digits, or a passphrase. Keep fingerprint or face unlock for convenience if you like, but the PIN is the real key. Hide the content of notifications on the lock screen.</li>
+<li><strong>Set a SIM PIN.</strong> It is in the SIM or mobile network settings. A stolen SIM placed in another phone then receives none of your calls or SMS codes. Find your operator's default PIN first: three wrong attempts block the card.</li>
+<li><strong>Turn on automatic updates,</strong> for the system and for apps. Most attacks use holes that were already fixed.</li>
+<li><strong>On iPhone, encrypt iCloud.</strong> Settings, your name, iCloud, Advanced Data Protection. Your backups, photos and notes become end-to-end encrypted. You must set a recovery contact or a recovery key, because Apple can no longer help you get back in. If you are at real risk of targeted attacks (journalist, activist, public figure), also look at Lockdown Mode in Privacy &amp; Security.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Granting everything during installation.</strong> That is the moment you pay the least attention. Refuse first, allow later if something does not work.</li>
+<li><strong>Relying only on your fingerprint or face.</strong> Biometrics are convenient, but someone can hold the phone to your face. Both systems can switch biometrics off until the next PIN entry: on iPhone, hold the side button and a volume button for a few seconds; on Android, use the Lockdown option in the power menu.</li>
+<li><strong>Installing an alternative system on your only phone the night before a trip.</strong> Test first, with your banking and ticket apps, ideally on a second device.</li>
+<li><strong>Keeping a phone that no longer receives security updates.</strong> Check how long the manufacturer supports a model before you buy it. An unsupported phone is unsafe whatever its settings.</li>
+<li><strong>Downloading app files from random websites.</strong> Leaving Google Play does not mean leaving caution. Use known sources: F-Droid, the developer's own site, or one of the stores above.</li>
+<li><strong>Thinking a new system fixes your habits.</strong> A hardened phone full of tracking apps logged in to the same accounts tells the same story as before.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "How the 'Soldier-Citizen' Can Help Decentralize the World", by Alexis Roussel. Why open-source technology that ordinary people control makes a whole society harder to break.</li>
+<li><strong>Compare systems and stores:</strong> Privacy Guides, the Android and mobile phone sections (privacyguides.org).</li>
+<li><strong>Guides for both iPhone and Android:</strong> Surveillance Self-Defense, by the Electronic Frontier Foundation (ssd.eff.org).</li>
+<li><strong>Project sites:</strong> grapheneos.org, calyxos.org, lineageos.org, e.foundation, f-droid.org.</li>
+<li><strong>Next chapter:</strong> hosting your own services.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="phone-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="phone-1" aria-label="Uninstall the apps you no longer use"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="phone-1">Uninstall the apps you no longer use</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="phone-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="phone-2" aria-label="Review location, microphone, camera and contacts permissions"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="phone-2">Review location, microphone, camera and contacts permissions</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="phone-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="phone-3" aria-label="Delete the advertising ID or turn off tracking"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="phone-3">Delete the advertising ID or turn off tracking</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="phone-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="phone-4" aria-label="Set a PIN of six digits or more, and a SIM PIN"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="phone-4">Set a PIN of six digits or more, and a SIM PIN</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="phone-5" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="phone-5" aria-label="iPhone: turn on Advanced Data Protection. Android: install F-Droid and try one app"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="phone-5">iPhone: turn on Advanced Data Protection. Android: install F-Droid and try one app</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/big-tech/"><span>Previous</span>Replacing Big Tech services, one at a time</a>
+<a class="bk-next" href="/book/en/self-hosting/"><span>Next</span>Hosting your own services</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

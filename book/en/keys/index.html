@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Keys instead of accounts · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page auto page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Autonomy · Chapter 6</p>
+    <h1>Keys instead of accounts</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>An account is a permission that a company gives you, and can take back. A key is a secret that only you hold, and it works because of mathematics, not because a company agrees. You already use keys every day without seeing them: in your messenger, in passkeys, and soon in Nostr and Bitcoin. The price of this freedom is that nobody can reset a key for you, so most of this chapter is about keeping your keys safe.</p>
+<h2>The problem</h2>
+<p>When you "have" an account, what you really have is a row in someone else's database. The company decides what that row allows. It can lock it by mistake, by an automated decision, after a change of rules, or because the service closes or leaves your country. People lose years of email, photos and contacts this way, often without a human being to talk to.</p>
+<p>An account is also only as safe as that database. When it leaks, your password and your personal data leak with it. And the "forgot my password" button is a second entrance: whoever controls your email address or your phone number can use it. Many account takeovers start exactly there.</p>
+<p>Accounts are not bad. They are convenient, and for most services they are fine. But for the things that matter most (your identity, your private conversations, your money), one question is worth asking: can this work without asking anyone for permission? With keys, it can.</p>
+<h2>How it works</h2>
+<p>A <strong>key pair</strong> is two very large numbers created together on your device. The <strong>private key</strong> is a secret that stays with you. The <strong>public key</strong> is calculated from it and can be shown to anyone. Going from private to public is easy. Going back is practically impossible.</p>
+<p>A key pair does two things:</p>
+<ul>
+<li><strong>Receiving secrets.</strong> Imagine a mailbox with a slot. Anyone who knows the address (your public key) can drop a letter in. Only the holder of the mailbox key (your private key) can open it.</li>
+<li><strong>Signing.</strong> Your private key produces a signature that anyone can check with your public key, and that nobody can forge.</li>
+</ul>
+<p>No central server is needed to confirm who you are. The mathematics does it.</p>
+<p>You already meet keys without knowing it. Your encrypted messenger (chapter 1) created a key pair on your phone. A passkey (chapter 2) is a key pair: the website stores only the public half. A Nostr identity (chapter 7) is a key pair. A Bitcoin wallet (Part 3) is a private key written as 12 or 24 words. For the curious: SSH keys log administrators into servers, and PGP keys encrypt email and sign software.</p>
+<h2>Choose where to keep your keys</h2>
+<p>Here is the trade-off. With a key there is no "forgot my password" button. Nobody can lock you out, and nobody can let you back in. If you lose the key, it is gone. If someone copies it, they are you. The responsibility moves from the company to you, so each key needs a home that matches its value.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Where</th>
+<th>Good for</th>
+<th>Weak point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paper, written by hand, in two places</strong></td>
+<td>Recovery codes, a Nostr key, a seed phrase for small amounts</td>
+<td>Fire, water, and anyone who finds it</td>
+</tr>
+<tr>
+<td><strong>Password manager</strong> (chapter 2)</td>
+<td>Low-value keys and recovery codes of ordinary sites</td>
+<td>It lives on connected devices. Not the place for a Bitcoin seed, and it cannot hold its own recovery codes</td>
+</tr>
+<tr>
+<td><strong>Hardware device</strong></td>
+<td>A security key for logins (YubiKey, Nitrokey, Token2, among others), a hardware wallet or signing device for Bitcoin (chapter 15)</td>
+<td>Costs money, can break or be lost. You still need a backup: a second security key, or the seed on paper or steel</td>
+</tr>
+<tr>
+<td><strong>Steel backup</strong></td>
+<td>Seed phrases that must survive fire and water (chapter 12)</td>
+<td>More expensive, and readable by whoever finds it</td>
+</tr>
+<tr>
+<td><strong>Splitting or multi-signature</strong></td>
+<td>Large value: several keys in several places, so no single loss or theft is fatal</td>
+<td>Complex. A mistake in the setup can lock you out. Learn first</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: <strong>a password manager for low-value keys</strong>, <strong>paper in two places for the recovery codes that protect everything else</strong>, and a hardware device with a steel backup once real savings are involved. Your situation may call for a different mix.</p>
+<h2>Step by step</h2>
+<p>The example uses the keys most readers already have. The logic is the same for every key you will create later.</p>
+<ol>
+<li><strong>Make an inventory.</strong> On paper, list the names of your keys and recovery codes, not the secrets themselves: the master password and recovery kit of your password manager, the two-factor recovery codes of your main accounts, your messenger PIN, the disk encryption recovery key of your computer, your passkeys, and later your Nostr key and your seed phrase.</li>
+<li><strong>Decide a home for each one,</strong> using the table above, and write it next to the name.</li>
+<li><strong>Write the backups by hand.</strong> No photo, no screenshot, no cloud note, no office printer. Write clearly and check every character twice.</li>
+<li><strong>Store them in two locations,</strong> for example your home and the home of a relative you trust, or a bank safe deposit box. One fire or one burglary should never take both copies.</li>
+<li><strong>Test one recovery.</strong> Log in to one account with a recovery code, then generate fresh codes. A backup you never tested is only a hope.</li>
+<li><strong>Tell one trusted person</strong> where things are and what to do, not the secrets themselves. A sealed letter with instructions is enough. No company can help your family recover a key after you are gone.</li>
+<li><strong>Review the list once a year.</strong></li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Photographing a key or a seed phrase.</strong> Photos are copied to cloud services and read by other apps. A photo is the most common way a secret leaves your hands.</li>
+<li><strong>Typing a private key into a website, or giving it to "support".</strong> No legitimate service ever asks for it. Anyone who does is a scammer.</li>
+<li><strong>Keeping the only copy on your phone.</strong> Phones are lost, stolen and broken every day.</li>
+<li><strong>Storing the backup next to the device.</strong> A thief or a fire then takes both at once.</li>
+<li><strong>Hiding it so well that nobody finds it.</strong> That includes you in five years, and your family after you.</li>
+<li><strong>Choosing a complex scheme too early.</strong> A split backup you do not fully understand is more dangerous than two sheets of paper in two safe places.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. The talk that goes with this chapter.</li>
+<li><strong>Understand public key encryption:</strong> Surveillance Self-Defense, "A Deep Dive on End-to-End Encryption", by the Electronic Frontier Foundation (ssd.eff.org).</li>
+<li><strong>Compare security keys and password managers:</strong> Privacy Guides (privacyguides.org).</li>
+<li><strong>Learn about passkeys:</strong> the FIDO Alliance (fidoalliance.org).</li>
+<li><strong>Next chapter:</strong> Nostr, social media built on keys instead of accounts.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="keys-1" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="keys-1" aria-label="List every key and recovery code you already have"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-1">List every key and recovery code you already have</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="keys-2" aria-label="Write the missing backups by hand and store them in two places"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-2">Write the missing backups by hand and store them in two places</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="keys-3" aria-label="Test one recovery with a real recovery code"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-3">Test one recovery with a real recovery code</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="keys-4" aria-label="Tell one trusted person where your backups are"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-4">Tell one trusted person where your backups are</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="keys-5" aria-label="Buy two security keys and add them to your main accounts"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-5">Buy two security keys and add them to your main accounts</label>
+        <span class="bk-effort">Weekend</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/autonomy/"><span>Previous</span>Proof of Autonomy</a>
+<a class="bk-next" href="/book/en/nostr/"><span>Next</span>Nostr: social media without a company in charge</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

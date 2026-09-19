@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Backing up your seed phrase · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page mono page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Work · Chapter 12</p>
+    <h1>Backing up your seed phrase</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>The 12 or 24 words your wallet gave you are not a password to the wallet: they are the wallet. The phone is only a window. Whoever reads the words owns the coins, and if you lose both the phone and the words, the coins are gone forever. Write them by hand, keep two copies in two places you control, never make a digital copy, and test the recovery once while the amount is still small.</p>
+<h2>The problem</h2>
+<p>With a bank, losing access is an inconvenience: you prove who you are and someone resets it. Self-custody removes that someone. There is no support desk, no "forgot my words" button, no court that can order the network to give your coins back. This is exactly what makes your bitcoin impossible to freeze or seize from a distance. It also makes you the only person responsible.</p>
+<p>Two things go wrong in real life, and they pull in opposite directions. The first is <strong>loss</strong>: a phone falls into a lake, the paper was thrown out during a move, a fire or a flood destroys the single copy. The second is <strong>theft</strong>: the words were saved in a photo, an email draft or a cloud note, and someone, or some malware, found them. Coins stolen this way move within minutes and cannot be recalled.</p>
+<p>A good backup protects against both at once.</p>
+<h2>How it works</h2>
+<p>When you create a wallet, the app generates one very large random number. Everything else comes from it: every key, every address, for every coin you will ever receive in that wallet. A standard called <strong>BIP39</strong> writes this number as 12 or 24 words taken from a fixed list of 2,048 simple English words, because people copy words more reliably than long strings of digits. The last word includes a checksum, so most copying errors are detected.</p>
+<p>This is why a single backup, made once, restores everything. You do not need to back up again after each payment. Enter the words into a new phone, or into another compatible wallet from a different team, and your on-chain coins reappear, because they were never in the phone: they are in the blockchain, and the words prove they are yours.</p>
+<p>One nuance: some Lightning wallets need an extra backup file in addition to the words. If so, the app says it clearly. Follow its instructions.</p>
+<h2>Choose how to store it</h2>
+<p>The right support depends on the amount and on what threatens your home: water, fire, burglars, curious visitors. All of the options below keep the words offline, and they can be combined.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Cost</th>
+<th>Strength</th>
+<th>Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paper</strong>, pencil or permanent ink</td>
+<td>Almost nothing</td>
+<td>Immediate, no tool needed</td>
+<td>Water, fire, fading, easily thrown away by mistake</td>
+</tr>
+<tr>
+<td><strong>Laminated paper</strong></td>
+<td>A few euros</td>
+<td>Resists water and wear</td>
+<td>Still burns. Use your own laminator, not a copy shop.</td>
+</tr>
+<tr>
+<td><strong>Steel product</strong>: Cryptosteel, Blockplate, Seedor and others</td>
+<td>Tens of euros, up to about a hundred</td>
+<td>Resists fire, water and time</td>
+<td>The price. A visible object that says "bitcoin" to whoever finds it.</td>
+</tr>
+<tr>
+<td><strong>DIY steel</strong>: letters stamped into steel washers held on a bolt</td>
+<td>A few euros of hardware, plus a set of letter stamps</td>
+<td>Same resistance, discreet, no brand to trust</td>
+<td>An hour of work, and care when stamping</td>
+</tr>
+<tr>
+<td><strong>Passphrase</strong> (the optional "25th word")</td>
+<td>Free</td>
+<td>The words alone are no longer enough for a thief</td>
+<td>One more secret to lose. Forgotten passphrase, lost coins.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two advanced options, for larger amounts:</p>
+<ul>
+<li><strong>Splitting across locations.</strong> Standard schemes such as Shamir backup, supported by some hardware wallets, divide the secret into shares, for example any 2 of 3. Do not invent your own scheme by cutting the word list in half.</li>
+<li><strong>Multi-signature.</strong> A wallet that requires several independent keys, for example 2 of 3, kept in different places. No single theft or loss is fatal. Chapter 15 introduces the devices that make this practical.</li>
+</ul>
+<p>A reasonable setup for most people: paper on the first day, then a steel copy once the amount would hurt to lose, without a passphrase until you fully understand it.</p>
+<h2>Step by step</h2>
+<p>The example uses paper and a pen. The logic is the same on steel.</p>
+<ol>
+<li><strong>Choose the moment.</strong> Alone, at a table, no camera behind you, not in a café or on a train.</li>
+<li><strong>Write the words by hand</strong>, numbered, in order, in clear capital letters. Note the wallet's name and the date, not the amount.</li>
+<li><strong>Check them twice.</strong> Read them back against the screen, word by word. Most wallets then ask you to confirm some of them.</li>
+<li><strong>Never make a digital version.</strong> Do not type, photograph, print, dictate or email the words, and do not store them in the cloud or in a password manager. A seed phrase must never touch a device connected to the internet, except the wallet itself.</li>
+<li><strong>Make two copies</strong> and store them in two places you control, for example your home and the home of a close relative, each in a sealed envelope.</li>
+<li><strong>Test the recovery.</strong> While the balance is still small (and after making the extra backup file, if your Lightning wallet asks for one), delete the wallet app, reinstall it, choose "restore" and enter your words. If the balance comes back, your backup works. If not, you lost a few sats and saved your future savings.</li>
+<li><strong>Plan the inheritance.</strong> Add a sealed letter explaining in plain words what this is, that it has value, that the words must never be typed into a website, and who can be trusted to help.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Keeping a digital copy.</strong> Photos, notes, email drafts and cloud drives are the first places malware and intruders search.</li>
+<li><strong>Keeping a single copy.</strong> One fire, one flood or one house move and it is over. Two copies, two places.</li>
+<li><strong>Telling people how much you own.</strong> The best protection for a seed phrase is that nobody thinks of looking for it. Talk about Bitcoin as much as you like, not about your balance.</li>
+<li><strong>Entering your words into a website or giving them to "support".</strong> Nobody legitimate will ever ask for them: no wallet team, no exchange, no authority. Whoever asks is a thief. No exception exists.</li>
+<li><strong>Building a scheme you will not remember in five years.</strong> Words hidden in a book, split in four, with an improvised code: many people have locked themselves out with their own cleverness. Simple, documented and tested wins.</li>
+<li><strong>Never testing.</strong> A backup that was never restored is a hope, not a backup.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. Your seed phrase is the most direct example of a key that is only yours.</li>
+<li><strong>Steel backups tested against fire, acid and a press:</strong> Jameson Lopp's metal storage reviews (jlopp.github.io/metal-bitcoin-storage-reviews).</li>
+<li><strong>Backup and recovery tutorials:</strong> Plan B Academy (planb.academy).</li>
+<li><strong>The standard itself and its word list:</strong> BIP39, in the Bitcoin improvement proposals (github.com/bitcoin/bips).</li>
+<li><strong>Next chapter:</strong> Lightning and euros in everyday life.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="seed-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="seed-1" aria-label="Write your words by hand and check them twice"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="seed-1">Write your words by hand and check them twice</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="seed-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="seed-2" aria-label="Delete any photo, note or file that contains them"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="seed-2">Delete any photo, note or file that contains them</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="seed-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="seed-3" aria-label="Make a second copy and store it in a second place"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="seed-3">Make a second copy and store it in a second place</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="seed-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="seed-4" aria-label="Test the recovery with a small balance"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="seed-4">Test the recovery with a small balance</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="seed-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="seed-5" aria-label="Write the sealed letter for your family and make a steel copy"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="seed-5">Write the sealed letter for your family and make a steel copy</label>
+        <span class="bk-effort">Weekend</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/first-wallet/"><span>Previous</span>Your first wallet and your first sats</a>
+<a class="bk-next" href="/book/en/lightning-and-euros/"><span>Next</span>Lightning and euros in everyday life</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

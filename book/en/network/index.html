@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Your network · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page priv page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Privacy · Chapter 5</p>
+    <h1>Your network</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Every connection you make passes through someone else's equipment: your internet provider, the cafe's wifi, the network at work. HTTPS already hides what you read and type, but not which sites you visit. A VPN hides that from your provider and hides your IP address from websites, by moving your trust to the VPN company. It does not make you anonymous. Tor and mixnets go further, and cost speed.</p>
+<h2>The problem</h2>
+<p>Between your device and a website, your traffic crosses several networks, and each of them can watch it.</p>
+<ul>
+<li><strong>Your internet provider</strong> sees every connection you make from home or from your phone, and in many countries it must keep records of them for a period set by law.</li>
+<li><strong>Public wifi</strong> in a cafe, a hotel or an airport is run by someone you do not know. So is any network with the same name set up by a stranger.</li>
+<li><strong>The network at work or at school</strong> is often monitored as a matter of policy.</li>
+<li><strong>Every site you visit</strong> sees your IP address, the number that identifies your connection. It reveals your provider and your approximate location, and it lets sites and advertisers recognise you from one visit to the next, even without cookies.</li>
+</ul>
+<p>None of this requires a hacker. It is how networks work by default. The list of sites you visit, with times and dates, describes your health, your money, your politics and your habits rather well.</p>
+<h2>How it works</h2>
+<p><strong>HTTPS</strong>, the padlock in your browser, encrypts the link between you and the site. Almost all sites use it today. The network in between can no longer see the pages you read, what you type, or your passwords. It still sees the domain name you connect to (the name of the site, not the exact page), when you connect, for how long, and how much data moves.</p>
+<p><strong>DNS</strong> is the phone book of the internet. Before your device can reach proofconference.com, it must ask a DNS server which IP address hides behind that name. By default the server belongs to your internet provider, and the question is often sent unencrypted. So even before the page loads, your provider has the list of every name you looked up.</p>
+<p><strong>Encrypted DNS</strong> sends those questions through an encrypted channel to a server you choose. Good free options are Quad9 (a Swiss non-profit that also blocks known malicious sites), Mullvad DNS (no account needed, optional ad blocking) and NextDNS (a company, very configurable, free up to a monthly limit). It is a small, useful step, but the network still sees the IP addresses you connect to.</p>
+<h2>What a VPN does, and what it does not</h2>
+<p>A <strong>VPN</strong> builds an encrypted tunnel from your device to a server run by the VPN company. All your traffic, DNS included, goes through it. Your provider, or the cafe's wifi, only sees that you use a VPN. Websites see the IP address of the VPN server, not yours.</p>
+<p>The VPN company now sees exactly what your provider used to see. A VPN does not remove trust, it moves it, from a company you did not choose to one you did.</p>
+<p>A VPN does not make you anonymous. It does not stop cookies or browser fingerprinting (chapter 3), and the moment you log in to Google or Facebook, they know who you are, whatever your IP address.</p>
+<p><strong>Tor</strong> removes the single trusted company. Your traffic passes through three relays run by independent volunteers. The first knows who you are but not where you go, the last knows where you go but not who you are. Nobody sees both ends. A <strong>mixnet</strong> also uses several hops, and in addition mixes your packets with those of other users, delays them slightly and adds fake "cover" traffic. Even someone watching the whole network cannot match what enters with what leaves.</p>
+<h2>Choose your network protection</h2>
+<p>Every option below is open source and has a serious reputation. They differ in who you must trust, in speed and in how you can pay.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Who runs it</th>
+<th>Payment</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mullvad VPN</strong></td>
+<td>One company, Sweden</td>
+<td>Flat monthly price. Card, bank transfer, cash by post, bitcoin (Lightning included), monero</td>
+<td>No email needed: your account is a random number. Fast, audited. No free tier.</td>
+</tr>
+<tr>
+<td><strong>IVPN</strong></td>
+<td>One company, Gibraltar</td>
+<td>Paid. Card, cash, bitcoin (Lightning included), monero</td>
+<td>No email needed, audited, very transparent about its limits. Smaller server network.</td>
+</tr>
+<tr>
+<td><strong>Proton VPN</strong></td>
+<td>One company, Switzerland</td>
+<td>Free tier without data limit, paid plans. Card, bitcoin, cash</td>
+<td>Audited. The free tier is honest but slower, with few countries. The account needs an email address.</td>
+</tr>
+<tr>
+<td><strong>NymVPN</strong></td>
+<td>Nym, Switzerland. Servers run by independent operators</td>
+<td>Paid. Card, cash, bitcoin (Lightning included) and other cryptocurrencies</td>
+<td>Two modes: a fast two-hop mode, and a five-hop mixnet mode with cover traffic, much slower. Payment is separated from usage by anonymous credentials. A younger product. PROOF speaker Alexis Roussel is COO of Nym.</td>
+</tr>
+<tr>
+<td><strong>Tor Browser / Orbot</strong></td>
+<td>A non-profit and thousands of volunteer relays</td>
+<td>Free</td>
+<td>The strongest protection of your IP address for browsing. Slow, and some sites block it or show endless verification puzzles. Orbot sends the traffic of phone apps through Tor.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: <strong>one paid VPN from this list for everyday use</strong>, and <strong>Tor Browser</strong> installed for the few searches you do not want linked to you at all.</p>
+<p>Be careful with "free VPN" apps. Running servers costs money, and if you do not pay, your traffic is often the product: advertising, tracking, resale of data. Be just as careful with "best VPN" ranking sites. Most are paid a commission for each subscription they sell, and some belong to the same groups as the VPNs they recommend.</p>
+<h2>Step by step</h2>
+<p>The example uses Mullvad. The same logic applies to the others.</p>
+<ol>
+<li><strong>Install the app</strong> from the official website of the provider or from the official store. Never from a link in an advertisement.</li>
+<li><strong>Create the account.</strong> Mullvad gives you an account number and asks for nothing else. Store it in your password manager, then add time with the payment method you prefer.</li>
+<li><strong>Connect.</strong> Choose a server in your own country or a neighbouring one for the best speed. A distant country is only useful if you need to appear there.</li>
+<li><strong>Turn on the kill switch.</strong> This setting blocks all traffic if the tunnel drops, so that nothing leaks outside it. In Mullvad it is always active, and on computers an extra "lockdown mode" also blocks the internet when you disconnect on purpose. In other apps, look for "kill switch" in the settings. On Android, the system VPN settings also offer "Always-on VPN" and "Block connections without VPN".</li>
+<li><strong>Connect automatically.</strong> In the settings, turn on launch at start-up and auto-connect. Some apps, such as IVPN and Proton VPN, let you mark your home wifi as trusted and connect automatically on every other network.</li>
+<li><strong>Check for leaks.</strong> With the VPN on, open mullvad.net/check or dnsleaktest.com. The IP address and the DNS servers shown must belong to the VPN, not to your internet provider.</li>
+<li><strong>Set encrypted DNS for the moments without VPN.</strong> On Android, in the network settings, find "Private DNS" and enter the host name of the service you chose, for example dns.quad9.net. On iPhone and on computers, the chosen service gives you a profile or an app to install. In your browser, turn on "secure DNS" in the privacy settings.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Believing a VPN makes you anonymous.</strong> It hides your IP address from sites and your traffic from your provider. Cookies, fingerprinting and your own logins still identify you.</li>
+<li><strong>Choosing a VPN because it is free or because a ranking site said so.</strong> Look for open-source apps, independent audits, a clear owner and a simple paid business model.</li>
+<li><strong>Leaving the kill switch off.</strong> Tunnels drop, especially when your phone moves between wifi and mobile data. Without a kill switch, your traffic silently goes back to the normal route.</li>
+<li><strong>Logging in to personal accounts inside Tor Browser.</strong> Once you sign in, the site knows who you are, and the extra hops protected nothing.</li>
+<li><strong>Thinking the padlock means the site is honest.</strong> HTTPS protects the connection. A phishing site can have a padlock too.</li>
+<li><strong>Forgetting that the rules still apply.</strong> A VPN is a legal privacy tool in the European Union. What is illegal without it is still illegal with it.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "How the 'Soldier-Citizen' Can Help Decentralize the World: Lessons from Russia's Invasion of Ukraine", by Alexis Roussel, on why networks run by many independent people hold up better than networks run by one.</li>
+<li><strong>Compare VPNs without paid rankings:</strong> Privacy Guides, "VPN Services" and "DNS Resolvers" (privacyguides.org).</li>
+<li><strong>Understand and download Tor:</strong> the Tor Project (torproject.org).</li>
+<li><strong>Choosing a VPN that fits your situation:</strong> Surveillance Self-Defense (ssd.eff.org).</li>
+<li><strong>Next chapter:</strong> Part 2 begins, with keys instead of accounts.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="network-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-1" aria-label="Turn on encrypted DNS on your phone and in your browser"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-1">Turn on encrypted DNS on your phone and in your browser</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="network-2" aria-label="Choose and install a VPN from a trustworthy operator"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-2">Choose and install a VPN from a trustworthy operator</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-3" aria-label="Turn on the kill switch and auto-connect, then check for leaks"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-3">Turn on the kill switch and auto-connect, then check for leaks</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-4" aria-label="Install Tor Browser and try it once"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-4">Install Tor Browser and try it once</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-5" aria-label="Remove any &quot;free VPN&quot; app from your devices"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-5">Remove any "free VPN" app from your devices</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/email/"><span>Previous</span>Your email and your aliases</a>
+<a class="bk-next" href="/book/en/autonomy/"><span>Next</span>Proof of Autonomy</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

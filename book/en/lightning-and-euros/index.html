@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Lightning and euros in everyday life · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page mono page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Work · Chapter 13</p>
+    <h1>Lightning and euros in everyday life</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Bitcoin's base layer is built to be secure, not to sell coffee. Lightning is a payment network on top of it: instant, with tiny fees, made for everyday amounts. This chapter shows how to pay and get paid over Lightning, where to spend sats, and the several routes between bitcoin and euros, each with its cost in fees, convenience and privacy. Nothing here is investment advice, and the tax rules of your country still apply.</p>
+<h2>The problem</h2>
+<p>The Bitcoin blockchain adds a new block about every ten minutes, and each block has limited space. This is deliberate: it keeps the ledger small enough for ordinary people to verify on their own computer (chapter 16). The price of that choice is that an on-chain payment takes minutes to hours to be final, and that its fee rises when many people want space at the same time. Fine for moving savings. Absurd for a coffee.</p>
+<p>The second problem is the bridge. Salaries, rent and taxes are in euros. Unless you want bitcoin to remain something you only look at, you need a way in and a way out. Most people only know one: a large exchange that holds their coins, their identity documents and the full history of what they do. There are other routes, and they are very different from each other.</p>
+<h2>How it works</h2>
+<p>Lightning rests on <strong>payment channels</strong>. Two participants lock some bitcoin together in one on-chain transaction. From then on they can move the balance between them as often as they like, instantly, by exchanging signed updates that never touch the blockchain. Only opening and closing the channel are written on-chain. Channels connect into a network, so you can pay someone you share no channel with: the payment hops through intermediaries who cannot steal it, and who usually earn a fraction of a cent.</p>
+<p>In practice you see none of this. You see two things:</p>
+<ul>
+<li><strong>An invoice</strong>: a payment request, shown as a QR code or a long text starting with "lnbc". It is usually for a fixed amount, used once, and it expires.</li>
+<li><strong>A Lightning address</strong>: it looks like an email address (you@provider.com) and can be reused, which is convenient for tips and for getting paid.</li>
+</ul>
+<p>Modern wallets open and manage the channels for you (chapter 11).</p>
+<h2>Where to spend sats</h2>
+<ul>
+<li><strong>Merchants.</strong> BTC Map (btcmap.org) is a free, community-run map of places that accept bitcoin: cafés, shops, hotels, freelancers. Check it for Vilnius and for your home town, and add the places you discover.</li>
+<li><strong>Gift cards and phone top-ups.</strong> Services such as Bitrefill sell vouchers for supermarkets, online shops, mobile credit and travel eSIMs, payable over Lightning. It is an indirect way to live on sats where merchants do not accept them yet. It is one company, so treat it as a shop, not as a wallet.</li>
+<li><strong>Tips and zaps.</strong> On Nostr (chapter 7), you can send a few sats to the author of a post you liked, directly, with no platform taking a share. Many podcasts and independent writers publish a Lightning address too.</li>
+<li><strong>People.</strong> Splitting a bill or repaying a friend is often the first real use, and the best teacher.</li>
+</ul>
+<h2>Choose your bridge to euros</h2>
+<p>There is no best route, only trade-offs between simplicity, fees and privacy. <strong>KYC</strong> ("know your customer") means the service must verify your identity with an ID document. In Europe, regulated companies now require it. Chapter 14 explains what that implies for your privacy.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Examples</th>
+<th>Identity check (KYC)</th>
+<th>Who holds the coins</th>
+<th>Honest trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Earn sats</strong></td>
+<td>Be paid or tipped in bitcoin for work, sales or content</td>
+<td>None</td>
+<td>You</td>
+<td>No intermediary at all. You need someone willing to pay this way, and income remains taxable.</td>
+</tr>
+<tr>
+<td><strong>Peer-to-peer exchange</strong></td>
+<td>Peach (mobile), Bisq (desktop), RoboSats (Lightning, over Tor), Hodl Hodl (web)</td>
+<td>Generally none by the platform. Hodl Hodl may ask in a dispute.</td>
+<td>You. Coins are locked in escrow only during the trade.</td>
+<td>You trade with a person by bank transfer. More private, usually more expensive, slower, more to learn.</td>
+</tr>
+<tr>
+<td><strong>European broker, recurring purchases</strong></td>
+<td>Relai, Pocket Bitcoin (both Swiss)</td>
+<td>Yes</td>
+<td>You. They deliver to your own wallet.</td>
+<td>Very simple, automatic. A fee on each purchase, and the company knows who you are and what you bought.</td>
+</tr>
+<tr>
+<td><strong>Euro account plus Lightning wallet</strong></td>
+<td>Bringin (euro IBAN in your name, SEPA, Visa card, self-custodial Lightning wallet; Bringin sponsors this conference), Strike (SEPA deposits, custodial until you withdraw)</td>
+<td>Yes</td>
+<td>Bringin: you, for the bitcoin. Strike: the company, until you withdraw.</td>
+<td>The smoothest link between sats and daily euro spending. One company sees both sides, and the euro side is a regulated account like any other.</td>
+</tr>
+<tr>
+<td><strong>Bitcoin ATM</strong></td>
+<td>Machines listed on coinatmradar.com</td>
+<td>Usually yes in the EU, depending on operator and amount</td>
+<td>You</td>
+<td>Cash in, coins out in minutes. Fees are typically the highest of all routes.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people who decide to exchange euros: one regulated route you find clear, used only to deliver coins to your own wallet, and one peer-to-peer route learned with small amounts, so that you never depend on a single door. Whatever the route, selling or spending bitcoin can create a tax obligation: keep records, and check the rules of your country.</p>
+<h2>Step by step</h2>
+<p>The example uses Phoenix. The logic is the same in any Lightning wallet.</p>
+<ol>
+<li><strong>Pay an invoice.</strong> At the conference or at a merchant, tap Send and scan the QR code. Check the amount and the fee shown, then confirm. The merchant sees the payment within a second or two.</li>
+<li><strong>Receive with an invoice.</strong> Tap Receive, enter an amount if you wish, and show the QR code. Remember that it expires.</li>
+<li><strong>Receive with a Lightning address.</strong> If your wallet offers one, find it in the settings or on the receive screen, and share it like an email address.</li>
+<li><strong>Withdraw from a broker or app to your OWN wallet.</strong> Choose "withdraw" or "send", paste an address or an invoice generated by your wallet, and start with a small test. For larger amounts, withdraw on-chain to your savings wallet (chapters 12 and 15).</li>
+<li><strong>Keep only spending money on the phone.</strong> Think of the Lightning wallet as the wallet in your pocket. When it holds more than you would carry in cash, move the surplus on-chain.</li>
+<li><strong>Keep records.</strong> Export or note your purchases and sales with dates and amounts. Your future self will need them for the tax return.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Keeping savings in a Lightning phone wallet.</strong> It lives on a device you can lose or break, connected to the internet all day. Spending money only.</li>
+<li><strong>Confusing an invoice with an on-chain address.</strong> An invoice starts with "lnbc" and expires. An on-chain address starts with "bc1", "1" or "3" and does not. When you withdraw from a service, select the matching network.</li>
+<li><strong>Making large payments over Lightning.</strong> Channels have limited capacity, and large payments fail more often. Lightning is for everyday amounts. Use on-chain for the rest.</li>
+<li><strong>Leaving coins with the broker.</strong> A purchase is finished when the coins are in your wallet, not when the app shows a balance (chapter 11).</li>
+<li><strong>Ignoring the total cost.</strong> Compare the final amount of sats you receive, not the advertised fee: the exchange rate often hides a margin.</li>
+<li><strong>Forgetting the tax side.</strong> Paying with bitcoin can count as selling it. The rules differ by country, and "I did not know" is not an answer.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "CBDCs, KYC, and the Fight for Monetary Privacy", by Linas K., and "Why Centralized Money Fails: How Bitcoin Became an Alternative", by Piktas.</li>
+<li><strong>Find places to spend:</strong> BTC Map (btcmap.org).</li>
+<li><strong>Tutorials for the wallets and exchanges above:</strong> Plan B Academy (planb.academy).</li>
+<li><strong>Understand Lightning in depth:</strong> "Mastering the Lightning Network", free to read online (github.com/lnbook/lnbook).</li>
+<li><strong>Next chapter:</strong> privacy in Bitcoin.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="lightning-and-euros-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-1" aria-label="Pay one Lightning invoice, at the conference or at a merchant"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="lightning-and-euros-1">Pay one Lightning invoice, at the conference or at a merchant</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="lightning-and-euros-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-2" aria-label="Get a Lightning address and receive a few sats on it"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="lightning-and-euros-2">Get a Lightning address and receive a few sats on it</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="lightning-and-euros-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-3" aria-label="Find three places near you on btcmap.org"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="lightning-and-euros-3">Find three places near you on btcmap.org</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="lightning-and-euros-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-4" aria-label="Withdraw any balance from a broker or exchange to your own wallet"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="lightning-and-euros-4">Withdraw any balance from a broker or exchange to your own wallet</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="lightning-and-euros-5" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-5" aria-label="Read how one peer-to-peer exchange works, before you need it"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="lightning-and-euros-5">Read how one peer-to-peer exchange works, before you need it</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/seed/"><span>Previous</span>Backing up your seed phrase</a>
+<a class="bk-next" href="/book/en/bitcoin-privacy/"><span>Next</span>Privacy in Bitcoin</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

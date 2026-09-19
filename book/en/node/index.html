@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Running your own node · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page mono page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Work · Chapter 16</p>
+    <h1>Running your own node</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Without your own node, your wallet asks someone else's server about your money. A node is your own copy of Bitcoin's rules and ledger: it checks every block and every transaction itself, so you trust nobody's answer. It protects your privacy, and it strengthens the network. It needs a small always-on computer, a large SSD and a few days of patience. It is not a miner, and it earns nothing.</p>
+<h2>The problem</h2>
+<p>When you open a wallet app, it needs to know your balance. It does not have the ledger, so it asks a server: "what happened on these addresses?" That server belongs to the wallet's maker, or to an unknown volunteer.</p>
+<p>Two things follow. First, the server learns which addresses are yours, all of them, together with your IP address. The separate wallets and fresh addresses from chapter 14 are grouped again, in somebody's logs. Second, you must believe the answer. If the server is wrong, offline or dishonest, your wallet shows you what it was told.</p>
+<p>For small amounts this is a reasonable compromise, and most people start this way. But it is a strange ending for a system designed so that nobody has to be trusted. With your own node, the question never leaves your home.</p>
+<h2>How it works</h2>
+<p>A <strong>node</strong> is a computer running Bitcoin software, most often Bitcoin Core (other implementations exist, such as Bitcoin Knots). It downloads the whole ledger, from the first block in 2009, and verifies every transaction against the rules: no coin spent twice, no coin created from nothing, never more than 21 million. It then keeps doing this for every new block, about every ten minutes. This is the meaning of "don't trust, verify".</p>
+<p>Your node accepts only what follows the rules. If thousands of people do the same, the rules of Bitcoin are simply whatever their nodes enforce. No company, miner or government can change them for you.</p>
+<p>A node is not a miner. It uses little electricity and earns nothing. It also does not hold your coins: your keys stay in your wallet or signing device.</p>
+<p>Realistic requirements: a small computer that stays on, a 1 to 2 TB SSD (the ledger is several hundred gigabytes and grows), a normal home connection, and a few days for the first synchronisation.</p>
+<p>A <strong>pruned node</strong> is a lighter option: it verifies everything but keeps only the most recent blocks, so it fits on a small disk. The trade-off is that most wallet server software needs the full ledger.</p>
+<h2>Choose your route</h2>
+<p>All routes run the same Bitcoin software underneath. They differ in how much is done for you.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>What it is</th>
+<th>Strengths</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bitcoin Core on your everyday computer</strong></td>
+<td>The reference software, open source, from bitcoincore.org</td>
+<td>Free, the simplest start, includes its own wallet</td>
+<td>Not always on, takes disk space on your main machine</td>
+</tr>
+<tr>
+<td><strong>Umbrel</strong></td>
+<td>A home server system with an app store. Runs on your own hardware, or on a device the company sells</td>
+<td>The most polished interface, one-click apps</td>
+<td>Made by one company. Free for personal use, but its licence is not open source (no commercial reuse)</td>
+</tr>
+<tr>
+<td><strong>Start9 (StartOS)</strong></td>
+<td>An open source server system. Runs on your own hardware, or on a server the company sells</td>
+<td>Strong focus on privacy and self-hosting, good documentation</td>
+<td>Made by one company. A little more to learn at the start</td>
+</tr>
+<tr>
+<td><strong>RaspiBlitz</strong></td>
+<td>An open source community project for the Raspberry Pi</td>
+<td>No company involved, strong Lightning tools</td>
+<td>More technical, some work on the command line</td>
+</tr>
+<tr>
+<td><strong>MyNode</strong></td>
+<td>A node system for small computers, with a free community edition and a paid premium edition</td>
+<td>Simple web interface, many Bitcoin apps</td>
+<td>Made by a small company, some features reserved for the paid edition</td>
+</tr>
+<tr>
+<td><strong>The manual route</strong></td>
+<td>Debian or Ubuntu Linux, then Bitcoin Core, then an Electrum server (electrs or Fulcrum), by following a guide</td>
+<td>You understand every part. Nothing hidden, fully open source</td>
+<td>Slow, command line only. For learners who enjoy it</td>
+</tr>
+</tbody>
+</table></div>
+<p>Umbrel and Start9 are also general home servers, which connects with chapter 10: the same box can host your files and your passwords.</p>
+<p>A reasonable setup for most people: try Bitcoin Core on your computer to see what a node is, then move to a dedicated small computer with the platform whose trade-offs suit you.</p>
+<h2>A word on Lightning nodes</h2>
+<p>The same platforms let you install a Lightning node (LND or Core Lightning) in one click. Treat it as a later project. A Lightning node holds real funds in channels, on a machine that is always online. Channels need their own backups, regular attention and an understanding of what happens if the disk fails. Restoring an old backup the wrong way can even cost you the funds in a channel. A Bitcoin node alone can break without any loss: you simply synchronise again. A Lightning node cannot. Learn with small amounts, and only after the rest of this chapter is routine.</p>
+<h2>Step by step</h2>
+<p>The example uses a platform with an app store, such as Umbrel or StartOS. RaspiBlitz and MyNode follow the same order.</p>
+<ol>
+<li><strong>Choose the hardware.</strong> A used mini PC or a recent Raspberry Pi with 8 GB of memory, a 1 to 2 TB SSD from a known brand, and a network cable to your router.</li>
+<li><strong>Install the platform</strong> by following its official guide, and set a strong, unique password (chapter 2).</li>
+<li><strong>Install the Bitcoin app and let it synchronise.</strong> It takes from one day to a week, depending on the hardware. Do not interrupt it.</li>
+<li><strong>Install an Electrum server app</strong> (electrs or Fulcrum). It builds an index so that wallets can ask your node questions. This takes more hours.</li>
+<li><strong>Connect your wallet.</strong> In Sparrow, BlueWallet or Nunchuk, open the server or network settings and enter the address of your own Electrum server instead of the public one. Zeus is different: it connects to a Lightning node, for later.</li>
+<li><strong>Reach it from outside your home</strong> over Tor or a private VPN (see chapter 10). The platforms provide a Tor address for this.</li>
+<li><strong>Keep it updated,</strong> and keep your seed backups separate from the node. The node needs no seed, and should never see one.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Using a cheap SD card or USB stick as the main disk.</strong> A node writes constantly. These fail within months and can corrupt the data. Use a real SSD.</li>
+<li><strong>No power protection.</strong> A sudden power cut can damage the database and cost you days of synchronisation. Always shut down from the interface, and consider a small battery backup (UPS).</li>
+<li><strong>Thinking the node holds your coins.</strong> It does not, unless you run Lightning. If the node dies, your bitcoin is untouched: your seed is what matters.</li>
+<li><strong>Exposing it to the internet.</strong> Do not open ports on your router to reach the dashboard. Use Tor or a VPN.</li>
+<li><strong>Giving up during the first synchronisation.</strong> It looks stuck for days. It is not. It is verifying more than fifteen years of transactions, once.</li>
+<li><strong>Downloading software from the wrong place.</strong> Get Bitcoin Core only from bitcoincore.org, and each platform from its official website.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Centralized Money Fails: How Bitcoin Became an Alternative", by Piktas. A node is how you verify that alternative yourself. See also the talk by Alexis Roussel on decentralised, open-source technology.</li>
+<li><strong>The basics:</strong> "Running a Full Node" (bitcoin.org), with requirements and instructions for Bitcoin Core.</li>
+<li><strong>The manual route:</strong> the RaspiBolt guide (raspibolt.org) and MiniBolt, a similar guide for ordinary PCs (minibolt.minibolt.info).</li>
+<li><strong>Connecting a wallet to your node:</strong> the Sparrow Wallet documentation (sparrowwallet.com/docs).</li>
+<li><strong>Next:</strong> your checklist.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="node-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="node-1" aria-label="Look in your wallet&#x27;s network settings and see which server it uses today"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="node-1">Look in your wallet's network settings and see which server it uses today</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="node-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="node-2" aria-label="Install Bitcoin Core on your computer and watch it synchronise"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="node-2">Install Bitcoin Core on your computer and watch it synchronise</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="node-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="node-3" aria-label="Choose a platform and the hardware for a dedicated node"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="node-3">Choose a platform and the hardware for a dedicated node</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="node-4" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="node-4" aria-label="Build the node, synchronise it and add an Electrum server"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="node-4">Build the node, synchronise it and add an Electrum server</label>
+        <span class="bk-effort">Weekend</span>
+      </li>
+      <li class="bk-cl-item" data-id="node-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="node-5" aria-label="Point your wallet to your own node and remove the public server"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="node-5">Point your wallet to your own node and remove the public server</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/hardware-wallet/"><span>Previous</span>Hardware wallets</a>
+<span></span>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

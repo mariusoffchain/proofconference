@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Your email and your aliases · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page priv page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Privacy · Chapter 4</p>
+    <h1>Your email and your aliases</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Your email address is the key to all your other accounts, and the label that links your profiles together across the internet. Move your mail to a provider that lives from subscriptions, not from advertising, and that encrypts your mailbox. Then stop giving your real address to everyone: use aliases, one different address per service. You will see who leaks or sells your address, and you can switch off one alias without touching the rest.</p>
+<h2>The problem</h2>
+<p>Almost every account you own can be reset by email. Whoever controls your mailbox can click "forgot password" on your bank, your social networks and your cloud storage, one after the other. Your mailbox is also an archive of your life: invoices, tickets, medical appointments, contracts, years of conversations.</p>
+<p>The most popular mailboxes are free because they are funded by advertising. The company that carries your mail also runs an advertising business, and your mailbox tells it what you buy, where you travel and which services you use.</p>
+<p>Then there is the address itself. You give the same one to shops, newsletters, apps and public offices. Because it never changes, it is the identifier data brokers use to join separate databases into one profile of you. When one of those services is hacked, your address ends up on lists used for spam and for phishing, which means fake messages written to steal your passwords.</p>
+<h2>How it works</h2>
+<p>An <strong>encrypted mail provider</strong> stores your mailbox so that only your password can unlock it. The company cannot read your stored mail and has nothing readable to hand over or to leak. Messages between two users of the same provider are end-to-end encrypted automatically.</p>
+<p>Know the limits. Email was designed decades ago as an open postcard system. A message you send to an ordinary Gmail or Outlook address is not end-to-end encrypted: it sits readable in the other mailbox. Metadata (who writes to whom, and when) stays visible to the providers, and with most of them the subject line is not end-to-end encrypted either. For truly private conversations, use a messenger from chapter 1.</p>
+<p>An <strong>alias</strong> is a forwarding address. You create shop-name@alias-service for one shop, and every message sent to it arrives in your real mailbox. The shop never sees your real address. If that alias starts receiving spam, you know exactly who leaked or sold it, and you switch it off with one click. Brokers can no longer join your accounts, because every service knows you under a different address.</p>
+<h2>Choose your mail provider</h2>
+<p>All the options below are funded by their users, not by advertising. They differ in price, in how they encrypt, and in whether you can use an ordinary mail app.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Based in</th>
+<th>Price</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proton Mail</strong></td>
+<td>Switzerland</td>
+<td>Free tier, paid plans</td>
+<td>Open-source apps, large ecosystem (calendar, drive, VPN). Subject lines are not end-to-end encrypted. Ordinary mail apps need an extra "bridge" program on a paid plan.</td>
+</tr>
+<tr>
+<td><strong>Tuta</strong></td>
+<td>Germany</td>
+<td>Free tier, paid plans</td>
+<td>Open-source apps, encrypts subject lines too. Uses its own encryption system, so no ordinary mail apps and no PGP (the older standard for encrypting email).</td>
+</tr>
+<tr>
+<td><strong>Mailbox.org</strong></td>
+<td>Germany</td>
+<td>Paid, low price</td>
+<td>Classic mailbox that works with any mail app, with optional PGP encryption of your inbox. Less polished on mobile.</td>
+</tr>
+<tr>
+<td><strong>Posteo</strong></td>
+<td>Germany</td>
+<td>Paid, low price</td>
+<td>Works with any mail app, can be paid anonymously, including cash by post. Does not support your own domain.</td>
+</tr>
+<tr>
+<td><strong>Your own domain</strong></td>
+<td>Wherever you host it</td>
+<td>Yearly domain fee plus a paid mailbox</td>
+<td>you@your-name.lt, hosted at one of the providers above. You can change provider later without changing address. You must never forget to renew the domain.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: <strong>one encrypted mailbox</strong> from this list, plus an alias service. If you plan to keep the same address for the next twenty years, consider your own domain from the start.</p>
+<h2>Choose your alias service</h2>
+<p>An alias service sits between the world and your mailbox. It forwards your mail, so it can technically see messages passing through: pick an operator you trust as much as your mail provider.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Who runs it</th>
+<th>Price</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SimpleLogin</strong></td>
+<td>Proton (Switzerland)</td>
+<td>Free tier with a limited number of aliases, paid for unlimited</td>
+<td>Open source. You can also reply and send from an alias. Included in paid Proton plans.</td>
+</tr>
+<tr>
+<td><strong>addy.io</strong></td>
+<td>A small independent operator</td>
+<td>Generous free tier, paid plans</td>
+<td>Open source, and you can host it yourself. A small team is also a single point of failure.</td>
+</tr>
+<tr>
+<td><strong>DuckDuckGo Email Protection</strong></td>
+<td>DuckDuckGo (United States)</td>
+<td>Free</td>
+<td>Very easy, removes trackers hidden in emails. Needs the DuckDuckGo app or browser extension.</td>
+</tr>
+<tr>
+<td><strong>Firefox Relay</strong></td>
+<td>Mozilla (United States)</td>
+<td>Free tier with a few aliases, paid for more</td>
+<td>Simple, integrated into Firefox. Few aliases on the free tier.</td>
+</tr>
+<tr>
+<td><strong>Built-in aliases</strong></td>
+<td>Your mail provider</td>
+<td>Usually in paid plans</td>
+<td>Proton, Tuta, Mailbox.org and Posteo all offer extra addresses. Nothing new to trust, but the number is limited.</td>
+</tr>
+<tr>
+<td><strong>"Plus addressing"</strong></td>
+<td>Any provider</td>
+<td>Free</td>
+<td>you+shop@domain.com. Useful for sorting mail, weak for privacy: your real address is visible inside it and the "+shop" part is easy to remove.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: a dedicated alias service with a browser extension, so that creating an alias takes one click when you sign up somewhere.</p>
+<h2>Step by step</h2>
+<p>The example uses Proton Mail and SimpleLogin because they are a common first step. The same logic applies to the others.</p>
+<ol>
+<li><strong>Open the new mailbox.</strong> Choose an address you can keep for years. Protect it with a long, unique password from your password manager and a second factor (chapter 2). Write down the recovery phrase on paper: if you lose the password, nobody can decrypt your mail for you.</li>
+<li><strong>Set up the alias service.</strong> Create the account, connect it to your new mailbox, and install its browser extension and phone app.</li>
+<li><strong>Move your most important accounts first.</strong> Your bank, government services, your phone operator, your Apple or Google account, your password manager. Change the email address in each of them. Use your real new address or a dedicated alias, as you prefer, but note your choice in your password manager.</li>
+<li><strong>Forward the old mailbox.</strong> In the settings of your old mailbox, turn on automatic forwarding to the new one. Most encrypted providers also offer an import tool that copies your old messages and contacts.</li>
+<li><strong>Move the rest as it comes.</strong> Each time a forwarded message arrives from a service you still use, change the address there to a new alias. Delete accounts you no longer use.</li>
+<li><strong>Create one alias for every new signup.</strong> A shop, a newsletter, a wifi portal: each gets its own address. Name the alias after the service, so that a leak is easy to trace.</li>
+<li><strong>Keep the old address for at least a year.</strong> Do not delete it. Forgotten accounts, old contacts and password resets will keep arriving there for a long time.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Thinking an encrypted provider makes all your email private.</strong> It protects your mailbox. A message sent to an ordinary mailbox is readable at the other end.</li>
+<li><strong>Deleting the old address too early.</strong> Some providers recycle abandoned addresses. A stranger could then receive the password resets of accounts you forgot.</li>
+<li><strong>Losing the recovery phrase.</strong> With an encrypted mailbox, resetting the password without it means losing access to your old messages.</li>
+<li><strong>Letting your own domain expire.</strong> Whoever registers it after you receives your mail and can reset your accounts. Turn on automatic renewal and keep the payment card up to date.</li>
+<li><strong>Using one alias for everything.</strong> An alias shared between ten services is just a second real address. The value is in one alias per service.</li>
+<li><strong>Putting the bank behind an alias service you do not fully trust.</strong> For the few accounts that matter most, your real address at your own provider is a perfectly good choice.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. An encrypted mailbox works because only you hold the key that opens it.</li>
+<li><strong>Compare providers in detail:</strong> Privacy Guides, "Email Services" and "Email Aliasing" (privacyguides.org).</li>
+<li><strong>Check whether your address has already leaked:</strong> Have I Been Pwned (haveibeenpwned.com).</li>
+<li><strong>Next chapter:</strong> your network.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="email-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="email-1" aria-label="Check your current address on haveibeenpwned.com"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-1">Check your current address on haveibeenpwned.com</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="email-2" aria-label="Open a mailbox at a provider funded by its users"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-2">Open a mailbox at a provider funded by its users</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="email-3" aria-label="Set up an alias service and its browser extension"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-3">Set up an alias service and its browser extension</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="email-4" aria-label="Move your five most important accounts to the new address"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-4">Move your five most important accounts to the new address</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="email-5" aria-label="Forward the old mailbox and move the remaining accounts"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-5">Forward the old mailbox and move the remaining accounts</label>
+        <span class="bk-effort">Weekend</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/browser/"><span>Previous</span>Your browser and your searches</a>
+<a class="bk-next" href="/book/en/network/"><span>Next</span>Your network</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

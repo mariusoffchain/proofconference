@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Your messages · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page priv page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Privacy · Chapter 1</p>
+    <h1>Your messages</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Your conversations are the most intimate data you produce. Move them to a messenger that is end-to-end encrypted by default, that is open source, and that collects as little metadata as possible. There are several good ones. Pick one, move your five closest contacts first, and keep your old app for everyone else.</p>
+<h2>The problem</h2>
+<p>Most people chat on apps owned by advertising companies. Some of them do encrypt the content of your messages, but they still record who you talk to, when, how often, from which device and which location, and they connect it to the rest of what they know about you. Others do not encrypt by default at all: on Telegram, ordinary chats and all group chats are readable by the company. SMS is worse: it is readable by your operator and trivial to intercept.</p>
+<p>Then come the backups. A conversation can be perfectly encrypted in transit and still end up readable in a cloud backup, yours or the one of the person you are talking to.</p>
+<p>The consequences are not theoretical: leaked conversations, accounts taken over by scammers who then write to your family, and messages handed over on request, years after you forgot you wrote them.</p>
+<h2>How it works</h2>
+<p>With <strong>end-to-end encryption</strong>, a message is locked on your phone and can only be unlocked on the phone of the person you write to. The company in the middle carries a sealed envelope it cannot open. If it is hacked, or receives a legal request, it has nothing readable to give.</p>
+<p>That is necessary, but not sufficient. Three more things matter:</p>
+<ul>
+<li><strong>Open source.</strong> The code is public, so independent experts can check that the app does what it claims. "Trust us" is not a security model.</li>
+<li><strong>Metadata.</strong> The best messengers are designed to know almost nothing: not your contacts, not your groups, sometimes not even who you are.</li>
+<li><strong>Who runs it.</strong> A non-profit or a community has no advertising business to feed. And if there is no central company at all, there is no single door to knock on.</li>
+</ul>
+<p>No messenger wins on every point. That is why the choice below matters.</p>
+<h2>Choose your messenger</h2>
+<p>There is no single right answer, and that is good news: a world where everyone depends on one app is fragile. Here are solid options, each with a different trade-off.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Messenger</th>
+<th>Needs a phone number</th>
+<th>Who runs the network</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Signal</strong></td>
+<td>Yes (can be hidden from others)</td>
+<td>One non-profit foundation</td>
+<td>Replacing WhatsApp with family and friends. The easiest switch.</td>
+</tr>
+<tr>
+<td><strong>SimpleX Chat</strong></td>
+<td>No identifier at all</td>
+<td>Relays anyone can run</td>
+<td>Maximum metadata protection. No account, no username, nothing to link.</td>
+</tr>
+<tr>
+<td><strong>Session</strong></td>
+<td>No</td>
+<td>A decentralised network of nodes</td>
+<td>Anonymous accounts, messages routed through several nodes. Slower, fewer features.</td>
+</tr>
+<tr>
+<td><strong>Threema</strong></td>
+<td>No</td>
+<td>One Swiss company, paid app</td>
+<td>People who want no phone number and a polished, paid product.</td>
+</tr>
+<tr>
+<td><strong>Element (Matrix)</strong></td>
+<td>No</td>
+<td>Federated: many servers, or your own</td>
+<td>Communities, teams, people who want to host their own server.</td>
+</tr>
+<tr>
+<td><strong>Briar</strong></td>
+<td>No</td>
+<td>Nobody: phone to phone</td>
+<td>Extreme situations. Works over Tor, and even over Bluetooth or wifi without internet. Android only.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: <strong>Signal for everyday life</strong>, plus <strong>one messenger without a phone number</strong> (SimpleX or Session) for contacts you do not want linked to your identity.</p>
+<p>If part of your circle stays on WhatsApp, help them at least turn on encrypted backups: Settings, Chats, Chat backup, End-to-end encrypted backup.</p>
+<h2>Step by step</h2>
+<p>The example uses Signal because it is the most common first step. The same logic applies to the others.</p>
+<ol>
+<li><strong>Install it</strong> from the official store or from the project website, and register.</li>
+<li><strong>Lock your account.</strong> Settings, Account: set a PIN and turn on Registration Lock. Nobody can re-register your number without that PIN.</li>
+<li><strong>Hide your number.</strong> Create a username, then in Settings, Privacy, Phone Number set "Who can see my number" to Nobody. You can now give your username instead of your number.</li>
+<li><strong>Make messages disappear by default.</strong> Settings, Privacy, Disappearing messages: choose a default timer, for example four weeks. Old conversations are a liability, not an archive.</li>
+<li><strong>Lock the app.</strong> Settings, Privacy, Screen lock.</li>
+<li><strong>Verify your important contacts.</strong> Open the conversation, tap the name, View safety number, and compare it in person or by another channel. Do it once with the few people who matter most.</li>
+<li><strong>Move your people.</strong> Do not announce a revolution. Write to your five closest contacts from the new app, create the family group there, and let the old app fade out.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Thinking "encrypted" means "private".</strong> Encryption protects the content. It does not hide who you talk to, unless the messenger was designed for that.</li>
+<li><strong>Forgetting the phone itself.</strong> Anyone holding your unlocked phone reads everything. A strong screen lock is part of your messenger's security.</li>
+<li><strong>Leaving cloud backups on.</strong> An unencrypted backup undoes everything. Check your settings, and remember that the other person's backup matters too.</li>
+<li><strong>Waiting for everyone to move.</strong> They will not, and they do not have to. Two apps side by side is a perfectly fine result.</li>
+<li><strong>Confusing privacy with anonymity.</strong> A messenger tied to your phone number protects what you say, not who you are. If you need to stay unidentified, use one without a phone number.</li>
+<li><strong>Trusting the app more than the person.</strong> Screenshots exist. The weakest point of a conversation is often the other end.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. The keys that protect your messages are the same idea as the keys that protect your bitcoin.</li>
+<li><strong>Compare messengers in detail:</strong> Privacy Guides, "Real-Time Communication" (privacyguides.org).</li>
+<li><strong>Understand your own risks:</strong> Surveillance Self-Defense, by the Electronic Frontier Foundation (ssd.eff.org).</li>
+<li><strong>Next chapter:</strong> your passwords and your accounts.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="messages-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="messages-1" aria-label="Install a private messenger and lock the account with a PIN"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="messages-1">Install a private messenger and lock the account with a PIN</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="messages-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="messages-2" aria-label="Hide your phone number and set disappearing messages by default"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="messages-2">Hide your phone number and set disappearing messages by default</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="messages-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="messages-3" aria-label="Move your five closest contacts and your family group"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="messages-3">Move your five closest contacts and your family group</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="messages-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="messages-4" aria-label="Install a second messenger that needs no phone number"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="messages-4">Install a second messenger that needs no phone number</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="messages-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="messages-5" aria-label="Turn on encrypted backups in the apps you keep"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="messages-5">Turn on encrypted backups in the apps you keep</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/privacy/"><span>Previous</span>Proof of Privacy</a>
+<a class="bk-next" href="/book/en/passwords/"><span>Next</span>Your passwords and your accounts</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

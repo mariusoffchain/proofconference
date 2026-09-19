@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Your passwords and your accounts · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<main class="bk-page priv page-top">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Privacy · Chapter 2</p>
+    <h1>Your passwords and your accounts</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>Reused passwords are the most common way ordinary accounts get taken over. Let a password manager create and remember a different password for every site, and protect it with one strong passphrase. Then add a second factor to the accounts that matter, starting with your email, because your email can reset everything else.</p>
+<h2>The problem</h2>
+<p>Most people use the same few passwords everywhere. It is understandable: nobody can remember a hundred different ones. It is also how most accounts are lost.</p>
+<p>Websites get breached all the time, and the stolen lists of email addresses and passwords circulate for years. Attackers then try them automatically on other services: your email, your shops, your social networks. This is called <strong>credential stuffing</strong>. Nobody is targeting you in particular. A program simply tries the password leaked from an old forum on a thousand other sites, and wherever you reused it, the door opens.</p>
+<p>You can check whether your address appears in known breaches at haveibeenpwned.com, a free service run by the security researcher Troy Hunt. Most people who have been online for ten years find several.</p>
+<p>The account that matters most is your email. Whoever controls it can click "forgot my password" on almost everything else you own.</p>
+<h2>How it works</h2>
+<p>A <strong>password manager</strong> is an encrypted vault that holds all your passwords. It creates a long random password for every site, remembers it, and fills it in for you. The vault is encrypted on your own device with one main password before it is stored or synchronised, so a well-designed provider cannot read it. You remember one secret instead of a hundred.</p>
+<p>That one secret should be a <strong>passphrase</strong>: five or six random words, for example chosen by rolling dice against a word list (a method called diceware). It is hard to guess and far easier to remember than "xK9#qL2v".</p>
+<p>Then add <strong>two-factor authentication</strong> (2FA): after your password, the site asks for something you have. A code sent by SMS is the weak form, because a criminal can persuade your operator to move your number to their SIM card (a SIM swap). An authenticator app, which generates the codes on your phone, is much better. A hardware security key is the strongest: it checks the real address of the website, so a fake login page gets nothing. <strong>Passkeys</strong> use the same technology to replace the password itself with a key stored on your device or in your manager.</p>
+<h2>Choose your password manager</h2>
+<p>All the options below are far better than reusing passwords. They differ on who holds your encrypted vault, whether the code is public, and how much work you accept.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Manager</th>
+<th>Open source</th>
+<th>Where the vault lives</th>
+<th>Cost</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bitwarden</strong></td>
+<td>Yes</td>
+<td>Bitwarden's cloud, or a server you host</td>
+<td>Free, optional paid plan</td>
+<td>The easiest open-source choice, on every device. The default service is run by one US company.</td>
+</tr>
+<tr>
+<td><strong>KeePassXC</strong></td>
+<td>Yes</td>
+<td>A file on your own computer</td>
+<td>Free</td>
+<td>No company, no cloud, no account. You handle sync and backups yourself. On phones, use compatible apps such as KeePassDX (Android) or KeePassium (iPhone).</td>
+</tr>
+<tr>
+<td><strong>Proton Pass</strong></td>
+<td>Yes</td>
+<td>Proton's cloud (Swiss company)</td>
+<td>Free, optional paid plan</td>
+<td>Includes email aliases. Practical if you already use Proton, but it concentrates more of your life in one company.</td>
+</tr>
+<tr>
+<td><strong>1Password</strong></td>
+<td>No, closed source</td>
+<td>1Password's cloud (Canadian company)</td>
+<td>Paid subscription only</td>
+<td>Polished, good for families, regularly audited. The public cannot inspect the code.</td>
+</tr>
+<tr>
+<td><strong>Built into your browser or system</strong> (Google, Apple, Firefox)</td>
+<td>Varies</td>
+<td>Your Google, Apple or Mozilla account</td>
+<td>Free</td>
+<td>Already there, and much better than nothing. Ties you to one browser or ecosystem, and is only as safe as that main account.</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people: <strong>Bitwarden or Proton Pass</strong> if you want sync without effort, <strong>KeePassXC</strong> if you prefer that no company holds your vault, even encrypted.</p>
+<h2>Choose your second factor</h2>
+<p>Use an authenticator app for most accounts, and consider a hardware key for the few that matter most: your email, your password manager, your main Apple or Google account. If you choose hardware keys, buy two and register both, so that losing one does not lock you out.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Works on</th>
+<th>Trade-offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aegis</strong></td>
+<td>App, open source</td>
+<td>Android only</td>
+<td>Encrypted, no cloud. You export your own backups.</td>
+</tr>
+<tr>
+<td><strong>Ente Auth</strong></td>
+<td>App, open source</td>
+<td>Android, iPhone, computer</td>
+<td>Optional end-to-end encrypted sync between devices, which needs an account.</td>
+</tr>
+<tr>
+<td><strong>2FAS</strong></td>
+<td>App, open source</td>
+<td>Android, iPhone</td>
+<td>Simple. Backups go through your Google or iCloud account.</td>
+</tr>
+<tr>
+<td><strong>YubiKey</strong></td>
+<td>Hardware key</td>
+<td>USB and NFC</td>
+<td>The most widely supported. The firmware is closed source.</td>
+</tr>
+<tr>
+<td><strong>Nitrokey</strong></td>
+<td>Hardware key</td>
+<td>USB, some models NFC</td>
+<td>German company, open-source firmware and hardware. Fewer models.</td>
+</tr>
+<tr>
+<td><strong>Token2</strong></td>
+<td>Hardware key</td>
+<td>USB and NFC</td>
+<td>Swiss company, lower-priced keys. Less well known.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Whatever you choose, make sure you can export or back up your codes. An authenticator that lives on one phone only is a lockout waiting to happen.</p>
+<h2>Step by step</h2>
+<p>The example uses Bitwarden because it is free, open source and works everywhere. The same logic applies to the others.</p>
+<ol>
+<li><strong>Create your passphrase.</strong> Roll dice against a word list, or use the manager's passphrase generator, for five or six words. Write it on paper and keep that paper somewhere safe at home.</li>
+<li><strong>Install the manager</strong> on your computer (as a browser extension) and on your phone, and create your account with that passphrase. If you forget it, nobody can reset it for you: that is the point.</li>
+<li><strong>Start with your email.</strong> Log in to your email account, change the password to one generated by the manager, and save it in the vault.</li>
+<li><strong>Move four more accounts:</strong> your main Apple or Google account, your bank or payment app, your main social network, and any shop that stores your card. The rest can follow over the next weeks, each time you log in somewhere.</li>
+<li><strong>Turn on 2FA</strong> on those five, email first. In each account's security settings, look for "two-step verification" or "two-factor authentication", then scan the QR code with your authenticator app or register your hardware key. Where the site allows it, remove SMS as a method.</li>
+<li><strong>Save the recovery codes.</strong> Most sites give you one-time codes for the day you lose your phone. Print them or write them down, and keep them with your passphrase paper.</li>
+<li><strong>Protect the manager itself</strong> with 2FA, in its own security settings.</li>
+<li><strong>Plan emergency access.</strong> Some managers have an emergency access feature for a trusted person (in Bitwarden it is part of the paid plan). A sealed envelope in a safe place, with instructions for your family, also works.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Keeping the passphrase only in your head.</strong> Memory fails after an illness, an accident or a long holiday. A paper copy in a safe place is not a weakness.</li>
+<li><strong>Leaving SMS as a fallback.</strong> If the site still accepts a code by SMS, a SIM swap still works. Remove it where you can.</li>
+<li><strong>Having one authenticator and no backup.</strong> A lost or broken phone should cost you an afternoon, not your accounts.</li>
+<li><strong>Storing passwords in notes, spreadsheets or emails.</strong> These are not encrypted vaults, and they are the first place an intruder looks.</li>
+<li><strong>Typing a code into a page you reached from a message.</strong> Authenticator codes can be phished too. If your manager does not offer to fill in the password, check the address: you may be on a fake site.</li>
+<li><strong>Trying to change everything in one evening.</strong> Five accounts done well beat a hundred started and abandoned.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. A passphrase, a hardware key and a passkey are all versions of the same idea: a secret that only you hold.</li>
+<li><strong>Check your exposure:</strong> Have I Been Pwned (haveibeenpwned.com).</li>
+<li><strong>Make a dice passphrase:</strong> the word lists of the Electronic Frontier Foundation (eff.org/dice).</li>
+<li><strong>Compare tools in detail:</strong> Privacy Guides, "Password Managers" and "Multifactor Authentication" (privacyguides.org).</li>
+<li><strong>Next chapter:</strong> your browser and your searches.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="passwords-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="passwords-1" aria-label="Check your email address on haveibeenpwned.com"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-1">Check your email address on haveibeenpwned.com</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="passwords-2" aria-label="Install a password manager and create a passphrase of five or six random words"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-2">Install a password manager and create a passphrase of five or six random words</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="passwords-3" aria-label="Give your email a new unique password and turn on 2FA with an app or a key"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-3">Give your email a new unique password and turn on 2FA with an app or a key</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="passwords-4" aria-label="Move your four next most important accounts and remove SMS codes where possible"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-4">Move your four next most important accounts and remove SMS codes where possible</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="passwords-5" aria-label="Put your passphrase and recovery codes on paper in a safe place, and tell one trusted person where"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-5">Put your passphrase and recovery codes on paper in a safe place, and tell one trusted person where</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/messages/"><span>Previous</span>Your messages</a>
+<a class="bk-next" href="/book/en/browser/"><span>Next</span>Your browser and your searches</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js" defer></script>
+</body>
+</html>

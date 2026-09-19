@@ -9,7 +9,7 @@ html { scroll-padding-top: 130px; }
 /* ── Titre : mot tapé en boucle, comme le hero de la page d'accueil ── */
 .bk-tw { display: inline-block; min-height: 0.95em; color: var(--c-priv); }
 
-/* ── Toolbar : progression + filtres ── */
+/* ── Toolbar : filtre par effort ── */
 .bk-toolbar {
   position: sticky; top: 60px; z-index: 150;
   background: rgba(8,8,8,0.96);
@@ -22,30 +22,21 @@ html { scroll-padding-top: 130px; }
   max-width: 720px; margin: 0 auto;
   display: flex; align-items: center; gap: 10px 20px; flex-wrap: wrap;
 }
-.bk-progress {
-  flex: 1 1 220px;
-  display: flex; align-items: center; gap: 12px;
+.bk-toolbar-label {
   font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap;
+  color: var(--muted); margin-right: auto;
 }
-.bk-progress strong { color: var(--white); font-weight: 500; }
-.bk-bar { flex: 1; height: 4px; background: rgba(255,255,255,0.08); display: flex; }
-.bk-bar i { display: block; height: 100%; width: 0; transition: width 0.3s; }
-.bk-bar .priv { background: var(--c-priv); }
-.bk-bar .auto { background: var(--c-dece); }
-.bk-bar .mono { background: var(--c-mono); }
 
 .bk-filters { display: flex; gap: 6px; flex-wrap: wrap; }
-.bk-filter, .bk-reset {
+.bk-filter {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; letter-spacing: 0.08em;
   background: transparent; color: rgba(255,255,255,0.5);
   border: 1px solid rgba(255,255,255,0.2);
   padding: 6px 10px; cursor: pointer; transition: all 0.2s;
 }
-.bk-filter:hover, .bk-reset:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+.bk-filter:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
 .bk-filter[aria-pressed="true"] { background: var(--white); color: var(--black); border-color: var(--white); }
-.bk-reset { border-color: transparent; text-decoration: underline; padding: 6px 0; }
 
 /* ── Blocs ── */
 .bk-block { background: var(--black); border-top: 1px solid var(--border); padding: 64px 56px; }
@@ -56,7 +47,6 @@ html { scroll-padding-top: 130px; }
   font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
   margin-bottom: 12px;
 }
-.bk-count { font-size: 11px; letter-spacing: 0.08em; color: var(--muted); font-variant-numeric: tabular-nums; }
 .bk-block h2 {
   font-family: 'Righteous', sans-serif;
   font-size: clamp(30px, 4vw, 46px); line-height: 1; text-transform: uppercase;
@@ -82,42 +72,18 @@ html { scroll-padding-top: 130px; }
   color: var(--bk-c); margin-bottom: 2px;
 }
 
-.bk-alldone {
-  margin-top: 32px; padding: 18px 20px; text-align: center;
-  font-family: 'Righteous', sans-serif; font-size: 20px; text-transform: uppercase;
-  background: var(--white); color: var(--black);
-}
-.bk-alldone[hidden] { display: none; }
-
 /* ── Fiches ── */
 .bk-list { list-style: none; margin-top: 32px; }
 .bk-item {
-  display: grid; grid-template-columns: 28px 1fr; gap: 0 16px;
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--border); border-left: 2px solid var(--bk-c);
   padding: 16px 18px; margin-bottom: 8px;
-  transition: opacity 0.2s;
 }
 .bk-item[hidden] { display: none; }
-.bk-check { position: relative; width: 28px; height: 28px; cursor: pointer; display: block; }
-.bk-check input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; margin: 0; }
-.bk-box {
-  display: block; width: 24px; height: 24px; margin-top: 1px;
-  border: 1px solid rgba(255,255,255,0.35); background: transparent;
-  transition: all 0.15s; position: relative;
-}
-.bk-check input:focus-visible + .bk-box { outline: 2px solid var(--white); outline-offset: 2px; }
-.bk-check input:checked + .bk-box { background: var(--bk-c); border-color: var(--bk-c); }
-.bk-check input:checked + .bk-box::after {
-  content: ''; position: absolute; left: 7px; top: 2px;
-  width: 7px; height: 13px;
-  border: solid var(--black); border-width: 0 3px 3px 0; transform: rotate(45deg);
-}
 .bk-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .bk-title {
   font-family: 'Righteous', sans-serif;
-  font-size: 17px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.02em;
-  cursor: pointer;
+  font-size: 17px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.02em; font-weight: 400;
 }
 .bk-effort {
   font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
@@ -127,8 +93,6 @@ html { scroll-padding-top: 130px; }
 .bk-tools { font-size: 12px; line-height: 1.6; letter-spacing: 0.04em; margin-top: 10px; color: var(--muted); }
 .bk-tools a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 .bk-tools a:hover { color: var(--bk-c); }
-.bk-item.done { opacity: 0.55; }
-.bk-item.done .bk-title { text-decoration: line-through; }
 
 .bk-disclaimer {
   max-width: 720px; margin: 40px auto 0;
@@ -139,7 +103,7 @@ html { scroll-padding-top: 130px; }
 @media (max-width: 768px) {
   .bk-toolbar { padding: 10px 24px; }
   .bk-block { padding: 48px 24px; }
-  .bk-item { padding: 14px; gap: 0 12px; }
+  .bk-item { padding: 14px; }
   .bk-top { flex-direction: column; gap: 4px; }
 }
 
@@ -150,12 +114,10 @@ html { scroll-padding-top: 130px; }
   .page-top { padding-top: 0; }
   .prog-header h2, .prog-note, .bk-block h2, .bk-title, .bk-tw { color: #000 !important; }
   .tw-cursor { display: none; }
-  .bk-alldone { display: none !important; }
   .bk-talks li { color: #000 !important; }
-  .bk-intro, .bk-why, .bk-tools, .bk-count, .bk-disclaimer, .prog-header .sec-label { color: #333 !important; }
+  .bk-intro, .bk-why, .bk-tools, .bk-disclaimer, .prog-header .sec-label { color: #333 !important; }
   .bk-tools a { color: #000 !important; }
   .bk-block { padding: 24px 0; border-top: 1px solid #ccc; }
-  .bk-item { background: #fff; border-color: #ccc; break-inside: avoid; opacity: 1 !important; }
-  .bk-box { border-color: #000; }
-  .bk-item[hidden] { display: grid !important; }
+  .bk-item { background: #fff; border-color: #ccc; break-inside: avoid; }
+  .bk-item[hidden] { display: block !important; }
 }

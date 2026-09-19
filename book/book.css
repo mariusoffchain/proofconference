@@ -6,6 +6,9 @@ html { scroll-padding-top: 130px; }
 .lang-btn { margin-left: auto; }
 .nav-links + .lang-btn { margin-left: 8px; }
 
+/* ── Titre : mot tapé en boucle, comme le hero de la page d'accueil ── */
+.bk-tw { display: inline-block; min-height: 0.95em; color: var(--c-priv); }
+
 /* ── Toolbar : progression + filtres ── */
 .bk-toolbar {
   position: sticky; top: 60px; z-index: 150;
@@ -145,7 +148,8 @@ html { scroll-padding-top: 130px; }
   nav, .bk-toolbar, footer, .bk-after { display: none !important; }
   body, .bk-block, .prog-header { background: #fff !important; color: #000 !important; }
   .page-top { padding-top: 0; }
-  .prog-header h2, .prog-note, .bk-block h2, .bk-title { color: #000 !important; }
+  .prog-header h2, .prog-note, .bk-block h2, .bk-title, .bk-tw { color: #000 !important; }
+  .tw-cursor { display: none; }
   .bk-alldone { display: none !important; }
   .bk-talks li { color: #000 !important; }
   .bk-intro, .bk-why, .bk-tools, .bk-count, .bk-disclaimer, .prog-header .sec-label { color: #333 !important; }

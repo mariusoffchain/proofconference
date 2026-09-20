@@ -142,6 +142,30 @@
     update();
   }
 
+  // Cover dashboard: chapters read, actions done (overall and per part)
+  var dash = document.getElementById('bk-dash');
+  if (dash) {
+    var dmap = {}, dtotals = {}, dslugs = [];
+    try { dmap = JSON.parse(dash.dataset.map); dtotals = JSON.parse(dash.dataset.totals); dslugs = JSON.parse(dash.dataset.slugs); } catch (e) {}
+    var dper = {}, ddone = 0, dtotal = 0;
+    Object.keys(dtotals).forEach(function (part) { dper[part] = 0; dtotal += dtotals[part]; });
+    load().forEach(function (id) {
+      var part = dmap[id.replace(/-\d+$/, '')];
+      if (part) { dper[part]++; ddone++; }
+    });
+    var dread = loadRead().filter(function (s) { return dslugs.indexOf(s) !== -1; }).length;
+    dash.querySelector('#bk-dash-read b').textContent = dread;
+    dash.querySelector('#bk-dash-read .bk-bar i').style.width = (dslugs.length ? dread / dslugs.length * 100 : 0) + '%';
+    dash.querySelector('#bk-dash-done b').textContent = ddone;
+    Object.keys(dper).forEach(function (part) {
+      dash.querySelector('#bk-dash-done .bk-bar .' + part).style.width = (dtotal ? dper[part] / dtotal * 100 : 0) + '%';
+      var row = dash.querySelector('.bk-dash-parts [data-part="' + part + '"]');
+      if (!row) return;
+      row.querySelector('.bk-dash-c').textContent = dper[part] + ' / ' + dtotals[part];
+      row.querySelector('.bk-bar i').style.width = (dtotals[part] ? dper[part] / dtotals[part] * 100 : 0) + '%';
+    });
+  }
+
   // Cover: tick the chapters already read, count them, and turn "Start reading" into "Continue reading"
   var readCount = document.getElementById('bk-readcount');
   if (readCount) {

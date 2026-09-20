@@ -164,6 +164,16 @@
       row.querySelector('.bk-dash-c').textContent = dper[part] + ' / ' + dtotals[part];
       row.querySelector('.bk-bar i').style.width = (dtotals[part] ? dper[part] / dtotals[part] * 100 : 0) + '%';
     });
+    // First visit: rather than a board full of zeros, show what the book contains and an invitation to start
+    if (dread === 0 && ddone === 0) {
+      dash.classList.add('is-empty');
+      document.getElementById('bk-dash-empty').hidden = false;
+      Array.prototype.forEach.call(dash.querySelectorAll('.bk-dash-stat'), function (stat) {
+        var b = stat.querySelector('b'), label = stat.querySelector('.bk-dash-l');
+        b.textContent = b.dataset.total;
+        label.textContent = label.dataset.empty;
+      });
+    }
   }
 
   // Cover: tick the chapters already read, count them, and turn "Start reading" into "Continue reading"

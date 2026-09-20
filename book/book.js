@@ -22,7 +22,7 @@
       done += n;
       var count = group.querySelector('.bk-count');
       if (count) count.textContent = n + ' / ' + group.querySelectorAll('.bk-cl-item').length;
-      var seg = document.querySelector('.bk-bar .' + group.dataset.block);
+      var seg = document.querySelector('.bk-tools-bar .bk-bar .' + group.dataset.block);
       if (seg) seg.style.width = (n / total * 100) + '%';
     });
     var el = document.getElementById('bk-done');
@@ -30,6 +30,23 @@
     var all = document.getElementById('bk-alldone');
     if (all) all.hidden = done !== total;
   }
+
+  // Nav bar (every page): overall progress, one segment per part
+  var navp = document.getElementById('bk-navp');
+  function refreshNav() {
+    if (!navp) return;
+    var map = {}, total = parseInt(navp.dataset.total, 10) || 1, done = 0, per = { priv: 0, auto: 0, mono: 0 };
+    try { map = JSON.parse(navp.dataset.map); } catch (e) {}
+    load().forEach(function (id) {
+      var part = map[id.replace(/-\d+$/, '')];
+      if (part) { per[part]++; done++; }
+    });
+    navp.querySelector('.bk-navp-n').textContent = done + ' / ' + total;
+    Object.keys(per).forEach(function (part) {
+      navp.querySelector('.bk-bar .' + part).style.width = (per[part] / total * 100) + '%';
+    });
+  }
+  refreshNav();
 
   var state = load();
   items.forEach(function (item) {
@@ -43,6 +60,7 @@
       if (box.checked) ids.push(id);
       save(ids);
       refresh();
+      refreshNav();
     });
   });
   refresh();
@@ -75,6 +93,7 @@
     });
     save([]);
     refresh();
+    refreshNav();
   });
 
   // Cover title typewriter, same behaviour as the home page hero: one word per part, in the part color

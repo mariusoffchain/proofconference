@@ -185,7 +185,9 @@
     var read = loadRead(), n = 0;
     var links = Array.prototype.slice.call(document.querySelectorAll('.bk-toc a[data-slug]'));
     links.forEach(function (a) {
-      if (read.indexOf(a.dataset.slug) !== -1) { a.parentNode.classList.add('read'); n++; }
+      if (read.indexOf(a.dataset.slug) === -1) return;
+      a.parentNode.classList.add('read');
+      if (a.dataset.count) n++;   // only the numbered chapters are counted
     });
     readCount.textContent = n + ' / ' + readCount.dataset.total + ' ' + readCount.dataset.label;
 
@@ -193,7 +195,7 @@
     // the reader stopped: the last chapter opened if it is unfinished, otherwise the next unread chapter after it.
     var start = document.getElementById('bk-start'), last = null;
     try { last = localStorage.getItem(LAST); } catch (e) {}
-    if (start && (n > 0 || last || load().length > 0)) {
+    if (start && (read.length > 0 || last || load().length > 0)) {
       var unread = function (a) { return read.indexOf(a.dataset.slug) === -1; };
       var at = -1;
       links.forEach(function (a, i) { if (a.dataset.slug === last) at = i; });

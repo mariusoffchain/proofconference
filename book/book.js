@@ -105,8 +105,18 @@
   });
 
   var reset = document.getElementById('bk-reset');
+  // Two clicks instead of a confirm() dialog: embedded browsers and some mobile browsers block dialogs
+  var resetLabel = reset ? reset.textContent : '', resetTimer = null;
   if (reset) reset.addEventListener('click', function () {
-    if (!window.confirm(reset.dataset.confirm)) return;
+    if (!reset.classList.contains('armed')) {
+      reset.classList.add('armed');
+      reset.textContent = reset.dataset.confirm;
+      resetTimer = setTimeout(function () { reset.classList.remove('armed'); reset.textContent = resetLabel; }, 4000);
+      return;
+    }
+    clearTimeout(resetTimer);
+    reset.classList.remove('armed');
+    reset.textContent = resetLabel;
     items.forEach(function (item) {
       item.classList.remove('done');
       item.querySelector('input[type="checkbox"]').checked = false;

@@ -153,6 +153,7 @@ svg.bk-navp-l { display: block; flex: none; }
 .bk-filter:hover, .bk-reset:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
 .bk-filter[aria-pressed="true"] { background: var(--white); color: var(--black); border-color: var(--white); }
 .bk-reset { border-color: transparent; text-decoration: underline; padding: 6px 0; }
+.bk-reset.armed { color: #ff5a5a; border-color: #ff5a5a; text-decoration: none; padding: 6px 10px; }
 
 .bk-cl-group { margin-top: 48px; }
 .bk-cl-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }

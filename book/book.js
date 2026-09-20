@@ -3,6 +3,7 @@
 (function () {
   var KEY = 'proof-book-v2';        // checklist: ids of the actions done
   var READ = 'proof-book-read';     // reading: slugs of the chapters read to the end
+  var LAST = 'proof-book-last';     // reading: slug of the last chapter opened (where "Continue reading" resumes)
   var items = Array.prototype.slice.call(document.querySelectorAll('.bk-cl-item'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.bk-cl-group'));
 
@@ -112,6 +113,7 @@
     });
     save([]);
     saveRead([]);
+    try { localStorage.removeItem(LAST); } catch (e) {}
     refresh();
     refreshNav();
     refreshNavRead();
@@ -123,6 +125,7 @@
   var article = document.querySelector('.bk-article');
   if (line && page && page.dataset.slug && article) {
     var slug = page.dataset.slug, marked = loadRead().indexOf(slug) !== -1, ticking = false;
+    try { localStorage.setItem(LAST, slug); } catch (e) {}
     var update = function () {
       ticking = false;
       var end = article.getBoundingClientRect().bottom + window.scrollY - window.innerHeight;
@@ -164,29 +167,32 @@
       row.querySelector('.bk-dash-c').textContent = dper[part] + ' / ' + dtotals[part];
       row.querySelector('.bk-bar i').style.width = (dtotals[part] ? dper[part] / dtotals[part] * 100 : 0) + '%';
     });
-    // First visit: rather than a board full of zeros, show what the book contains and an invitation to start
-    if (dread === 0 && ddone === 0) {
-      dash.classList.add('is-empty');
-      document.getElementById('bk-dash-empty').hidden = false;
-      Array.prototype.forEach.call(dash.querySelectorAll('.bk-dash-stat'), function (stat) {
-        var b = stat.querySelector('b'), label = stat.querySelector('.bk-dash-l');
-        b.textContent = b.dataset.total;
-        label.textContent = label.dataset.empty;
-      });
-    }
   }
 
   // Cover: tick the chapters already read, count them, and turn "Start reading" into "Continue reading"
   var readCount = document.getElementById('bk-readcount');
   if (readCount) {
-    var read = loadRead(), n = 0, firstUnread = null;
-    Array.prototype.forEach.call(document.querySelectorAll('.bk-toc a[data-slug]'), function (a) {
+    var read = loadRead(), n = 0;
+    var links = Array.prototype.slice.call(document.querySelectorAll('.bk-toc a[data-slug]'));
+    links.forEach(function (a) {
       if (read.indexOf(a.dataset.slug) !== -1) { a.parentNode.classList.add('read'); n++; }
-      else if (!firstUnread) firstUnread = a;
     });
     readCount.textContent = n + ' / ' + readCount.dataset.total + ' ' + readCount.dataset.label;
-    var start = document.getElementById('bk-start');
-    if (start && n > 0 && firstUnread) { start.href = firstUnread.href; start.textContent = start.dataset.resume; }
+
+    // "Start reading" while everything is at zero. Once something has started, "Continue reading" resumes where
+    // the reader stopped: the last chapter opened if it is unfinished, otherwise the next unread chapter after it.
+    var start = document.getElementById('bk-start'), last = null;
+    try { last = localStorage.getItem(LAST); } catch (e) {}
+    if (start && (n > 0 || last || load().length > 0)) {
+      var unread = function (a) { return read.indexOf(a.dataset.slug) === -1; };
+      var at = -1;
+      links.forEach(function (a, i) { if (a.dataset.slug === last) at = i; });
+      var target = null;
+      if (at !== -1 && unread(links[at])) target = links[at];
+      if (!target) target = links.slice(at + 1).filter(unread)[0] || links.filter(unread)[0] || links[at] || links[0];
+      start.href = target.href;
+      start.textContent = start.dataset.resume;
+    }
   }
 
   // Cover title typewriter, same behaviour as the home page hero: one word per part, in the part color

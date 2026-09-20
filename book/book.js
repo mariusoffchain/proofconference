@@ -55,6 +55,18 @@
   }
   refreshNav();
 
+  // Nav bar (every page): chapters read
+  var navr = document.getElementById('bk-navr');
+  function refreshNavRead() {
+    if (!navr) return;
+    var slugs = [];
+    try { slugs = JSON.parse(navr.dataset.slugs); } catch (e) {}
+    var n = loadRead().filter(function (s) { return slugs.indexOf(s) !== -1; }).length;
+    navr.querySelector('.bk-navp-n').textContent = n + ' / ' + slugs.length;
+    navr.querySelector('.bk-bar i').style.width = (slugs.length ? n / slugs.length * 100 : 0) + '%';
+  }
+  refreshNavRead();
+
   var state = load();
   items.forEach(function (item) {
     var box = item.querySelector('input[type="checkbox"]');
@@ -102,6 +114,7 @@
     saveRead([]);
     refresh();
     refreshNav();
+    refreshNavRead();
   });
 
   // Reading progress (chapter pages): thin line under the nav; the chapter counts as read at the end of the text
@@ -119,6 +132,7 @@
         marked = true;
         var slugs = loadRead();
         if (slugs.indexOf(slug) === -1) { slugs.push(slug); saveRead(slugs); }
+        refreshNavRead();
       }
     };
     window.addEventListener('scroll', function () {

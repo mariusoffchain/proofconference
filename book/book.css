@@ -22,7 +22,12 @@ html { scroll-padding-top: 84px; }
   font-variant-numeric: tabular-nums; white-space: nowrap; transition: color 0.15s;
 }
 .bk-navp:hover { color: var(--white); }
+.bk-navp-l { color: var(--c-priv); font-size: 12px; }
 .bk-navp .bk-bar { flex: none; width: 120px; }
+
+/* ── Progression de lecture : ligne fine sous la barre de navigation (pages de chapitre) ── */
+.bk-read { position: fixed; top: 60px; left: 0; right: 0; height: 2px; z-index: 190; background: transparent; pointer-events: none; }
+.bk-read i { display: block; height: 100%; width: 0; background: var(--bk-c, var(--white)); }
 
 /* ── Sommaire (couverture) ── */
 .bk-toc-wrap { background: var(--black); border-top: 1px solid var(--border); padding: 56px 56px 80px; }
@@ -41,6 +46,9 @@ html { scroll-padding-top: 84px; }
 }
 .bk-toc a span { font-size: 11px; letter-spacing: 0.1em; color: var(--bk-c, var(--muted)); min-width: 24px; flex-shrink: 0; }
 .bk-toc a:hover { padding-left: 12px; color: var(--bk-c, var(--white)); }
+.bk-toc li.read a { color: var(--muted); }
+.bk-toc li.read a::after { content: '✓'; margin-left: auto; padding-left: 12px; color: var(--bk-c, var(--white)); font-size: 12px; }
+.bk-sub-row { display: flex; justify-content: space-between; gap: 16px; font-variant-numeric: tabular-nums; }
 
 /* ── Page de chapitre ── */
 .bk-page { background: var(--black); padding-left: 56px; padding-right: 56px; padding-bottom: 96px; }
@@ -179,7 +187,7 @@ html { scroll-padding-top: 84px; }
 
 /* ── Impression : version papier lisible ── */
 @media print {
-  nav, footer, .bk-after, .bk-tools-bar, .bk-alldone, .bk-cl-more, .bk-pager, .bk-back, .tw-cursor, .hero-btn { display: none !important; }
+  nav, footer, .bk-read, .bk-after, .bk-tools-bar, .bk-alldone, .bk-cl-more, .bk-pager, .bk-back, .tw-cursor, .hero-btn { display: none !important; }
   body, .bk-page, .bk-toc-wrap, .prog-header, .bk-cl-box, .bk-table th { background: #fff !important; color: #000 !important; }
   .page-top { padding-top: 0; }
   .bk-page { padding: 0; }

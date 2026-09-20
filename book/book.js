@@ -1,7 +1,8 @@
 // PROOF book. Checklist state (chapter pages + recap page) lives only in this browser (localStorage).
 // No server, no tracking.
 (function () {
-  var KEY = 'proof-book-v2';
+  var KEY = 'proof-book-v2';        // checklist: ids of the actions done
+  var READ = 'proof-book-read';     // reading: slugs of the chapters read to the end
   var items = Array.prototype.slice.call(document.querySelectorAll('.bk-cl-item'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('.bk-cl-group'));
 
@@ -10,6 +11,12 @@
   }
   function save(ids) {
     try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {}
+  }
+  function loadRead() {
+    try { return JSON.parse(localStorage.getItem(READ)) || []; } catch (e) { return []; }
+  }
+  function saveRead(slugs) {
+    try { localStorage.setItem(READ, JSON.stringify(slugs)); } catch (e) {}
   }
   try { localStorage.removeItem('proof-book-v1'); } catch (e) {}
 
@@ -92,9 +99,47 @@
       item.querySelector('input[type="checkbox"]').checked = false;
     });
     save([]);
+    saveRead([]);
     refresh();
     refreshNav();
   });
+
+  // Reading progress (chapter pages): thin line under the nav; the chapter counts as read at the end of the text
+  var line = document.getElementById('bk-read');
+  var page = document.querySelector('.bk-page[data-slug]');
+  var article = document.querySelector('.bk-article');
+  if (line && page && page.dataset.slug && article) {
+    var slug = page.dataset.slug, marked = loadRead().indexOf(slug) !== -1, ticking = false;
+    var update = function () {
+      ticking = false;
+      var end = article.getBoundingClientRect().bottom + window.scrollY - window.innerHeight;
+      var p = end <= 0 ? 1 : Math.min(1, Math.max(0, window.scrollY / end));
+      line.style.width = (p * 100) + '%';
+      if (p >= 1 && !marked) {
+        marked = true;
+        var slugs = loadRead();
+        if (slugs.indexOf(slug) === -1) { slugs.push(slug); saveRead(slugs); }
+      }
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  // Cover: tick the chapters already read, count them, and turn "Start reading" into "Continue reading"
+  var readCount = document.getElementById('bk-readcount');
+  if (readCount) {
+    var read = loadRead(), n = 0, firstUnread = null;
+    Array.prototype.forEach.call(document.querySelectorAll('.bk-toc a[data-slug]'), function (a) {
+      if (read.indexOf(a.dataset.slug) !== -1) { a.parentNode.classList.add('read'); n++; }
+      else if (!firstUnread) firstUnread = a;
+    });
+    readCount.textContent = n + ' / ' + readCount.dataset.total + ' ' + readCount.dataset.label;
+    var start = document.getElementById('bk-start');
+    if (start && n > 0 && firstUnread) { start.href = firstUnread.href; start.textContent = start.dataset.resume; }
+  }
 
   // Cover title typewriter, same behaviour as the home page hero: one word per part, in the part color
   var tw = document.getElementById('bk-tw');

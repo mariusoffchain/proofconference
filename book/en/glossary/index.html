@@ -11,7 +11,7 @@
 <link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=5ba7c306">
+<link rel="stylesheet" href="/book/book.css?v=7cb329d7">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
   </header>
   <article class="bk-article">
 <p>The words that come back throughout this book, in plain language.</p>
-<h2>Privacy</h2>
+<section class="bk-gloss priv"><h2>Privacy</h2>
 <p><strong>Encryption.</strong> Scrambling information so that only someone holding the right key can read it.</p>
 <p><strong>End-to-end encryption.</strong> Encryption where only you and the person you talk to hold the keys. The service in the middle carries the message but cannot read it.</p>
 <p><strong>Confidentiality.</strong> Nobody except the 2 people talking can read the message.</p>
@@ -54,7 +54,7 @@
 <p><strong>Tor.</strong> A network that routes your traffic through several independent volunteers, so that none of them knows both who you are and what you visit.</p>
 <p><strong>Mixnet.</strong> A network that, in addition to routing through several hops, mixes and delays traffic to hide timing patterns.</p>
 <p><strong>Threat model.</strong> The honest answer to the question "who do I want to protect myself from?". It decides how far you need to go.</p>
-<h2>Autonomy</h2>
+</section><section class="bk-gloss auto"><h2>Autonomy</h2>
 <p><strong>Private key.</strong> A long secret number that only you hold. It proves you are you, and whoever holds it controls the identity or the money behind it.</p>
 <p><strong>Public key.</strong> The matching number you can share freely. Others use it to check your signature or to write to you.</p>
 <p><strong>Passkey.</strong> A key pair that replaces a password on a website. The private half never leaves your device.</p>
@@ -64,7 +64,7 @@
 <p><strong>npub and nsec.</strong> Your public key (npub, your public identity) and your secret key (nsec, never share it) on Nostr.</p>
 <p><strong>Relay.</strong> A simple server that stores and forwards Nostr posts. You can use several, and change at any time.</p>
 <p><strong>Zap.</strong> A small Lightning payment sent to someone on Nostr, as a tip or a thank you.</p>
-<h2>Money and savings</h2>
+</section><section class="bk-gloss mono"><h2>Money and savings</h2>
 <p><strong>Inflation.</strong> The rise of prices over time, which is the same thing as money losing purchasing power. National currencies are designed to lose a little value every year.</p>
 <p><strong>Counterparty risk.</strong> The risk that whoever holds an asset for you (a bank, a broker, an exchange) fails, or refuses to give it back.</p>
 <p><strong>Self-custody.</strong> Holding an asset yourself, with no intermediary: coins in your hand, keys in your possession. No company can freeze it, lend it or lose it for you.</p>
@@ -72,7 +72,7 @@
 <p><strong>Monero.</strong> A digital currency with a purpose similar to Bitcoin's, money you can hold yourself, where amounts, senders and receivers are hidden by default. Used by some advanced users as a private complement to Bitcoin. It is much less liquid and much less accepted, its much smaller network is easier for an outside entity to attack, as the block reorganisations of 2025 showed, and its development is more centralised (chapter 12).</p>
 <p><strong>KYC (know your customer).</strong> Mandatory identity checks by financial companies. They link your name to what you own in a database.</p>
 <p><strong>CBDC.</strong> Central bank digital currency: digital money issued directly by a central bank, which can see, and potentially control, every payment.</p>
-<h2>Bitcoin</h2>
+</section><section class="bk-gloss mono"><h2>Bitcoin</h2>
 <p><strong>Bitcoin.</strong> Digital money with no issuer and a fixed supply of 21 million. The rules are enforced by thousands of independent computers.</p>
 <p><strong>Sat (satoshi).</strong> The smallest unit of bitcoin. One bitcoin is 100 million sats.</p>
 <p><strong>Wallet.</strong> An app or a device that holds your keys and signs your transactions. It does not hold coins: the coins are entries in the shared ledger.</p>
@@ -82,7 +82,7 @@
 <p><strong>On-chain.</strong> A transaction recorded directly in the Bitcoin ledger. Slower and more expensive than Lightning, final and suited to larger amounts.</p>
 <p><strong>Node.</strong> A computer that keeps its own copy of the Bitcoin ledger and checks every transaction against the rules.</p>
 <p><strong>Proof of work.</strong> The energy miners must spend to add a block. It makes the history of transactions extremely costly to rewrite.</p>
-<p><strong>Peer-to-peer (P2P).</strong> Directly between 2 people, with no company holding the funds in the middle.</p>
+<p><strong>Peer-to-peer (P2P).</strong> Directly between 2 people, with no company holding the funds in the middle.</p></section>
   </article>
   <div class="bk-pager">
 <span></span>
@@ -98,6 +98,6 @@
   <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
 </footer>
 
-<script src="/book/book.js?v=5ba7c306" defer></script>
+<script src="/book/book.js?v=7cb329d7" defer></script>
 </body>
 </html>

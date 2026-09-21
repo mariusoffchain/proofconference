@@ -113,6 +113,10 @@ svg.bk-navp-l { display: block; flex: none; }
 .bk-article blockquote { margin-top: 16px; padding-left: 16px; border-left: 1px solid var(--border); }
 .bk-article code { font-family: inherit; color: var(--white); background: rgba(255,255,255,0.08); padding: 1px 5px; }
 
+/* Glossaire : une couleur par thème, comme les parties du livre */
+.bk-gloss h2 { color: var(--bk-c); }
+.bk-gloss p > strong:first-child { color: var(--bk-c); }
+
 /* Tableaux comparatifs : défilement horizontal sur mobile */
 /* Plus larges que la colonne de texte (720px) : jusqu'à 1180px, centrés sur la page, pour que les cellules respirent */
 .bk-table {
@@ -249,6 +253,7 @@ svg.bk-navp-l { display: block; flex: none; }
   body, .bk-page, .bk-toc-wrap, .prog-header, .bk-cl-box, .bk-table th { background: #fff !important; color: #000 !important; }
   .page-top { padding-top: 0; }
   .bk-page { padding: 0; }
+  .bk-gloss h2, .bk-gloss p > strong:first-child { color: #000 !important; }
   .bk-head h1, .bk-article h2, .bk-article h3, .bk-article strong, .bk-article a, .prog-header h2, .prog-note, .bk-tw, .bk-toc a, .bk-toc-part h3 a, .bk-cl-title, .bk-cl-box h2, .bk-table td:first-child { color: #000 !important; }
   .bk-article p, .bk-article li, .bk-table td, .bk-table th, .bk-label, .bk-sub, .bk-count { color: #222 !important; }
   .bk-table, .bk-table th, .bk-table td, .bk-cl-box, .bk-cl, .bk-cl-item, .bk-head { border-color: #ccc !important; }

@@ -63,6 +63,34 @@ svg.bk-navp-l { display: block; flex: none; }
 .bk-read { position: fixed; top: 60px; left: 0; right: 0; height: 2px; z-index: 190; background: transparent; pointer-events: none; }
 .bk-read i { display: block; height: 100%; width: 0; background: var(--bk-c, var(--white)); }
 
+/* Logo : PROOF (retour au site de la conférence) partout, sauf sur téléphone dans les pages intérieures du book,
+   où il devient BOOK et ramène à la couverture du book en 1 clic */
+.bk-logo-book { display: none; }
+
+/* ── Menu téléphone ── */
+.bk-menu-btn {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 40px; height: 40px; padding: 0 9px; margin-left: 0;
+  background: transparent; border: 1px solid rgba(255,255,255,0.25); cursor: pointer;
+}
+.bk-menu-btn span { display: block; height: 2px; background: var(--white); transition: transform 0.2s, opacity 0.2s; }
+.bk-menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.bk-menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.bk-menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.bk-menu {
+  position: fixed; top: 60px; left: 0; right: 0; z-index: 195;
+  background: rgba(8,8,8,0.98); border-bottom: 1px solid var(--border);
+  display: flex; flex-direction: column; padding: 8px 24px 20px;
+}
+.bk-menu[hidden] { display: none; }
+.bk-menu a {
+  padding: 16px 0; border-bottom: 1px solid var(--border);
+  font-size: 15px; letter-spacing: 0.06em; text-transform: lowercase; text-decoration: none; color: var(--white);
+}
+.bk-menu a:last-child { border-bottom: 0; }
+.bk-menu .bk-menu-lang { text-transform: none; color: var(--muted); }
+@media (min-width: 769px) { .bk-menu { display: none !important; } }
+
 /* ── Sommaire (couverture) ── */
 .bk-toc-wrap { background: var(--black); border-top: 1px solid var(--border); padding: 56px 56px 80px; }
 .bk-toc-wrap > * { max-width: 720px; margin-left: auto; margin-right: auto; }
@@ -232,14 +260,14 @@ svg.bk-navp-l { display: block; flex: none; }
   .bk-dash { padding: 48px 24px; }
   .bk-dash-parts li { grid-template-columns: 1fr auto; }
   .bk-dash-parts .bk-bar { grid-column: 1 / -1; grid-row: 2; }
-  /* 4 items in the phone nav (logo, gauges, contents, language): tighten everything so it fits in 360px */
-  nav { padding: 0 14px !important; }
-  .nav-mobile-cta { padding: 6px 8px !important; font-size: 11px !important; letter-spacing: 0.05em !important; }
-  .lang-btn { padding: 5px 7px; margin-left: 6px; font-size: 10px; }
-  .bk-navps { margin-left: auto; flex-direction: column; align-items: flex-end; gap: 5px; }
+  /* Phone nav: logo on the left (back to the conference site), the 2 gauges in the middle, menu button on the right */
+  .lang-btn { display: none; }
+  .bk-menu-btn { display: flex; }
+  .bk-inner-nav .bk-logo-proof { display: none; }
+  .bk-inner-nav .bk-logo-book { display: inline; }
+  .bk-navps { margin: 0 auto; flex-direction: column; align-items: flex-start; gap: 6px; }
   .bk-navp { gap: 7px; font-size: 10px; line-height: 1; }
-  .bk-navp .bk-bar { width: 30px; height: 3px; }
-  .bk-navps + .nav-mobile-cta { margin-left: 8px !important; }
+  .bk-navp .bk-bar { width: 84px; height: 3px; }
   .bk-toc-wrap { padding: 40px 24px 56px; }
   .bk-page { padding-left: 24px; padding-right: 24px; padding-bottom: 64px; }
   .bk-head { padding: 48px 0 28px; }
@@ -253,7 +281,7 @@ svg.bk-navp-l { display: block; flex: none; }
 
 /* ── Impression : version papier lisible ── */
 @media print {
-  nav, footer, .bk-dash, .bk-read, .bk-after, .bk-tools-bar, .bk-alldone, .bk-cl-more, .bk-pager, .bk-back, .tw-cursor, .hero-btn { display: none !important; }
+  nav, .bk-menu, footer, .bk-dash, .bk-read, .bk-after, .bk-tools-bar, .bk-alldone, .bk-cl-more, .bk-pager, .bk-back, .tw-cursor, .hero-btn { display: none !important; }
   body, .bk-page, .bk-toc-wrap, .prog-header, .bk-cl-box, .bk-table th { background: #fff !important; color: #000 !important; }
   .page-top { padding-top: 0; }
   .bk-page { padding: 0; }

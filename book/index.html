@@ -13,22 +13,33 @@
 <link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=97e37876">
+<link rel="stylesheet" href="/book/book.css?v=de1f5939">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+<nav class="bk-cover-nav">
+  <a href="/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
+  <a href="/book/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Tavo privatumo gidas">BOOK</a>
   <ul class="nav-links">
+    <li><a href="/book/">&lt;book&gt;</a></li>
     <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
     <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
     <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
   </ul>
-  
-  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <span class="bk-navps"></span>
   <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/'">EN</button>
+  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
+<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
+<div class="bk-menu" id="bk-menu" hidden>
+  <a href="/book/">&lt;book&gt;</a>
+  <a href="/book/#contents">&lt;turinys&gt;</a>
+  <a href="/book/checklist/">&lt;sąrašas&gt;</a>
+  <a href="/book/glossary/">&lt;žodynėlis&gt;</a>
+  <a href="/book/en/" class="bk-menu-lang">EN · English</a>
+  <a href="/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
+</div>
 
 <!-- COVER - blanc gauche (titre) / noir droite (tableau de bord) -->
 <section class="hero bk-hero">
@@ -127,6 +138,6 @@
   <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
 </footer>
 
-<script src="/book/book.js?v=97e37876" defer></script>
+<script src="/book/book.js?v=de1f5939" defer></script>
 </body>
 </html>

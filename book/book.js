@@ -229,6 +229,15 @@
     setTimeout(tick, 2200);
   }
 
+  // Phone menu
+  var menuBtn = document.getElementById('bk-menu-btn'), menu = document.getElementById('bk-menu');
+  if (menuBtn && menu) {
+    var setMenu = function (open) { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    menuBtn.addEventListener('click', function () { setMenu(menu.hidden); });
+    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  }
+
   // Offline: the whole book is cached, it must open even when the venue wifi is saturated
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/book/sw.js', { scope: '/book/' }).catch(function () {});

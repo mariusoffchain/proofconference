@@ -12,6 +12,7 @@ body { background: #080808; color: #ffffff; font-family: 'JetBrains Mono', monos
   --c-priv:  #00c896;   /* vert  — privacy */
   --c-dece:  #8b5cf6;   /* violet — décentralisation / auto-hébergement */
   --c-mono:  #f5a623;   /* orange — monnaie (inclut bitcoin) */
+  --c-party: #ff4f9a;   /* rose — after-party */
   --border:  rgba(255,255,255,0.08);
 }
 
@@ -403,6 +404,7 @@ nav {
 .tl-row.priv .tl-l::after { background: var(--c-priv); border-color: var(--c-priv); box-shadow: 0 0 10px rgba(0,200,150,0.3); }
 .tl-row.auto .tl-l::after { background: var(--c-dece); border-color: var(--c-dece); box-shadow: 0 0 10px rgba(139,92,246,0.3); }
 .tl-row.mono .tl-l::after { background: var(--c-mono); border-color: var(--c-mono); box-shadow: 0 0 10px rgba(245,166,35,0.3); }
+.tl-row.party .tl-l::after { background: var(--c-party); border-color: var(--c-party); box-shadow: 0 0 10px rgba(255,79,154,0.35); }
 
 .tl-time {
   font-family: 'JetBrains Mono', monospace;
@@ -420,6 +422,7 @@ nav {
 .tl-row.priv .tl-section { color: var(--c-priv); }
 .tl-row.auto .tl-section { color: var(--c-dece); }
 .tl-row.mono .tl-section { color: var(--c-mono); }
+.tl-row.party .tl-section { color: var(--c-party); }
 
 .tl-card {
   background: rgba(255,255,255,0.03); border: 1px solid var(--border);
@@ -430,6 +433,7 @@ nav {
 .tl-row.priv .tl-card { border-left: 2px solid var(--c-priv); }
 .tl-row.auto .tl-card { border-left: 2px solid var(--c-dece); }
 .tl-row.mono .tl-card { border-left: 2px solid var(--c-mono); }
+.tl-row.party .tl-card { border-left: 2px solid var(--c-party); background: rgba(255,79,154,0.06); }
 
 .tl-card-top { display: flex; align-items: baseline; gap: 10px; }
 
@@ -462,6 +466,8 @@ nav {
 .tl-row.priv .tl-speaker { color: var(--c-priv); }
 .tl-row.auto .tl-speaker { color: var(--c-dece); }
 .tl-row.mono .tl-speaker { color: var(--c-mono); }
+.tl-row.party .tl-speaker { color: var(--c-party); }
+.tl-row.party .tl-speaker a { color: inherit; text-underline-offset: 3px; }
 
 /* Speaker hover bar (speakers section) */
 .block-priv .spk::before { background: var(--c-priv); }
@@ -729,6 +735,7 @@ footer a:hover { color: var(--white); }
   .hero-left { min-height: 60vw; }
   .tl-body { padding: 32px 24px 56px; }
   .tl-desc { padding-left: 0; }
+  .tl-row.party .tl-speaker { padding-left: 0; margin-top: 6px; }
   .tl-card-top { flex-wrap: wrap; }
   .tl-type { flex-basis: 100%; display: block; }
   .tl-type-b::before { content: ' '; }

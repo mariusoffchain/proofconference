@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>AI without giving yourself away · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=5ba7c306">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page auto page-top" data-slug="ai">
+  <header class="bk-head">
+    <p class="bk-label">Proof of Autonomy · Chapter 11</p>
+    <h1>AI without giving yourself away</h1>
+  </header>
+  <article class="bk-article">
+<h2>In brief</h2>
+<p>AI assistants are useful, and for the topics of this book they can explain a tool that looks too complex, help you start with Linux or read the code of an open-source project with you. Almost all of them are services run by a company, and everything you type, paste or upload goes to that company. A model can also run on your own phone, computer or server, without internet, where it is weaker than the largest online ones but keeps your prompts at home. This chapter shows how to try one, and how to decide what stays local and what may go online.</p>
+<h2>A useful assistant that keeps what you give it</h2>
+<p>An AI assistant can explain an error message, guide a first Linux installation, summarise the documentation of a project, or read someone else's code and say what it does. That last use matters here, because "don't trust, verify" was so far reserved for people who can read code, and an assistant opens part of it to everyone else, provided its answer is treated as a lead to check.</p>
+<p>Almost all of these assistants, however, are third-party services that feed on what you give them. Whatever you type, paste or upload may be stored, reviewed by humans, used for training, leaked or handed over. In spring 2023, Samsung engineers <a href="https://www.theregister.com/2023/04/06/samsung_reportedly_leaked_its_own" target="_blank" rel="noopener noreferrer">pasted confidential source code and meeting notes</a> into ChatGPT, and the company banned such tools for its staff in May. In January 2025, researchers at Wiz found <a href="https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak" target="_blank" rel="noopener noreferrer">a DeepSeek database open to the internet</a>, with more than 1 million log lines that included chat history. In May 2025, a US court ordered OpenAI to <a href="https://openai.com/index/response-to-nyt-data-demands/" target="_blank" rel="noopener noreferrer">keep every ChatGPT conversation</a>, deleted ones included, an obligation that lasted until 26 September 2025.</p>
+<p>Independence is at stake too, because a service you can no longer work without can change its price, its rules or its answers.</p>
+<h2>A model is a file you can run yourself</h2>
+<p>A language model is a large file of numbers, called weights, and a program that reads this file to predict the next word. An <strong>open-weight model</strong> is a model whose weights are published, so anyone may download the file and run it at home, even when the training data stays private. Once the file is on your disk, it works without internet and your prompts stay on the device.</p>
+<p>Where the model runs decides what it can do. On a phone the setup is simple, but only small models fit and the answers are limited. On a computer, what is realistic depends on its memory and its graphics chip, because the whole model has to fit in memory. As an order of magnitude, <a href="https://www.privacyguides.org/en/ai-chat/" target="_blank" rel="noopener noreferrer">Privacy Guides</a> counts 8 GB of memory as a minimum for a small model of 7 billion parameters. On your own server (chapter 10), a machine with more memory or a graphics card runs larger models, which the whole family can use from a web page.</p>
+<p>In every case a local model is weaker than the largest online ones. It makes more mistakes and handles long documents less well, which many everyday tasks tolerate.</p>
+<h2>Whoever runs the model reads the prompt</h2>
+<p>With AI, confidentiality meets a hard limit, because a model has to read your prompt in clear text to answer it. End-to-end encryption as in chapter 1 cannot hide the prompt from the machine that computes the answer. The trusted third party is therefore whoever operates that machine.</p>
+<p>Hosted services that promise privacy rest on 3 different foundations. Some rest on a policy, a written promise not to log or train, which you cannot check from outside. Some place themselves between you and the model provider, so that the provider reads the text without knowing who sent it. A few use confidential computing, where the model runs inside a sealed part of the processor and your app checks a signed statement of the code running there, which moves the trust to the chip maker and to whoever reviews that code. In all 3 cases a claim is not a proof.</p>
+<p>Running the model yourself removes the operator. The app, the publisher of the weights and the site you downloaded them from remain, and so does the question of authenticity, since a model can be wrong or biased whoever runs it.</p>
+<h2>Choose where your AI runs</h2>
+<p>The 4 tables go from the most independent option to the most convenient, and every fact is valid as of September 2026 in a field that moves every month. Apps for a computer or a server come first.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>What it is</th>
+<th>Strength</th>
+<th>Trade-off</th>
+<th>Who sees your prompts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">Ollama</a></strong></td>
+<td>Engine with a chat window and a command line, for Windows, macOS and Linux</td>
+<td>Open source (MIT). Downloads and runs a model in 1 step. Most other tools can connect to it</td>
+<td>A single company. Also offers <a href="https://docs.ollama.com/cloud" target="_blank" rel="noopener noreferrer">cloud models</a> that run on its servers, so check that the model you pick is local</td>
+<td>Nobody with a local model. Ollama's servers with a cloud model</td>
+</tr>
+<tr>
+<td><strong><a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a></strong></td>
+<td>Desktop app with a model catalogue</td>
+<td>Polished interface. Free at home and at work</td>
+<td><a href="https://lmstudio.ai/app-terms" target="_blank" rel="noopener noreferrer">Closed source</a>, a single company</td>
+<td>Nobody, according to the company. The code cannot be inspected</td>
+</tr>
+<tr>
+<td><strong><a href="https://jan.ai/" target="_blank" rel="noopener noreferrer">Jan</a></strong></td>
+<td>Desktop app</td>
+<td>Open source (Apache 2.0 with a request for attribution). Works offline</td>
+<td>A single company (Menlo Research). Can also connect to online providers</td>
+<td>Nobody with a local model. The provider you add, if you add one</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.nomic.ai/gpt4all" target="_blank" rel="noopener noreferrer">GPT4All</a></strong></td>
+<td>Desktop app by Nomic</td>
+<td>Open source (MIT). Can answer from a folder of your own documents</td>
+<td><a href="https://github.com/nomic-ai/gpt4all/releases" target="_blank" rel="noopener noreferrer">No release since February 2025</a>, so check its state before you rely on it</td>
+<td>Nobody with a local model</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener noreferrer">llama.cpp</a></strong></td>
+<td>The engine that several of these apps build on</td>
+<td>Open source (MIT), community project, runs on modest hardware</td>
+<td>Command line. For the curious</td>
+<td>Nobody</td>
+</tr>
+<tr>
+<td><strong><a href="https://openwebui.com/" target="_blank" rel="noopener noreferrer">Open WebUI</a></strong></td>
+<td>Web page with user accounts, placed in front of Ollama or <a href="https://llama.cpp" target="_blank" rel="noopener noreferrer">llama.cpp</a> on a server</td>
+<td>A chat page for the whole family, from any browser at home</td>
+<td>Since April 2025 it uses <a href="https://docs.openwebui.com/license/" target="_blank" rel="noopener noreferrer">its own licence</a> with a branding clause, which is not an open-source licence</td>
+<td>Whoever administers the server, which means you</td>
+</tr>
+</tbody>
+</table></div>
+<p>On a phone, the same idea works with smaller models, in apps such as Locally AI on the iPhone or PocketPal AI on Android and iPhone, which download a model once and then run without a connection. A phone can also open the web page of your own server, which gives it a larger model.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Runs on</th>
+<th>Strength</th>
+<th>Trade-off</th>
+<th>Who sees your prompts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://locallyai.app/" target="_blank" rel="noopener noreferrer">Locally AI</a></strong></td>
+<td>iPhone, iPad and Mac (iOS 18 or later)</td>
+<td>Free. Downloads open-weight models such as Llama, Gemma, Qwen or DeepSeek inside the app, then works offline. Simple interface</td>
+<td>Apple devices only. The code is not published, and the <a href="https://apps.apple.com/us/app/locally-ai-local-ai-chat/id6741426692" target="_blank" rel="noopener noreferrer">App Store listing</a> names <a href="https://element.io/" target="_blank" rel="noopener noreferrer">Element</a> Labs, the company behind LM Studio, as the seller</td>
+<td>Nobody, according to its App Store privacy label ("Data Not Collected"). The code cannot be inspected</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/a-ghorbani/pocketpal-ai" target="_blank" rel="noopener noreferrer">PocketPal AI</a></strong></td>
+<td>iPhone and Android</td>
+<td>Open source (MIT). No account, works offline</td>
+<td>Small models only. Uses a lot of battery</td>
+<td>Nobody</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/google-ai-edge/gallery" target="_blank" rel="noopener noreferrer">Google AI Edge Gallery</a></strong></td>
+<td>Android and iPhone</td>
+<td>Open source (Apache 2.0). Runs Google's Gemma models offline</td>
+<td>Closer to a demonstration than to an everyday assistant. A single company</td>
+<td>Nobody once the model is downloaded</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/Vali-98/ChatterUI" target="_blank" rel="noopener noreferrer">ChatterUI</a></strong></td>
+<td>Android</td>
+<td>Open source (AGPL). Runs a local model or connects to your own server</td>
+<td>Small volunteer project, plainer interface</td>
+<td>Nobody in local mode. The server you connect it to otherwise</td>
+</tr>
+<tr>
+<td><strong>Apple Intelligence</strong></td>
+<td>Recent iPhones</td>
+<td>Built in. Many tasks run on the device</td>
+<td>Closed source. Not a general chat app. Heavier requests go to Apple's Private Cloud Compute</td>
+<td>Nobody on the device. Apple's servers for the rest, which Apple says <a href="https://www.apple.com/legal/privacy/data/en/intelligence-engine/" target="_blank" rel="noopener noreferrer">do not store them</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Hosted services with a privacy claim are useful when a local model is not enough.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Service</th>
+<th>What the claim rests on</th>
+<th>Trade-off</th>
+<th>Who sees your prompts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://lumo.proton.me/" target="_blank" rel="noopener noreferrer">Lumo</a></strong> (<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>)</td>
+<td>Policy and encryption. No logs, open-weight models on servers Proton controls, saved history under zero-access encryption</td>
+<td>The server <a href="https://proton.me/blog/lumo-security-model" target="_blank" rel="noopener noreferrer">decrypts each prompt</a> to answer it. A single company</td>
+<td>Proton's servers while they answer. Nobody for the saved history, according to Proton</td>
+</tr>
+<tr>
+<td><strong><a href="https://duck.ai/" target="_blank" rel="noopener noreferrer">Duck.ai</a></strong> (<a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">DuckDuckGo</a>)</td>
+<td>A relay and contracts. Your IP address is removed, and providers <a href="https://duckduckgo.com/duckai/privacy-terms" target="_blank" rel="noopener noreferrer">agree not to train</a> and to delete within 30 days</td>
+<td>Models from companies such as Anthropic and OpenAI still read the text</td>
+<td>The model provider, without knowing who you are. DuckDuckGo relays</td>
+</tr>
+<tr>
+<td><strong><a href="https://brave.com/leo/" target="_blank" rel="noopener noreferrer">Brave Leo</a></strong></td>
+<td>Policy. No account, no IP address collected, chats not kept and not used for training</td>
+<td>Built into 1 browser. On desktop it can also use <a href="https://brave.com/blog/byom-nightly/" target="_blank" rel="noopener noreferrer">a local model</a> through Ollama</td>
+<td><a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave</a> and its model hosts, or nobody with a local model</td>
+</tr>
+<tr>
+<td><strong><a href="https://venice.ai/" target="_blank" rel="noopener noreferrer">Venice</a></strong></td>
+<td><a href="https://venice.ai/privacy" target="_blank" rel="noopener noreferrer">It depends on the mode</a>. History stays in your browser. The standard modes rest on contracts, the modes reserved for paying users on confidential computing</td>
+<td>In standard modes the company renting out the graphics cards can read the prompt. A single company</td>
+<td>The GPU provider in standard modes. Only the sealed processor in the paid modes, by design</td>
+</tr>
+<tr>
+<td><strong><a href="https://trymaple.ai/" target="_blank" rel="noopener noreferrer">Maple AI</a></strong></td>
+<td>Confidential computing. Prompts are encrypted up to a secure enclave, the app checks a signed statement of its code, and <a href="https://github.com/MaplePrivacyLabs/Maple" target="_blank" rel="noopener noreferrer">the code is public</a> (MIT)</td>
+<td>A young, single company (Maple Privacy Labs). Trust moves to the cloud hardware (AWS Nitro) and to whoever reviews the code</td>
+<td>Nobody outside the enclave, by design</td>
+</tr>
+</tbody>
+</table></div>
+<p>Finally, the families of open-weight models differ in origin and in licence.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Publisher</th>
+<th>Licence, as verified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Llama</strong></td>
+<td>Meta (United States)</td>
+<td>Meta's own licence, which is not an open-source licence. For the multimodal Llama 4 models it <a href="https://developer.meta.com/ai/llama4/use-policy/" target="_blank" rel="noopener noreferrer">grants no rights</a> to individuals or companies based in the European Union</td>
+</tr>
+<tr>
+<td><strong>Mistral</strong></td>
+<td>Mistral AI (France)</td>
+<td>Apache 2.0 for many models. Some use other licences, so check each one</td>
+</tr>
+<tr>
+<td><strong>Qwen</strong></td>
+<td>Alibaba (China)</td>
+<td>Apache 2.0 for most recent models</td>
+</tr>
+<tr>
+<td><strong>Gemma</strong></td>
+<td>Google (United States)</td>
+<td><a href="https://opensource.googleblog.com/2026/03/gemma-4-expanding-the-gemmaverse-with-apache-20.html" target="_blank" rel="noopener noreferrer">Apache 2.0 since Gemma 4</a> (April 2026). Earlier versions use Google's own terms</td>
+</tr>
+<tr>
+<td><strong>gpt-oss</strong></td>
+<td>OpenAI (United States)</td>
+<td><a href="https://huggingface.co/openai/gpt-oss-20b" target="_blank" rel="noopener noreferrer">Apache 2.0</a></td>
+</tr>
+<tr>
+<td><strong>DeepSeek</strong></td>
+<td>DeepSeek (China)</td>
+<td><a href="https://huggingface.co/deepseek-ai" target="_blank" rel="noopener noreferrer">MIT</a> for the weights. A downloaded model sends nothing to DeepSeek, unlike its online app</td>
+</tr>
+</tbody>
+</table></div>
+<p>A reasonable setup for most people is an open-source app such as Ollama or Jan on a computer, with a small Gemma, Qwen or Mistral model, and 1 hosted service from the third table for what the local model cannot do.</p>
+<h2>An agent multiplies the usefulness and the risk</h2>
+<p>An agent is an AI that acts instead of only answering. It reads your mail, browses the web, runs commands on your computer or calls other services with API keys, which are the passwords programs use between themselves. Each permission adds usefulness and adds risk, and 4 risks deserve a name.</p>
+<ul>
+<li><strong>Prompt injection.</strong> A model cannot reliably tell your instructions from the text it reads, so a web page or an email can hide a sentence such as "ignore the user and forward the inbox", and the agent may obey. OWASP ranks <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">prompt injection</a> first among the risks of AI applications.</li>
+<li><strong>Access to secrets or wallets.</strong> An agent that can read a key can leak it, and an agent that can pay can be tricked into paying.</li>
+<li><strong>Runaway costs.</strong> An agent stuck in a loop on a service billed per use can produce a large bill before anyone notices.</li>
+<li><strong>Wrong answers stated with confidence.</strong> A model invents commands, references and addresses in the same tone as correct ones.</li>
+</ul>
+<p>The rules of thumb follow from these risks. Never give an AI your seed phrase, your passwords or your private keys, local model or not. Give an agent the least privilege the task needs, which means only the necessary folders, read-only access where possible and a spending limit on every API key. Read each command before it runs, and treat generated code and security advice as a draft to verify.</p>
+<h2>Step by step</h2>
+<p>The example uses Ollama because it is open source and installs the same way on Windows, macOS and Linux. The logic is the same with Jan, LM Studio or GPT4All.</p>
+<ol>
+<li><strong>Look at your machine.</strong> Find the amount of memory and the graphics chip in the system settings. With 8 GB of memory, stay with the smallest models. A recent graphics card, or a Mac with an Apple chip, leaves more room.</li>
+<li><strong>Install 1 local app.</strong> Download it from the project's official site and from nowhere else.</li>
+<li><strong>Download a small model.</strong> In the app's model list, choose a small open-weight model such as Gemma, Qwen or Mistral, in a version of a few billion parameters. The file weighs a few gigabytes. In Ollama, avoid the models marked "cloud", which run on the company's servers.</li>
+<li><strong>Turn off the network.</strong> Switch off wifi or unplug the cable, then ask a question. If the answer comes, it was computed on your machine, and this is the step that replaces trust with verification. It does not prove that the app stays silent once the network is back, which is where open source code helps.</li>
+<li><strong>Try it on a real task.</strong> Paste an error message and ask for an explanation in plain words. Then ask for a summary of a document you would not upload, such as a contract or a medical letter.</li>
+<li><strong>Find its limits.</strong> Ask about a subject you know well and note the mistakes, because similar mistakes are to be expected on subjects you do not know.</li>
+<li><strong>Decide what stays local and what may go online.</strong> Names, health, money, work documents and private messages stay local. General questions about public information may go to a hosted service, after you have turned off training and history in its settings where they exist. Seed phrases, passwords and private keys go to no AI at all.</li>
+<li><strong>Later, move it to your server.</strong> Ollama with Open WebUI on the machine from chapter 10 gives the family 1 shared assistant that stays at home. Check whether your platform's app store offers them.</li>
+</ol>
+<h2>Mistakes to avoid</h2>
+<ul>
+<li><strong>Pasting secrets into an online chatbot.</strong> The Samsung engineers only wanted help with a bug. Customer data, an employer's code, a seed phrase or a password do not belong in a prompt that leaves your machine.</li>
+<li><strong>Believing a confident answer.</strong> Check commands, settings and anything that touches security or money against the official documentation of the tool.</li>
+<li><strong>Running a command you do not understand.</strong> Ask the model to explain each part of it, then confirm in the documentation before you press Enter.</li>
+<li><strong>Taking the word "private" on a home page for a proof.</strong> Look at what the claim rests on, whether a policy, a relay or confidential computing, and at who could still read the prompt.</li>
+<li><strong>Downloading models from anywhere.</strong> Use the catalogue of your app or the publisher's verified page on Hugging Face, and compare the checksum when the publisher provides it.</li>
+<li><strong>Giving an agent full access on the first day.</strong> Start with read-only access to 1 folder, and widen it only when you have seen how the agent behaves.</li>
+</ul>
+<h2>Go further</h2>
+<ul>
+<li><strong>At PROOF:</strong> "How the 'Soldier-Citizen' Can Help Decentralize the World", by Alexis Roussel. A model that runs on your own machine belongs to the open technology that ordinary people can control.</li>
+<li><strong>Local tools, hardware and how to check a model download:</strong> Privacy Guides, the AI chat section (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>The risks of AI applications, prompt injection first:</strong> the OWASP Top 10 for LLM applications (<a href="https://genai.owasp.org" target="_blank" rel="noopener noreferrer">genai.owasp.org</a>).</li>
+<li><strong>Why an agent with private data, untrusted content and a way to send data out is dangerous:</strong> "The lethal trifecta for AI agents", by Simon Willison (<a href="https://simonwillison.net" target="_blank" rel="noopener noreferrer">simonwillison.net</a>).</li>
+<li><strong>Where open-weight models are published:</strong> <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer">huggingface.co</a>.</li>
+<li><strong>Next:</strong> Part 3, Proof of Work, on protecting the fruit of your work.</li>
+</ul>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.theregister.com/2023/04/06/samsung_reportedly_leaked_its_own" target="_blank" rel="noopener noreferrer">Samsung reportedly leaked its own secrets through ChatGPT</a>, The Register, 6 April 2023.</li>
+<li><a href="https://techcrunch.com/2023/05/02/samsung-bans-use-of-generative-ai-tools-like-chatgpt-after-april-internal-data-leak/" target="_blank" rel="noopener noreferrer">Samsung bans use of generative AI tools like ChatGPT after April internal data leak</a>, TechCrunch, 2 May 2023.</li>
+<li><a href="https://www.wiz.io/blog/wiz-research-uncovers-exposed-deepseek-database-leak" target="_blank" rel="noopener noreferrer">Wiz Research uncovers exposed DeepSeek database leaking sensitive information, including chat history</a>, Wiz, 29 January 2025.</li>
+<li><a href="https://openai.com/index/response-to-nyt-data-demands/" target="_blank" rel="noopener noreferrer">How we're responding to The New York Times' data demands in order to protect user privacy</a>, OpenAI, 5 June 2025, updated on 22 October 2025.</li>
+<li><a href="https://www.engadget.com/ai/openai-no-longer-has-to-preserve-all-of-its-chatgpt-data-with-some-exceptions-192422093.html" target="_blank" rel="noopener noreferrer">OpenAI no longer has to preserve all of its ChatGPT data, with some exceptions</a>, Engadget, 11 October 2025.</li>
+<li><a href="https://proton.me/blog/lumo-security-model" target="_blank" rel="noopener noreferrer">Lumo security model: how Proton makes AI private</a>, Proton, 4 August 2025.</li>
+<li><a href="https://duckduckgo.com/duckai/privacy-terms" target="_blank" rel="noopener noreferrer">Duck.ai privacy policy and terms of use</a>, DuckDuckGo, updated in August 2026.</li>
+<li><a href="https://venice.ai/privacy" target="_blank" rel="noopener noreferrer">Privacy in Venice</a>, Venice, consulted in September 2026.</li>
+<li><a href="https://developer.meta.com/ai/llama4/use-policy/" target="_blank" rel="noopener noreferrer">Llama 4 acceptable use policy</a>, Meta, consulted in September 2026.</li>
+<li><a href="https://opensource.googleblog.com/2026/03/gemma-4-expanding-the-gemmaverse-with-apache-20.html" target="_blank" rel="noopener noreferrer">Gemma 4: expanding the Gemmaverse with Apache 2.0</a>, Google Open Source Blog, 2 April 2026.</li>
+<li><a href="https://docs.openwebui.com/license/" target="_blank" rel="noopener noreferrer">Open WebUI licence</a>, Open WebUI documentation, consulted in September 2026.</li>
+<li><a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer">LLM01:2025 Prompt injection</a>, OWASP Gen AI Security Project, 2025.</li>
+<li><a href="https://www.privacyguides.org/en/ai-chat/" target="_blank" rel="noopener noreferrer">AI chat</a>, Privacy Guides, consulted in September 2026.</li>
+<li><a href="https://apps.apple.com/us/app/locally-ai-local-ai-chat/id6741426692" target="_blank" rel="noopener noreferrer">Locally AI on the App Store</a>, Apple, consulted in September 2026.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Your checklist</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="ai-1" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="ai-1" aria-label="Install 1 local AI app and download a small model"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="ai-1">Install 1 local AI app and download a small model</label>
+        <span class="bk-effort">1 hour</span>
+      </li>
+      <li class="bk-cl-item" data-id="ai-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="ai-2" aria-label="Turn off the network and check that the model still answers"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="ai-2">Turn off the network and check that the model still answers</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="ai-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="ai-3" aria-label="Try it on a document you would never upload"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="ai-3">Try it on a document you would never upload</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="ai-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="ai-4" aria-label="Turn off training and chat history in the online assistants you keep"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="ai-4">Turn off training and chat history in the online assistants you keep</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      <li class="bk-cl-item" data-id="ai-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="ai-5" aria-label="Write down what stays local, what may go online, and what no AI ever sees"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="ai-5">Write down what stays local, what may go online, and what no AI ever sees</label>
+        <span class="bk-effort">5 min</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/self-hosting/"><span>Previous</span>Hosting your own services</a>
+<a class="bk-next" href="/book/en/work/"><span>Next</span>Proof of Work</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js?v=5ba7c306" defer></script>
+</body>
+</html>

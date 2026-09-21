@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Proof of Work · PROOF &lt;conference&gt;</title>
+<meta name="description" content="The PROOF conference book: a practical manual to take back your privacy, your autonomy and your money.">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=5ba7c306">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/en/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
+    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
+    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/en/#contents" class="nav-mobile-cta">&lt;contents&gt;</a>
+</nav>
+
+<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page mono page-top" data-slug="work">
+  <header class="bk-head">
+    <p class="bk-label">Part 3</p>
+    <h1>Proof of Work</h1>
+  </header>
+  <article class="bk-article">
+<h2>Why protecting your work matters</h2>
+<h3>Savings are stored work</h3>
+<p>You trade hours of your life for money, and what you do not spend today you keep for later, for a home, your children, a bad year or old age. Saving is a way of sending your work through time.</p>
+<p>For that to succeed, whatever holds your savings has to pass 2 tests. It must still be worth something when you need it, and it must still be yours, reachable and usable, on that day. The first test gets most of the attention, while the second tends to be forgotten until an account is blocked or a bank is in the news.</p>
+<p>The name of this part has 2 meanings. It refers to the proof of your own work, what you earned and how to keep it, and to the mechanism that secures Bitcoin, one of the tools examined closely in the following chapters. Bitcoin is not the whole answer, and this part does not pretend it is.</p>
+<h3>Money that loses value by design</h3>
+<p>The euro, like every national currency, has no fixed quantity. New money is created by central banks, and by commercial banks when they lend, and when it grows faster than the goods and services it can buy, prices tend to rise.</p>
+<p>A slow rise is the stated goal. Since July 2021 the European Central Bank has aimed for <a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html" target="_blank" rel="noopener noreferrer">inflation of 2% a year over the medium term</a>. The figure looks small, but it compounds, because each year's 2% applies to prices that have already risen. The table shows what this does, when everything goes as planned, to money kept as cash or on an account without interest.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>After</th>
+<th>Prices are higher by about</th>
+<th>Purchasing power left, about</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 years</td>
+<td>22%</td>
+<td>82%</td>
+</tr>
+<tr>
+<td>15 years</td>
+<td>35%</td>
+<td>74%</td>
+</tr>
+<tr>
+<td>20 years</td>
+<td>49%</td>
+<td>67%</td>
+</tr>
+<tr>
+<td>50 years</td>
+<td>169%</td>
+<td>37%</td>
+</tr>
+</tbody>
+</table></div>
+<p>This is the good scenario. In other periods inflation rises far above the target, and for October 2022 Eurostat measured <a href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f" target="_blank" rel="noopener noreferrer">annual inflation of 10.6% in the euro area and 22.1% in Lithuania</a>.</p>
+<p>People who own property or shares are partly protected, because those prices tend to rise too, whereas employees, pensioners and anyone putting a little money aside each month are not. The people who decide how much money is created are also not the ones who bear this cost, which Piktas takes further at PROOF in "Why Centralized Money Fails: How Bitcoin Became an Alternative".</p>
+<h3>Wealth that needs permission</h3>
+<p>Cash was used for <a href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html" target="_blank" rel="noopener noreferrer">52% of payments in shops in the euro area in 2024</a>, according to the European Central Bank, against 59% in 2022. Each digital payment is tied to your identity, stored for years and analysed by your bank, the card network or the payment app. A list of your payments says where you were, which doctor you saw and which cause you support.</p>
+<p>The same is true of what you own. A bank balance, a share, a fund or a pension is an entry in the database of an intermediary that knows who you are, reports to the authorities and can refuse to serve you. Identity checks (KYC, "know your customer") stand at every entrance, and some of the passport copies they collect end up leaking.</p>
+<p>Central bank digital currencies (CBDCs) would place the issuer of the money in the payment path. On 30 October 2025 the ECB <a href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html" target="_blank" rel="noopener noreferrer">moved the digital euro to its next phase</a>, with a pilot from mid-2027 and a possible first issuance in 2029, provided the EU regulation, still under negotiation as of September 2026, is adopted. Linas K. covers the subject at PROOF in "CBDCs, KYC, and the Fight for Monetary Privacy".</p>
+<h3>No perfect asset</h3>
+<p>There is no perfect place to keep the fruit of your work. Cash is private, but inflation erodes it. A bank deposit is convenient, but it is legally a loan to the bank, which EU law guarantees <a href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html" target="_blank" rel="noopener noreferrer">up to 100,000 euros per depositor and per bank</a> and not beyond. Shares make you a co-owner of real companies, held however through a chain of intermediaries that is centralised, watched and easy to freeze. Gold has no issuer and has kept value over a very long time, but it is heavy, hard to move and hard to spend. Bitcoin has a fixed supply and can be held entirely by you, but it is young, volatile and unforgiving of mistakes. Monero has a similar purpose, money you can hold yourself, with strong privacy by default, but it is much less liquid and much less accepted, its much smaller network is easier for an outside entity to attack, and its development is more centralised (see chapter 12).</p>
+<p>The useful question is therefore not "what is the best investment?", which this book will not answer, since nothing in it is investment advice. The useful questions are about control, meaning who holds the asset, who can freeze it, who watches it, who can create more of it, and whether you can take it with you.</p>
+<h3>A skill to learn with small amounts</h3>
+<p>Start by knowing where you stand, then learn the skills that allow you to hold part of your savings yourself. They can be learned with very small amounts, as a skill to acquire and not as a bet to place. Your usual legal and tax obligations still apply.</p>
+<p>The 7 chapters of this part:</p>
+<ol start="12">
+<li><strong>Where to keep the fruit of your work:</strong> cash, banks, shares, gold, Bitcoin and Monero compared, through the questions that matter for your sovereignty.</li>
+<li><strong>Your first wallet and your first sats:</strong> install a Bitcoin wallet where you hold the keys, and receive a first small payment.</li>
+<li><strong>Backing up your seed phrase:</strong> the 12 or 24 words that are your money, and how not to lose them.</li>
+<li><strong>Lightning and euros in everyday life:</strong> instant small payments, and moving between bitcoin and euros.</li>
+<li><strong>Privacy in Bitcoin:</strong> every transaction is public, so learn what it reveals and how to limit it.</li>
+<li><strong>Hardware wallets:</strong> a dedicated device for amounts you would not keep on a phone.</li>
+<li><strong>Running your own node:</strong> verify everything yourself, and stop asking someone else's server.</li>
+</ol>
+<p>Chapter 12 gives the overall picture. Chapters 13 to 18 go deep on Bitcoin, because it is the tool in the list that asks you to learn the most new skills, and it is designed to be held and verified entirely by yourself.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html" target="_blank" rel="noopener noreferrer">ECB's Governing Council approves its new monetary policy strategy</a>, European Central Bank, 8 July 2021.</li>
+<li><a href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f" target="_blank" rel="noopener noreferrer">Annual inflation up to 10.6% in the euro area</a>, Eurostat, 17 November 2022.</li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html" target="_blank" rel="noopener noreferrer">Digital payments continue to rise, albeit at a slower pace; cash remains a key payment method</a>, European Central Bank, 19 December 2024.</li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html" target="_blank" rel="noopener noreferrer">Eurosystem moving to next phase of digital euro project</a>, European Central Bank, 30 October 2025.</li>
+<li><a href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html" target="_blank" rel="noopener noreferrer">Deposit guarantee schemes, summary of Directive 2014/49/EU</a>, EUR-Lex, consulted in September 2026.</li>
+</ul>
+  </article>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/en/ai/"><span>Previous</span>AI without giving yourself away</a>
+<a class="bk-next" href="/book/en/savings/"><span>Next</span>Where to keep the fruit of your work</a>
+</div>
+  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">no cookies · no tracking · no bullshit</span>
+  <span><a href="https://tickets.proofconference.com/terms">terms</a> · <a href="https://tickets.proofconference.com/privacy">privacy</a> · <a href="mailto:contact@proofconference.com">contact</a></span>
+</footer>
+
+<script src="/book/book.js?v=5ba7c306" defer></script>
+</body>
+</html>

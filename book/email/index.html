@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo el. paštas ir pseudonimai · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/email/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/email/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/email/'">EN</button>
+</nav>
+
+<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page priv page-top" data-slug="email">
+  <header class="bk-head">
+    <p class="bk-label">Privatumo įrodymas · 4 skyrius</p>
+    <h1>Tavo el. paštas ir pseudonimai</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>El. pašto adresas yra raktas į visas kitas tavo paskyras ir žymė, pagal kurią visame internete susiejami tavo profiliai. Perkelk paštą į paslaugą, kurios teikėjas išsilaiko iš prenumeratos, o ne iš reklamos, ir gali pašto dėžutę užšifruoti taip, kad jos neperskaitytų net pati bendrovė. Tada liaukis visiems dalyti tikrąjį adresą ir naudok pseudonimus, kiekvienai paslaugai vis kitą adresą. Matysi, kas tavo adresą nutekina ar parduoda, ir galėsi išjungti 1 pseudonimą, o visi kiti veiks kaip veikę.</p>
+<h2>Adresas, siejantis visas tavo paskyras</h2>
+<p>Beveik kiekvienos paskyros slaptažodį galima atkurti el. paštu, todėl tas, kas valdo tavo pašto dėžutę, gali spustelėti „pamiršau slaptažodį“ banko, socialinių tinklų ir debesų saugyklos svetainėse. Pašto dėžutė yra dar ir tavo gyvenimo archyvas: joje sąskaitos, bilietai, registracijos pas gydytojus ir daugelio metų susirašinėjimas.</p>
+<p>Populiariausios pašto dėžutės nemokamos todėl, kad tavo laiškus pristatanti bendrovė verčiasi ir reklama. Bendrovė „Google“ <a href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/" target="_blank" rel="noopener noreferrer">2017 m. birželį paskelbė</a>, kad reklamai pritaikyti nebeskenuos asmeninių „Gmail“ pašto dėžučių turinio, tačiau pašto dėžutė tebėra susieta su paskyra, kurioje gali būti saugomos dar ir paieškos užklausos, vaizdo įrašai, buvimo vietų istorija.</p>
+<p>Dar lieka pats adresas, kurį nurodai parduotuvėms, naujienlaiškiams, programėlėms ir valstybės įstaigoms. Jis niekada nesikeičia, todėl duomenų prekeiviai (angl. data brokers) pagal jį gali sujungti atskiras duomenų bazes į vieną tavo profilį. Kai į kurią nors iš tų paslaugų įsilaužiama, adresas patenka į sąrašus, naudojamus brukalui siųsti ir sukčiauti apsimetant (angl. phishing), t. y. siųsti netikrus laiškus, kuriais siekiama išvilioti slaptažodžius. 2020 m. iš aparatinių piniginių gamintojos „Ledger“ rinkodaros duomenų bazės <a href="https://www.ledger.com/message-ledgers-ceo-data-leak" target="_blank" rel="noopener noreferrer">nutekėjo apie 1 mln. klientų el. pašto adresų</a> ir maždaug 272 000 klientų siuntų pristatymo duomenys, o paskui prasidėjo sukčiavimo apsimetant kampanijos el. paštu ir SMS žinutėmis.</p>
+<h2>Šifruota pašto dėžutė ir visur vis kitas adresas</h2>
+<p><strong>Šifruoto el. pašto paslaugos teikėjas</strong> pašto dėžutę saugo tokiu pavidalu, kad bendrovė jos perskaityti negali. Paslaugose „Proton Mail“ ir „Tuta“ taip yra visada, o laiškai, kuriais keičiasi 2 to paties teikėjo naudotojai, šifruojami ištisiniu būdu. Paslaugose „Mailbox.org“ ir „Posteo“ šifravimą įsijungi tu.</p>
+<p>Laiškas, išsiųstas įprastu „Gmail“ ar „Outlook“ adresu, ištisiniu būdu nešifruojamas ir ten lieka perskaitomas. Šifravimas saugo turinį, o ne metaduomenis (kas kam rašo ir kada), be to, teismas vis tiek gali įpareigoti teikėją atiduoti tai, ką jis turi. 2021 m. rugsėjį bendrovė „Proton“ <a href="https://proton.me/blog/climate-activist-arrest" target="_blank" rel="noopener noreferrer">patvirtino, kad Šveicarijos institucijų nurodymu privalėjo fiksuoti vieno klimato aktyvisto IP adresą</a> (skaičių, identifikuojantį interneto ryšį), o laiškų turinys liko nepasiekiamas. Privatiems pokalbiams naudok kurią nors susirašinėjimo programėlę iš 1 skyriaus.</p>
+<p><strong>Pseudonimas</strong> yra persiuntimo adresas, pavyzdžiui, parduotuves-pavadinimas@pseudonimu-paslauga, sukurtas vienai parduotuvei. Į jį siunčiami laiškai atkeliauja į tavo pašto dėžutę, o tikrojo adreso parduotuvė taip ir nepamato. Jei į tą pseudonimą ima plūsti brukalas, žinai, kas jį nutekino ar pardavė, ir išjungi jį 1 spustelėjimu. Duomenų prekeiviams sunkiau susieti tavo paskyras, nes kiekviena paslauga tave pažįsta vis kitu adresu.</p>
+<h2>Kas gali tavo laiškus perskaityti, suklastoti ar užrakinti</h2>
+<p>El. paštas sukurtas be šifravimo ir be siuntėjo tapatybės įrodymo, todėl ir jo konfidencialumas, ir autentiškumas, ir prieinamumas priklauso nuo teikėjo. Iš įprastos pašto dėžutės siunčiamas laiškas teikėją pasiekia perskaitomas ir tik paskui užšifruojamas saugoti, taigi tenka pasikliauti tuo, kad bendrovė nepasiliks kopijos, platins sąžiningas programėles ir neuždarys tavo paskyros. Pseudonimų paslaugos operatorius yra antra tokia pati trečioji šalis, nes per jo serverius keliauja kiekvienas persiunčiamas laiškas.</p>
+<p>Ištisinis šifravimas atriboja teikėją nuo turinio tik tada, kai raktus turi abu galai, t. y. kai abu žmonės naudojasi to paties teikėjo paslauga arba kai tarp 2 teikėjų taikomas PGP. Tada kito žmogaus raktą pateikia teikėjas, kaip ir susirašinėjimo programėlės katalogas (žr. 1 skyrių). Paslaugoje „Proton“ galima <a href="https://proton.me/support/address-verification" target="_blank" rel="noopener noreferrer">pažymėti, kad kontakto raktas patikimas</a>, o „Tuta“ <a href="https://tuta.com/blog/key-verification" target="_blank" rel="noopener noreferrer">2025 m. rugpjūtį pridėjo raktų patvirtinimą QR kodu</a>. Jei naudoji PGP, rakto atspaudą (angl. fingerprint) turi palyginti kitu kanalu.</p>
+<p>Prieinamumas yra ta savybė, kurią galima decentralizuoti pigiai. Turint nuosavą domeną teikėją galima pakeisti kitu, o stebėti tada reikia jau domenų registratorių. Paleisti nuosavą el. pašto serverį įmanoma, tačiau jį reikia apsaugoti ir dar pasiekti, kad jo laiškus priimtų kiti serveriai, todėl pirmajam projektui jis menkai tinka.</p>
+<h2>Kaip pasirinkti el. pašto paslaugos teikėją</h2>
+<p>Visus toliau išvardytus variantus finansuoja jų naudotojai, o ne reklama. Skiriasi kaina, šifravimo būdas ir tai, ar galima naudotis įprasta el. pašto programa.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Teikėjas</th>
+<th>Kur įsikūręs</th>
+<th>Kuo tenka pasitikėti</th>
+<th>Kaina</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a></strong></td>
+<td>Šveicarija</td>
+<td>Bendrovė „<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ mato įprastus gaunamus laiškus prieš juos užšifruodama ir pateikia tavo kontaktų raktus. Pažymėti raktus patikimais neprivaloma, tai pasirenkama patikra.</td>
+<td>Nemokamas planas, mokami planai</td>
+<td>Pašto dėžutė šifruojama visada. Programėlės atvirojo kodo, ekosistema didelė (kalendorius, debesų saugykla, VPN). Laiškų temos ištisiniu būdu nešifruojamos. Norint naudotis įprastomis el. pašto programomis reikia mokamo plano ir papildomos programos „Bridge“ (tiltas).</td>
+</tr>
+<tr>
+<td><strong><a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a></strong></td>
+<td>Vokietija</td>
+<td>Bendrovė „<a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a>“ mato įprastus gaunamus laiškus prieš juos užšifruodama ir pateikia tavo kontaktų raktus. Raktų patvirtinimas pasirenkamas.</td>
+<td>Nemokamas planas, mokami planai</td>
+<td>Pašto dėžutė šifruojama visada. Programėlės atvirojo kodo, šifruojamos ir laiškų temos. Naudoja savo šifravimo sistemą, todėl neveikia nei su įprastomis el. pašto programomis, nei su PGP (senesniu el. pašto šifravimo standartu).</td>
+</tr>
+<tr>
+<td><strong><a href="https://mailbox.org/en/" target="_blank" rel="noopener noreferrer">Mailbox.org</a></strong></td>
+<td>Vokietija</td>
+<td>Bendrovė „<a href="https://mailbox.org/" target="_blank" rel="noopener noreferrer">Mailbox.org</a>“ gali skaityti saugomus laiškus tol, kol neįjungi gautų laiškų šifravimo. Jei naudoji PGP, raktus tikrini tu.</td>
+<td>Mokama, kaina nedidelė</td>
+<td>Klasikinė pašto dėžutė, veikianti su bet kuria el. pašto programa. Gautų laiškų šifravimas (naudojant PGP) pasirenkamas, jį įsijungi tu. Mobiliuosiuose įrenginiuose ne tokia išbaigta.</td>
+</tr>
+<tr>
+<td><strong><a href="https://posteo.de/en" target="_blank" rel="noopener noreferrer">Posteo</a></strong></td>
+<td>Vokietija</td>
+<td>Bendrovė „<a href="https://posteo.de/en" target="_blank" rel="noopener noreferrer">Posteo</a>“ gali skaityti saugomus laiškus tol, kol neįjungi šifravimo. Jei naudoji PGP, raktus tikrini tu.</td>
+<td>Mokama, kaina nedidelė</td>
+<td>Veikia su bet kuria el. pašto programa, sumokėti galima anonimiškai, net paštu siunčiamais grynaisiais pinigais. Saugomų laiškų šifravimas pasirenkamas, jį įsijungi tu. Nuosavo domeno naudoti negalima.</td>
+</tr>
+<tr>
+<td><strong>Nuosavas domenas</strong></td>
+<td>Ten, kur veikia tavo pašto dėžutė</td>
+<td>Turinį patiki tam pačiam teikėjui, o dar tenka pasitikėti domenų registratoriumi. Joks teikėjas negali pasilikti tavo adreso.</td>
+<td>Metinis domeno mokestis ir mokama pašto dėžutė</td>
+<td>Adresas vardas@tavo-pavarde.lt, o pašto dėžutę aptarnauja vienas iš pirmiau išvardytų teikėjų. Vėliau teikėją galėsi pakeisti, o adresas liks tas pats. Jokiu būdu nepamiršk pratęsti domeno galiojimo.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: 1 pašto dėžutė iš šio sąrašo (jei šifravimas joje pasirenkamas, jį įjunk) ir pseudonimų paslauga. Jei tą patį adresą ketini naudoti dar 20 metų, apie nuosavą domeną pagalvok iš karto.</p>
+<h2>Kaip pasirinkti pseudonimų paslaugą</h2>
+<p>Pseudonimų paslauga yra tarpininkė tarp pasaulio ir tavo pašto dėžutės. Ji persiunčia tavo paštą ir techniškai gali matyti per ją keliaujančius laiškus, todėl rinkis operatorių, kuriuo pasitiki tiek pat, kiek ir el. pašto paslaugos teikėju.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Paslauga</th>
+<th>Kas ją valdo</th>
+<th>Kaina</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">SimpleLogin</a></strong></td>
+<td>„<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ (Šveicarija)</td>
+<td>Nemokamame plane pseudonimų skaičius ribotas, mokamame neribotas</td>
+<td>Kodas atviras. Iš pseudonimo galima ir atsakyti, ir siųsti laiškus. Veikia su bet kuria pašto dėžute, ne tik su „Proton“. Įtraukta į kai kuriuos mokamus „Proton“ planus.</td>
+</tr>
+<tr>
+<td><strong><a href="https://proton.me/pass/aliases" target="_blank" rel="noopener noreferrer">Įtaisyti „Proton“ pseudonimai</a></strong> („hide-my-email“, t. y. „paslėpk mano el. paštą“)</td>
+<td>„<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ (Šveicarija), naudojama „<a href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">SimpleLogin</a>“ technologija</td>
+<td>Nemokamame ir „Mail Plus“ planuose pseudonimų skaičius ribotas (2026 m. rugsėjo mėn. duomenimis, 10), su „Pass Plus“ arba „Proton Unlimited“ planu neribotas</td>
+<td>Kuriami tiesiog paslaugoje „<a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a>“ arba slaptažodžių tvarkyklėje „<a href="https://proton.me/pass" target="_blank" rel="noopener noreferrer">Proton Pass</a>“. Labai patogu, jei tavo pašto dėžutė yra „Proton“ paslaugoje. Tada ir pašto dėžutė, ir pseudonimai atsiduria tos pačios bendrovės rankose, taigi praradus šią paskyrą arba ją užblokavus netenki abiejų.</td>
+</tr>
+<tr>
+<td><strong><a href="https://addy.io/" target="_blank" rel="noopener noreferrer">addy.io</a></strong></td>
+<td>Mažas nepriklausomas operatorius</td>
+<td>Dosnus nemokamas planas, mokami planai</td>
+<td>Kodas atviras, paslaugą galima paleisti ir nuosavame serveryje. Maža komanda kartu yra ir vienintelis gedimo taškas (angl. single point of failure).</td>
+</tr>
+<tr>
+<td><strong><a href="https://duckduckgo.com/email/" target="_blank" rel="noopener noreferrer">DuckDuckGo Email Protection</a></strong></td>
+<td>„<a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">DuckDuckGo</a>“ (JAV)</td>
+<td>Nemokama</td>
+<td>Naudotis labai paprasta. Pašalina el. laiškuose paslėptus sekiklius. Reikia programėlės „DuckDuckGo“ arba jos naršyklės plėtinio.</td>
+</tr>
+<tr>
+<td><strong><a href="https://relay.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox Relay</a></strong></td>
+<td>„<a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a>“ (JAV)</td>
+<td>Nemokamas planas su keliais pseudonimais, už didesnį skaičių reikia mokėti</td>
+<td>Paprasta, įtaisyta naršyklėje „<a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>“. Nemokamame plane pseudonimų nedaug.</td>
+</tr>
+<tr>
+<td><strong>Papildomi el. pašto paslaugos teikėjo adresai</strong></td>
+<td>Tavo el. pašto paslaugos teikėjas</td>
+<td>Paprastai įtraukta į mokamus planus</td>
+<td>„<a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a>“, „<a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a>“, „<a href="https://mailbox.org/" target="_blank" rel="noopener noreferrer">Mailbox.org</a>“ ir „<a href="https://posteo.de/en" target="_blank" rel="noopener noreferrer">Posteo</a>“ leidžia prie tos pačios pašto dėžutės pridėti dar kelis adresus. Nereikia pasitikėti niekuo nauju, bet adresų skaičius ribotas.</td>
+</tr>
+<tr>
+<td><strong>Adresas su pliuso ženklu (angl. plus addressing)</strong></td>
+<td>Bet kuris teikėjas</td>
+<td>Nemokama</td>
+<td>vardas+parduotuve@domenas.com. Praverčia laiškams rūšiuoti, bet privatumą saugo menkai, nes jame matomas tikrasis adresas, o dalį „+parduotuve“ lengva pašalinti.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų atskira pseudonimų paslauga su naršyklės plėtiniu, kad kur nors registruojantis pseudonimą būtų galima sukurti 1 spustelėjimu. Jei pasirinksi ne tą operatorių, kuris teikia tau el. pašto paslaugą, abu dalykai nepriklausys nuo vienos bendrovės.</p>
+<h2>Vienkartinės pašto dėžutės, kai adreso reikia tik kartą</h2>
+<p>Į kai kurias svetaines daugiau niekada nebegrįši, pavyzdžiui, kai reikia vieną kartą atsisiųsti failą, prisijungti prie belaidžio tinklo („Wi-Fi“) per jo portalą ar paskaityti forumą, į kurį užsuki vieną kartą. Tokiais atvejais pakanka vienkartinės pašto dėžutės. Registruotis nereikia. Adresą sugalvoji čia pat, įrašai jį į formą, o tada paslaugos svetainėje atveri pašto dėžutę ir perskaitai laišką.</p>
+<p>Tokiose viešose paslaugose slaptažodžio nėra, todėl pašto dėžutę gali skaityti kiekvienas, kas adresą atspėja arba žino. Laiškai greitai ištrinami, tikėtis vėliau juos rasti negalima, o daugelis svetainių tokių domenų nepriima. Taigi vienkartinė pašto dėžutė tinka patvirtinimo kodui, kuris nesaugo nieko svarbaus. Ji netinka nei paskyrai, kurią nori išlaikyti, nei tam, kur yra asmens duomenų, nei ten, kur vėliau galėtų būti atsiųstas slaptažodžio atkūrimo laiškas, nes jį gautų kiekvienas, įvedęs tą patį adresą. Visais kitais atvejais pseudonimas tinka geriau.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Paslauga</th>
+<th>Kaip gauni adresą</th>
+<th>Kiek laiko saugomi laiškai</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.mailinator.com/" target="_blank" rel="noopener noreferrer">Mailinator</a></strong></td>
+<td>Sugalvoji bet kokį vardą jos viešajame domene</td>
+<td>Kelias valandas</td>
+<td>Visiškai vieša, todėl kiekvienas, įvedęs tą patį vardą, skaito tą pačią pašto dėžutę. Laiškus galima tik gauti. Sukurta daugiausia programinės įrangos testuotojams, yra mokamų privačių planų. Daug svetainių ją blokuoja.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.guerrillamail.com/" target="_blank" rel="noopener noreferrer">Guerrilla Mail</a></strong></td>
+<td>Gauni atsitiktinį adresą arba susigalvoji savo</td>
+<td>1 valandą</td>
+<td>Slaptažodžio nėra, todėl pašto dėžutę saugo tik tai, kad jos pavadinimą sunku atspėti. Siūlo „sumaišytą“ adresą (angl. scrambled), kad atspėti būtų sunkiau.</td>
+</tr>
+<tr>
+<td><strong><a href="https://maildrop.cc/" target="_blank" rel="noopener noreferrer">Maildrop</a></strong></td>
+<td>Sugalvoji bet kokį vardą jos viešajame domene</td>
+<td>Ne daugiau kaip 10 laiškų, pašto dėžutė išvaloma, jei 24 valandas negaunama naujų laiškų</td>
+<td>Visiškai vieša, slaptažodžio nėra. Priedai pašalinami.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Kai svetainė reikalauja telefono numerio</h2>
+<p>Telefono numeris yra dar stipresnis identifikatorius nei el. pašto adresas. Jo nekeiti daugelį metų, jis susieja tavo paskyras, pritraukia nepageidaujamų skambučių, o dar į jį taikosi SIM kortelės perėmimo (angl. SIM swap) atakos (žr. 2 skyrių). Pirmiausia patikrink, ar laukelis tikrai privalomas. Jei taip, turi keletą variantų, tik nė vienas nėra tobulas.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Variantas</th>
+<th>Kaip tai veikia</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Antra SIM arba eSIM kortelė, naudojama tik registracijoms</strong></td>
+<td>Tikras įprasto operatoriaus mobiliojo ryšio numeris, laikomas atskirai nuo asmeninio</td>
+<td>Priimamas visur. Išankstinio mokėjimo numeriai nustoja galioti, jei sąskaitos nepapildai. Daugelyje ES šalių SIM kortelei įsigyti reikia asmens dokumento, taip pat ir <a href="https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards" target="_blank" rel="noopener noreferrer">Lietuvoje nuo 2025 m. sausio perkant naujas išankstinio mokėjimo korteles</a>. Taisyklės skiriasi, o šis variantas atskiria tavo numerius, bet anonimiškumo nesuteikia.</td>
+</tr>
+<tr>
+<td><strong>Virtualiųjų (VoIP) numerių programėlės:</strong> <a href="https://jmp.chat/" target="_blank" rel="noopener noreferrer">„JMP.chat“</a>, <a href="https://hushed.com/" target="_blank" rel="noopener noreferrer">„Hushed“</a>, <a href="https://mysudo.com/" target="_blank" rel="noopener noreferrer">„MySudo“</a></td>
+<td>Mokamas numeris, veikiantis internetu per programėlę</td>
+<td>„JMP.chat“ kodas atviras, bet siūlomi tik JAV ir Kanados numeriai. „Hushed“ (kodas uždaras) siūlo JAV, Kanados ir Jungtinės Karalystės numerius. „MySudo“ (kodas uždaras) galima įdiegti tik keliose šalyse, todėl pirma pasitikrink, o tik tada ja pasikliauk. Daugelis paslaugų VoIP numerių nepriima, o Europos svetainė gali nepriimti užsienio numerio.</td>
+</tr>
+<tr>
+<td><strong>Bitkoinais apmokama duomenų eSIM kortelė,</strong> pavyzdžiui, <a href="https://silent.link/" target="_blank" rel="noopener noreferrer">„Silent.link“</a></td>
+<td>Paskyros nereikia. Į kai kuriuos planus įeina JAV arba Jungtinės Karalystės mobiliojo ryšio numeris, kuriuo galima gauti SMS žinutes</td>
+<td>Kainuoja daugiau nei įprasta SIM kortelė. Numeris nuomojamas metams ir dingsta, jei nuomos nepratęsi. Paslaugą teikia vienas mažas operatorius.</td>
+</tr>
+<tr>
+<td><strong>Mokamos paslaugos vienkartinei SMS žinutei gauti</strong></td>
+<td>Kelioms minutėms išsinuomoji numerį, kad gautum vieną kodą</td>
+<td>Paskui numeris atitenka kam nors kitam, ir tas žmogus galėtų juo pasinaudoti paskyrai perimti. Kokybė labai nevienoda, o daugelis svetainių savo sąlygose tai draudžia.</td>
+</tr>
+<tr>
+<td><strong>Nemokamos viešos svetainės SMS žinutėms gauti internetu (angl. „receive SMS online“)</strong></td>
+<td>Bendri numeriai, kuriais gautos žinutės rodomos tinklalapyje</td>
+<td>Tavo kodą mato visi. Numeriai naudojami pakartotinai, ir dauguma jų jau užblokuoti. Tinka tik tam, kas visiškai nesvarbu.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Šie variantai taip pat turi ribas. Praradus prieigą prie numerio galima prarasti ir paskyrą, todėl nei bankui, nei dviejų veiksnių autentifikavimui (2FA), nei kuriai nors kitai svarbiai paskyrai niekada nenaudok numerio, kurio nevaldai. Laikykis svetainės naudojimo sąlygų ir savo šalies įstatymų. Siekiama tik to, kad asmeninio numerio nereikėtų duoti kiekvienai parduotuvei ir programėlei.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkta pašto dėžutė „Proton Mail“ ir pseudonimų paslauga „SimpleLogin“, nes jos dažnai būna pirmasis žingsnis. Abi priklauso bendrovei „Proton“, ir tai patogu, tačiau tada ir pašto dėžutė, ir pseudonimai priklauso nuo vienos bendrovės. Jei nori riziką paskirstyti, pasilik šią pašto dėžutę, o pseudonimams pasirink „<a href="https://addy.io" target="_blank" rel="noopener noreferrer">addy.io</a>“, arba pasilik „SimpleLogin“ ir pasirink kitą pašto dėžutę, nes žingsniai tie patys.</p>
+<ol>
+<li><strong>Susikurk naują pašto dėžutę.</strong> Pasirink adresą, kurį galėsi naudoti daugelį metų. Apsaugok ją ilgu unikaliu slaptažodžiu iš slaptažodžių tvarkyklės ir antruoju veiksniu (žr. 2 skyrių). Atkūrimo frazę užsirašyk ant popieriaus, nes pametus slaptažodį niekas kitas tavo laiškų neiššifruos.</li>
+<li><strong>Paruošk pseudonimų paslaugą.</strong> Susikurk paskyrą, susiek ją su naująja pašto dėžute ir įdiek paslaugos naršyklės plėtinį (ir programėlę telefonui, jei tokia yra).</li>
+<li><strong>Pirmiausia perkelk svarbiausias paskyras.</strong> Tai bankas, valstybės paslaugos, mobiliojo ryšio operatorius, „Apple“ arba „Google“ paskyra ir slaptažodžių tvarkyklė. Kiekvienoje pakeisk el. pašto adresą. Gali nurodyti tikrąjį naująjį adresą arba atskirą pseudonimą, kaip tau labiau patinka, tik pasižymėk pasirinkimą slaptažodžių tvarkyklėje.</li>
+<li><strong>Įjunk persiuntimą iš senosios pašto dėžutės.</strong> Jos nustatymuose įjunk automatinį persiuntimą į naująją. Dauguma šifruoto pašto teikėjų siūlo ir importavimo įrankį, kuris nukopijuoja senus laiškus ir kontaktus.</li>
+<li><strong>Visa kita perkelk pamažu.</strong> Kaskart, kai persiųstas laiškas ateina iš paslaugos, kuria vis dar naudojiesi, pakeisk ten adresą nauju pseudonimu. Nebenaudojamas paskyras ištrink.</li>
+<li><strong>Kiekvienai naujai registracijai kurk naują pseudonimą.</strong> Parduotuvė, naujienlaiškis ar belaidžio tinklo portalas gauna po atskirą adresą. Pseudonimą pavadink pagal paslaugą, kad būtų lengva atsekti nutekėjimą.</li>
+<li><strong>Senąjį adresą pasilik bent metams.</strong> Neištrink jo, nes į jį dar ilgai eis pamirštų paskyrų, senų kontaktų ir slaptažodžių atkūrimo laiškai.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Manyti, kad pasirinkus šifruoto pašto teikėją visas el. paštas tampa privatus.</strong> Jis apsaugo tavo pašto dėžutę, o į įprastą pašto dėžutę išsiųstas laiškas kitame gale lieka perskaitomas.</li>
+<li><strong>Per anksti ištrinti senąjį adresą.</strong> Kai kurie teikėjai apleistus adresus atiduoda naujiems naudotojams, ir tada pamirštų paskyrų slaptažodžių atkūrimo laiškus galėtų gauti nepažįstamas žmogus.</li>
+<li><strong>Pamesti atkūrimo frazę.</strong> Jei pašto dėžutė šifruota, be šios frazės atkūrus slaptažodį prarandama prieiga prie senų laiškų.</li>
+<li><strong>Leisti nuosavam domenui nustoti galioti.</strong> Tas, kas jį užregistruos po tavęs, gaus tavo paštą ir galės atkurti tavo paskyrų slaptažodžius. Įjunk automatinį pratęsimą ir žiūrėk, kad mokėjimo kortelės duomenys nebūtų pasenę.</li>
+<li><strong>Visur naudoti tą patį pseudonimą.</strong> Pseudonimas, kuriuo dalijasi 10 paslaugų, tėra antras tikrasis adresas, nes nauda atsiranda tik tada, kai kiekvienai paslaugai skiriamas vis kitas pseudonimas.</li>
+<li><strong>Banko paskyrą patikėti pseudonimų paslaugai, kuria iki galo nepasitiki.</strong> Kelioms svarbiausioms paskyroms visiškai tinka ir tikrasis adresas, kurį tau suteikė el. pašto paslaugos teikėjas.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kodėl nuo tavo raktų priklauso tavo interneto sauga“, pranešimą skaito Satoshine. Šifruota pašto dėžutė veikia todėl, kad ją atrakinantį raktą turi tik tu.</li>
+<li><strong>Išsamiai palygink teikėjus:</strong> „Privacy Guides“, <a href="https://www.privacyguides.org/en/email/" target="_blank" rel="noopener noreferrer">„Email Services“</a> ir <a href="https://www.privacyguides.org/en/email-aliasing/" target="_blank" rel="noopener noreferrer">„Email Aliasing“</a>.</li>
+<li><strong>Patikrink, ar tavo adresas jau nutekėjo:</strong> <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">„Have I Been Pwned“</a>.</li>
+<li><strong>Kitas skyrius:</strong> tavo tinklas.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/" target="_blank" rel="noopener noreferrer">As G Suite gains traction in the enterprise, G Suite's Gmail and consumer Gmail to more closely align</a>, „Google“, 2017 m. birželio 23 d.</li>
+<li><a href="https://www.ledger.com/message-ledgers-ceo-data-leak" target="_blank" rel="noopener noreferrer">Message by Ledger's CEO: update on the July data breach</a>, „Ledger“, 2020 m. gruodžio 21 d.</li>
+<li><a href="https://proton.me/blog/climate-activist-arrest" target="_blank" rel="noopener noreferrer">Important clarifications regarding arrest of climate activist</a>, „Proton“, 2021 m. rugsėjo 6 d.</li>
+<li><a href="https://proton.me/support/address-verification" target="_blank" rel="noopener noreferrer">Address verification with trusted keys</a>, „Proton“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://tuta.com/blog/key-verification" target="_blank" rel="noopener noreferrer">Tuta introduces key verification</a>, „Tuta“, 2025 m. rugpjūčio 26 d.</li>
+<li><a href="https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards" target="_blank" rel="noopener noreferrer">End to anonymity: Lithuania to require users to register phone SIM cards</a>, LRT, 2024 m. lapkričio 14 d.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="email-1" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="email-1" aria-label="Susikurk pašto dėžutę paslaugoje, kurią finansuoja jos naudotojai"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-1">Susikurk pašto dėžutę paslaugoje, kurią finansuoja jos naudotojai</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="email-2" aria-label="Paruošk pseudonimų paslaugą ir įdiek jos naršyklės plėtinį"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-2">Paruošk pseudonimų paslaugą ir įdiek jos naršyklės plėtinį</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="email-3" aria-label="Susikurk pirmąjį pseudonimą ir panaudok jį per kitą registraciją"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-3">Susikurk pirmąjį pseudonimą ir panaudok jį per kitą registraciją</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="email-4" aria-label="5 svarbiausiose paskyrose nurodyk naująjį adresą"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-4">5 svarbiausiose paskyrose nurodyk naująjį adresą</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="email-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="email-5" aria-label="Įjunk persiuntimą iš senosios pašto dėžutės ir perkelk likusias paskyras"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="email-5">Įjunk persiuntimą iš senosios pašto dėžutės ir perkelk likusias paskyras</label>
+        <span class="bk-effort">Savaitgalis</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/browser/"><span>Ankstesnis</span>Tavo naršyklė ir paieška</a>
+<a class="bk-next" href="/book/network/"><span>Kitas</span>Tavo tinklas</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

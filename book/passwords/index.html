@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo slaptažodžiai ir paskyros · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/passwords/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/passwords/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/passwords/'">EN</button>
+</nav>
+
+<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page priv page-top" data-slug="passwords">
+  <header class="bk-head">
+    <p class="bk-label">Privatumo įrodymas · 2 skyrius</p>
+    <h1>Tavo slaptažodžiai ir paskyros</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Keliose svetainėse kartojamas slaptažodis, greta sukčiavimo apsimetant (angl. phishing), tebėra vienas dažniausių būdų perimti paprastų žmonių paskyras. Slaptažodžių tvarkyklė kiekvienai svetainei sukuria ir įsimena vis kitą slaptažodį, o ją pačią apsaugai viena stipria slaptafraze. Tada svarbiausiose paskyrose įjungi antrąjį veiksnį, pirmiausia el. pašto, nes tas, kieno rankose tavo el. paštas, gali atkurti beveik visų kitų paskyrų slaptažodžius.</p>
+<h2>Nutekėjęs slaptažodis atrakina daug durų</h2>
+<p>2019 m. sausį saugumo tyrėjas Troy Hunt viename įsilaužėlių forume aptiko platinamą failų rinkinį, pavadintą <a href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/" target="_blank" rel="noopener noreferrer">„Collection #1“</a>. Jame buvo 773 mln. unikalių el. pašto adresų ir daugiau kaip 21 mln. unikalių slaptažodžių, surinktų iš tūkstančių senesnių duomenų nutekėjimų. Tokius sąrašus užpuolikai sukelia į programas, kurios kiekvieną adreso ir slaptažodžio porą išbando kitose paslaugose, pavyzdžiui, tavo el. pašte, parduotuvėse ir socialiniuose tinkluose. Ši technika vadinama <strong>masiniu nutekėjusių prisijungimo duomenų bandymu</strong> (angl. credential stuffing).</p>
+<p>Asmeniškai į tave niekas nesitaiko, tiesiog durys atsidaro visur, kur dar kartą panaudojai nutekėjusį slaptažodį. Būtent taip nuo 2023 m. balandžio iki rugsėjo nukentėjo genetinių tyrimų bendrovė „23andMe“. Jungtinės Karalystės priežiūros institucija <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/" target="_blank" rel="noopener noreferrer">2025 m. birželį skyrė jai 2,31 mln. svarų sterlingų baudą</a> po to, kai buvo atskleisti 155 592 šios šalies gyventojų duomenys, ir pažymėjo, kad prisijungiant bendrovė nereikalavo antrojo veiksnio.</p>
+<p>Ar tavo adresas pateko į žinomus nutekėjimus, gali pasitikrinti nemokamoje svetainėje <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">„Have I Been Pwned“</a>, kurią tvarko Troy Hunt. Tie, kas internetu naudojasi 10 metų, paprastai randa kelis nutekėjimus. Svarbiausia paskyra yra el. paštas, nes tas, kas ją valdo, gali spustelėti „pamiršau slaptažodį“ beveik visur kitur.</p>
+<h2>Viena slaptafrazė, o tada antrasis veiksnys</h2>
+<p><strong>Slaptažodžių tvarkyklė</strong> yra šifruota saugykla, kuri kiekvienai svetainei sukuria ilgą atsitiktinį slaptažodį, jį įsimena ir už tave įrašo. Saugykla užšifruojama tavo įrenginyje dar prieš sinchronizuojant, todėl, jei paslauga sukurta gerai, teikėjas jos perskaityti negali, o tau užtenka atsiminti 1 paslaptį vietoj 100. Ta paslaptis turėtų būti <strong>slaptafrazė</strong> iš 6 atsitiktinių žodžių, parinktų, pavyzdžiui, metant kauliuką ir pagal iškritusius skaičius ieškant žodžių sąraše (šis metodas vadinamas „diceware“). Ją sunku atspėti, o įsiminti kur kas lengviau nei „xK9#qL2v“.</p>
+<p><strong>Dviejų veiksnių autentifikavimas</strong> (2FA) prideda dar vieną žingsnį po slaptažodžio: svetainė paprašo to, ką turi. SMS žinute atsiųstas kodas yra silpnas variantas, nes nusikaltėlis gali įkalbėti operatorių ir tavo numerį persikelti į savo SIM kortelę. Tokia ataka vadinama SIM kortelės perėmimu (angl. SIM swap). 2020 m. kovą <a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" target="_blank" rel="noopener noreferrer">Europolas pranešė, kad Ispanijoje sulaikyta 12 žmonių</a>, kurie naudodami SIM kortelių dublikatus daugiau kaip 100 kartų ištuštino banko sąskaitas ir iš viso pasisavino daugiau kaip 3 mln. eurų.</p>
+<p>Autentifikavimo programėlė yra gerokai geresnis variantas, o stipriausias yra aparatinis saugos raktas. <strong>Prieigos raktai</strong> (angl. passkeys) remiasi ta pačia technologija kaip šie raktai ir pakeičia patį slaptažodį.</p>
+<h2>Net ir su nuliniu žinojimu lieka saugyklos laikytojas</h2>
+<p>Šifravimas užtikrina sinchronizuojamos saugyklos konfidencialumą, tačiau bendrovė, kuri ją laiko ir siunčia tau naujinius, lieka patikima trečiąja šalimi. Teikėjai tokią architektūrą vadina nulinio žinojimo (angl. zero knowledge) architektūra: saugyklą jie laiko, bet ją atrakinančios slaptafrazės neturi. 2022 m. gruodį bendrovė „LastPass“ <a href="https://blog.lastpass.com/posts/notice-of-recent-security-incident" target="_blank" rel="noopener noreferrer">patvirtino, kad įsilaužėlis nusikopijavo klientų saugyklų atsarginę kopiją</a>. Slaptažodžiai ir užrašai buvo užšifruoti, svetainių adresai ne, o kiekviena pavogta saugykla liko tik tiek saugi, kiek stiprus buvo jos savininko pagrindinis slaptažodis. Jungtinės Karalystės priežiūros institucija, kuri <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/" target="_blank" rel="noopener noreferrer">2025 m. gruodį skyrė bendrovei 1,2 mln. svarų sterlingų baudą</a> dėl to, kad nukentėjo iki 1,6 mln. šios šalies naudotojų, nerado įrodymų, kad slaptažodžiai būtų buvę iššifruoti.</p>
+<p>Kai programėlė yra atvirojo kodo, ekspertai šį teiginį gali palyginti su kodu, o papildomų įrodymų duoda paskelbti auditai, pavyzdžiui, <a href="https://keepassxc.org/audits/" target="_blank" rel="noopener noreferrer">saugumo sertifikatas, kurį Prancūzijos kibernetinio saugumo agentūra ANSSI 2025 m. suteikė programai „KeePassXC“</a>. Jei saugyklą laikai vietiniame faile arba nuosavame serveryje, saugyklos laikytojo nebelieka, bet tada atsarginės kopijos, naujiniai ir sinchronizavimas tampa tavo rūpesčiu.</p>
+<p>Trečiųjų šalių turi ir antrieji veiksniai. Svetainė saugo tą pačią paslaptį kaip ir autentifikavimo programėlė, o jos kopiją gali turėti ir sinchronizavimo paslauga. O aparatinis raktas autentiškumą tikrina dar ir priešinga kryptimi, nes patikrina, kuri svetainė į jį kreipiasi.</p>
+<h2>Kaip pasirinkti slaptažodžių tvarkyklę</h2>
+<p>Visi toliau pateikti variantai kur kas geresni už kartojamus slaptažodžius, o skiriasi jie tuo, kas laiko tavo šifruotą saugyklą, ar kodas viešas ir kiek darbo sutinki prisiimti.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Tvarkyklė</th>
+<th>Atvirasis kodas</th>
+<th>Kur laikoma saugykla</th>
+<th>Kuo tenka pasitikėti ir ką gali patikrinti</th>
+<th>Kaina</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a></strong></td>
+<td>Taip</td>
+<td>„<a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a>“ debesijoje arba nuosavame serveryje</td>
+<td>Bendrove „Bitwarden“, kuri laiko saugyklą ir teikia programėlių naujinius. Kodas viešas, kasmet skelbiami nepriklausomi auditai. Paleidus tvarkyklę nuosavame serveryje bendrovės nebereikia.</td>
+<td>Nemokama, yra pasirenkamas mokamas planas</td>
+<td>Lengviausias atvirojo kodo variantas, veikia visuose įrenginiuose. Numatytąją paslaugą valdo viena JAV bendrovė.</td>
+</tr>
+<tr>
+<td><strong><a href="https://keepassxc.org/" target="_blank" rel="noopener noreferrer">KeePassXC</a></strong></td>
+<td>Taip</td>
+<td>Faile tavo kompiuteryje</td>
+<td>Saugyklos laikytojo nėra. Pasikliauji viešu programos kodu, kurį 2025 m. sertifikavo ANSSI, ir savo atsarginėmis kopijomis.</td>
+<td>Nemokama</td>
+<td>Nėra nei bendrovės, nei debesijos, nei paskyros. Sinchronizavimu ir atsarginėmis kopijomis rūpiniesi tu. Telefone naudok suderinamas programėles, pavyzdžiui, <a href="https://www.keepassdx.com/" target="_blank" rel="noopener noreferrer">„KeePassDX“</a> („Android“) arba <a href="https://keepassium.com/" target="_blank" rel="noopener noreferrer">„KeePassium“</a> („iPhone“).</td>
+</tr>
+<tr>
+<td><strong><a href="https://proton.me/pass" target="_blank" rel="noopener noreferrer">Proton Pass</a></strong></td>
+<td>Taip</td>
+<td>„<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ debesijoje (Šveicarijos bendrovė)</td>
+<td>Bendrove „Proton“, kuri laiko saugyklą ir teikia programėlių naujinius. Programėlių kodas viešas, 2023 m. jo auditą atliko bendrovė „Cure53“. Nuosavame serveryje paleisti negalima.</td>
+<td>Nemokama, yra pasirenkamas mokamas planas</td>
+<td>Yra el. pašto pseudonimai. Patogu, jei jau naudojiesi „Proton“ paslaugomis, tačiau taip dar didesnė tavo gyvenimo dalis sutelkiama vienoje bendrovėje.</td>
+</tr>
+<tr>
+<td><strong><a href="https://1password.com/" target="_blank" rel="noopener noreferrer">1Password</a></strong></td>
+<td>Ne, kodas uždaras</td>
+<td>„<a href="https://1password.com/" target="_blank" rel="noopener noreferrer">1Password</a>“ debesijoje (Kanados bendrovė)</td>
+<td>Bendrove „1Password“, kuri laiko saugyklą, teikia naujinius ir valdo patį kodą. Ji skelbia auditų ataskaitas, bet ne programos kodą.</td>
+<td>Tik mokama prenumerata</td>
+<td>Išbaigtas produktas, patogus šeimoms, reguliariai audituojamas. Viešai kodo patikrinti negalima.</td>
+</tr>
+<tr>
+<td><strong>Įtaisyta naršyklėje arba sistemoje</strong> (<a href="https://passwords.google.com/" target="_blank" rel="noopener noreferrer">„Google“</a>, <a href="https://support.apple.com/en-us/120758" target="_blank" rel="noopener noreferrer">„Apple“</a>, <a href="https://www.firefox.com/en-US/features/password-manager/" target="_blank" rel="noopener noreferrer">„Firefox“</a>)</td>
+<td>Įvairiai</td>
+<td>Tavo „Google“, „Apple“ arba „<a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a>“ paskyroje</td>
+<td>Bendrove „Google“, „Apple“ arba „Mozilla“, kuri laiko saugyklą, teikia naujinius ir atkuria paskyrą. Visas kodas viešas tik naršyklės „<a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>“.</td>
+<td>Nemokama</td>
+<td>Jau yra įrenginyje, ir tai kur kas geriau nei nieko. Pririša prie vienos naršyklės ar ekosistemos, o saugi tik tiek, kiek saugi ta pagrindinė paskyra.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: <strong>tvarkyklė „Bitwarden“ arba „Proton Pass“</strong>, jei nori sinchronizavimo be pastangų, arba <strong>programa „KeePassXC“</strong>, jei nenori, kad tavo saugyklą, net ir šifruotą, laikytų kokia nors bendrovė.</p>
+<h2>Kaip pasirinkti autentifikavimo programėlę</h2>
+<p>Autentifikavimo programėlė rodo 6 skaitmenų kodą, kuris keičiasi kas 30 sekundžių. Svetainė ir telefonas turi bendrą paslaptį (tai QR kodas, kurį vieną kartą nuskenuoji) ir abu pagal ją apskaičiuoja tą patį kodą net be tinklo ryšio, todėl daugumai paskyrų tai tinkamas antrasis veiksnys. Rinkis atvirojo kodo programėlę, iš kurios kodus galima vėl išsikelti: jei paslaptys laikomos tik 1 telefone, jį pametus ar jam sugedus iškart nebepateksi niekur. Šiuos kodus dažnai gali saugoti ir slaptažodžių tvarkyklė. Tai patogu, bet tada abu veiksniai atsiduria vienoje vietoje.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Programėlė</th>
+<th>Platformos</th>
+<th>Atvirasis kodas</th>
+<th>Atsarginės kopijos ir sinchronizavimas</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://getaegis.app/" target="_blank" rel="noopener noreferrer">Aegis</a></strong></td>
+<td>Tik „Android“</td>
+<td>Taip</td>
+<td>Šifruota saugykla laikoma telefone. Šifruotas atsargines kopijas eksportuoji savarankiškai.</td>
+<td>Nėra nei debesijos, nei paskyros, todėl nereikia pasitikėti jokia sinchronizavimo paslauga. Atsarginėmis kopijomis rūpiniesi tu, o versijos „iPhone“ telefonams nėra.</td>
+</tr>
+<tr>
+<td><strong><a href="https://ente.com/auth/" target="_blank" rel="noopener noreferrer">Ente Auth</a></strong></td>
+<td>„Android“, „iPhone“, „Windows“, „Mac“, „Linux“, žiniatinklis</td>
+<td>Taip</td>
+<td>Pasirinktinai galima įjungti ištisiniu būdu šifruojamą sinchronizavimą, kuriam reikia „<a href="https://ente.com/" target="_blank" rel="noopener noreferrer">Ente</a>“ paskyros. Veikia ir be interneto, ir be paskyros.</td>
+<td>Kodus turi visuose savo įrenginiuose. Sinchronizavimas priklauso nuo vienos mažos bendrovės.</td>
+</tr>
+<tr>
+<td><strong><a href="https://2fas.com/" target="_blank" rel="noopener noreferrer">2FAS</a></strong></td>
+<td>„Android“, „iPhone“ ir naršyklės plėtinys</td>
+<td>Taip</td>
+<td>Atsarginė kopija daroma per tavo „Google Drive“ arba „iCloud“ paskyrą.</td>
+<td>Paprasta naudotis. Atsarginė kopija saugi tik tiek, kiek saugi ta „Google“ arba „Apple“ paskyra.</td>
+</tr>
+<tr>
+<td><strong><a href="https://proton.me/authenticator" target="_blank" rel="noopener noreferrer">Proton Authenticator</a></strong></td>
+<td>„Android“, „iPhone“, „Windows“, „Mac“, „Linux“</td>
+<td>Taip</td>
+<td>Veikia be paskyros. Turint „<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ paskyrą pasirinktinai galima įjungti ištisiniu būdu šifruojamą sinchronizavimą, be to, kodus galima eksportuoti ir importuoti pačiame įrenginyje.</td>
+<td>Nemokama, pasirodė 2025 m. liepą, taigi jaunesnė už kitas. Jei jau naudojiesi „Proton“ paslaugomis, šiai bendrovei patiki dar vieną savo gyvenimo dalį.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: <strong>programėlė „Aegis“</strong> sistemoje „Android“, jei sutinki atsarginėmis kopijomis rūpintis savarankiškai, arba <strong>„Ente Auth“ ar „Proton Authenticator“</strong>, jei nori turėti kodus keliuose įrenginiuose. Kad ir ką pasirinktum, vieną kartą išbandyk eksportą arba atsarginę kopiją.</p>
+<h2>Aparatiniai saugos raktai</h2>
+<p>Aparatinis saugos raktas yra kitokio pobūdžio įrankis. Šis mažas fizinis įrenginys jungiamas į USB jungtį arba priglaudžiamas prie telefono (NFC). Jame laikomas privatusis raktas, kuris sukurtas taip, kad niekada įrenginio nepaliktų, o pats įrenginys remiasi atviraisiais standartais FIDO2 ir WebAuthn. Kai jungiesi, raktas prieš atsakydamas patikrina tikrąjį svetainės adresą, o tau lieka jį paliesti ir taip patvirtinti prisijungimą. Netikras prisijungimo puslapis iš jo nieko negauna, o programėlės kodą apgautas naudotojas vis dar gali įvesti ne tame puslapyje. Tuose pačiuose raktuose galima laikyti ir <strong>prieigos raktus</strong>.</p>
+<p>Nusipirk 2 raktus ir abu užregistruok kiekvienoje paskyroje: vienas bus ant raktų ryšulio, kitas saugioje vietoje. Raktus palaiko ne visos svetainės, todėl pasilik ir autentifikavimo programėlę, o raktus pirmiausia naudok svarbiausioms paskyroms: el. paštui, slaptažodžių tvarkyklei ir pagrindinei „Apple“ arba „Google“ paskyrai.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Raktas</th>
+<th>Gamintojas</th>
+<th>Jungtis</th>
+<th>Atvirasis kodas</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.yubico.com/" target="_blank" rel="noopener noreferrer">YubiKey</a></strong></td>
+<td>„Yubico“ (Švedija ir JAV)</td>
+<td>USB-A arba USB-C, daugumoje modelių yra NFC</td>
+<td>Ne, programinė aparatinė įranga (angl. firmware) uždara</td>
+<td>Palaikomas plačiausiai, dokumentacija išsamiausia. Įrenginio programinės įrangos negalima nei patikrinti, nei atnaujinti. Prisijungti pakanka pigesnės serijos „Security Key“.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.nitrokey.com/" target="_blank" rel="noopener noreferrer">Nitrokey</a></strong></td>
+<td>„<a href="https://www.nitrokey.com/" target="_blank" rel="noopener noreferrer">Nitrokey</a>“ (Vokietija)</td>
+<td>USB-A arba USB-C, kai kuriuose modeliuose yra NFC</td>
+<td>Taip, ir įrenginio programinė įranga, ir aparatinė dalis</td>
+<td>Įrenginio programinę įrangą galima atnaujinti. Modelių mažiau, dokumentacija ne tokia išbaigta.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.token2.com/" target="_blank" rel="noopener noreferrer">Token2</a></strong></td>
+<td>„<a href="https://www.token2.com/" target="_blank" rel="noopener noreferrer">Token2</a>“ (Šveicarija)</td>
+<td>USB-A arba USB-C, daugumoje modelių yra NFC</td>
+<td>Iš dalies. Įrenginio programinės įrangos FIDO2 dalis vieša ir 2024 m. nepriklausomai patikrinta, visa kita uždara</td>
+<td>Raktai pigesni. Gamintojas mažiau žinomas.</td>
+</tr>
+<tr>
+<td><strong><a href="https://onlykey.io/" target="_blank" rel="noopener noreferrer">OnlyKey</a></strong></td>
+<td>„CryptoTrust“ (JAV)</td>
+<td>Tik USB, NFC nėra</td>
+<td>Taip, įrenginio programinė įranga</td>
+<td>Turi savo mygtukus PIN kodui įvesti ir gali įrašyti išsaugotus slaptažodžius. Didesnis ir sudėtingesnis, nei reikia pradedantiesiems.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: 2 bet kurio iš šių gamintojų raktai ir autentifikavimo programėlė toms svetainėms, kurios raktų nepriima.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkta tvarkyklė „Bitwarden“, nes ji nemokama, atvirojo kodo ir veikia visose sistemose, o kitose tvarkyklėse logika ta pati.</p>
+<ol>
+<li><strong>Susikurk slaptafrazę.</strong> Mesk kauliuką ir ieškok žodžių <a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">organizacijos „Electronic Frontier Foundation“ (EFF) žodžių sąraše</a> arba naudokis tvarkyklės slaptafrazių generatoriumi, kol turėsi 6 žodžius (EFF rekomenduoja ne mažiau kaip 6). Užsirašyk slaptafrazę ant popieriaus ir laikyk tą lapą saugioje vietoje namuose.</li>
+<li><strong>Įdiek tvarkyklę</strong> kompiuteryje (kaip naršyklės plėtinį) ir telefone, tada su ta slaptafraze susikurk paskyrą. Jei ją pamirši, niekas už tave jos neatkurs, ir būtent tokia yra šios architektūros esmė.</li>
+<li><strong>Pradėk nuo el. pašto.</strong> Prisijunk prie el. pašto paskyros, pakeisk slaptažodį tvarkyklės sugeneruotu ir išsaugok jį saugykloje.</li>
+<li><strong>Perkelk dar 4 paskyras:</strong> pagrindinę „Apple“ arba „Google“ paskyrą, banko ar mokėjimų programėlę, pagrindinį socialinį tinklą ir parduotuvę, kurioje išsaugota tavo mokėjimo kortelė. Kitas perkelsi per ateinančias savaites, kaskart, kai kur nors prisijungsi.</li>
+<li><strong>Įjunk 2FA su autentifikavimo programėle</strong> tose 5 paskyrose, pirmiausia el. pašto, ir pačioje slaptažodžių tvarkyklėje. Kiekvienos paskyros saugumo nustatymuose ieškok „patvirtinimas dviem veiksmais“ arba „dviejų veiksnių autentifikavimas“ (angl. „two-step verification“, „two-factor authentication“), tada programėle nuskenuok QR kodą ir įvesk jos rodomą kodą. Jei svetainė leidžia, pašalink SMS žinutes iš patvirtinimo būdų.</li>
+<li><strong>Užregistruok aparatinius raktus, jei juos pasirinkai.</strong> Tuose pačiuose saugumo nustatymuose pasirink „saugos raktas“ (angl. „security key“), kartais „prieigos raktas“ (angl. „passkey“). Prijunk arba priglausk pirmąjį raktą, paliesk jį ir suteik jam pavadinimą, tada iškart pakartok tą patį su antruoju. Būtent šis žingsnis pasitikėjimą pakeičia patikrinimu, nes nuo tol kaskart prisijungiant svetainės adresą tikrina raktas, o ne tavo akys. Vieną raktą nešiokis su savimi, kitą laikyk saugioje vietoje, o autentifikavimo programėlę pasilik kaip atsarginį variantą.</li>
+<li><strong>Išsaugok atkūrimo kodus atskirai nuo slaptafrazės.</strong> Dauguma svetainių duoda vienkartinių kodų tai dienai, kai prarasi telefoną ar raktus. Atsispausdink juos ir laikyk kitoje vietoje nei lapą su slaptafraze, pavyzdžiui, slaptafrazę namuose, o kodus užklijuotame voke pas patikimą giminaitį, kad 1 lapą radęs žmogus negautų visko.</li>
+<li><strong>Pasirūpink prieiga nelaimės atveju.</strong> Kai kurios tvarkyklės turi avarinės prieigos funkciją (angl. emergency access), skirtą patikimam žmogui (tvarkyklėje „Bitwarden“ ji įeina į mokamą planą). Tinka ir rašytiniai nurodymai šeimai, kuriuose pasakyta, kur yra tie 2 lapai.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Laikyti slaptafrazę tik galvoje.</strong> Atmintis gali pavesti po ligos, nelaimingo atsitikimo ar ilgų atostogų. Popierinė kopija saugioje vietoje nėra silpnoji vieta, jei tik atkūrimo kodai laikomi kitur.</li>
+<li><strong>Palikti SMS žinutes kaip atsarginį būdą.</strong> Jei svetainė vis dar priima SMS kodą, SIM kortelės perėmimas vis dar veikia, todėl pašalink šį būdą visur, kur svetainė leidžia.</li>
+<li><strong>Turėti 1 autentifikavimo programėlę arba 1 aparatinį raktą ir neturėti jokios atsarginės kopijos.</strong> Pamestas telefonas ar raktas turėtų kainuoti vieną popietę, o ne paskyras, todėl ir eksportuoji kodus bei registruoji 2 raktus.</li>
+<li><strong>Laikyti slaptažodžius užrašuose, skaičiuoklėse ar el. laiškuose.</strong> Tai nėra šifruotos saugyklos, ir tai vienos pirmųjų vietų, kur ieško įsibrovėlis.</li>
+<li><strong>Įvesti kodą puslapyje, į kurį patekai iš žinutės.</strong> Sukčiai apsimesdami gali išvilioti ir autentifikavimo programėlės kodus. Jei tvarkyklė nesiūlo įrašyti slaptažodžio, patikrink adresą, nes gali būti, kad atsidūrei netikroje svetainėje.</li>
+<li><strong>Bandyti viską pakeisti per vieną vakarą.</strong> Pradėk nuo 5 minėtų paskyrų, o kitas perkelk per ateinančias savaites, kaskart, kai kur nors prisijungsi.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kodėl nuo tavo raktų priklauso tavo interneto sauga“, pranešimą skaito Satoshine. Slaptafrazė, aparatinis raktas ir prieigos raktas įgyvendina tą pačią idėją, t. y. paslaptį, kurią turi tik tu.</li>
+<li><strong>Pasitikrink, kiek tavo duomenų nutekėjo:</strong> <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">„Have I Been Pwned“</a>.</li>
+<li><strong>Susikurk slaptafrazę kauliuku:</strong> <a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">organizacijos „Electronic Frontier Foundation“ žodžių sąrašai</a>.</li>
+<li><strong>Išsamiai palygink įrankius:</strong> „Privacy Guides“, <a href="https://www.privacyguides.org/en/passwords/" target="_blank" rel="noopener noreferrer">„Password Managers“</a> (slaptažodžių tvarkyklės), <a href="https://www.privacyguides.org/en/multi-factor-authentication/" target="_blank" rel="noopener noreferrer">„Multifactor Authentication“</a> (kelių veiksnių autentifikavimas) ir <a href="https://www.privacyguides.org/en/security-keys/" target="_blank" rel="noopener noreferrer">„Security Keys“</a> (saugos raktai).</li>
+<li><strong>Kitas skyrius:</strong> tavo naršyklė ir paieška.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/" target="_blank" rel="noopener noreferrer">The 773 Million Record „Collection #1“ Data Breach</a>, Troy Hunt, 2019 m. sausio 17 d.</li>
+<li><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/" target="_blank" rel="noopener noreferrer">23andMe fined £2.31 million for failing to protect UK users' genetic data</a>, „Information Commissioner's Office“ (Jungtinė Karalystė), 2025 m. birželio 17 d.</li>
+<li><a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" target="_blank" rel="noopener noreferrer">The SIM highjackers: how criminals are stealing millions by highjacking phone numbers</a>, Europolas, 2020 m. kovo 13 d.</li>
+<li><a href="https://blog.lastpass.com/posts/notice-of-recent-security-incident" target="_blank" rel="noopener noreferrer">Notice of recent security incident</a>, „LastPass“, 2022 m. gruodžio 22 d.</li>
+<li><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/" target="_blank" rel="noopener noreferrer">Password manager provider fined £1.2m by ICO for data breach</a>, „Information Commissioner's Office“ (Jungtinė Karalystė), 2025 m. gruodžio 11 d.</li>
+<li><a href="https://keepassxc.org/audits/" target="_blank" rel="noopener noreferrer">KeePassXC security audits and certifications</a>, „KeePassXC“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">EFF Dice-Generated Passphrases</a>, „Electronic Frontier Foundation“, žiūrėta 2026 m. rugsėjį.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="passwords-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="passwords-1" aria-label="Patikrink savo el. pašto adresą svetainėje „Have I Been Pwned“"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-1">Patikrink savo el. pašto adresą svetainėje „Have I Been Pwned“</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="passwords-2" aria-label="Įdiek slaptažodžių tvarkyklę ir susikurk slaptafrazę iš 6 atsitiktinių žodžių"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-2">Įdiek slaptažodžių tvarkyklę ir susikurk slaptafrazę iš 6 atsitiktinių žodžių</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="passwords-3" aria-label="El. paštui sukurk naują unikalų slaptažodį ir įjunk 2FA su autentifikavimo programėle, o jei nusipirkai 2 aparatinius raktus, užregistruok ir juos"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-3">El. paštui sukurk naują unikalų slaptažodį ir įjunk 2FA su autentifikavimo programėle, o jei nusipirkai 2 aparatinius raktus, užregistruok ir juos</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="passwords-4" aria-label="Perkelk 4 kitas svarbiausias paskyras ir, kur įmanoma, pašalink SMS kodus"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-4">Perkelk 4 kitas svarbiausias paskyras ir, kur įmanoma, pašalink SMS kodus</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="passwords-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="passwords-5" aria-label="Popieriuje užrašytą slaptafrazę laikyk vienoje saugioje vietoje, atkūrimo kodus kitoje ir pasakyk 1 patikimam žmogui, kur jie yra"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="passwords-5">Popieriuje užrašytą slaptafrazę laikyk vienoje saugioje vietoje, atkūrimo kodus kitoje ir pasakyk 1 patikimam žmogui, kur jie yra</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/messages/"><span>Ankstesnis</span>Tavo žinutės</a>
+<a class="bk-next" href="/book/browser/"><span>Kitas</span>Tavo naršyklė ir paieška</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

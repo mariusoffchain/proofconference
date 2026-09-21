@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Privatumas Bitcoin tinkle · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/bitcoin-privacy/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/bitcoin-privacy/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/bitcoin-privacy/'">EN</button>
+</nav>
+
+<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page mono page-top" data-slug="bitcoin-privacy">
+  <header class="bk-head">
+    <p class="bk-label">Darbo įrodymas · 16 skyrius</p>
+    <h1>Privatumas Bitcoin tinkle</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Pagrindiniame Bitcoin sluoksnyje privatumo nėra, nes kiekviena transakcija lieka vieša ir ją visada bus galima atsekti. Tačiau adrese nėra vardo. Su tavimi jį susieja biržos atliekamas tapatybės tikrinimas arba tave pažįstantys žmonės, su kuriais atsiskaitai, o tada stebėtojas jau gali susieti piniginę su žmogumi. Keli įpročiai šį atvirumą gerokai sumažina (nauji adresai, atskiros piniginės, pažymėtos monetos, savo mazgas, Lightning kasdienėms išlaidoms), o pažengusiems skirtais įrankiais, tokiais kaip coinjoin ir payjoin, privatumo galima įgyti dar daugiau. Nė vienas iš jų nekeičia tavo teisinių ir mokestinių prievolių.</p>
+<h2>Viešasis registras, kuris nieko nepamiršta</h2>
+<p>Banko sąskaitos išrašą matai tu ir tavo bankas, o Bitcoin registrą gali skaityti bet kas, ir iš jo niekas niekada neištrinama. Tie, kas sako, kad Bitcoin trūksta privatumo, dėl šio pagrindinio sluoksnio yra teisūs, nes kiekvieną transakciją visada galima atsekti.</p>
+<p>Tie, kas atsako, kad adresas nėra tapatybė, irgi teisūs, bet tik iš dalies. Adrese nėra vardo, o vardas prie jo prisegamas tik per kitur atsiradusią sąsają. Tavo tapatybę patikrinusi birža žino, kur išsiėmei bitkoinus. Žmonės, su kuriais atsiskaitai, tave pažįsta, pavyzdžiui, internetinė parduotuvė žino tavo vardą ir pavardę ir mato adresą, iš kurio sumokėjai. Analitikos įmonės iš to daro verslą: renka šias sąsajas, grupuoja adresus pagal savininką ir parduoda rezultatą, todėl stebėtojas gali susieti piniginę su konkrečiu žmogumi.</p>
+<p>Nuo tos akimirkos ankstesnę ir būsimą su tuo adresu susijusią veiklą gali sekti prekybininkas, darbdavys, buto nuomotojas ar smalsus pažįstamas.</p>
+<p>Pavojus yra ir fizinis. 2025 m. sausį <a href="https://www.coindesk.com/policy/2025/01/24/ledger-co-founder-s-kidnapping-sheds-light-on-soaring-crypto-robberies" target="_blank" rel="noopener noreferrer">vienas iš bendrovės „Ledger“ įkūrėjų David Balland buvo pagrobtas savo namuose Prancūzijoje</a>, ir užpuolikai reikalavo išpirkos kriptovaliuta, kol policija išlaisvino jį ir jo partnerę. Programuotojas Jameson Lopp tvarko <a href="https://github.com/jlopp/physical-bitcoin-attacks" target="_blank" rel="noopener noreferrer">viešą fizinių išpuolių prieš bitkoinų turėtojus sąrašą</a>.</p>
+<h2>Dideli judėjimai matomi, o pavieniai žmonės turi įrankių</h2>
+<p>Valstybių leidžiamų pinigų (angl. fiat money) pasaulyje didžiausi veikėjai stambias transakcijas gali paslėpti už finansinių struktūrų, tokių kaip kontroliuojančiosios bendrovės, patikos fondai ir sąskaitos keliose jurisdikcijose, o gyventojų kasdienės banko operacijos stebimos atidžiai, mokėjimas po mokėjimo. Bitcoin tinkle paprastai būna atvirkščiai. Privatumo protokolai labai didelėms sumoms netinka, nes, pavyzdžiui, coinjoin transakcijai reikia daug dalyvių, perkeliančių panašias sumas. Todėl kai bitkoinus perkelia valstybė ar didelė institucija, viešajame registre tai paprastai matyti. 2024 m. vasarą Vokietijos Saksonijos žemė <a href="https://www.medienservice.sachsen.de/medien/news/1077662" target="_blank" rel="noopener noreferrer">nuo birželio 19 d. iki liepos 12 d. pardavė apie 49 858 areštuotus bitkoinus</a>, o spauda, remdamasi analitikos įmonės „Arkham“ duomenimis, diena po dienos <a href="https://cointelegraph.com/news/german-government-354m-btc-sell-off" target="_blank" rel="noopener noreferrer">sekė pervedimus iš pažymėtos piniginės į biržas</a>.</p>
+<p>O pavienis žmogus turi įrankių, kuriais gali įgyti privatumo ir apsisaugoti nuo tapatybės atskleidimo (angl. deanonymisation). Jie pristatomi likusioje šio skyriaus dalyje. Tam reikia atidumo ir šiek tiek pasimokyti, tačiau tinkamai juos taikantis žmogus praktikoje gali naudotis Bitcoin privačiai.</p>
+<h2>3 dėsningumai, kurie tave išduoda</h2>
+<p>Bitkoinus geriau įsivaizduoti ne kaip sąskaitos likutį, o kaip atskiras skirtingo dydžio monetas, panašiai kaip banknotus odinėje piniginėje. Kiekviena gauta moneta įrašyta viešajame registre kartu su suma ir adresu.</p>
+<p>Daug atskleidžia 3 paprasti dėsningumai:</p>
+<ul>
+<li><strong>Pakartotinis adreso naudojimas.</strong> Jei į tą patį adresą gauni 10 mokėjimų, bet kas gali pamatyti visus 10, juos susumuoti ir stebėti, kada jie pajuda.</li>
+<li><strong>Sujungtos įvestys.</strong> Kai moki, piniginė gali sujungti kelias monetas į 1 transakciją, panašiai kaip mokant 2 banknotais. Stebėtojas padaro išvadą, kad abi monetos priklauso tam pačiam žmogui, todėl su tavo vardu susieta 1 moneta dabar išduoda ir kitą.</li>
+<li><strong>Grąža.</strong> Jei 50 vertės moneta sumoki 30, likę 20 grįžta į naują tavo adresą. Stebėtojai dažnai gali atspėti, kuri išvestis yra grąža, ir sekti tave toliau.</li>
+</ul>
+<p>Analitikai šiuos spėjimus, vadinamus euristikomis (angl. heuristics), derina tarpusavyje. Spėjimai ne visada pasitvirtina, bet profiliui sudaryti jų pakanka, o geri privatumo įpročiai palieka analitikams mažiau medžiagos.</p>
+<h2>KYC ir ką jis reiškia</h2>
+<p>KYC reiškia „pažink savo klientą“ (angl. know your customer), t. y. tapatybės tikrinimą, kurį privalo atlikti reguliuojamos kriptovaliutų biržos. Nusiunti asmens dokumento kopiją, dažnai kartu su asmenuke ir gyvenamosios vietos patvirtinimu. Įmonei tai teisinė pareiga, o naudotis tokia paslauga yra visiškai normalu.</p>
+<p>Vis dėlto taip atsiranda ilgalaikė tavo tapatybės ir bitkoinų sąsaja, saugoma įmonės duomenų bazėje. Europos Sąjungoje <a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="noopener noreferrer">MiCA reglamentas</a> kriptoturto paslaugų teikėjams taikomas nuo 2024 m. gruodžio 30 d., o pereinamasis laikotarpis baigėsi 2026 m. liepos 1 d. Be to, nuo 2026 m. sausio 1 d. <a href="https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/directive-administrative-cooperation-dac/dac8_en" target="_blank" rel="noopener noreferrer">DAC8 direktyva</a> įpareigoja šiuos teikėjus rinkti duomenis apie ES gyvenančių naudotojų sandorius ir teikti juos mokesčių administratoriams, o šie nuo 2027 m. jais keisis su kitų valstybių narių administratoriais. Tokios duomenų bazės gali nutekėti, o bitkoinų turinčių žmonių sąrašas su namų adresais nusikaltėliams akivaizdžiai įdomus.</p>
+<p>Bitkoinų galima įsigyti ir lygiarangėse (angl. peer-to-peer) rinkose, kuriose keitiesi tiesiogiai su kitu žmogumi ir jokia centrinė įmonė tavo dokumentų nerenka. Daugumoje šalių tai teisėta, tačiau taisyklės skiriasi, todėl pasitikrink, kokios galioja tavo šalyje. Mokestinės prievolės lieka visiškai tokios pat, kad ir kaip bitkoinus įsigijai, todėl įrašus kaupk savarankiškai.</p>
+<h2>Kas sužino, kurios monetos tavo</h2>
+<p>Registre rodomi adresai be vardų, todėl tavo konfidencialumas priklauso nuo tų, kas gali prie jų prisegti tavo vardą.</p>
+<p>Pirmiausia tai serveris, į kurį kreipiasi piniginė. Registro nelaikanti piniginė apie kiekvieną savo adresą klausia serverio, o numatytasis serveris priklauso piniginės kūrėjui arba savanoriui. <a href="https://sparrowwallet.com/docs/best-practices.html" target="_blank" rel="noopener noreferrer">Programos „Sparrow“ dokumentacijoje</a> rašoma, kad viešas serveris sužino tavo likutį, o pagal IP adresą ir buvimo vietą. Gali būti, kad jis nieko neregistruoja, bet to nepatikrinsi.</p>
+<p>Antra, tai tavo tapatybę patikrinusi birža, kuri žino tavo vardą ir pavardę, namų adresą ir tai, kur išsiėmei bitkoinus, o į ją gali būti įsilaužta arba ji gali būti įpareigota perduoti savo įrašus. 2025 m. gegužę birža „Coinbase“ pranešė, kad iš jos klientų aptarnavimo sistemų nukopijuoti klientų duomenys, o <a href="https://cointelegraph.com/news/70k-impacted-coinbase-data-breach-maine-attorneys" target="_blank" rel="noopener noreferrer">jos pranešime institucijoms nurodytas 69 461 žmogus</a>. Analitikos įmonės yra stebėtojos, dirbančios su viešuoju registru ir gautais duomenimis.</p>
+<p>Nei serverio, nei biržos iš išorės audituoti neįmanoma, todėl praktiška jų atsisakyti ten, kur tai svarbu: susikurti savo mazgą, o kol jo nėra, naudoti Tor, ir bitkoinų įsigyti lygiarangėse rinkose. Už kiekvieną iš šių žingsnių sumoki patogumu. Pradedantiesiems reguliuojama birža dažnai lieka saugesnis pasirinkimas.</p>
+<h2>Kaip pasirinkti privatumo įpročius</h2>
+<p>Privatumą Bitcoin tinkle lemia ne koks nors vienas įrankis, o įpročių visuma. Kiekvienas padeda ir atskirai, todėl pradėk nuo lentelės viršaus.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Įprotis</th>
+<th>Įrankiai</th>
+<th>Pastangos</th>
+<th>Ką laimi</th>
+<th>Kas vis tiek ką nors sužino</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Niekada nenaudok adreso pakartotinai</strong></td>
+<td>Bet kuri šiuolaikinė piniginė kiekvienam mokėjimui pateikia naują adresą</td>
+<td>Jokių</td>
+<td>Stebėtojas negali susumuoti tavo gautų mokėjimų</td>
+<td>Serveris, į kurį kreipiasi piniginė, vis tiek mato visus šiuos adresus kartu</td>
+</tr>
+<tr>
+<td><strong>Atskiros piniginės atskiriems tikslams</strong></td>
+<td>Bet kuri piniginė: santaupoms, išlaidoms, su tapatybės tikrinimu (KYC) įsigytoms monetoms, be tapatybės tikrinimo įsigytoms monetoms</td>
+<td>Mažos</td>
+<td>Vienas identifikuotas mokėjimas neatskleidžia viso kito</td>
+<td>Tas pats serveris, jei abi piniginės kreipiasi į jį iš to paties IP adreso</td>
+</tr>
+<tr>
+<td><strong>Žymėk monetas ir naudok monetų valdymą (angl. coin control)</strong></td>
+<td>„<a href="https://sparrowwallet.com/" target="_blank" rel="noopener noreferrer">Sparrow Wallet</a>“, „<a href="https://nunchuk.io/" target="_blank" rel="noopener noreferrer">Nunchuk</a>“, „<a href="https://electrum.org/" target="_blank" rel="noopener noreferrer">Electrum</a>“ (visos atvirojo kodo)</td>
+<td>Vidutinės</td>
+<td>Tu sprendi, kuria moneta mokama, ir per klaidą nesujungi monetų</td>
+<td>Naujų stebėtojų neatsiranda, nes žymės lieka tavo piniginės faile. Pasidaryk šio failo atsarginę kopiją</td>
+</tr>
+<tr>
+<td><strong>Prisijunk prie savo mazgo</strong></td>
+<td>Žr. 18 skyrių</td>
+<td>Didelės (savaitgalis darbo, paskui kelios dienos sinchronizavimo)</td>
+<td>Joks išorinis serveris nesužino, kurie adresai tavo</td>
+<td>Likučio nesužino niekas. Kiti mazgai mato tavo paskelbtą transakciją, nebent tavo mazgas naudoja Tor</td>
+</tr>
+<tr>
+<td><strong>Kasdienėms išlaidoms naudok Lightning</strong></td>
+<td>Žr. 15 skyrių</td>
+<td>Mažos</td>
+<td>Atskiri mokėjimai į viešąjį registrą neįrašomi</td>
+<td>Depozitinė piniginė (angl. custodial) mato kiekvieną mokėjimą. Savarankiško saugojimo programėlės Lightning paslaugų teikėjas (LSP) vis tiek mato dalį jų</td>
+</tr>
+<tr>
+<td><strong>Naudok Tor savo piniginėje</strong></td>
+<td>Programoje „<a href="https://sparrowwallet.com/" target="_blank" rel="noopener noreferrer">Sparrow</a>“ Tor jau įtaisytas. Programoje „<a href="https://electrum.org/" target="_blank" rel="noopener noreferrer">Electrum</a>“ ir keliose kitose yra tarpinio serverio nustatymas, kuriam reikia atskirai įdiegto Tor</td>
+<td>Nuo mažų iki vidutinių</td>
+<td>Serveris, prie kurio jungiesi, nemato tavo IP adreso</td>
+<td>Serveris vis tiek mato tavo adresus. Tor retransliatorius (angl. relays) prižiūri savanoriai, ir per juos keliauja šifruotas srautas</td>
+</tr>
+<tr>
+<td><strong>Lygiarangis įsigijimas</strong></td>
+<td>„<a href="https://bisq.network/" target="_blank" rel="noopener noreferrer">Bisq</a>“ (kompiuterio programa, atvirojo kodo, be įmonės tarpininkės), „<a href="https://robosats.org/" target="_blank" rel="noopener noreferrer">RoboSats</a>“ (atvirojo kodo, per Tor ir Lightning), „<a href="https://hodlhodl.com/" target="_blank" rel="noopener noreferrer">Hodl Hodl</a>“ (įmonės valdoma žiniatinklio platforma, kelių parašų sąlyginis deponavimas)</td>
+<td>Vidutinės</td>
+<td>Biržos duomenų bazėje nelieka tavo asmens dokumentų</td>
+<td>Kita sandorio šalis, kuri banko pavedime mato tavo vardą ir pavardę. Platforma mato sandorį, bet ne tavo asmens dokumentą</td>
+</tr>
+<tr>
+<td><strong>Coinjoin ir payjoin</strong> (pažengusiems, žr. toliau)</td>
+<td>Coinjoin: „Wasabi Wallet“ su nepriklausomu koordinatoriumi, „JoinMarket“ (dabar „joinmarket-ng“, su sąsaja „Jam“), „Ashigaru“. Payjoin: „BTCPay Server“, „Bull Bitcoin“, „<a href="https://cakewallet.com/" target="_blank" rel="noopener noreferrer">Cake Wallet</a>“</td>
+<td>Coinjoin: didelės (mokesčiai, laikas, drausmė vėliau). Payjoin: mažos, kai jį palaiko abi pusės</td>
+<td>Spėjimai apie bendrą nuosavybę ir grąžą šioms monetoms nebetinka</td>
+<td>Koordinatorius mato, kad dalyvauji, bet sistema sukurta taip, kad jis nematytų, kuri išvestis tavo. Kai kurios biržos kelia klausimų dėl coinjoin perėjusių monetų</td>
+</tr>
+<tr>
+<td><strong>Iškeisk nedidelę sumą į <a href="https://www.getmonero.org/" target="_blank" rel="noopener noreferrer">Monero</a> ir ją išleisk</strong> (pažengusiems, žr. toliau)</td>
+<td>Atominio keitimo (angl. atomic swap) programos („eigenwallet“, atvirojo kodo, lėšų neperima) arba lygiarangės rinkos, kuriose prekiaujama Monero („<a href="https://bisq.network/" target="_blank" rel="noopener noreferrer">Bisq</a>“)</td>
+<td>Nuo vidutinių iki didelių</td>
+<td>Daug mažesnė tikimybė, kad mokėjimas bus susietas su tavo tapatybe, nes Monero automatiškai slepia sumas, siuntėjus ir gavėjus</td>
+<td>Keitimo sandorio šalis mato bitkoinų pusę. Tai įrankis išlaidoms, o ne santaupoms</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lightning mokėtoją apsaugo geriau nei gavėją, o depozitinė Lightning piniginė mato visus tavo mokėjimus. Lygiarangės platformos veikia ne visose šalyse, todėl pasitikrink, ar jos veikia tavo šalyje.</p>
+<p>Daugumai žmonių protingas derinys būtų toks: nauji adresai, 1 piniginė kiekvienam tikslui, žymės nuo pirmos dienos ir Lightning smulkiems mokėjimams, o vėliau, kai tam ateis laikas, savo mazgas. Paskutinės 2 eilutės skirtos pažengusiems, ir jas paaiškina kiti 3 skirsniai.</p>
+<h2>Coinjoin, payjoin ir maišyklės</h2>
+<p>3 dėsningumai remiasi spėjimais, o kai kurie įrankiai sukurti tam, kad tie spėjimai nepasitvirtintų. Naudojant <strong>coinjoin</strong> keli žmonės kartu sudaro 1 transakciją su daug įvesčių ir daug vienodų sumų išvesčių, todėl stebėtojas nebegali pasakyti, kuri išvestis kam priklauso. Niekas neatiduoda savo lėšų saugoti kitam, nes kiekvienas dalyvis pasirašo tik tada, kai transakcijoje yra jo išvestis. Naudojant <strong>payjoin</strong> įvesčių į mokėjimą įdeda ir siuntėjas, ir gavėjas, todėl nebegalioja prielaida, kad visos transakcijos įvestys priklauso 1 žmogui, ir paslepiama iš tikrųjų sumokėta suma. <strong>Maišyklės</strong> (angl. mixers) yra senesnis būdas, t. y. paslauga, kuri paima tavo monetas ir atsiunčia kitas. Tokia paslauga depozitinė, todėl operatorius gali pasilikti pinigus arba veiklos įrašus.</p>
+<p>2026 m. rugsėjo mėn. duomenimis, coinjoin galima naudoti piniginėje <a href="https://docs.wasabiwallet.io/using-wasabi/CoinJoin.html" target="_blank" rel="noopener noreferrer">„Wasabi Wallet“</a>: nuo tada, kai jos kūrėja 2024 m. birželį uždarė savo koordinatorių, tai daroma per nepriklausomus koordinatorius. Coinjoin veikia ir lygiarangėje rinkoje be koordinatoriaus „JoinMarket“, kuri <a href="https://atlas21.com/coinjoin-comparison-of-tools-to-improve-privacy-on-bitcoin/" target="_blank" rel="noopener noreferrer">nuo 2026 m. balandžio, kai pirminė kodo saugykla buvo archyvuota, tęsiama pavadinimu „joinmarket-ng“</a>, ir piniginėje „Ashigaru“, piniginės „Samourai Wallet“ atšakoje (angl. fork), kuri <a href="https://ashigaru.rs/news/announcement-whirlpool/" target="_blank" rel="noopener noreferrer">2025 m. birželį iš naujo paleido „Whirlpool“ coinjoin</a>. Payjoin veikia prekybininkams skirtoje programoje „BTCPay Server“, o nuo 2025 m. ir <a href="https://bitcoinops.org/en/topics/payjoin/" target="_blank" rel="noopener noreferrer">programėlėse „Bull Bitcoin“ bei „Cake Wallet“</a>.</p>
+<h2>Naudotis teisėta, o operatoriai persekiojami</h2>
+<p>Daugumoje šalių šiais įrankiais saugoti savo finansinį privatumą teisėta, tačiau įstatymai įvairiose šalyse skiriasi ir keičiasi, todėl pasitikrink, kas galioja tavo šalyje. Tai, ką privalai deklaruoti, lieka tas pats. Iki šiol baudžiamasis persekiojimas buvo nukreiptas į operatorius. Jungtinėse Valstijose 2 piniginės „Samourai Wallet“ įkūrėjai, suimti 2024 m. balandį, prisipažino kalti dėl susitarimo vykdyti nelicencijuotą pinigų pervedimo veiklą, kai sąmoningai buvo pervedamos nusikalstamu būdu gautos lėšos, ir <a href="https://www.irs.gov/compliance/criminal-investigation/founders-of-samourai-wallet-cryptocurrency-mixing-service-sentenced-to-five-and-four-years-in-prison" target="_blank" rel="noopener noreferrer">2025 m. lapkritį buvo nuteisti kalėti 5 ir 4 metus</a>. Roman Storm, vienas iš Ethereum tinkle veikiančios maišyklės „Tornado Cash“ kūrėjų, <a href="https://www.irs.gov/compliance/criminal-investigation/founder-of-tornado-cash-crypto-mixing-service-convicted-of-knowingly-transmitting-criminal-proceeds" target="_blank" rel="noopener noreferrer">2025 m. rugpjūčio 6 d. pripažintas kaltu dėl panašaus nusikaltimo</a>. Dėl kaltinimų pinigų plovimu ir sankcijų pažeidimu prisiekusieji verdikto nepriėmė, todėl dalis bylos, 2026 m. rugsėjo mėn. duomenimis, lieka neišspręsta, nors JAV iždo departamentas <a href="https://home.treasury.gov/news/press-releases/sb0057" target="_blank" rel="noopener noreferrer">2025 m. kovo 21 d. buvo panaikinęs „Tornado Cash“ taikytas sankcijas</a>.</p>
+<p>Nyderlanduose kitas „Tornado Cash“ kūrėjas Alexey Pertsev <a href="https://www.coindesk.com/policy/2024/05/14/tornado-cash-developer-alexey-pertsev-found-guilty-of-money-laundering" target="_blank" rel="noopener noreferrer">2024 m. gegužę nuteistas kalėti 64 mėnesius</a> ir pateikė apeliacinį skundą. Nė vienas iš šių kūrėjų nekaltinamas ką nors pavogęs. Jiems priekaištaujama dėl to, kad parašė programinę įrangą ir užtikrino jos veikimą, o ja naudojosi ir nusikaltėliai, nors dauguma naudotojų tiesiog saugojo savo privatumą. Daugelio programuotojų ir pilietinių laisvių gynimo organizacijų nuomone, tai rimtas išpuolis prieš saviraiškos laisvę ir laisvę kurti, nes kodo skelbimas yra viena iš saviraiškos formų, o privatumo įrankis naudotojų nesirenka, kaip jų nesirenka nei šifravimas, nei grynieji pinigai. Kelios iš šių bylų, 2026 m. rugsėjo mėn. duomenimis, vis dar nagrinėjamos teismuose.</p>
+<p>Šios bylos paaiškina, kodėl koordinatoriai užsidaro arba nepriima naudotojų iš kai kurių šalių ir kodėl kai kurios biržos kelia klausimų dėl monetų, perėjusių coinjoin. Pradedantiesiems nuo to pradėti nebūtina.</p>
+<h2>Monero išlaidoms, o ne santaupoms</h2>
+<p>Kai kurie pažengę naudotojai bitkoinus laiko kaip ilgalaikį turtą, o nedidelę sumą iškeičia į Monero tada, kai nori, kad būtų mažesnė tikimybė, jog mokėjimas bus susietas su jų tapatybe. Monero yra atskira valiuta, kurios paskirtis panaši (pinigai, kuriuos gali laikyti savarankiškai), o sumos, siuntėjai ir gavėjai joje slepiami automatiškai, ir tai tikroji jos stiprybė.</p>
+<p>Tačiau vertei laikyti ji mažiau saugi, nes yra daug mažiau likvidi ir daug rečiau priimama, jos kliento programinę įrangą kuria mažesnė ir labiau centralizuota grupė, o daug mažesnį jos tinklą pašalinei jėgai lengviau užpulti. 2025 m. kasėjų telkinys (angl. mining pool) „Qubic“ pareiškė valdantis didžiąją šio tinklo kasimo galios dalį, o rugsėjo 14 d. per <a href="https://www.coindesk.com/web3/2025/09/15/monero-suffers-deepest-ever-blockchain-reorganization-invalidating-118-transactions" target="_blank" rel="noopener noreferrer">18 blokų apėmusį grandinės pertvarkymą (angl. reorg) atšaukta 118 patvirtintų transakcijų</a>. „Qubic“ yra mažas projektas, kurį valdo nedidelė žmonių grupė, todėl lieka neatsakytas klausimas, ką tam pačiam tinklui galėtų padaryti vyriausybė ar bet kuri geriau organizuota ir geriau finansuojama grupė.</p>
+<p>Keičiama lėšų neperimančiomis atominio keitimo programomis, tokiomis kaip „eigenwallet“, arba lygiarangėse rinkose, tokiose kaip „Bisq“, nes Europoje reguliuojamos platformos Monero atsisako. <a href="https://eur-lex.europa.eu/eli/reg/2024/1624/oj" target="_blank" rel="noopener noreferrer">2024 m. ES kovos su pinigų plovimu reglamentas</a> nuo 2027 m. liepos 10 d. draudžia joms tvarkyti sąskaitas, kuriose naudojamos „anonimiškumą didinančios monetos“. Yra ir akimirksninio keitimo svetainių, tačiau keitimo metu jos laiko tavo monetas. Teisinės ir mokestinės prievolės galioja ir čia, o daugelyje šalių keitimas yra apmokestinamas įvykis. 12 skyriuje abi valiutos palyginamos.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdyje naudojama programa „Sparrow Wallet“ kompiuteryje. Piniginės „Nunchuk“ ir „Electrum“ siūlo tas pačias funkcijas, tik šiek tiek kitaip pavadintas.</p>
+<ol>
+<li><strong>Kiekvienam tikslui susikurk 1 piniginę.</strong> Pavyzdžiui, santaupoms, išlaidoms ir atskirą piniginę monetoms, gautoms iš tapatybę tikrinančios biržos.</li>
+<li><strong>Kiekvieną mokėjimą priimk nauju adresu.</strong> Ekrane „Receive“ (gauti) naujas adresas pasiūlomas automatiškai. Niekada nekopijuok seno adreso iš istorijos.</li>
+<li><strong>Pažymėk kiekvieną mokėjimą, kai tik jis ateina.</strong> Užsirašyk, iš kur jis, pavyzdžiui, „birža, kovas“ arba „pardaviau dviratį Tomui“. Po 6 mėnesių nebeprisiminsi.</li>
+<li><strong>Pasirink, kuria moneta mokėsi.</strong> Prieš siunčiant atverk monetų sąrašą (programa „Sparrow“ jį vadina „UTXOs“, t. y. nepanaudotos transakcijų išvestys), pasirink tinkamą monetą ir siųsk iš jos. Venk jungti monetas iš skirtingų šaltinių.</li>
+<li><strong>Pažymėk grąžą.</strong> Tau grįžtanti moneta paveldi mokėjimo istoriją, todėl tai užsirašyk.</li>
+<li><strong>Smulkius pirkinius apmokėk per Lightning</strong> (žr. 15 skyrių), o pagrindinės grandinės (angl. on-chain) transakcijas pasilik didesniems ir retesniems pervedimams.</li>
+<li><strong>Įjunk Tor</strong> piniginės serverio arba tinklo nustatymuose, jei vis dar naudoji viešą serverį. Vėliau viešą serverį pakeisk savo mazgu (žr. 18 skyrių). Tor tik paslepia tavo IP adresą nuo to serverio, o mazgas yra tas žingsnis, kuriuo pašalinama trečioji šalis, nes klausimai apie tavo adresus nebeiškeliauja iš tavo namų.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Viešai skelbti adresus ar likučius.</strong> Socialiniuose tinkluose paskelbta piniginės ekrano nuotrauka susieja tavo vardą su tavo monetomis, o vėliau ištrynus įrašą to nebeatitaisysi, nes kopijos plinta, o registras išsaugo viską.</li>
+<li><strong>Sujungti su KYC ir be KYC įsigytas monetas.</strong> Jas sujungianti transakcija kiekvienam stebėtojui pasako, kad jos priklauso tam pačiam žmogui, todėl laikyk jas atskirose piniginėse. Tikslas yra nerodyti prekybininkui visos savo istorijos, o tai, ką privalai deklaruoti, nuo to nesikeičia.</li>
+<li><strong>Pakartotinai naudoti aukų adresą.</strong> Vienas nekintamas adresas kiekvienam aukotojui parodo, kiek paaukojo visi kiti ir ką su tomis lėšomis padarei. Naudok įrankį, kuris kiekvienam aukotojui sugeneruoja naują adresą, arba Lightning.</li>
+<li><strong>Tikėti, kad VPN padaro Bitcoin privatų.</strong> VPN paslepia tavo IP adresą nuo serverio. Registro, kuris viešas visiems, jis niekaip nepakeičia.</li>
+<li><strong>Kalbėti apie tai, kiek turi.</strong> Analitikai dirba su registru, bet pokalbis tą pačią informaciją atskleidžia greičiau. Šio skaičiaus niekam nereikia žinoti nei internete, nei prie vakarienės stalo.</li>
+<li><strong>Siekti tobulumo ir nieko nedaryti.</strong> Žymes ir atskiras pinigines gali pradėti naudoti jau šiandien, o mazgas ir pažengusiems skirti būdai gali palaukti.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „CBDC, KYC ir kova dėl monetarinio privatumo“, pranešimą skaito Linas K. Kodėl privatūs pinigai svarbūs ir ką keičia tapatybės tikrinimas.</li>
+<li><strong>Pagrindinis tekstas:</strong> „Bitcoin Wiki“ puslapis „Privacy“ (<a href="https://en.bitcoin.it" target="_blank" rel="noopener noreferrer">en.bitcoin.it</a>). Ilgas, bet išsamus.</li>
+<li><strong>Coinjoin ir payjoin paaiškinimai:</strong> „Wasabi Wallet“ dokumentacija (<a href="https://docs.wasabiwallet.io" target="_blank" rel="noopener noreferrer">docs.wasabiwallet.io</a>) ir projektas „Payjoin“ (<a href="https://payjoin.org" target="_blank" rel="noopener noreferrer">payjoin.org</a>).</li>
+<li><strong>Praktiniai vadovai:</strong> „Bitcoiner.Guide“, parengė BitcoinQ+A (<a href="https://bitcoiner.guide" target="_blank" rel="noopener noreferrer">bitcoiner.guide</a>), ir „Sparrow Wallet“ dokumentacija (<a href="https://sparrowwallet.com/docs" target="_blank" rel="noopener noreferrer">sparrowwallet.com/docs</a>) apie žymes ir monetų valdymą.</li>
+<li><strong>Kitas skyrius:</strong> aparatinės piniginės.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/directive-administrative-cooperation-dac/dac8_en" target="_blank" rel="noopener noreferrer">DAC8, the directive on the reporting of crypto-asset transactions</a>, Europos Komisija, taikoma nuo 2026 m. sausio 1 d.</li>
+<li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="noopener noreferrer">Markets in Crypto-Assets Regulation (MiCA)</a>, Europos vertybinių popierių ir rinkų institucija (ESMA), puslapis žiūrėtas 2026 m. rugsėjį.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2024/1624/oj" target="_blank" rel="noopener noreferrer">Regulation (EU) 2024/1624 on the prevention of money laundering</a>, Europos Sąjungos oficialusis leidinys, 2024 m. birželio 19 d.</li>
+<li><a href="https://www.coindesk.com/web3/2025/09/15/monero-suffers-deepest-ever-blockchain-reorganization-invalidating-118-transactions" target="_blank" rel="noopener noreferrer">Monero Suffers Deepest-Ever Blockchain Reorganization, Invalidating 118 Transactions</a>, „CoinDesk“, 2025 m. rugsėjo 15 d.</li>
+<li><a href="https://www.medienservice.sachsen.de/medien/news/1077662" target="_blank" rel="noopener noreferrer">Notveräußerung von fast 50.000 Bitcoins abgeschlossen</a>, Drezdeno generalinė prokuratūra („Generalstaatsanwaltschaft Dresden“), Saksonijos laisvoji žemė, 2024 m. liepos 16 d. (vokiečių kalba).</li>
+<li><a href="https://cointelegraph.com/news/german-government-354m-btc-sell-off" target="_blank" rel="noopener noreferrer">German gov't $354M BTC sell-off</a>, „Cointelegraph“, 2024 m. liepos 10 d.</li>
+<li><a href="https://docs.wasabiwallet.io/using-wasabi/CoinJoin.html" target="_blank" rel="noopener noreferrer">Coinjoin</a>, „Wasabi Wallet“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://atlas21.com/coinjoin-comparison-of-tools-to-improve-privacy-on-bitcoin/" target="_blank" rel="noopener noreferrer">CoinJoin in 2026: Wasabi, JoinMarket and Ashigaru compared</a>, „Atlas21“, atnaujinta 2026 m. birželio 10 d.</li>
+<li><a href="https://ashigaru.rs/news/announcement-whirlpool/" target="_blank" rel="noopener noreferrer">Announcement: new Zerolink coinjoin coordinator</a>, „Ashigaru“, 2025 m. birželio mėn.</li>
+<li><a href="https://bitcoinops.org/en/topics/payjoin/" target="_blank" rel="noopener noreferrer">Payjoin</a>, „Bitcoin Optech“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://www.irs.gov/compliance/criminal-investigation/founders-of-samourai-wallet-cryptocurrency-mixing-service-sentenced-to-five-and-four-years-in-prison" target="_blank" rel="noopener noreferrer">Founders of Samourai Wallet cryptocurrency mixing service sentenced to five and four years in prison</a>, „IRS Criminal Investigation“, 2025 m. lapkričio 19 d.</li>
+<li><a href="https://www.irs.gov/compliance/criminal-investigation/founder-of-tornado-cash-crypto-mixing-service-convicted-of-knowingly-transmitting-criminal-proceeds" target="_blank" rel="noopener noreferrer">Founder of Tornado Cash crypto mixing service convicted of knowingly transmitting criminal proceeds</a>, „IRS Criminal Investigation“, 2025 m. rugpjūčio 6 d.</li>
+<li><a href="https://www.coindesk.com/policy/2024/05/14/tornado-cash-developer-alexey-pertsev-found-guilty-of-money-laundering" target="_blank" rel="noopener noreferrer">Tornado Cash Developer Alexey Pertsev Found Guilty of Money Laundering</a>, „CoinDesk“, 2024 m. gegužės 14 d.</li>
+<li><a href="https://home.treasury.gov/news/press-releases/sb0057" target="_blank" rel="noopener noreferrer">Tornado Cash delisting</a>, JAV iždo departamentas, 2025 m. kovo 21 d.</li>
+<li><a href="https://www.coindesk.com/policy/2025/01/24/ledger-co-founder-s-kidnapping-sheds-light-on-soaring-crypto-robberies" target="_blank" rel="noopener noreferrer">Ledger Co-Founder's Kidnapping Highlights Threat of Crypto Robberies</a>, „CoinDesk“, 2025 m. sausio 24 d.</li>
+<li><a href="https://github.com/jlopp/physical-bitcoin-attacks" target="_blank" rel="noopener noreferrer">Known physical bitcoin attacks</a>, Jameson Lopp, sąrašas nuolat atnaujinamas.</li>
+<li><a href="https://sparrowwallet.com/docs/best-practices.html" target="_blank" rel="noopener noreferrer">Best practices</a>, „Sparrow Wallet“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://cointelegraph.com/news/70k-impacted-coinbase-data-breach-maine-attorneys" target="_blank" rel="noopener noreferrer">Coinbase breach hit almost 70k users</a>, „Cointelegraph“, 2025 m. gegužės 21 d.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="bitcoin-privacy-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-1" aria-label="Patikrink, ar piniginė kiekvienam mokėjimui rodo naują adresą"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-1">Patikrink, ar piniginė kiekvienam mokėjimui rodo naują adresą</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-2" aria-label="Surask visus viešai paskelbtus savo adresus ir likučius ir nebepriimk mokėjimų į tuos adresus"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-2">Surask visus viešai paskelbtus savo adresus ir likučius ir nebepriimk mokėjimų į tuos adresus</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-3" aria-label="Susikurk atskiras pinigines santaupoms, išlaidoms ir iš biržos išsiimtoms lėšoms"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-3">Susikurk atskiras pinigines santaupoms, išlaidoms ir iš biržos išsiimtoms lėšoms</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-4" aria-label="Prie kiekvienos turimos monetos pažymėk, iš kur ji"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-4">Prie kiekvienos turimos monetos pažymėk, iš kur ji</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="bitcoin-privacy-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="bitcoin-privacy-5" aria-label="Po 18 skyriaus prijunk piniginę prie savo mazgo"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="bitcoin-privacy-5">Po 18 skyriaus prijunk piniginę prie savo mazgo</label>
+        <span class="bk-effort">Savaitgalis</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/lightning-and-euros/"><span>Ankstesnis</span>Lightning ir eurai kasdienybėje</a>
+<a class="bk-next" href="/book/hardware-wallet/"><span>Kitas</span>Aparatinės piniginės</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

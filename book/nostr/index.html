@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Nostr: atviras tinklas, kurio nevaldo jokia įmonė · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/nostr/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/nostr/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/nostr/'">EN</button>
+</nav>
+
+<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page auto page-top" data-slug="nostr">
+  <header class="bk-head">
+    <p class="bk-label">Autonomijos įrodymas · 7 skyrius</p>
+    <h1>Nostr: atviras tinklas, kurio nevaldo jokia įmonė</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Platformoje tavo profilis, įrašai ir auditorija priklauso ją valdančiai įmonei. Nostr yra atvirasis pasirašytų duomenų protokolas: tapatybė čia yra raktų pora, kurią turi tu, o tai, ką skelbi, perduoda daug nepriklausomų retransliatorių (angl. relays) ir programėlių, todėl programėlę ar retransliatorių gali bet kada pakeisti, o vardas ir sekėjai lieka. Šiandien jo pagrindu daugiausia kuriamos socialinių platformų alternatyvos, nuo trumpų įrašų iki nuotraukų, ilgų straipsnių, tiesioginių vaizdo transliacijų, muzikos ir prekyviečių. Tinklas mažesnis ir ne toks nugludintas kaip didžiosios platformos, o paskyrą tokioje programėlėje kaip „Primal“, „Damus“ ar „Amethyst“ susikursi per kelias minutes.</p>
+<h2>Viešoji aikštė, priklausanti kažkam kitam</h2>
+<p>Socialinis tinklas atrodo kaip viešoji aikštė, bet veikia kaip privatus pastatas, kurio savininkas nustato taisykles ir gali jas pakeisti per naktį. 2022 m. gruodžio 18 d. bendrovė „Twitter“ <a href="https://techcrunch.com/2022/12/18/twitter-wont-let-you-post-your-facebook-instagram-and-mastodon-handles/" target="_blank" rel="noopener noreferrer">paskelbė, kad šalins nuorodas į „Facebook“, „Instagram“, „Mastodon“ ir Nostr</a> ir sustabdys jas reklamuojančias paskyras, o kilus protestų bangai šios taisyklės atsisakė nepraėjus nė parai.</p>
+<p>Tas pats savininkas gali pašalinti paskyrą, nurodęs priežastį arba ne, ir kartu su ja dingsta daugelio metų įrašai ir kontaktai. Jis taip pat gali tau nieko nepranešęs padaryti taip, kad tave matytų mažiau žmonių, ir tai dažnai vadinama šešėliniu blokavimu (angl. shadow ban). Įprastu metu tai, ką matai, parenka algoritmas, kuriam svarbiausia platformoje praleistas laikas ir reklama, o kaskart jam pasikeitus pasikeičia ir tai, kiek žmonių tave pamato.</p>
+<p>Auditorija irgi ne tavo, nes sekėjų į kitą paslaugą nepasiimsi, ir didele dalimi todėl išeiti taip sunku. Tai, ką skaitai, kas tau patinka ir ką rašai, dar ir papildo reklamos profilį. 2025 m. balandį Europos Komisija pagal Skaitmeninių rinkų aktą <a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085" target="_blank" rel="noopener noreferrer">skyrė bendrovei „Meta“ 200 mln. eurų baudą</a>, nes „Facebook“ ir „Instagram“ naudotojai turėjo arba sutikti, kad jų asmens duomenys būtų jungiami reklamos tikslais, arba mokėti už prenumeratą.</p>
+<h2>Retransliatoriai viską užfiksuoja, o klientai yra langai</h2>
+<p>Nostr yra protokolas, kaip el. paštas ar žiniatinklis, vadinasi, jis nepriklauso jokiai įmonei ir jo neapibrėžia nė viena atskira programėlė. Juo perduodami bet kokie pasirašyti duomenys, o trumpas įrašas yra tik 1 atvejis iš daugelio. Pagrindą sudaro 3 dalys:</p>
+<ul>
+<li><strong>Tavo tapatybė yra raktų pora</strong> (žr. 6 skyrių). Viešasis raktas, prasidedantis raidėmis <strong>npub</strong>, yra tavo adresas, ir juo gali laisvai dalytis. Privatusis raktas, prasidedantis raidėmis <strong>nsec</strong>, yra tavo paslaptis, nes jis įrodo, kad tu esi tu.</li>
+<li><strong>Viskas, ką skelbi, yra pasirašytas įvykis (angl. event).</strong> Įrašas, nuotrauka, ilgas straipsnis, prekės skelbimas ar pranešimas apie tiesioginę transliaciją turi parašą, sukurtą tavo nsec raktu, todėl bet kas gali patikrinti, ar tai tikrai tavo ir ar niekas to nepakeitė.</li>
+<li><strong>Zapai (angl. zaps)</strong> yra nedideli Lightning mokėjimai (žr. 3 dalį), siunčiami tiesiai žmogui arba įrašui. Jais gali ką nors paremti be reklamos ir be platformos, kuri pasiimtų savo dalį.</li>
+</ul>
+<p>Kad suprastum, kur čia retransliatorių ir klientų vieta, įsivaizduok, kad viskas, ką žmonės skelbia, vyksta lauke, gamtoje. <strong>Retransliatoriai</strong> užfiksuoja ir saugo tai, kas ten vyksta. Tai paprasti serveriai, kuriuos gali paleisti bet kas, o skelbi iš karto keliuose. <strong>Klientas</strong> yra langas, pro kurį žiūri į lauką, ir langai būna įvairūs. Pro vienus matyti beveik viskas, kiti dalį vaizdo filtruoja ar uždengia, o kurį nors langą galima uždaryti langinėmis ar net užkalti lentomis, nors kiti lieka atviri. Visada gali nueiti prie kito lango, nes tai, kas vyksta lauke, nė vienam langui nepriklauso, o kai prieisi, pamatysi, kad profilis, įrašai ir sekėjai jau ten.</p>
+<p>2023 m. vasarį bendrovė „Apple“ Kinijos interneto priežiūros institucijos prašymu <a href="https://techcrunch.com/2023/02/02/damus-pulled-from-apples-app-store-in-china-after-two-days/" target="_blank" rel="noopener noreferrer">pašalino klientą „Damus“ iš savo programėlių parduotuvės „App Store“ Kinijoje</a> praėjus 2 dienoms nuo jo pasirodymo. Tas langas buvo užkaltas 1 šalyje, o retransliatoriai ir kiti klientai veikė toliau.</p>
+<h2>Retransliatoriai negali suklastoti, bet gali paslėpti</h2>
+<p>Klientas yra tik langas, todėl gali filtruoti brukalą ar paslėpti paskyrą, ir dažnai tai tau tik į naudą, bet nieko ištrinti negali, nes įvykiai lieka retransliatoriuose ir pro kitą langą jie vis tiek matyti. Retransliatorius saugo tai, kas užfiksuota, todėl gali tavo įvykių nepriimti, vėliau juos išmesti arba kuriam nors skaitytojui jų niekada neparodyti. Rašyti tavo vardu ar pakeisti to, ką parašei, jis negali, nes parašas nebeatitiktų tavo npub rakto, o tai patikrinti gali bet kuris klientas. Todėl prieinamumas priklauso nuo to, ar skelbi keliuose retransliatoriuose, kuriuos valdo skirtingi operatoriai, o tavo <a href="https://github.com/nostr-protocol/nips/blob/master/65.md" target="_blank" rel="noopener noreferrer">retransliatorių sąrašas</a> kitiems klientams nurodo, kur tavęs ieškoti.</p>
+<p>Lieka 2 patikimos trečiosios šalys. Pirmoji yra tai, kas tau pasako, kad npub raktas priklauso tam žmogui, apie kurį galvoji. NIP-05 adresas rodo tik tai, kad raktas įrašytas kuriame nors domene, o <a href="https://github.com/nostr-protocol/nips/blob/master/05.md" target="_blank" rel="noopener noreferrer">jo specifikacijoje</a> sakoma, kad jis naudotoją identifikuoja, bet jo nepatikrina, todėl tau svarbaus žmogaus npub raktą gauk tiesiai iš jo paties. Antroji yra bet kokia programinė įranga, kurioje laikomas tavo nsec raktas, nes ji galėtų tavo vardu pasirašyti bet ką. Šiai rizikai pašalinti sukurtos pasirašymo programėlės (angl. signers), aprašytos toliau.</p>
+<h2>Kaip pasirinkti klientą</h2>
+<p>Nostr dažnai pristatomas kaip tinklo „X“ alternatyva, tačiau tai tik 1 iš jo naudojimo būdų. Vieni klientai veikia kaip „Instagram“, kiti kaip „Medium“, „Twitch“, tinklalaidžių ar muzikos programėlė, prekyvietė, grupės pokalbis ar programėlių parduotuvė, ir visiems tinka tas pats raktas.</p>
+<p>Svarbu aiškiai suprasti, ką gauni. Tinklas daug mažesnis už didžiąsias platformas, brukalo pasitaiko, o kai kurios programėlės atrodo nebaigtos. Slaptažodžio atkūrimo nėra, tikro ištrynimo taip pat, nes retransliatorių gali paprašyti ištrinti įvykį, bet jie gali to prašymo ir nepaisyti. Laikykis nuostatos, kad kiekvienas įrašas yra viešas ir lieka visam laikui.</p>
+<p>Išskyrus „Fountain“, kurio kodas neskelbiamas, ir dalį „Wavlake“, toliau išvardyti klientai programos kodą skelbia pagal laisvąją licenciją (patikrinta jų viešose kodo saugyklose 2026 m. rugsėjį). Atvirasis kodas negarantuoja, kad programėlių parduotuvėje esanti versija atitinka viešą kodą, bet leidžia kiekvienam tai patikrinti.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Klientas</th>
+<th>Į ką panašus</th>
+<th>Turinio tipas</th>
+<th>Platformos</th>
+<th>Kuo tenka pasitikėti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://primal.net/" target="_blank" rel="noopener noreferrer"><strong>Primal</strong></a></td>
+<td>Į „X“. Pradėti čia lengviausia, yra įtaisyta piniginė.</td>
+<td>Trumpi įrašai, straipsniai, medijos srautai</td>
+<td>„iOS“, „Android“, naršyklė</td>
+<td>Kas tave pasiekia, parenka „<a href="https://primal.net/" target="_blank" rel="noopener noreferrer">Primal</a>“ podėlio serveris (angl. caching server). Jis yra <a href="https://github.com/PrimalHQ/primal-server" target="_blank" rel="noopener noreferrer">atvirojo kodo</a>, o nustatymuose galima nurodyti kitą.</td>
+</tr>
+<tr>
+<td><a href="https://damus.io/" target="_blank" rel="noopener noreferrer"><strong>Damus</strong></a></td>
+<td>Į „X“, primena tai, kaip kadaise atrodė „Twitter“. Paprastas.</td>
+<td>Trumpi įrašai</td>
+<td>„iOS“</td>
+<td>Su tavo retransliatoriais bendrauja tiesiogiai. Tavo nsec raktą telefone laiko pati programėlė.</td>
+</tr>
+<tr>
+<td><a href="https://amethyst.social/" target="_blank" rel="noopener noreferrer"><strong>Amethyst</strong></a></td>
+<td>Į „X“. Funkcijų turi daugiausia, todėl iš pradžių jų gausa gali trikdyti.</td>
+<td>Trumpi įrašai ir dauguma kitų rūšių įvykių</td>
+<td>„Android“</td>
+<td>Su tavo retransliatoriais bendrauja tiesiogiai. Naudojant pasirašymo programėlę „<a href="https://github.com/greenart7c3/Amber" target="_blank" rel="noopener noreferrer">Amber</a>“ nsec raktas į šį klientą išvis nepatenka.</td>
+</tr>
+<tr>
+<td><a href="https://yakihonne.com/" target="_blank" rel="noopener noreferrer"><strong>Yakihonne</strong></a></td>
+<td>Į „Medium“.</td>
+<td>Ilgi straipsniai, atrinktas turinys, trumpi įrašai</td>
+<td>„iOS“, „Android“, naršyklė</td>
+<td>Viena bendrovė kuria programėles ir valdo savo retransliatorius. Galima naudoti nuotolinę pasirašymo programėlę.</td>
+</tr>
+<tr>
+<td><a href="https://olas.app/" target="_blank" rel="noopener noreferrer"><strong>Olas</strong></a></td>
+<td>Į „Instagram“. Naujos versijos pasirodo retai: parduotuvėje esanti „iPhone“ versija išleista 2025 m. kovą, o programėlė šiuo metu perrašoma.</td>
+<td>Nuotraukos ir trumpi vaizdo įrašai</td>
+<td>„iOS“, „Android“</td>
+<td>Su tavo retransliatoriais bendrauja tiesiogiai. Vaizdų failai laikomi medijos serveriuose, kurie gali juos pašalinti.</td>
+</tr>
+<tr>
+<td><a href="https://zap.stream/" target="_blank" rel="noopener noreferrer"><strong>zap.stream</strong></a></td>
+<td>Į „Twitch“.</td>
+<td>Tiesioginės vaizdo transliacijos su pokalbiu ir zapais</td>
+<td>Naršyklė, „iOS“, „Android“</td>
+<td>Pokalbis ir pranešimai apie transliacijas yra pasirašyti įvykiai. Vaizdas keliauja per srautinio perdavimo serverį, o numatytasis yra „<a href="https://zap.stream" target="_blank" rel="noopener noreferrer">zap.stream</a>“ serveris.</td>
+</tr>
+<tr>
+<td><a href="https://fountain.fm/" target="_blank" rel="noopener noreferrer"><strong>Fountain</strong></a></td>
+<td>Į tinklalaidžių programėlę su komentarais ir mokėjimais laidoms.</td>
+<td>Tinklalaidės, muzika</td>
+<td>„iOS“, „Android“</td>
+<td>Viena bendrovė. Kodas neskelbiamas, o įtaisyta piniginė yra depozitinė (angl. custodial), t. y. raktus laiko įmonė.</td>
+</tr>
+<tr>
+<td><a href="https://wavlake.com/" target="_blank" rel="noopener noreferrer"><strong>Wavlake</strong></a></td>
+<td>Į „Spotify“ arba „Bandcamp“, tik nepriklausomiems atlikėjams.</td>
+<td>Muzika, už kurią mokama tiesiai atlikėjams</td>
+<td>Naršyklė, „iOS“, „Android“</td>
+<td>Viena bendrovė laiko muziką savo serveriuose ir tvarko mokėjimus atlikėjams. Naujausia „iPhone“ programėlės versija išleista 2025 m. lapkritį.</td>
+</tr>
+<tr>
+<td><a href="https://shopstr.store/" target="_blank" rel="noopener noreferrer"><strong>Shopstr</strong></a></td>
+<td>Į skelbimų prekyvietę.</td>
+<td>Prekių skelbimai, atsiskaitoma bitkoinais</td>
+<td>Naršyklė</td>
+<td>Skelbimai yra pasirašyti įvykiai. Mokėjimas keliauja tiesiai pardavėjui, be sąlyginio deponavimo (angl. escrow), todėl pasitikrink, iš ko perki.</td>
+</tr>
+<tr>
+<td><a href="https://www.0xchat.com/" target="_blank" rel="noopener noreferrer"><strong>0xchat</strong></a></td>
+<td>Į „Telegram“ arba „WhatsApp“.</td>
+<td>Privatūs ir grupių pokalbiai</td>
+<td>„iOS“, „Android“, kompiuteris</td>
+<td>Retransliatoriai perduoda šifruotas žinutes. Projektas jaunas ir laiko dar neišbandytas taip, kaip 1 skyriuje aprašytos susirašinėjimo programėlės.</td>
+</tr>
+<tr>
+<td><a href="https://zapstore.dev/" target="_blank" rel="noopener noreferrer"><strong>Zapstore</strong></a></td>
+<td>Į „Google Play“ arba „<a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a>“.</td>
+<td>„Android“ programėlės</td>
+<td>„Android“</td>
+<td>Kiekviena versija pasirašoma kūrėjo Nostr raktu ir prieš įdiegiant patikrinama. Kuriais katalogais ir kūrėjais pasitikėti, renkiesi tu.</td>
+</tr>
+<tr>
+<td><a href="https://iris.to/" target="_blank" rel="noopener noreferrer"><strong>Iris</strong></a>, <a href="https://coracle.social/" target="_blank" rel="noopener noreferrer"><strong>Coracle</strong></a>, <a href="https://nostrudel.ninja/" target="_blank" rel="noopener noreferrer"><strong>noStrudel</strong></a></td>
+<td>Į „X“ naršyklėje. „<a href="https://coracle.social/" target="_blank" rel="noopener noreferrer">Coracle</a>“ leidžia smulkiai valdyti retransliatorius, o „<a href="https://nostrudel.ninja/" target="_blank" rel="noopener noreferrer">noStrudel</a>“ išbando viską, ką protokolas gali.</td>
+<td>Trumpi įrašai, o „noStrudel“ ir daugiau</td>
+<td>Naršyklė („<a href="https://iris.to/" target="_blank" rel="noopener noreferrer">Iris</a>“ veikia ir telefone)</td>
+<td>Pasitiki svetaine, kuri per kiekvieną apsilankymą pateikia kodą. Prisijunk per plėtinį arba nuotolinę pasirašymo programėlę, o ne nsec raktu. „noStrudel“ galima paleisti nuosavame serveryje.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: <strong>mobilusis klientas</strong> kasdieniam naudojimui („Primal“, „Damus“ arba „Amethyst“), <strong>naršyklėje veikiantis klientas</strong> kompiuteryje, naudojamas per pasirašymo programėlę, ir dar 1 ar 2 specializuoti klientai pagal tai, ką skaitai ir žiūri ar ko klausaisi.</p>
+<h2>Apsaugok savo nsec raktą</h2>
+<p>Visa tavo tapatybė yra nsec raktas. Jei jis nutekėtų, kas nors galėtų tavo vardu skelbti tol, kol panorės, o pakeisti jo taip, kaip keiti slaptažodį, negali. Iš to kyla taisyklė: <strong>niekada neįklijuok nsec rakto į svetainę, kurios nepažįsti</strong>, ir apskritai klijuok jį į kuo mažiau vietų.</p>
+<p>Tvarkingiausias sprendimas yra <strong>pasirašymo programėlė</strong>, nedidelė programėlė, kuri laiko raktą ir pasirašo už tavo klientus. Klientas paprašo, pasirašymo programėlė pasirašo, o rakto klientas taip ir nepamato. Galimybių yra keletas:</p>
+<ul>
+<li><strong>Amber</strong>, skirta „Android“ sistemai: atvirojo kodo pasirašymo programėlė, kurią kitos Nostr programėlės iškviečia, kai joms reikia parašo.</li>
+<li><strong>Naršyklės plėtinys</strong>, pavyzdžiui, „nos2x“ arba „Alby“, skirtas naršyklėje veikiantiems klientams kompiuteryje.</li>
+<li><strong>Nuotolinė pasirašymo programėlė</strong>, dažnai vadinama „nsec bunker“: raktas lieka viename įrenginyje ar serveryje, o programėlės prie jo jungiasi per Nostr. Ji veikia visose platformose.</li>
+</ul>
+<p>Telefonuose „iPhone“ tikslaus „Amber“ atitikmens kol kas nėra, nes sistemoje „iOS“ programėlės turi mažiau būdų iškviesti viena kitą. Yra kelios pasirašymo programėlės ir naršyklės „Safari“ plėtiniai, o naujausių sąrašą rasi kataloge <a href="https://nostrapps.com" target="_blank" rel="noopener noreferrer">nostrapps.com</a>. Kitu atveju įprasta išeitis yra nuotolinė pasirašymo programėlė.</p>
+<p>Tada pasidaryk nsec rakto atsarginę kopiją kaip ir bet kurio kito 6 skyriuje aprašyto rakto: popieriuje 2 vietose arba slaptažodžių tvarkyklėje, kol paskyros vertė maža.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinktas mobilusis klientas, o visuose kituose logika ta pati.</p>
+<ol>
+<li><strong>Susikurk raktus kliente.</strong> Įdiek jį ir pasirink „Create account“ (sukurti paskyrą). Nereikia nei el. pašto, nei telefono numerio, nes raktų porą programėlė sugeneruoja tavo telefone.</li>
+<li><strong>Iš karto pasidaryk nsec rakto atsarginę kopiją.</strong> Raktą rasi nustatymuose, prie raktų arba paskyros. Padaryk tai, kol dar nieko nepaskelbei.</li>
+<li><strong>Užpildyk profilį</strong>: įrašyk vardą, pridėk nuotrauką ir trumpą aprašymą ir nepamiršk, kad visa tai vieša.</li>
+<li><strong>Jei nori, pridėk žmogui suprantamą adresą</strong> (vadinamąjį NIP-05). Jis atrodo kaip el. pašto adresas, vardas@domenas, ir rodo, kad tavo raktas įrašytas tame domene, ir nieko daugiau. Kai kurios paslaugos tokį adresą suteikia, arba gali naudoti nuosavą domeną. Prisijungti juo negalima.</li>
+<li><strong>Sek žmones.</strong> Pagal vardą susirask PROOF pranešėjus, pridėk kelias paskyras, kurias klientas siūlo pradedantiesiems, ir sek kelias grotažymes. 1-ąją dieną srautas būna tuščias, ir tai normalu. Tau svarbių paskyrų npub raktą palygink su tuo, kurį žmogus nurodo savo svetainėje arba pasako gyvai: būtent šis žingsnis pasitikėjimą paieškos rezultatu pakeičia patikrinimu.</li>
+<li><strong>Pridėk antrą klientą su pasirašymo programėle.</strong> Sistemoje „Android“ įdiek programėlę „Amber“. Kompiuteryje įdiek naršyklės plėtinį, pavyzdžiui, „nos2x“ arba „Alby“. Telefone „iPhone“ išsirink pasirašymo programėlę arba „Safari“ plėtinį iš <a href="https://nostrapps.com" target="_blank" rel="noopener noreferrer">nostrapps.com</a> arba nusistatyk nuotolinę pasirašymo programėlę. Vieną kartą importuok nsec raktą į pasirašymo programėlę, tada atverk naršyklėje veikiantį klientą ir pasirink prisijungimą per plėtinį arba pasirašymo programėlę. Profilis ir sekėjai ten jau yra, ir tai yra tas perkeliamumas, kurį žada Nostr.</li>
+<li><strong>Prijunk Lightning piniginę zapams.</strong> Kad galėtum gauti, profilyje nurodyk Lightning adresą, o kad galėtum siųsti, susiek piniginę. Apie pinigines rašoma 3 dalyje.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Klijuoti nsec raktą į kiekvieną naują programėlę, kurią išbandai.</strong> Kiekviena kopija yra rizika. Naudok pasirašymo programėlę arba naujas programėles bandyk su antru, vienkartiniu raktu.</li>
+<li><strong>Manyti, kad Nostr yra privatus.</strong> Įrašai vieši, nes taip sumanyta. Asmeninės žinutės skirtingose programėlėse veikia skirtingai ir gali atskleisti, kas kam rašo. Privatiems pokalbiams naudok 1 skyriuje aprašytą susirašinėjimo programėlę.</li>
+<li><strong>Skelbti tai, ką galbūt norėsi ištrinti.</strong> Retransliatoriai gauna prašymą ištrinti ir gali jo nepaisyti, o kopijų jau gali būti kitur.</li>
+<li><strong>Priklausyti nuo vieno retransliatoriaus.</strong> Skelbk keliuose, valdomuose skirtingų operatorių, nes būtent iš to kyla atsparumas cenzūrai.</li>
+<li><strong>1-ąją dieną tikėtis to, ką randi didžiosiose platformose.</strong> Tinklas mažesnis, o įdomus jis tampa tada, kai seki 30 ar 40 aktyvių žmonių.</li>
+<li><strong>Laikyti pinigus zapams skirtoje piniginėje.</strong> Zapų piniginė skirta mažoms sumoms, net jei ji yra savarankiško saugojimo. Pavyzdžiui, įtaisyta „Primal“ piniginė iki 2026 m. buvo depozitinė. Nuo 3.0 versijos (2026 m. kovas) ji yra <a href="https://breez.technology/case-studies/primal" target="_blank" rel="noopener noreferrer">savarankiško saugojimo</a>, taigi atkūrimo žodžius turi tu, o veikia ji Spark pagrindu: tai neseniai sukurtas, su Lightning suderinamas Bitcoin sluoksnis, kurio garantijos iš dalies priklauso nuo Spark operatorių. Senesnėse apžvalgose vis dar aprašoma depozitinė versija, o įtaisyta „Fountain“ piniginė yra depozitinė. Santaupoms vieta kitur (žr. 3 dalį).</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kaip perkurti socialinius tinklus be juos valdančios įmonės naudojant Nostr“, pranešimą skaito Marius Off-Chain.</li>
+<li><strong>Vadovas pradedantiesiems:</strong> <a href="https://nostr.how" target="_blank" rel="noopener noreferrer">nostr.how</a>.</li>
+<li><strong>Klientų, pasirašymo programėlių ir įrankių katalogas:</strong> <a href="https://nostrapps.com" target="_blank" rel="noopener noreferrer">nostrapps.com</a>.</li>
+<li><strong>Pats protokolas</strong>, smalsiems: NIP saugykla (<a href="https://github.com/nostr-protocol/nips" target="_blank" rel="noopener noreferrer">github.com/nostr-protocol/nips</a>).</li>
+<li><strong>Kitas skyrius:</strong> kaip po vieną pakeisti technologijų milžinių paslaugas.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://techcrunch.com/2022/12/18/twitter-wont-let-you-post-your-facebook-instagram-and-mastodon-handles/" target="_blank" rel="noopener noreferrer">Twitter won't let you post your Facebook, Instagram and Mastodon handles</a>, „TechCrunch“, 2022 m. gruodžio 18 d.</li>
+<li><a href="https://ec.europa.eu/commission/presscorner/detail/en/ip_25_1085" target="_blank" rel="noopener noreferrer">Commission finds Apple and Meta in breach of the Digital Markets Act</a>, Europos Komisija, 2025 m. balandžio 23 d.</li>
+<li><a href="https://techcrunch.com/2023/02/02/damus-pulled-from-apples-app-store-in-china-after-two-days/" target="_blank" rel="noopener noreferrer">Damus pulled from Apple's App Store in China after two days</a>, „TechCrunch“, 2023 m. vasario 2 d.</li>
+<li><a href="https://github.com/nostr-protocol/nips/blob/master/05.md" target="_blank" rel="noopener noreferrer">NIP-05: mapping Nostr keys to DNS-based internet identifiers</a>, Nostr protokolo saugykla, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://github.com/nostr-protocol/nips/blob/master/65.md" target="_blank" rel="noopener noreferrer">NIP-65: relay list metadata</a>, Nostr protokolo saugykla, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://zapstore.dev/" target="_blank" rel="noopener noreferrer">Zapstore, an open app store</a>, „Zapstore“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://shopstr.store/" target="_blank" rel="noopener noreferrer">Shopstr, a marketplace built on Nostr</a>, „Shopstr“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://apps.apple.com/us/app/olas/id6738208592" target="_blank" rel="noopener noreferrer">Olas on the App Store</a>, „Apple“, 0.4.0 versija paskelbta 2025 m. kovo 11 d., žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://github.com/PrimalHQ/primal-server" target="_blank" rel="noopener noreferrer">Primal Server</a>, „PrimalHQ“ platformoje „GitHub“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://breez.technology/case-studies/primal" target="_blank" rel="noopener noreferrer">Primal case study</a>, „Breez“, 2026 m.</li>
+<li><a href="https://github.com/PrimalHQ/primal-android-app/releases" target="_blank" rel="noopener noreferrer">Primal for Android, release notes</a>, „PrimalHQ“ platformoje „GitHub“, 3.0.7 versija paskelbta 2026 m. kovo 17 d.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="nostr-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-1" aria-label="Įdiek klientą ir susikurk raktus"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-1">Įdiek klientą ir susikurk raktus</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-2" aria-label="Pasidaryk nsec rakto atsarginę kopiją popieriuje arba slaptažodžių tvarkyklėje"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-2">Pasidaryk nsec rakto atsarginę kopiją popieriuje arba slaptažodžių tvarkyklėje</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-3" aria-label="Užpildyk profilį ir pradėk sekti PROOF pranešėjus"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-3">Užpildyk profilį ir pradėk sekti PROOF pranešėjus</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="nostr-4" aria-label="Įdiek pasirašymo programėlę ir per ją prisijunk prie antro kliento"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-4">Įdiek pasirašymo programėlę ir per ją prisijunk prie antro kliento</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="nostr-5" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="nostr-5" aria-label="Profilyje nurodyk Lightning adresą ir nusiųsk pirmąjį zapą"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="nostr-5">Profilyje nurodyk Lightning adresą ir nusiųsk pirmąjį zapą</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/keys/"><span>Ankstesnis</span>Raktai vietoj paskyrų</a>
+<a class="bk-next" href="/book/big-tech/"><span>Kitas</span>Kaip po vieną pakeisti technologijų milžinių paslaugas</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

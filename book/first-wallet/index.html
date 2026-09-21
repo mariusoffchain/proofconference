@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo pirmoji piniginė ir pirmieji satošiai · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/first-wallet/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/first-wallet/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/first-wallet/'">EN</button>
+</nav>
+
+<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page mono page-top" data-slug="first-wallet">
+  <header class="bk-head">
+    <p class="bk-label">Darbo įrodymas · 13 skyrius</p>
+    <h1>Tavo pirmoji piniginė ir pirmieji satošiai</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Biržoje palikti bitkoinai yra įmonės pažadas, o bitkoinus piniginėje, kurios raktus laikai tu, ir kontroliuoji tu. Piniginė yra nemokama programėlė, kuriai paruošti pakanka maždaug 10 minučių, o mokytis pakanka sumos, artimos pietų kainai. Įdiek piniginę, užsirašyk atkūrimo žodžius, gauk pirmą mokėjimą, dalį jo nusiųsk atgal, o tada palyginimui išbandyk antrą, kitos komandos sukurtą piniginę.</p>
+<h2>Likutis biržoje yra skolos raštelis</h2>
+<p>Kai nusiperki bitkoinų biržoje ir ten juos palieki, tau priklauso tik eilutė įmonės duomenų bazėje, kurioje parašyta, kad įmonė tau jų skolinga. Kol įmonė sąžininga, moki, saugi ir jai leidžiama tave aptarnauti, skirtumo nuo tikrų bitkoinų nematyti.</p>
+<p>Birža „Mt. Gox“, kadaise didžiausia pasaulyje bitkoinų birža, 2014 m. vasarį kreipėsi dėl bankroto ir pranešė, kad <a href="https://www.wired.com/2014/03/bitcoin-exchange/" target="_blank" rel="noopener noreferrer">trūksta apie 850 000 bitkoinų</a>. Jos administratorius pirmąsias išmokas kreditoriams pervedė 2024 m. liepą, o 2025 m. spalį <a href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf" target="_blank" rel="noopener noreferrer">galutinį terminą nukėlė į 2026 m. spalio 31 d.</a>, kai nuo žlugimo bus praėję daugiau kaip 12 metų.</p>
+<p>Birža „FTX“, viena didžiausių tuo metu, dėl bankroto kreipėsi 2022 m. lapkritį, praėjus kelioms dienoms po to, kai buvo sustabdytas lėšų išėmimas. Jos įkūrėjas 2023 m. lapkritį pripažintas kaltu dėl sukčiavimo, o 2024 m. kovą <a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes" target="_blank" rel="noopener noreferrer">nuteistas kalėti 25 metus</a>. Tarp tokio masto įvykių pasitaiko ir kasdieniškesnių: įšaldomos paskyros, stabdomas lėšų išėmimas, į platformas įsilaužiama. Bitcoin naudotojai visa tai apibendrina posakiu „Not your keys, not your coins“ (ne tavo raktai, ne tavo monetos).</p>
+<h2>Piniginėje laikomi raktai, o ne monetos</h2>
+<p>Kiekvienas bitkoinas egzistuoja tik kaip įrašas blokų grandinėje, viešajame registre, kurį sinchronizuoja tūkstančiai kompiuterių. Piniginėje laikomi <strong>raktai</strong>, t. y. slapti skaičiai, kuriais tinklui įrodai, kad turi teisę perkelti tam tikrą įrašą. Norint išleisti bitkoinus reikia raktu pasirašyti žinutę, todėl monetas valdo tas, kas turi raktą, ir tam nereikia nei vardo, nei paskyros, nei leidimo.</p>
+<p>Taigi programėlė yra ir langas, ir rašiklis. Ji parodo, ką valdo tavo raktai, ir pasirašo, kai nusprendi mokėti. Atsarginė pačių raktų kopija yra 12 arba 24 paprastų žodžių sąrašas, ir jam skirtas visas 14 skyrius.</p>
+<p>Viso bitkoino irgi nereikia. 1 bitkoinas dalijamas į 100 mln. vienetų, vadinamų <strong>satošiais</strong> (angl. satoshis, trumpiau <strong>sats</strong>), ir su 20 000 satošių piniginė veikia lygiai taip pat kaip su 2 bitkoinais, todėl mokytis pakanka mažų sumų.</p>
+<h2>2 pasirinkimai, su kuriais susidursi</h2>
+<p><strong>Pagrindinėje grandinėje ar per Lightning.</strong> Pagrindinės grandinės (angl. on-chain) transakcijos įrašomos tiesiai į blokų grandinę. Jos trunka nuo kelių minučių iki kelių valandų, o jų mokestis priklauso nuo paklausos, todėl jos tinka didesnėms sumoms ir santaupoms. Lightning yra Bitcoin pagrindu veikiantis mokėjimų tinklas, praktiškai momentinis ir labai pigus, todėl tinka mažoms kasdienėms sumoms (žr. 15 skyrių).</p>
+<p><strong>Depozitinė ar savarankiško saugojimo piniginė.</strong> Depozitinė piniginė (angl. custodial) veikia kaip maža birža, nes raktus laiko įmonė, o tau rodo likutį. Savarankiško saugojimo piniginė raktus laiko tavo telefone.</p>
+<p>Su depozitine pinigine pradėti lengviausia, nes nereikia nei daryti atsarginės kopijos, nei ko nors suprasti, ir ji priimtina sumai, kurią prarasti neskaudėtų, panašiai kaip smulkias monetas kišenėje. Tačiau ES šis pasirinkimas siaurėja, nes depozitinių piniginių teikėjams dabar reikia licencijos ir jie privalo nustatyti naudotojų tapatybę (žr. 15 skyrių). Savarankiškas saugojimas iš tavęs reikalauja šiek tiek daugiau, visų pirma rimtos atsarginės kopijos. Užtat jokia įmonė tavo likučio nei įšaldys, nei praras, nors biržos ir tarpininkai (angl. brokers) vis tiek gali atsisakyti tave aptarnauti.</p>
+<h2>Laikyti raktus dar ne viskas</h2>
+<p>Naudojantis depozitine pinigine patikima trečioji šalis akivaizdi, nes raktus laiko įmonė ir ji gali tavo likutį įšaldyti arba prarasti. Kai raktus laikai tu, šios šalies nebelieka, bet lieka 3 mažiau pastebimos.</p>
+<p>Pirmoji yra serveris, kurio klausia piniginė. Piniginė telefone pati blokų grandinės netikrina, o siunčia užklausas serveriui, dažniausiai piniginės kūrėjų. Šis sužino tavo adresus ir IP adresą ir galėtų parodyti neteisingą likutį, nors išleisti tavo monetų negali. Antroji yra platinimo kanalas, nes nuo „Apple“ ar „Google“ parduotuvės ir nuo kūrėjo pasirašymo rakto priklauso, koks kodas veiks tavo telefone. Trečioji, Lightning tinkle, yra paslaugų teikėjas. Piniginė „Phoenix“ kanalus atidaro tik su bendrovės „ACINQ“ mazgu, kuris paprastai mato, kur keliauja tavo mokėjimai, ir galėtų atsisakyti juos persiųsti, o Spark pagrindu sukurtos piniginės priklauso nuo <a href="https://docs.spark.money/spark/trust-model" target="_blank" rel="noopener noreferrer">nedidelės operatorių grupės</a>. Abiem atvejais išlieka galimybė išeiti į blokų grandinę, tik ji kainuoja.</p>
+<p>Kiekvieną iš šių šalių galima iš dalies patikrinti. Atvirąjį kodą galima perskaityti, projektas <a href="https://walletscrutiny.com/methodology/" target="_blank" rel="noopener noreferrer">„WalletScrutiny“</a> tikrina, ar parduotuvėje esančią programėlę galima surinkti iš to kodo (tai vadinama atkartojamu programos surinkimu, angl. reproducible build), o kelios piniginės leidžia prisijungti prie savo mazgo (žr. 18 skyrių).</p>
+<h2>Kaip pasirinkti piniginę</h2>
+<p>Visos toliau išvardytos piniginės nemokamos, ir verta išbandyti 2 skirtingų komandų pinigines, kad dėl vienos programėlės ar vienos paslaugos bėdų niekada neliktum be galimybės mokėti.</p>
+<p>Pirmoje eilutėje esanti piniginė <a href="https://bitkit.to/" target="_blank" rel="noopener noreferrer">„Bitkit“</a> yra šios knygos redakcijos pasirinkimas pirmajai piniginei. Bendrovės „Synonym“ išleista programėlė, skirta „iPhone“ ir „Android“ telefonams, viename ekrane rodo 2 likučius: santaupas pagrindinėje grandinėje ir išlaidoms skirtas lėšas Lightning tinkle, o abu saugo vienas 12 žodžių sąrašas. Per Lightning gauti mokėjimus gali nuo pirmos minutės, nes atėjus pirmajam mokėjimui „Synonym“ paslaugų teikėjas „Blocktank“ atidaro kanalą ir išskaičiuoja savo mokestį, <a href="https://github.com/synonymdev/bitkit-android/issues/1265" target="_blank" rel="noopener noreferrer">2026 m. rugsėjo viduryje aprašytu atveju apie 1 800 satošių</a>. Dėl šio kanalo piniginė „Bitkit“ priklauso nuo teikėjo „Blocktank“, o jos Lightning ryšys <a href="https://help.bitkit.to/hc/help-center/articles/1702656162-how-do-i-manage-my-spending-balance" target="_blank" rel="noopener noreferrer">nesiūlomas JAV ir Kanados gyventojams</a>.</p>
+<p>2 paskutinėse eilutėse yra Ark pagrindu sukurtos piniginės. Ark yra būdas greitai ir pigiai mokėti bitkoinais už pagrindinės grandinės ribų (angl. off-chain), kai daug naudotojų per Ark serverį dalijasi tomis pačiomis pagrindinės grandinės transakcijomis. Tu laikai iš anksto pasirašytas transakcijas, su kuriomis, jei serveris dingtų, gali savarankiškai išeiti į blokų grandinę. Ark dar jaunas, nes pagrindiniame Bitcoin tinkle jis pradėjo veikti <a href="https://arklabs.xyz/insights/press-start-arkade-goes-live" target="_blank" rel="noopener noreferrer">2025 m. spalį su „Arkade“</a> ir <a href="https://second.tech/blog/introducing-noah-and-arke/" target="_blank" rel="noopener noreferrer">2026 m. birželį su bendrovės „Second“ sukurtu „Bark“</a>, o bendrovės „Second“ serveryje likutis <a href="https://second.tech/docs/learn/intro" target="_blank" rel="noopener noreferrer">nustoja galioti po 28 dienų, jei piniginė jo neatnaujina</a>. Lentelė atspindi 2026 m. rugsėjo mėn. padėtį, todėl prieš diegiant verta pasitikrinti kiekvieno projekto svetainėje.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Piniginė</th>
+<th>Kas laiko raktus</th>
+<th>Nuo ko ji vis dar priklauso</th>
+<th>Tinklai</th>
+<th>Atvirasis kodas</th>
+<th>Kompromisas be pagražinimų</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://bitkit.to/" target="_blank" rel="noopener noreferrer">Bitkit</a></strong></td>
+<td>Tu</td>
+<td>Numatytasis Lightning kanalų teikėjas yra bendrovės „Synonym“ paslauga „Blocktank“. Blokų grandinės duomenis teikia „Synonym“ Electrum serveris, kurį galima pakeisti savu.</td>
+<td>Pagrindinė grandinė ir Lightning, 2 likučiai vienoje programėlėje</td>
+<td>Taip</td>
+<td>Lightning mazgas telefone ir santaupų likutis pagrindinėje grandinėje, o abiem pakanka 1 atsarginės kopijos. Iš pirmojo Lightning mokėjimo sumokama už kanalą (2026 m. rugsėjo viduryje apie 1 800 satošių, suma priklauso nuo kasėjų mokesčio), bendra Lightning kanalų talpa neviršija maždaug 999 dolerių, o JAV ir Kanados gyventojams Lightning nesiūlomas.</td>
+</tr>
+<tr>
+<td><strong><a href="https://phoenix.acinq.co/" target="_blank" rel="noopener noreferrer">Phoenix</a></strong></td>
+<td>Tu</td>
+<td>Kiekvienas Lightning mokėjimas eina per bendrovės „<a href="https://acinq.co/" target="_blank" rel="noopener noreferrer">ACINQ</a>“ mazgą. Blokų grandinės duomenis teikia Electrum serveriai, kuriuos galima pakeisti savu.</td>
+<td>Lightning (į pagrindinę grandinę ir iš jos patenkama per keitimus, angl. swaps)</td>
+<td>Taip</td>
+<td>Tikras Lightning mazgas telefone, paprasta naudotis. Dėl kanalų priklauso nuo vienos bendrovės („ACINQ“). Pirmojo kanalo atidarymas <a href="https://phoenix.acinq.co/faq" target="_blank" rel="noopener noreferrer">kainuoja 1 000 satošių, 1 % sumos ir kasėjų mokestį</a>, todėl labai mažas pirmasis mokėjimas atmetamas.</td>
+</tr>
+<tr>
+<td><strong><a href="https://breez.technology/" target="_blank" rel="noopener noreferrer">Breez</a></strong> („Glow“, anksčiau „<a href="https://breez.technology/misty/" target="_blank" rel="noopener noreferrer">Misty Breez</a>“)</td>
+<td>Tu</td>
+<td>Priklauso nuo Spark operatorių, kurie kartu pasirašo kiekvieną pervedimą, ir nuo „Breez“ programinės įrangos.</td>
+<td>Lightning per Spark tinklą</td>
+<td>Taip</td>
+<td>2026 m. rugpjūtį piniginė „Misty Breez“ <a href="https://breez.technology/misty/" target="_blank" rel="noopener noreferrer">neteko Lightning ir pagrindinės grandinės mokėjimų</a>. Dabar „Breez“ siūlo tą patį mėnesį išleistą piniginę „Glow“. Kanalų tvarkyti nereikia, tačiau piniginė labai nauja, o Spark remiasi nedidele operatorių grupe.</td>
+</tr>
+<tr>
+<td><strong><a href="https://bluewallet.io/" target="_blank" rel="noopener noreferrer">BlueWallet</a></strong></td>
+<td>Tu</td>
+<td>Likučius rodo ir transakcijas į tinklą siunčia „BlueWallet“ Electrum serveriai, kuriuos nustatymuose galima pakeisti savu.</td>
+<td>Pagrindinė grandinė</td>
+<td>Taip</td>
+<td>Aiški ir tinka mokytis, kaip veikia pagrindinė grandinė. Jos serveriuose veikusi Lightning paslauga uždaryta 2023 m.</td>
+</tr>
+<tr>
+<td><strong><a href="https://blockstream.com/app/" target="_blank" rel="noopener noreferrer">Blockstream app</a></strong> (anksčiau „Green“)</td>
+<td>Tu</td>
+<td>Numatytieji yra „<a href="https://blockstream.com/" target="_blank" rel="noopener noreferrer">Blockstream</a>“ serveriai, bet galima naudoti savo Electrum serverį. Lightning mokėjimams reikia Liquid federacijos ir keitimo paslaugos.</td>
+<td>Pagrindinė grandinė, Liquid, Lightning per keitimus</td>
+<td>Taip</td>
+<td>Daug galimybių, veikia su aparatinėmis piniginėmis. Pradedantiesiems meniu daugoka, o Lightning mokėjimai per keitimus įvykdomi Liquid tinkle.</td>
+</tr>
+<tr>
+<td><strong><a href="https://zeusln.com/" target="_blank" rel="noopener noreferrer">Zeus</a></strong></td>
+<td>Tu</td>
+<td>Numatytasis kanalų teikėjas yra pačios piniginės „Zeus“ paslauga „Olympus“. Blokų grandinės duomenis teikia kiti Bitcoin mazgai arba tavo mazgas.</td>
+<td>Lightning ir pagrindinė grandinė</td>
+<td>Taip</td>
+<td>Tikras Lightning mazgas telefone arba nuotolinis tavo mazgo valdymo pultas (žr. 18 skyrių). Galinga, bet mokytis reikia daugiau. 2026 m. rugpjūtį per ataką prieš „Zeus“ serverius <a href="https://zeusln.com/blog/post-mortem-security-update-august-5th-2026/" target="_blank" rel="noopener noreferrer">buvo uždaryti daugelio naudotojų kanalai</a>, tačiau klientų lėšų neprarasta.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.walletofsatoshi.com/" target="_blank" rel="noopener noreferrer">Wallet of Satoshi</a></strong></td>
+<td>ES raktus laikai tu, nes depozitinis režimas čia <a href="https://www.therage.co/wallet-of-satoshi-eu-mica/" target="_blank" rel="noopener noreferrer">nepasiekiamas nuo 2026 m. sausio</a>. Kitur raktus laiko bendrovė.</td>
+<td>Depozitinio likučio atveju priklausai nuo bendrovės. Savarankiško saugojimo režimu priklausai nuo Spark operatorių ir bendrovės serverių.</td>
+<td>Lightning</td>
+<td>Ne</td>
+<td>Paprasčiausia iš visų. Savarankiško saugojimo režimas veikia Spark tinkle, naujoje sistemoje, kuri remiasi nedidele operatorių grupe. Tinka tik kišenpinigiams.</td>
+</tr>
+<tr>
+<td><strong><a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin</a></strong></td>
+<td>Tu</td>
+<td>Dėl pasirenkamos sąskaitos eurais priklausai nuo bendrovės „Bringin“, kuri, kaip ir bet kuri mokėjimo bendrovė, gali ją užblokuoti. Bitkoinų piniginė yra savarankiško saugojimo, todėl šių lėšų „Bringin“ nelaiko.</td>
+<td>Lightning ir pagrindinė grandinė</td>
+<td>Svetainėje nenurodyta</td>
+<td>Piniginė susieta su pasirenkama sąskaita eurais, kuriai reikia patvirtinti tapatybę (žr. 15 skyrių). „Bringin“ yra šios konferencijos rėmėja.</td>
+</tr>
+<tr>
+<td><strong><a href="https://arkade.money/" target="_blank" rel="noopener noreferrer">Arkade wallet</a></strong></td>
+<td>Tu</td>
+<td>Priklauso nuo „Ark Labs“ valdomo „Arkade“ serverio, kuris kartu pasirašo kiekvieną Ark mokėjimą. Išeiti į blokų grandinę galima ir be jo.</td>
+<td>Ark ir pagrindinė grandinė</td>
+<td>Taip</td>
+<td>Žiniatinklio programėlė, įdiegiama iš naršyklės, be programėlių parduotuvės. Vieša beta versija veikia nuo 2025 m. spalio, o pristatydama ją bendrovė „Ark Labs“ rašė, kad santaupoms ji dar neparengta.</td>
+</tr>
+<tr>
+<td><strong><a href="https://beta.noahwallet.io/" target="_blank" rel="noopener noreferrer">Noah</a></strong></td>
+<td>Tu</td>
+<td>Priklauso nuo bendrovės „Second“ valdomo Ark serverio, kuris kartu pasirašo mokėjimus ir sujungia piniginę su Lightning tinklu. Išeiti į blokų grandinę galima ir be jo.</td>
+<td>Ark, Lightning ir pagrindinė grandinė</td>
+<td>Taip</td>
+<td>Sukūrė piniginės „Blixt“ komanda. Beta versija skirta „Android“, o „iPhone“ telefonams ji platinama per „TestFlight“. Kūrėjai prašo įnešti tik tiek, kiek gali sau leisti prarasti.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: savarankiško saugojimo Lightning piniginė mažoms sumoms ir pagrindinės grandinės piniginė baziniam sluoksniui suprasti. Tai gali būti viena programėlė, pavyzdžiui, „Bitkit“, arba 2 atskiros programėlės, kai pagrindinei grandinei pasirenkama „BlueWallet“ arba „Blockstream app“. Piniginės, kurios pačios tvarko savo kanalus („Bitkit“, „Phoenix“, „Zeus“), pirmą dieną kainuoja daugiau, bet priklauso nuo mažiau išorinių paslaugų, o keitimais ar Spark tinklu paremtų piniginių atveju yra atvirkščiai. Išbandyk 2 ir pasilik tą, kuri tau aiški.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkta piniginė „Bitkit“. Kitose piniginėse logika ta pati.</p>
+<ol>
+<li><strong>Įdiek ją</strong> iš oficialios programėlių parduotuvės. Prieš diegiant patikrink kūrėjo pavadinimą („Bitkit“ kūrėjas yra „Synonym Software“) ir į parduotuvę eik per nuorodą iš oficialios projekto svetainės <a href="https://bitkit.to" target="_blank" rel="noopener noreferrer">bitkit.to</a>, o ne per parduotuvės paiešką. Šis patikrinimas, papildytas žvilgsniu į programėlės puslapį svetainėje <a href="https://walletscrutiny.com" target="_blank" rel="noopener noreferrer">walletscrutiny.com</a>, ir yra tas žingsnis, kuriuo pasitikėjimą pakeiti patikrinimu, kiek tai telefone įmanoma.</li>
+<li><strong>Sukurk naują piniginę.</strong> Programėlė neprašo nei el. pašto, nei vardo, nei paskyros, ir tai normalu.</li>
+<li><strong>Užsirašyk atkūrimo žodžius, kol dar nieko negavai.</strong> Atsarginės kopijos nustatymuose rask 12 žodžių, ranka nusirašyk juos ant popieriaus ir perskaityk 14 skyrių, kol dar neįnešei daugiau nei kišenpinigių.</li>
+<li><strong>Gauk pirmą mokėjimą, didesnį už kanalo mokestį.</strong> Bakstelėk „Receive“ (gauti), pasirink, kad mokėjimas ateitų į išlaidoms skirtą likutį, parodyk QR kodą ir neuždaryk programėlės, kol mokėjimas pasirodys. Tuo metu „Blocktank“ atidaro tavo kanalą ir iš sumos išskaičiuoja savo mokestį: <a href="https://github.com/synonymdev/bitkit-android/issues/1265" target="_blank" rel="noopener noreferrer">2026 m. rugsėjo 15 d. aprašytu atveju</a> jis siekė 1 835 satošius, o kai kasėjų mokesčiai kyla, būna didesnis. Iš to paties pranešimo, rugsėjo 20 d. vis dar neuždaryto, matyti, kad gavus siūlomą mažiausią 2 000 satošių sumą gali likti toks mažas likutis, kad jo nepavyks išleisti. Paprašyk realistiškos sumos, pavyzdžiui, 20 000 satošių, ir, kol dar nesutikai, perskaityk programėlės rodomą mokestį. Jei nori išbandyti vos su keliais šimtais satošių, rinkis piniginę be kanalų („Wallet of Satoshi“ arba „Glow“) ir susitaikyk su jos kompromisu.</li>
+<li><strong>Nusiųsk nedidelę sumą atgal.</strong> Nuskenuok kito žmogaus QR kodą, patikrink sumą ir patvirtink. Paprastai mokėjimas ateina per 1 ar 2 sekundes.</li>
+<li><strong>Patikrink mokestį</strong> mokėjimo informacijoje, kad žinotum, koks mokestis yra įprastas.</li>
+<li><strong>Išbandyk antrą piniginę</strong>, persiųsk satošių iš vienos į kitą ir palygink.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Laikyti santaupas biržoje.</strong> Birža praverčia tol, kol perki. Po to išsiimk bitkoinus į piniginę, kurią kontroliuoji.</li>
+<li><strong>Daryti atkūrimo žodžių ekrano nuotrauką.</strong> Nuotraukos dažnai sinchronizuojamos su debesija, ir jas gali perskaityti kitos programėlės. Naudok popierių ir rašiklį (žr. 14 skyrių).</li>
+<li><strong>Įdiegti netikrą piniginę.</strong> Programėlių parduotuvėse pasitaiko kopijų, sukurtų vogti. Patikrink kūrėjo pavadinimą ir pradėk nuo oficialios projekto svetainės.</li>
+<li><strong>Siųsti į ne tą tinklą.</strong> Lightning mokėjimo prašymas (angl. invoice), pagrindinės grandinės adresas ir Liquid adresas yra 3 skirtingi dalykai. Gera piniginė netinkamo adreso nepriima, o jei kas nors atrodo keistai, sustok ir pasiklausk.</li>
+<li><strong>Pradėti nuo didelės sumos.</strong> Pradedančiųjų klaidos nutinka pirmosiomis savaitėmis, todėl daryk jas su maža suma.</li>
+<li><strong>Pasitikėti tais, kurie internete siūlosi „padėti“ sutvarkyti piniginę.</strong> Atkūrimo žodžių nereikia nei piniginės kūrėjams, nei biržai, nei jokiai institucijai.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kodėl nuo tavo raktų priklauso tavo interneto sauga“, pranešimą skaito Satoshine. Raktai piniginėje remiasi ta pačia idėja kaip ir 6 skyriaus raktai.</li>
+<li><strong>Piniginių pamokos žingsnis po žingsnio:</strong> „Plan B Academy“ (<a href="https://planb.academy" target="_blank" rel="noopener noreferrer">planb.academy</a>).</li>
+<li><strong>Patikrink, ar piniginė tikrai atvirojo kodo:</strong> „WalletScrutiny“ (<a href="https://walletscrutiny.com" target="_blank" rel="noopener noreferrer">walletscrutiny.com</a>).</li>
+<li><strong>Paprasti vadovai pradedantiesiems:</strong> „Bitcoiner.Guide“ (<a href="https://bitcoiner.guide" target="_blank" rel="noopener noreferrer">bitcoiner.guide</a>).</li>
+<li><strong>Kitas skyrius:</strong> kaip pasidaryti atkūrimo frazės atsarginę kopiją.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://www.wired.com/2014/03/bitcoin-exchange/" target="_blank" rel="noopener noreferrer">The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster</a>, „Wired“, 2014 m. kovo 3 d.</li>
+<li><a href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf" target="_blank" rel="noopener noreferrer">Notice Concerning Change of Repayments Deadline</a>, „MtGox Co., Ltd.“ reabilitacijos administratorius, 2025 m. spalio 27 d.</li>
+<li><a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes" target="_blank" rel="noopener noreferrer">Samuel Bankman-Fried Sentenced to 25 Years for His Orchestration of Multiple Fraudulent Schemes</a>, JAV teisingumo departamentas, 2024 m. kovo 28 d.</li>
+<li><a href="https://walletscrutiny.com/methodology/" target="_blank" rel="noopener noreferrer">Methodology</a>, „WalletScrutiny“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://docs.spark.money/spark/trust-model" target="_blank" rel="noopener noreferrer">Spark trust model</a>, Spark dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://phoenix.acinq.co/faq" target="_blank" rel="noopener noreferrer">Phoenix FAQ: fees, restoring a wallet</a>, „ACINQ“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://help.bitkit.to/hc/help-center/articles/1702656162-how-do-i-manage-my-spending-balance" target="_blank" rel="noopener noreferrer">How do I manage my spending balance?</a> („Blocktank“, 999 dolerių riba, JAV ir Kanada), „Bitkit“ pagalbos centras, „Synonym“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://github.com/synonymdev/bitkit-android/issues/1265" target="_blank" rel="noopener noreferrer">CJIT at suggested minimum yields unspendable channel</a> („Blocktank“ mokestis už pirmąjį mokėjimą buvo 1 835 satošiai), „Bitkit“ klaidų registras platformoje „GitHub“, 2026 m. rugsėjo 15 d.</li>
+<li><a href="https://arklabs.xyz/insights/press-start-arkade-goes-live" target="_blank" rel="noopener noreferrer">Press Start: Arkade Goes Live</a>, „Ark Labs“, 2025 m. spalio 20 d.</li>
+<li><a href="https://second.tech/blog/introducing-noah-and-arke/" target="_blank" rel="noopener noreferrer">Introducing Noah and Arké: Two new Bark-based wallets</a>, „Second“, 2026 m. birželio 10 d.</li>
+<li><a href="https://second.tech/docs/learn/intro" target="_blank" rel="noopener noreferrer">Intro to the Ark protocol</a>, „Second“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="first-wallet-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="first-wallet-1" aria-label="Įdiek savarankiško saugojimo piniginę iš oficialaus šaltinio, bet pirmiausia patikrink kūrėjo pavadinimą ir jos puslapį svetainėje walletscrutiny.com"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="first-wallet-1">Įdiek savarankiško saugojimo piniginę iš oficialaus šaltinio, bet pirmiausia patikrink kūrėjo pavadinimą ir jos puslapį svetainėje walletscrutiny.com</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="first-wallet-2" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="first-wallet-2" aria-label="Atkūrimo žodžius užsirašyk ant popieriaus, kol dar nieko negavai"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="first-wallet-2">Atkūrimo žodžius užsirašyk ant popieriaus, kol dar nieko negavai</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="first-wallet-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="first-wallet-3" aria-label="Gauk pirmą mokėjimą, didesnį už pradinį kanalo mokestį, ir dalį nusiųsk atgal"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="first-wallet-3">Gauk pirmą mokėjimą, didesnį už pradinį kanalo mokestį, ir dalį nusiųsk atgal</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="first-wallet-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="first-wallet-4" aria-label="Įdiek antrą, kitos komandos sukurtą piniginę ir palygink"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="first-wallet-4">Įdiek antrą, kitos komandos sukurtą piniginę ir palygink</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="first-wallet-5" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="first-wallet-5" aria-label="Viską, ką palikai biržoje, perkelk į piniginę, kurią kontroliuoji"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="first-wallet-5">Viską, ką palikai biržoje, perkelk į piniginę, kurią kontroliuoji</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/savings/"><span>Ankstesnis</span>Kur laikyti savo darbo vaisius</a>
+<a class="bk-next" href="/book/seed/"><span>Kitas</span>Kaip pasidaryti atkūrimo frazės atsarginę kopiją</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo tinklas · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/network/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/network/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/network/'">EN</button>
+</nav>
+
+<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page priv page-top" data-slug="network">
+  <header class="bk-head">
+    <p class="bk-label">Privatumo įrodymas · 5 skyrius</p>
+    <h1>Tavo tinklas</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Kiekvienas tavo ryšys keliauja per svetimą įrangą, ar tai būtų interneto paslaugų teikėjo, ar kavinės belaidis tinklas („Wi-Fi“), ar darbovietės tinklas. HTTPS jau paslepia, ką skaitai ir rašai, bet ne tai, kuriose svetainėse lankaisi. VPN paslepia šį sąrašą nuo teikėjo, o IP adresą nuo svetainių, tačiau pasitikėjimą jis perkelia VPN bendrovei ir anonimiškumo nesuteikia. Tor tinklas ir maišymo tinklai (angl. mixnets) žengia toliau, bet už tai moki greičiu.</p>
+<h2>Stebėti gali kiekvienas tinklas pakeliui</h2>
+<p>Duomenų srautas nuo tavo įrenginio iki svetainės pereina kelis tinklus, ir kiekvienas iš jų gali jį stebėti be jokių įsilaužėlių, nes taip tinklai įprastai ir veikia.</p>
+<ul>
+<li><strong>Interneto paslaugų teikėjas</strong> mato kiekvieną ryšį, kurį užmezgi iš namų ar iš telefono, o daugelyje šalių įstatymai įpareigoja jį saugoti šių ryšių įrašus.</li>
+<li><strong>Viešąjį belaidį tinklą</strong> kavinėje, viešbutyje ar oro uoste valdo tau nepažįstami žmonės, kaip ir bet kurį to paties pavadinimo tinklą, kurį sukūrė pašalinis žmogus.</li>
+<li><strong>Darbovietės ar mokyklos tinklas</strong> dažnai stebimas, nes taip numato vidaus tvarka.</li>
+<li><strong>Kiekviena svetainė, kurioje lankaisi,</strong> mato tavo IP adresą, t. y. skaičių, identifikuojantį tavo ryšį. Jis atskleidžia teikėją ir apytikslę buvimo vietą, o svetainėms ir reklamos užsakovams leidžia tave atpažinti per kiekvieną apsilankymą net be slapukų.</li>
+</ul>
+<p>Europos Sąjungoje 2006 m. direktyva įpareigojo teikėjus srauto ir vietos nustatymo duomenis saugoti nuo 6 mėnesių iki 2 metų. Teisingumo Teismas <a href="https://curia.europa.eu/site/upload/docs/application/pdf/2014-04/cp140054en.pdf" target="_blank" rel="noopener noreferrer">2014 m. balandžio 8 d. pripažino ją negaliojančia</a> ir pažymėjo, kad tokie duomenys „gali suteikti labai tikslios informacijos apie privatų gyvenimą“ (tų žmonių, kurių duomenys saugomi). Keliose valstybėse narėse nacionalinės duomenų saugojimo taisyklės tebegalioja.</p>
+<h2>Spynelė slepia puslapius, bet ne tai, kur jungiesi</h2>
+<p><strong>HTTPS</strong>, t. y. spynelės piktograma naršyklėje, šifruoja ryšį tarp tavęs ir svetainės, ir šiandien jį naudoja beveik visos svetainės. Tarpiniai tinklai nebemato nei skaitomų puslapių, nei to, ką rašai, nei slaptažodžių. Jie vis dar mato domeno vardą, prie kurio jungiesi (svetainės pavadinimą, o ne konkretų puslapį), kada jungiesi, kiek laiko trunka ryšys ir kiek duomenų perduodama.</p>
+<p><strong>DNS</strong> (domenų vardų sistema) yra interneto telefonų knyga. Kad pasiektų <a href="https://proofconference.com" target="_blank" rel="noopener noreferrer">proofconference.com</a>, įrenginys pirmiausia turi paklausti DNS serverio, koks IP adresas slypi už šio vardo. Numatytasis serveris priklauso interneto paslaugų teikėjui, o klausimas dažnai keliauja nešifruotas, todėl dar prieš įkeliant puslapį teikėjas jau turi sąrašą visų vardų, kurių ieškojai.</p>
+<p><strong>Šifruotas DNS</strong> šiuos klausimus šifruotu kanalu siunčia į tavo pasirinktą serverį. Geri nemokami variantai yra „Quad9“ (Šveicarijos ne pelno organizacija, kuri dar ir blokuoja žinomas kenkėjiškas svetaines), „Mullvad DNS“ (paskyros nereikia, galima įsijungti reklamos blokavimą) ir „NextDNS“ (bendrovė, paslauga labai lanksčiai konfigūruojama, nemokama iki mėnesio limito). Tai nedidelis ir naudingas žingsnis, nors tinklas vis tiek mato IP adresus, prie kurių jungiesi.</p>
+<h2>Ką VPN daro ir ko nedaro</h2>
+<p><strong>VPN</strong> (virtualusis privatusis tinklas) sukuria šifruotą tunelį nuo tavo įrenginio iki VPN bendrovės valdomo serverio, ir juo keliauja visas duomenų srautas, taip pat ir DNS užklausos. Interneto paslaugų teikėjas ar kavinės belaidis tinklas mato tik tai, kad naudojiesi VPN, o svetainės mato VPN serverio adresą.</p>
+<p>Dabar VPN bendrovė mato tai, ką anksčiau matė teikėjas, taigi VPN perkelia pasitikėjimą iš bendrovės, kurios nesirinkai, į tą, kurią pasirinkai. Anonimiškumo jis irgi nesuteikia, nes slapukai ir atpažinimas pagal naršyklės skaitmeninį atspaudą (angl. fingerprinting, žr. 3 skyrių) veikia toliau, o „Google“ ar „Facebook“ žino, kas esi, vos tik prisijungi.</p>
+<p><strong>Tor</strong> tinkle vienintelės bendrovės, kuria tenka pasitikėti, nebelieka, nes duomenų srautas siunčiamas per 3 retransliatorius (angl. relays), kuriuos valdo nepriklausomi savanoriai. Pirmasis žino, kas esi, bet nežino, kur jungiesi, paskutinis, atvirkščiai, žino tik tai, kur jungiesi, ir nė vienas retransliatorius nemato abiejų galų. <strong>Maišymo tinklas</strong> taip pat naudoja kelis šuolius, tavo duomenų paketus sumaišo su kitų naudotojų paketais, juos pavėlina ir prideda netikro, „priedangos“, srauto. Taip siekiama, kad net viso tinklo stebėtojui būtų daug sunkiau susieti tai, kas įeina, su tuo, kas išeina. Maišymo tinklas lėtesnis už Tor tinklą ir praktikoje mažiau išbandytas.</p>
+<h2>Pažadui nekaupti veiklos įrašų reikia įrodymų</h2>
+<p>Kai naudojiesi VPN, tai, ar liks konfidencialu, kur jungiesi, priklauso nuo 1 bendrovės, kuri galėtų registruoti tavo ryšius, būti įpareigota tai daryti arba nukentėti nuo įsilaužimo. Veiklos įrašų nekaupimo politika (angl. no-logs policy) yra pažadas, o jį paremia 2 rūšių įrodymai. Pirmieji yra auditai, pavyzdžiui, <a href="https://protonvpn.com/blog/no-logs-audit" target="_blank" rel="noopener noreferrer">veiklos įrašų nekaupimo auditas, kurį bendrovė „Securitum“ nuo 2022 m. kasmet atlieka paslaugoje „Proton VPN“</a>, arba <a href="https://www.ivpn.net/blog/annual-security-audit-scheduled-2026" target="_blank" rel="noopener noreferrer">saugumo auditas, kurį „IVPN“ užsakymu kasmet atlieka bendrovė „Cure53“</a>. Antrieji yra atvejai, kai įsikiša teisėsauga ar teismai. 2023 m. balandžio 18 d. Švedijos policija <a href="https://mullvad.net/en/blog/2023/4/20/mullvad-vpn-was-subject-to-a-search-warrant-customer-data-not-compromised" target="_blank" rel="noopener noreferrer">su kratos orderiu atvyko į „Mullvad“ biurą Geteborge</a> ir, pasak bendrovės, išvyko be klientų duomenų, nes jų nebuvo. Ir vieni, ir kiti įrodymai tėra momentinės nuotraukos, ir nė vieni nerodo, ką serveris registruoja šiandien.</p>
+<p><strong>Kelių šuolių režimas</strong> (angl. multi-hop), kurį siūlo keli VPN, sujungia 2 serverius į grandinę, kad serveris, į kurį įsilaužta, žinotų mažiau, tačiau kai abu priklauso tai pačiai bendrovei, pasitikėjimas niekur nepersikelia. Pasitikėjimui decentralizuoti reikia nepriklausomų operatorių, tokių kaip savanoriai, valdantys 3 Tor retransliatorius, arba nepriklausomi „NymVPN“ serverių operatoriai. Vis dėlto decentralizuota nereiškia patikrinta, nes niekas neaudituoja kiekvieno retransliatoriaus ar operatoriaus, o apsauga remiasi maža tikimybe, kad jie veiks išvien. Programinės įrangos leidėju tenka pasitikėti ir toliau, o už visa tai moki greičiu.</p>
+<h2>Kaip pasirinkti tinklo apsaugą</h2>
+<p>Visų toliau išvardytų variantų programėlės yra atvirojo kodo, o kiekviena iš 4 VPN bendrovių paskelbė bent 1 nepriklausomą saugumo auditą. Skiriasi tai, kuo tenka pasitikėti, greitis ir mokėjimo būdai. Kainos ir mokėjimo būdai patikrinti oficialiose svetainėse 2026 m. rugsėjį.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Įrankis</th>
+<th>Kas jį valdo</th>
+<th>Kas mato tavo duomenų srautą</th>
+<th>Mokėjimas</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://mullvad.net/" target="_blank" rel="noopener noreferrer">Mullvad VPN</a></strong></td>
+<td>Viena bendrovė, Švedija</td>
+<td>Bendrovė „<a href="https://mullvad.net/" target="_blank" rel="noopener noreferrer">Mullvad</a>“ mato tavo IP adresą ir tai, kur jungiesi. Jos įrodymai yra keli auditai ir 2023 m. policijos krata, per kurią nieko nepaimta.</td>
+<td>Fiksuota 5 eurų per mėnesį kaina. Kortelė, „PayPal“, banko pavedimas, paštu siunčiami grynieji pinigai, bitkoinai (taip pat ir per Lightning tinklą), <a href="https://www.getmonero.org/" target="_blank" rel="noopener noreferrer">Monero</a></td>
+<td>El. pašto nereikia, paskyra yra atsitiktinis skaičius. Veikia greitai, audituota. Nemokamo plano nėra.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.ivpn.net/" target="_blank" rel="noopener noreferrer">IVPN</a></strong></td>
+<td>Viena bendrovė, Gibraltaras</td>
+<td>Bendrovė „IVPN“ mato tavo IP adresą ir tai, kur jungiesi. Jos įrodymai yra 2019 m. veiklos įrašų nekaupimo auditas, o vėliau kasmetiniai saugumo auditai.</td>
+<td>Mokama. Kortelė, „PayPal“, grynieji pinigai, bitkoinai (taip pat ir per Lightning tinklą), <a href="https://www.getmonero.org/" target="_blank" rel="noopener noreferrer">Monero</a></td>
+<td>El. pašto nereikia. Audituojama kasmet, apie savo ribas kalba labai atvirai. Serverių tinklas mažesnis.</td>
+</tr>
+<tr>
+<td><strong><a href="https://protonvpn.com/" target="_blank" rel="noopener noreferrer">Proton VPN</a></strong></td>
+<td>Viena bendrovė, Šveicarija</td>
+<td>Bendrovė „<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ mato tavo IP adresą ir tai, kur jungiesi. Jos įrodymas yra kasmetinis veiklos įrašų nekaupimo auditas, kurį nuo 2022 m. atlieka bendrovė „Securitum“.</td>
+<td>Nemokamas planas be duomenų limito 1 įrenginyje, mokami planai. Kortelė, „PayPal“, banko pavedimas, grynieji pinigai, bitkoinai (tik iš jau turimos paskyros)</td>
+<td>Audituota. Nemokamas planas sąžiningas, bet lėtesnis, o šalių jame nedaug. Paskyrai reikia el. pašto adreso.</td>
+</tr>
+<tr>
+<td><strong><a href="https://nym.com/" target="_blank" rel="noopener noreferrer">NymVPN</a></strong></td>
+<td>„<a href="https://nym.com/" target="_blank" rel="noopener noreferrer">Nym</a>“, Šveicarija. Serverius valdo nepriklausomi operatoriai</td>
+<td>Įėjimo operatorius mato tavo IP adresą, o išėjimo operatorius tai, kur jungiesi. Programėlę leidžia bendrovė „Nym“. Operatoriai neaudituojami.</td>
+<td>Mokama. Kortelė, paštu siunčiami grynieji pinigai, bitkoinai (taip pat ir per Lightning tinklą), <a href="https://www.getmonero.org/" target="_blank" rel="noopener noreferrer">Monero</a> ir kitos kriptovaliutos</td>
+<td>El. pašto nereikia, paskyra yra 24 žodžių frazė. Audituota 2024 m. Yra greitas 2 šuolių režimas ir daug lėtesnis 5 šuolių maišymo tinklo režimas. Jaunesnis produktas, kurio istorija trumpesnė. PROOF pranešėjas Alexis Roussel yra „Nym“ veiklos vadovas (COO).</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.torproject.org/download/" target="_blank" rel="noopener noreferrer">Tor Browser</a> / <a href="https://orbot.app/" target="_blank" rel="noopener noreferrer">Orbot</a></strong></td>
+<td>Ne pelno organizacija ir tūkstančiai savanorių valdomų retransliatorių</td>
+<td>Įėjimo retransliatorius mato tavo IP adresą, o išėjimo retransliatorius tai, kur jungiesi. Nė vienas retransliatorius nemato abiejų dalykų. Retransliatoriai neaudituojami.</td>
+<td>Nemokama</td>
+<td>Stipriausia IP adreso apsauga naršant. Veikia lėtai, o kai kurios svetainės Tor tinklą blokuoja arba rodo begalines patikros užduotis. Programėlė „Orbot“ per Tor tinklą siunčia telefono programėlių duomenų srautą.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: <strong>1 mokamas VPN iš šio sąrašo kasdieniam naudojimui</strong> ir įdiegta <strong>naršyklė „Tor Browser“</strong> toms kelioms paieškoms, kurių visiškai nenori sieti su savimi.</p>
+<p>Su „nemokamo VPN“ programėlėmis verta elgtis atsargiai, nes serverių išlaikymas kainuoja, o nemokančių naudotojų duomenų srautas dažnai pats tampa preke, iš kurios uždirbama per reklamą, sekimą ar duomenų perpardavimą. Taip pat atsargiai verta vertinti ir „geriausių VPN“ reitingų svetaines. Dauguma jų gauna komisinį atlygį už kiekvieną parduotą prenumeratą, o kai kurios priklauso toms pačioms įmonių grupėms kaip ir jų vertinami VPN. 2021 m. kovą bendrovė „Kape Technologies“ <a href="https://en.globes.co.il/en/article-kape-acquires-israeli-co-webselenese-for-149m-1001363243" target="_blank" rel="noopener noreferrer">už 149,1 mln. dolerių nusipirko bendrovę „Webselenese“, apžvalgų svetainių „vpnMentor“ ir „Wizcase“ leidėją</a>, o svetainė „vpnMentor“ <a href="https://www.vpnmentor.com/about-us/" target="_blank" rel="noopener noreferrer">pati nurodo</a>, kad bendrovei „Kape“ priklauso ir VPN paslaugos „ExpressVPN“, „CyberGhost“ bei „Private Internet Access“.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkta paslauga „Mullvad“, o su kitomis logika ta pati.</p>
+<ol>
+<li><strong>Įdiek programėlę</strong> iš oficialios teikėjo svetainės arba iš oficialios programėlių parduotuvės, bet niekada per nuorodą reklamoje.</li>
+<li><strong>Susikurk paskyrą.</strong> Paslauga „Mullvad“ duoda paskyros numerį ir daugiau nieko neprašo. Išsaugok jį slaptažodžių tvarkyklėje, o tada tau patogiu mokėjimo būdu nusipirk naudojimosi laiko.</li>
+<li><strong>Prisijunk.</strong> Kad greitis būtų didžiausias, pasirink serverį savo arba kaimyninėje šalyje. Tolima šalis praverčia tik tada, kai reikia, kad atrodytų, jog esi ten.</li>
+<li><strong>Įjunk avarinį išjungiklį (angl. kill switch).</strong> Šis nustatymas užblokuoja visą duomenų srautą, jei tunelis nutrūksta, kad niekas neiškeliautų už tunelio ribų. Programėlėje „Mullvad“ jis veikia visada, o kompiuteriuose papildomas „Lockdown mode“ (užrakinimo režimas) blokuoja internetą ir tada, kai atsijungi tyčia. Kitose programėlėse nustatymuose ieškok „kill switch“. „Android“ sistemos VPN nustatymuose taip pat yra „Always-on VPN“ (visada įjungtas VPN) ir „Block connections without VPN“ (blokuoti ryšius be VPN).</li>
+<li><strong>Prisijunk automatiškai.</strong> Nustatymuose pasirink, kad programėlė pasileistų įjungus įrenginį ir jungtųsi automatiškai. Kai kuriose programėlėse, pavyzdžiui, „IVPN“ ir „Proton VPN“, namų belaidį tinklą galima pažymėti kaip patikimą, o visuose kituose tinkluose jungtis automatiškai.</li>
+<li><strong>Nustatyk šifruotą DNS toms akimirkoms, kai VPN išjungtas.</strong> „Android“ sistemos tinklo nustatymuose susirask „Private DNS“ (privatus DNS) ir įrašyk pasirinktos paslaugos serverio vardą, pavyzdžiui, <a href="https://dns.quad9.net" target="_blank" rel="noopener noreferrer">dns.quad9.net</a>. „iPhone“ telefonams ir kompiuteriams pasirinkta paslauga duoda profilį arba programėlę, kurią reikia įdiegti. Naršyklės privatumo nustatymuose įjunk „saugų DNS“ (angl. secure DNS).</li>
+<li><strong>Patikrink, ar nėra nutekėjimų.</strong> Kai VPN įjungtas, atverk <a href="https://mullvad.net/check" target="_blank" rel="noopener noreferrer">mullvad.net/check</a> arba <a href="https://dnsleaktest.com" target="_blank" rel="noopener noreferrer">dnsleaktest.com</a>. Rodomas IP adresas turi priklausyti VPN. Rodomi DNS serveriai priklauso arba VPN, arba, jei tame įrenginyje ar naršyklėje atliktas 6 žingsnis, tavo pasirinktai šifruoto DNS paslaugai (pavyzdžiui, „Quad9“), kurios užklausos tada keliauja tunelio viduje. Abu rezultatai geri. Nutekėjimas yra tada, kai pasirodo tavo interneto paslaugų teikėjo pavadinimas. Būtent šiuo žingsniu pasitikėjimą pakeiti patikrinimu, bent jau dėl to, kas iškeliauja iš tavo įrenginio, nors joks toks testas neparodo, ką registruoja paties VPN serveriai.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Tikėti, kad VPN suteikia anonimiškumą.</strong> Jis paslepia IP adresą nuo svetainių, o duomenų srautą nuo teikėjo, tačiau slapukai, skaitmeninis atspaudas ir prisijungimai prie paskyrų tave vis tiek identifikuoja.</li>
+<li><strong>Rinktis VPN todėl, kad jis nemokamas arba kad taip patarė reitingų svetainė.</strong> Ieškok atvirojo kodo programėlių, nepriklausomų auditų, aiškaus savininko ir paprasto mokamo verslo modelio.</li>
+<li><strong>Palikti avarinį išjungiklį išjungtą.</strong> Tuneliai nutrūksta, ypač kai telefonas persijungia tarp belaidžio tinklo ir mobiliųjų duomenų, o be avarinio išjungiklio duomenų srautas tyliai grįžta į įprastą kelią.</li>
+<li><strong>Naršyklėje „Tor Browser“ jungtis prie asmeninių paskyrų.</strong> Kai prisijungi, svetainė žino, kas esi, ir papildomi šuoliai nuo jos tavęs nebeslepia.</li>
+<li><strong>Manyti, kad spynelė reiškia, jog svetainė sąžininga.</strong> HTTPS apsaugo ryšį, o spynelę gali turėti ir sukčiavimo apsimetant (angl. phishing) svetainė.</li>
+<li><strong>Pamiršti, kad taisyklės galioja ir toliau.</strong> Europos Sąjungoje VPN yra teisėtas privatumo įrankis, o tai, kas neteisėta be jo, neteisėta ir su juo. Kai kurios ne ES šalys VPN naudojimą riboja, todėl prieš kelionę pasidomėk vietos taisyklėmis.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kaip „kareivis-pilietis“ gali padėti decentralizuoti pasaulį: Rusijos invazijos į Ukrainą pamokos“, pranešimą skaito Alexis Roussel. Pranešimas apie tai, kodėl daugelio nepriklausomų žmonių valdomi tinklai atsilaiko geriau nei tie, kuriuos valdo vienas.</li>
+<li><strong>Palygink VPN be apmokėtų reitingų:</strong> „Privacy Guides“, „VPN Services“ ir „DNS Resolvers“ (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Suprask, kas yra Tor, ir atsisiųsk jį:</strong> „Tor Project“ (<a href="https://torproject.org" target="_blank" rel="noopener noreferrer">torproject.org</a>). „iPhone“ telefonams oficialios naršyklės „Tor Browser“ nėra, todėl jiems „Tor Project“ <a href="https://support.torproject.org/tor-browser/getting-started/installing/#ios" target="_blank" rel="noopener noreferrer">rekomenduoja naršyklę „Onion Browser“</a>, kurios apsauga silpnesnė nei kompiuteryje.</li>
+<li><strong>Kaip pasirinkti tavo situacijai tinkamą VPN:</strong> „Surveillance Self-Defense“ (<a href="https://ssd.eff.org" target="_blank" rel="noopener noreferrer">ssd.eff.org</a>).</li>
+<li><strong>Kitas skyrius:</strong> prasideda 2 dalis, o pirmasis jos skyrius yra „Raktai vietoj paskyrų“.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://curia.europa.eu/site/upload/docs/application/pdf/2014-04/cp140054en.pdf" target="_blank" rel="noopener noreferrer">Press release No 54/14: The Court of Justice declares the Data Retention Directive to be invalid</a>, Europos Sąjungos Teisingumo Teismas, 2014 m. balandžio 8 d.</li>
+<li><a href="https://en.globes.co.il/en/article-kape-acquires-israeli-co-webselenese-for-149m-1001363243" target="_blank" rel="noopener noreferrer">Kape acquires Israeli co Webselenese for $149m</a>, „Globes“, 2021 m. kovo 8 d.</li>
+<li><a href="https://www.vpnmentor.com/about-us/" target="_blank" rel="noopener noreferrer">About us (ownership disclosure)</a>, „vpnMentor“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://protonvpn.com/blog/no-logs-audit" target="_blank" rel="noopener noreferrer">Proton VPN passes 5th annual external audit of no-logs policy</a>, „Proton VPN“, atnaujinta 2026 m. birželio 16 d.</li>
+<li><a href="https://mullvad.net/en/blog/2023/4/20/mullvad-vpn-was-subject-to-a-search-warrant-customer-data-not-compromised" target="_blank" rel="noopener noreferrer">Mullvad VPN was subject to a search warrant. Customer data not compromised</a>, „Mullvad VPN“, 2023 m. balandžio 20 d.</li>
+<li><a href="https://www.ivpn.net/blog/annual-security-audit-scheduled-2026" target="_blank" rel="noopener noreferrer">Annual security audit scheduled for 2026</a>, „IVPN“, 2026 m. birželio 19 d.</li>
+<li><a href="https://nym.com/trust-center/Cure53-security-audit-2024" target="_blank" rel="noopener noreferrer">Nym response to Cure53 security audit</a>, „Nym“, 2024 m. liepos mėn.</li>
+<li><a href="https://mullvad.net/en/blog/2025/8/5/lightning-payments" target="_blank" rel="noopener noreferrer">Lightning payments</a>, „Mullvad VPN“, 2025 m. rugpjūčio 5 d.</li>
+<li><a href="https://support.torproject.org/tor-browser/getting-started/installing/#ios" target="_blank" rel="noopener noreferrer">Installing Tor Browser (iOS section)</a>, „Tor Project“, žiūrėta 2026 m. rugsėjį.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="network-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-1" aria-label="Įjunk šifruotą DNS telefone ir naršyklėje"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-1">Įjunk šifruotą DNS telefone ir naršyklėje</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="network-2" aria-label="Pasirink ir įdiek patikimo operatoriaus VPN"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-2">Pasirink ir įdiek patikimo operatoriaus VPN</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-3" aria-label="Įjunk avarinį išjungiklį ir automatinį prisijungimą, tada patikrink, ar nėra nutekėjimų"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-3">Įjunk avarinį išjungiklį ir automatinį prisijungimą, tada patikrink, ar nėra nutekėjimų</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-4" aria-label="Įdiek naršyklę „Tor Browser“ ir vieną kartą ją išbandyk"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-4">Įdiek naršyklę „Tor Browser“ ir vieną kartą ją išbandyk</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="network-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="network-5" aria-label="Pašalink iš įrenginių visas „nemokamo VPN“ programėles"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="network-5">Pašalink iš įrenginių visas „nemokamo VPN“ programėles</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/email/"><span>Ankstesnis</span>Tavo el. paštas ir pseudonimai</a>
+<a class="bk-next" href="/book/autonomy/"><span>Kitas</span>Autonomijos įrodymas</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

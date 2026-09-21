@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Aparatinės piniginės · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/hardware-wallet/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/hardware-wallet/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/hardware-wallet/'">EN</button>
+</nav>
+
+<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page mono page-top" data-slug="hardware-wallet">
+  <header class="bk-head">
+    <p class="bk-label">Darbo įrodymas · 17 skyrius</p>
+    <h1>Aparatinės piniginės</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Piniginė telefone tinka smulkioms išlaidoms, o santaupoms reikia ko nors patikimesnio. Aparatinė piniginė yra mažas specialus įrenginys, kuris privačiuosius raktus laiko atjungtus nuo interneto ir transakcijas pasirašo savo viduje, todėl kompiuteryje ar telefone esanti kenkėjiška programa raktų nepamato. Gerų įrenginių yra keletas, jų kompromisai skirtingi, ir nė vienas nėra nepažeidžiamas. Atkūrimo frazės atsarginės kopijos (žr. 14 skyrių) įrenginys nepakeičia, nes jis gali sugesti arba pasimesti, ir tada lėšas atkursi būtent iš atsarginės kopijos.</p>
+<h2>Raktai įrenginyje, kuris visada prijungtas prie interneto</h2>
+<p>Telefonas prie interneto prijungtas visą dieną. Jame veikia dešimtys programėlių, į jį ateina nuorodos iš nepažįstamų žmonių, jis jungiasi prie viešų belaidžių tinklų („Wi-Fi“) ir diegia daugelio įmonių naujinius, o kompiuteryje padėtis ne geresnė. Kiekvienas toks dalykas yra durys, o tame pačiame įrenginyje veikianti piniginės programėlė raktus laiko už tų durų.</p>
+<p>Sumai, kurią nešiotumeisi tikroje piniginėje, tokia rizika priimtina, o patogumas jos vertas. Su santaupomis skaičiavimas kitoks. Kenkėjiškų programų, kurios nuskaito piniginės failą, pakeičia adresą iškarpinėje arba įrašinėja ekraną, tikrai yra, ir jos parduodamos kaip gatavas produktas. Bitcoin transakcijos atšaukti neįmanoma, o pagalbos tarnybos, kuriai galėtum paskambinti, nėra.</p>
+<p>Kad su tuo susitvarkytum, saugumo eksperto žinių nereikia. Praktiška išeitis yra raktus iš šių įrenginių perkelti į tokį, kuris sukurtas taip, kad tokios programos jų nepasiektų.</p>
+<h2>Mažas kompiuteris, kuris tik pasirašo</h2>
+<p>Aparatinė piniginė, tiksliau vadinama <strong>pasirašymo įrenginiu</strong>, yra mažytis kompiuteris su vienintele užduotimi. Jis sugeneruoja atkūrimo frazę, privačiuosius raktus laiko savo luste ir sukurtas taip, kad niekada jų neišduotų.</p>
+<p>Kai nori išsiųsti bitkoinų, darbas padalijamas į 2 dalis:</p>
+<ol>
+<li>Transakciją parengia programa kompiuteryje arba programėlė telefone. Ji žino tik viešąją informaciją, todėl gali parodyti likutį ir parengti mokėjimą, bet išleisti lėšų negali.</li>
+<li>Transakcija perduodama įrenginiui kabeliu, per „Bluetooth“, QR kodu arba atminties kortele. Įrenginys savo ekrane parodo sumą ir gavėjo adresą. Viską patikrini, patvirtini įrenginyje, ir jis pasirašo savo viduje. Atgal grįžta tik parašas.</li>
+</ol>
+<p>Jei kompiuteris užkrėstas, kenkėjiška programa mato pasirašytą transakciją, o ne raktą. Ji vis tiek gali kompiuterio ekrane parodyti netikrą adresą, todėl žiūrėti reikia į įrenginio ekraną.</p>
+<p>Tikroji piniginė ir toliau yra atkūrimo frazė, o įrenginys tėra saugesnis būdas ja naudotis. 14 skyriuje aprašytos atsarginės kopijos vis tiek reikia, o atkūrimo frazė patikima tik tiek, kiek patikimas buvo atsitiktinumas, iš kurio įrenginys ją sukūrė. 2023 m. rugpjūtį <a href="https://milksad.info/disclosure.html" target="_blank" rel="noopener noreferrer">tyrėjų paskelbtas „Milk Sad“ spragos aprašymas</a> parodė, kad programinis įrankis „Libbitcoin Explorer“ atkūrimo frazes kūrė tik iš 32 bitų atsitiktinumo, nors turėtų būti nuo 128 iki 256 bitų, ir juo sukurtos piniginės 2023 m. liepos 12 d. buvo ištuštintos. Jokiu naujiniu tų atkūrimo frazių pataisyti nebuvo galima, todėl savininkams teko susikurti naujas ir perkelti lėšas.</p>
+<h2>Gamintojas, kuriuo vis tiek tenka pasitikėti</h2>
+<p>Nuo interneto atjungti raktai apsaugoti nuo tavo kompiuterio, tačiau pasitikėti dabar tenka įrenginio gamintoju. Gamintojas rašo programinę aparatinę įrangą (angl. firmware), kuri sukuria atkūrimo frazę ir pasirašo transakcijas. Jis taip pat kontroliuoja tiekimo grandinę ir dažniausiai valdo kartu su įrenginiu naudojamą programą, kurios serveriai gali matyti tavo adresus ir IP adresą. Bendrovės „Ledger“ duomenys (žr. lentelę) nutekėjo net ne iš įrenginio, o iš gamintojo parduotuvės klientų sąrašo.</p>
+<p>Jei įrenginio programinė įranga yra atvirojo kodo, ją gali perskaityti pašaliniai žmonės, o <a href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md" target="_blank" rel="noopener noreferrer">atkartojamas programos surinkimas (angl. reproducible build)</a> leidžia bet kam įsitikinti, kad diegi būtent paskelbtą kodą. Parašo patikra įrodo, kad programinė įranga gauta iš gamintojo, bet ne tai, kad ji veikia tinkamai. Kai pasirašoma visiškai atjungtu nuo tinklų įrenginiu (angl. air-gapped), kompiuteris jam gali nusiųsti mažiau duomenų. Saugusis lustas (angl. secure element) atsilaiko prieš žmogų, laikantį įrenginį rankose, tačiau tokiems lustams dažnai taikoma konfidencialumo sutartis, ir <a href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100" target="_blank" rel="noopener noreferrer">dėl to bendrovė „Ledger“ dalį savo sistemos laiko uždarą</a>. Kai kurie įrenginiai kaip atsitiktinumo šaltinį priima kauliukų metimus, tad prie lusto atsitiktinumo gali pridėti savo.</p>
+<p>Nė viena iš šių priemonių neleidžia apsieiti be gamintojo. Kelių parašų schema (angl. multisig) su 2 gamintojų įrenginiais (ji paaiškinta toliau) šį pasitikėjimą paskirsto, tačiau pirmajam įrenginiui saugesnis kelias tebėra gamintojo programa ir jos automatinės patikros.</p>
+<h2>Kaip pasirinkti įrenginį</h2>
+<p>Toliau išvardyti įrenginiai skiriasi atvirumu, kaina, patogumu ir izoliacija. „Visiškai atjungtas nuo tinklų“ reiškia, kad įrenginio niekada nereikia jungti prie kompiuterio, nes transakcijos perduodamos QR kodu arba atminties kortele. Gamintojų asortimentas greitai keičiasi, o ši lentelė atspindi 2026 m. rugsėjo mėn. padėtį.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Įrenginys</th>
+<th>Gamintojas</th>
+<th>Privalumai</th>
+<th>Kompromisai</th>
+<th>Pasitikėjimas gamintoju ir ką gali patikrinti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://bitbox.swiss/bitbox02/" target="_blank" rel="noopener noreferrer">BitBox02</a></strong></td>
+<td>„<a href="https://bitbox.swiss/" target="_blank" rel="noopener noreferrer">BitBox</a>“ („<a href="https://bitbox.swiss/" target="_blank" rel="noopener noreferrer">Shift Crypto</a>“), Šveicarija</td>
+<td>Atvirojo kodo, paprastas, yra vien Bitcoin skirta versija. <a href="https://bitcoinmagazine.com/news/bitbox-announces-bitbox02-nova-a-new-hardware-wallet-for-bitcoin" target="_blank" rel="noopener noreferrer">2025 m. birželį pristatytas modelis „BitBox02 Nova“</a> dar turi „Bluetooth“ ryšį ir veikia su „iPhone“ telefonais</td>
+<td>Nėra visiškai atjungtas nuo tinklų. Jungiamas per USB-C, o modelis „Nova“ ir per „Bluetooth“</td>
+<td>Įrenginio programinė įranga atvirojo kodo, jos surinkimas atkartojamas, o parašą tikrina programa „BitBoxApp“. Vien saugiuoju lustu nepasikliaujama</td>
+</tr>
+<tr>
+<td><strong><a href="https://trezor.io/" target="_blank" rel="noopener noreferrer">Trezor</a></strong></td>
+<td>„<a href="https://satoshilabs.com/" target="_blank" rel="noopener noreferrer">SatoshiLabs</a>“, Čekija</td>
+<td>Atvirojo kodo piniginių pradininkas, lengva naudotis, veikia su daugeliu piniginių programų</td>
+<td>Senesni modeliai jungiami tik kabeliu, o <a href="https://trezor.io/guides/trezor-devices/trezor-safe-7/trezor-safe-7-faqs" target="_blank" rel="noopener noreferrer">2025 m. pabaigoje išleistas modelis „Safe 7“</a> turi ir „Bluetooth“. Palaiko daug kitų kriptovaliutų, nebent pasirenki vien Bitcoin skirtą įrenginio programinę įrangą</td>
+<td>Atvirojo kodo įrenginio programinė įranga, kurios surinkimas atkartojamas ir kurią tikrina programa „Trezor Suite“. Modelyje „Safe 7“ atsirado audituojamas saugusis lustas (TROPIC01)</td>
+</tr>
+<tr>
+<td><strong><a href="https://blockstream.com/jade/" target="_blank" rel="noopener noreferrer">Blockstream Jade</a></strong></td>
+<td>„<a href="https://blockstream.com/" target="_blank" rel="noopener noreferrer">Blockstream</a>“</td>
+<td>Nebrangus, atvirojo kodo, naudojant QR kodus gali veikti visiškai atjungtas nuo tinklų</td>
+<td>PIN kodo apsauga priklauso nuo serverio (bendrovės „Blockstream“ arba nuosavo)</td>
+<td>Įrenginio programinė įranga atvirojo kodo. Saugiojo lusto nėra, todėl pasitikėti tenka ir PIN serveriu, nebent paleidi jį savo serveryje</td>
+</tr>
+<tr>
+<td><strong><a href="https://foundation.xyz/" target="_blank" rel="noopener noreferrer">Foundation Passport</a></strong></td>
+<td>„<a href="https://foundation.xyz/" target="_blank" rel="noopener noreferrer">Foundation Devices</a>“, JAV</td>
+<td>Atvirojo kodo, patogus naudoti, pasirašo QR kodu</td>
+<td>Vienas iš brangesnių. Naujasis modelis „Passport Prime“ naudoja ir „Bluetooth“, be to, skirtas ne vien Bitcoin (saugos raktai, 2FA kodai)</td>
+<td>Atvirojo kodo įrenginio programinė įranga, kurios surinkimas atkartojamas, o maišos reikšmę (angl. hash) gali palyginti su paskelbtąja</td>
+</tr>
+<tr>
+<td><strong><a href="https://seedsigner.com/" target="_blank" rel="noopener noreferrer">SeedSigner</a></strong></td>
+<td>Bendruomenės projektas</td>
+<td>Susirenki iš standartinių dalių, atvirojo kodo, nieko neįsimena (angl. stateless), t. y. nesaugo jokios atkūrimo frazės</td>
+<td>Surinkti turi tu, o atkūrimo frazę reikia įkelti kaskart, kai juo naudojiesi. Netinka kaip pirmasis įrenginys</td>
+<td>Jokios įmonės nėra. Programinės įrangos parašą tikrini tu, surinkimas atkartojamas, atsitiktinumo šaltinis yra kauliukai arba nuotrauka</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.ledger.com/" target="_blank" rel="noopener noreferrer">Ledger</a></strong></td>
+<td>„Ledger“, Prancūzija</td>
+<td>Populiarus, palaiko daug kriptovaliutų, turi saugųjį lustą</td>
+<td>Įrenginio programinė įranga nėra visiškai atvirojo kodo. <a href="https://www.ledger.com/blog/update-efforts-to-protect-your-data-and-prosecute-the-scammers" target="_blank" rel="noopener noreferrer">2020 m. iš klientų duomenų bazės nutekėjo</a> apie 1 mln. el. pašto adresų ir apie 272 000 pirkėjų vardai, pavardės, pašto adresai ir telefono numeriai</td>
+<td>Dalis saugiajame luste veikiančios sistemos uždara, todėl pašaliniai negali iki galo patikrinti, ką daro įrenginio programinė įranga</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dar reikia programos, su kuria įrenginys naudojamas. Tai gali būti paties gamintojo programa arba nepriklausoma atvirojo kodo piniginė, pavyzdžiui, „Sparrow Wallet“, „Electrum“ (kompiuteriui), „Nunchuk“ (kompiuteriui ir telefonui) arba „BlueWallet“ (telefonui, daugiausia su įrenginiais, kurie pasirašo QR kodu). Su nepriklausoma pinigine nepriklausai nuo to, ar gamintojo programa ir toliau bus prieinama.</p>
+<p>Didesnėms sumoms kitas lygmuo yra <strong>kelių parašų piniginė</strong>, kurioje pasirašyti turi, pavyzdžiui, 2 įrenginiai iš 3. Kai įrenginiai skirtingų gamintojų, 1 gamintojo spragos ar 1 įrenginio vagystės nepakanka jai ištuštinti. Darbo čia daugiau, todėl pirmiausia gerai perprask 1 įrenginį.</p>
+<p>Daugumai žmonių protingas derinys būtų toks: atvirojo kodo įrenginys, kuriame įdiegta vien Bitcoin skirta programinė įranga, pirktas naujas ir atnaujintas prieš pradedant naudotis, kartu su programa „Sparrow“ arba gamintojo programa. Kurį gamintoją rinktis, sprendi tu.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Su visais įrenginiais eiga iš esmės ta pati, tačiau 2 žingsnio patikra priklauso nuo gamintojo, todėl laikyk atvertą oficialų gamintojo vadovą.</p>
+<ol>
+<li><strong>Pirk tiesiogiai iš gamintojo arba iš oficialaus platintojo.</strong> Niekada nepirk naudoto įrenginio ir niekada nepirk iš pardavėjų elektroninėse prekyvietėse.</li>
+<li><strong>Patikrink įrenginį taip, kaip nurodo gamintojas.</strong> Kai kurie gamintojai įrenginį siunčia užplombuotame arba sunumeruotame apsauginiame maišelyje. O bendrovė „Ledger“ <a href="https://donjon.ledger.com/threat-model/device-genuineness/" target="_blank" rel="noopener noreferrer">teigia nenaudojanti jokių apsauginių plombų</a>, nes, jos vertinimu, jas lengva nukopijuoti, ir pasikliauja kriptografine patikra savo programoje. „BitBox“, „Trezor“ ir „Ledger“ programos patikrina įrenginį ir įdiegia pasirašytą įrenginio programinę įrangą. „SeedSigner“ programinę įrangą atsisiunti ir jos parašą patikrini tu. Visais atvejais pirmiausia įdiek naujausią įrenginio programinę įrangą ir tik tada kurk atkūrimo frazę. Būtent šiuo žingsniu pasitikėjimą pristatymo grandine pakeiti patikra, nors ji vis tiek remiasi paties gamintojo parašu.</li>
+<li><strong>Naują atkūrimo frazę sugeneruok įrenginyje.</strong> Žodžiai turi pirmą kartą pasirodyti įrenginio ekrane, tau matant. Niekada nenaudok žodžių, kuriuos radai atspausdintus dėžutėje.</li>
+<li><strong>Pasidaryk jos atsarginę kopiją</strong> popieriuje arba metale, kaip paaiškinta 14 skyriuje. Įrenginiui nustatyk PIN kodą.</li>
+<li><strong>Išsiųsk nedidelę bandomąją sumą</strong> į pirmąjį gavimo adresą.</li>
+<li><strong>Ištrink įrenginio duomenis ir atkurk piniginę iš atsarginės kopijos.</strong> Jei bandomoji suma vėl atsiranda, atsarginė kopija veikia. Tuo įsitikinti geriausia tada, kai rizikuoji beveik niekuo.</li>
+<li><strong>Perkelk likusią sumą</strong> 1 arba keliomis transakcijomis.</li>
+<li><strong>Gavimo adresą kaskart patikrink įrenginio ekrane.</strong> Kompiuterio ekrano vaizdą galima suklastoti, o su įrenginio ekranu tai padaryti daug sunkiau.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Pirkti elektroninėse prekyvietėse.</strong> Per nežinomas rankas perėjęs įrenginys galėjo būti perdarytas, ir nedidelė sutaupyta suma tokios rizikos neverta.</li>
+<li><strong>Priimti atkūrimo frazės kortelę, kuri atkeliauja jau užpildyta.</strong> Visais atvejais laikyk tai apgavyste, nes tuos žodžius atspausdinęs žmogus laukia tavo įmokos.</li>
+<li><strong>Įvesti atkūrimo frazę kompiuteryje, „kad būtų galima atnaujinti“.</strong> Jokiam tikram naujiniui, programai ar pagalbos tarnybos darbuotojui atkūrimo frazės nereikia. Žodžiai įvedami tik pačiame įrenginyje.</li>
+<li><strong>Praleisti bandomąjį atkūrimą.</strong> Neteisingą ar trūkstamą žodį geriau aptikti dabar, kai rizikuoji bandomąja suma, o ne po 5 metų, kai rizikuosi santaupomis.</li>
+<li><strong>Nepagalvojus nurodyti namų adresą kaip pristatymo vietą.</strong> Klientų sąrašai nuteka, kaip parodė „Ledger“ atvejis, ir tada toks sąrašas nepažįstamiems žmonėms pasako, kur gyvena bitkoinų turėtojas. Pagalvok apie atsiėmimo punktą arba paštomatą.</li>
+<li><strong>Pasitikėti el. laiškais, kurių siuntėjas prisistato gamintoju.</strong> Po „Ledger“ duomenų nutekėjimo pirkėjai gavo įtikinamų sukčiavimo apsimetant (angl. phishing) laiškų su netikrais saugumo įspėjimais ir netikrais naujiniais, o 2021 m. kai kuriems net buvo <a href="https://www.bleepingcomputer.com/news/cryptocurrency/criminals-are-mailing-altered-ledger-devices-to-steal-cryptocurrency/" target="_blank" rel="noopener noreferrer">paštu atsiųsti perdaryti įrenginiai</a>, pateikti kaip pakaitiniai. Oficialią svetainę atverk tiesiogiai, niekada per nuorodą.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kodėl nuo tavo raktų priklauso tavo interneto sauga“, pranešimą skaito Satoshine. Pasirašymo įrenginys yra ta pati idėja, įgavusi fizinį pavidalą.</li>
+<li><strong>Nepriklausomos piniginių ir įrenginių patikros:</strong> „WalletScrutiny“ (<a href="https://walletscrutiny.com" target="_blank" rel="noopener noreferrer">walletscrutiny.com</a>) tikrina, ar paskelbtas kodas sutampa su tuo, ką iš tikrųjų įdiegi.</li>
+<li><strong>Kaip prijungti įrenginį prie nepriklausomos piniginės:</strong> „Sparrow Wallet“ dokumentacija (<a href="https://sparrowwallet.com/docs" target="_blank" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
+<li><strong>Įrenginių vadovai žingsnis po žingsnio:</strong> „Bitcoiner.Guide“ (<a href="https://bitcoiner.guide" target="_blank" rel="noopener noreferrer">bitcoiner.guide</a>).</li>
+<li><strong>Kitas skyrius:</strong> kaip paleisti savo mazgą.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://www.ledger.com/blog/update-efforts-to-protect-your-data-and-prosecute-the-scammers" target="_blank" rel="noopener noreferrer">Update: efforts to protect your data and prosecute the scammers</a>, „Ledger“, 2021 m. sausio 13 d.</li>
+<li><a href="https://donjon.ledger.com/threat-model/device-genuineness/" target="_blank" rel="noopener noreferrer">Threat model: device genuineness</a>, „Ledger Donjon“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://www.bleepingcomputer.com/news/cryptocurrency/criminals-are-mailing-altered-ledger-devices-to-steal-cryptocurrency/" target="_blank" rel="noopener noreferrer">Criminals are mailing altered Ledger devices to steal cryptocurrency</a>, „BleepingComputer“, 2021 m. birželio 16 d.</li>
+<li><a href="https://milksad.info/disclosure.html" target="_blank" rel="noopener noreferrer">Milk Sad: technical write-up of CVE-2023-39910</a>, „Milk Sad“ tyrėjų komanda, 2023 m. rugpjūčio mėn.</li>
+<li><a href="https://bitcoinmagazine.com/news/bitbox-announces-bitbox02-nova-a-new-hardware-wallet-for-bitcoin" target="_blank" rel="noopener noreferrer">BitBox Announces BitBox02 Nova</a>, „Bitcoin Magazine“, 2025 m. birželio 20 d.</li>
+<li><a href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md" target="_blank" rel="noopener noreferrer">Reproducible builds of the BitBox02 firmware</a>, „BitBox“ platformoje „GitHub“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100" target="_blank" rel="noopener noreferrer">Ledger is 95% open source, why not 100%?</a>, „Ledger“, žiūrėta 2026 m. rugsėjį.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="hardware-wallet-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-1" aria-label="Nuspręsk, kokia suma tau jau yra santaupos ir telefone nebeturėtų būti laikoma"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-1">Nuspręsk, kokia suma tau jau yra santaupos ir telefone nebeturėtų būti laikoma</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-2" aria-label="Išsirink įrenginį iš lentelės ir užsisakyk jį iš gamintojo su pristatymu į atsiėmimo punktą"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-2">Išsirink įrenginį iš lentelės ir užsisakyk jį iš gamintojo su pristatymu į atsiėmimo punktą</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-3" aria-label="Patikrink įrenginį ir jo programinę įrangą taip, kaip nurodo gamintojas, susikurk naują atkūrimo frazę, pasidaryk atsarginę kopiją ir išsiųsk bandomąją sumą"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-3">Patikrink įrenginį ir jo programinę įrangą taip, kaip nurodo gamintojas, susikurk naują atkūrimo frazę, pasidaryk atsarginę kopiją ir išsiųsk bandomąją sumą</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-4" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-4" aria-label="Ištrink įrenginio duomenis ir atkurk piniginę iš atsarginės kopijos"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-4">Ištrink įrenginio duomenis ir atkurk piniginę iš atsarginės kopijos</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="hardware-wallet-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="hardware-wallet-5" aria-label="Kaskart, kai gauni lėšų, patikrink adresą įrenginio ekrane"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="hardware-wallet-5">Kaskart, kai gauni lėšų, patikrink adresą įrenginio ekrane</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/bitcoin-privacy/"><span>Ankstesnis</span>Privatumas Bitcoin tinkle</a>
+<a class="bk-next" href="/book/node/"><span>Kitas</span>Kaip paleisti savo mazgą</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Raktai vietoj paskyrų · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/keys/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/keys/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/keys/'">EN</button>
+</nav>
+
+<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page auto page-top" data-slug="keys">
+  <header class="bk-head">
+    <p class="bk-label">Autonomijos įrodymas · 6 skyrius</p>
+    <h1>Raktai vietoj paskyrų</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Paskyra yra leidimas, kurį tau suteikia įmonė ir kurį ji gali atšaukti. Raktas yra paslaptis, kurią turi tik tu, o veikia jis dėl matematikos, nesvarbu, pritaria tam kuri nors įmonė ar ne. Raktais jau naudojiesi kasdien, tik jų nematai, nes jie slypi susirašinėjimo programėlėje ir prieigos raktuose (angl. passkeys). Už šią laisvę moki tuo, kad rakto už tave niekas neatkurs, todėl šiame skyriuje daugiausia kalbama apie tai, kaip raktus saugiai laikyti.</p>
+<h2>Paskyra yra leidimas, kurį galima atšaukti</h2>
+<p>Paskyra yra eilutė svetimoje duomenų bazėje, o ką ta eilutė leidžia, sprendžia įmonė. Ji gali paskyrą užblokuoti per klaidą, automatiniu sprendimu, pasikeitus taisyklėms arba todėl, kad paslauga uždaroma ar pasitraukia iš tavo šalies. Taip žmonės netenka per daugelį metų sukauptų el. laiškų ir nuotraukų, o dažnai net nėra gyvo žmogaus, su kuriuo galėtų apie tai pasikalbėti.</p>
+<p>Be to, paskyra saugi tik tiek, kiek saugi ta duomenų bazė. 2022 m. lapkritį Airijos duomenų apsaugos komisija <a href="https://www.dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-in-facebook-data-scraping-inquiry" target="_blank" rel="noopener noreferrer">skyrė bendrovei „Meta“ 265 mln. eurų baudą</a> po to, kai internete buvo paskelbti daugiau kaip 500 mln. „Facebook“ naudotojų asmens duomenys, tarp jų ir telefono numeriai.</p>
+<p>Mygtukas „Pamiršau slaptažodį“ yra antras įėjimas, atviras kiekvienam, kas valdo tavo el. pašto adresą arba telefono numerį. 2020 m. kovą Europolas <a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" target="_blank" rel="noopener noreferrer">pranešė, kad Ispanijoje sulaikyta 12 žmonių</a>. Jie įtariami pavogę daugiau kaip 3 mln. eurų: gaudavo aukų SIM kortelių dublikatus ir vietoj tų žmonių priimdavo bankų siunčiamus patvirtinimo kodus.</p>
+<p>Paskyros patogios ir daugumai paslaugų visiškai tinka. Tačiau kai kalbama apie svarbiausius dalykus (tapatybę, privačius pokalbius, pinigus), verta paklausti, ar jie galėtų veikti neprašant niekieno leidimo. Su raktais tai didžia dalimi įmanoma.</p>
+<h2>Paslaptis, įrodanti, kas esi</h2>
+<p><strong>Raktų pora</strong> yra 2 labai dideli skaičiai, kartu sukurti tavo įrenginyje. <strong>Privatusis raktas</strong> yra paslaptis, kuri lieka pas tave, o <strong>viešasis raktas</strong> iš jo apskaičiuojamas ir jį galima rodyti bet kam. Iš privačiojo rakto gauti viešąjį lengva, o atvirkščiai praktiškai neįmanoma.</p>
+<p>Raktų pora atlieka 2 darbus:</p>
+<ul>
+<li><strong>Priima paslaptis.</strong> Įsivaizduok pašto dėžutę su plyšiu. Kiekvienas, kas žino adresą (tavo viešąjį raktą), gali įmesti laišką, o atidaryti dėžutę gali tik tas, kas turi jos raktą (tavo privatųjį raktą).</li>
+<li><strong>Pasirašo.</strong> Privačiuoju raktu sukuriamas parašas, kurį viešuoju raktu gali patikrinti bet kas ir kurio be privačiojo rakto praktiškai neįmanoma suklastoti.</li>
+</ul>
+<p>Tapatybei patvirtinti centrinio serverio nereikia, nes tikrinimas yra skaičiavimas, kurį gali atlikti bet kas.</p>
+<p>Su raktais jau susiduri, tik to nežinai. Šifruojanti susirašinėjimo programėlė (žr. 1 skyrių) raktų porą sukūrė tavo telefone. Prieigos raktas (žr. 2 skyrių) yra raktų pora, kurios svetainė saugo tik viešąją pusę, o Nostr tapatybė (žr. 7 skyrių) irgi yra raktų pora. Bitcoin piniginė (žr. 3 dalį) remiasi atkūrimo fraze iš 12 arba 24 žodžių, iš kurios išvedami visi piniginės privatieji raktai. Smalsiems dar pora pavyzdžių: SSH raktais administratoriai prisijungia prie serverių, o PGP raktais šifruojami el. laiškai ir pasirašoma programinė įranga.</p>
+<h2>Už kitų žmonių raktus vis tiek kas nors laiduoja</h2>
+<p>Raktas leidžia apsieiti be trečiosios šalies, kai kalbama apie 1 savybę, kontrolę, nes už tave niekas negali nei pasirašyti, nei iššifruoti. Autentiškumo klausimas lieka atviras, kai tik prireikia kito žmogaus rakto, nes pačiame viešajame rakte nepasakyta, kieno jis. Šią informaciją reikia iš kur nors gauti, o įprasti atsakymai yra 4: įmonės tvarkomas katalogas, kaip daugumoje susirašinėjimo programėlių (žr. 1 skyrių); sertifikatų išdavimo įstaiga, kuria remdamasi naršyklė atpažįsta svetainę; pasitikėjimo tinklas (angl. web of trust), kuriame žmonės pasirašo vieni kitų raktus, kaip daro PGP naudotojai; arba rakto atspaudas (angl. fingerprint), kurį kitu kanalu palygini tu.</p>
+<p>Tik paskutiniam atsakymui nereikia patikimos trečiosios šalies. 2011 m. į Nyderlandų sertifikatų išdavimo įstaigą „DigiNotar“ buvo įsilaužta, <a href="https://blog.mozilla.org/security/2011/08/29/fraudulent-google-com-certificate/" target="_blank" rel="noopener noreferrer">išduotas netikras google.com sertifikatas</a>, ir naršyklės išbraukė „DigiNotar“ iš patikimų įstaigų sąrašų. Dabar viešuose <a href="https://certificate.transparency.dev/" target="_blank" rel="noopener noreferrer">sertifikatų skaidrumo (angl. Certificate Transparency)</a> žurnaluose kiekvienas gali pamatyti, kokie sertifikatai išduoti kuriam nors domenui.</p>
+<p>Tą patį kompromisą rodo ir prieigos raktai, tik čia kalbama apie saugojimą. Kai juos sinchronizuoja bendrovė „Apple“ arba „Google“, jie <a href="https://support.apple.com/en-us/102195" target="_blank" rel="noopener noreferrer">šifruojami ištisiniu būdu</a>, tačiau iš naujo įrenginio juos pasieksi tik per paskyrą toje bendrovėje, taigi prieinamumas vėl priklauso nuo jos. Prieigos raktas, laikomas aparatiniame saugos rakte, nepriklauso nuo nieko, ir jo neįmanoma nukopijuoti.</p>
+<h2>Kaip pasirinkti, kur laikyti raktus</h2>
+<p>Raktas neturi mygtuko „Pamiršau slaptažodį“. Jokia įmonė negali atimti iš tavęs prieigos prie jo, bet jokia įmonė negali ir įleisti tavęs atgal. Pamestas raktas dingsta visam laikui, o kas jį nusikopijuoja, gali veikti tavo vardu. Atsakomybė iš įmonės pereina tau, todėl kiekvienam raktui reikia vietos, atitinkančios jo vertę.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Kur</th>
+<th>Kam tinka</th>
+<th>Silpnoji vieta</th>
+<th>Nuo ko vis dar priklausai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Popierius, užrašyta ranka, 2 vietose</strong></td>
+<td>Atkūrimo kodams, Nostr raktui, nedidelių sumų atkūrimo frazei</td>
+<td>Gaisras, vanduo ir kiekvienas, kas jį ras</td>
+<td>Nuo nieko, išskyrus tuos, kas gali patekti į tas 2 vietas</td>
+</tr>
+<tr>
+<td><strong>Slaptažodžių tvarkyklė</strong> (žr. 2 skyrių)</td>
+<td>Mažos vertės raktams ir įprastų svetainių atkūrimo kodams</td>
+<td>Ji veikia prie interneto prijungtuose įrenginiuose. Bitcoin atkūrimo frazei čia ne vieta, o savo pačios atkūrimo kodų tvarkyklė saugoti negali</td>
+<td>Nuo teikėjo, kuris sinchronizuoja duomenis ir atnaujina programėles. Saugykla šifruojama ištisiniu būdu, o atvirojo kodo tvarkykles galima audituoti</td>
+</tr>
+<tr>
+<td><strong>Aparatinis įrenginys</strong></td>
+<td>Prisijungimams skirtas saugos raktas („<a href="https://www.yubico.com/" target="_blank" rel="noopener noreferrer">YubiKey</a>“, „<a href="https://www.nitrokey.com/" target="_blank" rel="noopener noreferrer">Nitrokey</a>“, „<a href="https://www.token2.com/" target="_blank" rel="noopener noreferrer">Token2</a>“ ir kiti), bitkoinams skirta aparatinė piniginė arba pasirašymo įrenginys (žr. 17 skyrių)</td>
+<td>Kainuoja pinigų, gali sugesti arba pasimesti. Atsarginės kopijos vis tiek reikia: tai arba antras saugos raktas, arba atkūrimo frazė popieriuje ar pliene</td>
+<td>Nuo lusto ir jo programinės aparatinės įrangos (angl. firmware) gamintojo. Rakto „YubiKey“ programinė įranga uždara, o „Nitrokey“ yra atvirojo kodo</td>
+</tr>
+<tr>
+<td><strong>Plieninė atsarginė kopija</strong></td>
+<td>Atkūrimo frazėms, kurios turi atlaikyti ugnį ir vandenį (žr. 14 skyrių)</td>
+<td>Brangesnė, o perskaityti ją gali kiekvienas, kas ją ras</td>
+<td>Nuo nieko, išskyrus tuos, kas gali pasiekti slėptuvę</td>
+</tr>
+<tr>
+<td><strong>Padalijimas arba kelių parašų schema</strong> (angl. multisig)</td>
+<td>Didelei vertei: keli raktai laikomi keliose vietose, todėl vienas praradimas ar viena vagystė dar nėra lemtingi</td>
+<td>Sudėtinga. Suklydus nustatant galima netekti prieigos. Pirmiausia išmok, kaip tai veikia</td>
+<td>Nė nuo vienos atskiros šalies. Priklausai nuo raktus koordinuojančios programinės įrangos ir nuo raktus laikančių žmonių ar vietų</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų toks: <strong>slaptažodžių tvarkyklė mažos vertės raktams</strong>, <strong>popierius 2 vietose atkūrimo kodams, kurie saugo visa kita</strong>, <strong>2 saugos raktai pagrindinėms paskyroms</strong>, o kai atsiranda tikrų santaupų, aparatinė piniginė su plienine atsargine kopija. Tavo atveju gali labiau tikti kitoks derinys.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkti raktai, kuriuos dauguma skaitytojų jau turi, o ta pati logika tinka kiekvienam raktui, kurį susikursi vėliau.</p>
+<ol>
+<li><strong>Sudaryk sąrašą.</strong> Popieriuje surašyk raktų ir atkūrimo kodų pavadinimus, o ne pačias paslaptis: slaptažodžių tvarkyklės pagrindinį slaptažodį ir atkūrimo rinkinį (angl. recovery kit), pagrindinių paskyrų dviejų veiksnių autentifikavimo atkūrimo kodus, susirašinėjimo programėlės PIN kodą, kompiuterio disko šifravimo atkūrimo raktą, o vėliau ir Nostr raktą bei atkūrimo frazę. Prieigos raktų užrašyti neįmanoma, todėl pasižymėk, kur kiekvienas laikomas (kuriame telefone, tvarkyklėje ar saugos rakte) ir koks yra antrasis būdas patekti į tą paskyrą.</li>
+<li><strong>Kiekvienam parink vietą</strong> pagal pirmiau pateiktą lentelę ir užrašyk ją šalia pavadinimo.</li>
+<li><strong>Atsargines kopijas užrašyk ranka.</strong> Jokių nuotraukų, ekrano nuotraukų, užrašų debesijoje ar biuro spausdintuvų. Rašyk aiškiai ir kiekvieną ženklą patikrink 2 kartus.</li>
+<li><strong>Laikyk jas 2 vietose</strong>, pavyzdžiui, savo namuose ir pas giminaitį, kuriuo pasitiki, arba banko seife, jei tau tinka banko darbo laikas ir taisyklės. Per vieną gaisrą ar vieną vagystę neturėtų dingti abi kopijos.</li>
+<li><strong>Nusipirk 2 saugos raktus, o ne 1.</strong> Saugos rakto nukopijuoti neįmanoma, todėl antrasis raktas yra pirmojo atsarginė kopija. Abu užregistruok pagrindinėse paskyrose (el. pašto, slaptažodžių tvarkyklės, debesų saugyklos): saugumo nustatymuose ieškok skilties „saugos raktas“ arba „prieigos raktas“ (angl. „security key“, „passkey“). Pirmąjį nešiokis su savimi, antrąjį laikyk kartu su popierinėmis atsarginėmis kopijomis ir pasilik tų paskyrų atkūrimo kodus.</li>
+<li><strong>Išbandyk atkūrimą.</strong> Prisijunk prie kurios nors paskyros atkūrimo kodu, tada sugeneruok naujus kodus. Vieną kartą prisijunk ir antruoju saugos raktu, nes neišbandyta atsarginė kopija gali nesuveikti tą dieną, kai jos prireiks. Būtent šis žingsnis pasitikėjimą atsargine kopija ir įmonės atkūrimo procesu pakeičia tuo, ką patikrinai tu.</li>
+<li><strong>Pasakyk žmogui, kuriuo pasitiki</strong>, kur kas laikoma ir ką daryti, bet pačių paslapčių neatskleisk. Pakanka užklijuoto laiško su nurodymais. Kai tavęs nebebus, jokia įmonė nepadės šeimai atkurti rakto.</li>
+<li><strong>Kartą per metus peržiūrėk sąrašą.</strong></li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Fotografuoti raktą ar atkūrimo frazę.</strong> Nuotraukos kopijuojamos į debesijos paslaugas, jas gali perskaityti kitos programėlės, todėl būtent taip paslaptis dažnai išslysta iš rankų.</li>
+<li><strong>Įvesti privatųjį raktą svetainėje arba duoti jį „pagalbos tarnybai“.</strong> Jokia sąžininga paslauga jo neprašo, o toks prašymas yra sukčiavimo ženklas.</li>
+<li><strong>Laikyti vienintelę kopiją telefone.</strong> Telefonai kasdien pametami, pavagiami ir sudaužomi.</li>
+<li><strong>Laikyti atsarginę kopiją šalia įrenginio.</strong> Tada vagis ar gaisras pasiima abu iš karto.</li>
+<li><strong>Paslėpti kopiją taip gerai, kad niekas nerastų.</strong> Tada jos nerasi nei tu po 5 metų, nei tavo šeima, kai tavęs nebebus.</li>
+<li><strong>Per anksti pasirinkti sudėtingą schemą.</strong> Padalyta atsarginė kopija, kurios iki galo nesupranti, pavojingesnė už 2 popieriaus lapus 2 saugiose vietose.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kodėl nuo tavo raktų priklauso tavo interneto sauga“, šį skyrių papildantį pranešimą skaito Satoshine.</li>
+<li><strong>Suprask viešojo rakto šifravimą:</strong> „Surveillance Self-Defense“, „A Deep Dive on End-to-End Encryption“, parengė organizacija „Electronic Frontier Foundation“ (<a href="https://ssd.eff.org" target="_blank" rel="noopener noreferrer">ssd.eff.org</a>).</li>
+<li><strong>Palygink saugos raktus ir slaptažodžių tvarkykles:</strong> „Privacy Guides“ (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Sužinok daugiau apie prieigos raktus:</strong> „FIDO Alliance“ (<a href="https://fidoalliance.org" target="_blank" rel="noopener noreferrer">fidoalliance.org</a>).</li>
+<li><strong>Kitas skyrius:</strong> Nostr: atviras tinklas, kurio nevaldo jokia įmonė.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://www.dataprotection.ie/en/news-media/press-releases/data-protection-commission-announces-decision-in-facebook-data-scraping-inquiry" target="_blank" rel="noopener noreferrer">Data Protection Commission announces decision in Facebook „Data Scraping“ Inquiry</a>, Airijos duomenų apsaugos komisija, 2022 m. lapkričio 28 d.</li>
+<li><a href="https://techcrunch.com/2022/11/28/facebook-gdpr-penalty/" target="_blank" rel="noopener noreferrer">Meta hit with ~$275M GDPR penalty for Facebook data-scraping breach</a>, „TechCrunch“, 2022 m. lapkričio 28 d.</li>
+<li><a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" target="_blank" rel="noopener noreferrer">The SIM highjackers: how criminals are stealing millions by highjacking phone numbers</a>, Europolas, 2020 m. kovas.</li>
+<li><a href="https://blog.mozilla.org/security/2011/08/29/fraudulent-google-com-certificate/" target="_blank" rel="noopener noreferrer">Fraudulent *.google.com certificate</a>, „Mozilla Security Blog“, 2011 m. rugpjūčio 29 d.</li>
+<li><a href="https://certificate.transparency.dev/" target="_blank" rel="noopener noreferrer">Certificate Transparency</a>, projekto svetainė, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://support.apple.com/en-us/102195" target="_blank" rel="noopener noreferrer">About the security of passkeys</a>, „Apple Support“, žiūrėta 2026 m. rugsėjį.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="keys-1" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="keys-1" aria-label="Surašyk visus raktus ir atkūrimo kodus, kuriuos jau turi"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-1">Surašyk visus raktus ir atkūrimo kodus, kuriuos jau turi</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="keys-2" aria-label="Trūkstamas atsargines kopijas užrašyk ranka ir laikyk 2 vietose"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-2">Trūkstamas atsargines kopijas užrašyk ranka ir laikyk 2 vietose</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="keys-3" aria-label="Išbandyk atkūrimą su tikru atkūrimo kodu"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-3">Išbandyk atkūrimą su tikru atkūrimo kodu</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="keys-4" aria-label="Pasakyk žmogui, kuriuo pasitiki, kur laikomos atsarginės kopijos"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-4">Pasakyk žmogui, kuriuo pasitiki, kur laikomos atsarginės kopijos</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="keys-5" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="keys-5" aria-label="Nusipirk 2 saugos raktus ir pridėk juos prie pagrindinių paskyrų"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="keys-5">Nusipirk 2 saugos raktus ir pridėk juos prie pagrindinių paskyrų</label>
+        <span class="bk-effort">Savaitgalis</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/autonomy/"><span>Ankstesnis</span>Autonomijos įrodymas</a>
+<a class="bk-next" href="/book/nostr/"><span>Kitas</span>Nostr: atviras tinklas, kurio nevaldo jokia įmonė</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

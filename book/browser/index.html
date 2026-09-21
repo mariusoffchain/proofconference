@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo naršyklė ir paieška · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/browser/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/browser/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/browser/'">EN</button>
+</nav>
+
+<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page priv page-top" data-slug="browser">
+  <header class="bk-head">
+    <p class="bk-label">Privatumo įrodymas · 3 skyrius</p>
+    <h1>Tavo naršyklė ir paieška</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>Naršyklė ir paieškos sistema mato daugiau tavo gyvenimo nei bet kuri kita programinė įranga, o tas, kurios yra tavo įrenginyje, už tave parinko verslo sandoris. Pereik prie sekimą blokuojančios naršyklės, pridėk vieną gerą turinio blokatorių ir pasirink paieškos sistemą, kuri nekuria tavo profilio. Užtruksi mažiau nei valandą, o skirtumą pamatysi iškart: reklamos bus mažiau, puslapiai atsivers greičiau.</p>
+<h2>Numatytoji parinktis, už kurią sumokėjo kažkas kitas</h2>
+<p>Naršyklėje skaitai naujienas, ieškai ligų simptomų ir lygini paskolas, o dauguma atveriamų puslapių dar įkelia nematomą kodą, priklausantį dešimtims kitų bendrovių, pavyzdžiui, reklamos tinklams ir analitikos paslaugoms. Šie <strong>sekikliai</strong> (naršyklė „Firefox“ juos vadina stebėjimo elementais) fiksuoja, ką skaitai, ir papildo metų metus kuriamą profilį. Paieškos užklausos atskleidžia dar daugiau, nes paieškos sistemos klausi to, ko neklaustum nei gydytojo, nei partnerio.</p>
+<p>Vis dėlto numatytąsias parinktis įrenginyje pasirinkai ne tu. Per JAV antimonopolinę bylą prieš bendrovę „Google“ paviešinta skaidrė parodė, kad bendrovė <a href="https://www.cnbc.com/2023/10/27/google-paid-26-billion-in-2021-to-become-a-default-search-engine.html" target="_blank" rel="noopener noreferrer">2021 m. sumokėjo 26,3 mlrd. JAV dolerių</a> už tai, kad būtų numatytoji paieškos sistema: daugiausia tikriausiai gavo „Apple“, o tarp kitų gavėjų buvo naršyklių kūrėjai, pavyzdžiui, „Mozilla“. 2025 m. rugsėjį JAV federalinis teisėjas <a href="https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling" target="_blank" rel="noopener noreferrer">nutraukė išimtines sutartis, bet leido „Google“ toliau mokėti už vietą</a>, todėl numatytoji parinktis tavo įrenginyje, 2026 m. rugsėjo mėn. duomenimis, dažniausiai tebėra mokėjimo rezultatas.</p>
+<p>Privatusis naršymas, arba inkognito režimas, šios problemos neišsprendžia, nes jis tik neleidžia tavo įrenginiui išsaugoti naršymo istorijos ir slapukų. Svetainės, sekikliai, interneto paslaugų teikėjas ir darbdavio tinklas mato tą patį, ką ir anksčiau.</p>
+<h2>3 būdai, kuriais sekikliai tave atpažįsta</h2>
+<p>Sekikliai remiasi 3 pagrindinėmis technikomis.</p>
+<ul>
+<li><strong>Trečiųjų šalių slapukai.</strong> Slapukas yra mažas failas, kurį svetainė išsaugo tavo naršyklėje. Kai ta pati reklamos bendrovė veikia tūkstančiuose svetainių, jos slapukas keliauja paskui tave iš vienos svetainės į kitą. Naršyklės „Safari“, „Firefox“ ir „Brave“ tokius slapukus automatiškai blokuoja arba izoliuoja. Populiariausia naršyklė „Chrome“ juos vis dar leidžia, o 2025 m. balandį bendrovė „Google“, daug metų skelbusi, kad jų atsisakys, <a href="https://privacysandbox.google.com/blog/privacy-sandbox-next-steps" target="_blank" rel="noopener noreferrer">patvirtino, kad šios tvarkos nekeis</a>.</li>
+<li><strong>Atpažinimas pagal skaitmeninį atspaudą (angl. fingerprinting).</strong> Naršyklė atskleidžia daug smulkmenų, pavyzdžiui, ekrano dydį, kalbą, laiko juostą, įdiegtus šriftus ir grafikos įrangą. Kiekviena atskirai yra įprasta, bet jų derinys dažnai būna unikalus. Įrenginyje nieko neišsaugoma, todėl ištrynus slapukus niekas nepasikeičia.</li>
+<li><strong>Tavo paskyros.</strong> Jei neatsijungi nuo „Google“ ar „Facebook“ paskyros, kiekvieną puslapį, kuriame yra jų kodo, galima susieti su tikruoju tavo vardu.</li>
+</ul>
+<p>Gynyba remiasi ta pačia logika.</p>
+<ul>
+<li><strong>Blokuoti.</strong> Turinio blokatorius žinomų sekiklių išvis neįkelia.</li>
+<li><strong>Izoliuoti.</strong> Naršyklė kiekvienai svetainei skiria atskirą slapukų saugyklą, todėl vienoje svetainėje įrašyto slapuko kita svetainė perskaityti negali.</li>
+<li><strong>Atrodyti kaip visi.</strong> Kai kurios naršyklės siekia, kad visi jų naudotojai atrodytų vienodai ir skaitmeninis atspaudas nurodytų minią, o ne vieną žmogų.</li>
+</ul>
+<p>Atpažinti tave leidžia ir IP adresas, o apie jį kalbama 5 skyriuje.</p>
+<h2>Kas laiduoja už spynelę</h2>
+<p>Spynelės piktograma žada, kad pakeliui niekas negali perskaityti puslapio (konfidencialumas) ir kad svetainė tikrai yra ta, kuri nurodyta adrese (autentiškumas). Antrąjį pažadą užtikrina <strong>sertifikatų išdavimo įstaiga</strong> (angl. certificate authority), t. y. organizacija, pasirašanti svetainės sertifikatą, o naršyklėje arba sistemoje iš anksto įrašytas sąrašas įstaigų, kurias ji pripažįsta. Bet kuri iš jų gali laiduoti už bet kurią svetainę, todėl jos yra klasikinis žiniatinklio patikimų trečiųjų šalių pavyzdys. 2011 m. į Nyderlandų įstaigą „DigiNotar“ įsibrovęs asmuo <a href="https://www.enisa.europa.eu/sites/default/files/all_files/Operation_Black_Tulip_v2.pdf" target="_blank" rel="noopener noreferrer">išdavė 531 netikrą sertifikatą</a>, o <a href="https://google.com" target="_blank" rel="noopener noreferrer">google.com</a> skirtu sertifikatu, kol <a href="https://blog.mozilla.org/security/2011/09/02/diginotar-removal-follow-up/" target="_blank" rel="noopener noreferrer">naršyklės nepašalino „DigiNotar“ iš savo sąrašų</a>, buvo perimtas maždaug 300 000 naudotojų ryšys, ir beveik visi jie buvo Irane.</p>
+<p>Po šios nesėkmės atsirado <strong>sertifikatų skaidrumas</strong> (angl. certificate transparency). Dabar sertifikatai turi būti įrašyti į viešus žurnalus, kuriuose gali ieškoti bet kas, todėl svetainės savininkas gali pastebėti netikrą sertifikatą, o <a href="https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/OagRKpVirsA/m/Q4c89XG-EAAJ" target="_blank" rel="noopener noreferrer">naršyklė „Firefox“ kompiuteriuose nuo 135 versijos, išleistos 2025 m. vasarį, nepriima į žurnalus neįrašytų sertifikatų</a>, kaip jau anksčiau darė naršyklės „Chrome“ ir „Safari“.</p>
+<p>Kita trečioji šalis yra naršyklės kūrėjas, nes jis parenka tą sąrašą, numatytąją paieškos sistemą ir plėtinių parduotuvę, o jo naujinių kanalu gali būti pakeista programa, kuria naudojiesi. Atvirasis kodas ir atkartojamas programos surinkimas (angl. reproducible builds) leidžia pašaliniams patikrinti, ką jis platina.</p>
+<h2>Kaip pasirinkti naršyklę</h2>
+<p>Tobulos naršyklės nėra, todėl žiūrėk, kas ją kuria, ką ji blokuoja be papildomo nustatymo ir ko tenka atsisakyti.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Naršyklė</th>
+<th>Kas ją kuria</th>
+<th>Kuo tenka pasitikėti</th>
+<th>Privalumai</th>
+<th>Kompromisai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a></strong></td>
+<td>„<a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a>“, priklausanti pelno nesiekiančiam fondui</td>
+<td>Organizacija „Mozilla“, kuri teikia naujinius, tvarko savo sertifikatų išdavimo įstaigų sąrašą ir priedų parduotuvę. Kodas viešas.</td>
+<td>Nuosavas variklis, nepriklausomas nuo „Google“ kuriamo „Chromium“. Stipri apsauga pasirinkus lygį „Griežta“. Kompiuteriuose ir sistemoje „Android“ veikia visavertis plėtinys „<a href="https://ublockorigin.com/" target="_blank" rel="noopener noreferrer">uBlock Origin</a>“.</td>
+<td>Iš pradžių reikia pakeisti kelis nustatymus. Automatiškai siunčia naudojimo duomenis. Didžiąją dalį „Mozilla“ pajamų duoda paieškos sutartis su „Google“. Telefone „iPhone“ plėtinių įdiegti negalima.</td>
+</tr>
+<tr>
+<td><strong><a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave</a></strong></td>
+<td>„Brave Software“, pelno siekianti JAV bendrovė</td>
+<td>Bendrove „Brave Software“, kuri teikia naujinius, ir bendrove „Google“, kuri kuria pagrindą sudarantį „Chromium“ kodą ir valdo plėtinių parduotuvę. Kodas viešas.</td>
+<td>Reklamą ir sekiklius blokuoja be jokio nustatymo, taip pat ir telefone „iPhone“. Veikia beveik visose svetainėse. Yra versijos kompiuteriui ir telefonui.</td>
+<td>Reklamuoja savo produktus, tarp jų kriptovaliutų piniginę, reklamą už atlygį ir mokamą VPN. Juos galima išjungti. Sukurta „Google“ variklio „Chromium“ pagrindu.</td>
+</tr>
+<tr>
+<td><strong><a href="https://mullvad.net/browser" target="_blank" rel="noopener noreferrer">Mullvad Browser</a></strong></td>
+<td>Kuria organizacija „<a href="https://www.torproject.org/" target="_blank" rel="noopener noreferrer">Tor Project</a>“ kartu su Švedijos VPN bendrove „<a href="https://mullvad.net/" target="_blank" rel="noopener noreferrer">Mullvad</a>“</td>
+<td>Organizacija „Tor Project“ ir bendrove „Mullvad“, kurios teikia naujinius. Kodas viešas, o programos surinkimas atkartojamas, todėl pašaliniai gali jį patikrinti.</td>
+<td>Stipri apsauga nuo atpažinimo pagal skaitmeninį atspaudą: sukurta taip, kad visi naudotojai atrodytų vienodai. Nesiunčia jokių naudojimo duomenų. Nemokama, VPN nebūtinas.</td>
+<td>Veikia tik kompiuteryje. Uždaryta viską pamiršta. Kai kurios svetainės neveikia.</td>
+</tr>
+<tr>
+<td><strong><a href="https://librewolf.net/" target="_blank" rel="noopener noreferrer">LibreWolf</a></strong></td>
+<td>Savanorių bendruomenė</td>
+<td>Keliais savanoriais, nuo kurių priklauso programos surinkimas ir tai, kaip greitai ją pasiekia „<a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>“ saugumo pataisos. Kodas viešas.</td>
+<td>Tai naršyklė „Firefox“ su jau pritaikytais griežtais nustatymais, be naudojimo duomenų siuntimo ir su įdiegtu „<a href="https://ublockorigin.com/" target="_blank" rel="noopener noreferrer">uBlock Origin</a>“.</td>
+<td>Veikia tik kompiuteryje. Komanda maža. Kai kuriose sistemose naujiniais rūpiniesi tu.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.torproject.org/download/" target="_blank" rel="noopener noreferrer">Tor Browser</a></strong></td>
+<td>„<a href="https://www.torproject.org/" target="_blank" rel="noopener noreferrer">Tor Project</a>“, ne pelno organizacija</td>
+<td>Organizacija „Tor Project“, kuri teikia naujinius (programos surinkimas atkartojamas). Nė vienas retransliatorius (angl. relay) nemato kartu ir tavęs, ir svetainės.</td>
+<td>Slepia IP adresą, nes ryšys eina per 3 retransliatorius. Stipriausias anonimiškumas šioje lentelėje.</td>
+<td>Veikia lėtai. Daug svetainių rodo papildomus patikrinimus arba ją blokuoja. Neskirta kasdienėms paskyroms, prie kurių prisijungi.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Blokavimo etalonas yra <strong>„uBlock Origin“</strong>: šis plėtinys nemokamas, atvirojo kodo ir nedaro mokamų išimčių reklamos užsakovams. Visos jo funkcijos veikia naršyklėje „Firefox“ kompiuteriuose ir sistemoje „Android“. Naršyklėje „Chrome“ jis nebeveikia, nes bendrovė „Google“ <a href="https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline" target="_blank" rel="noopener noreferrer">2025 m. liepą išjungė senesnį plėtinių formatą</a>, o 2026 m. rugpjūčio 31 d. pašalino paskutinius tokio tipo plėtinius iš parduotuvės „Chrome Web Store“. Liko ribotesnė versija „uBlock Origin Lite“, o naršyklė „Brave“ turi įtaisytą savo blokatorių.</p>
+<p>Telefonas „iPhone“ yra atskiras atvejis, nes <a href="https://support.mozilla.org/en-US/kb/add-ons-firefox-ios" target="_blank" rel="noopener noreferrer">naršyklėje „Firefox“, skirtoje sistemai „iOS“, plėtinių įdiegti negalima</a>, taigi „uBlock Origin“ ten nėra. Galima rinktis įtaisytą naršyklės „Brave“ blokatorių, paprastesnį reklamos blokatorių, kurį <a href="https://thenextweb.com/news/firefox-ios-ad-blocker-webkit-content-blocker-dma-browser-engine" target="_blank" rel="noopener noreferrer">„Firefox“ pridėjo 2026 m. rugsėjį</a> (automatiškai jis išjungtas), arba naršyklę „Safari“ su plėtiniu „uBlock Origin Lite“, kurį galima įdiegti nuo 2025 m. rugpjūčio.</p>
+<p>Daugiau plėtinių nediek, kad ir kaip norėtųsi, nes kiekvienas plėtinys gali skaityti tavo lankomus puslapius, o dėl neįprasto jų rinkinio skaitmeninis atspaudas tampa unikalesnis.</p>
+<p>Daugumai žmonių protingas derinys būtų toks: <strong>naršyklė „Firefox“ arba „Brave“ kasdienai</strong> ir <strong>„Mullvad Browser“ arba „Tor Browser“</strong> toms paieškoms, kurias nori laikyti atskirai nuo savo paskyrų.</p>
+<h2>Kaip pasirinkti paieškos sistemą</h2>
+<p>Paieškos sistemą pakeisi maždaug per minutę, todėl tai vienas lengviausių šios knygos žingsnių. Pagal pačių paieškos sistemų privatumo politiką nė viena toliau pateikta sistema nekuria tavo reklamos profilio, tačiau jos skiriasi tuo, iš kur gauna rezultatus ir iš ko uždirba.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Paieškos sistema</th>
+<th>Iš kur gaunami rezultatai</th>
+<th>Iš ko uždirba</th>
+<th>Verta žinoti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">DuckDuckGo</a></strong></td>
+<td>Daugiausia iš „Bing“ ir iš savo šaltinių</td>
+<td>Iš reklamos, parenkamos pagal įvestus žodžius, o ne pagal profilį</td>
+<td>JAV bendrovė. Pereiti lengviausia.</td>
+</tr>
+<tr>
+<td><strong><a href="https://search.brave.com/" target="_blank" rel="noopener noreferrer">Brave Search</a></strong></td>
+<td>Iš savo nepriklausomo indekso</td>
+<td>Iš reklamos</td>
+<td>Ta pati bendrovė, kuri kuria naršyklę „<a href="https://brave.com/" target="_blank" rel="noopener noreferrer">Brave</a>“.</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.startpage.com/" target="_blank" rel="noopener noreferrer">Startpage</a></strong></td>
+<td>Iš „Google“, tik užklausos siunčiamos neatskleidžiant tavo tapatybės</td>
+<td>Iš neindividualizuotos reklamos</td>
+<td>Nyderlandų bendrovė. Nuo 2019 m. didžioji jos dalis priklauso JAV reklamos grupei „System1“.</td>
+</tr>
+<tr>
+<td><strong><a href="https://kagi.com/" target="_blank" rel="noopener noreferrer">Kagi</a></strong></td>
+<td>Iš savo indekso ir kelių kitų šaltinių</td>
+<td>Iš mokamos prenumeratos, reklamos nėra</td>
+<td>JAV bendrovė. Reikia paskyros. Finansuoja tik naudotojai.</td>
+</tr>
+<tr>
+<td><strong><a href="https://docs.searxng.org/" target="_blank" rel="noopener noreferrer">SearXNG</a></strong></td>
+<td>Vienu metu sujungia daugelio paieškos sistemų rezultatus</td>
+<td>Iš nieko. Tai nemokama atvirojo kodo programinė įranga</td>
+<td>Paleisk nuosavame serveryje arba naudokis viešu serveriu (sąrašas yra <a href="https://searx.space" target="_blank" rel="noopener noreferrer">searx.space</a>). Tada pasitiki tuo, kas tą serverį valdo.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Vieną jų išbandyk 2 savaites ir tik tada vertink. Vietinių lietuviškų paieškų rezultatai įvairiose sistemose gali skirtis, ir niekas netrukdo retkarčiais pasitaikančiai sudėtingai užklausai pasitelkti antrą paieškos sistemą.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkta naršyklė „Firefox“ kompiuteryje, nes jos versijų yra visoms sistemoms ir ji nepriklauso nuo „Google“ variklio. Kitose naršyklėse logika ta pati, o nustatymų pavadinimai įvairiose versijose gali šiek tiek skirtis.</p>
+<ol>
+<li><strong>Įdiek naršyklę</strong> iš <a href="https://mozilla.org" target="_blank" rel="noopener noreferrer">mozilla.org</a> arba iš oficialios savo sistemos parduotuvės.</li>
+<li><strong>Sustiprink apsaugą.</strong> Pasirink „Nuostatos“, „Privatumas ir saugumas“ ir prie „Išplėsta apsauga nuo stebėjimo“ pažymėk „Griežta“.</li>
+<li><strong>Reikalauk šifruoto ryšio.</strong> Tame pačiame puslapyje pažymėk „Įjungti tik HTTPS veikseną visuose languose“. Būtent šis žingsnis pasitikėjimą pakeičia patikrinimu, nes tada naršyklė kaskart jungdamasi tikrina sertifikatą ir nebepasikliauja tarpiniais tinklais.</li>
+<li><strong>Nebesiųsk naudojimo duomenų.</strong> Vis dar tame pačiame puslapyje, skiltyje apie „Firefox“ duomenų rinkimą, nuimk varneles nuo langelių.</li>
+<li><strong>Pakeisk paieškos sistemą.</strong> Pasirink „Nuostatos“, „Paieška“ ir prie „Numatytoji ieškyklė“ („Firefox“ taip vadina paieškos sistemą) išsirink naują. Jei jos sąraše nėra, atverk paieškos sistemos svetainę ir pridėk ją iš adreso juostos.</li>
+<li><strong>Įdiek „uBlock Origin“</strong> iš oficialios priedų svetainės (<a href="https://addons.mozilla.org" target="_blank" rel="noopener noreferrer">addons.mozilla.org</a>) ir palik numatytuosius nustatymus, nes jie geri.</li>
+<li><strong>Perkelk adresyną (angl. bookmarks).</strong> Meniu „Adresynas“ esančiu importo įrankiu nukopijuok išsaugotas nuorodas iš senosios naršyklės. Išsaugotų slaptažodžių neimportuok, nes jų vieta yra slaptažodžių tvarkyklėje (žr. 2 skyrių).</li>
+<li><strong>Nustatyk ją numatytąja, taip pat ir telefone.</strong> Kompiuteryje naująją naršyklę nustatyk numatytąja, tada tuos pačius pasirinkimus pakartok telefone. Sistemoje „Android“ naršyklė „Firefox“ taip pat priima „uBlock Origin“. Telefone „iPhone“ nepriima, todėl rinkis vieną iš pirmiau aprašytų „iPhone“ variantų.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Tikėti, kad įjungus inkognito režimą tavęs niekas nemato.</strong> Jis paslepia naršymą nuo žmonių, su kuriais dalijiesi įrenginiu, ir daugiau nuo nieko.</li>
+<li><strong>Įdiegti 10 privatumo plėtinių.</strong> Kiekvienas gali skaityti tavo puslapius, o visi kartu išskiria tave iš minios, todėl užtenka vieno gero turinio blokatoriaus.</li>
+<li><strong>Visą dieną pagrindinėje naršyklėje neatsijungti nuo „Google“ ar „Facebook“.</strong> Jei šias paskyras laikai antroje naršyklėje, jų slapukai nebeseka kasdienio naršymo, todėl ryšys tarp tavo vardo ir to, ką skaitai, susilpnėja. Jis neišnyksta, nes lankomos svetainės vis tiek mato tavo IP adresą ir skaitmeninį atspaudą.</li>
+<li><strong>Iš įpročio spustelėti „Priimti visus“.</strong> Ieškok „Atmesti visus“. Plėtinys „uBlock Origin“ gali paslėpti ir daugumą slapukų juostų, jei jo nustatymuose įjungsi filtrų sąrašus, skirtus pranešimams apie slapukus (angl. „Cookie notices“).</li>
+<li><strong>Visus nustatymus iškart sukti iki maksimumo.</strong> Jei pusė svetainių nebeveiks, tikėtina, kad per savaitę grįši prie senosios naršyklės, todėl nustatymus griežtink pamažu ir pasilik tokį lygį, kuris tau priimtinas.</li>
+<li><strong>Nepaisyti naujinių.</strong> Iš visų programų naršyklė labiausiai atvira internetui, todėl paleisk ją iš naujo, kai ji to paprašo.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kaip „kareivis-pilietis“ gali padėti decentralizuoti pasaulį: Rusijos invazijos į Ukrainą pamokos“, pranešimą skaito Alexis Roussel. Kodėl atvirojo kodo įrankiai, kurių nevaldo kuri nors viena bendrovė, svarbūs toli už tavo ekrano ribų.</li>
+<li><strong>Išbandyk savo naršyklę:</strong> organizacijos „Electronic Frontier Foundation“ įrankis „Cover Your Tracks“ (<a href="https://coveryourtracks.eff.org" target="_blank" rel="noopener noreferrer">coveryourtracks.eff.org</a>) parodo, kiek unikalus tavo skaitmeninis atspaudas.</li>
+<li><strong>Išsamiai palygink:</strong> „Privacy Guides“, „Desktop Browsers“ (naršyklės kompiuteriui) ir „Search Engines“ (paieškos sistemos) (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Kitas skyrius:</strong> tavo el. paštas ir pseudonimai.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://www.enisa.europa.eu/sites/default/files/all_files/Operation_Black_Tulip_v2.pdf" target="_blank" rel="noopener noreferrer">Operation Black Tulip: certificate authorities lose authority</a>, ENISA (Europos Sąjungos kibernetinio saugumo agentūra), 2011 m. gruodžio mėn.</li>
+<li><a href="https://blog.mozilla.org/security/2011/09/02/diginotar-removal-follow-up/" target="_blank" rel="noopener noreferrer">DigiNotar removal follow up</a>, „Mozilla Security Blog“, 2011 m. rugsėjo 2 d.</li>
+<li><a href="https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/OagRKpVirsA/m/Q4c89XG-EAAJ" target="_blank" rel="noopener noreferrer">Certificate Transparency is now enforced in Firefox on desktop platforms starting with version 135</a>, „Mozilla“ adresatų sąrašas „dev-security-policy“, 2025 m. vasario 4 d.</li>
+<li><a href="https://www.cnbc.com/2023/10/27/google-paid-26-billion-in-2021-to-become-a-default-search-engine.html" target="_blank" rel="noopener noreferrer">Google paid $26 billion in 2021 to become a default search engine</a>, CNBC, 2023 m. spalio 27 d.</li>
+<li><a href="https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling" target="_blank" rel="noopener noreferrer">In a major antitrust ruling, a judge lets Google keep Chrome but levies other penalties</a>, NPR, 2025 m. rugsėjo 2 d.</li>
+<li><a href="https://privacysandbox.google.com/blog/privacy-sandbox-next-steps" target="_blank" rel="noopener noreferrer">Next steps for Privacy Sandbox and tracking protections in Chrome</a>, „Google“, 2025 m. balandžio 22 d.</li>
+<li><a href="https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline" target="_blank" rel="noopener noreferrer">Manifest V2 support timeline</a>, „Chrome for Developers“ („Google“), atnaujinta 2026 m. rugsėjį.</li>
+<li><a href="https://support.mozilla.org/en-US/kb/add-ons-firefox-ios" target="_blank" rel="noopener noreferrer">Add-ons in Firefox for iOS</a>, „Mozilla Support“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://thenextweb.com/news/firefox-ios-ad-blocker-webkit-content-blocker-dma-browser-engine" target="_blank" rel="noopener noreferrer">Mozilla adds a built-in ad blocker to Firefox on iOS, built on Apple's WebKit API</a>, „The Next Web“, 2026 m. rugsėjo 1 d.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="browser-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-1" aria-label="Pakeisk numatytąją paieškos sistemą kompiuteryje ir telefone"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-1">Pakeisk numatytąją paieškos sistemą kompiuteryje ir telefone</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-2" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="browser-2" aria-label="Įdiek sekimą blokuojančią naršyklę ir nustatyk ją numatytąja"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-2">Įdiek sekimą blokuojančią naršyklę ir nustatyk ją numatytąja</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-3" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-3" aria-label="Pridėk „uBlock Origin“ ir pašalink plėtinius, kuriais iš tikrųjų nesinaudoji"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-3">Pridėk „uBlock Origin“ ir pašalink plėtinius, kuriais iš tikrųjų nesinaudoji</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-4" aria-label="Perkelk „Google“ ir „Facebook“ sesijas į antrą naršyklę"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-4">Perkelk „Google“ ir „Facebook“ sesijas į antrą naršyklę</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="browser-5" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="browser-5" aria-label="Išbandyk savo naršyklę svetainėje coveryourtracks.eff.org"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="browser-5">Išbandyk savo naršyklę svetainėje coveryourtracks.eff.org</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/passwords/"><span>Ankstesnis</span>Tavo slaptažodžiai ir paskyros</a>
+<a class="bk-next" href="/book/email/"><span>Kitas</span>Tavo el. paštas ir pseudonimai</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

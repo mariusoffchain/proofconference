@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Kaip paleisti paslaugas nuosavame serveryje · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/self-hosting/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/self-hosting/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/self-hosting/'">EN</button>
+</nav>
+
+<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
+<main class="bk-page auto page-top" data-slug="self-hosting">
+  <header class="bk-head">
+    <p class="bk-label">Autonomijos įrodymas · 10 skyrius</p>
+    <h1>Kaip paleisti paslaugas nuosavame serveryje</h1>
+  </header>
+  <article class="bk-article">
+<h2>Trumpai</h2>
+<p>„Debesija“ yra svetimas kompiuteris. Paslaugų laikymas nuosavame serveryje reiškia, kad dalis paslaugų, pavyzdžiui, failai, nuotraukos, užrašai, o vėliau ir Bitcoin mazgas, veikia mažame tau priklausančiame kompiuteryje, kuris stovi namie. Pradedantiesiems skirtose platformose įdiegti programėlę dabar beveik taip pat lengva kaip telefone, tačiau apie atsargines kopijas, naujinius ir nuotolinę prieigą vis tiek teks pasiskaityti, ir visa tai taps tavo rūpesčiu. Protingiausia pradėti nuo 1 paslaugos, pasiekti, kad ji veiktų patikimai, ir tik tada plėstis.</p>
+<h2>Svetimoje debesijoje tik nuomojiesi</h2>
+<p>Kai failai, nuotraukos ir kalendorius laikomi kurios nors bendrovės debesijoje, taisykles nustato ta bendrovė. Ji gali perskaityti viską, kas nešifruojama ištisiniu būdu, pakelti kainą, uždaryti produktą arba automatiniu sprendimu užblokuoti paskyrą, o tau tada belieka pildyti pagalbos tarnybos formą. Sąlygas ji gali pakeisti ir tada, kai jau persikėlei. „Google Photos“ daugelį metų siūlė nemokamą neribotą saugyklą, o 2020 m. lapkritį paskelbė, kad nuo 2021 m. birželio 1 d. <a href="https://blog.google/products-and-platforms/products/photos/storage-changes/" target="_blank" rel="noopener noreferrer">kiekviena nauja nuotrauka bus įskaičiuojama į 15 GB limitą</a>.</p>
+<p>8 skyriuje parodyta, kaip pereiti prie teikėjų, kurie naudotojus gerbia labiau, ir tai jau didelis žingsnis, tačiau ir ten tik nuomojiesi.</p>
+<p>Su nuosavu serveriu žengi dar vieną žingsnį, nes paslauga veikia tavo namuose stovinčiame įrenginyje, o duomenys laikomi tavo diske. Nebėra nei paskyros, kurią teikėjas galėtų sustabdyti, nei trečiosios šalies tarp tavęs ir failų.</p>
+<p>Tačiau tai nėra nemokama. Moki už įrangą, elektrą ir atsarginę kopiją kitoje vietoje, moki savo laiku, o kai kas nors sugenda, atsakomybė tenka tau.</p>
+<h2>Serveris yra kompiuteris, kuris lieka įjungtas</h2>
+<p>Serveris tėra kompiuteris, kuris visą laiką įjungtas ir atsako į kitų įrenginių užklausas, o namų ūkiui tam nereikia duomenų centro. Pakanka seno nešiojamojo kompiuterio, mažo mini kompiuterio arba „Raspberry Pi“. Patogiausia paprastai pradėti nuo mini kompiuterio arba nešiojamojo kompiuterio su SSD disku, o kompiuteriui „Raspberry Pi“ SSD diskas tinka labiau nei atminties kortelė, nes kortelės linkusios greitai susidėvėti.</p>
+<p>Šiame kompiuteryje įdiegi <strong>platformą</strong>, t. y. sistemą, kuri pateikia tinklalapį su programėlių parduotuve. Atveri jį naršyklėje, prie „Nextcloud“ ar „Immich“ spusteli „Install“ (įdiegti), o platforma atsisiunčia programėlę ir paleidžia ją konteineryje, t. y. sandarioje dėžėje, kuri kiekvieną programėlę atskiria nuo kitų.</p>
+<p>Tada telefonas ir nešiojamasis kompiuteris bendrauja ne su bendrove, o su šiuo kompiuteriu. Namie ryšys vyksta per tavo belaidį tinklą („Wi-Fi“), o būnant kitur reikia saugaus kelio į vidų, ir jam toliau skirtas atskiras skirsnis.</p>
+<p>Technologijos yra mažesnioji šio pokyčio dalis, nes atsarginėmis kopijomis, naujiniais ir saugumu dabar rūpiniesi tu.</p>
+<h2>Patikima trečiąja šalimi tampi tu</h2>
+<p>Kai paslaugos veikia nuosavame serveryje, konfidencialumas nebepriklauso nuo bendrovės, nes duomenų niekas kitas neturi, o visa kita tampa tavo rūpesčiu. Prieinamumas dabar priklauso nuo tavo disko, elektros ir atsarginių kopijų, o vietoj teikėjo inžinierių lieka tik tai, ką nepamiršti padaryti tu. Pradedantiesiems saugesnis pasirinkimas gali būti gerai tvarkomas teikėjas, taikantis ištisinį šifravimą. Visai geras rezultatas yra ir toks, kai kelios paslaugos veikia nuosavame serveryje, o kitos nuomojamos.</p>
+<p>Kai kurios trečiosios šalys lieka, ir naudinga jas įvardyti. Platformos kūrėjas skelbia sistemos naujinius ir prižiūri programėlių parduotuvę, todėl neatsargus ar kenkėjiškas naujinys iškart pasiektų visus serverius. Atviras programos kodas ir galimybė pridėti kitą parduotuvę arba įdiegti programėlę ne iš parduotuvės leidžia šią šalį pakeisti kita. Nuotolinei prieigai naudojamos paslaugos „Tailscale“ koordinavimo serveris kiekvienam tavo įrenginiui perduoda kitų įrenginių viešuosius raktus. Tavo duomenų srauto jis niekada nemato, tačiau „Tailscale“ dokumentacijoje <a href="https://tailscale.com/kb/1226/tailnet-lock" target="_blank" rel="noopener noreferrer">pripažįstama</a>, kad kenkėjiškas koordinatorius galėtų į tavo tinklą įterpti svetimą įrenginį, ir siūloma funkcija „Tailnet Lock“: ją įjungus kiekvieną naują įrenginį turi pasirašyti tavo įrenginiai. Naudojant „Headscale“ arba vien WireGuard šios trečiosios šalies nebelieka, tačiau tenka daugiau konfigūruoti.</p>
+<h2>Kaip pasirinkti platformą</h2>
+<p>Visos šios platformos sukurtos žmonėms, kurie nėra sistemų administratoriai, o skiriasi paskirtimi, licencija ir tuo, kas jas kuria. Knygoje, kurioje pirmenybė teikiama atvirajam kodui, licencija svarbi. Sistema „StartOS“ platinama pagal <a href="https://github.com/Start9Labs/start-technologies/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT licenciją</a>, platforma „YunoHost“ taip pat yra laisvoji programinė įranga, o sistema „umbrelOS“ naudoja <a href="https://github.com/getumbrel/umbrel/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer">licenciją „PolyForm Noncommercial“</a>: pagal ją asmeniniais tikslais kodą galima skaityti ir keisti, tačiau tai nėra atvirojo kodo licencija. Ir bendrovė „Start9“, ir bendrovė „Umbrel“ parduoda savo serverius, tačiau nė viena jų pirkti nereikalauja, nes abi sistemas galima nemokamai įdiegti jau turimame kompiuteryje.</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Platforma</th>
+<th>Kas kuria</th>
+<th>Privalumas</th>
+<th>Kompromisas</th>
+<th>Kas valdo programėles ir naujinius</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" target="_blank" rel="noopener noreferrer">StartOS</a>)</strong></td>
+<td>Viena bendrovė, kuri parduoda ir serverius</td>
+<td>Atvirasis kodas. Kuriama galvojant apie suverenitetą: Tor tinklas naudojamas automatiškai, o šifruotos atsarginės kopijos jau įtaisytos</td>
+<td>Mažesnis programėlių katalogas, šiek tiek daugiau reikia išmokti</td>
+<td>Sistemą valdo „Start9“. Yra 2 numatytieji registrai (angl. registries), <a href="https://docs.start9.com/start-os/0.4.0.x/marketplace.html" target="_blank" rel="noopener noreferrer">galima pridėti kitų</a>, o paketus galima įdiegti ir ne iš registro</td>
+</tr>
+<tr>
+<td><strong><a href="https://yunohost.org/" target="_blank" rel="noopener noreferrer">YunoHost</a></strong></td>
+<td>Savanorių bendruomenė, ne pelno organizacija</td>
+<td>Atvirasis kodas, pagrįsta „<a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">Debian</a>“, daug programėlių, vienas prisijungimas prie jų visų</td>
+<td>Skirta paslaugoms, pasiekiamoms iš interneto, todėl domenų ir el. pašto klausimai iškyla anksti. Sąsaja kuklesnė</td>
+<td>Sistemą ir katalogą prižiūri savanoriai. Bet kurią programėlę galima <a href="https://doc.yunohost.org/en/admin/apps/custom_apps/" target="_blank" rel="noopener noreferrer">įdiegti ir iš URL adreso</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a> (<a href="https://umbrel.com/umbrelos" target="_blank" rel="noopener noreferrer">umbrelOS</a>)</strong></td>
+<td>Viena bendrovė, kuri parduoda ir savo įrangą</td>
+<td>Labiausiai išbaigta sąsaja, didelė programėlių parduotuvė, stiprios Bitcoin ir Lightning programėlės</td>
+<td>Kodas viešas, tačiau licencija nėra tikra atvirojo kodo licencija (komerciškai naudoti negalima)</td>
+<td>Sistemą ir oficialią parduotuvę valdo „Umbrel“. Galima pridėti <a href="https://umbrel.com/support/apps/how-to-add-a-community-app-store" target="_blank" rel="noopener noreferrer">bendruomenės programėlių parduotuvių</a>, kurių „Umbrel“ netikrina</td>
+</tr>
+<tr>
+<td><strong><a href="https://casaos.zimaspace.com/" target="_blank" rel="noopener noreferrer">CasaOS</a></strong></td>
+<td>Viena bendrovė („IceWhale“)</td>
+<td>Atvirasis kodas. Paprastas sluoksnis, kurį pridedi prie jau veikiančios „Linux“ sistemos</td>
+<td>2026 m. rugsėjo mėn. duomenimis, veikia tik priežiūros režimu, nes bendrovė dabar daugiausia dėmesio skiria naujesnei sistemai „<a href="https://www.zimaspace.com/zimaos" target="_blank" rel="noopener noreferrer">ZimaOS</a>“. Įtaisytų atsarginių kopijų nėra</td>
+<td>Sluoksnį ir jo parduotuvę, kuri priima ir kitus programėlių šaltinius, valdo „IceWhale“. Sistemą valdo tavo „Linux“ distribucija</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">Debian</a> arba <a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu</a> su <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a></strong></td>
+<td>Tu</td>
+<td>Visiška kontrolė, išmoksti, kaip viskas veikia iš tikrųjų, nepriklausai nuo jokios platformos</td>
+<td>Komandų eilutė, ir nėra ko kaltinti. Smalsiems</td>
+<td>Sistemos paketus valdo „Debian“ arba „Ubuntu“, o konteinerius kiekvieno atsisiunčiamo konteinerio atvaizdo (angl. image) leidėjas</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ką paleisti pirmiausia:</p>
+<div class="bk-table"><table>
+<thead>
+<tr>
+<th>Programėlė</th>
+<th>Ką pakeičia</th>
+<th>Pastaba</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a></strong></td>
+<td>Debesų saugyklą, kalendorių, kontaktus</td>
+<td>Klasikinė pirmoji programėlė. Nesudėtingink ir nediek visų priedų</td>
+</tr>
+<tr>
+<td><strong><a href="https://immich.app/" target="_blank" rel="noopener noreferrer">Immich</a></strong></td>
+<td>Debesijos nuotraukų bibliotekas</td>
+<td>Automatiškai daro telefono nuotraukų atsargines kopijas. Greitai keičiasi, todėl skaityk naujinių aprašus</td>
+</tr>
+<tr>
+<td><strong><a href="https://jellyfin.org/" target="_blank" rel="noopener noreferrer">Jellyfin</a></strong></td>
+<td>Savų filmų ir muzikos srautinį perdavimą</td>
+<td>Maža rizika, geras mokomasis projektas</td>
+</tr>
+<tr>
+<td><strong><a href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer">Home Assistant</a></strong></td>
+<td>Išmaniųjų namų debesijos paslaugas</td>
+<td>Namų įrenginiai lieka vietiniame tinkle</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/dani-garcia/vaultwarden" target="_blank" rel="noopener noreferrer">Vaultwarden</a></strong></td>
+<td>Slaptažodžių tvarkyklės serverio dalį</td>
+<td>Veikia su „<a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a>“ programėlėmis. Ne pradedančiųjų projektas, nes sugedus serveriui be išbandytos atsarginės kopijos gali netekti visų slaptažodžių. Palauk, kol atkūrimas iš kopijos taps įprastu dalyku</td>
+</tr>
+<tr>
+<td><strong>Bitcoin mazgas</strong></td>
+<td>Pasitikėjimą svetimu mazgu</td>
+<td>Vėliau. Žr. 18 skyrių</td>
+</tr>
+</tbody>
+</table></div>
+<p>Daugumai žmonių protingas derinys būtų atvirojo kodo platforma, pavyzdžiui, „StartOS“ arba „YunoHost“, mini kompiuteryje ir „Nextcloud“ arba „Immich“ kaip pirmoji programėlė. Labiausiai išbaigta alternatyva yra „umbrelOS“, jei tau tinka jos licencija.</p>
+<h2>Kaip saugiai pasiekti serverį iš išorės</h2>
+<p>Namų maršrutizatorius paprastai atmeta iš interneto inicijuojamus prisijungimus, todėl už jo esantis serveris iš išorės tiesiogiai nepasiekiamas. Tačiau ši apsauga turi žinomų spragų. Daugelis maršrutizatorių parduodami su įjungta UPnP funkcija, leidžiančia bet kuriam tavo tinklo įrenginiui ar programėlei savarankiškai atidaryti prievadą, o naudojant IPv6 kiekvienas įrenginys gali gauti viešąjį adresą, kurį uždarytą laiko tik maršrutizatoriaus užkarda (ugniasienė). Verta atverti maršrutizatoriaus nustatymus, išjungti UPnP ir įsitikinti, kad IPv6 užkarda įjungta.</p>
+<p>Klasikinė klaida yra tyčia atidaryti prievadą, kad failus būtų galima pasiekti iš bet kur. Tai veikia, tačiau kartu prisijungimo puslapį parodo kiekvienai internetą automatiškai skenuojančiai programai.</p>
+<p>Saugesni būdai, nuo labiausiai nepriklausomo iki patogiausio:</p>
+<ul>
+<li><strong>WireGuard VPN į namus.</strong> Telefonas atidaro šifruotą tunelį į tavo tinklą ir veikia taip, lyg būtų namie. Atvirasis kodas, jokių tarpininkų. Reikia šiek tiek sukonfigūruoti maršrutizatorių, be to, šis būdas neveikia, kai interneto paslaugų teikėjas 1 viešąjį adresą padalija keliems klientams (CGNAT), tačiau tada vis tiek tinka 2 toliau aprašyti būdai.</li>
+<li><strong>Tor onion paslaugos.</strong> Platformose „Umbrel“ ir „Start9“ jos įtaisytos, todėl serveris gauna privatų .onion adresą, pasiekiamą per Tor tinklą, ir nereikia atidaryti jokio prievado. Lėčiau, bet paprasta ir privatu.</li>
+<li><strong>Tailscale.</strong> Sukurta WireGuard pagrindu ir labai lengvai įdiegiama serveryje ir telefone. Duomenų srautas tarp tavo įrenginių lieka šifruotas, tačiau prisijungimus ir paskyras koordinuoja bendrovė. <strong>Headscale</strong> yra atvirojo kodo šios koordinavimo dalies pakaitalas, kurį paleidi savo serveryje.</li>
+</ul>
+<p>Kad ir ką pasirinktum, pirmiausia pakeisk visus numatytuosius slaptažodžius.</p>
+<h2>Žingsnis po žingsnio</h2>
+<p>Pavyzdžiu pasirinkta sistema „StartOS“, nes ji yra atvirojo kodo ir įdiegiama įprastoje įrangoje. Platformose „YunoHost“ ir „umbrelOS“ logika ta pati.</p>
+<ol>
+<li><strong>Pasirink įrangą.</strong> Visiškai pakanka nenaudojamo nešiojamojo kompiuterio arba mini kompiuterio su 8 GB atminties ir SSD disku. Prie maršrutizatoriaus jį prijunk kabeliu, o ne per belaidį tinklą („Wi-Fi“).</li>
+<li><strong>Įdiek platformą.</strong> Iš projekto svetainės atsisiųsk sistemos atvaizdą, įrašyk jį į USB atmintuką, paleisk kompiuterį iš jo ir vykdyk diegimo programos nurodymus. Jei projektas skelbia kontrolinę sumą (angl. checksum), t. y. failo skaitmeninį atspaudą, kaip tai daro „Start9“ savo versijų puslapyje, sutikrink ją dar prieš įrašant atvaizdą, nes būtent šiuo žingsniu pasitikėjimą atsisiųstu failu pakeiti patikrinimu. Diegiant kompiuterio diskas ištrinamas.</li>
+<li><strong>Susikurk paskyrą.</strong> Iš kito to paties tinklo įrenginio atverk adresą, parodytą diegimo pabaigoje. Pasirink ilgą unikalų slaptažodį ir išsaugok jį slaptažodžių tvarkyklėje. Jei platforma siūlo dviejų veiksnių autentifikavimą (2FA), kaip „umbrelOS“ savo nustatymuose, įjunk jį.</li>
+<li><strong>Įdiek 1 programėlę.</strong> Tik 1. Pradėti verta nuo „Nextcloud“ arba „Immich“: įdiek telefono programėlę, įvesk savo serverio adresą ir leisk jai nukopijuoti nuotraukas.</li>
+<li><strong>Nustatyk atsarginį kopijavimą.</strong> Laikykis 3-2-1 taisyklės: 3 duomenų kopijos, 2 skirtinguose įrenginiuose, 1 kopija kitoje vietoje. Praktiškai tai serveris, antras diskas ir šifruota kopija kitur (diskas giminaičių namuose arba šifruota debesijos atsarginė kopija). „StartOS“ šifruotas atsargines kopijas įrašo į išorinį diską arba tinklo aplanką, o „umbrelOS“ gali <a href="https://umbrel.com/support/backups-and-recovery/backing-up-your-data" target="_blank" rel="noopener noreferrer">jas daryti automatiškai kas valandą</a>. Jei tavo platforma jų pagal tvarkaraštį nedaro, kalendoriuje susikurk pasikartojantį priminimą.</li>
+<li><strong>Išbandyk atkūrimą.</strong> Atkurk 1 failą iš atsarginės kopijos, nes kopija patikrinta tik tada, kai iš jos pavyko ką nors atkurti.</li>
+<li><strong>Nuolat atnaujink.</strong> Reguliariai diek platformos ir programėlių naujinius. Geras ritmas yra kartą per mėnesį.</li>
+<li><strong>Tik tada pridėk antrą programėlę.</strong> Kelias savaites pagyvenk su pirmąja ir tik tada plėskis.</li>
+</ol>
+<h2>Klaidos, kurių verta vengti</h2>
+<ul>
+<li><strong>Neturėti atsarginių kopijų.</strong> Diskai genda be įspėjimo, ir profesionalūs prieglobos teikėjai nuo to neapsaugoti. 2021 m. kovo 10 d. gaisras Strasbūre <a href="https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/" target="_blank" rel="noopener noreferrer">sunaikino „OVHcloud“ duomenų centrą SBG2</a>, nukentėjo apie 120 000 paslaugų, o klientai, neturėję kopijos kitur, duomenis prarado. Namie atsarginėmis kopijomis rūpiniesi tu, todėl sutvarkyk jas anksčiau, nei patikėsi serveriui ką nors, ko negali prarasti.</li>
+<li><strong>Atverti paslaugas internetui su numatytaisiais slaptažodžiais.</strong> Internetą automatiškai skenuojančios programos atviras paslaugas randa greitai. Naudok vieną iš pirmiau aprašytų saugių būdų ir visur unikalius slaptažodžius.</li>
+<li><strong>Pirmuoju projektu pasirinkti el. paštą arba slaptažodžius.</strong> El. paštas yra sunkiausiai prižiūrima paslauga, nes dideli teikėjai dažnai atmeta laiškus iš namų serverių, o klaida reiškia prarastus laiškus. Jei slaptažodžių serveris sugenda, o išbandytos atsarginės kopijos nėra, nebepasieki ir viso kito. Naudokis geru teikėju (žr. 2 ir 4 skyrius), o savo serveryje pirmiausia paleisk kitas paslaugas.</li>
+<li><strong>Leisti šeimai priklausyti nuo serverio, kol jis dar nestabilus.</strong> 1 ar 2 mėnesius naudokis juo tik savo reikmėms. Šeimos nuotraukas perkelk tik tada, kai atsarginės kopijos ir naujiniai taps įprastu dalyku.</li>
+<li><strong>Per anksti ištrinti debesijos kopiją.</strong> Senąja paslauga naudokis lygiagrečiai, kol bent kartą atkursi duomenis iš savo atsarginės kopijos.</li>
+<li><strong>Pirmą savaitę įdiegti 20 programėlių.</strong> Kiekvieną programėlę reikia atnaujinti ir apsaugoti, o pamirštosios tampa silpnąja serverio vieta.</li>
+</ul>
+<h2>Norintiems daugiau</h2>
+<ul>
+<li><strong>PROOF konferencijoje:</strong> „Kaip „kareivis-pilietis“ gali padėti decentralizuoti pasaulį: Rusijos invazijos į Ukrainą pamokos“, pranešimą skaito Alexis Roussel. Daug mažų serverių daugelyje namų išjungti sunkiau nei vieną didelį duomenų centrą.</li>
+<li><strong>Platformos:</strong> <a href="https://start9.com" target="_blank" rel="noopener noreferrer">start9.com</a>, <a href="https://yunohost.org" target="_blank" rel="noopener noreferrer">yunohost.org</a>, <a href="https://umbrel.com" target="_blank" rel="noopener noreferrer">umbrel.com</a>, <a href="https://casaos.zimaspace.com" target="_blank" rel="noopener noreferrer">casaos.zimaspace.com</a>.</li>
+<li><strong>Didelis katalogas programinės įrangos, kurią gali paleisti savo serveryje:</strong> sąrašas „awesome-selfhosted“ (<a href="https://awesome-selfhosted.net" target="_blank" rel="noopener noreferrer">awesome-selfhosted.net</a>).</li>
+<li><strong>Nuotolinė prieiga:</strong> <a href="https://wireguard.com" target="_blank" rel="noopener noreferrer">wireguard.com</a>, <a href="https://tailscale.com" target="_blank" rel="noopener noreferrer">tailscale.com</a> ir „Headscale“ (<a href="https://headscale.net" target="_blank" rel="noopener noreferrer">headscale.net</a>).</li>
+<li><strong>Kitas skyrius:</strong> kaip naudotis DI ir neišsiduoti. Jame tame pačiame serveryje gali veikti kalbos modelis visai šeimai. Dar kartą serveris sugrįš 18 skyriuje, jau kaip Bitcoin mazgas.</li>
+</ul>
+<h2>Šaltiniai</h2>
+<ul>
+<li><a href="https://blog.google/products-and-platforms/products/photos/storage-changes/" target="_blank" rel="noopener noreferrer">Updating Google Photos' storage policy to build for the future</a>, „Google“, 2020 m. lapkričio 11 d.</li>
+<li><a href="https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/" target="_blank" rel="noopener noreferrer">Strasbourg datacentre: latest information</a>, „OVHcloud“, 2021 m. kovo 18 d., atnaujinta iki 2021 m. balandžio mėn.</li>
+<li><a href="https://github.com/getumbrel/umbrel/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer">Umbrel licence (PolyForm Noncommercial 1.0.0)</a>, „Umbrel“ platformoje „GitHub“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://github.com/Start9Labs/start-technologies/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">StartOS licence (MIT)</a>, „Start9 Labs“ platformoje „GitHub“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://umbrel.com/support/backups-and-recovery/backing-up-your-data" target="_blank" rel="noopener noreferrer">Backing up your data</a>, „umbrelOS Support“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://tailscale.com/kb/1226/tailnet-lock" target="_blank" rel="noopener noreferrer">Tailnet Lock</a>, „Tailscale“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://docs.start9.com/start-os/0.4.0.x/marketplace.html" target="_blank" rel="noopener noreferrer">Marketplace</a>, „StartOS“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://umbrel.com/support/apps/how-to-add-a-community-app-store" target="_blank" rel="noopener noreferrer">Adding a community app store</a>, „umbrelOS Support“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://doc.yunohost.org/en/admin/apps/custom_apps/" target="_blank" rel="noopener noreferrer">Installing custom apps</a>, „YunoHost“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+</ul>
+  </article>
+    <section class="bk-cl-box">
+      <h2>Tavo veiksmų sąrašas</h2>
+      <ul class="bk-cl">
+      <li class="bk-cl-item" data-id="self-hosting-1" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="self-hosting-1" aria-label="Surask kompiuterį, kuris gali likti įjungtas, pavyzdžiui, seną nešiojamąjį kompiuterį, mini kompiuterį arba „Raspberry Pi“"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="self-hosting-1">Surask kompiuterį, kuris gali likti įjungtas, pavyzdžiui, seną nešiojamąjį kompiuterį, mini kompiuterį arba „Raspberry Pi“</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="self-hosting-2" data-effort="3">
+        <label class="bk-check"><input type="checkbox" id="self-hosting-2" aria-label="Įdiek platformą ir pirmąją programėlę"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="self-hosting-2">Įdiek platformą ir pirmąją programėlę</label>
+        <span class="bk-effort">Savaitgalis</span>
+      </li>
+      <li class="bk-cl-item" data-id="self-hosting-3" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="self-hosting-3" aria-label="Nustatyk automatinį atsarginį kopijavimą į antrą diską ir kopiją kitoje vietoje"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="self-hosting-3">Nustatyk automatinį atsarginį kopijavimą į antrą diską ir kopiją kitoje vietoje</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      <li class="bk-cl-item" data-id="self-hosting-4" data-effort="1">
+        <label class="bk-check"><input type="checkbox" id="self-hosting-4" aria-label="Atkurk failą iš atsarginės kopijos ir patikrink, ar tai veikia"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="self-hosting-4">Atkurk failą iš atsarginės kopijos ir patikrink, ar tai veikia</label>
+        <span class="bk-effort">5 min.</span>
+      </li>
+      <li class="bk-cl-item" data-id="self-hosting-5" data-effort="2">
+        <label class="bk-check"><input type="checkbox" id="self-hosting-5" aria-label="Pasirink saugų būdą pasiekti serverį iš išorės ir pakeisk visus numatytuosius slaptažodžius"><span class="bk-box"></span></label>
+        <label class="bk-cl-title" for="self-hosting-5">Pasirink saugų būdą pasiekti serverį iš išorės ir pakeisk visus numatytuosius slaptažodžius</label>
+        <span class="bk-effort">1 val.</span>
+      </li>
+      </ul>
+      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
+    </section>
+  <div class="bk-pager">
+<a class="bk-prev" href="/book/phone/"><span>Ankstesnis</span>Kaip susigrąžinti telefono kontrolę</a>
+<a class="bk-next" href="/book/ai/"><span>Kitas</span>Kaip naudotis DI ir neišsiduoti</a>
+</div>
+  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
+</body>
+</html>

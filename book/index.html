@@ -1,14 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<meta http-equiv="refresh" content="0; url=/book/en/">
-<title>PROOF book</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Tavo privatumo gidas · PROOF &lt;conference&gt;</title>
+<meta name="description" content="PROOF konferencijos knyga: praktinis vadovas, padedantis susigrąžinti privatumą, autonomiją ir pinigų kontrolę.">
+<link rel="alternate" hreflang="lt" href="https://proofconference.com/book/">
+<link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/">
+<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/book/book.css?v=97e37876">
 </head>
-<body style="display:grid;place-items:center;min-height:100vh">
-<p><a href="/book/en/" style="color:#fff">PROOF book →</a></p>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/book/" class="nav-logo-text" style="text-decoration:none">PROOF</a>
+  <ul class="nav-links">
+    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
+    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
+    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
+  </ul>
+  
+  <a href="/book/#contents" class="nav-mobile-cta">&lt;turinys&gt;</a>
+  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/'">EN</button>
+</nav>
+
+<!-- COVER - blanc gauche (titre) / noir droite (tableau de bord) -->
+<section class="hero bk-hero">
+  <div class="hero-left">
+    <div class="hero-left-noise"></div>
+    <p class="sec-label bk-hero-label">&lt;book&gt; · PROOF &lt;conference&gt;</p>
+    <h1 class="bk-hero-title">Tavo<br><span class="bk-tw" id="bk-tw" data-words="privatumo|autonomijos|pinigų">privatumo</span><br>gidas</h1>
+    <p class="bk-hero-note">Praktinis PROOF vadovas: kodėl tai svarbu, kaip tai veikia ir ką susitvarkyti, žingsnis po žingsnio. Kiekvienam poreikiui pateikiami keli įrankiai, ir nė vieno iš jų kūrėjai nemokėjo už vietą šioje knygoje. Be paskyros, be slapukų, be sekimo.</p>
+  </div>
+  <div class="hero-right bk-dash" id="bk-dash" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" data-totals="{&quot;priv&quot;: 25, &quot;auto&quot;: 30, &quot;mono&quot;: 35}" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]">
+    <p class="sec-label">Tavo pažanga</p>
+    <div class="bk-dash-stats">
+      <div class="bk-dash-stat" id="bk-dash-read">
+        <span class="bk-dash-n"><b>0</b> / 18</span>
+        <span class="bk-dash-l">skyrių perskaityta</span>
+        <span class="bk-bar" aria-hidden="true"><i class="white"></i></span>
+      </div>
+      <div class="bk-dash-stat" id="bk-dash-done">
+        <span class="bk-dash-n"><b>0</b> / 90</span>
+        <span class="bk-dash-l">veiksmų atlikta</span>
+        <span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span>
+      </div>
+    </div>
+    <ul class="bk-dash-parts">
+      <li class="priv" data-part="priv"><span class="bk-dash-p">Privatumo įrodymas</span><span class="bk-bar" aria-hidden="true"><i></i></span><span class="bk-dash-c">0 / 25</span></li>
+      <li class="auto" data-part="auto"><span class="bk-dash-p">Autonomijos įrodymas</span><span class="bk-bar" aria-hidden="true"><i></i></span><span class="bk-dash-c">0 / 30</span></li>
+      <li class="mono" data-part="mono"><span class="bk-dash-p">Darbo įrodymas</span><span class="bk-bar" aria-hidden="true"><i></i></span><span class="bk-dash-c">0 / 35</span></li>
+    </ul>
+    <div class="bk-dash-cta">
+      <a href="/book/introduction/" class="hero-btn" id="bk-start" data-resume="Skaityti toliau">Pradėti skaityti</a>
+      <a href="/book/checklist/" class="bk-dash-link">Atverti veiksmų sąrašą</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<section class="bk-toc-wrap" id="contents">
+  <p class="bk-sub bk-sub-row"><span>Turinys</span><span id="bk-readcount" data-total="18" data-label="skyrių perskaityta">0 / 18 skyrių perskaityta</span></p>
+  <ol class="bk-toc"><li><a href="/book/introduction/" data-slug="introduction"><span>00</span>Įvadas</a></li></ol>
+<div class="bk-toc-part priv"><p class="bk-label">1 dalis</p>
+<h3><a href="/book/privacy/">Privatumo įrodymas</a></h3><ol class="bk-toc">
+<li><a href="/book/privacy/" data-slug="privacy"><span>··</span>Kodėl privatumas svarbus</a></li>
+<li><a href="/book/messages/" data-slug="messages" data-count="1"><span>01</span>Tavo žinutės</a></li>
+<li><a href="/book/passwords/" data-slug="passwords" data-count="1"><span>02</span>Tavo slaptažodžiai ir paskyros</a></li>
+<li><a href="/book/browser/" data-slug="browser" data-count="1"><span>03</span>Tavo naršyklė ir paieška</a></li>
+<li><a href="/book/email/" data-slug="email" data-count="1"><span>04</span>Tavo el. paštas ir pseudonimai</a></li>
+<li><a href="/book/network/" data-slug="network" data-count="1"><span>05</span>Tavo tinklas</a></li>
+</ol></div>
+<div class="bk-toc-part auto"><p class="bk-label">2 dalis</p>
+<h3><a href="/book/autonomy/">Autonomijos įrodymas</a></h3><ol class="bk-toc">
+<li><a href="/book/autonomy/" data-slug="autonomy"><span>··</span>Kodėl autonomija svarbi</a></li>
+<li><a href="/book/keys/" data-slug="keys" data-count="1"><span>06</span>Raktai vietoj paskyrų</a></li>
+<li><a href="/book/nostr/" data-slug="nostr" data-count="1"><span>07</span>Nostr: atviras tinklas, kurio nevaldo jokia įmonė</a></li>
+<li><a href="/book/big-tech/" data-slug="big-tech" data-count="1"><span>08</span>Kaip po vieną pakeisti technologijų milžinių paslaugas</a></li>
+<li><a href="/book/phone/" data-slug="phone" data-count="1"><span>09</span>Kaip susigrąžinti telefono kontrolę</a></li>
+<li><a href="/book/self-hosting/" data-slug="self-hosting" data-count="1"><span>10</span>Kaip paleisti paslaugas nuosavame serveryje</a></li>
+<li><a href="/book/ai/" data-slug="ai" data-count="1"><span>11</span>Kaip naudotis DI ir neišsiduoti</a></li>
+</ol></div>
+<div class="bk-toc-part mono"><p class="bk-label">3 dalis</p>
+<h3><a href="/book/work/">Darbo įrodymas</a></h3><ol class="bk-toc">
+<li><a href="/book/work/" data-slug="work"><span>··</span>Kodėl svarbu apsaugoti savo darbą</a></li>
+<li><a href="/book/savings/" data-slug="savings" data-count="1"><span>12</span>Kur laikyti savo darbo vaisius</a></li>
+<li><a href="/book/first-wallet/" data-slug="first-wallet" data-count="1"><span>13</span>Tavo pirmoji piniginė ir pirmieji satošiai</a></li>
+<li><a href="/book/seed/" data-slug="seed" data-count="1"><span>14</span>Kaip pasidaryti atkūrimo frazės atsarginę kopiją</a></li>
+<li><a href="/book/lightning-and-euros/" data-slug="lightning-and-euros" data-count="1"><span>15</span>Lightning ir eurai kasdienybėje</a></li>
+<li><a href="/book/bitcoin-privacy/" data-slug="bitcoin-privacy" data-count="1"><span>16</span>Privatumas Bitcoin tinkle</a></li>
+<li><a href="/book/hardware-wallet/" data-slug="hardware-wallet" data-count="1"><span>17</span>Aparatinės piniginės</a></li>
+<li><a href="/book/node/" data-slug="node" data-count="1"><span>18</span>Kaip paleisti savo mazgą</a></li>
+</ol></div>
+<div class="bk-toc-part plain"><p class="bk-label">Santrauka</p><ol class="bk-toc">
+<li><a href="/book/checklist/"><span>✓</span>Tavo veiksmų sąrašas</a></li>
+<li><a href="/book/glossary/"><span>Az</span>Žodynėlis</a></li></ol></div>
+</section>
+
+<!-- AFTER THE CONFERENCE -->
+<section class="about-split bk-after" id="next">
+  <div class="about-left">
+    <p class="sec-label">&lt;after&gt; Kas toliau</p>
+    <h2>Po<br>konferencijos</h2>
+    <p>Pranešimų skaidrės ir įrašai bus paskelbti čia po <strong>rugsėjo 27 d.</strong></p>
+    <p>Pasilik bilietą: QR kodas galios ir toliau, o ši knyga bus pildoma.</p>
+  </div>
+  <div class="about-right">
+    <p class="sec-label" style="color:rgba(8,8,8,0.4)">Bendruomenė</p>
+    <h2>Palaikykime<br>ryšį</h2>
+    <p>Turi klausimų, pastebėjai klaidą ar žinai įrankį, kurį turėtume pridėti? Rašyk adresu <a href="mailto:contact@proofconference.com" style="color:inherit">contact@proofconference.com</a> arba prisijunk prie <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener noreferrer" style="color:inherit">„Facebook“ grupės</a>.</p>
+    <p class="sec-label" style="color:rgba(8,8,8,0.4);margin-top:40px">Vienintelis rėmėjas</p>
+    <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer"><img src="/bringin-logo.svg" alt="Bringin" style="width:200px;display:block"></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
+  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
+  <span><a href="https://tickets.proofconference.com/terms">taisyklės</a> · <a href="https://tickets.proofconference.com/privacy">privatumas</a> · <a href="mailto:contact@proofconference.com">kontaktai</a></span>
+</footer>
+
+<script src="/book/book.js?v=97e37876" defer></script>
 </body>
 </html>

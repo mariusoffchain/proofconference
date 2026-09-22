@@ -463,6 +463,7 @@ nav {
   font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
   margin-top: 4px; padding-left: 64px;
 }
+.tl-lang { opacity: 0.6; font-weight: 400; }
 .tl-row.priv .tl-speaker { color: var(--c-priv); }
 .tl-row.auto .tl-speaker { color: var(--c-dece); }
 .tl-row.mono .tl-speaker { color: var(--c-mono); }

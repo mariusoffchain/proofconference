@@ -314,7 +314,7 @@ svg.bk-navp-l { display: block; flex: none; }
 @media (max-width: 640px) { .bk-code { padding: 20px 18px 16px; } .bk-code-key { font-size: 24px; } }
 
 /* ticket variant (chapter 15): centred, code in the middle, copy button on its right */
-.bk-ticket { position: relative; text-align: center; max-width: 560px; margin-left: auto; margin-right: auto; padding: 26px 32px 26px; border: 1px dashed rgba(255,255,255,0.35); border-top: 3px solid var(--bk-c); }
+.bk-ticket { position: relative; text-align: center; max-width: 560px; margin-left: auto; margin-right: auto; padding: 26px 32px 26px; border: 1px dashed rgba(255,255,255,0.35); border-top: 3px solid var(--bk-c, var(--white)); }
 .bk-ticket::before, .bk-ticket::after { content: ''; position: absolute; top: 50%; width: 22px; height: 22px; margin-top: -11px; border-radius: 50%; background: var(--black); border: 1px dashed rgba(255,255,255,0.35); }
 .bk-ticket::before { left: -12px; clip-path: inset(0 0 0 50%); }
 .bk-ticket::after { right: -12px; clip-path: inset(0 50% 0 0); }
@@ -331,7 +331,7 @@ svg.bk-navp-l { display: block; flex: none; }
   .bk-ticket .bk-code-copy { position: static; transform: none; display: block; margin: 10px auto 0; width: max-content; }
 }
 /* ticket, light variant (book home) */
-.bk-ticket.light { border-color: rgba(8,8,8,0.45); border-top-color: var(--black); margin-left: 0; }
+.bk-ticket.light { border-color: rgba(8,8,8,0.45); border-top: 3px solid var(--black); margin-left: 0; }
 .bk-ticket.light::before, .bk-ticket.light::after { background: var(--white); border-color: rgba(8,8,8,0.45); }
 .bk-ticket.light .bk-label { color: var(--black); }
 .bk-ticket.light .bk-code-key, .bk-ticket.light .bk-code-copy { border-color: rgba(8,8,8,0.3); color: var(--black); }

@@ -802,3 +802,140 @@ footer a:hover { color: var(--white); }
 ══════════════════════════════════════ */
 .page-top { padding-top: 60px; }
 .tickets-left .hero-btn { margin-top: 28px; }
+
+
+/* ══════════════════════════════════════
+   AFTER THE CONFERENCE — recap, replays, book
+══════════════════════════════════════ */
+.hero-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.hero-sub {
+  font-size: 13px; letter-spacing: 0.08em; text-transform: lowercase;
+  color: var(--muted); text-decoration: none; transition: color 0.15s;
+}
+.hero-sub:hover { color: var(--white); }
+
+.recap-section {
+  background: var(--black);
+  padding: 96px 56px;
+  border-top: 1px solid var(--border);
+}
+.recap-head, .recap-gallery, .recap-quotes { max-width: 1280px; margin-left: auto; margin-right: auto; }
+.recap-head {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+  margin-bottom: 56px;
+}
+.recap-section h2, .replays-section h2 {
+  font-family: 'Righteous', sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 900; line-height: 0.95;
+  text-transform: uppercase;
+}
+.recap-text p { font-size: 16px; line-height: 1.75; color: var(--muted); max-width: 560px; }
+.recap-text p + p { margin-top: 16px; }
+
+.recap-gallery {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 190px 190px; gap: 4px;
+}
+.rc-ph { display: block; position: relative; overflow: hidden; background: var(--warm); cursor: zoom-in; }
+.rc-ph:first-child { grid-row: span 2; }
+.rc-ph img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.rc-ph:hover img { transform: scale(1.04); }
+.rc-ph[href*="zolak"] img { object-position: center bottom; }
+.rc-ph.rc-hidden { display: none; }
+.rc-ph.more::after {
+  content: attr(data-more);
+  position: absolute; inset: 0; display: grid; place-items: center;
+  background: rgba(8,8,8,0.6);
+  font-family: 'Righteous', sans-serif; font-size: 36px; color: var(--white);
+}
+
+.lb { border: none; padding: 0; background: transparent; width: 100vw; height: 100vh; max-width: 100vw; max-height: 100vh; }
+.lb::backdrop { background: rgba(8,8,8,0.94); }
+.lb img { position: absolute; inset: 0; margin: auto; max-width: 90vw; max-height: 88vh; object-fit: contain; }
+.lb button { position: absolute; background: none; border: none; color: var(--white); font-size: 36px; line-height: 1; cursor: pointer; padding: 16px; }
+.lb .lb-p { left: 4px; top: 50%; transform: translateY(-50%); }
+.lb .lb-n { right: 4px; top: 50%; transform: translateY(-50%); }
+.lb .lb-x { right: 4px; top: 4px; }
+
+.replays-section {
+  background: var(--warm);
+  padding: 96px 56px;
+  border-top: 1px solid var(--border);
+}
+.replays-inner { max-width: 720px; margin: 0 auto; }
+.replays-section .sec-label { color: rgba(255,255,255,0.35); }
+.replays-p { font-size: 16px; line-height: 1.75; color: var(--muted); margin: 28px 0 40px; }
+.replays-p a { color: var(--white); text-underline-offset: 3px; }
+.rp-list { list-style: none; }
+.rp-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 18px 22px; margin-bottom: 8px;
+  background: rgba(255,255,255,0.03);
+  border-left: 2px solid var(--border);
+}
+.rp-item.priv { border-left-color: var(--c-priv); }
+.rp-item.auto { border-left-color: var(--c-dece); }
+.rp-item.mono { border-left-color: var(--c-mono); }
+.rp-title { font-size: 15px; line-height: 1.45; color: var(--white); }
+.rp-spk { font-size: 12px; margin-top: 6px; }
+.rp-item.priv .rp-spk { color: var(--c-priv); }
+.rp-item.auto .rp-spk { color: var(--c-dece); }
+.rp-item.mono .rp-spk { color: var(--c-mono); }
+.rp-badge {
+  flex-shrink: 0;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid rgba(255,255,255,0.15);
+  padding: 5px 9px; white-space: nowrap;
+}
+
+.book-split .tickets-left p + p { margin-top: 16px; }
+.book-split .tickets-left p { max-width: 440px; }
+.book-split .ticket-cur { font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  .recap-section, .replays-section { padding: 64px 24px; }
+  .recap-head { grid-template-columns: 1fr; gap: 28px; margin-bottom: 40px; }
+  .recap-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 110px 110px; margin: 0 -24px; }
+  .rc-ph:first-child { grid-column: span 2; grid-row: auto; }
+  .rp-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .book-split { grid-template-columns: 1fr; }
+}
+
+/* Book block: colours inverted against the about block that follows (white left, black right) */
+.book-split .tickets-left { background: var(--white); color: var(--black); }
+.book-split .tickets-left .sec-label { color: rgba(8,8,8,0.4); }
+.book-split .tickets-left p { color: rgba(8,8,8,0.55); }
+.book-split .tickets-right { background: var(--black); color: var(--white); }
+.book-split .ticket-includes li { color: var(--muted); border-bottom-color: var(--border); }
+.book-split .ticket-btn { background: var(--white); color: var(--black); }
+
+/* Anonymous feedback: speech bubbles, one colour per card, a big opening quote mark */
+.recap-quotes { margin-top: 72px; }
+.q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; align-items: start; }
+.q-card {
+  --q: var(--white);
+  position: relative; margin: 0;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 40px 24px 22px;
+  display: flex; flex-direction: column; gap: 22px;
+}
+.q-card::before {
+  content: '“';
+  position: absolute; top: 4px; left: 18px;
+  font-family: 'Righteous', sans-serif; font-size: 72px; line-height: 1;
+  color: var(--q);
+}
+.q-priv { --q: var(--c-priv); } .q-dece { --q: var(--c-dece); } .q-mono { --q: var(--c-mono); }
+.q-party { --q: var(--c-party); } .q-off { --q: var(--off); }
+.q-card blockquote { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.88); }
+.q-card.q-big blockquote {
+  font-family: 'Righteous', sans-serif; font-size: 40px; line-height: 1;
+  text-transform: uppercase; color: var(--q);
+}
+.q-card figcaption {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.4);
+}
+.q-card figcaption::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--q); }
+@media (max-width: 768px) { .recap-quotes { margin-top: 56px; } .q-grid { gap: 16px; } .q-card.q-big blockquote { font-size: 32px; } }

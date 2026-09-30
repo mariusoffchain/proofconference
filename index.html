@@ -56,6 +56,7 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Pereiti prie turinio</a>
 
 <!-- NAV -->
 <nav>
@@ -68,20 +69,21 @@
     <li><a href="/book/" class="nav-cta" id="nav-cta">&lt;knyga&gt;</a></li>
   </ul>
   <a href="/book/" class="nav-mobile-cta">&lt;knyga&gt;</a>
-  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/en'">EN</button>
+  <a class="lang-btn lt" id="lang-btn" href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a>
 </nav>
+<main id="main">
 
 
 <!-- HERO - blanc gauche / noir droite -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-left-noise"></div>
-    <div class="hero-logo-text-big">PROOF<span class="hero-logo-conf" id="hero-conf">&lt;konferencija&gt;</span></div>
+    <h1 class="hero-logo-text-big">PROOF<span class="hero-logo-conf" id="hero-conf">&lt;konferencija&gt;</span></h1>
     <div class="hero-date" id="hero-date">2026 m. rugsėjo 27 d.</div>
     <div class="hero-location" id="hero-location">Vilnius, Lietuva</div>
   </div>
   <div class="hero-right">
-    <div class="hero-tagline"><span id="hero-tagline-text">Atgauk<br>savo<br></span><span class="hero-tw-word" id="tw-hero"><span class="tw-cursor"></span></span></div>
+    <div class="hero-tagline"><span id="hero-tagline-text">Atgauk<br>savo<br></span><span class="hero-tw-word" id="tw-hero" aria-hidden="true"><span class="tw-cursor"></span></span><span class="sr-only">laisvę</span></div>
     <p class="hero-desc" id="hero-desc">2026 m. rugsėjo 27 d. Vilniuje vykusi PROOF popietė su pranešimais ir dirbtuvėmis buvo skirta privatumui, decentralizacijai ir finansiniam suverenitetui. Knygą jau gali skaityti internete, o pranešimų įrašai pasirodys netrukus.</p>
     <div class="hero-actions">
       <a href="/book/" class="hero-btn">Skaityk knygą</a>
@@ -473,6 +475,8 @@
 
 
 <!-- FOOTER -->
+</main>
+
 <footer>
   <span>PROOF &lt;conference&gt; Vilnius 2026</span>
   <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
@@ -501,7 +505,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
   links.forEach(a => {
     a.style.color = a.getAttribute('href') === '#' + cur
-      ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.35)';
+      ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.6)';
   });
 });
 
@@ -539,7 +543,7 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 const lbLinks = [...document.querySelectorAll('[data-lb]')];
 const lb = document.createElement('dialog');
 lb.className = 'lb';
-lb.innerHTML = '<img alt=""><button class="lb-p" aria-label="&lsaquo;">&lsaquo;</button><button class="lb-n" aria-label="&rsaquo;">&rsaquo;</button><button class="lb-x" aria-label="&times;">&times;</button>';
+lb.innerHTML = '<img alt=""><button class="lb-p" aria-label="Ankstesnė nuotrauka">&lsaquo;</button><button class="lb-n" aria-label="Kita nuotrauka">&rsaquo;</button><button class="lb-x" aria-label="Uždaryti">&times;</button>';
 document.body.appendChild(lb);
 let lbCur = 0;
 const lbShow = i => {

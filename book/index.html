@@ -13,9 +13,10 @@
 <link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=2fd64a7d">
+<link rel="stylesheet" href="/book/book.css?v=97a822d2">
 </head>
 <body>
+<a class="skip-link" href="#main">Pereiti prie turinio</a>
 
 <!-- NAV -->
 <nav class="bk-cover-nav">
@@ -28,7 +29,7 @@
     <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
   </ul>
   <span class="bk-navps"></span>
-  <button class="lang-btn lt" id="lang-btn" onclick="window.location.href='/book/en/'">EN</button>
+  <a class="lang-btn lt" id="lang-btn" href="/book/en/" hreflang="en" lang="en" aria-label="English version">EN</a>
   <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
@@ -42,11 +43,12 @@
 </div>
 
 <!-- COVER - blanc gauche (titre) / noir droite (tableau de bord) -->
+<main id="main">
 <section class="hero bk-hero">
   <div class="hero-left">
     <div class="hero-left-noise"></div>
     <p class="sec-label bk-hero-label">&lt;book&gt; · PROOF &lt;conference&gt;</p>
-    <h1 class="bk-hero-title">Tavo<br><span class="bk-tw" id="bk-tw" data-words="privatumo|autonomijos|pinigų">privatumo</span><br>gidas</h1>
+    <h1 class="bk-hero-title">Tavo<br><span class="bk-tw" id="bk-tw" data-words="privatumo|autonomijos|pinigų" aria-hidden="true">privatumo</span><span class="sr-only">privatumo</span><br>gidas</h1>
     <p class="bk-hero-note">Praktinis PROOF vadovas: kodėl tai svarbu, kaip tai veikia ir ką susitvarkyti, žingsnis po žingsnio. Kiekvienam poreikiui pateikiami keli įrankiai, ir nė vieno iš jų kūrėjai nemokėjo už vietą šioje knygoje. Be paskyros, be slapukų, be sekimo.</p>
   </div>
   <div class="hero-right bk-dash" id="bk-dash" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" data-totals="{&quot;priv&quot;: 25, &quot;auto&quot;: 30, &quot;mono&quot;: 35}" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]">
@@ -123,22 +125,24 @@
     <p>Knyga ir toliau bus nemokama ir pildoma.</p>
   </div>
   <div class="about-right">
-    <p class="sec-label" style="color:rgba(8,8,8,0.4)">Bendruomenė</p>
+    <p class="sec-label" style="color:var(--black)">Bendruomenė</p>
     <h2>Palaikykime<br>ryšį</h2>
     <p>Turi klausimų, pastebėjai klaidą ar žinai įrankį, kurį turėtume pridėti? Rašyk adresu <a href="mailto:contact@proofconference.com" style="color:inherit">contact@proofconference.com</a> arba prisijunk prie <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener noreferrer" style="color:inherit">„Facebook“ grupės</a>.</p>
-    <p class="sec-label" style="color:rgba(8,8,8,0.4);margin-top:40px">Vienintelis rėmėjas</p>
+    <p class="sec-label" style="color:var(--black);margin-top:40px">Vienintelis rėmėjas</p>
     <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer"><img src="/bringin-logo.svg" alt="Bringin" style="width:200px;display:block"></a>
     <aside class="bk-code bk-ticket light" id="bk-code">
   <p class="bk-label">Konferencijos kodas</p>
   <div class="bk-ticket-mid">
     <span class="bk-code-key">PROOF</span>
-    <button type="button" class="bk-code-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('PROOF');this.textContent='Nukopijuota'">Kopijuoti</button>
+    <button type="button" class="bk-code-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('PROOF');this.textContent='Nukopijuota';var l=document.getElementById('bk-code-live');if(l)l.textContent='Nukopijuota'">Kopijuoti</button>
+    <span class="sr-only" aria-live="polite" id="bk-code-live"></span>
   </div>
   <p class="bk-code-txt">Konferencijos rėmėja „Bringin“ siūlo PROOF dalyviams kodą: įvesk jį programėlėje, kai atidarysi paskyrą, ir 3 mėnesius mokėsi perpus mažesnius mokesčius.</p>
   <p class="bk-code-note">„Bringin“ yra vienas iš kelių variantų 13 ir 15 skyriuose. Knyga komisinių negauna.</p>
 </aside>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -147,6 +151,6 @@
   <span><a href="mailto:contact@proofconference.com">kontaktai</a></span>
 </footer>
 
-<script src="/book/book.js?v=2fd64a7d" defer></script>
+<script src="/book/book.js?v=97a822d2" defer></script>
 </body>
 </html>

@@ -211,7 +211,8 @@
   var tw = document.getElementById('bk-tw');
   if (tw && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var words = tw.dataset.words.split('|');
-    var colors = ['#00c896', '#8b5cf6', '#f5a623'];
+    // Darker shades than the home hero: this title sits on the white panel, and each colour must keep 3:1 against white
+    var colors = ['#009c74', '#7c4ce6', '#c47008'];
     var wi = 0, ci = words[0].length, del = true;
     var tick = function () {
       var word = words[wi], color = colors[wi % colors.length];

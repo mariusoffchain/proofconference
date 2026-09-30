@@ -13,9 +13,10 @@
 <link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=2fd64a7d">
+<link rel="stylesheet" href="/book/book.css?v=97a822d2">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- NAV -->
 <nav class="bk-cover-nav">
@@ -28,7 +29,7 @@
     <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
   </ul>
   <span class="bk-navps"></span>
-  <button class="lang-btn" id="lang-btn" onclick="window.location.href='/book/'">LT</button>
+  <a class="lang-btn" id="lang-btn" href="/book/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
   <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
@@ -42,11 +43,12 @@
 </div>
 
 <!-- COVER - blanc gauche (titre) / noir droite (tableau de bord) -->
+<main id="main">
 <section class="hero bk-hero">
   <div class="hero-left">
     <div class="hero-left-noise"></div>
     <p class="sec-label bk-hero-label">&lt;book&gt; · PROOF &lt;conference&gt;</p>
-    <h1 class="bk-hero-title">Your<br><span class="bk-tw" id="bk-tw" data-words="privacy|autonomy|work">privacy</span><br>guide</h1>
+    <h1 class="bk-hero-title">Your<br><span class="bk-tw" id="bk-tw" data-words="privacy|autonomy|work" aria-hidden="true">privacy</span><span class="sr-only">privacy</span><br>guide</h1>
     <p class="bk-hero-note">The practical manual of PROOF: why it matters, how it works, what to set up, step by step. Several tools for every need, none of them paid to be here. No account, no cookies, no tracking.</p>
   </div>
   <div class="hero-right bk-dash" id="bk-dash" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" data-totals="{&quot;priv&quot;: 25, &quot;auto&quot;: 30, &quot;mono&quot;: 35}" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]">
@@ -123,22 +125,24 @@
     <p>This book stays free and will keep growing.</p>
   </div>
   <div class="about-right">
-    <p class="sec-label" style="color:rgba(8,8,8,0.4)">Community</p>
+    <p class="sec-label" style="color:var(--black)">Community</p>
     <h2>Stay in<br>touch</h2>
     <p>Questions, corrections, a tool we should add? Write to <a href="mailto:contact@proofconference.com" style="color:inherit">contact@proofconference.com</a> or join the <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener noreferrer" style="color:inherit">Facebook group</a>.</p>
-    <p class="sec-label" style="color:rgba(8,8,8,0.4);margin-top:40px">Sole sponsor</p>
+    <p class="sec-label" style="color:var(--black);margin-top:40px">Sole sponsor</p>
     <a href="https://bringin.app/" target="_blank" rel="noopener noreferrer"><img src="/bringin-logo.svg" alt="Bringin" style="width:200px;display:block"></a>
     <aside class="bk-code bk-ticket light" id="bk-code">
   <p class="bk-label">Conference code</p>
   <div class="bk-ticket-mid">
     <span class="bk-code-key">PROOF</span>
-    <button type="button" class="bk-code-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('PROOF');this.textContent='Copied'">Copy</button>
+    <button type="button" class="bk-code-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('PROOF');this.textContent='Copied';var l=document.getElementById('bk-code-live');if(l)l.textContent='Copied'">Copy</button>
+    <span class="sr-only" aria-live="polite" id="bk-code-live"></span>
   </div>
   <p class="bk-code-txt">Bringin, the sponsor of the conference, gives PROOF attendees a code to enter in its app when opening an account: 50% off its fees for 3 months.</p>
   <p class="bk-code-note">Bringin is one option among others in chapters 13 and 15. The book takes no commission.</p>
 </aside>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -147,6 +151,6 @@
   <span><a href="mailto:contact@proofconference.com">contact</a></span>
 </footer>
 
-<script src="/book/book.js?v=2fd64a7d" defer></script>
+<script src="/book/book.js?v=97a822d2" defer></script>
 </body>
 </html>

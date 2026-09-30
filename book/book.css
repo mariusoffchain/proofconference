@@ -5,7 +5,7 @@
 html { scroll-padding-top: 84px; }
 
 /* ── Titre de couverture : mot tapé en boucle, comme le hero de la page d'accueil ── */
-.bk-tw { display: inline-block; min-height: 0.95em; color: var(--c-priv); }
+.bk-tw { display: inline-block; min-height: 0.95em; color: #009c74; }   /* darker than --c-priv: 3.5:1 on the white panel (the script uses the same darker set) */
 
 .bk-sub { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
 .bk-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bk-c, var(--muted)); }
@@ -42,12 +42,13 @@ html { scroll-padding-top: 84px; }
 .bk-dash-c { font-size: 11px; letter-spacing: 0.08em; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 56px; text-align: right; }
 
 .bk-dash-cta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 36px; }
-.bk-dash-link { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-underline-offset: 3px; }
+.bk-dash-link { display: inline-block; padding: 5px 0; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-underline-offset: 3px; }
 .bk-dash-link:hover { color: var(--white); }
 
 /* ── Progression dans la barre de navigation (toutes les pages) ── */
 .bk-navp {
   display: flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 6px 0;   /* 24px target (WCAG 2.5.8) without changing the nav height */
   font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.6);
   font-variant-numeric: tabular-nums; white-space: nowrap; transition: color 0.15s;
 }
@@ -308,7 +309,7 @@ svg.bk-navp-l { display: block; flex: none; }
 /* light variant (book home, white column) */
 .bk-code.light { background: rgba(8,8,8,0.035); border-color: rgba(8,8,8,0.12); border-top-color: var(--black); }
 .bk-code.light .bk-code-key { border-color: rgba(8,8,8,0.45); color: var(--black); }
-.bk-code.light .bk-code-note { color: rgba(8,8,8,0.55); }
+.bk-code.light .bk-code-note { color: rgba(8,8,8,0.62); }
 .bk-code.light .bk-code-copy { color: rgba(8,8,8,0.5); }
 .bk-code.light .bk-code-copy:hover { color: var(--black); }
 @media (max-width: 640px) { .bk-code { padding: 20px 18px 16px; } .bk-code-key { font-size: 24px; } }

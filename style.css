@@ -956,3 +956,11 @@ h1.hero-logo-text-big { margin-top: 0; }
   color: var(--black); background: var(--white); padding: 10px 14px; text-decoration: none;
 }
 .skip-link:focus { top: 12px; outline: 2px solid var(--c-priv); outline-offset: 2px; }
+
+/* Replays: button and embedded video (only after a click) */
+.rp-item { flex-wrap: wrap; }
+.rp-play { cursor: pointer; background: transparent; color: var(--white); border-color: rgba(255,255,255,0.5); font-family: inherit; text-decoration: none; }
+.rp-play:hover { border-color: var(--white); }
+.rp-play:disabled { opacity: 0.5; cursor: default; }
+.rp-embed { flex: 1 1 100%; margin-top: 16px; aspect-ratio: 16 / 9; }
+.rp-embed iframe { width: 100%; height: 100%; border: 0; display: block; }

@@ -143,7 +143,10 @@
 </section>
 
 
-<!-- REPLAYS -->
+<!-- REPLAYS
+     Pour publier une vidéo : ajouter data-video="https://www.youtube.com/watch?v=ID" (ou youtu.be, ou toute autre URL)
+     sur le <li class="rp-item"> du talk. Le badge devient un bouton ; la vidéo YouTube ne se charge (domaine youtube-nocookie)
+     qu'au clic, une autre URL ouvre un lien. Penser à changer le titre « netrukus / coming soon » de la section. -->
 <section class="replays-section" id="replays">
   <div class="replays-inner">
     <p class="sec-label rev">Įrašai</p>
@@ -538,6 +541,35 @@ function twTick() {
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   setTimeout(twTick, 600);
 }
+
+// Replays: a talk with data-video gets a button; YouTube loads only on click (youtube-nocookie), other URLs open as links
+document.querySelectorAll('.rp-item[data-video]').forEach(li => {
+  const url = li.dataset.video, badge = li.querySelector('.rp-badge'), title = li.querySelector('.rp-title');
+  if (!url || !badge) return;
+  const m = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+  if (!m) {
+    const a = document.createElement('a');
+    a.className = 'rp-badge rp-play'; a.href = url; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = 'Žiūrėti kitur ↗';
+    badge.replaceWith(a);
+    return;
+  }
+  const btn = document.createElement('button');
+  btn.type = 'button'; btn.className = 'rp-badge rp-play'; btn.textContent = 'Žiūrėti įrašą';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.addEventListener('click', () => {
+    const box = document.createElement('div');
+    box.className = 'rp-embed';
+    const f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + m[1] + '?autoplay=1&rel=0';
+    f.title = title ? title.textContent : 'Video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.loading = 'lazy';
+    box.appendChild(f);
+    li.appendChild(box);
+    btn.setAttribute('aria-expanded', 'true'); btn.disabled = true;
+  });
+  badge.replaceWith(btn);
+});
 
 // Gallery: every photo opens full size, with previous / next (buttons, arrow keys) and Escape to close
 const lbLinks = [...document.querySelectorAll('[data-lb]')];

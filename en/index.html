@@ -64,6 +64,7 @@
 <link rel="stylesheet" href="/style.css">
 <style>.partners-right>a{display:inline-flex;align-items:center;gap:12px;color:inherit;text-decoration:none}.cypher-partner-name{font-family:monospace;font-size:clamp(18px,3vw,26px);font-weight:bold}.related-communities{text-align:center;padding:36px 20px}.related-communities>div{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 32px}.related-communities a{color:inherit;text-underline-offset:5px}</style>
 <script defer src="/external-links.js"></script>
+<script defer src="/replays.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -94,7 +95,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-tagline"><span id="hero-tagline-text">Take back<br>your<br></span><span class="hero-tw-word" id="tw-hero" aria-hidden="true"><span class="tw-cursor"></span></span><span class="sr-only">Work</span></div>
-    <p class="hero-desc" id="hero-desc">On 27 September 2026, PROOF spent an afternoon in Vilnius on privacy, decentralization and financial sovereignty, with talks and workshops. The book is online, and the recordings will follow.</p>
+    <p class="hero-desc" id="hero-desc">On 27 September 2026, PROOF spent an afternoon in Vilnius on privacy, decentralization and financial sovereignty, with talks and workshops. The book is online, and the first talk recording is out.</p>
     <div class="hero-actions">
       <a href="/book/en/" class="hero-btn">Read the book</a>
       <a href="#recap" class="hero-sub">See the recap ↓</a>
@@ -154,34 +155,30 @@
 
 
 <!-- REPLAYS
-     Pour publier une vidéo : ajouter data-video="https://www.youtube.com/watch?v=ID" (ou youtu.be, ou toute autre URL)
-     sur le <li class="rp-item"> du talk. Le badge devient un bouton ; la vidéo YouTube ne se charge (domaine youtube-nocookie)
-     qu'au clic, une autre URL ouvre un lien. Penser à changer le titre « netrukus / coming soon » de la section. -->
+     Section générée : ne pas éditer ici. Source : book-drafts/site/content.json (replays.items), puis
+     python3 book-drafts/site/build_site.py build (et python3 book-drafts/build.py pour le livre, qui reprend la même liste).
+     Lecteur : /replays.js. -->
 <section class="replays-section" id="replays">
   <div class="replays-inner">
     <p class="sec-label rev">Replays</p>
-    <h2 class="rev">Recordings<br>coming soon.</h2>
-    <p class="replays-p rev">The videos of the talks will be published on this page in the coming weeks. To hear about it first, join the <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener">PROOF group on Facebook</a>.</p>
+    <h2 class="rev">Talk<br>recordings.</h2>
+    <p class="replays-p rev">The first talk recording is online. The others will be published on this page in the coming weeks. To hear about them first, join the <a href="https://www.facebook.com/groups/309991789709782/" target="_blank" rel="noopener">PROOF group on Facebook</a>.</p>
     <ul class="rp-list rev">
       <li class="rp-item priv">
-        <div><div class="rp-title">Why Your Internet Security Depends on Your Keys</div><div class="rp-spk">Satoshine <span class="tl-lang">· in Lithuanian</span></div></div>
+        <div class="rp-text"><div class="rp-title">Why Your Internet Security Depends on Your Keys</div><div class="rp-spk">Satoshine <span class="tl-lang">· in Lithuanian</span></div></div>
         <span class="rp-badge">soon</span>
       </li>
       <li class="rp-item auto">
-        <div><div class="rp-title">How the &ldquo;Soldier-Citizen&rdquo; Can Help Decentralize the World: Lessons from Russia&rsquo;s Invasion of Ukraine</div><div class="rp-spk">Alexis Roussel <span class="tl-lang">· in English</span></div></div>
+        <div class="rp-text"><div class="rp-title">How the &ldquo;Soldier-Citizen&rdquo; Can Help Decentralize the World: Lessons from Russia&rsquo;s Invasion of Ukraine</div><div class="rp-spk">Alexis Roussel <span class="tl-lang">· in English</span></div></div>
         <span class="rp-badge">soon</span>
       </li>
       <li class="rp-item auto">
-        <div><div class="rp-title">Rebuilding Social Media Without a Company in Charge using Nostr</div><div class="rp-spk">Marius Off-Chain <span class="tl-lang">· in English</span></div></div>
+        <div class="rp-text"><div class="rp-title">Rebuilding Social Media Without a Company in Charge using Nostr</div><div class="rp-spk">Marius Off-Chain <span class="tl-lang">· in English</span></div></div>
         <span class="rp-badge">soon</span>
       </li>
-      <li class="rp-item mono">
-        <div><div class="rp-title">CBDCs, KYC, and the Fight for Monetary Privacy</div><div class="rp-spk">Linas K. <span class="tl-lang">· in Lithuanian</span></div></div>
-        <span class="rp-badge">soon</span>
-      </li>
-      <li class="rp-item mono">
-        <div><div class="rp-title">Why Centralized Money Fails: How Bitcoin Became an Alternative</div><div class="rp-spk">Piktas <span class="tl-lang">· in Lithuanian</span></div></div>
-        <span class="rp-badge">soon</span>
+      <li class="rp-item mono rp-has-video" data-video="https://blossom.primal.net/b7031018cd9a0dd500b078750e76b110de82aed4a58c93a1fd878b691ee5ac9e.mp4" data-video-type='video/mp4; codecs="hvc1.1.6.L93.b0,mp4a.40.2"' data-video-sd="https://blossom.primal.net/0211e0875dfbfbd6f14fd76ff4aa56bd0f9f2a8a00680155bd7be02533643b5b.mp4" data-video-sd-type='video/mp4; codecs="avc1.64001f,mp4a.40.2"'>
+        <div class="rp-text"><div class="rp-title">Why Centralized Money Fails: How Bitcoin Became an Alternative</div><div class="rp-spk">Piktas <span class="tl-lang">· in Lithuanian</span></div><div class="rp-alt">Also on <a href="https://youtu.be/ynqMj25Cg8Y" target="_blank" rel="noopener">YouTube</a> · <a href="https://rumble.com/v7gmtoe-kodl-centralizuoti-pinigai-neveikia-ir-k-silo-bitcoin-piktas-proof-2026.html" target="_blank" rel="noopener">Rumble</a> · <a href="https://nostu.be/v/naddr1qvzqqqy9hvpzpnuhcws2rql478l3w5xk95h05zx7ug3w9jh09fecjmyujgqtjq95qyxhwumn8ghj7mn0wvhxcmmvqyt8wumn8ghj7un9d3shjtnswf5k6ctv9ehx2aqpzfmhxue69uhk7enxvd5xz6tw9ec82csqyscn2vf3vgmnsefdxu6rgefdxs6rxwpd893x2cfdvyen2etyvsmkgcf38ycs5k7v4a" target="_blank" rel="noopener">Nostr</a></div><a class="rp-play" href="https://blossom.primal.net/0211e0875dfbfbd6f14fd76ff4aa56bd0f9f2a8a00680155bd7be02533643b5b.mp4">Watch the recording</a></div>
+        <a class="rp-thumb" href="https://blossom.primal.net/0211e0875dfbfbd6f14fd76ff4aa56bd0f9f2a8a00680155bd7be02533643b5b.mp4" tabindex="-1" aria-hidden="true"><img src="/replays/piktas.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></a>
       </li>
     </ul>
   </div>
@@ -554,35 +551,6 @@ function twTick() {
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   setTimeout(twTick, 600);
 }
-
-// Replays: a talk with data-video gets a button; YouTube loads only on click (youtube-nocookie), other URLs open as links
-document.querySelectorAll('.rp-item[data-video]').forEach(li => {
-  const url = li.dataset.video, badge = li.querySelector('.rp-badge'), title = li.querySelector('.rp-title');
-  if (!url || !badge) return;
-  const m = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
-  if (!m) {
-    const a = document.createElement('a');
-    a.className = 'rp-badge rp-play'; a.href = url; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = 'Watch elsewhere ↗';
-    badge.replaceWith(a);
-    return;
-  }
-  const btn = document.createElement('button');
-  btn.type = 'button'; btn.className = 'rp-badge rp-play'; btn.textContent = 'Watch the recording';
-  btn.setAttribute('aria-expanded', 'false');
-  btn.addEventListener('click', () => {
-    const box = document.createElement('div');
-    box.className = 'rp-embed';
-    const f = document.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + m[1] + '?autoplay=1&rel=0';
-    f.title = title ? title.textContent : 'Video';
-    f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.loading = 'lazy';
-    box.appendChild(f);
-    li.appendChild(box);
-    btn.setAttribute('aria-expanded', 'true'); btn.disabled = true;
-  });
-  badge.replaceWith(btn);
-});
 
 // Gallery: every photo opens full size, with previous / next (buttons, arrow keys) and Escape to close
 const lbLinks = [...document.querySelectorAll('[data-lb]')];

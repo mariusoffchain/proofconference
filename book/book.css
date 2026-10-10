@@ -282,7 +282,7 @@ svg.bk-navp-l { display: block; flex: none; }
 
 /* ── Impression : version papier lisible ── */
 @media print {
-  nav, .bk-menu, footer, .bk-dash, .bk-read, .bk-after, .bk-tools-bar, .bk-alldone, .bk-cl-more, .bk-pager, .bk-back, .tw-cursor, .hero-btn { display: none !important; }
+  nav, .bk-menu, footer, .bk-dash, .bk-read, .bk-after, .bk-talk, .bk-replays, .bk-tools-bar, .bk-alldone, .bk-cl-more, .bk-pager, .bk-back, .tw-cursor, .hero-btn { display: none !important; }
   body, .bk-page, .bk-toc-wrap, .prog-header, .bk-cl-box, .bk-table th { background: #fff !important; color: #000 !important; }
   .page-top { padding-top: 0; }
   .bk-page { padding: 0; }
@@ -337,3 +337,13 @@ svg.bk-navp-l { display: block; flex: none; }
 .bk-ticket.light .bk-label { color: var(--black); }
 .bk-ticket.light .bk-code-key, .bk-ticket.light .bk-code-copy { border-color: rgba(8,8,8,0.3); color: var(--black); }
 .bk-ticket.light .bk-code-copy:hover { border-color: var(--black); }
+
+/* ── Talk of the conference inside a chapter, and replays on the cover (markup: book-drafts/site/build_site.py) ── */
+.bk-talk { margin: 56px 0 8px; }
+.bk-talk > .bk-label { margin-bottom: 14px; color: var(--muted); }
+.bk-talk .rp-list { margin: 0; padding: 0; }
+.bk-talk .rp-item { margin: 0; padding: 18px 22px; font-size: inherit; line-height: normal; color: inherit; }
+.bk-talk .rp-has-video { padding: 22px; }
+.bk-talk .rp-alt a { color: var(--white); }
+.bk-talk .rp-play { color: var(--black); }
+.bk-talk .rp-play:hover { color: var(--white); }

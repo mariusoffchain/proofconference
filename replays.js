@@ -43,3 +43,17 @@ document.querySelectorAll('.rp-item[data-video]').forEach(li => {
   };
   li.querySelectorAll('.rp-play, .rp-thumb').forEach(a => a.addEventListener('click', play));
 });
+
+// Recap: the after-party video tile plays in place, at the same spot, only after a click
+document.querySelectorAll('.rc-video-play').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const box = a.parentElement, img = a.querySelector('img');
+  const v = document.createElement('video');
+  v.src = a.href; v.controls = true; v.playsInline = true; v.preload = 'auto';
+  if (img) v.poster = img.src;
+  v.setAttribute('aria-label', a.textContent.trim());
+  a.replaceWith(v);
+  box.classList.add('rc-playing');
+  v.focus();
+  v.play().catch(() => {});
+}));

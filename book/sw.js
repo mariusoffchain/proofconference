@@ -7,15 +7,13 @@
 // - Offline, a request is matched with its query string; only a page address falls back to the same page without it.
 // - On activation it keeps the added files of the former copies, then deletes only the former caches of this book
 //   (proof-book-*), never another cache of the origin.
-const CACHE = 'proof-book-e49e09c7';
+const CACHE = 'proof-book-b10f7efb';
 const CORE = [
   '/book/',
   '/book/ai/',
   '/book/autonomy/',
   '/book/big-tech/',
   '/book/bitcoin-privacy/',
-  '/book/book.css?v=18961c46',
-  '/book/book.js?v=18961c46',
   '/book/browser/',
   '/book/checklist/',
   '/book/email/',
@@ -47,15 +45,17 @@ const CORE = [
   '/book/en/work/',
   '/book/first-wallet/',
   '/book/glossary/',
-  '/book/guide-assets/config.js?v=469ac16bceec',
+  '/book/guide-assets/config.js?v=3d67147f5699',
   '/book/guide-assets/fonts/jetbrainsmono-latin-ext.woff2?v=7db7affbce1f',
   '/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4',
   '/book/guide-assets/fonts/righteous-latin-ext.woff2?v=6373d7c7c233',
   '/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2',
   '/book/guide-assets/guide.css?v=822a1af9fe20',
-  '/book/guide-assets/guide.js?v=93671a5ca6f4',
-  '/book/guide-assets/search-index.js?v=3601a5d4af12',
-  '/book/guide-assets/site-data.js?v=c76ec0562380',
+  '/book/guide-assets/guide.js?v=f361d2b9248c',
+  '/book/guide-assets/search-index-lt.js?v=8c9a6da0fbff',
+  '/book/guide-assets/search-index.js?v=e6afda0bb20e',
+  '/book/guide-assets/site-data-lt.js?v=66fbe9147120',
+  '/book/guide-assets/site-data.js?v=ceca24ecd938',
   '/book/hardware-wallet/',
   '/book/introduction/',
   '/book/keys/',
@@ -70,16 +70,9 @@ const CORE = [
   '/book/savings/',
   '/book/seed/',
   '/book/self-hosting/',
+  '/book/start/',
   '/book/work/',
-  '/bringin-logo.svg',
-  '/favicon.svg',
-  '/fonts/fonts.css',
-  '/fonts/jetbrainsmono-latin-ext.woff2',
-  '/fonts/jetbrainsmono-latin.woff2',
-  '/fonts/righteous-latin-ext.woff2',
-  '/fonts/righteous-latin.woff2',
-  '/replays.js?v=5bb51ee4',
-  '/style.css'
+  '/favicon.svg'
 ];
 const CORE_PATHS = new Set(CORE.map((u) => new URL(u, self.location.origin).pathname));
 const precached = (url) => CORE_PATHS.has(new URL(url).pathname);

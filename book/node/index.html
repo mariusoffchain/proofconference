@@ -1,228 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Kaip paleisti savo mazgą · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Kaip paleisti savo mazgą · A Guide to Autonomy</title>
 <meta name="description" content="Kol neturi savo mazgo, piniginė apie tavo pinigus klausia svetimo serverio. Mazgas yra nuosava Bitcoin taisyklių ir registro kopija, kuri kiekvieną bloką ir…">
 <link rel="canonical" href="https://proofconference.com/book/node/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/node/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/node/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/node/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Kaip paleisti savo mazgą · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Kaip paleisti savo mazgą · A Guide to Autonomy">
 <meta property="og:description" content="Kol neturi savo mazgo, piniginė apie tavo pinigus klausia svetimo serverio. Mazgas yra nuosava Bitcoin taisyklių ir registro kopija, kuri kiekvieną bloką ir…">
 <meta property="og:url" content="https://proofconference.com/book/node/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
 <meta property="og:locale" content="lt_LT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kaip paleisti savo mazgą · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Kaip paleisti savo mazgą · A Guide to Autonomy">
 <meta name="twitter:description" content="Kol neturi savo mazgo, piniginė apie tavo pinigus klausia svetimo serverio. Mazgas yra nuosava Bitcoin taisyklių ir registro kopija, kuri kiekvieną bloką ir…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=3d67147f5699"></script>
+<script defer src="/book/guide-assets/site-data-lt.js?v=66fbe9147120"></script>
+<script defer src="/book/guide-assets/guide.js?v=f361d2b9248c"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Pereiti prie turinio</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Tavo privatumo gidas">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
-    <li><a href="/book/#replays">&lt;įrašai&gt;</a></li>
-    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
-    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">skyrių perskaityta: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Tavo veiksmų sąrašas: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn lt" id="lang-btn" href="/book/en/node/" hreflang="en" lang="en" aria-label="English version">EN</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/#contents">&lt;turinys&gt;</a>
-  <a href="/book/#replays">&lt;įrašai&gt;</a>
-  <a href="/book/checklist/">&lt;sąrašas&gt;</a>
-  <a href="/book/glossary/">&lt;žodynėlis&gt;</a>
-  <a href="/book/en/node/" class="bk-menu-lang">EN · English</a>
-  <a href="/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="node">
-  <header class="bk-head">
-    <p class="bk-label">Darbo įrodymas · 18 skyrius</p>
-    <h1>Kaip paleisti savo mazgą</h1>
-  </header>
-  <article class="bk-article">
-<h2>Trumpai</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/"><span class="brand-title" lang="en">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> leidimas</span></a><div class="header-actions"><a class="hbtn" href="/book/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Turinys</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Paieška</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, konferencijos svetainė</span></a><a class="hbtn hbtn--lang" href="/book/en/node/" hreflang="en" lang="en" aria-label="EN, English version">EN</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/node"><div class="page-layout is-chapter part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">Šiame puslapyje</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">Šiame puslapyje</p><ol class="toc-list"><li><a href="/book/node/#trumpai" data-target="trumpai"><span class="toc-no">01</span><span class="toc-label">Trumpai</span></a></li><li><a href="/book/node/#pinigine-apie-tavo-pinigus-klausia-nepazistamojo" data-target="pinigine-apie-tavo-pinigus-klausia-nepazistamojo"><span class="toc-no">02</span><span class="toc-label">Piniginė apie tavo pinigus klausia nepažįstamojo</span></a></li><li><a href="/book/node/#kompiuteris-kuris-kiekviena-taisykle-tikrina-savarankiskai" data-target="kompiuteris-kuris-kiekviena-taisykle-tikrina-savarankiskai"><span class="toc-no">03</span><span class="toc-label">Kompiuteris, kuris kiekvieną taisyklę tikrina savarankiškai</span></a></li><li><a href="/book/node/#kuo-vis-dar-tenka-pasitiketi-turint-mazga" data-target="kuo-vis-dar-tenka-pasitiketi-turint-mazga"><span class="toc-no">04</span><span class="toc-label">Kuo vis dar tenka pasitikėti turint mazgą</span></a></li><li><a href="/book/node/#kaip-pasirinkti-kelia" data-target="kaip-pasirinkti-kelia"><span class="toc-no">05</span><span class="toc-label">Kaip pasirinkti kelią</span></a></li><li><a href="/book/node/#keli-zodziai-apie-lightning-mazgus" data-target="keli-zodziai-apie-lightning-mazgus"><span class="toc-no">06</span><span class="toc-label">Keli žodžiai apie Lightning mazgus</span></a></li><li><a href="/book/node/#zingsnis-po-zingsnio" data-target="zingsnis-po-zingsnio"><span class="toc-no">07</span><span class="toc-label">Žingsnis po žingsnio</span></a></li><li><a href="/book/node/#klaidos-kuriu-verta-vengti" data-target="klaidos-kuriu-verta-vengti"><span class="toc-no">08</span><span class="toc-label">Klaidos, kurių verta vengti</span></a></li><li><a href="/book/node/#norintiems-daugiau" data-target="norintiems-daugiau"><span class="toc-no">09</span><span class="toc-label">Norintiems daugiau</span></a></li><li><a href="/book/node/#saltiniai" data-target="saltiniai"><span class="toc-no">10</span><span class="toc-label">Šaltiniai</span></a></li><li><a href="/book/node/#tavo-veiksmu-sarasas" data-target="tavo-veiksmu-sarasas"><span class="toc-no">11</span><span class="toc-label">Tavo veiksmų sąrašas</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/work/">3 dalis · Pinigai ir Bitcoin</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">18 skyrius: </span>Kaip paleisti savo mazgą</h1><p class="ch-bignum" aria-hidden="true">18</p><div class="ch-meta"><span>18 skyrius iš 18</span><a href="/book/node/#tavo-veiksmu-sarasas"><span>Atlikta <span data-stat="ch-done" data-ch="node">0</span> iš 5 veiksmų</span></a><span class="ch-readstate" data-read-state="node"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="trumpai"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="trumpai" tabindex="-1">Trumpai</h2>
 <p>Kol neturi savo mazgo, piniginė apie tavo pinigus klausia svetimo serverio. Mazgas yra nuosava Bitcoin taisyklių ir registro kopija, kuri kiekvieną bloką ir kiekvieną transakciją patikrina savarankiškai, todėl nuo svetimo atsakymo nebepriklausai. Jis saugo tavo privatumą ir stiprina tinklą. Mazgui reikia mažo nuolat įjungto kompiuterio, 2 TB SSD disko, tavo savaitgalio ir dar kelių dienų sinchronizavimui, kai kompiuteris dirba be tavęs. Mazgas nėra kasėjas ir nieko neuždirba.</p>
-<h2>Piniginė apie tavo pinigus klausia nepažįstamojo</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="pinigine-apie-tavo-pinigus-klausia-nepazistamojo"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Suprask</span></p><h2 id="pinigine-apie-tavo-pinigus-klausia-nepazistamojo" tabindex="-1">Piniginė apie tavo pinigus klausia nepažįstamojo</h2>
 <p>Kai atveri piniginės programėlę, jai reikia sužinoti likutį. Registro ji neturi, todėl klausia serverio, kas vyko tavo adresuose. Tas serveris priklauso piniginės kūrėjui arba nežinomam savanoriui.</p>
 <p>Iš to išplaukia 2 dalykai. Pirma, serveris gali sužinoti, kurie adresai yra tavo (visi iki vieno), o kartu ir IP adresą. 16 skyriuje aprašytos atskiros piniginės ir nauji adresai vėl sugrupuojami kažkieno veiklos įrašuose. Antra, atsakymu tenka tikėti, nes jei serveris klysta, neveikia ar yra nesąžiningas, piniginė rodo tai, kas jai buvo pasakyta.</p>
 <p>Mažoms sumoms tai protingas kompromisas, ir dauguma žmonių pradeda būtent taip. Vis dėlto tai keista tvarka sistemoje, sukurtoje taip, kad niekuo nereikėtų pasitikėti. Kai turi savo mazgą, klausimas lieka namų tinkle.</p>
-<h2>Kompiuteris, kuris kiekvieną taisyklę tikrina savarankiškai</h2>
+</section><section class="sec sec--explain" data-no="03" aria-labelledby="kompiuteris-kuris-kiekviena-taisykle-tikrina-savarankiskai"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Suprask</span></p><h2 id="kompiuteris-kuris-kiekviena-taisykle-tikrina-savarankiskai" tabindex="-1">Kompiuteris, kuris kiekvieną taisyklę tikrina savarankiškai</h2>
 <p><strong>Mazgas</strong> yra kompiuteris, kuriame veikia Bitcoin programinė įranga, dažniausiai „Bitcoin Core“ (yra ir kitų realizacijų, pavyzdžiui, „Bitcoin Knots“). Jis atsisiunčia visą registrą nuo pirmojo bloko, sukurto 2009 m., ir kiekvieną transakciją patikrina pagal taisykles, o tai reiškia, kad jokia moneta neišleista dukart, jokia moneta nesukurta iš nieko ir monetų niekada nėra daugiau kaip 21 mln. Tą patį jis kartoja su kiekvienu nauju bloku, maždaug kas 10 minučių, ir būtent tai reiškia posakis „Nepasitikėk, tikrink“ (angl. „don't trust, verify“).</p>
 <p>Mazgas priima tik tai, kas atitinka taisykles, pagal kurias jis veikia. Kai taip daro tūkstančiai žmonių, kitokių taisyklių norinti įmonė, kasėjas ar vyriausybė pirmiausia turėtų juos įtikinti įdiegti kitą programinę įrangą.</p>
-<p>Mazgas nėra kasėjas. Jis naudoja mažai elektros, nieko neuždirba ir nelaiko tavo monetų, nes jų raktai lieka piniginėje arba pasirašymo įrenginyje.</p>
-<p>Jam reikia mažo nuolat įjungto kompiuterio, įprasto namų interneto ryšio ir 2 TB SSD disko. 2026 m. rugsėjo mėn. duomenimis, registras užima <a href="https://www.blockchain.com/explorer/charts/blocks-size" target="_blank" rel="noopener noreferrer">apie 770 GB</a> ir <a href="https://bitcoincore.org/en/download/" target="_blank" rel="noopener noreferrer">kas mėnesį padidėja 5-10 GB</a>, o Electrum serverio indeksui reikia dar nuo kelių dešimčių iki daugiau kaip 100 GB, tad 1 TB diskas būtų beveik pilnas.</p>
-<h2>Kuo vis dar tenka pasitikėti turint mazgą</h2>
+<p>Mazgas nėra kasėjas. Jis naudoja mažai elektros, nieko neuždirba ir privačiųjų raktų laikyti neprivalo. Čia aprašytoje vien tikrinimui skirtoje sąrankoje raktai lieka atskiroje piniginėje arba pasirašymo įrenginyje. „Bitcoin Core“ gali veikti ir kaip piniginė, o jei šia funkcija naudojiesi, svarbios ir jos atsarginės kopijos.</p>
+<p>Jam reikia mažo nuolat įjungto kompiuterio, įprasto namų interneto ryšio ir 2 TB SSD disko. 2026 m. rugsėjo mėn. duomenimis, registras užima <a href="https://www.blockchain.com/explorer/charts/blocks-size" class="ext" rel="noopener noreferrer">apie 770 GB</a> ir <a href="https://bitcoincore.org/en/download/" class="ext" rel="noopener noreferrer">kas mėnesį padidėja 5-10 GB</a>, o Electrum serverio indeksui reikia dar nuo kelių dešimčių iki daugiau kaip 100 GB, tad 1 TB diskas būtų beveik pilnas.</p>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.blockchain.com/explorer/charts/blocks-size">blockchain.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://bitcoincore.org/en/download/">bitcoincore.org</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="kuo-vis-dar-tenka-pasitiketi-turint-mazga"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Suprask</span></p><h2 id="kuo-vis-dar-tenka-pasitiketi-turint-mazga" tabindex="-1">Kuo vis dar tenka pasitikėti turint mazgą</h2>
 <p>Visą knygą lydintis klausimas, kas yra patikima trečioji šalis ir ar gali ją patikrinti, čia baigiasi. Kai kalbama apie tavo pinigų būklę, turint mazgą atsakymas yra „niekas“. Mazgas netiki nei piniginės kūrėjo serveriu, nei mazgais, prie kurių jungiasi, nes kiekvieną jų atsiųstą bloką patikrina pagal taisykles ir atmeta, jei jis negalioja, kad ir kas jį būtų atsiuntęs. Įgyji autentiškumą (matomas likutis yra tikras) ir kontroliuoji, kokias taisykles priimi.</p>
-<p>Lieka 2 dalykai. Pirmasis yra programinė įranga, nes mazgas vykdo įdiegtos programos taisykles, o suklastota kopija vykdytų kažkieno kito taisykles. „Bitcoin Core“ projektas į tai atsako atkartojamu programos surinkimu (angl. reproducible builds), kai keli kūrėjai kiekvieną versiją sukompiliuoja nepriklausomai, gauna identiškus failus ir <a href="https://github.com/bitcoin-core/guix.sigs" target="_blank" rel="noopener noreferrer">paskelbia savo parašus</a>. Patikrinus kelis iš jų nebereikia pasikliauti vieno žmogaus sąžiningumu. Mazgo platforma į šį sąrašą įtraukia ir savo kūrėją, kuriuo tenka pasitikėti dėl sistemos, programėlių parduotuvės ir naujinių. Antrasis yra tavo kompiuterio aparatinė įranga ir operacinė sistema, kurių iki galo audituoti negali.</p>
+<p>Lieka 2 dalykai. Pirmasis yra programinė įranga, nes mazgas vykdo įdiegtos programos taisykles, o suklastota kopija vykdytų kažkieno kito taisykles. „Bitcoin Core“ projektas į tai atsako atkartojamu programos surinkimu (angl. reproducible builds), kai keli kūrėjai kiekvieną versiją sukompiliuoja nepriklausomai, gauna identiškus failus ir <a href="https://github.com/bitcoin-core/guix.sigs" class="ext" rel="noopener noreferrer">paskelbia savo parašus</a>. Patikrinus kelis iš jų nebereikia pasikliauti vieno žmogaus sąžiningumu. Mazgo platforma į šį sąrašą įtraukia ir savo kūrėją, kuriuo tenka pasitikėti dėl sistemos, programėlių parduotuvės ir naujinių. Antrasis yra tavo kompiuterio aparatinė įranga ir operacinė sistema, kurių iki galo audituoti negali.</p>
 <p>Visa tai kainuoja diską, savaitgalį ir šiek tiek priežiūros, o mažoms sumoms viešas serveris tebėra protingas pasirinkimas.</p>
-<h2>Kaip pasirinkti kelią</h2>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://github.com/bitcoin-core/guix.sigs">github.com</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="kaip-pasirinkti-kelia"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Palygink</span></p><h2 id="kaip-pasirinkti-kelia" tabindex="-1">Kaip pasirinkti kelią</h2>
 <p>Kad ir kurį kelią pasirinktum, veiks ta pati Bitcoin programinė įranga, o skiriasi keliai tuo, kiek darbo padaroma už tave.</p>
-<p>Kasdieniame kompiuteryje lengvesnis variantas yra <strong>apkarpytasis mazgas</strong> (angl. pruned node). Jis patikrina viską, bet saugo tik naujausius blokus, todėl telpa maždaug į 10 GB. Tačiau daugumai piniginėms skirtų serverio programų reikia viso registro, todėl atskirame, tik tam skirtame mazge jis laikomas visas.</p>
-<div class="bk-table"><table>
+<p>Kasdieniame kompiuteryje lengvesnis variantas yra <strong>apkarpytasis mazgas</strong> (angl. pruned node). Jis patikrina viską, bet saugo tik naujausius blokus, todėl nustačius mažą apkarpymo ribą jam gali pakakti maždaug 10 GB ir dar vietos augimui bei kitiems failams. Visą istoriją jis vis tiek atsisiunčia ir patikrina, todėl apkarpymas nesumažina duomenų kiekio, kurį reikia atsisiųsti pradžioje. Tačiau daugumai piniginėms skirtų serverio programų reikia viso registro, todėl atskirame, tik tam skirtame mazge jis laikomas visas.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>6 variantai · 5 stulpeliai</span><span class="compare-hint" aria-hidden="true">Slink į šoną →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Palyginimo lentelė: Kaip pasirinkti kelią"><table>
 <thead>
 <tr>
-<th>Kelias</th>
-<th>Kas tai</th>
-<th>Privalumai</th>
-<th>Kompromisai</th>
-<th>Kuo vis dar pasitiki</th>
+<th scope="col">Kelias</th>
+<th scope="col">Kas tai</th>
+<th scope="col">Privalumai</th>
+<th scope="col">Kompromisai</th>
+<th scope="col">Kuo vis dar pasitiki</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://bitcoincore.org/" target="_blank" rel="noopener noreferrer">Bitcoin Core</a> kasdieniame kompiuteryje</strong></td>
-<td>Etaloninė atvirojo kodo programinė įranga iš svetainės <a href="https://bitcoincore.org" target="_blank" rel="noopener noreferrer">bitcoincore.org</a></td>
+<tr id="row-bitcoin-core-kasdieniame-kompiuteryje">
+<th scope="row"><strong><a href="https://bitcoincore.org/" class="tool-link ext" rel="noopener noreferrer">Bitcoin Core</a> kasdieniame kompiuteryje</strong></th>
+<td>Etaloninė atvirojo kodo programinė įranga iš svetainės <a href="https://bitcoincore.org" class="tool-link ext" rel="noopener noreferrer">bitcoincore.org</a></td>
 <td>Nemokama, paprasčiausia pradžia, turi savo piniginę, mažame diske gali veikti apkarpytuoju režimu</td>
 <td>Veikia ne visą laiką. Be apkarpytojo režimo užima didžiąją 1 TB disko dalį</td>
 <td>„Bitcoin Core“ kūrėjais, nebent patikrini kelių surinkėjų parašus, ir savo kasdieniu kompiuteriu</td>
 </tr>
-<tr>
-<td><strong><a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a></strong></td>
+<tr id="row-umbrel">
+<th scope="row"><strong><a href="https://umbrel.com/" class="tool-link ext" rel="noopener noreferrer">Umbrel</a></strong></th>
 <td>Namų serverio sistema su programėlių parduotuve. Veikia tavo kompiuteryje arba bendrovės parduodamame įrenginyje</td>
 <td>Dailiausia sąsaja, programėlės įdiegiamos vienu spustelėjimu</td>
 <td>Kuria viena bendrovė. Asmeniniam naudojimui nemokama, tačiau licencija nėra atvirojo kodo (komerciškai pakartotinai naudoti negalima)</td>
 <td>Dar ir bendrove „Umbrel“ dėl sistemos, jos programėlių parduotuvės ir naujinių. Kodą galima perskaityti</td>
 </tr>
-<tr>
-<td><strong><a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" target="_blank" rel="noopener noreferrer">StartOS</a>)</strong></td>
+<tr id="row-start9-startos">
+<th scope="row"><strong><a href="https://start9.com/" class="tool-link ext" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" class="tool-link ext" rel="noopener noreferrer">StartOS</a>)</strong></th>
 <td>Atvirojo kodo serverio sistema. Veikia tavo kompiuteryje arba bendrovės parduodamame serveryje</td>
 <td>Daug dėmesio skiriama privatumui ir paslaugų laikymui nuosavame serveryje, gera dokumentacija</td>
 <td>Kuria viena bendrovė. Iš pradžių reikia išmokti šiek tiek daugiau</td>
 <td>Dar ir bendrove „Start9“ dėl sistemos, jos programėlių prekyvietės ir naujinių. Prie sistemos atvaizdo (angl. image) pridedama kontrolinė suma ir parašas</td>
 </tr>
-<tr>
-<td><strong><a href="https://github.com/raspiblitz/raspiblitz" target="_blank" rel="noopener noreferrer">RaspiBlitz</a></strong></td>
-<td>Atvirojo kodo bendruomenės projektas, skirtas kompiuteriui „<a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer">Raspberry Pi</a>“</td>
+<tr id="row-raspiblitz">
+<th scope="row"><strong><a href="https://github.com/raspiblitz/raspiblitz" class="tool-link ext" rel="noopener noreferrer">RaspiBlitz</a></strong></th>
+<td>Atvirojo kodo bendruomenės projektas, skirtas kompiuteriui „<a href="https://www.raspberrypi.com/" class="tool-link ext" rel="noopener noreferrer">Raspberry Pi</a>“</td>
 <td>Nėra jokios įmonės, stiprūs Lightning įrankiai</td>
 <td>Techniškesnis, dalį darbų reikia atlikti komandų eilutėje</td>
 <td>Projektą prižiūrinčiais savanoriais. Surinkimo scenarijai vieši, o atvaizdas pasirašytas pagrindinio kūrėjo PGP parašu</td>
 </tr>
-<tr>
-<td><strong><a href="https://mynodebtc.com/" target="_blank" rel="noopener noreferrer">MyNode</a></strong></td>
+<tr id="row-mynode">
+<th scope="row"><strong><a href="https://mynodebtc.com/" class="tool-link ext" rel="noopener noreferrer">MyNode</a></strong></th>
 <td>Mazgo sistema mažiems kompiuteriams, turinti nemokamą bendruomenės versiją ir mokamą išplėstinę versiją</td>
 <td>Paprasta žiniatinklio sąsaja, daug Bitcoin programėlių</td>
 <td>Kuria maža bendrovė, dalis funkcijų prieinama tik mokamoje versijoje</td>
 <td>Dar ir bendrove „MyNode“ dėl sistemos, jos pateikiamų programėlių ir naujinių</td>
 </tr>
-<tr>
-<td><strong>Savarankiškas kelias</strong></td>
-<td>„Linux“ sistema „<a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">Debian</a>“ arba „<a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu</a>“, tada „<a href="https://bitcoincore.org/" target="_blank" rel="noopener noreferrer">Bitcoin Core</a>“, tada Electrum serveris („<a href="https://github.com/romanz/electrs" target="_blank" rel="noopener noreferrer">electrs</a>“ arba „<a href="https://github.com/cculianu/Fulcrum" target="_blank" rel="noopener noreferrer">Fulcrum</a>“), viską diegiant pagal vadovą</td>
+<tr id="row-savarankiskas-kelias">
+<th scope="row"><strong>Savarankiškas kelias</strong></th>
+<td>„Linux“ sistema „<a href="https://www.debian.org/" class="tool-link ext" rel="noopener noreferrer">Debian</a>“ arba „<a href="https://ubuntu.com/" class="tool-link ext" rel="noopener noreferrer">Ubuntu</a>“, tada „<a href="https://bitcoincore.org/" class="tool-link ext" rel="noopener noreferrer">Bitcoin Core</a>“, tada Electrum serveris („<a href="https://github.com/romanz/electrs" class="tool-link ext" rel="noopener noreferrer">electrs</a>“ arba „<a href="https://github.com/cculianu/Fulcrum" class="tool-link ext" rel="noopener noreferrer">Fulcrum</a>“), viską diegiant pagal vadovą</td>
 <td>Supranti kiekvieną dalį. Niekas nepaslėpta, viskas atvirojo kodo</td>
 <td>Lėta, dirbama tik komandų eilutėje. Tiems, kam patinka mokytis</td>
 <td>Tik programine įranga, kurios parašus tikrini tu, pasirinkto vadovo autoriais ir savo aparatine įranga</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>Sistemos „Umbrel“ ir „Start9“ kartu yra ir bendrosios paskirties namų serveriai, o tai siejasi su 10 skyriumi, nes toje pačioje dėžutėje gali laikyti ir savo failus bei slaptažodžius.</p>
 <p>Daugumai žmonių protingas derinys būtų toks: iš pradžių išbandyti „Bitcoin Core“ savo kompiuteryje apkarpytuoju režimu ir pamatyti, kas yra mazgas, o paskui pereiti prie atskiro mažo kompiuterio su ta platforma, kurios kompromisai tau priimtini.</p>
-<h2>Keli žodžiai apie Lightning mazgus</h2>
+</section><section class="sec sec--explain" data-no="06" aria-labelledby="keli-zodziai-apie-lightning-mazgus"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Suprask</span></p><h2 id="keli-zodziai-apie-lightning-mazgus" tabindex="-1">Keli žodžiai apie Lightning mazgus</h2>
 <p>Tos pačios platformos leidžia 1 spustelėjimu įdiegti Lightning mazgą („LND“ arba „Core Lightning“). Laikyk tai vėlesniu projektu. Lightning mazgas kanaluose laiko tikras lėšas, ir tai vyksta kompiuteryje, kuris visada prijungtas prie interneto. Kanalams reikia atskirų atsarginių kopijų, nuolatinio dėmesio ir supratimo, kas nutiks sugedus diskui, o neteisingai atkūrus seną atsarginę kopiją galima net prarasti kanale esančias lėšas. Vien Bitcoin mazgas gali sugesti be jokių nuostolių, nes tereikia sinchronizuoti iš naujo, o apie Lightning mazgą to pasakyti negalima. Mokykis su mažomis sumomis ir tik tada, kai visa kita šiame skyriuje taps įprasta.</p>
-<h2>Žingsnis po žingsnio</h2>
+</section><section class="sec sec--steps" data-no="07" aria-labelledby="zingsnis-po-zingsnio"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Instrukcija</span></p><h2 id="zingsnis-po-zingsnio" tabindex="-1">Žingsnis po žingsnio</h2>
 <p>Pavyzdžiu pasirinkta platforma su programėlių parduotuve, tokia kaip „Umbrel“ arba „StartOS“. Platformose „RaspiBlitz“ ir „MyNode“ eiga ta pati. Tavo darbas telpa į savaitgalį, o paskui kompiuteris dar kelias dienas turi padirbėti vienas.</p>
-<ol>
-<li><strong>Pasirink aparatinę įrangą.</strong> Naudotas minikompiuteris arba naujesnis „Raspberry Pi“ su 8 GB atminties, žinomo gamintojo 2 TB SSD diskas ir tinklo kabelis iki maršrutizatoriaus.</li>
-<li><strong>Įdiek platformą</strong> pagal oficialų jos vadovą iš atvaizdo, atsisiųsto iš oficialios svetainės, ir nustatyk stiprų unikalų slaptažodį (žr. 2 skyrių). Jei projektas skelbia to atvaizdo kontrolinę sumą arba parašą, kaip daro <a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" target="_blank" rel="noopener noreferrer">„Start9“</a> ir <a href="https://docs.raspiblitz.org/docs/faq" target="_blank" rel="noopener noreferrer">„RaspiBlitz“</a>, patikrink juos dar prieš įrašant atvaizdą į diską. Būtent šiuo žingsniu pasitikėjimą atsisiųstu failu pakeiti patikra.</li>
-<li><strong>Įdiek Bitcoin programėlę ir leisk jai sinchronizuotis.</strong> Tai trunka kelias dienas, o lėtoje aparatinėje įrangoje, pavyzdžiui, kompiuteryje „Raspberry Pi“, iki savaitės. Šio proceso nepertrauk.</li>
-<li><strong>Įdiek Electrum serverio programėlę</strong> („electrs“ arba „Fulcrum“). Ji sukuria indeksą, kad piniginės galėtų klausti tavo mazgo, ir tam prireikia dar kelių valandų, o kartais visos paros.</li>
-<li><strong>Prijunk piniginę.</strong> Programoje „Sparrow“, „BlueWallet“ arba „Nunchuk“ atverk serverio arba tinklo nustatymus ir vietoj viešojo serverio įrašyk savo Electrum serverio adresą. Nuo šio žingsnio piniginė rodo tai, ką patikrino tavo mazgas, o ne tai, ką jai pasakė trečioji šalis. Programėlė „Zeus“ veikia kitaip, nes jungiasi prie Lightning mazgo, o tai jau vėlesnis etapas.</li>
-<li><strong>Kai esi ne namie, prie jo junkis</strong> per Tor tinklą arba privatų VPN (žr. 10 skyrių). Platformos tam suteikia Tor adresą.</li>
-<li><strong>Nuolat jį atnaujink,</strong> o atkūrimo frazių atsargines kopijas laikyk atskirai nuo mazgo. Mazgui atkūrimo frazės nereikia, ir jis niekada neturėtų jos matyti.</li>
+<ol class="steps">
+<li id="step-1"><strong>Pasirink aparatinę įrangą.</strong> Naudotas minikompiuteris arba naujesnis „Raspberry Pi“ su 8 GB atminties, žinomo gamintojo 2 TB SSD diskas ir tinklo kabelis iki maršrutizatoriaus.</li>
+<li id="step-2"><strong>Įdiek platformą</strong> pagal oficialų jos vadovą iš atvaizdo, atsisiųsto iš oficialios svetainės, ir nustatyk stiprų unikalų slaptažodį (žr. 2 skyrių). Jei projektas skelbia to atvaizdo kontrolinę sumą arba parašą, kaip daro <a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" class="ext" rel="noopener noreferrer">„Start9“</a> ir <a href="https://docs.raspiblitz.org/docs/faq" class="ext" rel="noopener noreferrer">„RaspiBlitz“</a>, patikrink juos dar prieš įrašant atvaizdą į diską. Būtent šiuo žingsniu pasitikėjimą atsisiųstu failu pakeiti patikra.</li>
+<li id="step-3"><strong>Įdiek Bitcoin programėlę ir leisk jai sinchronizuotis.</strong> Tai trunka kelias dienas, o lėtoje aparatinėje įrangoje, pavyzdžiui, kompiuteryje „Raspberry Pi“, iki savaitės. Kai įmanoma, palik mazgą veikti. Jei reikia sustabdyti, tvarkingai išjunk mazgą per sąsają ir leisk sinchronizavimui vėliau tęstis. Maitinimo neatjunk.</li>
+<li id="step-4"><strong>Įdiek Electrum serverio programėlę</strong> („electrs“ arba „Fulcrum“). Ji sukuria indeksą, kad piniginės galėtų klausti tavo mazgo, ir tam prireikia dar kelių valandų, o kartais visos paros.</li>
+<li id="step-5"><strong>Prijunk piniginę.</strong> Programoje „Sparrow“, „BlueWallet“ arba „Nunchuk“ atverk serverio arba tinklo nustatymus ir vietoj viešojo serverio įrašyk savo Electrum serverio adresą. Nuo šio žingsnio piniginė rodo tai, ką patikrino tavo mazgas, o ne tai, ką jai pasakė trečioji šalis. Programėlė „Zeus“ veikia kitaip, nes jungiasi prie Lightning mazgo, o tai jau vėlesnis etapas.</li>
+<li id="step-6"><strong>Kai esi ne namie, prie jo junkis</strong> per Tor tinklą arba privatų VPN (žr. 10 skyrių). Platformos tam suteikia Tor adresą.</li>
+<li id="step-7"><strong>Nuolat jį atnaujink,</strong> o atkūrimo frazių atsargines kopijas laikyk atskirai nuo mazgo. Vien tikrinimui skirtam mazgui atkūrimo frazės nereikia, ir jis niekada neturėtų jos matyti. Jei įjungi „Bitcoin Core“ piniginę arba įdiegi Lightning, tas pinigines apsaugok ir jų atsargines kopijas pasidaryk atskirai.</li>
 </ol>
-<h2>Klaidos, kurių verta vengti</h2>
+</section><section class="sec sec--pitfalls" data-no="08" aria-labelledby="klaidos-kuriu-verta-vengti"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Atsargiai</span></p><h2 id="klaidos-kuriu-verta-vengti" tabindex="-1">Klaidos, kurių verta vengti</h2>
 <ul>
-<li><strong>Naudoti pigią SD kortelę ar USB atmintuką arba per mažą diską.</strong> Mazgas į diską rašo nuolat, o SD kortelės ir USB atmintukai paprastai sugenda per kelis mėnesius ir gali sugadinti duomenis. Naudok tikrą 2 TB SSD diską, nes, 2026 m. rugsėjo mėn. duomenimis, 1 TB beveik nepalieka atsargos, o <a href="https://raspibolt.org/" target="_blank" rel="noopener noreferrer">„RaspiBolt“ vadove dabar irgi prašoma 2 TB</a>.</li>
+<li><strong>Naudoti pigią SD kortelę ar USB atmintuką arba per mažą diską.</strong> Mazgas į diską rašo nuolat, o SD kortelės ir USB atmintukai paprastai sugenda per kelis mėnesius ir gali sugadinti duomenis. Naudok tikrą 2 TB SSD diską, nes, 2026 m. rugsėjo mėn. duomenimis, 1 TB beveik nepalieka atsargos, o <a href="https://raspibolt.org/" class="ext" rel="noopener noreferrer">„RaspiBolt“ vadove dabar irgi prašoma 2 TB</a>.</li>
 <li><strong>Neapsaugoti maitinimo.</strong> Staiga dingus elektrai gali būti sugadinta duomenų bazė, ir tai kainuotų kelias sinchronizavimo dienas. Visada išjunk mazgą per sąsają ir pagalvok apie nedidelį nenutrūkstamo maitinimo šaltinį (UPS).</li>
-<li><strong>Manyti, kad mazgas laiko tavo monetas.</strong> Nelaiko, nebent naudoji Lightning. Jei mazgas nustoja veikti, bitkoinai lieka nepaliesti, nes svarbiausia yra atkūrimo frazė.</li>
+<li><strong>Manyti, kad mazgas laiko tavo monetas.</strong> Vien tikrinimui skirtame mazge nėra raktų, kuriais galima išleisti lėšas. Pasirenkama „Bitcoin Core“ piniginė ir Lightning programėlė raktus laiko, todėl joms reikia atskirų atsarginių kopijų. Jei raktai laikomi atskirai, sugedusį tikrinimo mazgą galima sukurti iš naujo neprarandant lėšų.</li>
 <li><strong>Atverti mazgą internetui.</strong> Neatidarinėk maršrutizatoriaus prievadų, kad pasiektum valdymo skydelį. Naudok Tor tinklą arba VPN.</li>
 <li><strong>Pasiduoti per pirmąjį sinchronizavimą.</strong> Kelias dienas gali atrodyti, kad jis užstrigo, nors iš tikrųjų tikrina daugiau kaip 15 metų transakcijas, o tai padaryti reikia tik kartą.</li>
-<li><strong>Atsisiųsti programinę įrangą ne iš ten, kur reikia, arba jos nepatikrinti.</strong> Programą „Bitcoin Core“ siųskis tik iš <a href="https://bitcoincore.org" target="_blank" rel="noopener noreferrer">bitcoincore.org</a>, o kiekvieną platformą iš oficialios jos svetainės. <a href="https://bitcoincore.org/en/download/" target="_blank" rel="noopener noreferrer">„Bitcoin Core“ atsisiuntimo puslapyje</a> paaiškinta, kaip sutikrinti failą su paskelbtu kontrolinių sumų sąrašu ir kaip patikrinti, ar tas sąrašas pasirašytas kelių kūrėjų PGP parašais. Platformoje pasikliauji tuo, kad jos kūrėjas tai padaro su programėlėmis, kurias ji įdiegia, o savo kompiuteryje ir einant savarankišku keliu tai tavo darbas.</li>
+<li><strong>Atsisiųsti programinę įrangą ne iš ten, kur reikia, arba jos nepatikrinti.</strong> Programą „Bitcoin Core“ siųskis tik iš <a href="https://bitcoincore.org" class="tool-link ext" rel="noopener noreferrer">bitcoincore.org</a>, o kiekvieną platformą iš oficialios jos svetainės. <a href="https://bitcoincore.org/en/download/" class="ext" rel="noopener noreferrer">„Bitcoin Core“ atsisiuntimo puslapyje</a> paaiškinta, kaip sutikrinti failą su paskelbtu kontrolinių sumų sąrašu ir kaip patikrinti, ar tas sąrašas pasirašytas kelių kūrėjų PGP parašais. Platformoje pasikliauji tuo, kad jos kūrėjas tai padaro su programėlėmis, kurias ji įdiegia, o savo kompiuteryje ir einant savarankišku keliu tai tavo darbas.</li>
 </ul>
-<h2>Norintiems daugiau</h2>
-<ul>
-<li><strong>PROOF konferencijoje:</strong> „Kodėl centralizuoti pinigai neveikia: kaip Bitcoin tapo alternatyva“, pranešimą skaito Piktas. Mazgas yra būdas tą alternatyvą patikrinti savarankiškai. Taip pat žr. pranešėjo Alexis Roussel pranešimą apie decentralizuotas atvirojo kodo technologijas.</li>
-<li><strong>Pagrindai:</strong> „Bitcoin Core“ atsisiuntimo puslapis (<a href="https://bitcoincore.org" target="_blank" rel="noopener noreferrer">bitcoincore.org</a>), kuriame nurodyti dabartiniai reikalavimai, aprašytas apkarpytasis režimas ir atsisiųsto failo tikrinimo tvarka.</li>
-<li><strong>Savarankiškas kelias:</strong> vadovas „RaspiBolt“ (<a href="https://raspibolt.org" target="_blank" rel="noopener noreferrer">raspibolt.org</a>, 4 versija, atnaujinta 2026 m. rugpjūtį) ir „MiniBolt“, panašus vadovas įprastiems kompiuteriams (<a href="https://minibolt.minibolt.info" target="_blank" rel="noopener noreferrer">minibolt.minibolt.info</a>). 2026 m. rugsėjo mėn. duomenimis, abu vadovai prižiūrimi.</li>
-<li><strong>Kaip prijungti piniginę prie savo mazgo:</strong> „Sparrow Wallet“ dokumentacija (<a href="https://sparrowwallet.com/docs" target="_blank" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
+</section><section class="sec sec--further" data-no="09" aria-labelledby="norintiems-daugiau"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Norintiems daugiau</span></p><h2 id="norintiems-daugiau" tabindex="-1">Norintiems daugiau</h2>
+<ul class="refs">
+<li><strong>Pagrindai:</strong> „Bitcoin Core“ atsisiuntimo puslapis (<a href="https://bitcoincore.org" class="tool-link ext" rel="noopener noreferrer">bitcoincore.org</a>), kuriame nurodyti dabartiniai reikalavimai, aprašytas apkarpytasis režimas ir atsisiųsto failo tikrinimo tvarka.</li>
+<li><strong>Savarankiškas kelias:</strong> vadovas „RaspiBolt“ (<a href="https://raspibolt.org" class="tool-link ext" rel="noopener noreferrer">raspibolt.org</a>, 4 versija, atnaujinta 2026 m. rugpjūtį) ir „MiniBolt“, panašus vadovas įprastiems kompiuteriams (<a href="https://minibolt.minibolt.info" class="tool-link ext" rel="noopener noreferrer">minibolt.minibolt.info</a>). 2026 m. rugsėjo mėn. duomenimis, abu vadovai prižiūrimi.</li>
+<li><strong>Kaip prijungti piniginę prie savo mazgo:</strong> „Sparrow Wallet“ dokumentacija (<a href="https://sparrowwallet.com/docs" class="tool-link ext" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
 <li><strong>Toliau:</strong> tavo veiksmų sąrašas.</li>
 </ul>
-<h2>Šaltiniai</h2>
-<ul>
-<li><a href="https://www.blockchain.com/explorer/charts/blocks-size" target="_blank" rel="noopener noreferrer">Blockchain size chart</a>, „Blockchain.com“, žiūrėta 2026 m. rugsėjo 20 d. (apie 770 GB).</li>
-<li><a href="https://bitcoincore.org/en/download/" target="_blank" rel="noopener noreferrer">Download Bitcoin Core, with requirements and verification of the download</a>, „Bitcoin Core“ projektas, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://github.com/bitcoin-core/guix.sigs" target="_blank" rel="noopener noreferrer">Signatures of the Bitcoin Core builders (guix.sigs)</a>, „Bitcoin Core“ projektas platformoje „GitHub“, atnaujinama su kiekviena versija.</li>
-<li><a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" target="_blank" rel="noopener noreferrer">Installing StartOS, with verification of the download</a>, „Start9“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://docs.raspiblitz.org/docs/faq" target="_blank" rel="noopener noreferrer">RaspiBlitz FAQ, how to verify the SD card image</a>, „RaspiBlitz“ projektas, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://raspibolt.org/" target="_blank" rel="noopener noreferrer">RaspiBolt, version 4</a>, bendruomenės vadovas „RaspiBolt“, atnaujinta 2026 m. rugpjūtį.</li>
-<li><a href="https://minibolt.minibolt.info/" target="_blank" rel="noopener noreferrer">MiniBolt</a>, bendruomenės vadovas „MiniBolt“, žiūrėta 2026 m. rugsėjį.</li>
+</section><section class="sec sec--sources" data-no="10" aria-labelledby="saltiniai"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Šaltiniai</span></p><h2 id="saltiniai" tabindex="-1">Šaltiniai</h2>
+<ul class="refs">
+<li><a href="https://bitcoincore.org/en/doc/30.0.0/rpc/control/stop/" class="ext" rel="noopener noreferrer">Graceful shutdown, stop RPC</a>, „Bitcoin Core“ dokumentacija, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://www.blockchain.com/explorer/charts/blocks-size" class="ext" rel="noopener noreferrer">Blockchain size chart</a>, „Blockchain.com“, žiūrėta 2026 m. rugsėjo 20 d. (apie 770 GB).</li>
+<li><a href="https://bitcoincore.org/en/download/" class="ext" rel="noopener noreferrer">Download Bitcoin Core, with requirements and verification of the download</a>, „Bitcoin Core“ projektas, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://github.com/bitcoin-core/guix.sigs" class="ext" rel="noopener noreferrer">Signatures of the Bitcoin Core builders (guix.sigs)</a>, „Bitcoin Core“ projektas platformoje „GitHub“, atnaujinama su kiekviena versija.</li>
+<li><a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" class="ext" rel="noopener noreferrer">Installing StartOS, with verification of the download</a>, „Start9“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://docs.raspiblitz.org/docs/faq" class="ext" rel="noopener noreferrer">RaspiBlitz FAQ, how to verify the SD card image</a>, „RaspiBlitz“ projektas, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://raspibolt.org/" class="ext" rel="noopener noreferrer">RaspiBolt, version 4</a>, bendruomenės vadovas „RaspiBolt“, atnaujinta 2026 m. rugpjūtį.</li>
+<li><a href="https://minibolt.minibolt.info/" class="ext" rel="noopener noreferrer">MiniBolt</a>, bendruomenės vadovas „MiniBolt“, žiūrėta 2026 m. rugsėjį.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Tavo veiksmų sąrašas</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="node-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="node-1" aria-label="Atverk piniginės tinklo nustatymus ir pažiūrėk, kuriuo serveriu ji naudojasi šiandien"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-1">Atverk piniginės tinklo nustatymus ir pažiūrėk, kuriuo serveriu ji naudojasi šiandien</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="node-2" aria-label="Patikrink atsisiųstą „Bitcoin Core“ failą, įdiek programą apkarpytuoju režimu, kad ji neužpildytų disko, ir stebėk, kaip ji sinchronizuojasi"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-2">Patikrink atsisiųstą „Bitcoin Core“ failą, įdiek programą apkarpytuoju režimu, kad ji neužpildytų disko, ir stebėk, kaip ji sinchronizuojasi</label>
-        <span class="bk-effort">1 val.</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="node-3" aria-label="Pasirink platformą ir aparatinę įrangą atskiram mazgui su 2 TB SSD disku"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-3">Pasirink platformą ir aparatinę įrangą atskiram mazgui su 2 TB SSD disku</label>
-        <span class="bk-effort">1 val.</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-4" data-effort="3">
-        <label class="bk-check"><input type="checkbox" id="node-4" aria-label="Surink mazgą, paleisk sinchronizavimą (kelios dienos be priežiūros) ir pridėk Electrum serverį"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-4">Surink mazgą, paleisk sinchronizavimą (kelios dienos be priežiūros) ir pridėk Electrum serverį</label>
-        <span class="bk-effort">Savaitgalis</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="node-5" aria-label="Nukreipk piniginę į savo mazgą ir pašalink viešąjį serverį"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-5">Nukreipk piniginę į savo mazgą ir pašalink viešąjį serverį</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/hardware-wallet/"><span>Ankstesnis</span>Aparatinės piniginės</a>
-<span></span>
-</div>
-  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
-  <span><a href="mailto:contact@proofconference.com">kontaktai</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="11" aria-labelledby="tavo-veiksmu-sarasas"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Veik</span></p><h2 id="tavo-veiksmu-sarasas" tabindex="-1">Tavo veiksmų sąrašas</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count">Atlikta <strong data-stat="ch-done" data-ch="node">0</strong> iš 5 veiksmų</p><span class="bar" data-bar="ch" data-ch="node" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-node-check-server"><span class="legacy-anchor" id="node-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-check-server" disabled="disabled"><span class="action-text">Atverk piniginės tinklo nustatymus ir pažiūrėk, kuriuo serveriu ji naudojasi šiandien</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-node-bitcoin-core-pruned"><span class="legacy-anchor" id="node-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-bitcoin-core-pruned" disabled="disabled"><span class="action-text">Patikrink atsisiųstą „Bitcoin Core“ failą, įdiek programą apkarpytuoju režimu, kad ji neužpildytų disko, ir stebėk, kaip ji sinchronizuojasi</span><span class="effort"><span class="sr-only">, trukmė: </span>1 val.</span></label></li><li class="action" id="action-node-choose-platform"><span class="legacy-anchor" id="node-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-choose-platform" disabled="disabled"><span class="action-text">Pasirink platformą ir aparatinę įrangą atskiram mazgui su 2 TB SSD disku</span><span class="effort"><span class="sr-only">, trukmė: </span>1 val.</span></label></li><li class="action" id="action-node-build-node"><span class="legacy-anchor" id="node-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-build-node" disabled="disabled"><span class="action-text">Surink mazgą, paleisk sinchronizavimą (kelios dienos be priežiūros) ir pridėk Electrum serverį</span><span class="effort"><span class="sr-only">, trukmė: </span>savaitgalis</span></label></li><li class="action" id="action-node-connect-wallet"><span class="legacy-anchor" id="node-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-connect-wallet" disabled="disabled"><span class="action-text">Nukreipk piniginę į savo mazgą ir pašalink viešąjį serverį</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li></ul><p class="cl-hint">Užtenka atlikti po vieną veiksmą. Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros. <a href="/book/checklist/">Peržiūrėk visus veiksmus viename puslapyje</a>.</p><noscript><p class="cl-hint">Veiksmus pažymėti galima tik įjungus JavaScript. Skaityti sąrašą galima ir be jo.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="node" disabled><span>Perskaičiau šį skyrių</span></label><noscript><p class="cl-hint">Pažymėti skyrių kaip perskaitytą galima tik įjungus JavaScript.</p></noscript><nav class="pager" aria-label="Knygos skyriai"><a class="pager-prev part-3" href="/book/hardware-wallet/"><span class="pager-dir">Ankstesnis · 17 skyrius</span><span class="pager-title">Aparatinės piniginės</span></a><a class="pager-next" href="/book/checklist/"><span class="pager-dir">Kitas · Bendras veiksmų sąrašas</span><span class="pager-title">Visi veiksmai</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> <span lang="en">A Guide to Autonomy</span></p><p>Pirmasis leidimas, PROOF leidimas. „Cypher Baltics“ iniciatyva: 18 skyrių ir 90 veiksmų.</p><p>Tekstas <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · originalus kodas <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Šriftams ir kitiems trečiųjų šalių ištekliams galioja jų pačių sąlygos. Teisių peržiūra viešam platinimui dar neatlikta.</p><p>Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros.</p><p class="footer-links"><a href="/">PROOF &lt;conference&gt;</a> · <a href="/book/en/node/" hreflang="en" lang="en">English</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Paieška knygoje</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Klausimai, įrankiai, žingsniai ir žodžiai</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Ieškoma visame šio leidimo tekste: skyriuose, įvade, dalių įžangose, žodynėlyje, veiksmų sąrašuose ir pagalbiniuose puslapiuose.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Turinys</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Knygos turinys"><ul class="drawer-links"><li><a href="/book/">Viršelis</a></li><li><a href="/book/start/">Nuo ko pradėti?</a></li><li><a href="/book/#progress">Tavo pažanga</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/introduction/"><span class="ch-n">00</span><span class="ch-t">Įvadas</span><span class="ch-s">Prieš skyrius</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>1 dalis</span> Privatumas</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/privacy/"><span class="ch-n">··</span><span class="ch-t">Privatumo įrodymas</span><span class="ch-s">1 dalies įžanga</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/messages/"><span class="ch-n">01</span><span class="ch-t">Tavo žinutės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="messages">0</span> iš 5 veiksmų<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/passwords/"><span class="ch-n">02</span><span class="ch-t">Tavo slaptažodžiai ir paskyros</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="passwords">0</span> iš 5 veiksmų<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/browser/"><span class="ch-n">03</span><span class="ch-t">Tavo naršyklė ir paieška</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="browser">0</span> iš 5 veiksmų<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/email/"><span class="ch-n">04</span><span class="ch-t">Tavo el. paštas ir pseudonimai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="email">0</span> iš 5 veiksmų<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/network/"><span class="ch-n">05</span><span class="ch-t">Tavo tinklas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="network">0</span> iš 5 veiksmų<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>2 dalis</span> Autonomija</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/autonomy/"><span class="ch-n">··</span><span class="ch-t">Autonomijos įrodymas</span><span class="ch-s">2 dalies įžanga</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/keys/"><span class="ch-n">06</span><span class="ch-t">Raktai vietoj paskyrų</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="keys">0</span> iš 5 veiksmų<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: atviras tinklas, kurio nevaldo jokia įmonė</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="nostr">0</span> iš 5 veiksmų<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/big-tech/"><span class="ch-n">08</span><span class="ch-t">Kaip po vieną pakeisti technologijų milžinių paslaugas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="big-tech">0</span> iš 5 veiksmų<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/phone/"><span class="ch-n">09</span><span class="ch-t">Kaip susigrąžinti telefono kontrolę</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="phone">0</span> iš 5 veiksmų<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Kaip paleisti paslaugas nuosavame serveryje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="self-hosting">0</span> iš 5 veiksmų<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/ai/"><span class="ch-n">11</span><span class="ch-t">Kaip naudotis DI ir neišsiduoti</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="ai">0</span> iš 5 veiksmų<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>3 dalis</span> Pinigai ir Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/work/"><span class="ch-n">··</span><span class="ch-t">Darbo įrodymas</span><span class="ch-s">3 dalies įžanga</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/savings/"><span class="ch-n">12</span><span class="ch-t">Kur laikyti savo darbo vaisius</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="savings">0</span> iš 5 veiksmų<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Tavo pirmoji piniginė ir pirmieji satošiai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="first-wallet">0</span> iš 5 veiksmų<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/seed/"><span class="ch-n">14</span><span class="ch-t">Kaip pasidaryti atkūrimo frazės atsarginę kopiją</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="seed">0</span> iš 5 veiksmų<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning ir eurai kasdienybėje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="lightning-and-euros">0</span> iš 5 veiksmų<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privatumas Bitcoin tinkle</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> iš 5 veiksmų<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Aparatinės piniginės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="hardware-wallet">0</span> iš 5 veiksmų<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/node/" aria-current="page"><span class="ch-n">18</span><span class="ch-t">Kaip paleisti savo mazgą</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="node">0</span> iš 5 veiksmų<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/checklist/"><span class="ch-n">✓</span><span class="ch-t">Visi veiksmai</span><span class="ch-s">Atlikta <span data-stat="actions-done">0</span> iš 90 veiksmų</span></a></li><li class="ch-item"><a class="ch-row" href="/book/glossary/"><span class="ch-n">Az</span><span class="ch-t">Žodynėlis</span><span class="ch-s">44 terminai</span></a></li></ol></div><p class="drawer-scope">18 skyrių ir 90 veiksmų, lietuvių kalba.</p></nav></div></div></dialog>
 </body>
 </html>

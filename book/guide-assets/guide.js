@@ -6,17 +6,55 @@
  * and a checklist kept in localStorage. No network request is made: only the
  * links the reader opens lead outside.
  *
- * On proofconference.com (book/en/), every page arrives complete from
- * guide-ui/build_integration.py, with window.GUIDE_SITE and <main data-ssr>.
- * The script then enhances that page in place instead of building it: ticks,
- * progress, contents, search (index loaded on first use), the former #/ routes
- * sent to their real address, and a one-time import of the former checklist.
+ * On proofconference.com (book/en/ in English, book/ in Lithuanian), every
+ * page arrives complete from guide-ui/build_integration.py, with
+ * window.GUIDE_SITE and <main data-ssr>. The script then enhances that page in
+ * place instead of building it: ticks, progress, contents, search (index
+ * loaded on first use), the former #/ routes sent to their real address, and a
+ * one-time import of the former checklist. The words it shows there come from
+ * GUIDE_SITE.strings, in the language of the page.
  */
 (function () {
   'use strict';
 
   const MAIN = document.getElementById('main');
   const SITE = window.GUIDE_SITE && MAIN && MAIN.dataset.ssr ? window.GUIDE_SITE : null;
+
+  // Strings shown by the script on the site (site-data*.js, from guide-ui/site/guide_locales.py). The local edition
+  // keeps these English defaults. Plural strings are lists: [one, other] in English, [one, few, many] in Lithuanian.
+  const LANG = (SITE && SITE.lang) || 'en';
+  const STR = Object.assign({
+    readLabel: ' · read',
+    readState: 'Marked as read',
+    resetCleared: 'Your progress in this browser has been cleared.',
+    resetConfirm: 'Confirm: clear all ticks and read marks',
+    resetPress: 'Press again to confirm.',
+    searchLoading: 'Loading the search index.',
+    searchError: 'The search index could not be loaded. Check the connection and open the search again.',
+    searchTry: 'Try',
+    searchResults: 'Results',
+    searchNone: 'No match in the pages of this edition.',
+    searchCount: ['{n} result', '{n} results'],
+    searchShown: ', the first {shown} shown',
+    resume: 'Continue reading: ',
+    resumeChapter: 'Chapter {n} · {title}',
+    offlineReady: 'Offline copy: saved in this browser. Every page of the English and Lithuanian editions, the search, the glossary and all actions open without a connection, chapters not opened yet included. Links to other sites need a connection.',
+    offlineSaving: 'Offline copy: being saved in this browser. Keep this page open and online for a moment.',
+    offlineFailed: 'Offline copy: not saved. Reload this page while online to try again.',
+    offlineNone: 'Offline copy: not available in this browser. The pages work online.'
+  }, SITE && SITE.strings);
+  const fmt = (s, vars) => String(s).replace(/\{(\w+)\}/g, (m, k) => (vars && k in vars ? vars[k] : m));
+  // Lithuanian: 1, 21, 31... | 2-9, 22-29... | 10-20 and round numbers (same rule as guide_locales.plural_index).
+  function pluralOf(n, forms) {
+    if (!Array.isArray(forms)) return forms;
+    if (LANG === 'lt') {
+      const d = n % 10, h = n % 100;
+      if (d === 1 && h !== 11) return forms[0];
+      if (d >= 2 && d <= 9 && (h < 11 || h > 19)) return forms[1];
+      return forms[2];
+    }
+    return n === 1 ? forms[0] : forms[1];
+  }
 
   const CONTENT = SITE ? SITE.chapters : Array.isArray(window.GUIDE_CONTENT) ? window.GUIDE_CONTENT : [];
   const PAGES = SITE ? [] : Array.isArray(window.GUIDE_PAGES) ? window.GUIDE_PAGES : [];
@@ -734,7 +772,7 @@
           '<p class="ch-bignum" aria-hidden="true">' + pad(ch.number) + '</p>' +
           '<div class="ch-meta">' +
             '<span>Chapter ' + ch.number + ' of ' + chapters.length + '</span>' +
-            (b.checklistId ? '<a href="' + chapterHref(ch.id, b.checklistId) + '"><span data-stat="ch-done" data-ch="' + ch.id + '">0</span> of ' + b.actions.length + ' actions done</a>' : '') +
+            (b.checklistId ? '<a href="' + chapterHref(ch.id, b.checklistId) + '"><span><span data-stat="ch-done" data-ch="' + ch.id + '">0</span> of ' + b.actions.length + ' actions done</span></a>' : '') +
             '<span class="ch-readstate" data-read-state="' + ch.id + '"></span>' +
           '</div>' +
         '</header>' +
@@ -918,8 +956,8 @@
       else if (el.dataset.bar === 'read') v = available.length ? readTotal / available.length : 0;
       el.style.setProperty('--p', v.toFixed(3));
     });
-    $$('[data-read-label]').forEach((el) => { el.textContent = read[el.dataset.readLabel] ? ' · read' : ''; });
-    $$('[data-read-state]').forEach((el) => { el.textContent = read[el.dataset.readState] ? 'Marked as read' : ''; });
+    $$('[data-read-label]').forEach((el) => { el.textContent = read[el.dataset.readLabel] ? STR.readLabel : ''; });
+    $$('[data-read-state]').forEach((el) => { el.textContent = read[el.dataset.readState] ? STR.readState : ''; });
     $$('[data-ch-item]').forEach((el) => el.classList.toggle('is-read', !!read[el.dataset.chItem]));
     $$('.action-cb').forEach((cb) => {
       cb.checked = !!done[cb.dataset.action];
@@ -952,13 +990,13 @@
       delete btn.dataset.armed;
       btn.textContent = btn.dataset.label;
       refresh();
-      if (status) status.textContent = 'Your progress in this browser has been cleared.';
+      if (status) status.textContent = STR.resetCleared;
       return;
     }
     btn.dataset.armed = '1';
     btn.dataset.label = btn.textContent;
-    btn.textContent = 'Confirm: clear all ticks and read marks';
-    if (status) status.textContent = 'Press again to confirm.';
+    btn.textContent = STR.resetConfirm;
+    if (status) status.textContent = STR.resetPress;
     resetTimer = setTimeout(function wait() {
       if (document.activeElement === btn) resetTimer = setTimeout(wait, 6000);
       else disarmReset(btn);
@@ -1011,14 +1049,14 @@
     if (window.GUIDE_SEARCH) { prepareIndex(); renderResults(searchInput.value); return; }
     if (searchLoading) return;
     searchLoading = true;
-    searchStatus.textContent = 'Loading the search index.';
+    searchStatus.textContent = STR.searchLoading;
     const s = document.createElement('script');
     s.src = SITE.search;
     s.onload = () => { searchLoading = false; prepareIndex(); renderResults(searchInput.value); };
     s.onerror = () => {
       searchLoading = false;
       s.remove();
-      const msg = 'The search index could not be loaded. Check the connection and open the search again.';
+      const msg = STR.searchError;
       searchResults.innerHTML = '<p class="results-empty">' + msg + '</p>';
       searchStatus.textContent = msg;
     };
@@ -1089,24 +1127,25 @@
     clearTimeout(statusTimer);
     if (!query) {
       searchStatus.textContent = '';
-      const sugg = CONFIG.searchSuggestions || [];
+      const sugg = (SITE && SITE.suggestions) || CONFIG.searchSuggestions || [];
       searchResults.innerHTML = sugg.length
-        ? '<div class="search-suggest"><p class="search-suggest-title">Try</p><ul>' +
+        ? '<div class="search-suggest"><p class="search-suggest-title">' + esc(STR.searchTry) + '</p><ul>' +
           sugg.map((s) => '<li><button type="button" class="chip" data-suggest="' + esc(s) + '">' + esc(s) + '</button></li>').join('') + '</ul></div>'
         : '';
       return;
     }
     const r = search(query);
     searchResults.innerHTML = r.hits.length
-      ? '<ol class="results" aria-label="Results">' + r.hits.map((h) => {
+      ? '<ol class="results" aria-label="' + esc(STR.searchResults) + '">' + r.hits.map((h) => {
           const e = h.e;
           const snip = e.text ? snippet(e.text, r.terms) : '';
           return '<li><a class="result' + (e.part ? ' part-' + e.part : '') + '" href="' + e.href + '">' +
             '<span class="r-kind">' + esc(e.kicker) + '</span><span class="r-title">' + highlight(e.title, r.terms) + '</span>' +
             (snip ? '<span class="r-snip">' + snip + '</span>' : '') + '</a></li>';
         }).join('') + '</ol>'
-      : '<p class="results-empty">No match in the pages of this edition.</p>';
-    const msg = plural(r.total, 'result', 'results') + (r.total > r.hits.length ? ', the first ' + r.hits.length + ' shown' : '') + '.';
+      : '<p class="results-empty">' + esc(STR.searchNone) + '</p>';
+    const msg = fmt(pluralOf(r.total, STR.searchCount), { n: r.total }) +
+      (r.total > r.hits.length ? fmt(STR.searchShown, { shown: r.hits.length }) : '') + '.';
     statusTimer = setTimeout(() => { searchStatus.textContent = msg; }, 450);
   }
 
@@ -1343,7 +1382,8 @@
     const slot = $('[data-resume]');
     const ch = slot && byId.get(store.get('last').chapter);
     if (!ch || !SITE.routes.chapter[ch.id]) return;
-    slot.innerHTML = 'Continue reading: <a href="' + esc(SITE.routes.chapter[ch.id]) + '">Chapter ' + ch.number + ' · ' + esc(ch.title) + '</a>';
+    slot.innerHTML = esc(STR.resume) + '<a href="' + esc(SITE.routes.chapter[ch.id]) + '">' +
+      esc(fmt(STR.resumeChapter, { n: ch.number, title: ch.title })) + '</a>';
     slot.hidden = false;
   }
 
@@ -1366,12 +1406,8 @@
 
   // Cover, "About this edition": whether the pages of this version are saved for offline reading. A worker only
   // confirms its complete CORE, then this page checks its own exact asset URLs in that same cache.
-  const OFFLINE = {
-    ready: 'Offline copy: saved in this browser. Every page of this edition, the search, the glossary and all actions open without a connection, chapters not opened yet included. Links to other sites need a connection.',
-    saving: 'Offline copy: being saved in this browser. Keep this page open and online for a moment.',
-    failed: 'Offline copy: not saved. Reload this page while online to try again.',
-    none: 'Offline copy: not available in this browser. The pages work online.'
-  };
+  // The English and Lithuanian pages share 1 worker and 1 cache (/book/sw.js): "saved" covers both editions.
+  const OFFLINE = { ready: STR.offlineReady, saving: STR.offlineSaving, failed: STR.offlineFailed, none: STR.offlineNone };
   function offlineState(reg) {
     const slot = $('[data-offline]');
     if (!slot) return;

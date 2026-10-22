@@ -1,81 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Kaip po vieną pakeisti technologijų milžinių paslaugas · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Kaip po vieną pakeisti technologijų milžinių paslaugas · A Guide to Autonomy</title>
 <meta name="description" content="Bendrovių „Google“, „Apple“, „Meta“ ar „Microsoft“ paslaugų per 1 dieną neatsisakysi, ir to nereikia. Pirmiausia eksportuok duomenis, tada pakeisk 1 paslaugą…">
 <link rel="canonical" href="https://proofconference.com/book/big-tech/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/big-tech/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/big-tech/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/big-tech/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Kaip po vieną pakeisti technologijų milžinių paslaugas · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Kaip po vieną pakeisti technologijų milžinių paslaugas · A Guide to Autonomy">
 <meta property="og:description" content="Bendrovių „Google“, „Apple“, „Meta“ ar „Microsoft“ paslaugų per 1 dieną neatsisakysi, ir to nereikia. Pirmiausia eksportuok duomenis, tada pakeisk 1 paslaugą…">
 <meta property="og:url" content="https://proofconference.com/book/big-tech/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
 <meta property="og:locale" content="lt_LT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kaip po vieną pakeisti technologijų milžinių paslaugas · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Kaip po vieną pakeisti technologijų milžinių paslaugas · A Guide to Autonomy">
 <meta name="twitter:description" content="Bendrovių „Google“, „Apple“, „Meta“ ar „Microsoft“ paslaugų per 1 dieną neatsisakysi, ir to nereikia. Pirmiausia eksportuok duomenis, tada pakeisk 1 paslaugą…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=3d67147f5699"></script>
+<script defer src="/book/guide-assets/site-data-lt.js?v=66fbe9147120"></script>
+<script defer src="/book/guide-assets/guide.js?v=f361d2b9248c"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Pereiti prie turinio</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Tavo privatumo gidas">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
-    <li><a href="/book/#replays">&lt;įrašai&gt;</a></li>
-    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
-    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">skyrių perskaityta: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Tavo veiksmų sąrašas: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn lt" id="lang-btn" href="/book/en/big-tech/" hreflang="en" lang="en" aria-label="English version">EN</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/#contents">&lt;turinys&gt;</a>
-  <a href="/book/#replays">&lt;įrašai&gt;</a>
-  <a href="/book/checklist/">&lt;sąrašas&gt;</a>
-  <a href="/book/glossary/">&lt;žodynėlis&gt;</a>
-  <a href="/book/en/big-tech/" class="bk-menu-lang">EN · English</a>
-  <a href="/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page auto page-top" data-slug="big-tech">
-  <header class="bk-head">
-    <p class="bk-label">Autonomijos įrodymas · 8 skyrius</p>
-    <h1>Kaip po vieną pakeisti technologijų milžinių paslaugas</h1>
-  </header>
-  <article class="bk-article">
-<h2>Trumpai</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/"><span class="brand-title" lang="en">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> leidimas</span></a><div class="header-actions"><a class="hbtn" href="/book/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Turinys</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Paieška</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, konferencijos svetainė</span></a><a class="hbtn hbtn--lang" href="/book/en/big-tech/" hreflang="en" lang="en" aria-label="EN, English version">EN</a></div></div></header>
+<div class="read-progress part-2" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/big-tech"><div class="page-layout is-chapter part-2"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">Šiame puslapyje</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">Šiame puslapyje</p><ol class="toc-list"><li><a href="/book/big-tech/#trumpai" data-target="trumpai"><span class="toc-no">01</span><span class="toc-label">Trumpai</span></a></li><li><a href="/book/big-tech/#vienoje-paskyroje-telpa-visas-skaitmeninis-gyvenimas" data-target="vienoje-paskyroje-telpa-visas-skaitmeninis-gyvenimas"><span class="toc-no">02</span><span class="toc-label">Vienoje paskyroje telpa visas skaitmeninis gyvenimas</span></a></li><li><a href="/book/big-tech/#pirmiausia-eksportas-tada-po-1-paslauga" data-target="pirmiausia-eksportas-tada-po-1-paslauga"><span class="toc-no">03</span><span class="toc-label">Pirmiausia eksportas, tada po 1 paslaugą</span></a></li><li><a href="/book/big-tech/#privatuma-zadantis-prekiu-zenklas-vis-tiek-yra-1-imone" data-target="privatuma-zadantis-prekiu-zenklas-vis-tiek-yra-1-imone"><span class="toc-no">04</span><span class="toc-label">Privatumą žadantis prekių ženklas vis tiek yra 1 įmonė</span></a></li><li><a href="/book/big-tech/#kaip-pasirinkti-pakaitalus" data-target="kaip-pasirinkti-pakaitalus"><span class="toc-no">05</span><span class="toc-label">Kaip pasirinkti pakaitalus</span></a></li><li><a href="/book/big-tech/#zingsnis-po-zingsnio" data-target="zingsnis-po-zingsnio"><span class="toc-no">06</span><span class="toc-label">Žingsnis po žingsnio</span></a></li><li><a href="/book/big-tech/#klaidos-kuriu-verta-vengti" data-target="klaidos-kuriu-verta-vengti"><span class="toc-no">07</span><span class="toc-label">Klaidos, kurių verta vengti</span></a></li><li><a href="/book/big-tech/#norintiems-daugiau" data-target="norintiems-daugiau"><span class="toc-no">08</span><span class="toc-label">Norintiems daugiau</span></a></li><li><a href="/book/big-tech/#saltiniai" data-target="saltiniai"><span class="toc-no">09</span><span class="toc-label">Šaltiniai</span></a></li><li><a href="/book/big-tech/#tavo-veiksmu-sarasas" data-target="tavo-veiksmu-sarasas"><span class="toc-no">10</span><span class="toc-label">Tavo veiksmų sąrašas</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-2" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/autonomy/">2 dalis · Autonomija</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">8 skyrius: </span>Kaip po vieną pakeisti technologijų milžinių paslaugas</h1><p class="ch-bignum" aria-hidden="true">08</p><div class="ch-meta"><span>8 skyrius iš 18</span><a href="/book/big-tech/#tavo-veiksmu-sarasas"><span>Atlikta <span data-stat="ch-done" data-ch="big-tech">0</span> iš 5 veiksmų</span></a><span class="ch-readstate" data-read-state="big-tech"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="trumpai"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="trumpai" tabindex="-1">Trumpai</h2>
 <p>Bendrovių „Google“, „Apple“, „Meta“ ar „Microsoft“ paslaugų per 1 dieną neatsisakysi, ir to nereikia. Pirmiausia eksportuok duomenis, tada pakeisk 1 paslaugą, pagyvenk su ja 2 savaites ir tik tada imkis kitos. Kiekvienam poreikiui yra kelios rimtos alternatyvos, dauguma jų atvirojo kodo ir valdomos skirtingų operatorių. Su kiekviena perkelta paslauga viena įmonė apie tave žino mažiau, o užblokavus paskyrą netektum mažiau.</p>
-<h2>Vienoje paskyroje telpa visas skaitmeninis gyvenimas</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="vienoje-paskyroje-telpa-visas-skaitmeninis-gyvenimas"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Suprask</span></p><h2 id="vienoje-paskyroje-telpa-visas-skaitmeninis-gyvenimas" tabindex="-1">Vienoje paskyroje telpa visas skaitmeninis gyvenimas</h2>
 <p>Daugumos žmonių skaitmeninis gyvenimas telpa 1 ar 2 įmonėse: paštas, kalendorius, nuotraukos, dokumentai, žemėlapiai ir vaizdo įrašai sudėti į vieną paskyrą. Tai patogu, bet kelia 2 rizikas.</p>
 <p>Pirmoji yra profilis, nes įmonė, matanti tavo paieškas, judėjimą, pašto dėžutę ir nuotraukas, žino apie tave daugiau nei bet kuris žmogus. Antroji yra priklausomybė, nes užblokavus tą paskyrą (žr. 6 skyrių) viskas dingsta tą pačią akimirką.</p>
-<p>2025 m. gegužę naujienų agentūra „Associated Press“ pranešė, kad Tarptautinio baudžiamojo teismo vyriausiasis prokuroras po JAV sankcijų neteko prieigos prie savo „Microsoft“ el. pašto paskyros, nors bendrovė „Microsoft“ teigia niekada nesustabdžiusi paslaugų teismui. 2025 m. spalį teismas <a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" target="_blank" rel="noopener noreferrer">patvirtino, kad „Microsoft Office“ keičia į „openDesk“</a>, atvirojo kodo programų paketą, sukurtą Vokietijos valstybei.</p>
+<p>2025 m. gegužę naujienų agentūra „Associated Press“ pranešė, kad Tarptautinio baudžiamojo teismo vyriausiasis prokuroras po JAV sankcijų neteko prieigos prie savo „Microsoft“ el. pašto paskyros, nors bendrovė „Microsoft“ teigia niekada nesustabdžiusi paslaugų teismui. 2025 m. spalį teismas <a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" class="ext" rel="noopener noreferrer">patvirtino, kad „Microsoft Office“ keičia į „openDesk“</a>, atvirojo kodo programų paketą, sukurtą Vokietijos valstybei.</p>
 <p>Įprasta reakcija yra motyvacijos protrūkis „šiandien viską ištrinu“, ir ji beveik visada baigiasi nesėkme. Vienu metu sugriūva per daug įpročių, šeimos kalendorius nustoja veikti, prieš pat terminą nepavyksta rasti dokumento, o po 2 savaičių viskas vėl ten, kur buvo. Tada daroma išvada, kad alternatyvos neveikia, nors iš tikrųjų nepavyko kas kita: bandymas vienu metu pakeisti 10 įpročių.</p>
-<h2>Pirmiausia eksportas, tada po 1 paslaugą</h2>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/">theregister.com</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="pirmiausia-eksportas-tada-po-1-paslauga"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Suprask</span></p><h2 id="pirmiausia-eksportas-tada-po-1-paslauga" tabindex="-1">Pirmiausia eksportas, tada po 1 paslaugą</h2>
 <p>Metodas remiasi 3 idėjomis.</p>
-<p><strong>Pirmiausia eksportuok.</strong> <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">Bendrojo duomenų apsaugos reglamento</a>, taikomo nuo 2018 m. gegužės 25 d., 20 straipsnis suteikia teisę gauti savo duomenis įprastai naudojamu kompiuterio skaitomu formatu. Didžiosios bendrovės tam turi įrankį: „Google Takeout“ (<a href="https://takeout.google.com" target="_blank" rel="noopener noreferrer">takeout.google.com</a>), „Apple“ puslapį „Data and Privacy“ (duomenys ir privatumas, <a href="https://privacy.apple.com" target="_blank" rel="noopener noreferrer">privacy.apple.com</a>) ir galimybę atsisiųsti savo informaciją „Facebook“ bei „Instagram“ paskyros nustatymuose. Eksporto tenka laukti kelias valandas ar dienas. Kad ir kas nutiktų vėliau, savo istoriją turėsi, be to, pamatysi, kiek apie tave sukaupta, o daugeliui žmonių būtent tą akimirką motyvacija ir tampa tikra.</p>
+<p><strong>Pirmiausia eksportuok.</strong> <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" class="ext" rel="noopener noreferrer">Bendrojo duomenų apsaugos reglamento</a>, taikomo nuo 2018 m. gegužės 25 d., 20 straipsnis suteikia teisę į tam tikrų tavo pateiktų asmens duomenų perkeliamumą, kai jie tvarkomi automatizuotomis priemonėmis remiantis sutikimu arba sutartimi. Ši teisė apima ne visus teikėjo turimus įrašus. Jai priskiriami duomenys turi būti pateikiami susistemintu, įprastai naudojamu ir kompiuterio skaitomu formatu. Didžiosios bendrovės tam turi įrankį: „Google Takeout“ (<a href="https://takeout.google.com" class="tool-link ext" rel="noopener noreferrer">takeout.google.com</a>), „Apple“ puslapį „Data and Privacy“ (duomenys ir privatumas, <a href="https://privacy.apple.com" class="tool-link ext" rel="noopener noreferrer">privacy.apple.com</a>) ir galimybę atsisiųsti savo informaciją „Facebook“ bei „Instagram“ paskyros nustatymuose. Eksporto tenka laukti kelias valandas ar dienas. Kad ir kas nutiktų vėliau, savo istoriją turėsi, be to, pamatysi, kiek apie tave sukaupta, o daugeliui žmonių būtent tą akimirką motyvacija ir tampa tikra.</p>
 <p><strong>Išsirink 1 paslaugą.</strong> Yra 2 geri būdai rinktis: imti arba tą, kuri apie tave žino daugiausia (dažnai tai paštas, nuotraukos ar paieška), arba lengviausią (dažnai tai žemėlapiai, užrašai ar paieška). Jei dvejoji, imk lengviausią, nes po ankstyvos sėkmės kitas žingsnis būna paprastesnis.</p>
 <p><strong>Naudok abi lygiagrečiai.</strong> 2 savaites naudok naująjį įrankį, kol senasis dar tebėra, o duomenis perkelk ir senojoje vietoje ištrink tik tada, kai senojo įrankio nebeatidarinėji.</p>
 <p>Paskui kartok. 4 paslaugos per metus yra labai geras tempas.</p>
-<h2>Privatumą žadantis prekių ženklas vis tiek yra 1 įmonė</h2>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">eur-lex.europa.eu</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="privatuma-zadantis-prekiu-zenklas-vis-tiek-yra-1-imone"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Suprask</span></p><h2 id="privatuma-zadantis-prekiu-zenklas-vis-tiek-yra-1-imone" tabindex="-1">Privatumą žadantis prekių ženklas vis tiek yra 1 įmonė</h2>
 <p>Perėjus iš bendrovės „Google“ pas teikėją, kurio šūkyje yra žodis „privatumas“, pasikeičia šeimininkas, o klausimas lieka tas pats: kas gali perskaityti tavo duomenis ir kas nutiks, jei ta įmonė žlugs, bus parduota ar pakeis sąlygas. Atsakyti padeda 3 testai.</p>
 <ul>
 <li><strong>Ar teikėjas gali tai perskaityti?</strong> Kai taikomas ištisinis šifravimas, duomenys užrakinami tavo įrenginyje, o teikėjas saugo tai, ko negali atidaryti. Be jo turinį saugo tik teikėjo pažadas ir jo šalies įstatymai. Net ir su juo teikėjas mato dalį metaduomenų ir pats pateikia šifruojančią programėlę, todėl svarbu, kad programėlės būtų atvirojo kodo, o auditų rezultatai skelbiami.</li>
@@ -83,95 +57,95 @@
 <li><strong>Ar paslaugą gali valdyti kas nors kitas?</strong> Programinė įranga, kurią savo serveryje gali paleisti tu arba kokia nors asociacija („Nextcloud“, „CryptPad“, „Immich“, „PeerTube“), nepriklauso nuo 1 operatoriaus išlikimo, o vietiniai įrankiai („Syncthing“, „Joplin“, „Obsidian“, „LibreOffice“) duomenis laiko tavo įrenginiuose.</li>
 </ul>
 <p>Gerai tvarkoma įmonė, taikanti ištisinį šifravimą, daugumai skaitytojų tebėra protingas pasirinkimas ir dažnai saugesnis už serverį, kurio niekas neprižiūri.</p>
-<h2>Kaip pasirinkti pakaitalus</h2>
+</section><section class="sec sec--compare" data-no="05" aria-labelledby="kaip-pasirinkti-pakaitalus"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Palygink</span></p><h2 id="kaip-pasirinkti-pakaitalus" tabindex="-1">Kaip pasirinkti pakaitalus</h2>
 <p>Lentelė sudaryta pagal poreikius. „Atvirojo kodo“ reiškia, kad kodas viešas ir jį galima patikrinti. „Veikia nuosavame serveryje“ reiškia, kad serverį turi valdyti tu arba žmogus, kuriuo pasitiki (žr. 10 skyrių). Visa kita paruošta naudoti.</p>
 <p>Nė viena alternatyva nėra tiksli kopija to, ką ji pakeičia. Vienos geresnės, kitos reikalauja nedidelio kompromiso, o pastabose nurodyta, kurios. Kol neapsisprendei, tam pačiam poreikiui išbandyk 2 variantus, nes daugumą galima išbandyti nemokamai arba pigiai.</p>
 <p>Kai kurie pavadinimai, ypač „Proton“, kartojasi keliose eilutėse. Viską imti iš vieno teikėjo patogu, bet taip atkuriama ta pati priklausomybė, iš kurios vaduojiesi, todėl pagalvok, ar nevertėtų derinti kelių operatorių.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>10 variantų · 4 stulpeliai</span><span class="compare-hint" aria-hidden="true">Slink į šoną →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Palyginimo lentelė: Kaip pasirinkti pakaitalus"><table>
 <thead>
 <tr>
-<th>Poreikis</th>
-<th>Alternatyvos</th>
-<th>Pastabos</th>
-<th>Kas gali perskaityti tavo duomenis</th>
+<th scope="col">Poreikis</th>
+<th scope="col">Alternatyvos</th>
+<th scope="col">Pastabos</th>
+<th scope="col">Kas gali perskaityti tavo duomenis</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Paieška</strong></td>
+<tr id="row-paieska">
+<th scope="row"><strong>Paieška</strong></th>
 <td>Žr. 3 skyrių</td>
 <td>Lengviausias pirmasis žingsnis, pakanka pakeisti vieną naršyklės nustatymą.</td>
 <td>Žr. 3 skyrių.</td>
 </tr>
-<tr>
-<td><strong>El. paštas ir kalendorius</strong></td>
-<td>Apie el. paštą žr. 4 skyrių. Kalendoriai: „<a href="https://proton.me/calendar" target="_blank" rel="noopener noreferrer">Proton Calendar</a>“, „<a href="https://tuta.com/calendar" target="_blank" rel="noopener noreferrer">Tuta Calendar</a>“, „<a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a>“</td>
-<td>„<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“ ir „<a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a>“ kalendorių šifruoja ir skelbia savo programėlių kodą. Kiekvieną valdo viena bendrovė. „Nextcloud“ yra atvirojo kodo, ją galima paleisti nuosavame serveryje arba išsinuomoti iš pasirinkto teikėjo.</td>
-<td>Nei „Proton“, nei „Tuta“ negali, nes <a href="https://proton.me/blog/protoncalendar-security-model" target="_blank" rel="noopener noreferrer">įvykius šifruoja ištisiniu būdu</a>. Jei naudoji „Nextcloud“, gali tas, kas valdo serverį.</td>
+<tr id="row-el-pastas-ir-kalendorius">
+<th scope="row"><strong>El. paštas ir kalendorius</strong></th>
+<td>Apie el. paštą žr. 4 skyrių. Kalendoriai: „<a href="https://proton.me/calendar" class="tool-link ext" rel="noopener noreferrer">Proton Calendar</a>“, „<a href="https://tuta.com/calendar" class="tool-link ext" rel="noopener noreferrer">Tuta Calendar</a>“, „<a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a>“</td>
+<td>„<a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a>“ ir „<a href="https://tuta.com/" class="tool-link ext" rel="noopener noreferrer">Tuta</a>“ kalendorių šifruoja ir skelbia savo programėlių kodą. Kiekvieną valdo viena bendrovė. „Nextcloud“ yra atvirojo kodo, ją galima paleisti nuosavame serveryje arba išsinuomoti iš pasirinkto teikėjo.</td>
+<td>Nei „Proton“, nei „Tuta“ negali, nes <a href="https://proton.me/blog/protoncalendar-security-model" class="ext" rel="noopener noreferrer">įvykius šifruoja ištisiniu būdu</a>. Jei naudoji „Nextcloud“, gali tas, kas valdo serverį.</td>
 </tr>
-<tr>
-<td><strong>Žemėlapiai</strong></td>
-<td>„<a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer">Organic Maps</a>“, „<a href="https://www.comaps.app/" target="_blank" rel="noopener noreferrer">CoMaps</a>“, „<a href="https://osmand.net/" target="_blank" rel="noopener noreferrer">OsmAnd</a>“, „<a href="https://www.magicearth.com/" target="_blank" rel="noopener noreferrer">Magic Earth</a>“</td>
-<td>Visos naudoja „<a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a>“ duomenis. „Organic Maps“, bendruomenės sukurta jos atšaka (angl. fork) „CoMaps“ ir „OsmAnd“ (išsamesnė, sudėtingesnė) yra atvirojo kodo ir nemokamai veikia be interneto, tačiau eismo informacijos realiuoju laiku nerodo. „Magic Earth“ kodas uždaras, eismo informaciją realiuoju laiku ji rodo, tačiau, 2026 m. rugsėjo mėn. duomenimis, eismo informacija ir žemėlapiai be interneto įeina į jos <a href="https://www.magicearth.com/pricing" target="_blank" rel="noopener noreferrer">mokamą planą „Premium“</a>. Nė vienoje nerasi tokių atsiliepimų apie parduotuves kaip „Google Maps“.</td>
+<tr id="row-zemelapiai">
+<th scope="row"><strong>Žemėlapiai</strong></th>
+<td>„<a href="https://organicmaps.app/" class="tool-link ext" rel="noopener noreferrer">Organic Maps</a>“, „<a href="https://www.comaps.app/" class="tool-link ext" rel="noopener noreferrer">CoMaps</a>“, „<a href="https://osmand.net/" class="tool-link ext" rel="noopener noreferrer">OsmAnd</a>“, „<a href="https://www.magicearth.com/" class="tool-link ext" rel="noopener noreferrer">Magic Earth</a>“</td>
+<td>Visos naudoja „<a href="https://www.openstreetmap.org/" class="tool-link ext" rel="noopener noreferrer">OpenStreetMap</a>“ duomenis. „Organic Maps“, bendruomenės sukurta jos atšaka (angl. fork) „CoMaps“ ir „OsmAnd“ (išsamesnė, sudėtingesnė) yra atvirojo kodo ir nemokamai veikia be interneto, tačiau eismo informacijos realiuoju laiku nerodo. „Magic Earth“ kodas uždaras, eismo informaciją realiuoju laiku ji rodo, tačiau, 2026 m. rugsėjo mėn. duomenimis, eismo informacija ir žemėlapiai be interneto įeina į jos <a href="https://www.magicearth.com/pricing" class="ext" rel="noopener noreferrer">mokamą planą „Premium“</a>. Nė vienoje nerasi tokių atsiliepimų apie parduotuves kaip „Google Maps“.</td>
 <td>Be interneto paieška ir maršrutai skaičiuojami pačiame telefone, paskyros nereikia. „Magic Earth“ kodo patikrinti neįmanoma.</td>
 </tr>
-<tr>
-<td><strong>Debesų saugykla ir sinchronizavimas</strong></td>
-<td>„<a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a>“, „<a href="https://proton.me/drive" target="_blank" rel="noopener noreferrer">Proton Drive</a>“, „<a href="https://filen.io/" target="_blank" rel="noopener noreferrer">Filen</a>“, „<a href="https://syncthing.net/" target="_blank" rel="noopener noreferrer">Syncthing</a>“</td>
-<td>„Proton Drive“ ir „Filen“ šifruojamos ištisiniu būdu, jų programėlės atvirojo kodo, kiekvieną valdo viena bendrovė. Apie „Nextcloud“ žr. pirmiau. „Syncthing“ yra atvirojo kodo ir apsieina visai be debesijos, nes tavo įrenginius sinchronizuoja tiesiogiai. Geriausiai veikia tarp kompiuterių. Oficiali programėlė „Android“ sistemai <a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" target="_blank" rel="noopener noreferrer">nebekuriama nuo 2024 m. gruodžio</a>. Bendruomenės versija „Syncthing-Fork“ toliau platinama per „<a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a>“, o 2025 m. pasikeitė jos prižiūrėtojas, todėl pirma patikrink dabartinę jos būklę ir tik tada ja pasikliauk. Telefonams „iPhone“ yra tik trečiųjų šalių programėlių.</td>
-<td>Nei „<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“, nei „Filen“ negali. Tas, kas valdo „Nextcloud“ serverį, gali, nebent įjungtas <a href="https://nextcloud.com/encryption/" target="_blank" rel="noopener noreferrer">aplankų šifravimas</a>. „Syncthing“ <a href="https://docs.syncthing.net/users/relaying.html" target="_blank" rel="noopener noreferrer">retransliatoriai (angl. relays) perduoda šifruotus duomenis</a>.</td>
+<tr id="row-debesu-saugykla-ir-sinchronizavimas">
+<th scope="row"><strong>Debesų saugykla ir sinchronizavimas</strong></th>
+<td>„<a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a>“, „<a href="https://proton.me/drive" class="tool-link ext" rel="noopener noreferrer">Proton Drive</a>“, „<a href="https://filen.io/" class="tool-link ext" rel="noopener noreferrer">Filen</a>“, „<a href="https://syncthing.net/" class="tool-link ext" rel="noopener noreferrer">Syncthing</a>“</td>
+<td>„Proton Drive“ ir „Filen“ šifruojamos ištisiniu būdu, jų programėlės atvirojo kodo, kiekvieną valdo viena bendrovė. Apie „Nextcloud“ žr. pirmiau. „Syncthing“ yra atvirojo kodo ir apsieina visai be debesijos, nes tavo įrenginius sinchronizuoja tiesiogiai. Geriausiai veikia tarp kompiuterių. Oficiali programėlė „Android“ sistemai <a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" class="ext" rel="noopener noreferrer">nebekuriama nuo 2024 m. gruodžio</a>. Bendruomenės versija „Syncthing-Fork“ toliau platinama per „<a href="https://f-droid.org/" class="tool-link ext" rel="noopener noreferrer">F-Droid</a>“, o 2025 m. pasikeitė jos prižiūrėtojas, todėl pirma patikrink dabartinę jos būklę ir tik tada ja pasikliauk. Telefonams „iPhone“ yra tik trečiųjų šalių programėlių.</td>
+<td>Nei „<a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a>“, nei „Filen“ negali. Tas, kas valdo „Nextcloud“ serverį, gali, nebent kliento pusėje naudoji <a href="https://nextcloud.com/encryption/" class="ext" rel="noopener noreferrer">ištisiniu būdu šifruojamus aplankus</a>. Vien serverio pusės šifravimas failų nuo administratoriaus nepaslepia. „Syncthing“ <a href="https://docs.syncthing.net/users/relaying.html" class="ext" rel="noopener noreferrer">retransliatoriai (angl. relays) perduoda šifruotus duomenis</a>.</td>
 </tr>
-<tr>
-<td><strong>Dokumentai</strong></td>
-<td>„<a href="https://cryptpad.org/" target="_blank" rel="noopener noreferrer">CryptPad</a>“, „<a href="https://www.libreoffice.org/" target="_blank" rel="noopener noreferrer">LibreOffice</a>“, „<a href="https://www.onlyoffice.com/" target="_blank" rel="noopener noreferrer">OnlyOffice</a>“</td>
-<td>„CryptPad“ skirta šifruotam bendram darbui internete, yra atvirojo kodo, ja galima naudotis viešame serveryje arba paleisti nuosavame. „LibreOffice“ yra atvirojo kodo ir veikia kompiuteryje be interneto. „OnlyOffice“ yra atvirojo kodo, gerai dera su „Microsoft“ formatais ir dažnai naudojama sistemoje „<a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a>“.</td>
+<tr id="row-dokumentai">
+<th scope="row"><strong>Dokumentai</strong></th>
+<td>„<a href="https://cryptpad.org/" class="tool-link ext" rel="noopener noreferrer">CryptPad</a>“, „<a href="https://www.libreoffice.org/" class="tool-link ext" rel="noopener noreferrer">LibreOffice</a>“, „<a href="https://www.onlyoffice.com/" class="tool-link ext" rel="noopener noreferrer">OnlyOffice</a>“</td>
+<td>„CryptPad“ skirta šifruotam bendram darbui internete, yra atvirojo kodo, ja galima naudotis viešame serveryje arba paleisti nuosavame. „LibreOffice“ yra atvirojo kodo ir veikia kompiuteryje be interneto. „OnlyOffice“ yra atvirojo kodo, gerai dera su „Microsoft“ formatais ir dažnai naudojama sistemoje „<a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a>“.</td>
 <td>Tas, kas valdo „CryptPad“ serverį, negali (dokumentai užšifruojami naršyklėje). „LibreOffice“ failai lieka kompiuteryje. Jei naudoji „OnlyOffice“, tai priklauso nuo to, kas valdo serverį.</td>
 </tr>
-<tr>
-<td><strong>Užrašai</strong></td>
-<td>„<a href="https://standardnotes.com/" target="_blank" rel="noopener noreferrer">Standard Notes</a>“, „<a href="https://joplinapp.org/" target="_blank" rel="noopener noreferrer">Joplin</a>“, „<a href="https://notesnook.com/" target="_blank" rel="noopener noreferrer">Notesnook</a>“, „<a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer">Obsidian</a>“</td>
-<td>„Standard Notes“ ir „Notesnook“ yra atvirojo kodo ir automatiškai šifruoja ištisiniu būdu. „Standard Notes“ priklauso bendrovei „<a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>“. „Joplin“ yra atvirojo kodo ir sinchronizuoja per tavo pasirinktą saugyklą, tačiau ištisinis šifravimas joje <a href="https://joplinapp.org/help/apps/sync/e2ee/" target="_blank" rel="noopener noreferrer">pasirenkamas</a>, todėl įjunk jį nustatymuose prieš pirmąjį sinchronizavimą. „Obsidian“ kodas uždaras, bet užrašai yra paprastojo teksto failai tavo diske.</td>
+<tr id="row-uzrasai">
+<th scope="row"><strong>Užrašai</strong></th>
+<td>„<a href="https://standardnotes.com/" class="tool-link ext" rel="noopener noreferrer">Standard Notes</a>“, „<a href="https://joplinapp.org/" class="tool-link ext" rel="noopener noreferrer">Joplin</a>“, „<a href="https://notesnook.com/" class="tool-link ext" rel="noopener noreferrer">Notesnook</a>“, „<a href="https://obsidian.md/" class="tool-link ext" rel="noopener noreferrer">Obsidian</a>“</td>
+<td>„Standard Notes“ ir „Notesnook“ yra atvirojo kodo ir automatiškai šifruoja ištisiniu būdu. „Standard Notes“ priklauso bendrovei „<a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a>“. „Joplin“ yra atvirojo kodo ir sinchronizuoja per tavo pasirinktą saugyklą, tačiau ištisinis šifravimas joje <a href="https://joplinapp.org/help/apps/sync/e2ee/" class="ext" rel="noopener noreferrer">pasirenkamas</a>, todėl įjunk jį nustatymuose prieš pirmąjį sinchronizavimą. „Obsidian“ kodas uždaras, bet užrašai yra paprastojo teksto failai tavo diske.</td>
 <td>Nei „Standard Notes“, nei „Notesnook“ negali. „Joplin“ saugyklos teikėjas gali, kol šifravimas neįjungtas. „Obsidian“ failai lieka tavo diske.</td>
 </tr>
-<tr>
-<td><strong>Nuotraukos</strong></td>
-<td>„<a href="https://ente.com/" target="_blank" rel="noopener noreferrer">Ente Photos</a>“, „<a href="https://immich.app/" target="_blank" rel="noopener noreferrer">Immich</a>“</td>
-<td>„<a href="https://ente.com/" target="_blank" rel="noopener noreferrer">Ente</a>“ šifruojama ištisiniu būdu, yra atvirojo kodo, mokama, kai nebepakanka nedidelio nemokamo plano, ir gali veikti nuosavame serveryje. „Immich“ yra atvirojo kodo, veikia tik nuosavame serveryje ir labiausiai primena „Google Photos“.</td>
-<td>„Ente“ negali, o jos <a href="https://ente.io/architecture/" target="_blank" rel="noopener noreferrer">architektūra paskelbta</a>. Jei naudoji „Immich“, gali tas, kas valdo serverį, o paprastai tai esi tu.</td>
+<tr id="row-nuotraukos">
+<th scope="row"><strong>Nuotraukos</strong></th>
+<td>„<a href="https://ente.com/" class="tool-link ext" rel="noopener noreferrer">Ente Photos</a>“, „<a href="https://immich.app/" class="tool-link ext" rel="noopener noreferrer">Immich</a>“</td>
+<td>„<a href="https://ente.com/" class="tool-link ext" rel="noopener noreferrer">Ente</a>“ šifruojama ištisiniu būdu, yra atvirojo kodo, mokama, kai nebepakanka nedidelio nemokamo plano, ir gali veikti nuosavame serveryje. „Immich“ yra atvirojo kodo, veikia tik nuosavame serveryje ir labiausiai primena „Google Photos“.</td>
+<td>„Ente“ negali, o jos <a href="https://ente.io/architecture/" class="ext" rel="noopener noreferrer">architektūra paskelbta</a>. Jei naudoji „Immich“, gali tas, kas valdo serverį, o paprastai tai esi tu.</td>
 </tr>
-<tr>
-<td><strong>Vaizdo įrašai</strong></td>
-<td>„<a href="https://newpipe.net/" target="_blank" rel="noopener noreferrer">NewPipe</a>“, „<a href="https://freetubeapp.io/" target="_blank" rel="noopener noreferrer">FreeTube</a>“, „<a href="https://invidious.io/" target="_blank" rel="noopener noreferrer">Invidious</a>“, „<a href="https://joinpeertube.org/" target="_blank" rel="noopener noreferrer">PeerTube</a>“</td>
+<tr id="row-vaizdo-irasai">
+<th scope="row"><strong>Vaizdo įrašai</strong></th>
+<td>„<a href="https://newpipe.net/" class="tool-link ext" rel="noopener noreferrer">NewPipe</a>“, „<a href="https://freetubeapp.io/" class="tool-link ext" rel="noopener noreferrer">FreeTube</a>“, „<a href="https://invidious.io/" class="tool-link ext" rel="noopener noreferrer">Invidious</a>“, „<a href="https://joinpeertube.org/" class="tool-link ext" rel="noopener noreferrer">PeerTube</a>“</td>
 <td>„NewPipe“ („Android“) ir „FreeTube“ (kompiuteris) rodo „YouTube“ vaizdo įrašus be paskyros ir be reklamos. „Invidious“ tą patį daro naršyklėje per viešus serverius, kurie dažnai sutrinka. Visos 3 yra atvirojo kodo ir gali nustoti veikti, kai „YouTube“ ką nors pakeičia. „PeerTube“ yra kitokia: tai atvirojo kodo federacinis tinklas su savais vaizdo įrašais.</td>
 <td>„YouTube“ vis tiek mato tavo IP adresą. „Invidious“ arba „PeerTube“ serveris mato, ką ten žiūri.</td>
 </tr>
-<tr>
-<td><strong>Vertimas</strong></td>
-<td>„<a href="https://libretranslate.com/" target="_blank" rel="noopener noreferrer">LibreTranslate</a>“, naršyklėje „<a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>“ įtaisytas vertimas</td>
-<td>„LibreTranslate“ yra atvirojo kodo ir gali veikti nuosavame serveryje. „Firefox“ puslapius verčia tavo įrenginyje. „<a href="https://www.deepl.com/" target="_blank" rel="noopener noreferrer">DeepL</a>“ verčia kokybiškiau, tačiau jos kodas uždaras ir ji gauna tavo tekstą, o tai priimtina restorano meniu, bet ne sutarčiai.</td>
+<tr id="row-vertimas">
+<th scope="row"><strong>Vertimas</strong></th>
+<td>„<a href="https://libretranslate.com/" class="tool-link ext" rel="noopener noreferrer">LibreTranslate</a>“, naršyklėje „<a href="https://www.firefox.com/" class="tool-link ext" rel="noopener noreferrer">Firefox</a>“ įtaisytas vertimas</td>
+<td>„LibreTranslate“ yra atvirojo kodo ir gali veikti nuosavame serveryje. „Firefox“ puslapius verčia tavo įrenginyje. „<a href="https://www.deepl.com/" class="tool-link ext" rel="noopener noreferrer">DeepL</a>“ verčia kokybiškiau, tačiau jos kodas uždaras ir ji gauna tavo tekstą, o tai priimtina restorano meniu, bet ne sutarčiai.</td>
 <td>„LibreTranslate“ serveris mato tavo tekstą, nebent paleidi jį savo serveryje. „Firefox“ nieko nesiunčia. „DeepL“ gauna viską, ką įvedi.</td>
 </tr>
-<tr>
-<td><strong>Programėlių parduotuvė „Android“ sistemai</strong></td>
-<td>„<a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a>“, „<a href="https://obtainium.imranr.dev/" target="_blank" rel="noopener noreferrer">Obtainium</a>“, „<a href="https://auroraoss.com/" target="_blank" rel="noopener noreferrer">Aurora Store</a>“</td>
+<tr id="row-programeliu-parduotuve-android-sistemai">
+<th scope="row"><strong>Programėlių parduotuvė „Android“ sistemai</strong></th>
+<td>„<a href="https://f-droid.org/" class="tool-link ext" rel="noopener noreferrer">F-Droid</a>“, „<a href="https://obtainium.imranr.dev/" class="tool-link ext" rel="noopener noreferrer">Obtainium</a>“, „<a href="https://auroraoss.com/" class="tool-link ext" rel="noopener noreferrer">Aurora Store</a>“</td>
 <td>„F-Droid“ yra vien atvirojo kodo programėlių katalogas. Žr. 9 skyrių.</td>
 <td>Čia duomenų niekas neskaito. Svarbu, kas programėles surenka ir pasirašo (žr. 9 skyrių).</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>Daugumai žmonių protinga pradžia būtų tokia: <strong>paieška, tada žemėlapiai, tada užrašai</strong>, nes ten beveik nieko nereikia perkelti. Svarbiausi yra paštas ir nuotraukos, ir kiekvienam iš jų verta skirti ramų savaitgalį.</p>
-<h2>Žingsnis po žingsnio</h2>
+</section><section class="sec sec--steps" data-no="06" aria-labelledby="zingsnis-po-zingsnio"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Instrukcija</span></p><h2 id="zingsnis-po-zingsnio" tabindex="-1">Žingsnis po žingsnio</h2>
 <p>Pavyzdyje perkeliamos nuotraukos, o ta pati logika tinka kiekvienai lentelės eilutei.</p>
-<ol>
-<li><strong>Eksportuok.</strong> Senojoje paslaugoje užsisakyk visą savo archyvą ir išsaugok jį diske, kuris priklauso tau. Patikrink, ar failai atsidaro.</li>
-<li><strong>Išsirink 1 paslaugą</strong> iš lentelės. Perskaityk jos svetainę, patikrink, kas ją valdo, ar kodas atviras, ar teikėjas gali perskaityti tavo duomenis ir kiek ji kainuoja. Būtent šis žingsnis pasitikėjimą prekių ženklu pakeičia patikrinimu.</li>
-<li><strong>2 savaites naudok abi lygiagrečiai.</strong> Telefone įjunk nuotraukų atsarginį kopijavimą naujojoje paslaugoje, o senąjį palik įjungtą. Kaskart, kai nori pažiūrėti nuotrauką, atverk naująją programėlę.</li>
-<li><strong>Perkelk duomenis.</strong> Importuok eksportuotą archyvą į naująją paslaugą. Dauguma alternatyvų turi importavimo įrankį arba vadovą, skirtą didžiosioms platformoms.</li>
-<li><strong>Pakeisk numatytąją paslaugą kiekviename įrenginyje</strong>, t. y. telefone, planšetėje, kompiuteryje ir visų, kas šia paslauga naudojasi kartu su tavimi, įrenginiuose. Išjunk senąjį atsarginį kopijavimą arba sinchronizavimą.</li>
-<li><strong>Ištrink duomenis iš senosios paslaugos</strong>, kai įsitikinsi, kad naujojoje kopijoje nieko netrūksta ir kad turi jos atsarginę kopiją. Su nuotraukomis elkis atsargiai. Pasak <a href="https://support.google.com/photos/answer/6128858" target="_blank" rel="noopener noreferrer">pačios „Google“ pagalbos puslapio</a>, programėlėje „Google Photos“ ištrynus nuotrauką, kurios atsarginė kopija padaryta, ištrinama ir telefone esanti kopija. Jei nori pasilikti telefone esančias kopijas, pirmiausia kiekviename įrenginyje išjunk atsarginį kopijavimą ir tada trink kompiuteryje, svetainėje <a href="https://photos.google.com" target="_blank" rel="noopener noreferrer">photos.google.com</a>, arba programėlės atsarginio kopijavimo nustatymuose pasirink „Undo backup“ (atšaukti atsarginį kopijavimą): ši funkcija pašalina debesijoje esančias kopijas, o failus įrenginyje palieka. „iCloud Photos“ veikia taip pat, todėl, kol dar nieko neištrynei, išjunk ją įrenginyje ir pasirink palikti originalus. Ištrinti elementai 30 dienų lieka šiukšlinėje, kurią gali ištuštinti, kai nebeliks abejonių.</li>
-<li><strong>Išsirink kitą paslaugą</strong>, tik ne tą pačią savaitę.</li>
+<ol class="steps">
+<li id="step-1"><strong>Eksportuok.</strong> Senojoje paslaugoje užsisakyk visą savo archyvą ir išsaugok jį diske, kuris priklauso tau. Patikrink, ar failai atsidaro.</li>
+<li id="step-2"><strong>Išsirink 1 paslaugą</strong> iš lentelės. Perskaityk jos svetainę, patikrink, kas ją valdo, ar kodas atviras, ar teikėjas gali perskaityti tavo duomenis ir kiek ji kainuoja. Būtent šis žingsnis pasitikėjimą prekių ženklu pakeičia patikrinimu.</li>
+<li id="step-3"><strong>2 savaites naudok abi lygiagrečiai.</strong> Telefone įjunk nuotraukų atsarginį kopijavimą naujojoje paslaugoje, o senąjį palik įjungtą. Kaskart, kai nori pažiūrėti nuotrauką, atverk naująją programėlę.</li>
+<li id="step-4"><strong>Perkelk duomenis.</strong> Importuok eksportuotą archyvą į naująją paslaugą. Dauguma alternatyvų turi importavimo įrankį arba vadovą, skirtą didžiosioms platformoms.</li>
+<li id="step-5"><strong>Pakeisk numatytąją paslaugą kiekviename įrenginyje</strong>, t. y. telefone, planšetėje, kompiuteryje ir visų, kas šia paslauga naudojasi kartu su tavimi, įrenginiuose. Išjunk senąjį atsarginį kopijavimą arba sinchronizavimą.</li>
+<li id="step-6"><strong>Ištrink duomenis iš senosios paslaugos</strong>, kai įsitikinsi, kad naujojoje kopijoje nieko netrūksta ir kad turi jos atsarginę kopiją. Su nuotraukomis elkis atsargiai. Pasak <a href="https://support.google.com/photos/answer/6128858/delete-or-restore-your-photos-amp-videos-android?co=GENIE.Platform%3DAndroid" class="ext" rel="noopener noreferrer">pačios „Google“ pagalbos puslapio</a>, programėlėje „Google Photos“ ištrynus nuotrauką, kurios atsarginė kopija padaryta, ištrinama ir telefone esanti kopija. Jei nori pasilikti telefone esančias kopijas, pirmiausia kiekviename įrenginyje išjunk atsarginį kopijavimą ir tada trink kompiuteryje, svetainėje <a href="https://photos.google.com" class="tool-link ext" rel="noopener noreferrer">photos.google.com</a>, arba programėlės atsarginio kopijavimo nustatymuose pasirink „Undo backup“ (atšaukti atsarginį kopijavimą): ši funkcija pašalina debesijoje esančias kopijas, o failus įrenginyje palieka. Jei naudoji paslaugą „iCloud Photos“, pirmiausia <a href="https://support.apple.com/en-ie/102179" class="ext" rel="noopener noreferrer">atsisiųsk originalus</a>, palauk, kol atsisiuntimas baigsis, ir patikrink failus, tada išjunk sinchronizavimą tuose įrenginiuose, kuriuose nori pasilikti kopijas, ir tik po to trink debesijoje esančius elementus. Ištrinti elementai 30 dienų lieka šiukšlinėje, kurią gali ištuštinti, kai nebeliks abejonių.</li>
+<li id="step-7"><strong>Išsirink kitą paslaugą</strong>, tik ne tą pačią savaitę.</li>
 </ol>
-<h2>Klaidos, kurių verta vengti</h2>
+</section><section class="sec sec--pitfalls" data-no="07" aria-labelledby="klaidos-kuriu-verta-vengti"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Atsargiai</span></p><h2 id="klaidos-kuriu-verta-vengti" tabindex="-1">Klaidos, kurių verta vengti</h2>
 <ul>
 <li><strong>Purizmas.</strong> Pakeisti 7 paslaugas iš 10 yra didelis laimėjimas, o tai, kad pasilikai „YouTube“ ar darbo įrankį, viso kito nenubraukia.</li>
 <li><strong>Perkelti viską iš karto.</strong> Tai pagrindinė priežastis, kodėl žmonės grįžta atgal. Perkelk 1 paslaugą, pagyvenk su ja 2 savaites, tada rinkis kitą.</li>
@@ -180,73 +154,33 @@
 <li><strong>Ištrinti nepatikrinus.</strong> Atverk naująją kopiją, suskaičiuok albumus, patikrink seniausius ir naujausius failus ir tik tada ištrink originalą taip, kaip aprašyta 6 žingsnyje.</li>
 <li><strong>Vieną priklausomybę pakeisti kita.</strong> Jei viskas persikelia į vieną naują įmonę, priklausomybė lieka ta pati, tik šeimininkas geresnis. Paskirstyk paslaugas keliems operatoriams.</li>
 </ul>
-<h2>Norintiems daugiau</h2>
-<ul>
-<li><strong>PROOF konferencijoje:</strong> „Kaip „kareivis-pilietis“ gali padėti decentralizuoti pasaulį: Rusijos invazijos į Ukrainą pamokos“, pranešimą apie tai, kodėl atviri ir decentralizuoti įrankiai svarbūs visuomenei, skaito Alexis Roussel.</li>
-<li><strong>Išsamios nepriklausomos rekomendacijos:</strong> „Privacy Guides“ (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
-<li><strong>Alternatyvos, surūšiuotos pagal paslaugą, kurią nori pakeisti:</strong> <a href="https://switching.software" target="_blank" rel="noopener noreferrer">switching.software</a>.</li>
-<li><strong>Europoje įsikūrusios paslaugos:</strong> <a href="https://european-alternatives.eu" target="_blank" rel="noopener noreferrer">european-alternatives.eu</a>.</li>
+</section><section class="sec sec--further" data-no="08" aria-labelledby="norintiems-daugiau"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Norintiems daugiau</span></p><h2 id="norintiems-daugiau" tabindex="-1">Norintiems daugiau</h2>
+<ul class="refs">
+<li><strong>Išsamios nepriklausomos rekomendacijos:</strong> „Privacy Guides“ (<a href="https://privacyguides.org" class="tool-link ext" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Alternatyvos, surūšiuotos pagal paslaugą, kurią nori pakeisti:</strong> <a href="https://switching.software" class="tool-link ext" rel="noopener noreferrer">switching.software</a>.</li>
+<li><strong>Europoje įsikūrusios paslaugos:</strong> <a href="https://european-alternatives.eu" class="tool-link ext" rel="noopener noreferrer">european-alternatives.eu</a>.</li>
 <li><strong>Kitas skyrius:</strong> kaip susigrąžinti telefono kontrolę.</li>
 </ul>
-<h2>Šaltiniai</h2>
-<ul>
-<li><a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" target="_blank" rel="noopener noreferrer">International Criminal Court dumps Microsoft Office</a>, „The Register“, 2025 m. spalio 31 d.</li>
-<li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">Regulation (EU) 2016/679, General Data Protection Regulation, Article 20</a>, Europos Sąjungos oficialusis leidinys, 2016 m. balandžio 27 d.</li>
-<li><a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" target="_blank" rel="noopener noreferrer">Discontinuing syncthing-android</a>, „Syncthing“ bendruomenės forumas, 2024 m. spalio 20 d.</li>
-<li><a href="https://support.google.com/photos/answer/6128858" target="_blank" rel="noopener noreferrer">Delete photos and videos</a>, „Google Photos“ pagalba, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://www.magicearth.com/pricing" target="_blank" rel="noopener noreferrer">Magic Earth pricing</a>, „Magic Earth“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://joplinapp.org/help/apps/sync/e2ee/" target="_blank" rel="noopener noreferrer">End-to-end encryption</a>, „Joplin“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://proton.me/blog/protoncalendar-security-model" target="_blank" rel="noopener noreferrer">The Proton Calendar security model</a>, „Proton“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://nextcloud.com/encryption/" target="_blank" rel="noopener noreferrer">Nextcloud encryption</a>, „Nextcloud“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://docs.syncthing.net/users/relaying.html" target="_blank" rel="noopener noreferrer">Relaying</a>, „Syncthing“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://ente.io/architecture/" target="_blank" rel="noopener noreferrer">Ente architecture</a>, „Ente“, žiūrėta 2026 m. rugsėjį.</li>
+</section><section class="sec sec--sources" data-no="09" aria-labelledby="saltiniai"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Šaltiniai</span></p><h2 id="saltiniai" tabindex="-1">Šaltiniai</h2>
+<ul class="refs">
+<li><a href="https://www.edpb.europa.eu/sme/be-compliant/respect-individuals-rights_en" class="ext" rel="noopener noreferrer">Respect individuals' rights, including portability</a>, Europos duomenų apsaugos valdyba, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://docs.nextcloud.com/server/32/admin_manual/configuration_files/encryption_configuration.html" class="ext" rel="noopener noreferrer">Server-side encryption and its limits</a>, „Nextcloud“ administravimo vadovas, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://support.apple.com/en-ie/102179" class="ext" rel="noopener noreferrer">Turn off iCloud Photos</a>, „Apple Support“, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" class="ext" rel="noopener noreferrer">International Criminal Court dumps Microsoft Office</a>, „The Register“, 2025 m. spalio 31 d.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" class="ext" rel="noopener noreferrer">Regulation (EU) 2016/679, General Data Protection Regulation, Article 20</a>, Europos Sąjungos oficialusis leidinys, 2016 m. balandžio 27 d.</li>
+<li><a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" class="ext" rel="noopener noreferrer">Discontinuing syncthing-android</a>, „Syncthing“ bendruomenės forumas, 2024 m. spalio 20 d.</li>
+<li><a href="https://support.google.com/photos/answer/6128858/delete-or-restore-your-photos-amp-videos-android?co=GENIE.Platform%3DAndroid" class="ext" rel="noopener noreferrer">Delete photos and videos</a>, „Google Photos“ pagalba, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://www.magicearth.com/pricing" class="ext" rel="noopener noreferrer">Magic Earth pricing</a>, „Magic Earth“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://joplinapp.org/help/apps/sync/e2ee/" class="ext" rel="noopener noreferrer">End-to-end encryption</a>, „Joplin“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://proton.me/blog/protoncalendar-security-model" class="ext" rel="noopener noreferrer">The Proton Calendar security model</a>, „Proton“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://nextcloud.com/encryption/" class="ext" rel="noopener noreferrer">Nextcloud encryption</a>, „Nextcloud“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://docs.syncthing.net/users/relaying.html" class="ext" rel="noopener noreferrer">Relaying</a>, „Syncthing“ dokumentacija, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://ente.io/architecture/" class="ext" rel="noopener noreferrer">Ente architecture</a>, „Ente“, žiūrėta 2026 m. rugsėjį.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Tavo veiksmų sąrašas</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="big-tech-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="big-tech-1" aria-label="Užsisakyk savo duomenų eksportą iš „Google“, „Apple“ arba „Meta“"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-1">Užsisakyk savo duomenų eksportą iš „Google“, „Apple“ arba „Meta“</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-2" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="big-tech-2" aria-label="Pakeisk 1 lengvą paslaugą: paiešką, žemėlapius arba užrašus"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-2">Pakeisk 1 lengvą paslaugą: paiešką, žemėlapius arba užrašus</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="big-tech-3" aria-label="Išsirink pirmąją svarbią paslaugą ir 2 savaites naudok ją lygiagrečiai su senąja"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-3">Išsirink pirmąją svarbią paslaugą ir 2 savaites naudok ją lygiagrečiai su senąja</label>
-        <span class="bk-effort">1 val.</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-4" data-effort="3">
-        <label class="bk-check"><input type="checkbox" id="big-tech-4" aria-label="Perkelk duomenis, pakeisk numatytąją paslaugą kiekviename įrenginyje, ištrink senąją kopiją"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-4">Perkelk duomenis, pakeisk numatytąją paslaugą kiekviename įrenginyje, ištrink senąją kopiją</label>
-        <span class="bk-effort">Savaitgalis</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="big-tech-5" aria-label="Kalendoriuje pasižymėk, kurią paslaugą keisi po 1 mėnesio"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-5">Kalendoriuje pasižymėk, kurią paslaugą keisi po 1 mėnesio</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/nostr/"><span>Ankstesnis</span>Nostr: atviras tinklas, kurio nevaldo jokia įmonė</a>
-<a class="bk-next" href="/book/phone/"><span>Kitas</span>Kaip susigrąžinti telefono kontrolę</a>
-</div>
-  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
-  <span><a href="mailto:contact@proofconference.com">kontaktai</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="10" aria-labelledby="tavo-veiksmu-sarasas"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Veik</span></p><h2 id="tavo-veiksmu-sarasas" tabindex="-1">Tavo veiksmų sąrašas</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count">Atlikta <strong data-stat="ch-done" data-ch="big-tech">0</strong> iš 5 veiksmų</p><span class="bar" data-bar="ch" data-ch="big-tech" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-big-tech-request-export"><span class="legacy-anchor" id="big-tech-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-request-export" disabled="disabled"><span class="action-text">Užsisakyk savo duomenų eksportą iš „Google“, „Apple“ arba „Meta“</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-big-tech-replace-easy-service"><span class="legacy-anchor" id="big-tech-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-replace-easy-service" disabled="disabled"><span class="action-text">Pakeisk 1 lengvą paslaugą: paiešką, žemėlapius arba užrašus</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-big-tech-run-in-parallel"><span class="legacy-anchor" id="big-tech-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-run-in-parallel" disabled="disabled"><span class="action-text">Išsirink pirmąją svarbią paslaugą ir 2 savaites naudok ją lygiagrečiai su senąja</span><span class="effort"><span class="sr-only">, trukmė: </span>1 val.</span></label></li><li class="action" id="action-big-tech-move-data"><span class="legacy-anchor" id="big-tech-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-move-data" disabled="disabled"><span class="action-text">Perkelk duomenis ir pakeisk numatytąsias paslaugas, o senąją debesijos kopiją ištrink tik tada, kai patikrinsi nepriklausomą atsarginę kopiją ir išjungsi sinchronizavimą įrenginiuose, kurių kopijas nori pasilikti</span><span class="effort"><span class="sr-only">, trukmė: </span>savaitgalis</span></label></li><li class="action" id="action-big-tech-plan-next-service"><span class="legacy-anchor" id="big-tech-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-plan-next-service" disabled="disabled"><span class="action-text">Kalendoriuje pasižymėk, kurią paslaugą keisi po 1 mėnesio</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li></ul><p class="cl-hint">Užtenka atlikti po vieną veiksmą. Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros. <a href="/book/checklist/">Peržiūrėk visus veiksmus viename puslapyje</a>.</p><noscript><p class="cl-hint">Veiksmus pažymėti galima tik įjungus JavaScript. Skaityti sąrašą galima ir be jo.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="big-tech" disabled><span>Perskaičiau šį skyrių</span></label><noscript><p class="cl-hint">Pažymėti skyrių kaip perskaitytą galima tik įjungus JavaScript.</p></noscript><nav class="pager" aria-label="Knygos skyriai"><a class="pager-prev part-2" href="/book/nostr/"><span class="pager-dir">Ankstesnis · 7 skyrius</span><span class="pager-title">Nostr: atviras tinklas, kurio nevaldo jokia įmonė</span></a><a class="pager-next part-2" href="/book/phone/"><span class="pager-dir">Kitas · 9 skyrius</span><span class="pager-title">Kaip susigrąžinti telefono kontrolę</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> <span lang="en">A Guide to Autonomy</span></p><p>Pirmasis leidimas, PROOF leidimas. „Cypher Baltics“ iniciatyva: 18 skyrių ir 90 veiksmų.</p><p>Tekstas <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · originalus kodas <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Šriftams ir kitiems trečiųjų šalių ištekliams galioja jų pačių sąlygos. Teisių peržiūra viešam platinimui dar neatlikta.</p><p>Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros.</p><p class="footer-links"><a href="/">PROOF &lt;conference&gt;</a> · <a href="/book/en/big-tech/" hreflang="en" lang="en">English</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Paieška knygoje</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Klausimai, įrankiai, žingsniai ir žodžiai</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Ieškoma visame šio leidimo tekste: skyriuose, įvade, dalių įžangose, žodynėlyje, veiksmų sąrašuose ir pagalbiniuose puslapiuose.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Turinys</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Knygos turinys"><ul class="drawer-links"><li><a href="/book/">Viršelis</a></li><li><a href="/book/start/">Nuo ko pradėti?</a></li><li><a href="/book/#progress">Tavo pažanga</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/introduction/"><span class="ch-n">00</span><span class="ch-t">Įvadas</span><span class="ch-s">Prieš skyrius</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>1 dalis</span> Privatumas</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/privacy/"><span class="ch-n">··</span><span class="ch-t">Privatumo įrodymas</span><span class="ch-s">1 dalies įžanga</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/messages/"><span class="ch-n">01</span><span class="ch-t">Tavo žinutės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="messages">0</span> iš 5 veiksmų<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/passwords/"><span class="ch-n">02</span><span class="ch-t">Tavo slaptažodžiai ir paskyros</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="passwords">0</span> iš 5 veiksmų<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/browser/"><span class="ch-n">03</span><span class="ch-t">Tavo naršyklė ir paieška</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="browser">0</span> iš 5 veiksmų<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/email/"><span class="ch-n">04</span><span class="ch-t">Tavo el. paštas ir pseudonimai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="email">0</span> iš 5 veiksmų<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/network/"><span class="ch-n">05</span><span class="ch-t">Tavo tinklas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="network">0</span> iš 5 veiksmų<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>2 dalis</span> Autonomija</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/autonomy/"><span class="ch-n">··</span><span class="ch-t">Autonomijos įrodymas</span><span class="ch-s">2 dalies įžanga</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/keys/"><span class="ch-n">06</span><span class="ch-t">Raktai vietoj paskyrų</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="keys">0</span> iš 5 veiksmų<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: atviras tinklas, kurio nevaldo jokia įmonė</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="nostr">0</span> iš 5 veiksmų<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/big-tech/" aria-current="page"><span class="ch-n">08</span><span class="ch-t">Kaip po vieną pakeisti technologijų milžinių paslaugas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="big-tech">0</span> iš 5 veiksmų<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/phone/"><span class="ch-n">09</span><span class="ch-t">Kaip susigrąžinti telefono kontrolę</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="phone">0</span> iš 5 veiksmų<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Kaip paleisti paslaugas nuosavame serveryje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="self-hosting">0</span> iš 5 veiksmų<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/ai/"><span class="ch-n">11</span><span class="ch-t">Kaip naudotis DI ir neišsiduoti</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="ai">0</span> iš 5 veiksmų<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>3 dalis</span> Pinigai ir Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/work/"><span class="ch-n">··</span><span class="ch-t">Darbo įrodymas</span><span class="ch-s">3 dalies įžanga</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/savings/"><span class="ch-n">12</span><span class="ch-t">Kur laikyti savo darbo vaisius</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="savings">0</span> iš 5 veiksmų<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Tavo pirmoji piniginė ir pirmieji satošiai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="first-wallet">0</span> iš 5 veiksmų<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/seed/"><span class="ch-n">14</span><span class="ch-t">Kaip pasidaryti atkūrimo frazės atsarginę kopiją</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="seed">0</span> iš 5 veiksmų<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning ir eurai kasdienybėje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="lightning-and-euros">0</span> iš 5 veiksmų<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privatumas Bitcoin tinkle</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> iš 5 veiksmų<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Aparatinės piniginės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="hardware-wallet">0</span> iš 5 veiksmų<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/node/"><span class="ch-n">18</span><span class="ch-t">Kaip paleisti savo mazgą</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="node">0</span> iš 5 veiksmų<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/checklist/"><span class="ch-n">✓</span><span class="ch-t">Visi veiksmai</span><span class="ch-s">Atlikta <span data-stat="actions-done">0</span> iš 90 veiksmų</span></a></li><li class="ch-item"><a class="ch-row" href="/book/glossary/"><span class="ch-n">Az</span><span class="ch-t">Žodynėlis</span><span class="ch-s">44 terminai</span></a></li></ol></div><p class="drawer-scope">18 skyrių ir 90 veiksmų, lietuvių kalba.</p></nav></div></div></dialog>
 </body>
 </html>

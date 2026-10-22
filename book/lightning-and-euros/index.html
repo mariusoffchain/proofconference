@@ -1,283 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Lightning ir eurai kasdienybėje · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Lightning ir eurai kasdienybėje · A Guide to Autonomy</title>
 <meta name="description" content="Pagrindinis Bitcoin sluoksnis sukurtas saugumui, o ne kavai pirkti. Lightning yra virš jo veikiantis kasdienėms sumoms skirtas mokėjimų tinklas, kuriame…">
 <link rel="canonical" href="https://proofconference.com/book/lightning-and-euros/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/lightning-and-euros/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/lightning-and-euros/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/lightning-and-euros/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Lightning ir eurai kasdienybėje · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Lightning ir eurai kasdienybėje · A Guide to Autonomy">
 <meta property="og:description" content="Pagrindinis Bitcoin sluoksnis sukurtas saugumui, o ne kavai pirkti. Lightning yra virš jo veikiantis kasdienėms sumoms skirtas mokėjimų tinklas, kuriame…">
 <meta property="og:url" content="https://proofconference.com/book/lightning-and-euros/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
 <meta property="og:locale" content="lt_LT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lightning ir eurai kasdienybėje · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Lightning ir eurai kasdienybėje · A Guide to Autonomy">
 <meta name="twitter:description" content="Pagrindinis Bitcoin sluoksnis sukurtas saugumui, o ne kavai pirkti. Lightning yra virš jo veikiantis kasdienėms sumoms skirtas mokėjimų tinklas, kuriame…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=3d67147f5699"></script>
+<script defer src="/book/guide-assets/site-data-lt.js?v=66fbe9147120"></script>
+<script defer src="/book/guide-assets/guide.js?v=f361d2b9248c"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Pereiti prie turinio</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Tavo privatumo gidas">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
-    <li><a href="/book/#replays">&lt;įrašai&gt;</a></li>
-    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
-    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">skyrių perskaityta: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Tavo veiksmų sąrašas: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn lt" id="lang-btn" href="/book/en/lightning-and-euros/" hreflang="en" lang="en" aria-label="English version">EN</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/#contents">&lt;turinys&gt;</a>
-  <a href="/book/#replays">&lt;įrašai&gt;</a>
-  <a href="/book/checklist/">&lt;sąrašas&gt;</a>
-  <a href="/book/glossary/">&lt;žodynėlis&gt;</a>
-  <a href="/book/en/lightning-and-euros/" class="bk-menu-lang">EN · English</a>
-  <a href="/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="lightning-and-euros">
-  <header class="bk-head">
-    <p class="bk-label">Darbo įrodymas · 15 skyrius</p>
-    <h1>Lightning ir eurai kasdienybėje</h1>
-  </header>
-  <article class="bk-article">
-<h2>Trumpai</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/"><span class="brand-title" lang="en">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> leidimas</span></a><div class="header-actions"><a class="hbtn" href="/book/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Turinys</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Paieška</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, konferencijos svetainė</span></a><a class="hbtn hbtn--lang" href="/book/en/lightning-and-euros/" hreflang="en" lang="en" aria-label="EN, English version">EN</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/lightning-and-euros"><div class="page-layout is-chapter part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">Šiame puslapyje</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">Šiame puslapyje</p><ol class="toc-list"><li><a href="/book/lightning-and-euros/#trumpai" data-target="trumpai"><span class="toc-no">01</span><span class="toc-label">Trumpai</span></a></li><li><a href="/book/lightning-and-euros/#registras-per-letas-kavai" data-target="registras-per-letas-kavai"><span class="toc-no">02</span><span class="toc-label">Registras, per lėtas kavai</span></a></li><li><a href="/book/lightning-and-euros/#kanalai-i-bloku-grandine-irasomi-tik-2-kartus" data-target="kanalai-i-bloku-grandine-irasomi-tik-2-kartus"><span class="toc-no">03</span><span class="toc-label">Kanalai, į blokų grandinę įrašomi tik 2 kartus</span></a></li><li><a href="/book/lightning-and-euros/#kur-isleisti-satosius" data-target="kur-isleisti-satosius"><span class="toc-no">04</span><span class="toc-label">Kur išleisti satošius</span></a></li><li><a href="/book/lightning-and-euros/#kas-laiko-lesas-ir-kas-gali-jas-uzblokuoti" data-target="kas-laiko-lesas-ir-kas-gali-jas-uzblokuoti"><span class="toc-no">05</span><span class="toc-label">Kas laiko lėšas ir kas gali jas užblokuoti</span></a></li><li><a href="/book/lightning-and-euros/#kaip-pasirinkti-tilta-i-eurus" data-target="kaip-pasirinkti-tilta-i-eurus"><span class="toc-no">06</span><span class="toc-label">Kaip pasirinkti tiltą į eurus</span></a></li><li><a href="/book/lightning-and-euros/#zingsnis-po-zingsnio" data-target="zingsnis-po-zingsnio"><span class="toc-no">07</span><span class="toc-label">Žingsnis po žingsnio</span></a></li><li><a href="/book/lightning-and-euros/#klaidos-kuriu-verta-vengti" data-target="klaidos-kuriu-verta-vengti"><span class="toc-no">08</span><span class="toc-label">Klaidos, kurių verta vengti</span></a></li><li><a href="/book/lightning-and-euros/#norintiems-daugiau" data-target="norintiems-daugiau"><span class="toc-no">09</span><span class="toc-label">Norintiems daugiau</span></a></li><li><a href="/book/lightning-and-euros/#saltiniai" data-target="saltiniai"><span class="toc-no">10</span><span class="toc-label">Šaltiniai</span></a></li><li><a href="/book/lightning-and-euros/#tavo-veiksmu-sarasas" data-target="tavo-veiksmu-sarasas"><span class="toc-no">11</span><span class="toc-label">Tavo veiksmų sąrašas</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/work/">3 dalis · Pinigai ir Bitcoin</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">15 skyrius: </span>Lightning ir eurai kasdienybėje</h1><p class="ch-bignum" aria-hidden="true">15</p><div class="ch-meta"><span>15 skyrius iš 18</span><a href="/book/lightning-and-euros/#tavo-veiksmu-sarasas"><span>Atlikta <span data-stat="ch-done" data-ch="lightning-and-euros">0</span> iš 5 veiksmų</span></a><span class="ch-readstate" data-read-state="lightning-and-euros"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="trumpai"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="trumpai" tabindex="-1">Trumpai</h2>
 <p>Pagrindinis Bitcoin sluoksnis sukurtas saugumui, o ne kavai pirkti. Lightning yra virš jo veikiantis kasdienėms sumoms skirtas mokėjimų tinklas, kuriame mokėjimai labai pigūs ir įvyksta beveik akimirksniu. Šiame skyriuje parodyta, kaip mokėti ir gauti mokėjimus per Lightning tinklą, kur išleisti satošius ir kokiais keliais bitkoinus galima iškeisti į eurus ir atgal, o už kiekvieną iš jų savaip sumoki mokesčiais, patogumu ir privatumu. Šiame skyriuje nėra jokių investavimo patarimų, o tavo šalies mokesčių įstatymai galioja ir toliau.</p>
-<h2>Registras, per lėtas kavai</h2>
-<p>Bitcoin blokų grandinė maždaug kas 10 minučių pasipildo nauju bloku, o vieta kiekviename bloke ribota. Riba nustatyta sąmoningai, nes dėl jos registras lieka toks mažas, kad paprasti žmonės gali jį patikrinti savo kompiuteryje (žr. 18 skyrių). Šio pasirinkimo kaina tokia: kol mokėjimas pagrindinėje grandinėje (angl. on-chain) tampa galutinis, praeina nuo kelių minučių iki kelių valandų, o mokestis kyla, kai vietos bloke vienu metu prireikia daugeliui. Perkeliant santaupas tai priimtina, o perkant kavą neprotinga.</p>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="registras-per-letas-kavai"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Suprask</span></p><h2 id="registras-per-letas-kavai" tabindex="-1">Registras, per lėtas kavai</h2>
+<p>Bitcoin blokų grandinė maždaug kas 10 minučių pasipildo nauju bloku, o vieta kiekviename bloke ribota. Riba nustatyta sąmoningai, nes dėl jos registras lieka toks mažas, kad paprasti žmonės gali jį patikrinti savo kompiuteryje (žr. 18 skyrių). Šio pasirinkimo kaina tokia: kol mokėjimas pagrindinėje grandinėje (angl. on-chain) sulaukia patvirtinimų, paprastai praeina nuo kelių minučių iki kelių valandų (absoliutaus galutinumo nėra), o mokestis kyla, kai vietos bloke vienu metu prireikia daugeliui. Perkeliant santaupas tai priimtina, o perkant kavą neprotinga.</p>
 <p>Antrasis sunkumas yra tiltas. Algos, nuoma ir mokesčiai valstybei skaičiuojami eurais, todėl norint apskritai naudotis bitkoinais reikia kelio į juos ir kelio atgal. Geriausiai žinomas kelias yra didelė kriptovaliutų birža, kuri laiko tavo bitkoinus, asmens dokumentus ir visą veiksmų istoriją. Yra ir kitų kelių, aprašytų toliau, o jų mokesčiai, patogumas ir privatumas labai skiriasi.</p>
-<h2>Kanalai, į blokų grandinę įrašomi tik 2 kartus</h2>
+</section><section class="sec sec--explain" data-no="03" aria-labelledby="kanalai-i-bloku-grandine-irasomi-tik-2-kartus"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Suprask</span></p><h2 id="kanalai-i-bloku-grandine-irasomi-tik-2-kartus" tabindex="-1">Kanalai, į blokų grandinę įrašomi tik 2 kartus</h2>
 <p>Lightning remiasi <strong>mokėjimo kanalais</strong>. 2 dalyviai pagrindinės grandinės transakcija kartu užrakina šiek tiek bitkoinų ir nuo tada gali kiek nori kartų, beveik akimirksniu, perskirstyti likutį tarpusavyje keisdamiesi pasirašytais atnaujinimais, kurie į blokų grandinę niekada nepatenka. Pagrindinėje grandinėje įrašomas tik kanalo atidarymas ir uždarymas. Kanalai jungiasi į tinklą, todėl gali sumokėti ir tam, su kuo bendro kanalo neturi, o tada mokėjimas keliauja per tarpinius mazgus, kurie negali jo pasilikti ir paprastai uždirba cento dalį.</p>
 <p>Praktikoje matai 2 dalykus:</p>
 <ul>
-<li><strong>Mokėjimo prašymas</strong> (angl. invoice), kuris rodomas kaip QR kodas arba ilgas tekstas, prasidedantis raidėmis „lnbc“. Paprastai jame nurodyta fiksuota suma, jis naudojamas vieną kartą ir galioja ribotą laiką.</li>
+<li><strong>Mokėjimo prašymas</strong> (angl. invoice), kuris rodomas kaip QR kodas arba ilgas tekstas. Įprasti BOLT11 mokėjimo prašymai prasideda raidėmis „lnbc“, o naujesni BOLT12 prašymai turi kitokį formatą. Paprastai jame nurodyta fiksuota suma, jis naudojamas vieną kartą ir galioja ribotą laiką.</li>
 <li><strong>Lightning adresas</strong>, kuris atrodo kaip el. pašto adresas (you@provider.com) ir kurį galima naudoti daug kartų, todėl jis patogus arbatpinigiams ir kitiems mokėjimams gauti. Dauguma tokių adresų veikia per teikėjo žiniatinklio serverį. Piniginės „Phoenix“ adresas pagrįstas naujesniu standartu BOLT12, ir į tokį adresą kol kas gali sumokėti tik dalis piniginių.</li>
 </ul>
 <p>Šiuolaikinės piniginės arba tvarko kanalus už tave, arba apsieina be jų ir lėšas keičia (angl. swap) per išorinę paslaugą (žr. 13 skyrių).</p>
-<h2>Kur išleisti satošius</h2>
+</section><section class="sec sec--compare" data-no="04" aria-labelledby="kur-isleisti-satosius"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Palygink</span></p><h2 id="kur-isleisti-satosius" tabindex="-1">Kur išleisti satošius</h2>
 <ul>
-<li><strong>Gyvai.</strong> Vietų ieškok žemėlapyje <a href="https://btcmap.org/" target="_blank" rel="noopener noreferrer">„BTC Map“</a> (<a href="https://btcmap.org" target="_blank" rel="noopener noreferrer">btcmap.org</a>). Tai nemokamas bendruomenės tvarkomas žemėlapis, kuriame pažymėtos bitkoinus priimančios kavinės, parduotuvės, viešbučiai ir laisvai samdomi specialistai. Vilniuje, kur vyksta konferencija, 2026 m. rugsėjo mėn. duomenimis, pažymėtos kelios vietos, pavyzdžiui, kavinė <a href="https://btcmap.org/merchant/24824" target="_blank" rel="noopener noreferrer">„Baltic Brew“</a> (L. Asanavičiūtės g. 29), prie kurios nurodyti Lightning ir pagrindinės grandinės mokėjimai, ir <a href="https://zolak.lt/" target="_blank" rel="noopener noreferrer">„Zolak“</a>, buvusioje elektronikos gamykloje (Vytenio g. 50D) įsikūrusi meno rezidencija su baru „Zolak Micro Art Residence“, savo svetainėje skelbianti, kad priima Lightning mokėjimus. Įrašas gali būti pasenęs, todėl pažiūrėk, kada jis paskutinį kartą patikrintas, prieš užsisakant pasiteirauk, o atradus naują vietą pridėk ją į žemėlapį.</li>
+<li><strong>Gyvai.</strong> Vietų ieškok žemėlapyje <a href="https://btcmap.org/" class="ext" rel="noopener noreferrer">„BTC Map“</a> (<a href="https://btcmap.org" class="tool-link ext" rel="noopener noreferrer">btcmap.org</a>). Tai nemokamas bendruomenės tvarkomas žemėlapis, kuriame pažymėtos bitkoinus priimančios kavinės, parduotuvės, viešbučiai ir laisvai samdomi specialistai. Vilniuje, kur vyksta konferencija, 2026 m. rugsėjo mėn. duomenimis, pažymėtos kelios vietos, pavyzdžiui, kavinė <a href="https://btcmap.org/merchant/24824" class="ext" rel="noopener noreferrer">„Baltic Brew“</a> (L. Asanavičiūtės g. 29), prie kurios nurodyti Lightning ir pagrindinės grandinės mokėjimai, ir <a href="https://zolak.lt/" class="ext" rel="noopener noreferrer">„Zolak“</a>, buvusioje elektronikos gamykloje (Vytenio g. 50D) įsikūrusi meno rezidencija su baru „Zolak Micro Art Residence“, savo svetainėje skelbianti, kad priima Lightning mokėjimus. Įrašas gali būti pasenęs, todėl pažiūrėk, kada jis paskutinį kartą patikrintas, prieš užsisakant pasiteirauk, o atradus naują vietą pridėk ją į žemėlapį.</li>
 <li><strong>Arbatpinigiai ir zapai (angl. zaps).</strong> Nostr tinkle (žr. 7 skyrių) patikusio įrašo autoriui gali tiesiogiai nusiųsti kelis satošius, ir jokia platforma nepasiima savo dalies. Lightning adresą skelbia ir daug tinklalaidžių bei nepriklausomų autorių.</li>
 <li><strong>Žmonės.</strong> Pirmą kartą iš tikrųjų panaudoti Lightning dažnai tenka dalijantis sąskaitą ar grąžinant skolą draugui.</li>
 <li><strong>Internetu.</strong> Kelios įmonės už bitkoinus parduoda dovanų korteles, telefono sąskaitos papildymus, eSIM korteles ar keliones, ir tai netiesioginis būdas gyventi atsiskaitant satošiais ten, kur prekybininkai jų dar nepriima. Kiekviena toliau lentelėje išvardyta paslauga (2026 m. rugsėjo mėn. duomenimis) yra parduotuvė, o ne piniginė, todėl sumokėk už tai, ko reikia, ir nepalik ten likučio.</li>
 </ul>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>5 variantai · 4 stulpeliai</span><span class="compare-hint" aria-hidden="true">Slink į šoną →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Palyginimo lentelė: Kur išleisti satošius"><table>
 <thead>
 <tr>
-<th>Paslauga</th>
-<th>Ką gali nusipirkti</th>
-<th>Ar priima Lightning?</th>
-<th>Tapatybės tikrinimas</th>
+<th scope="col">Paslauga</th>
+<th scope="col">Ką gali nusipirkti</th>
+<th scope="col">Ar priima Lightning?</th>
+<th scope="col">Tapatybės tikrinimas</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://www.bitrefill.com/" target="_blank" rel="noopener noreferrer">Bitrefill</a></strong></td>
+<tr id="row-bitrefill">
+<th scope="row"><strong><a href="https://www.bitrefill.com/" class="ext" rel="noopener noreferrer">Bitrefill</a></strong></th>
 <td>Dovanų kortelės, telefono sąskaitos papildymai, eSIM kortelės</td>
 <td>Taip</td>
 <td>Įprastiems pirkiniams paskyros nereikia. Patvirtinus tapatybę padidėja pirkimo limitai.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.coinsbee.com/en/" target="_blank" rel="noopener noreferrer">CoinsBee</a></strong> („Coinsbee GmbH“)</td>
+<tr id="row-coinsbee-coinsbee-gmbh">
+<th scope="row"><strong><a href="https://www.coinsbee.com/en/" class="ext" rel="noopener noreferrer">CoinsBee</a></strong> („Coinsbee GmbH“)</th>
 <td>Dovanų kortelės, mokėjimo kortelės, telefono sąskaitos papildymai</td>
 <td>Taip</td>
-<td><a href="https://www.coinsbee.com/en/kyc-aml/" target="_blank" rel="noopener noreferrer">Netikrinama, kol vienas užsakymas neviršija 1 000 eurų, o visi kartu 10 000 eurų</a>, didesnėms sumoms tapatybę reikia patvirtinti.</td>
+<td><a href="https://www.coinsbee.com/en/kyc-aml/" class="ext" rel="noopener noreferrer">Netikrinama, kol vienas užsakymas neviršija 1 000 eurų, o visi kartu 10 000 eurų</a>, didesnėms sumoms tapatybę reikia patvirtinti.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.cryptorefills.com/" target="_blank" rel="noopener noreferrer">Cryptorefills</a></strong> („Big Dream Ventures B.V.“, Amsterdamas)</td>
+<tr id="row-cryptorefills-big-dream-ventures-b-v-amsterdamas">
+<th scope="row"><strong><a href="https://www.cryptorefills.com/" class="ext" rel="noopener noreferrer">Cryptorefills</a></strong> („Big Dream Ventures B.V.“, Amsterdamas)</th>
 <td>Dovanų kortelės, sąskaitos papildymai, eSIM kortelės, skrydžiai, nakvynė</td>
 <td>Taip</td>
 <td>Netikrinama, kaip teigiama jos svetainėje</td>
 </tr>
-<tr>
-<td><strong><a href="https://coingate.com/gift-cards" target="_blank" rel="noopener noreferrer">CoinGate dovanų kortelės</a></strong> (parduoda Lietuvos įmonė UAB „Rewards distributed“)</td>
+<tr id="row-coingate-dovanu-korteles-parduoda-lietuvos-imone-uab-rewards-distributed">
+<th scope="row"><strong><a href="https://coingate.com/gift-cards" class="ext" rel="noopener noreferrer">CoinGate dovanų kortelės</a></strong> (parduoda Lietuvos įmonė UAB „Rewards distributed“)</th>
 <td>Maždaug 6 000 prekių ženklų dovanų kortelės</td>
 <td>Taip</td>
 <td>Registruotis nereikia, kaip teigiama jos svetainėje</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.travala.com/" target="_blank" rel="noopener noreferrer">Travala</a></strong></td>
+<tr id="row-travala">
+<th scope="row"><strong><a href="https://www.travala.com/" class="ext" rel="noopener noreferrer">Travala</a></strong></th>
 <td>Viešbučiai, skrydžiai, pramogos</td>
 <td>Taip</td>
 <td>Užsakant reikia keliautojo duomenų, o oro linijų bendrovė ar viešbutis asmens dokumentą tikrina kaip įprasta</td>
 </tr>
 </tbody>
-</table></div>
-<h2>Kas laiko lėšas ir kas gali jas užblokuoti</h2>
+</table></div></figure>
+</section><section class="sec sec--explain" data-no="05" aria-labelledby="kas-laiko-lesas-ir-kas-gali-jas-uzblokuoti"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Suprask</span></p><h2 id="kas-laiko-lesas-ir-kas-gali-jas-uzblokuoti" tabindex="-1">Kas laiko lėšas ir kas gali jas užblokuoti</h2>
 <p>Apie kiekvieną kelią keliami tie patys klausimai kaip ir visoje knygoje: kas laiko lėšas, kol vyksta mokėjimas, ir kas gali jį sustabdyti.</p>
-<p>Depozitinėje programėlėje (angl. custodial) bitkoinus, kol jų neišsiimi, laiko įmonė, ir ji gali įšaldyti likutį arba atsisakyti įvykdyti mokėjimą. Savarankiško saugojimo Lightning piniginėje raktai yra tavo, tačiau mokėjimai keliauja per Lightning paslaugų teikėją (piniginės „Phoenix“ teikėjas yra „ACINQ“, piniginės „Bitkit“ teikėjas „Blocktank“) arba per nedidelę operatorių grupę (Spark). Lėšų jie pasiimti negali, bet gali atsisakyti jas persiųsti. Tada gali pasitraukti į blokų grandinę, tik tai kainuoja mokestį ir šiek tiek laiko.</p>
-<p>Tarpininkas (angl. broker), tikrinantis tapatybę pagal KYC taisykles, pirkimo metu laiko tavo eurus ir gali atsisakyti vykdyti užsakymą, paklausti, iš kur pinigai, arba uždaryti paskyrą, o tą patį gali ir bankas, iš kurio siunčiamas pavedimas. Lygiarangės (angl. peer-to-peer) platformos stengiasi apsieiti be lėšų laikytojo. Platformoje „Bisq“ bitkoinai užrakinami <a href="https://bisq.wiki/Security_deposit" target="_blank" rel="noopener noreferrer">2 iš 2 kelių parašų adrese</a>, kurį bendrai valdo 2 sandorio dalyviai, o platformoje „Hodl Hodl“ <a href="https://hodlhodl.com/blog/en/escrow-explained" target="_blank" rel="noopener noreferrer">2 iš 3 adrese</a>, kurio 1 raktą turi platforma, todėl nė viena šalis negali jų perkelti viena. Platforma „RoboSats“ naudoja <a href="https://learn.robosats.org/docs/escrow/" target="_blank" rel="noopener noreferrer">sulaikytą Lightning mokėjimą</a>, skirtą koordinatoriui, kurio serveryje paskelbtas užsakymas. Pasitikėti vis tiek tenka kita sandorio šalimi ir tuo, kas sprendžia ginčą.</p>
-<h2>Kaip pasirinkti tiltą į eurus</h2>
-<p>Nė vienas kelias nėra geriausias visais atžvilgiais, nes kiekviename paprastumas, mokesčiai ir privatumas suderinti vis kitaip. <strong>KYC</strong> (angl. know your customer, „pažink savo klientą“) reiškia, kad paslauga patikrina tavo tapatybę pagal asmens dokumentą. Europoje reguliuojamos įmonės dabar privalo tai daryti, o ką tai reiškia tavo privatumui, aiškinama 16 skyriuje. Ši rinka greitai keičiasi. Pavyzdžiui, Šveicarijos tarpininkas „Pocket Bitcoin“ <a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" target="_blank" rel="noopener noreferrer">2025 m. gruodį atsisakė supaprastinto tapatybės tikrinimo</a>. Lygiarangėse platformose <a href="https://hodlhodl.com/" target="_blank" rel="noopener noreferrer">„Hodl Hodl“</a>, <a href="https://bisq.network/" target="_blank" rel="noopener noreferrer">„Bisq“</a> ir <a href="https://learn.robosats.org/" target="_blank" rel="noopener noreferrer">„RoboSats“</a> gali keistis su kitu žmogumi ir bitkoinų neatiduoti jokiai įmonei, o sandoriui taikomos ankstesniame skirsnyje aprašytos sąlyginio deponavimo (angl. escrow) schemos. Lentelėje pateikta 2026 m. rugsėjo mėn. padėtis, o tu kiekvienu atveju pasitikrink, ar paslauga aptarnauja tavo šalies gyventojus.</p>
-<div class="bk-table"><table>
+<p>Depozitinėje programėlėje (angl. custodial) bitkoinus, kol jų neišsiimi, laiko įmonė, ir ji gali įšaldyti likutį arba atsisakyti įvykdyti mokėjimą. Savarankiško saugojimo Lightning piniginėje raktai yra tavo, tačiau mokėjimai keliauja per Lightning paslaugų teikėją (piniginės „Phoenix“ teikėjas yra „ACINQ“, piniginės „Bitkit“ teikėjas „Blocktank“) arba, taikant kitokį modelį, per nedidelę operatorių grupę (Spark). Šios paslaugos gali atsisakyti atlikti pervedimus. Lightning saugumui reikia tinkamai tvarkyti kanalus ir turėti atsargines kopijas, o Spark dar remiasi prielaida, kad <a href="https://docs.spark.money/learn/trust-model" class="ext" rel="noopener noreferrer">pervedimų metu sąžiningai elgsis bent nustatytas operatorių skaičius</a>. Pasitraukimas į blokų grandinę turi savų sąlygų, mokesčių ir vėlavimų, o vien raktų turėjimas nuo visų gedimų neapsaugo.</p>
+<p>Tarpininkas (angl. broker), tikrinantis tapatybę pagal KYC taisykles, pirkimo metu laiko tavo eurus ir gali atsisakyti vykdyti užsakymą, paklausti, iš kur pinigai, arba uždaryti paskyrą, o tą patį gali ir bankas, iš kurio siunčiamas pavedimas. Lygiarangės (angl. peer-to-peer) platformos stengiasi apsieiti be lėšų laikytojo. Platformoje „Bisq“ bitkoinai užrakinami <a href="https://bisq.wiki/Security_deposit" class="ext" rel="noopener noreferrer">2 iš 2 kelių parašų adrese</a>, kurį bendrai valdo 2 sandorio dalyviai, o platformoje „Hodl Hodl“ <a href="https://hodlhodl.com/blog/en/escrow-explained" class="ext" rel="noopener noreferrer">2 iš 3 adrese</a>, kurio 1 raktą turi platforma, todėl nė viena šalis negali jų perkelti viena. Platforma „RoboSats“ naudoja <a href="https://learn.robosats.org/docs/escrow/" class="ext" rel="noopener noreferrer">sulaikytą Lightning mokėjimą</a>, skirtą koordinatoriui, kurio serveryje paskelbtas užsakymas. Pasitikėti vis tiek tenka kita sandorio šalimi ir tuo, kas sprendžia ginčą.</p>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://docs.spark.money/learn/trust-model">docs.spark.money</a></li><li><a class="ext" rel="noopener noreferrer" href="https://bisq.wiki/Security_deposit">bisq.wiki</a></li><li><a class="ext" rel="noopener noreferrer" href="https://hodlhodl.com/blog/en/escrow-explained">hodlhodl.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://learn.robosats.org/docs/escrow/">learn.robosats.org</a></li></ul></div></section><section class="sec sec--compare" data-no="06" aria-labelledby="kaip-pasirinkti-tilta-i-eurus"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Palygink</span></p><h2 id="kaip-pasirinkti-tilta-i-eurus" tabindex="-1">Kaip pasirinkti tiltą į eurus</h2>
+<p>Nė vienas kelias nėra geriausias visais atžvilgiais, nes kiekviename paprastumas, mokesčiai ir privatumas suderinti vis kitaip. <strong>KYC</strong> (angl. know your customer, „pažink savo klientą“) reiškia, kad paslauga patikrina tavo tapatybę pagal asmens dokumentą. Europoje reguliuojamos įmonės dabar privalo tai daryti, o ką tai reiškia tavo privatumui, aiškinama 16 skyriuje. Ši rinka greitai keičiasi. Pavyzdžiui, Šveicarijos tarpininkas „Pocket Bitcoin“ <a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" class="ext" rel="noopener noreferrer">2025 m. gruodį atsisakė supaprastinto tapatybės tikrinimo</a>. Lygiarangėse platformose <a href="https://hodlhodl.com/" class="ext" rel="noopener noreferrer">„Hodl Hodl“</a>, <a href="https://bisq.network/" class="ext" rel="noopener noreferrer">„Bisq“</a> ir <a href="https://learn.robosats.org/" class="ext" rel="noopener noreferrer">„RoboSats“</a> gali keistis su kitu žmogumi ir bitkoinų neatiduoti jokiai įmonei, o sandoriui taikomos ankstesniame skirsnyje aprašytos sąlyginio deponavimo (angl. escrow) schemos. Lentelėje pateikta 2026 m. rugsėjo mėn. padėtis, o tu kiekvienu atveju pasitikrink, ar paslauga aptarnauja tavo šalies gyventojus.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>5 variantai · 6 stulpeliai</span><span class="compare-hint" aria-hidden="true">Slink į šoną →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Palyginimo lentelė: Kaip pasirinkti tiltą į eurus"><table>
 <thead>
 <tr>
-<th>Kelias</th>
-<th>Pavyzdžiai</th>
-<th>Tapatybės tikrinimas (KYC)</th>
-<th>Kas laiko bitkoinus</th>
-<th>Kas gali užblokuoti</th>
-<th>Kompromisas be pagražinimų</th>
+<th scope="col">Kelias</th>
+<th scope="col">Pavyzdžiai</th>
+<th scope="col">Tapatybės tikrinimas (KYC)</th>
+<th scope="col">Kas laiko bitkoinus</th>
+<th scope="col">Kas gali užblokuoti</th>
+<th scope="col">Kompromisas be pagražinimų</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Užsidirbti satošių</strong></td>
+<tr id="row-uzsidirbti-satosiu">
+<th scope="row"><strong>Užsidirbti satošių</strong></th>
 <td>Už darbą, parduotas prekes ar turinį gauti atlygį arba arbatpinigių bitkoinais</td>
 <td>Nėra</td>
 <td>Tu</td>
 <td>Tik Lightning paslaugų teikėjas vienoje ar kitoje pusėje, jei atsisako persiųsti mokėjimą</td>
 <td>Nėra jokio tarpininko. Reikia žmogaus, kuris sutiktų taip mokėti, o pajamos lieka apmokestinamos.</td>
 </tr>
-<tr>
-<td><strong>Lygiarangiai mainai</strong></td>
-<td>„<a href="https://hodlhodl.com/" target="_blank" rel="noopener noreferrer">Hodl Hodl</a>“ (žiniatinklis), „<a href="https://bisq.network/" target="_blank" rel="noopener noreferrer">Bisq</a>“ (kompiuterio programa), „<a href="https://robosats.org/" target="_blank" rel="noopener noreferrer">RoboSats</a>“ (Lightning, per Tor tinklą)</td>
+<tr id="row-lygiarangiai-mainai">
+<th scope="row"><strong>Lygiarangiai mainai</strong></th>
+<td>„<a href="https://hodlhodl.com/" class="tool-link ext" rel="noopener noreferrer">Hodl Hodl</a>“ (žiniatinklis), „<a href="https://bisq.network/" class="tool-link ext" rel="noopener noreferrer">Bisq</a>“ (kompiuterio programa), „<a href="https://robosats.org/" class="tool-link ext" rel="noopener noreferrer">RoboSats</a>“ (Lightning, per Tor tinklą)</td>
 <td>Pati platforma paprastai netikrina. „Hodl Hodl“ gali paprašyti patvirtinti tapatybę, jei kyla ginčas.</td>
 <td>Tu. Bitkoinai tik sandorio metu užrakinami sąlyginio deponavimo adrese, jei platforma tokį siūlo.</td>
 <td>Kita sandorio šalis, jei nesumoka, ir abiejų pusių bankai. Ginčus sprendžia mediatorius arba arbitras.</td>
 <td>Keitiesi su žmogumi banko pavedimu. Privačiau, bet paprastai brangiau, lėčiau ir reikia daugiau išmokti.</td>
 </tr>
-<tr>
-<td><strong>Europos tarpininkas, periodiniai pirkimai</strong></td>
-<td>„<a href="https://relai.app/" target="_blank" rel="noopener noreferrer">Relai</a>“, „<a href="https://pocketbitcoin.com/" target="_blank" rel="noopener noreferrer">Pocket Bitcoin</a>“ (abi Šveicarijos bendrovės)</td>
+<tr id="row-europos-tarpininkas-periodiniai-pirkimai">
+<th scope="row"><strong>Europos tarpininkas, periodiniai pirkimai</strong></th>
+<td>„<a href="https://relai.app/" class="tool-link ext" rel="noopener noreferrer">Relai</a>“, „<a href="https://pocketbitcoin.com/" class="tool-link ext" rel="noopener noreferrer">Pocket Bitcoin</a>“ (abi Šveicarijos bendrovės)</td>
 <td>Taip</td>
 <td>Tu. Bitkoinus jie atsiunčia į tavo piniginę.</td>
 <td>Tarpininkas, kuris gali atsisakyti vykdyti užsakymą arba uždaryti paskyrą, ir tavo bankas, kuris gali užblokuoti pavedimą</td>
 <td>Labai paprasta ir automatiška. Už kiekvieną pirkimą imamas mokestis, o įmonė žino, kas tu ir ką pirkai.</td>
 </tr>
-<tr>
-<td><strong>Sąskaita eurais ir bitkoinų piniginė</strong></td>
-<td>„<a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin</a>“ (IBAN sąskaita eurais ir pasirenkama „Visa“ kortelė šalia savarankiško saugojimo piniginės; „Bringin“ yra šios konferencijos rėmėja), „<a href="https://strike.me/" target="_blank" rel="noopener noreferrer">Strike</a>“ (SEPA įmokos, visiškai depozitinė paslauga)</td>
+<tr id="row-saskaita-eurais-ir-bitkoinu-pinigine">
+<th scope="row"><strong>Sąskaita eurais ir bitkoinų piniginė</strong></th>
+<td>„<a href="https://bringin.app/" class="tool-link ext" rel="noopener noreferrer">Bringin</a>“ (IBAN sąskaita eurais ir pasirenkama „Visa“ kortelė šalia savarankiško saugojimo piniginės), „<a href="https://strike.me/" class="tool-link ext" rel="noopener noreferrer">Strike</a>“ (SEPA įmokos, visiškai depozitinė paslauga)</td>
 <td>Taip</td>
 <td>„Bringin“: bitkoinus laikai tu. „Strike“: viską laiko įmonė, kol neišsiimi į savo piniginę.</td>
 <td>„Bringin“ gali užblokuoti sąskaitą eurais ir kortelę, kaip bet kuri reguliuojama mokėjimo įmonė, bet ne bitkoinus, kurie laikomi savarankiško saugojimo piniginėje. „Strike“ yra depozitinė paslauga, todėl įmonė laiko ir tavo eurų, ir tavo bitkoinų raktus ir gali jais visiškai disponuoti: įšaldyti likutį, atsisakyti įvykdyti mokėjimą arba uždaryti paskyrą.</td>
 <td>Patogu keisti satošius į eurus ir atgal. Abi puses mato viena įmonė, už kiekvieną keitimą imamas mokestis, o eurų pusė yra tokia pat reguliuojama sąskaita kaip bet kuri kita.</td>
 </tr>
-<tr>
-<td><strong>Bitkoinų automatas</strong></td>
-<td>Automatai, išvardyti svetainėje <a href="https://coinatmradar.com" target="_blank" rel="noopener noreferrer">coinatmradar.com</a></td>
+<tr id="row-bitkoinu-automatas">
+<th scope="row"><strong>Bitkoinų automatas</strong></th>
+<td>Automatai, išvardyti svetainėje <a href="https://coinatmradar.com" class="tool-link ext" rel="noopener noreferrer">coinatmradar.com</a></td>
 <td>ES paprastai taip, priklauso nuo operatoriaus ir sumos</td>
 <td>Tu</td>
 <td>Operatorius, kuris nustato limitus ir gali atsisakyti įvykdyti operaciją</td>
 <td>Įdedi grynuosius ir po kelių minučių gauni bitkoinų. Mokesčiai paprastai didžiausi iš visų kelių.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>Daugumai žmonių, nusprendusių keisti eurus, protingas derinys būtų toks: jiems aiškus reguliuojamas kelias, naudojamas tik tam, kad bitkoinai atkeliautų į nuosavą piniginę, ir lygiarangis kelias, išbandytas su mažomis sumomis, kad nereikėtų priklausyti nuo vienų durų. Kad ir kurį kelią pasirinktum, pardavus ar išleidus bitkoinus gali atsirasti mokestinė prievolė, todėl kaupk įrašus ir pasitikrink savo šalies taisykles.</p>
-<aside class="bk-code bk-ticket" id="bk-code">
-  <p class="bk-label">Vienintelis rėmėjas · konferencijos kodas</p>
-  <div class="bk-ticket-mid">
-    <span class="bk-code-key">PROOF</span>
-    <button type="button" class="bk-code-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('PROOF');this.textContent='Nukopijuota';var l=document.getElementById('bk-code-live');if(l)l.textContent='Nukopijuota'">Kopijuoti</button>
-    <span class="sr-only" aria-live="polite" id="bk-code-live"></span>
-  </div>
-  <p class="bk-code-txt">Konferencijos rėmėja „Bringin“ siūlo PROOF dalyviams kodą: įvesk jį programėlėje, kai atidarysi paskyrą, ir 3 mėnesius mokėsi perpus mažesnius mokesčius.</p>
-  <p class="bk-code-note">„Bringin“ lentelėje aukščiau pateikta tarp kitų būdų, ir jai galioja tos pačios ribos: sąskaita eurais yra reguliuojama, o ją atidarant reikia patvirtinti tapatybę.</p>
-</aside>
-<h2>Žingsnis po žingsnio</h2>
+</section><section class="sec sec--steps" data-no="07" aria-labelledby="zingsnis-po-zingsnio"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Instrukcija</span></p><h2 id="zingsnis-po-zingsnio" tabindex="-1">Žingsnis po žingsnio</h2>
 <p>Pavyzdyje naudojama piniginė „Phoenix“. Bet kurioje kitoje Lightning piniginėje logika ta pati.</p>
-<ol>
-<li><strong>Apmokėk mokėjimo prašymą.</strong> Konferencijoje arba pas prekybininką bakstelėk „Send“ (siųsti) ir nuskenuok QR kodą. Patikrink rodomą sumą ir mokestį, tada patvirtink. Prekybininkas mokėjimą paprastai pamato per 1 ar 2 sekundes.</li>
-<li><strong>Gauk mokėjimą pagal mokėjimo prašymą.</strong> Bakstelėk „Receive“ (gauti), jei nori, įvesk sumą ir parodyk QR kodą. Nepamiršk, kad prašymas galioja ribotą laiką, o pirmasis mokėjimas į piniginę „Phoenix“ turi viršyti kanalo mokestį (žr. 13 skyrių).</li>
-<li><strong>Gauk mokėjimą Lightning adresu.</strong> Jei piniginė jį siūlo, susirask jį nustatymuose arba gavimo ekrane ir išbandyk iš kitos piniginės anksčiau, nei jį paskelbsi. Piniginės „Phoenix“ adresas pagrįstas BOLT12, todėl daug piniginių į jį sumokėti dar negali. Depozitinės arba Spark pagrindu veikiančios piniginės adresas tinka beveik visiems siuntėjams, tik su 13 skyriuje aprašytais kompromisais.</li>
-<li><strong>Išsiimk lėšas iš tarpininko ar programėlės į SAVO piniginę.</strong> Pasirink „withdraw“ (išsiimti) arba „send“ (siųsti), įklijuok savo piniginės sugeneruotą adresą arba mokėjimo prašymą ir pradėk nuo mažos bandomosios sumos. Būtent šiuo žingsniu pasitikėjimą ekrane rodomu likučiu pakeiti patikrinimu, nes pamatai, kad bitkoinai atkeliavo į piniginę, kurios raktus turi tu. Didesnes sumas išsiimk pagrindine grandine į santaupų piniginę (žr. 14 ir 17 skyrius).</li>
-<li><strong>Telefone laikyk tik išlaidoms skirtus pinigus.</strong> Lightning piniginę vertink kaip kišenėje nešiojamą piniginę. Kai joje susikaupia daugiau, nei nešiotumeisi grynaisiais, perteklių perkelk į pagrindinę grandinę.</li>
-<li><strong>Tvarkyk apskaitą.</strong> Eksportuok arba užsirašyk pirkimus ir pardavimus su datomis ir sumomis, nes jų prireiks mokesčių deklaracijai.</li>
+<ol class="steps">
+<li id="step-1"><strong>Apmokėk mokėjimo prašymą.</strong> Konferencijoje arba pas prekybininką bakstelėk „Send“ (siųsti) ir nuskenuok QR kodą. Patikrink rodomą sumą ir mokestį, tada patvirtink. Prekybininkas mokėjimą paprastai pamato per 1 ar 2 sekundes.</li>
+<li id="step-2"><strong>Gauk mokėjimą pagal mokėjimo prašymą.</strong> Bakstelėk „Receive“ (gauti), jei nori, įvesk sumą ir parodyk QR kodą. Nepamiršk, kad prašymas galioja ribotą laiką, o pirmasis mokėjimas į piniginę „Phoenix“ turi viršyti kanalo mokestį (žr. 13 skyrių).</li>
+<li id="step-3"><strong>Gauk mokėjimą Lightning adresu.</strong> Jei piniginė jį siūlo, susirask jį nustatymuose arba gavimo ekrane ir išbandyk iš kitos piniginės anksčiau, nei jį paskelbsi. Piniginės „Phoenix“ adresas pagrįstas BOLT12, todėl daug piniginių į jį sumokėti dar negali. Depozitinės arba Spark pagrindu veikiančios piniginės adresas tinka beveik visiems siuntėjams, tik su 13 skyriuje aprašytais kompromisais.</li>
+<li id="step-4"><strong>Išsiimk lėšas iš tarpininko ar programėlės į SAVO piniginę.</strong> Pasirink „withdraw“ (išsiimti) arba „send“ (siųsti), įklijuok savo piniginės sugeneruotą adresą arba mokėjimo prašymą ir pradėk nuo mažos bandomosios sumos. Būtent šiuo žingsniu pasitikėjimą ekrane rodomu likučiu pakeiti patikrinimu, nes pamatai, kad bitkoinai atkeliavo į piniginę, kurios raktus turi tu. Didesnes sumas išsiimk pagrindine grandine į santaupų piniginę (žr. 14 ir 17 skyrius).</li>
+<li id="step-5"><strong>Telefone laikyk tik išlaidoms skirtus pinigus.</strong> Lightning piniginę vertink kaip kišenėje nešiojamą piniginę. Kai joje susikaupia daugiau, nei nešiotumeisi grynaisiais, perteklių perkelk į pagrindinę grandinę.</li>
+<li id="step-6"><strong>Tvarkyk apskaitą.</strong> Eksportuok arba užsirašyk pirkimus ir pardavimus su datomis ir sumomis, nes jų prireiks mokesčių deklaracijai.</li>
 </ol>
-<h2>Klaidos, kurių verta vengti</h2>
+</section><section class="sec sec--pitfalls" data-no="08" aria-labelledby="klaidos-kuriu-verta-vengti"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Atsargiai</span></p><h2 id="klaidos-kuriu-verta-vengti" tabindex="-1">Klaidos, kurių verta vengti</h2>
 <ul>
 <li><strong>Laikyti santaupas telefono Lightning piniginėje.</strong> Ji laikoma įrenginyje, kurį gali pamesti ar sudaužyti ir kuris visą dieną prijungtas prie interneto, todėl tinka išlaidoms skirtiems pinigams.</li>
-<li><strong>Supainioti mokėjimo prašymą su pagrindinės grandinės adresu.</strong> Mokėjimo prašymas prasideda „lnbc“ ir galioja ribotą laiką. Pagrindinės grandinės adresas prasideda „bc1“, „1“ arba „3“ ir galioja neribotai. Kai išsiimi lėšas iš paslaugos, pasirink atitinkamą tinklą.</li>
+<li><strong>Supainioti mokėjimo prašymą su pagrindinės grandinės adresu.</strong> BOLT11 mokėjimo prašymas prasideda „lnbc“ ir galioja ribotą laiką, o BOLT12 naudoja kitus formatus. Pagrindinės grandinės adresas prasideda „bc1“, „1“ arba „3“ ir galioja neribotai. Kai išsiimi lėšas iš paslaugos, pasirink atitinkamą tinklą.</li>
 <li><strong>Mokėti dideles sumas per Lightning.</strong> Kanalų talpa ribota, todėl dideli mokėjimai dažniau nepavyksta. Lightning skirtas kasdienėms sumoms, o visa kita atliekama pagrindinėje grandinėje.</li>
 <li><strong>Palikti bitkoinus pas tarpininką.</strong> Pirkimas baigtas tada, kai bitkoinai yra tavo piniginėje, o ne tada, kai programėlė rodo likutį (žr. 13 skyrių).</li>
 <li><strong>Neskaičiuoti visos kainos.</strong> Lygink galutinį gaunamų satošių kiekį, o ne skelbiamą mokestį, nes valiutos kurse dažnai slypi marža.</li>
 <li><strong>Pamiršti mokesčius valstybei.</strong> Mokėjimas bitkoinais gali būti laikomas jų pardavimu, o taisyklės įvairiose šalyse skiriasi.</li>
 </ul>
-<h2>Norintiems daugiau</h2>
-<ul>
-<li><strong>PROOF konferencijoje:</strong> „CBDC, KYC ir kova dėl monetarinio privatumo“, pranešimą skaito Linas K., ir „Kodėl centralizuoti pinigai neveikia: kaip Bitcoin tapo alternatyva“, pranešimą skaito Piktas.</li>
-<li><strong>Rask, kur išleisti:</strong> „BTC Map“ (<a href="https://btcmap.org" target="_blank" rel="noopener noreferrer">btcmap.org</a>).</li>
-<li><strong>Pirmiau minėtų piniginių ir mainų platformų pamokos:</strong> „Plan B Academy“ (<a href="https://planb.academy" target="_blank" rel="noopener noreferrer">planb.academy</a>).</li>
-<li><strong>Nuodugniau apie Lightning:</strong> „Mastering the Lightning Network“, internete skaitoma nemokamai (<a href="https://github.com/lnbook/lnbook" target="_blank" rel="noopener noreferrer">github.com/lnbook/lnbook</a>).</li>
+</section><section class="sec sec--further" data-no="09" aria-labelledby="norintiems-daugiau"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Norintiems daugiau</span></p><h2 id="norintiems-daugiau" tabindex="-1">Norintiems daugiau</h2>
+<ul class="refs">
+<li><strong>Rask, kur išleisti:</strong> „BTC Map“ (<a href="https://btcmap.org" class="tool-link ext" rel="noopener noreferrer">btcmap.org</a>).</li>
+<li><strong>Pirmiau minėtų piniginių ir mainų platformų pamokos:</strong> „Plan B Academy“ (<a href="https://planb.academy" class="tool-link ext" rel="noopener noreferrer">planb.academy</a>).</li>
+<li><strong>Nuodugniau apie Lightning:</strong> „Mastering the Lightning Network“, internete skaitoma nemokamai (<a href="https://github.com/lnbook/lnbook" class="tool-link ext" rel="noopener noreferrer">github.com/lnbook/lnbook</a>).</li>
 <li><strong>Kitas skyrius:</strong> privatumas Bitcoin tinkle.</li>
 </ul>
-<h2>Šaltiniai</h2>
-<ul>
-<li><a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" target="_blank" rel="noopener noreferrer">Important Update: Full Verification Coming to Pocket</a>, „Pocket Bitcoin“, 2025 m. spalio 16 d.</li>
-<li><a href="https://bisq.wiki/Security_deposit" target="_blank" rel="noopener noreferrer">Security deposit</a>, „Bisq Wiki“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://hodlhodl.com/blog/en/escrow-explained" target="_blank" rel="noopener noreferrer">What is multisig escrow and how it works</a>, „Hodl Hodl“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://learn.robosats.org/docs/escrow/" target="_blank" rel="noopener noreferrer">Trade escrow</a>, „Learn RoboSats“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin: wallet, euro account and fees</a>, „Bringin“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://btcmap.org/merchant/24824" target="_blank" rel="noopener noreferrer">Baltic Brew</a> ir <a href="https://btcmap.org/merchant/26604" target="_blank" rel="noopener noreferrer">Zolak Micro Art Residence</a>, „BTC Map“ įrašai apie Vilniaus vietas, žiūrėta 2026 m. rugsėjo 20 d.</li>
-<li><a href="https://www.coinsbee.com/en/kyc-aml/" target="_blank" rel="noopener noreferrer">KYC and AML: purchase limits</a>, „CoinsBee“, žiūrėta 2026 m. rugsėjį.</li>
+</section><section class="sec sec--sources" data-no="10" aria-labelledby="saltiniai"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Šaltiniai</span></p><h2 id="saltiniai" tabindex="-1">Šaltiniai</h2>
+<ul class="refs">
+<li><a href="https://docs.spark.money/learn/trust-model" class="ext" rel="noopener noreferrer">Spark trust model</a>, Spark dokumentacija, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" class="ext" rel="noopener noreferrer">Important Update: Full Verification Coming to Pocket</a>, „Pocket Bitcoin“, 2025 m. spalio 16 d.</li>
+<li><a href="https://bisq.wiki/Security_deposit" class="ext" rel="noopener noreferrer">Security deposit</a>, „Bisq Wiki“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://hodlhodl.com/blog/en/escrow-explained" class="ext" rel="noopener noreferrer">What is multisig escrow and how it works</a>, „Hodl Hodl“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://learn.robosats.org/docs/escrow/" class="ext" rel="noopener noreferrer">Trade escrow</a>, „Learn RoboSats“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://bringin.app/" class="ext" rel="noopener noreferrer">Bringin: wallet, euro account and fees</a>, „Bringin“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://btcmap.org/merchant/24824" class="ext" rel="noopener noreferrer">Baltic Brew</a> ir <a href="https://btcmap.org/merchant/26604" class="ext" rel="noopener noreferrer">Zolak Micro Art Residence</a>, „BTC Map“ įrašai apie Vilniaus vietas, žiūrėta 2026 m. rugsėjo 20 d.</li>
+<li><a href="https://www.coinsbee.com/en/kyc-aml/" class="ext" rel="noopener noreferrer">KYC and AML: purchase limits</a>, „CoinsBee“, žiūrėta 2026 m. rugsėjį.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Tavo veiksmų sąrašas</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="lightning-and-euros-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-1" aria-label="Apmokėk Lightning mokėjimo prašymą konferencijoje arba pas prekybininką"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-1">Apmokėk Lightning mokėjimo prašymą konferencijoje arba pas prekybininką</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-2" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-2" aria-label="Susikurk Lightning adresą ir išbandyk jį iš kitos piniginės"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-2">Susikurk Lightning adresą ir išbandyk jį iš kitos piniginės</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-3" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-3" aria-label="Svetainėje btcmap.org surask 3 vietas netoli savęs"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-3">Svetainėje btcmap.org surask 3 vietas netoli savęs</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-4" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-4" aria-label="Visą likutį iš tarpininko ar biržos išsiimk į savo piniginę"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-4">Visą likutį iš tarpininko ar biržos išsiimk į savo piniginę</label>
-        <span class="bk-effort">1 val.</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-5" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-5" aria-label="Perskaityk, kaip veikia lygiarangiai mainai, kol jų dar neprireikė"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-5">Perskaityk, kaip veikia lygiarangiai mainai, kol jų dar neprireikė</label>
-        <span class="bk-effort">1 val.</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/seed/"><span>Ankstesnis</span>Kaip pasidaryti atkūrimo frazės atsarginę kopiją</a>
-<a class="bk-next" href="/book/bitcoin-privacy/"><span>Kitas</span>Privatumas Bitcoin tinkle</a>
-</div>
-  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
-  <span><a href="mailto:contact@proofconference.com">kontaktai</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="11" aria-labelledby="tavo-veiksmu-sarasas"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Veik</span></p><h2 id="tavo-veiksmu-sarasas" tabindex="-1">Tavo veiksmų sąrašas</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count">Atlikta <strong data-stat="ch-done" data-ch="lightning-and-euros">0</strong> iš 5 veiksmų</p><span class="bar" data-bar="ch" data-ch="lightning-and-euros" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-lightning-and-euros-pay-invoice"><span class="legacy-anchor" id="lightning-and-euros-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-pay-invoice" disabled="disabled"><span class="action-text">Apmokėk Lightning mokėjimo prašymą konferencijoje arba pas prekybininką</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-lightning-and-euros-lightning-address"><span class="legacy-anchor" id="lightning-and-euros-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-lightning-address" disabled="disabled"><span class="action-text">Susikurk Lightning adresą ir išbandyk jį iš kitos piniginės</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-lightning-and-euros-btcmap"><span class="legacy-anchor" id="lightning-and-euros-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-btcmap" disabled="disabled"><span class="action-text">Svetainėje <a href="https://btcmap.org" class="tool-link ext" rel="noopener noreferrer">btcmap.org</a> surask 3 vietas netoli savęs</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-lightning-and-euros-withdraw"><span class="legacy-anchor" id="lightning-and-euros-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-withdraw" disabled="disabled"><span class="action-text">Visą likutį iš tarpininko ar biržos išsiimk į savo piniginę</span><span class="effort"><span class="sr-only">, trukmė: </span>1 val.</span></label></li><li class="action" id="action-lightning-and-euros-peer-to-peer"><span class="legacy-anchor" id="lightning-and-euros-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-peer-to-peer" disabled="disabled"><span class="action-text">Perskaityk, kaip veikia lygiarangiai mainai, kol jų dar neprireikė</span><span class="effort"><span class="sr-only">, trukmė: </span>1 val.</span></label></li></ul><p class="cl-hint">Užtenka atlikti po vieną veiksmą. Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros. <a href="/book/checklist/">Peržiūrėk visus veiksmus viename puslapyje</a>.</p><noscript><p class="cl-hint">Veiksmus pažymėti galima tik įjungus JavaScript. Skaityti sąrašą galima ir be jo.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="lightning-and-euros" disabled><span>Perskaičiau šį skyrių</span></label><noscript><p class="cl-hint">Pažymėti skyrių kaip perskaitytą galima tik įjungus JavaScript.</p></noscript><nav class="pager" aria-label="Knygos skyriai"><a class="pager-prev part-3" href="/book/seed/"><span class="pager-dir">Ankstesnis · 14 skyrius</span><span class="pager-title">Kaip pasidaryti atkūrimo frazės atsarginę kopiją</span></a><a class="pager-next part-3" href="/book/bitcoin-privacy/"><span class="pager-dir">Kitas · 16 skyrius</span><span class="pager-title">Privatumas Bitcoin tinkle</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> <span lang="en">A Guide to Autonomy</span></p><p>Pirmasis leidimas, PROOF leidimas. „Cypher Baltics“ iniciatyva: 18 skyrių ir 90 veiksmų.</p><p>Tekstas <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · originalus kodas <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Šriftams ir kitiems trečiųjų šalių ištekliams galioja jų pačių sąlygos. Teisių peržiūra viešam platinimui dar neatlikta.</p><p>Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros.</p><p class="footer-links"><a href="/">PROOF &lt;conference&gt;</a> · <a href="/book/en/lightning-and-euros/" hreflang="en" lang="en">English</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Paieška knygoje</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Klausimai, įrankiai, žingsniai ir žodžiai</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Ieškoma visame šio leidimo tekste: skyriuose, įvade, dalių įžangose, žodynėlyje, veiksmų sąrašuose ir pagalbiniuose puslapiuose.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Turinys</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Knygos turinys"><ul class="drawer-links"><li><a href="/book/">Viršelis</a></li><li><a href="/book/start/">Nuo ko pradėti?</a></li><li><a href="/book/#progress">Tavo pažanga</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/introduction/"><span class="ch-n">00</span><span class="ch-t">Įvadas</span><span class="ch-s">Prieš skyrius</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>1 dalis</span> Privatumas</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/privacy/"><span class="ch-n">··</span><span class="ch-t">Privatumo įrodymas</span><span class="ch-s">1 dalies įžanga</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/messages/"><span class="ch-n">01</span><span class="ch-t">Tavo žinutės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="messages">0</span> iš 5 veiksmų<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/passwords/"><span class="ch-n">02</span><span class="ch-t">Tavo slaptažodžiai ir paskyros</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="passwords">0</span> iš 5 veiksmų<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/browser/"><span class="ch-n">03</span><span class="ch-t">Tavo naršyklė ir paieška</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="browser">0</span> iš 5 veiksmų<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/email/"><span class="ch-n">04</span><span class="ch-t">Tavo el. paštas ir pseudonimai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="email">0</span> iš 5 veiksmų<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/network/"><span class="ch-n">05</span><span class="ch-t">Tavo tinklas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="network">0</span> iš 5 veiksmų<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>2 dalis</span> Autonomija</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/autonomy/"><span class="ch-n">··</span><span class="ch-t">Autonomijos įrodymas</span><span class="ch-s">2 dalies įžanga</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/keys/"><span class="ch-n">06</span><span class="ch-t">Raktai vietoj paskyrų</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="keys">0</span> iš 5 veiksmų<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: atviras tinklas, kurio nevaldo jokia įmonė</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="nostr">0</span> iš 5 veiksmų<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/big-tech/"><span class="ch-n">08</span><span class="ch-t">Kaip po vieną pakeisti technologijų milžinių paslaugas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="big-tech">0</span> iš 5 veiksmų<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/phone/"><span class="ch-n">09</span><span class="ch-t">Kaip susigrąžinti telefono kontrolę</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="phone">0</span> iš 5 veiksmų<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Kaip paleisti paslaugas nuosavame serveryje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="self-hosting">0</span> iš 5 veiksmų<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/ai/"><span class="ch-n">11</span><span class="ch-t">Kaip naudotis DI ir neišsiduoti</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="ai">0</span> iš 5 veiksmų<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>3 dalis</span> Pinigai ir Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/work/"><span class="ch-n">··</span><span class="ch-t">Darbo įrodymas</span><span class="ch-s">3 dalies įžanga</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/savings/"><span class="ch-n">12</span><span class="ch-t">Kur laikyti savo darbo vaisius</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="savings">0</span> iš 5 veiksmų<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Tavo pirmoji piniginė ir pirmieji satošiai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="first-wallet">0</span> iš 5 veiksmų<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/seed/"><span class="ch-n">14</span><span class="ch-t">Kaip pasidaryti atkūrimo frazės atsarginę kopiją</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="seed">0</span> iš 5 veiksmų<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/lightning-and-euros/" aria-current="page"><span class="ch-n">15</span><span class="ch-t">Lightning ir eurai kasdienybėje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="lightning-and-euros">0</span> iš 5 veiksmų<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privatumas Bitcoin tinkle</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> iš 5 veiksmų<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Aparatinės piniginės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="hardware-wallet">0</span> iš 5 veiksmų<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/node/"><span class="ch-n">18</span><span class="ch-t">Kaip paleisti savo mazgą</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="node">0</span> iš 5 veiksmų<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/checklist/"><span class="ch-n">✓</span><span class="ch-t">Visi veiksmai</span><span class="ch-s">Atlikta <span data-stat="actions-done">0</span> iš 90 veiksmų</span></a></li><li class="ch-item"><a class="ch-row" href="/book/glossary/"><span class="ch-n">Az</span><span class="ch-t">Žodynėlis</span><span class="ch-s">44 terminai</span></a></li></ol></div><p class="drawer-scope">18 skyrių ir 90 veiksmų, lietuvių kalba.</p></nav></div></div></dialog>
 </body>
 </html>

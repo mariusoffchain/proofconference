@@ -1,228 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Tavo žinutės · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Tavo žinutės · A Guide to Autonomy</title>
 <meta name="description" content="Pokalbiai yra vieni intymiausių duomenų, kuriuos sukuri. Perkelk juos į susirašinėjimo programėlę, kuri automatiškai šifruoja žinutes ištisiniu būdu, yra…">
 <link rel="canonical" href="https://proofconference.com/book/messages/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/messages/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/messages/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/messages/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Tavo žinutės · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Tavo žinutės · A Guide to Autonomy">
 <meta property="og:description" content="Pokalbiai yra vieni intymiausių duomenų, kuriuos sukuri. Perkelk juos į susirašinėjimo programėlę, kuri automatiškai šifruoja žinutes ištisiniu būdu, yra…">
 <meta property="og:url" content="https://proofconference.com/book/messages/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
 <meta property="og:locale" content="lt_LT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tavo žinutės · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Tavo žinutės · A Guide to Autonomy">
 <meta name="twitter:description" content="Pokalbiai yra vieni intymiausių duomenų, kuriuos sukuri. Perkelk juos į susirašinėjimo programėlę, kuri automatiškai šifruoja žinutes ištisiniu būdu, yra…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-lt.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=3d67147f5699"></script>
+<script defer src="/book/guide-assets/site-data-lt.js?v=66fbe9147120"></script>
+<script defer src="/book/guide-assets/guide.js?v=f361d2b9248c"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Pereiti prie turinio</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Tavo privatumo gidas">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/#contents">&lt;turinys&gt;</a></li>
-    <li><a href="/book/#replays">&lt;įrašai&gt;</a></li>
-    <li><a href="/book/checklist/">&lt;sąrašas&gt;</a></li>
-    <li><a href="/book/glossary/">&lt;žodynėlis&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="skyrių perskaityta"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">skyrių perskaityta: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Tavo veiksmų sąrašas"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Tavo veiksmų sąrašas: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn lt" id="lang-btn" href="/book/en/messages/" hreflang="en" lang="en" aria-label="English version">EN</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/#contents">&lt;turinys&gt;</a>
-  <a href="/book/#replays">&lt;įrašai&gt;</a>
-  <a href="/book/checklist/">&lt;sąrašas&gt;</a>
-  <a href="/book/glossary/">&lt;žodynėlis&gt;</a>
-  <a href="/book/en/messages/" class="bk-menu-lang">EN · English</a>
-  <a href="/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page priv page-top" data-slug="messages">
-  <header class="bk-head">
-    <p class="bk-label">Privatumo įrodymas · 1 skyrius</p>
-    <h1>Tavo žinutės</h1>
-  </header>
-  <article class="bk-article">
-<h2>Trumpai</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/"><span class="brand-title" lang="en">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> leidimas</span></a><div class="header-actions"><a class="hbtn" href="/book/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Turinys</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Paieška</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, konferencijos svetainė</span></a><a class="hbtn hbtn--lang" href="/book/en/messages/" hreflang="en" lang="en" aria-label="EN, English version">EN</a></div></div></header>
+<div class="read-progress part-1" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/messages"><div class="page-layout is-chapter part-1"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">Šiame puslapyje</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">Šiame puslapyje</p><ol class="toc-list"><li><a href="/book/messages/#trumpai" data-target="trumpai"><span class="toc-no">01</span><span class="toc-label">Trumpai</span></a></li><li><a href="/book/messages/#uzsifruota-dar-nereiskia-privatu" data-target="uzsifruota-dar-nereiskia-privatu"><span class="toc-no">02</span><span class="toc-label">Užšifruota dar nereiškia privatu</span></a></li><li><a href="/book/messages/#uzklijuotas-vokas-kurio-pastininkas-negali-atplesti" data-target="uzklijuotas-vokas-kurio-pastininkas-negali-atplesti"><span class="toc-no">03</span><span class="toc-label">Užklijuotas vokas, kurio paštininkas negali atplėšti</span></a></li><li><a href="/book/messages/#konfidencialu-dar-nereiskia-autentiska" data-target="konfidencialu-dar-nereiskia-autentiska"><span class="toc-no">04</span><span class="toc-label">Konfidencialu dar nereiškia autentiška</span></a></li><li><a href="/book/messages/#kaip-pasirinkti-susirasinejimo-programele" data-target="kaip-pasirinkti-susirasinejimo-programele"><span class="toc-no">05</span><span class="toc-label">Kaip pasirinkti susirašinėjimo programėlę</span></a></li><li><a href="/book/messages/#zingsnis-po-zingsnio" data-target="zingsnis-po-zingsnio"><span class="toc-no">06</span><span class="toc-label">Žingsnis po žingsnio</span></a></li><li><a href="/book/messages/#klaidos-kuriu-verta-vengti" data-target="klaidos-kuriu-verta-vengti"><span class="toc-no">07</span><span class="toc-label">Klaidos, kurių verta vengti</span></a></li><li><a href="/book/messages/#norintiems-daugiau" data-target="norintiems-daugiau"><span class="toc-no">08</span><span class="toc-label">Norintiems daugiau</span></a></li><li><a href="/book/messages/#saltiniai" data-target="saltiniai"><span class="toc-no">09</span><span class="toc-label">Šaltiniai</span></a></li><li><a href="/book/messages/#tavo-veiksmu-sarasas" data-target="tavo-veiksmu-sarasas"><span class="toc-no">10</span><span class="toc-label">Tavo veiksmų sąrašas</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-1" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/privacy/">1 dalis · Privatumas</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">1 skyrius: </span>Tavo žinutės</h1><p class="ch-bignum" aria-hidden="true">01</p><div class="ch-meta"><span>1 skyrius iš 18</span><a href="/book/messages/#tavo-veiksmu-sarasas"><span>Atlikta <span data-stat="ch-done" data-ch="messages">0</span> iš 5 veiksmų</span></a><span class="ch-readstate" data-read-state="messages"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="trumpai"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="trumpai" tabindex="-1">Trumpai</h2>
 <p>Pokalbiai yra vieni intymiausių duomenų, kuriuos sukuri. Perkelk juos į susirašinėjimo programėlę, kuri automatiškai šifruoja žinutes ištisiniu būdu, yra atvirojo kodo ir renka kuo mažiau metaduomenų. Gerų programėlių yra keletas, ir nė viena nėra pranašesnė visais atžvilgiais. Išsirink vieną, pirmiausia perkelk 5 artimiausius kontaktus, o senąją programėlę pasilik bendrauti su visais kitais.</p>
-<h2>Užšifruota dar nereiškia privatu</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="uzsifruota-dar-nereiskia-privatu"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Suprask</span></p><h2 id="uzsifruota-dar-nereiskia-privatu" tabindex="-1">Užšifruota dar nereiškia privatu</h2>
 <p>Daugelis kasdien naudojamų susirašinėjimo programėlių priklauso reklamos bendrovėms. Bendrovei „Meta“ priklausančios programėlės „WhatsApp“ ir „Messenger“ žinučių turinį tikrai šifruoja, tačiau vis tiek fiksuoja, su kuo bendrauji, kada, kaip dažnai, iš kurio įrenginio ir iš kurios vietos, ir sieja tai su viskuo, ką ši įmonių grupė apie tave jau žino.</p>
-<p>Kitos programėlės automatiškai išvis nešifruoja. Programėlėje „Telegram“ įprasti pokalbiai ir visi grupių pokalbiai saugomi tokiu pavidalu, kad bendrovė gali juos perskaityti. SMS žinutės apsaugotos dar menkiau, nes jas gali perskaityti operatorius, o telefono tinklu jos keliauja nešifruotos. Po to, kai „Salt Typhoon“ vadinama grupuotė įsilaužė į kelių JAV telekomunikacijų operatorių tinklus, šios šalies kibernetinio saugumo agentūra CISA <a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" target="_blank" rel="noopener noreferrer">2024 m. gruodį patarė</a> žmonėms, į kuriuos taikomasi ypač dažnai, naudotis tik tokiomis susirašinėjimo priemonėmis, kuriose taikomas ištisinis šifravimas, ir prisijungimo kodams gauti nebepasikliauti SMS žinutėmis.</p>
+<p>Kitos programėlės automatiškai išvis nešifruoja. Programėlėje „Telegram“ įprasti pokalbiai ir visi grupių pokalbiai saugomi tokiu pavidalu, kad bendrovė gali juos perskaityti. SMS žinutės apsaugotos dar menkiau, nes jas gali perskaityti operatorius, o telefono tinklu jos keliauja nešifruotos. Po to, kai „Salt Typhoon“ vadinama grupuotė įsilaužė į kelių JAV telekomunikacijų operatorių tinklus, šios šalies kibernetinio saugumo agentūra CISA <a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" class="ext" rel="noopener noreferrer">2024 m. gruodį patarė</a> žmonėms, į kuriuos taikomasi ypač dažnai, naudotis tik tokiomis susirašinėjimo priemonėmis, kuriose taikomas ištisinis šifravimas, ir prisijungimo kodams gauti nebepasikliauti SMS žinutėmis.</p>
 <p>Dar lieka atsarginės kopijos. Pokalbis gali būti šifruojamas perduodant ir vis tiek atsidurti debesijos atsarginėje kopijoje, kurią galima perskaityti, ir nesvarbu, ar tai tavo, ar pašnekovo kopija.</p>
 <p>Pasekmės visai konkrečios: nutekėję pokalbiai, sukčių perimtos paskyros, iš kurių jie paskui rašo tavo šeimai, ir žinutės, kurios teisėsaugos ar teismo reikalavimu perduodamos po daugelio metų, kai jau nebeprisimeni, kad jas rašei.</p>
-<h2>Užklijuotas vokas, kurio paštininkas negali atplėšti</h2>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance">cisa.gov</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="uzklijuotas-vokas-kurio-pastininkas-negali-atplesti"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Suprask</span></p><h2 id="uzklijuotas-vokas-kurio-pastininkas-negali-atplesti" tabindex="-1">Užklijuotas vokas, kurio paštininkas negali atplėšti</h2>
 <p>Kai taikomas <strong>ištisinis šifravimas</strong>, žinutė užrakinama tavo telefone, o atrakinti ją galima tik telefone to žmogaus, kuriam rašai. Tarpininkaujanti bendrovė perduoda užklijuotą voką, kurio atplėšti negali. Jei į jos sistemas kas nors įsilaužia arba ji gauna teisėsaugos ar teismo reikalavimą, žinučių turinio atiduoti negali, nes jo neturi. Nuo to, kaip sukurta programėlė, priklauso, ar bendrovė vis tiek turi metaduomenų, pavyzdžiui, IP adresą, kontaktų sąrašą ar paskutinio prisijungimo datą.</p>
-<p>Europoje šis vokas yra ir politinis klausimas. Pagal reglamentą, kurį Europos Komisija <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" target="_blank" rel="noopener noreferrer">pasiūlė 2022 m. gegužės 11 d.</a> ir kurį kritikai vadina „Chat Control“ (pokalbių kontrolė), institucijos galėtų įpareigoti susirašinėjimo paslaugų teikėjus skenuoti privatų susirašinėjimą. 2026 m. rugsėjo mėn. duomenimis, dėl jo vis dar derasi Europos Parlamentas ir Europos Sąjungos Taryba, o <a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" target="_blank" rel="noopener noreferrer">2026 m. birželio 29 d. derybų raundas</a> baigėsi be susitarimo. Laikinoji taisyklė, leidžianti teikėjams skenuoti savanoriškai, <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" target="_blank" rel="noopener noreferrer">2026 m. liepos 23 d. vėl pradėta taikyti</a> ir galios iki 2028 m. balandžio 3 d., o Europos Parlamento prašymu ji <a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" target="_blank" rel="noopener noreferrer">neapima ištisiniu būdu šifruojamo susirašinėjimo</a>.</p>
+<p>Europoje šis vokas yra ir politinis klausimas. Pagal reglamentą, kurį Europos Komisija <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" class="ext" rel="noopener noreferrer">pasiūlė 2022 m. gegužės 11 d.</a> ir kurį kritikai vadina „Chat Control“ (pokalbių kontrolė), institucijos galėtų įpareigoti susirašinėjimo paslaugų teikėjus skenuoti privatų susirašinėjimą. 2026 m. rugsėjo mėn. duomenimis, dėl jo vis dar derasi Europos Parlamentas ir Europos Sąjungos Taryba, o <a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" class="ext" rel="noopener noreferrer">2026 m. birželio 29 d. derybų raundas</a> baigėsi be susitarimo. Laikinoji taisyklė, leidžianti teikėjams skenuoti savanoriškai, <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" class="ext" rel="noopener noreferrer">2026 m. liepos 23 d. vėl pradėta taikyti</a> ir galios iki 2028 m. balandžio 3 d., o Europos Parlamento prašymu ji <a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" class="ext" rel="noopener noreferrer">neapima ištisiniu būdu šifruojamo susirašinėjimo</a>.</p>
 <p>Šifravimas būtinas, tačiau svarbūs dar 3 dalykai:</p>
 <ul>
 <li><strong>Atvirasis kodas.</strong> Programos kodas viešas, todėl nepriklausomi ekspertai gali patikrinti, ar programėlė daro tai, ką žada, ir nereikia aklai tikėti bendrovės žodžiu.</li>
 <li><strong>Metaduomenys.</strong> Atsargiausios susirašinėjimo programėlės kuriamos taip, kad apie tave žinotų labai mažai: jos gali neturėti nei tavo kontaktų sąrašo, nei duomenų apie grupes, kurioms priklausai, o kartais net jokio identifikatoriaus.</li>
 <li><strong>Kas ją valdo.</strong> Ne pelno organizacijai ar bendruomenei nereikia maitinti reklamos verslo, o tinkle be centrinės bendrovės nėra vienintelių durų, į kurias pakaktų pasibelsti.</li>
 </ul>
-<h2>Konfidencialu dar nereiškia autentiška</h2>
-<p>Šifravimas atsako į 1 klausimą: ar žinutę gali perskaityti kas nors kitas. Lieka dar vienas: ar kitame gale tikrai yra tas žmogus, apie kurį galvoji. Pirmąją savybę kriptografai vadina konfidencialumu, o antrąją autentiškumu. SMS žinutė ar el. laiškas neužtikrina nė vienos, telefono skambutis yra autentiškas (atpažįsti balsą), bet nekonfidencialus, o saugus kanalas turi užtikrinti abi.</p>
-<p>Autentiškumas priklauso nuo to, kaip programėlė gavo kito žmogaus raktą. Programėlėse „Signal“, „WhatsApp“, „iMessage“ ir daugumoje kitų šifruojančių susirašinėjimo programėlių šis raktas gaunamas iš bendrovės tvarkomo katalogo, todėl bendrovė, kad ir kaip gerai ji šifruotų, tampa patikima trečiąja šalimi, t. y. tarpininke, kuria tenka pasitikėti. Jei į katalogą būtų įsilaužta arba bendrovė būtų priversta pateikti netikrą raktą, vokas liktų užklijuotas, tik skirtas jau ne tam skaitytojui. Apsisaugoti galima: tam skirti <a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" target="_blank" rel="noopener noreferrer">saugumo numeriai programėlėje „Signal“</a> (reikia palyginti 60 skaitmenų), <a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" target="_blank" rel="noopener noreferrer">rakto skaidrumas programėlėje „WhatsApp“</a> ir <a href="https://security.apple.com/blog/imessage-contact-key-verification/" target="_blank" rel="noopener noreferrer">kontaktų raktų patvirtinimas (angl. Contact Key Verification) programėlėje „iMessage“</a>, tačiau šios priemonės pasirenkamos ir naudojamos retai.</p>
-<p>Kitos programėlės katalogo atsisako ir šį pasitikėjimą decentralizuoja. Programėlėje „Olvid“ prieš pirmąją žinutę <a href="https://olvid.io/faq/olvid-secure-channels/" target="_blank" rel="noopener noreferrer">būtina apsikeisti 2 kodais po 4 skaitmenis</a>, o programėlėse „SimpleX“ ir „Briar“ pokalbis prasideda nuo nuorodos arba QR kodo, kurį perduodi tu, o ne bendrovė. Tada saugumas priklauso nuo 2 bendraujančių žmonių, o kaina yra patogumas, nes programėlė kontaktų už tave nesuras.</p>
-<h2>Kaip pasirinkti susirašinėjimo programėlę</h2>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209">eur-lex.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online">europarl.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/">consilium.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation">europarl.europa.eu (2)</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="konfidencialu-dar-nereiskia-autentiska"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Suprask</span></p><h2 id="konfidencialu-dar-nereiskia-autentiska" tabindex="-1">Konfidencialu dar nereiškia autentiška</h2>
+<p>Šifravimas atsako į 1 klausimą: ar žinutę gali perskaityti kas nors kitas. Lieka dar vienas: ar kitame gale tikrai yra tas žmogus, apie kurį galvoji. Pirmąją savybę kriptografai vadina konfidencialumu, o antrąją autentiškumu. SMS žinutė ar el. laiškas neužtikrina nė vienos. Per telefono skambutį pažįstamas balsas gali padėti atpažinti žmogų, bet skambutis dėl to netampa konfidencialus, o tapatybės balsas neįrodo, nes jį galima klonuoti. Saugus kanalas turi užtikrinti abi.</p>
+<p>Autentiškumas priklauso nuo to, kaip programėlė gavo kito žmogaus raktą. Programėlėse „Signal“, „WhatsApp“, „iMessage“ ir daugumoje kitų šifruojančių susirašinėjimo programėlių šis raktas gaunamas iš bendrovės tvarkomo katalogo, todėl bendrovė, kad ir kaip gerai ji šifruotų, tampa patikima trečiąja šalimi, t. y. tarpininke, kuria tenka pasitikėti. Jei į katalogą būtų įsilaužta arba bendrovė būtų priversta pateikti netikrą raktą, vokas liktų užklijuotas, tik skirtas jau ne tam skaitytojui. Apsisaugoti galima: tam skirti <a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" class="ext" rel="noopener noreferrer">saugumo numeriai programėlėje „Signal“</a> (reikia palyginti 60 skaitmenų), <a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" class="ext" rel="noopener noreferrer">rakto skaidrumas programėlėje „WhatsApp“</a> ir <a href="https://security.apple.com/blog/imessage-contact-key-verification/" class="ext" rel="noopener noreferrer">kontaktų raktų patvirtinimas (angl. Contact Key Verification) programėlėje „iMessage“</a>, tačiau šios priemonės pasirenkamos ir naudojamos retai.</p>
+<p>Kitos programėlės katalogo atsisako ir šį pasitikėjimą decentralizuoja. Programėlėje „Olvid“ prieš pirmąją žinutę <a href="https://olvid.io/faq/olvid-secure-channels/" class="ext" rel="noopener noreferrer">būtina apsikeisti 2 kodais po 4 skaitmenis</a>, o programėlėse „SimpleX“ ir „Briar“ pokalbis prasideda nuo nuorodos arba QR kodo, kurį perduodi tu, o ne bendrovė. Tada saugumas priklauso nuo 2 bendraujančių žmonių, o kaina yra patogumas, nes programėlė kontaktų už tave nesuras.</p>
+<div class="sec-cited"><p class="sec-cited-label">Šiame skirsnyje cituojami šaltiniai</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed">support.signal.org</a></li><li><a class="ext" rel="noopener noreferrer" href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/">engineering.fb.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://security.apple.com/blog/imessage-contact-key-verification/">security.apple.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://olvid.io/faq/olvid-secure-channels/">olvid.io</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="kaip-pasirinkti-susirasinejimo-programele"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Palygink</span></p><h2 id="kaip-pasirinkti-susirasinejimo-programele" tabindex="-1">Kaip pasirinkti susirašinėjimo programėlę</h2>
 <p>Pirmiausia sąžiningai įvertink tai, kuo tikriausiai naudojiesi šiandien. Nė viena iš šių programėlių nėra bevertė, tačiau kiekviena turi aiškią silpnąją vietą. Lentelėje pateikta 2026 m. rugsėjo mėn. padėtis.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>7 variantai · 5 stulpeliai</span><span class="compare-hint" aria-hidden="true">Slink į šoną →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Palyginimo lentelė: Kaip pasirinkti susirašinėjimo programėlę, 1 iš 2"><table>
 <thead>
 <tr>
-<th>Programėlė</th>
-<th>Savininkas</th>
-<th>Ar šifruojama ištisiniu būdu?</th>
-<th>Ką ji vis tiek renka ar atskleidžia</th>
-<th>Įvertinimas</th>
+<th scope="col">Programėlė</th>
+<th scope="col">Savininkas</th>
+<th scope="col">Ar šifruojama ištisiniu būdu?</th>
+<th scope="col">Ką ji vis tiek renka ar atskleidžia</th>
+<th scope="col">Įvertinimas</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer"><strong>WhatsApp</strong></a></td>
+<tr id="row-whatsapp">
+<th scope="row"><a href="https://www.whatsapp.com/" class="ext" rel="noopener noreferrer"><strong>WhatsApp</strong></a></th>
 <td>„Meta“</td>
-<td>Taip, automatiškai (<a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a> protokolas)</td>
+<td>Taip, automatiškai (<a href="https://signal.org/" class="tool-link ext" rel="noopener noreferrer">Signal</a> protokolas)</td>
 <td>Daug metaduomenų: tavo kontaktai, kam rašai, kada, iš kurio įrenginio. Kodas uždaras. Debesijos atsarginės kopijos ištisiniu būdu šifruojamos tik tada, kai šią funkciją įjungi.</td>
 <td>Turinys apsaugotas, o metaduomenys atitenka reklamos grupei.</td>
 </tr>
-<tr>
-<td><a href="https://www.messenger.com/" target="_blank" rel="noopener noreferrer"><strong>Facebook Messenger</strong></a></td>
+<tr id="row-facebook-messenger">
+<th scope="row"><a href="https://www.messenger.com/" class="ext" rel="noopener noreferrer"><strong>Facebook Messenger</strong></a></th>
 <td>„Meta“</td>
 <td>Taip, nuo 2023 m. gruodžio mėn. asmeniniai pokalbiai ir skambučiai šifruojami automatiškai. Pokalbiams su įmonėmis ir skilčiai „Marketplace“ tai negalioja.</td>
 <td>Tie patys metaduomenys, susieti su tavo „Facebook“ tapatybe. Kodas uždaras.</td>
 <td>Geriau nei anksčiau, bet tai vis tiek „Meta“ produktas.</td>
 </tr>
-<tr>
-<td><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><strong>Asmeninės „Instagram“ žinutės</strong></a></td>
+<tr id="row-asmenines-instagram-zinutes">
+<th scope="row"><a href="https://www.instagram.com/" class="ext" rel="noopener noreferrer"><strong>Asmeninės „Instagram“ žinutės</strong></a></th>
 <td>„Meta“</td>
 <td>Ne. Šifruoti pokalbiai, kuriuos buvo galima įjungti pasirinktinai, pašalinti 2026 m. gegužės 8 d.</td>
 <td>Bendrovė „Meta“ gali perskaityti kiekvienos žinutės turinį ir mato metaduomenis.</td>
 <td>Netinka niekam, kas privatu.</td>
 </tr>
-<tr>
-<td><a href="https://telegram.org/" target="_blank" rel="noopener noreferrer"><strong>Telegram</strong></a></td>
+<tr id="row-telegram">
+<th scope="row"><a href="https://telegram.org/" class="ext" rel="noopener noreferrer"><strong>Telegram</strong></a></th>
 <td>„Telegram“, privati bendrovė</td>
 <td>Tik slaptuosiuose pokalbiuose (angl. secret chats), kuriuos reikia pradėti atskirai ir kurie galimi tik tarp 2 žmonių. Įprastiems pokalbiams, visoms grupėms ir kanalams ištisinis šifravimas netaikomas.</td>
 <td>Įprastos žinutės saugomos „Telegram“ serveriuose, ir bendrovė gali jas perskaityti. Serverio kodas uždaras.</td>
 <td>Labiau socialinis tinklas nei privati susirašinėjimo programėlė.</td>
 </tr>
-<tr>
-<td><strong>SMS</strong></td>
+<tr id="row-sms">
+<th scope="row"><strong>SMS</strong></th>
 <td>Tavo mobiliojo ryšio operatorius</td>
 <td>Ne</td>
 <td>Turinį ir metaduomenis gali perskaityti operatoriai. Žinutes galima perimti arba nukreipti kitur, jei sukčius perima SIM kortelę (angl. SIM swap), t. y. perkelia tavo numerį į savo SIM kortelę.</td>
 <td>Nenaudok niekam, kas jautru, o jei gali rinktis, ir prisijungimo kodams gauti.</td>
 </tr>
-<tr>
-<td><a href="https://support.apple.com/messages" target="_blank" rel="noopener noreferrer"><strong>iMessage (Apple Messages)</strong></a></td>
+<tr id="row-imessage-apple-messages">
+<th scope="row"><a href="https://support.apple.com/messages" class="ext" rel="noopener noreferrer"><strong>iMessage (Apple Messages)</strong></a></th>
 <td>„Apple“</td>
 <td>Taip, tarp „Apple“ įrenginių (mėlyni burbulai)</td>
 <td>Veikia tik „Apple“ įrenginiuose. Kodas uždaras. „iCloud“ atsargines kopijas bendrovė „Apple“ gali perskaityti, nebent įjungi funkciją „Advanced Data Protection“ (išplėstinė duomenų apsauga).</td>
 <td>Tinka „Apple“ pasaulyje, bet niekur kitur.</td>
 </tr>
-<tr>
-<td><a href="https://www.android.com/google-messages/" target="_blank" rel="noopener noreferrer"><strong>Google Messages (RCS)</strong></a></td>
+<tr id="row-google-messages-rcs">
+<th scope="row"><a href="https://www.android.com/google-messages/" class="ext" rel="noopener noreferrer"><strong>Google Messages (RCS)</strong></a></th>
 <td>„Google“ kartu su mobiliojo ryšio operatoriais</td>
 <td>Taip, automatiškai tarp „Google Messages“ naudotojų. Su „iPhone“ telefonais šifravimas pradėtas diegti 2026 m. gegužę, kol kas beta versijoje, ir priklauso nuo tavo operatoriaus.</td>
 <td>Susieta su telefono numeriu. Metaduomenys vis tiek renkami. Kodas uždaras. Kai RCS neveikia, siunčiama paprasta SMS žinutė.</td>
 <td>Geriau nei SMS. Patikrink, ar matai spynelės piktogramą.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>O štai geresni variantai. Vieno teisingo atsakymo nėra, ir tai gerai, nes pasaulis, kuriame visi priklauso nuo vienos programėlės, yra trapus. Visose 7 privatūs pokalbiai automatiškai šifruojami ištisiniu būdu, o pačių programėlių kodas atviras.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>7 variantai · 5 stulpeliai</span><span class="compare-hint" aria-hidden="true">Slink į šoną →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Palyginimo lentelė: Kaip pasirinkti susirašinėjimo programėlę, 2 iš 2"><table>
 <thead>
 <tr>
-<th>Programėlė</th>
-<th>Ar reikia telefono numerio</th>
-<th>Kas valdo tinklą</th>
-<th>Kas laiduoja už raktus</th>
-<th>Kam labiausiai tinka</th>
+<th scope="col">Programėlė</th>
+<th scope="col">Ar reikia telefono numerio</th>
+<th scope="col">Kas valdo tinklą</th>
+<th scope="col">Kas laiduoja už raktus</th>
+<th scope="col">Kam labiausiai tinka</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="https://signal.org/" target="_blank" rel="noopener noreferrer"><strong>Signal</strong></a></td>
+<tr id="row-signal">
+<th scope="row"><a href="https://signal.org/" class="ext" rel="noopener noreferrer"><strong>Signal</strong></a></th>
 <td>Taip (jį galima paslėpti nuo kitų)</td>
 <td>Vienas pelno nesiekiantis fondas</td>
-<td>„<a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a>“ tvarkomas katalogas. Jei nori, gali palyginti 60 skaitmenų saugumo numerį.</td>
+<td>„<a href="https://signal.org/" class="tool-link ext" rel="noopener noreferrer">Signal</a>“ tvarkomas katalogas. Jei nori, gali palyginti 60 skaitmenų saugumo numerį.</td>
 <td>Programėlei „WhatsApp“ pakeisti bendraujant su šeima ir draugais. Pereiti lengviausia.</td>
 </tr>
-<tr>
-<td><a href="https://simplex.chat/" target="_blank" rel="noopener noreferrer"><strong>SimpleX Chat</strong></a></td>
+<tr id="row-simplex-chat">
+<th scope="row"><a href="https://simplex.chat/" class="ext" rel="noopener noreferrer"><strong>SimpleX Chat</strong></a></th>
 <td>Nereikia jokio identifikatoriaus</td>
 <td>Retransliatoriai (angl. relays), kuriuos gali paleisti bet kas</td>
 <td>Niekas. Nuorodą arba QR kodą perduodi tu, o jei nori, gali dar palyginti saugumo kodą.</td>
 <td>Stipri metaduomenų apsauga. Nėra nei paskyros, nei naudotojo vardo, nei identifikatoriaus, kurį būtų galima su kuo nors susieti.</td>
 </tr>
-<tr>
-<td><a href="https://getsession.org/" target="_blank" rel="noopener noreferrer"><strong>Session</strong></a></td>
+<tr id="row-session">
+<th scope="row"><a href="https://getsession.org/" class="ext" rel="noopener noreferrer"><strong>Session</strong></a></th>
 <td>Ne</td>
 <td>Decentralizuotas bendruomenės valdomų mazgų tinklas</td>
-<td>Katalogo nėra, nes „<a href="https://getsession.org/" target="_blank" rel="noopener noreferrer">Session</a> ID“ ir yra viešasis raktas. Šį ID turi gauti kanalu, kuriuo pasitiki.</td>
+<td>Katalogo nėra, nes „<a href="https://getsession.org/" class="tool-link ext" rel="noopener noreferrer">Session</a> ID“ ir yra viešasis raktas. Šį ID turi gauti kanalu, kuriuo pasitiki.</td>
 <td>Anoniminės paskyros, žinutės keliauja per kelis mazgus. Veikia lėčiau, funkcijų mažiau. Dabartinis protokolas neužtikrina išankstinio slaptumo (angl. forward secrecy): kada nors pavogtu raktu būtų galima atrakinti ir senesnes žinutes. Apie būsimą protokolo atnaujinimą jau paskelbta.</td>
 </tr>
-<tr>
-<td><a href="https://threema.com/" target="_blank" rel="noopener noreferrer"><strong>Threema</strong></a></td>
+<tr id="row-threema">
+<th scope="row"><a href="https://threema.com/" class="ext" rel="noopener noreferrer"><strong>Threema</strong></a></th>
 <td>Ne</td>
 <td>Viena Šveicarijos bendrovė, programėlė mokama</td>
-<td>„<a href="https://threema.com/" target="_blank" rel="noopener noreferrer">Threema</a>“ tvarkomas katalogas. Gyvai nuskenavus kontakto QR kodą jam suteikiamas aukščiausias pasitikėjimo lygis.</td>
+<td>„<a href="https://threema.com/" class="tool-link ext" rel="noopener noreferrer">Threema</a>“ tvarkomas katalogas. Gyvai nuskenavus kontakto QR kodą jam suteikiamas aukščiausias pasitikėjimo lygis.</td>
 <td>Tiems, kas nenori nurodyti telefono numerio ir ieško išbaigto mokamo produkto.</td>
 </tr>
-<tr>
-<td><a href="https://olvid.io/" target="_blank" rel="noopener noreferrer"><strong>Olvid</strong></a></td>
+<tr id="row-olvid">
+<th scope="row"><a href="https://olvid.io/" class="ext" rel="noopener noreferrer"><strong>Olvid</strong></a></th>
 <td>Ne, nereikia nei el. pašto, nei kitų asmens duomenų</td>
 <td>Viena Prancūzijos bendrovė, serveriai veikia „Amazon Web Services“ infrastruktūroje</td>
 <td>Niekas. Prieš pirmąją žinutę 2 žmonės apsikeičia 2 kodais po 4 skaitmenis, ir šis žingsnis privalomas.</td>
 <td>Europietiška programėlė, kurios saugumą sertifikavo Prancūzijos kibernetinio saugumo agentūra ANSSI. Žinutės ir gaunami skambučiai nemokami. Norint skambinti ir naudotis keliais įrenginiais reikia prenumeratos (apie 5 eurus per mėnesį).</td>
 </tr>
-<tr>
-<td><a href="https://element.io/" target="_blank" rel="noopener noreferrer"><strong>Element (Matrix)</strong></a></td>
+<tr id="row-element-matrix">
+<th scope="row"><a href="https://element.io/" class="ext" rel="noopener noreferrer"><strong>Element (Matrix)</strong></a></th>
 <td>Ne</td>
 <td>Federacinis tinklas: daug serverių arba nuosavas serveris</td>
 <td>Tavo serverio katalogas. Patvirtinimas pasirenkamas: palyginami jaustukai arba nuskenuojamas QR kodas.</td>
 <td>Bendruomenėms, komandoms ir tiems, kas nori turėti nuosavą serverį. Pokalbyje dalyvaujantys serveriai mato metaduomenis (kas kuriame kambaryje ir kada), todėl svarbu, kurį serverį pasirinksi.</td>
 </tr>
-<tr>
-<td><a href="https://briarproject.org/" target="_blank" rel="noopener noreferrer"><strong>Briar</strong></a></td>
+<tr id="row-briar">
+<th scope="row"><a href="https://briarproject.org/" class="ext" rel="noopener noreferrer"><strong>Briar</strong></a></th>
 <td>Ne</td>
 <td>Niekas: ryšys tiesiogiai tarp įrenginių</td>
 <td>Niekas. Kontaktai pridedami gyvai nuskenavus QR kodą arba apsikeitus nuorodomis.</td>
 <td>Ekstremalioms situacijoms. Veikia per Tor tinklą ir net per „Bluetooth“ ar belaidį tinklą („Wi-Fi“) be interneto. Yra programėlė „Android“ sistemai ir beta versijos programa kompiuteriui („Windows“, „macOS“, „Linux“). Programėlės „iPhone“ telefonams nėra.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>Daugumai žmonių protingas derinys būtų toks: <strong>programėlė „Signal“ kasdieniam bendravimui</strong> ir <strong>susirašinėjimo programėlė be telefono numerio</strong> (pavyzdžiui, „SimpleX“, „Session“ ar „Olvid“) tiems kontaktams, kurių nenori sieti su savo tapatybe.</p>
-<p>Jei dalis artimųjų ir pažįstamų lieka programėlėje „WhatsApp“, padėk jiems bent įjungti šifruotas atsargines kopijas („Settings“, „Chats“, „Chat backup“, „End-to-end encrypted backup“, t. y. nustatymai, pokalbiai, pokalbių atsarginė kopija, ištisiniu būdu šifruota atsarginė kopija). Kaip tai padaryti, aiškinama „WhatsApp“ pagalbos centro straipsnyje <a href="https://faq.whatsapp.com/490592613091019" target="_blank" rel="noopener noreferrer">„About end-to-end encrypted backup“</a> (apie ištisiniu būdu šifruotas atsargines kopijas).</p>
-<h2>Žingsnis po žingsnio</h2>
+<p>Jei dalis artimųjų ir pažįstamų lieka programėlėje „WhatsApp“, padėk jiems bent įjungti šifruotas atsargines kopijas („Settings“, „Chats“, „Chat backup“, „End-to-end encrypted backup“, t. y. nustatymai, pokalbiai, pokalbių atsarginė kopija, ištisiniu būdu šifruota atsarginė kopija). Kaip tai padaryti, aiškinama „WhatsApp“ pagalbos centro straipsnyje <a href="https://faq.whatsapp.com/490592613091019" class="ext" rel="noopener noreferrer">„About end-to-end encrypted backup“</a> (apie ištisiniu būdu šifruotas atsargines kopijas).</p>
+</section><section class="sec sec--steps" data-no="06" aria-labelledby="zingsnis-po-zingsnio"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Instrukcija</span></p><h2 id="zingsnis-po-zingsnio" tabindex="-1">Žingsnis po žingsnio</h2>
 <p>Pavyzdžiu pasirinkta programėlė „Signal“, nes ji dažniausiai būna pirmasis žingsnis, o kitose programėlėse logika ta pati. Meniu pavadinimai tokie, kokie buvo 2026 m. rugsėjį.</p>
-<ol>
-<li><strong>Įdiek programėlę</strong> iš oficialios programėlių parduotuvės arba iš projekto svetainės ir užsiregistruok.</li>
-<li><strong>Užrakink paskyrą.</strong> Pasirink „Nustatymai“, „Paskyra“, susikurk PIN kodą ir įjunk nustatymą „Registracijos užraktas“, kad iš naujo registruojant tavo numerį būtų prašoma šio PIN kodo.</li>
-<li><strong>Paslėpk telefono numerį.</strong> Susikurk naudotojo vardą, tada pasirink „Nustatymai“, „Privatumas“, „Telefono numeris“ ir prie „Kas gali matyti mano tel. numerį“ pažymėk „Niekas“. Nuo šiol vietoj numerio gali duoti naudotojo vardą. Atskiras nustatymas „Kas gali mane rasti pagal numerį“ lemia, ar žmogus, jau turintis tavo numerį, ras tave programėlėje „Signal“. Jei nori, ir čia pasirink „Niekas“, tik žinok, kad tada draugams reikės tavo naudotojo vardo.</li>
-<li><strong>Įjunk automatiškai išnykstančias žinutes.</strong> Pasirink „Nustatymai“, „Privatumas“, „Išnykstančios žinutės“ ir nustatyk numatytąjį laikmatį, pavyzdžiui, 4 savaites. Išnykusi žinutė nebegali nutekėti iš pamesto ar pavogto telefono.</li>
-<li><strong>Užrakink programėlę</strong>: „Nustatymai“, „Privatumas“, „Ekrano užraktas“.</li>
-<li><strong>Patvirtink svarbiausius kontaktus.</strong> Atverk pokalbį, bakstelėk vardą, tada „Rodyti saugumo numerį“ ir palygink jį susitikus gyvai arba kitu kanalu, kuriuo jau pasitiki, pavyzdžiui, telefonu, kai atpažįsti balsą. Būtent šis žingsnis užtikrina autentiškumą, ir po jo nebepriklausai nuo „Signal“ katalogo, todėl vieną kartą atlik jį su tais keliais žmonėmis, kurie tau svarbiausi.</li>
-<li><strong>Perkelk savo žmones</strong>, tik neskelbk revoliucijos. Iš naujosios programėlės parašyk 5 artimiausiems kontaktams, ten pat sukurk šeimos grupę, o senoji programėlė tegul pamažu pasimiršta.</li>
+<ol class="steps">
+<li id="step-1"><strong>Įdiek programėlę</strong> iš oficialios programėlių parduotuvės arba iš projekto svetainės ir užsiregistruok.</li>
+<li id="step-2"><strong>Užrakink paskyrą.</strong> Pasirink „Nustatymai“, „Paskyra“, susikurk PIN kodą ir įjunk nustatymą „Registracijos užraktas“, kad iš naujo registruojant tavo numerį būtų prašoma šio PIN kodo.</li>
+<li id="step-3"><strong>Paslėpk telefono numerį.</strong> Susikurk naudotojo vardą, tada pasirink „Nustatymai“, „Privatumas“, „Telefono numeris“ ir prie „Kas gali matyti mano tel. numerį“ pažymėk „Niekas“. Nuo šiol vietoj numerio gali duoti naudotojo vardą. Atskiras nustatymas „Kas gali mane rasti pagal numerį“ lemia, ar žmogus, jau turintis tavo numerį, ras tave programėlėje „Signal“. Jei nori, ir čia pasirink „Niekas“, tik žinok, kad tada draugams reikės tavo naudotojo vardo.</li>
+<li id="step-4"><strong>Įjunk automatiškai išnykstančias žinutes.</strong> Pasirink „Nustatymai“, „Privatumas“, „Išnykstančios žinutės“ ir nustatyk numatytąjį laikmatį, pavyzdžiui, 4 savaites. Taip telefone lieka mažiau susirašinėjimo istorijos. Ekrano nuotraukų, eksportuotų pokalbių ar kopijų, kurias pasidarė gavėjas, tai nepanaikina.</li>
+<li id="step-5"><strong>Užrakink programėlę</strong>: „Nustatymai“, „Privatumas“, „Ekrano užraktas“.</li>
+<li id="step-6"><strong>Patvirtink svarbiausius kontaktus.</strong> Atverk pokalbį, bakstelėk vardą, tada „Rodyti saugumo numerį“ ir palygink jį susitikus gyvai arba kitu kanalu, kuriuo jau pasitiki, pavyzdžiui, telefonu, jei jau žinai, kad numeris, kuriuo skambini, tikrai priklauso tam žmogui. Vien pažįstamo balso nepakanka. Būtent šis žingsnis užtikrina autentiškumą, ir po jo nebepriklausai nuo „Signal“ katalogo, todėl vieną kartą atlik jį su tais keliais žmonėmis, kurie tau svarbiausi.</li>
+<li id="step-7"><strong>Perkelk savo žmones</strong>, tik neskelbk revoliucijos. Iš naujosios programėlės parašyk 5 artimiausiems kontaktams, ten pat sukurk šeimos grupę, o senoji programėlė tegul pamažu pasimiršta.</li>
 </ol>
-<h2>Klaidos, kurių verta vengti</h2>
+</section><section class="sec sec--pitfalls" data-no="07" aria-labelledby="klaidos-kuriu-verta-vengti"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Atsargiai</span></p><h2 id="klaidos-kuriu-verta-vengti" tabindex="-1">Klaidos, kurių verta vengti</h2>
 <ul>
 <li><strong>Manyti, kad „užšifruota“ reiškia „privatu“.</strong> Šifravimas apsaugo turinį, bet neslepia, su kuo bendrauji, nebent susirašinėjimo programėlė sukurta būtent tam.</li>
 <li><strong>Pamiršti patį telefoną.</strong> Kiekvienas, kam į rankas pateks atrakintas tavo telefonas, gali perskaityti viską, todėl stiprus ekrano užraktas yra ir susirašinėjimo programėlės saugumo dalis.</li>
@@ -231,71 +205,30 @@
 <li><strong>Painioti privatumą su anonimiškumu.</strong> Su telefono numeriu susieta susirašinėjimo programėlė apsaugo tai, ką sakai, bet ne tai, kas esi. Jei reikia, kad tavęs niekas neatpažintų, rinkis programėlę be telefono numerio.</li>
 <li><strong>Pasitikėti programėle labiau nei žmogumi.</strong> Ekrano nuotrauką gali padaryti bet kas, o silpniausia pokalbio vieta dažnai būna kitas jo galas.</li>
 </ul>
-<h2>Norintiems daugiau</h2>
-<ul>
-<li><strong>PROOF konferencijoje:</strong> „Kodėl nuo tavo raktų priklauso tavo interneto sauga“, pranešimą skaito Satoshine. Tavo žinutes saugantys raktai remiasi ta pačia idėja kaip ir raktai, saugantys bitkoinus.</li>
-<li><strong>Išsamiai palygink susirašinėjimo programėles:</strong> „Privacy Guides“, „Real-Time Communication“ (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
-<li><strong>Suprask, kas gresia būtent tau:</strong> „Surveillance Self-Defense“, parengė organizacija „Electronic Frontier Foundation“ (<a href="https://ssd.eff.org" target="_blank" rel="noopener noreferrer">ssd.eff.org</a>).</li>
+</section><section class="sec sec--further" data-no="08" aria-labelledby="norintiems-daugiau"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Norintiems daugiau</span></p><h2 id="norintiems-daugiau" tabindex="-1">Norintiems daugiau</h2>
+<ul class="refs">
+<li><strong>Išsamiai palygink susirašinėjimo programėles:</strong> „Privacy Guides“, „Real-Time Communication“ (<a href="https://privacyguides.org" class="tool-link ext" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Suprask, kas gresia būtent tau:</strong> „Surveillance Self-Defense“, parengė organizacija „Electronic Frontier Foundation“ (<a href="https://ssd.eff.org" class="tool-link ext" rel="noopener noreferrer">ssd.eff.org</a>).</li>
 <li><strong>Kitas skyrius:</strong> tavo slaptažodžiai ir paskyros.</li>
 </ul>
-<h2>Šaltiniai</h2>
-<ul>
-<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" target="_blank" rel="noopener noreferrer">Proposal for a regulation laying down rules to prevent and combat child sexual abuse, COM(2022) 209</a>, Europos Komisija, 2022 m. gegužės 11 d.</li>
-<li><a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" target="_blank" rel="noopener noreferrer">Legislative train: combating child sexual abuse online</a>, Europos Parlamentas, atnaujinta 2026 m. rugpjūčio 1 d.</li>
-<li><a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" target="_blank" rel="noopener noreferrer">Combating child sexual abuse online: support for more limited ePrivacy derogation</a>, Europos Parlamentas, 2026 m. liepos 9 d.</li>
-<li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" target="_blank" rel="noopener noreferrer">Fighting child sexual abuse online: interim measure protecting children now reinstated</a>, Europos Sąjungos Taryba, 2026 m. liepos 23 d.</li>
-<li><a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" target="_blank" rel="noopener noreferrer">Mobile Communications Best Practice Guidance</a>, CISA, 2024 m. gruodžio 18 d.</li>
-<li><a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" target="_blank" rel="noopener noreferrer">What is a safety number and why do I see that it changed?</a>, „Signal Support“, žiūrėta 2026 m. rugsėjį.</li>
-<li><a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" target="_blank" rel="noopener noreferrer">Deploying key transparency at WhatsApp</a>, „Engineering at Meta“, 2023 m. balandžio 13 d.</li>
-<li><a href="https://security.apple.com/blog/imessage-contact-key-verification/" target="_blank" rel="noopener noreferrer">Advancing iMessage security: iMessage Contact Key Verification</a>, „Apple Security Research“, 2023 m.</li>
-<li><a href="https://olvid.io/faq/olvid-secure-channels/" target="_blank" rel="noopener noreferrer">Olvid secure channels</a>, „Olvid“, žiūrėta 2026 m. rugsėjį.</li>
+</section><section class="sec sec--sources" data-no="09" aria-labelledby="saltiniai"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Šaltiniai</span></p><h2 id="saltiniai" tabindex="-1">Šaltiniai</h2>
+<ul class="refs">
+<li><a href="https://support.signal.org/hc/en-us/articles/360007320771-Set-and-manage-disappearing-messages" class="ext" rel="noopener noreferrer">Set and manage disappearing messages</a>, „Signal Support“, tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money" class="ext" rel="noopener noreferrer">Scammers use fake emergencies to steal your money</a>, JAV Federalinė prekybos komisija (FTC), tikrinta 2026 m. spalio 22 d.</li>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" class="ext" rel="noopener noreferrer">Proposal for a regulation laying down rules to prevent and combat child sexual abuse, COM(2022) 209</a>, Europos Komisija, 2022 m. gegužės 11 d.</li>
+<li><a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" class="ext" rel="noopener noreferrer">Legislative train: combating child sexual abuse online</a>, Europos Parlamentas, atnaujinta 2026 m. rugpjūčio 1 d.</li>
+<li><a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" class="ext" rel="noopener noreferrer">Combating child sexual abuse online: support for more limited ePrivacy derogation</a>, Europos Parlamentas, 2026 m. liepos 9 d.</li>
+<li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" class="ext" rel="noopener noreferrer">Fighting child sexual abuse online: interim measure protecting children now reinstated</a>, Europos Sąjungos Taryba, 2026 m. liepos 23 d.</li>
+<li><a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" class="ext" rel="noopener noreferrer">Mobile Communications Best Practice Guidance</a>, CISA, 2024 m. gruodžio 18 d.</li>
+<li><a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" class="ext" rel="noopener noreferrer">What is a safety number and why do I see that it changed?</a>, „Signal Support“, žiūrėta 2026 m. rugsėjį.</li>
+<li><a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" class="ext" rel="noopener noreferrer">Deploying key transparency at WhatsApp</a>, „Engineering at Meta“, 2023 m. balandžio 13 d.</li>
+<li><a href="https://security.apple.com/blog/imessage-contact-key-verification/" class="ext" rel="noopener noreferrer">Advancing iMessage security: iMessage Contact Key Verification</a>, „Apple Security Research“, 2023 m.</li>
+<li><a href="https://olvid.io/faq/olvid-secure-channels/" class="ext" rel="noopener noreferrer">Olvid secure channels</a>, „Olvid“, žiūrėta 2026 m. rugsėjį.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Tavo veiksmų sąrašas</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="messages-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-1" aria-label="Įdiek privačią susirašinėjimo programėlę, apsaugok ją PIN kodu, paslėpk telefono numerį ir įjunk išnykstančias žinutes"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-1">Įdiek privačią susirašinėjimo programėlę, apsaugok ją PIN kodu, paslėpk telefono numerį ir įjunk išnykstančias žinutes</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="messages-2" aria-label="Perkelk 5 artimiausius kontaktus ir šeimos grupę"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-2">Perkelk 5 artimiausius kontaktus ir šeimos grupę</label>
-        <span class="bk-effort">1 val.</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-3" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-3" aria-label="Patvirtink 3 svarbiausių kontaktų saugumo numerius"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-3">Patvirtink 3 svarbiausių kontaktų saugumo numerius</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-4" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-4" aria-label="Įdiek antrą susirašinėjimo programėlę, kuriai nereikia telefono numerio"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-4">Įdiek antrą susirašinėjimo programėlę, kuriai nereikia telefono numerio</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-5" aria-label="Programėlėse, kurias pasilieki, įjunk šifruotas atsargines kopijas"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-5">Programėlėse, kurias pasilieki, įjunk šifruotas atsargines kopijas</label>
-        <span class="bk-effort">5 min.</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/checklist/">Tavo veiksmų sąrašas: visi →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/privacy/"><span>Ankstesnis</span>Privatumo įrodymas</a>
-<a class="bk-next" href="/book/passwords/"><span>Kitas</span>Tavo slaptažodžiai ir paskyros</a>
-</div>
-  <p class="bk-back"><a href="/book/#contents">Grįžti į turinį</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">be slapukų · be sekimo · be nesąmonių</span>
-  <span><a href="mailto:contact@proofconference.com">kontaktai</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="10" aria-labelledby="tavo-veiksmu-sarasas"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Veik</span></p><h2 id="tavo-veiksmu-sarasas" tabindex="-1">Tavo veiksmų sąrašas</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count">Atlikta <strong data-stat="ch-done" data-ch="messages">0</strong> iš 5 veiksmų</p><span class="bar" data-bar="ch" data-ch="messages" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-messages-1"><span class="legacy-anchor" id="messages-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-1" disabled="disabled"><span class="action-text">Įdiek privačią susirašinėjimo programėlę, apsaugok ją PIN kodu, paslėpk telefono numerį ir įjunk išnykstančias žinutes</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-messages-2"><span class="legacy-anchor" id="messages-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-2" disabled="disabled"><span class="action-text">Perkelk 5 artimiausius kontaktus ir šeimos grupę</span><span class="effort"><span class="sr-only">, trukmė: </span>1 val.</span></label></li><li class="action" id="action-messages-3"><span class="legacy-anchor" id="messages-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-3" disabled="disabled"><span class="action-text">Patvirtink 3 svarbiausių kontaktų saugumo numerius</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-messages-4"><span class="legacy-anchor" id="messages-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-4" disabled="disabled"><span class="action-text">Įdiek antrą susirašinėjimo programėlę, kuriai nereikia telefono numerio</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li><li class="action" id="action-messages-5"><span class="legacy-anchor" id="messages-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-5" disabled="disabled"><span class="action-text">Programėlėse, kurias pasilieki, įjunk šifruotas atsargines kopijas</span><span class="effort"><span class="sr-only">, trukmė: </span>5 min.</span></label></li></ul><p class="cl-hint">Užtenka atlikti po vieną veiksmą. Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros. <a href="/book/checklist/">Peržiūrėk visus veiksmus viename puslapyje</a>.</p><noscript><p class="cl-hint">Veiksmus pažymėti galima tik įjungus JavaScript. Skaityti sąrašą galima ir be jo.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="messages" disabled><span>Perskaičiau šį skyrių</span></label><noscript><p class="cl-hint">Pažymėti skyrių kaip perskaitytą galima tik įjungus JavaScript.</p></noscript><nav class="pager" aria-label="Knygos skyriai"><a class="pager-prev part-1" href="/book/privacy/"><span class="pager-dir">Ankstesnis · 1 dalies įžanga</span><span class="pager-title">Privatumo įrodymas</span></a><a class="pager-next part-1" href="/book/passwords/"><span class="pager-dir">Kitas · 2 skyrius</span><span class="pager-title">Tavo slaptažodžiai ir paskyros</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> <span lang="en">A Guide to Autonomy</span></p><p>Pirmasis leidimas, PROOF leidimas. „Cypher Baltics“ iniciatyva: 18 skyrių ir 90 veiksmų.</p><p>Tekstas <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · originalus kodas <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Šriftams ir kitiems trečiųjų šalių ištekliams galioja jų pačių sąlygos. Teisių peržiūra viešam platinimui dar neatlikta.</p><p>Atliktų veiksmų ir perskaitytų skyrių žymės saugomos tik šioje naršyklėje, šiame įrenginyje, be jokios paskyros.</p><p class="footer-links"><a href="/">PROOF &lt;conference&gt;</a> · <a href="/book/en/messages/" hreflang="en" lang="en">English</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Paieška knygoje</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Klausimai, įrankiai, žingsniai ir žodžiai</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Ieškoma visame šio leidimo tekste: skyriuose, įvade, dalių įžangose, žodynėlyje, veiksmų sąrašuose ir pagalbiniuose puslapiuose.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Turinys</h2><button type="button" class="dialog-close" data-close>Uždaryti <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Knygos turinys"><ul class="drawer-links"><li><a href="/book/">Viršelis</a></li><li><a href="/book/start/">Nuo ko pradėti?</a></li><li><a href="/book/#progress">Tavo pažanga</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/introduction/"><span class="ch-n">00</span><span class="ch-t">Įvadas</span><span class="ch-s">Prieš skyrius</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>1 dalis</span> Privatumas</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/privacy/"><span class="ch-n">··</span><span class="ch-t">Privatumo įrodymas</span><span class="ch-s">1 dalies įžanga</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/messages/" aria-current="page"><span class="ch-n">01</span><span class="ch-t">Tavo žinutės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="messages">0</span> iš 5 veiksmų<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/passwords/"><span class="ch-n">02</span><span class="ch-t">Tavo slaptažodžiai ir paskyros</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="passwords">0</span> iš 5 veiksmų<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/browser/"><span class="ch-n">03</span><span class="ch-t">Tavo naršyklė ir paieška</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="browser">0</span> iš 5 veiksmų<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/email/"><span class="ch-n">04</span><span class="ch-t">Tavo el. paštas ir pseudonimai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="email">0</span> iš 5 veiksmų<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/network/"><span class="ch-n">05</span><span class="ch-t">Tavo tinklas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="network">0</span> iš 5 veiksmų<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>2 dalis</span> Autonomija</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/autonomy/"><span class="ch-n">··</span><span class="ch-t">Autonomijos įrodymas</span><span class="ch-s">2 dalies įžanga</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/keys/"><span class="ch-n">06</span><span class="ch-t">Raktai vietoj paskyrų</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="keys">0</span> iš 5 veiksmų<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: atviras tinklas, kurio nevaldo jokia įmonė</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="nostr">0</span> iš 5 veiksmų<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/big-tech/"><span class="ch-n">08</span><span class="ch-t">Kaip po vieną pakeisti technologijų milžinių paslaugas</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="big-tech">0</span> iš 5 veiksmų<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/phone/"><span class="ch-n">09</span><span class="ch-t">Kaip susigrąžinti telefono kontrolę</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="phone">0</span> iš 5 veiksmų<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Kaip paleisti paslaugas nuosavame serveryje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="self-hosting">0</span> iš 5 veiksmų<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/ai/"><span class="ch-n">11</span><span class="ch-t">Kaip naudotis DI ir neišsiduoti</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="ai">0</span> iš 5 veiksmų<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>3 dalis</span> Pinigai ir Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/work/"><span class="ch-n">··</span><span class="ch-t">Darbo įrodymas</span><span class="ch-s">3 dalies įžanga</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/savings/"><span class="ch-n">12</span><span class="ch-t">Kur laikyti savo darbo vaisius</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="savings">0</span> iš 5 veiksmų<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Tavo pirmoji piniginė ir pirmieji satošiai</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="first-wallet">0</span> iš 5 veiksmų<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/seed/"><span class="ch-n">14</span><span class="ch-t">Kaip pasidaryti atkūrimo frazės atsarginę kopiją</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="seed">0</span> iš 5 veiksmų<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning ir eurai kasdienybėje</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="lightning-and-euros">0</span> iš 5 veiksmų<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privatumas Bitcoin tinkle</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> iš 5 veiksmų<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Aparatinės piniginės</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="hardware-wallet">0</span> iš 5 veiksmų<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/node/"><span class="ch-n">18</span><span class="ch-t">Kaip paleisti savo mazgą</span><span class="ch-s">Atlikta <span data-stat="ch-done" data-ch="node">0</span> iš 5 veiksmų<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/checklist/"><span class="ch-n">✓</span><span class="ch-t">Visi veiksmai</span><span class="ch-s">Atlikta <span data-stat="actions-done">0</span> iš 90 veiksmų</span></a></li><li class="ch-item"><a class="ch-row" href="/book/glossary/"><span class="ch-n">Az</span><span class="ch-t">Žodynėlis</span><span class="ch-s">44 terminai</span></a></li></ol></div><p class="drawer-scope">18 skyrių ir 90 veiksmų, lietuvių kalba.</p></nav></div></div></dialog>
 </body>
 </html>

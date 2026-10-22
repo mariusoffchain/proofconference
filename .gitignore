@@ -5,3 +5,6 @@ Alice*.md
 alice-smoke-test/
 legal-bebop/
 .claude/
+
+# Local review artifact archived in private book-drafts
+/guide-ui/qa/lt-content-alignment-20261022.md

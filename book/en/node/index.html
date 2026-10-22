@@ -1,228 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Running your own node · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Running your own node — A Guide to Autonomy</title>
 <meta name="description" content="Without your own node, your wallet asks someone else&#x27;s server about your money. A node is your own copy of Bitcoin&#x27;s rules and ledger, which checks every…">
 <link rel="canonical" href="https://proofconference.com/book/en/node/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/node/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/node/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/node/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Running your own node · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Running your own node — A Guide to Autonomy">
 <meta property="og:description" content="Without your own node, your wallet asks someone else&#x27;s server about your money. A node is your own copy of Bitcoin&#x27;s rules and ledger, which checks every…">
 <meta property="og:url" content="https://proofconference.com/book/en/node/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Running your own node · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Running your own node — A Guide to Autonomy">
 <meta name="twitter:description" content="Without your own node, your wallet asks someone else&#x27;s server about your money. A node is your own copy of Bitcoin&#x27;s rules and ledger, which checks every…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/node/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/node/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="node">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Work · Chapter 18</p>
-    <h1>Running your own node</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/node/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/node"><div class="page-layout is-chapter part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/node/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/node/#your-wallet-asks-a-stranger-about-your-money" data-target="your-wallet-asks-a-stranger-about-your-money"><span class="toc-no">02</span><span class="toc-label">Your wallet asks a stranger about your money</span></a></li><li><a href="/book/en/node/#a-computer-that-checks-every-rule-itself" data-target="a-computer-that-checks-every-rule-itself"><span class="toc-no">03</span><span class="toc-label">A computer that checks every rule itself</span></a></li><li><a href="/book/en/node/#what-a-node-still-asks-you-to-trust" data-target="what-a-node-still-asks-you-to-trust"><span class="toc-no">04</span><span class="toc-label">What a node still asks you to trust</span></a></li><li><a href="/book/en/node/#choose-your-route" data-target="choose-your-route"><span class="toc-no">05</span><span class="toc-label">Choose your route</span></a></li><li><a href="/book/en/node/#a-word-on-lightning-nodes" data-target="a-word-on-lightning-nodes"><span class="toc-no">06</span><span class="toc-label">A word on Lightning nodes</span></a></li><li><a href="/book/en/node/#step-by-step" data-target="step-by-step"><span class="toc-no">07</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/node/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">08</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/node/#go-further" data-target="go-further"><span class="toc-no">09</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/node/#sources" data-target="sources"><span class="toc-no">10</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/node/#your-checklist" data-target="your-checklist"><span class="toc-no">11</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/work/">Part 3 · Money and Bitcoin</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 18: </span>Running your own node</h1><p class="ch-bignum" aria-hidden="true">18</p><div class="ch-meta"><span>Chapter 18 of 18</span><a href="/book/en/node/#your-checklist"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="node"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>Without your own node, your wallet asks someone else's server about your money. A node is your own copy of Bitcoin's rules and ledger, which checks every block and every transaction itself, so you no longer depend on somebody else's answer. It protects your privacy, and it strengthens the network. It needs a small always-on computer, a 2 TB SSD, a weekend of your time and then a few days of synchronisation during which the machine works alone. It is not a miner, and it earns nothing.</p>
-<h2>Your wallet asks a stranger about your money</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="your-wallet-asks-a-stranger-about-your-money"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="your-wallet-asks-a-stranger-about-your-money" tabindex="-1">Your wallet asks a stranger about your money</h2>
 <p>When you open a wallet app, it needs to know your balance. It does not have the ledger, so it asks a server what happened on your addresses. That server belongs to the wallet's maker, or to an unknown volunteer.</p>
 <p>2 things follow. First, the server can learn which addresses are yours, all of them, together with your IP address. The separate wallets and fresh addresses from chapter 16 are grouped again, in somebody's logs. Second, you have to believe the answer, because if the server is wrong, offline or dishonest, your wallet shows you what it was told.</p>
 <p>For small amounts this is a reasonable compromise, and most people start this way. It remains an odd arrangement for a system designed so that nobody has to be trusted. With your own node, the question stays inside your home network.</p>
-<h2>A computer that checks every rule itself</h2>
+</section><section class="sec sec--explain" data-no="03" aria-labelledby="a-computer-that-checks-every-rule-itself"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="a-computer-that-checks-every-rule-itself" tabindex="-1">A computer that checks every rule itself</h2>
 <p>A <strong>node</strong> is a computer running Bitcoin software, most often Bitcoin Core (other implementations exist, such as Bitcoin Knots). It downloads the whole ledger since the first block in 2009 and verifies every transaction against the rules, which means no coin spent twice, no coin created from nothing and never more than 21 million. It repeats this for every new block, about every 10 minutes, which is the meaning of "don't trust, verify".</p>
 <p>Your node accepts only what follows the rules it runs. When thousands of people do the same, a company, a miner or a government that wanted different rules would first have to convince them to install different software.</p>
-<p>A node is not a miner. It uses little electricity, earns nothing, and does not hold your coins, whose keys stay in your wallet or signing device.</p>
-<p>It needs a small computer that stays on, a normal home connection and a 2 TB SSD. As of September 2026 the ledger weighs <a href="https://www.blockchain.com/explorer/charts/blocks-size" target="_blank" rel="noopener noreferrer">about 770 GB</a> and <a href="https://bitcoincore.org/en/download/" target="_blank" rel="noopener noreferrer">grows by 5 to 10 GB per month</a>, and the index of an Electrum server adds from a few dozen to more than 100 GB, which would almost fill a 1 TB disk.</p>
-<h2>What a node still asks you to trust</h2>
+<p>A node is not a miner. It uses little electricity, earns nothing, and need not hold private keys. In the verification-only setup here, they stay in a separate wallet or signing device. Bitcoin Core can also run a wallet; if you use that feature, its wallet backups matter too.</p>
+<p>It needs a small computer that stays on, a normal home connection and a 2 TB SSD. As of September 2026 the ledger weighs <a href="https://www.blockchain.com/explorer/charts/blocks-size" class="ext" rel="noopener noreferrer">about 770 GB</a> and <a href="https://bitcoincore.org/en/download/" class="ext" rel="noopener noreferrer">grows by 5 to 10 GB per month</a>, and the index of an Electrum server adds from a few dozen to more than 100 GB, which would almost fill a 1 TB disk.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.blockchain.com/explorer/charts/blocks-size">blockchain.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://bitcoincore.org/en/download/">bitcoincore.org</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="what-a-node-still-asks-you-to-trust"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="what-a-node-still-asks-you-to-trust" tabindex="-1">What a node still asks you to trust</h2>
 <p>The question that runs through this book, who the trusted third party is and whether you can check, ends here. For the state of your money, a node brings the answer down to nobody. It believes neither a wallet maker's server nor the nodes it connects to, because every block they send is checked against the rules and rejected if invalid, whoever sent it. You gain authenticity (the balance you see is the real one) and control over the rules you accept.</p>
-<p>2 things remain. The first is the software, because a node enforces the rules of the program you installed, and a falsified copy would enforce somebody else's. Bitcoin Core answers with reproducible builds, in which several developers compile each release independently, obtain identical files and <a href="https://github.com/bitcoin-core/guix.sigs" target="_blank" rel="noopener noreferrer">publish their signatures</a>. By checking a few of them, you stop depending on the honesty of a single person. A node platform adds its maker to the list, for the system, the app store and the updates. The second is your own hardware and operating system, which you cannot fully audit.</p>
+<p>2 things remain. The first is the software, because a node enforces the rules of the program you installed, and a falsified copy would enforce somebody else's. Bitcoin Core answers with reproducible builds, in which several developers compile each release independently, obtain identical files and <a href="https://github.com/bitcoin-core/guix.sigs" class="ext" rel="noopener noreferrer">publish their signatures</a>. By checking a few of them, you stop depending on the honesty of a single person. A node platform adds its maker to the list, for the system, the app store and the updates. The second is your own hardware and operating system, which you cannot fully audit.</p>
 <p>The price is a disk, a weekend and some maintenance, and for small amounts a public server stays a sensible choice.</p>
-<h2>Choose your route</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://github.com/bitcoin-core/guix.sigs">github.com</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-route"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-route" tabindex="-1">Choose your route</h2>
 <p>All routes run the same Bitcoin software underneath, and they differ in how much is done for you.</p>
-<p>On an everyday computer, a <strong>pruned node</strong> is the lighter option. It verifies everything but keeps only the most recent blocks, so it fits in about 10 GB. However, most wallet server software needs the full ledger, which is why a dedicated node keeps it.</p>
-<div class="bk-table"><table>
+<p>On an everyday computer, a <strong>pruned node</strong> is the lighter option. It verifies everything but keeps only the most recent blocks, so storage can be around 10 GB at a low pruning target, plus room for growth and other files. It still downloads and validates the full history; pruning does not remove that initial bandwidth requirement. However, most wallet server software needs the full ledger, which is why a dedicated node keeps it.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>6 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your route"><table>
 <thead>
 <tr>
-<th>Route</th>
-<th>What it is</th>
-<th>Strengths</th>
-<th>Trade-offs</th>
-<th>Who you still trust</th>
+<th scope="col">Route</th>
+<th scope="col">What it is</th>
+<th scope="col">Strengths</th>
+<th scope="col">Trade-offs</th>
+<th scope="col">Who you still trust</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://bitcoincore.org/" target="_blank" rel="noopener noreferrer">Bitcoin Core</a> on your everyday computer</strong></td>
-<td>The reference software, open source, from <a href="https://bitcoincore.org" target="_blank" rel="noopener noreferrer">bitcoincore.org</a></td>
+<tr id="row-bitcoin-core-on-your-everyday-computer">
+<th scope="row"><strong><a href="https://bitcoincore.org/" class="tool-link ext" rel="noopener noreferrer">Bitcoin Core</a> on your everyday computer</strong></th>
+<td>The reference software, open source, from <a href="https://bitcoincore.org" class="tool-link ext" rel="noopener noreferrer">bitcoincore.org</a></td>
 <td>Free, the simplest start, includes its own wallet, can run in pruned mode on a small disk</td>
 <td>Not always on. Without pruned mode it fills most of a 1 TB disk</td>
 <td>The Bitcoin Core developers, unless you check the signatures of several builders, and your everyday computer</td>
 </tr>
-<tr>
-<td><strong><a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a></strong></td>
+<tr id="row-umbrel">
+<th scope="row"><strong><a href="https://umbrel.com/" class="tool-link ext" rel="noopener noreferrer">Umbrel</a></strong></th>
 <td>A home server system with an app store. Runs on your own hardware, or on a device the company sells</td>
 <td>The most polished interface, one-click apps</td>
 <td>Made by a single company. Free for personal use, but its licence is not open source (no commercial reuse)</td>
 <td>Umbrel as well, for the system, its app store and its updates. The code can be read</td>
 </tr>
-<tr>
-<td><strong><a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" target="_blank" rel="noopener noreferrer">StartOS</a>)</strong></td>
+<tr id="row-start9-startos">
+<th scope="row"><strong><a href="https://start9.com/" class="tool-link ext" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" class="tool-link ext" rel="noopener noreferrer">StartOS</a>)</strong></th>
 <td>An open source server system. Runs on your own hardware, or on a server the company sells</td>
 <td>Strong focus on privacy and self-hosting, good documentation</td>
 <td>Made by a single company. A little more to learn at the start</td>
 <td>Start9 as well, for the system, its marketplace and its updates. The image comes with a checksum and a signature</td>
 </tr>
-<tr>
-<td><strong><a href="https://github.com/raspiblitz/raspiblitz" target="_blank" rel="noopener noreferrer">RaspiBlitz</a></strong></td>
-<td>An open source community project for the <a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer">Raspberry Pi</a></td>
+<tr id="row-raspiblitz">
+<th scope="row"><strong><a href="https://github.com/raspiblitz/raspiblitz" class="tool-link ext" rel="noopener noreferrer">RaspiBlitz</a></strong></th>
+<td>An open source community project for the <a href="https://www.raspberrypi.com/" class="tool-link ext" rel="noopener noreferrer">Raspberry Pi</a></td>
 <td>No company involved, strong Lightning tools</td>
 <td>More technical, some work on the command line</td>
 <td>Its volunteer maintainers. Build scripts are public, and the image carries the lead developer's PGP signature</td>
 </tr>
-<tr>
-<td><strong><a href="https://mynodebtc.com/" target="_blank" rel="noopener noreferrer">MyNode</a></strong></td>
+<tr id="row-mynode">
+<th scope="row"><strong><a href="https://mynodebtc.com/" class="tool-link ext" rel="noopener noreferrer">MyNode</a></strong></th>
 <td>A node system for small computers, with a free community edition and a paid premium edition</td>
 <td>Simple web interface, many Bitcoin apps</td>
 <td>Made by a small company, some features reserved for the paid edition</td>
 <td>MyNode as well, for the system, the apps it packages and its updates</td>
 </tr>
-<tr>
-<td><strong>The manual route</strong></td>
-<td><a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">Debian</a> or <a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu</a> Linux, then <a href="https://bitcoincore.org/" target="_blank" rel="noopener noreferrer">Bitcoin Core</a>, then an Electrum server (<a href="https://github.com/romanz/electrs" target="_blank" rel="noopener noreferrer">electrs</a> or <a href="https://github.com/cculianu/Fulcrum" target="_blank" rel="noopener noreferrer">Fulcrum</a>), by following a guide</td>
+<tr id="row-the-manual-route">
+<th scope="row"><strong>The manual route</strong></th>
+<td><a href="https://www.debian.org/" class="tool-link ext" rel="noopener noreferrer">Debian</a> or <a href="https://ubuntu.com/" class="tool-link ext" rel="noopener noreferrer">Ubuntu</a> Linux, then <a href="https://bitcoincore.org/" class="tool-link ext" rel="noopener noreferrer">Bitcoin Core</a>, then an Electrum server (<a href="https://github.com/romanz/electrs" class="tool-link ext" rel="noopener noreferrer">electrs</a> or <a href="https://github.com/cculianu/Fulcrum" class="tool-link ext" rel="noopener noreferrer">Fulcrum</a>), by following a guide</td>
 <td>You understand every part. Nothing hidden, fully open source</td>
 <td>Slow, command line only. For learners who enjoy it</td>
 <td>Only the software whose signatures you check yourself, the authors of your guide, and your hardware</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>Umbrel and Start9 are also general home servers, which connects with chapter 10, since the same box can host your files and your passwords.</p>
 <p>A reasonable setup for most people is to try Bitcoin Core on your computer, in pruned mode, to see what a node is, then to move to a dedicated small computer with the platform whose trade-offs suit you.</p>
-<h2>A word on Lightning nodes</h2>
+</section><section class="sec sec--explain" data-no="06" aria-labelledby="a-word-on-lightning-nodes"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Understand</span></p><h2 id="a-word-on-lightning-nodes" tabindex="-1">A word on Lightning nodes</h2>
 <p>The same platforms let you install a Lightning node (LND or Core Lightning) in 1 click. Treat it as a later project. A Lightning node holds real funds in channels, on a machine that is always online. Channels need their own backups, regular attention and an understanding of what happens if the disk fails, and restoring an old backup the wrong way can even cost you the funds in a channel. A Bitcoin node alone can break without any loss, because you only have to synchronise again, which is not true of a Lightning node. Learn with small amounts, and only after the rest of this chapter has become routine.</p>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="07" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example uses a platform with an app store, such as Umbrel or StartOS. RaspiBlitz and MyNode follow the same order. Your own work fits in a weekend, and the machine then needs a few days on its own.</p>
-<ol>
-<li><strong>Choose the hardware.</strong> A used mini PC or a recent Raspberry Pi with 8 GB of memory, a 2 TB SSD from a known brand, and a network cable to your router.</li>
-<li><strong>Install the platform</strong> by following its official guide, from an image downloaded on its official website, and set a strong, unique password (chapter 2). Where the project publishes a checksum or a signature for that image, as <a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" target="_blank" rel="noopener noreferrer">Start9</a> and <a href="https://docs.raspiblitz.org/docs/faq" target="_blank" rel="noopener noreferrer">RaspiBlitz</a> do, check it before you write the image to the disk. This is the step that replaces trust in the download with verification.</li>
-<li><strong>Install the Bitcoin app and let it synchronise.</strong> It takes a few days, and up to a week on slow hardware such as a Raspberry Pi. Do not interrupt it.</li>
-<li><strong>Install an Electrum server app</strong> (electrs or Fulcrum). It builds an index so that wallets can ask your node questions, which takes several more hours, sometimes a full day.</li>
-<li><strong>Connect your wallet.</strong> In Sparrow, BlueWallet or Nunchuk, open the server or network settings and enter the address of your own Electrum server instead of the public one. From this step on, your wallet shows what your own node verified, and no longer what a third party told it. Zeus works differently, because it connects to a Lightning node, which is for later.</li>
-<li><strong>Reach it from outside your home</strong> over Tor or a private VPN (see chapter 10). The platforms provide a Tor address for this.</li>
-<li><strong>Keep it updated,</strong> and keep your seed backups separate from the node. The node needs no seed, and should never see one.</li>
+<ol class="steps">
+<li id="step-1"><strong>Choose the hardware.</strong> A used mini PC or a recent Raspberry Pi with 8 GB of memory, a 2 TB SSD from a known brand, and a network cable to your router.</li>
+<li id="step-2"><strong>Install the platform</strong> by following its official guide, from an image downloaded on its official website, and set a strong, unique password (chapter 2). Where the project publishes a checksum or a signature for that image, as <a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" class="ext" rel="noopener noreferrer">Start9</a> and <a href="https://docs.raspiblitz.org/docs/faq" class="ext" rel="noopener noreferrer">RaspiBlitz</a> do, check it before you write the image to the disk. This is the step that replaces trust in the download with verification.</li>
+<li id="step-3"><strong>Install the Bitcoin app and let it synchronise.</strong> It takes a few days, and up to a week on slow hardware such as a Raspberry Pi. Leave it running when practical. If you need to stop, shut it down cleanly from the interface and let synchronisation resume later; do not cut the power.</li>
+<li id="step-4"><strong>Install an Electrum server app</strong> (electrs or Fulcrum). It builds an index so that wallets can ask your node questions, which takes several more hours, sometimes a full day.</li>
+<li id="step-5"><strong>Connect your wallet.</strong> In Sparrow, BlueWallet or Nunchuk, open the server or network settings and enter the address of your own Electrum server instead of the public one. From this step on, your wallet shows what your own node verified, and no longer what a third party told it. Zeus works differently, because it connects to a Lightning node, which is for later.</li>
+<li id="step-6"><strong>Reach it from outside your home</strong> over Tor or a private VPN (see chapter 10). The platforms provide a Tor address for this.</li>
+<li id="step-7"><strong>Keep it updated,</strong> and keep your seed backups separate from the node. A verification-only node needs no seed and should never see one. If you enable Bitcoin Core's wallet or install Lightning, protect and back up those wallets separately.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="08" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
-<li><strong>Using a cheap SD card or USB stick, or a disk that is too small.</strong> A node writes constantly, and SD cards and USB sticks tend to fail within months and can corrupt the data. Use a real SSD of 2 TB, because 1 TB leaves almost no margin as of September 2026, and <a href="https://raspibolt.org/" target="_blank" rel="noopener noreferrer">the RaspiBolt guide now asks for 2 TB</a> as well.</li>
+<li><strong>Using a cheap SD card or USB stick, or a disk that is too small.</strong> A node writes constantly, and SD cards and USB sticks tend to fail within months and can corrupt the data. Use a real SSD of 2 TB, because 1 TB leaves almost no margin as of September 2026, and <a href="https://raspibolt.org/" class="ext" rel="noopener noreferrer">the RaspiBolt guide now asks for 2 TB</a> as well.</li>
 <li><strong>No power protection.</strong> A sudden power cut can damage the database and cost you days of synchronisation. Always shut down from the interface, and consider a small battery backup (UPS).</li>
-<li><strong>Thinking the node holds your coins.</strong> It does not, unless you run Lightning. If the node dies, your bitcoin is untouched, because your seed is what matters.</li>
+<li><strong>Thinking the node holds your coins.</strong> A verification-only node holds no spending keys. Bitcoin Core's optional wallet and a Lightning app do hold keys, and require their own backups. With keys kept separately, a failed verification node can be rebuilt without losing funds.</li>
 <li><strong>Exposing it to the internet.</strong> Do not open ports on your router to reach the dashboard. Use Tor or a VPN.</li>
 <li><strong>Giving up during the first synchronisation.</strong> It can look stuck for days while it verifies more than 15 years of transactions, which it only has to do once.</li>
-<li><strong>Downloading software from the wrong place, or without verifying it.</strong> Get Bitcoin Core only from <a href="https://bitcoincore.org" target="_blank" rel="noopener noreferrer">bitcoincore.org</a>, and each platform from its official website. The <a href="https://bitcoincore.org/en/download/" target="_blank" rel="noopener noreferrer">download page of Bitcoin Core</a> explains how to check the file against the published list of checksums, and how to check that this list carries the PGP signatures of several developers. On a platform, you rely on its maker to do this for the apps it installs, whereas on your own computer and on the manual route it is your job.</li>
+<li><strong>Downloading software from the wrong place, or without verifying it.</strong> Get Bitcoin Core only from <a href="https://bitcoincore.org" class="tool-link ext" rel="noopener noreferrer">bitcoincore.org</a>, and each platform from its official website. The <a href="https://bitcoincore.org/en/download/" class="ext" rel="noopener noreferrer">download page of Bitcoin Core</a> explains how to check the file against the published list of checksums, and how to check that this list carries the PGP signatures of several developers. On a platform, you rely on its maker to do this for the apps it installs, whereas on your own computer and on the manual route it is your job.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "Why Centralized Money Fails: How Bitcoin Became an Alternative", by Piktas. A node is how you verify that alternative yourself. See also the talk by Alexis Roussel on decentralised, open-source technology.</li>
-<li><strong>The basics:</strong> the download page of Bitcoin Core (<a href="https://bitcoincore.org" target="_blank" rel="noopener noreferrer">bitcoincore.org</a>), with the current requirements, pruned mode and the procedure to verify your download.</li>
-<li><strong>The manual route:</strong> the RaspiBolt guide (<a href="https://raspibolt.org" target="_blank" rel="noopener noreferrer">raspibolt.org</a>, version 4, updated in August 2026) and MiniBolt, a similar guide for ordinary PCs (<a href="https://minibolt.minibolt.info" target="_blank" rel="noopener noreferrer">minibolt.minibolt.info</a>). Both are maintained as of September 2026.</li>
-<li><strong>Connecting a wallet to your node:</strong> the Sparrow Wallet documentation (<a href="https://sparrowwallet.com/docs" target="_blank" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
+</section><section class="sec sec--further" data-no="09" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>The basics:</strong> the download page of Bitcoin Core (<a href="https://bitcoincore.org" class="tool-link ext" rel="noopener noreferrer">bitcoincore.org</a>), with the current requirements, pruned mode and the procedure to verify your download.</li>
+<li><strong>The manual route:</strong> the RaspiBolt guide (<a href="https://raspibolt.org" class="tool-link ext" rel="noopener noreferrer">raspibolt.org</a>, version 4, updated in August 2026) and MiniBolt, a similar guide for ordinary PCs (<a href="https://minibolt.minibolt.info" class="tool-link ext" rel="noopener noreferrer">minibolt.minibolt.info</a>). Both are maintained as of September 2026.</li>
+<li><strong>Connecting a wallet to your node:</strong> the Sparrow Wallet documentation (<a href="https://sparrowwallet.com/docs" class="tool-link ext" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
 <li><strong>Next:</strong> your checklist.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.blockchain.com/explorer/charts/blocks-size" target="_blank" rel="noopener noreferrer">Blockchain size chart</a>, Blockchain.com, consulted on 20 September 2026 (about 770 GB).</li>
-<li><a href="https://bitcoincore.org/en/download/" target="_blank" rel="noopener noreferrer">Download Bitcoin Core, with requirements and verification of the download</a>, Bitcoin Core project, consulted in September 2026.</li>
-<li><a href="https://github.com/bitcoin-core/guix.sigs" target="_blank" rel="noopener noreferrer">Signatures of the Bitcoin Core builders (guix.sigs)</a>, Bitcoin Core project on GitHub, updated at every release.</li>
-<li><a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" target="_blank" rel="noopener noreferrer">Installing StartOS, with verification of the download</a>, Start9 documentation, consulted in September 2026.</li>
-<li><a href="https://docs.raspiblitz.org/docs/faq" target="_blank" rel="noopener noreferrer">RaspiBlitz FAQ, how to verify the SD card image</a>, RaspiBlitz project, consulted in September 2026.</li>
-<li><a href="https://raspibolt.org/" target="_blank" rel="noopener noreferrer">RaspiBolt, version 4</a>, RaspiBolt community guide, updated in August 2026.</li>
-<li><a href="https://minibolt.minibolt.info/" target="_blank" rel="noopener noreferrer">MiniBolt</a>, MiniBolt community guide, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="10" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://bitcoincore.org/en/doc/30.0.0/rpc/control/stop/" class="ext" rel="noopener noreferrer">Graceful shutdown, stop RPC</a>, Bitcoin Core documentation, checked 22 October 2026.</li>
+<li><a href="https://www.blockchain.com/explorer/charts/blocks-size" class="ext" rel="noopener noreferrer">Blockchain size chart</a>, Blockchain.com, consulted on 20 September 2026 (about 770 GB).</li>
+<li><a href="https://bitcoincore.org/en/download/" class="ext" rel="noopener noreferrer">Download Bitcoin Core, with requirements and verification of the download</a>, Bitcoin Core project, consulted in September 2026.</li>
+<li><a href="https://github.com/bitcoin-core/guix.sigs" class="ext" rel="noopener noreferrer">Signatures of the Bitcoin Core builders (guix.sigs)</a>, Bitcoin Core project on GitHub, updated at every release.</li>
+<li><a href="https://docs.start9.com/start-os/0.4.0.x/installing-startos.html" class="ext" rel="noopener noreferrer">Installing StartOS, with verification of the download</a>, Start9 documentation, consulted in September 2026.</li>
+<li><a href="https://docs.raspiblitz.org/docs/faq" class="ext" rel="noopener noreferrer">RaspiBlitz FAQ, how to verify the SD card image</a>, RaspiBlitz project, consulted in September 2026.</li>
+<li><a href="https://raspibolt.org/" class="ext" rel="noopener noreferrer">RaspiBolt, version 4</a>, RaspiBolt community guide, updated in August 2026.</li>
+<li><a href="https://minibolt.minibolt.info/" class="ext" rel="noopener noreferrer">MiniBolt</a>, MiniBolt community guide, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="node-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="node-1" aria-label="Look in your wallet&#x27;s network settings and see which server it uses today"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-1">Look in your wallet's network settings and see which server it uses today</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="node-2" aria-label="Verify the Bitcoin Core download, install it in pruned mode so it does not fill your disk, and watch it synchronise"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-2">Verify the Bitcoin Core download, install it in pruned mode so it does not fill your disk, and watch it synchronise</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="node-3" aria-label="Choose a platform and the hardware for a dedicated node, with a 2 TB SSD"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-3">Choose a platform and the hardware for a dedicated node, with a 2 TB SSD</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-4" data-effort="3">
-        <label class="bk-check"><input type="checkbox" id="node-4" aria-label="Build the node, start the synchronisation (a few days, unattended) and add an Electrum server"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-4">Build the node, start the synchronisation (a few days, unattended) and add an Electrum server</label>
-        <span class="bk-effort">Weekend</span>
-      </li>
-      <li class="bk-cl-item" data-id="node-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="node-5" aria-label="Point your wallet to your own node and remove the public server"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="node-5">Point your wallet to your own node and remove the public server</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/hardware-wallet/"><span>Previous</span>Hardware wallets</a>
-<span></span>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="11" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="node">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="node" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-node-check-server"><span class="legacy-anchor" id="node-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-check-server" disabled="disabled"><span class="action-text">Look in your wallet's network settings and see which server it uses today</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-node-bitcoin-core-pruned"><span class="legacy-anchor" id="node-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-bitcoin-core-pruned" disabled="disabled"><span class="action-text">Verify the Bitcoin Core download, install it in pruned mode so it does not fill your disk, and watch it synchronise</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-node-choose-platform"><span class="legacy-anchor" id="node-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-choose-platform" disabled="disabled"><span class="action-text">Choose a platform and the hardware for a dedicated node, with a 2 TB SSD</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-node-build-node"><span class="legacy-anchor" id="node-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-build-node" disabled="disabled"><span class="action-text">Build the node, start the synchronisation (a few days, unattended) and add an Electrum server</span><span class="effort"><span class="sr-only">, effort: </span>weekend</span></label></li><li class="action" id="action-node-connect-wallet"><span class="legacy-anchor" id="node-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="node-connect-wallet" disabled="disabled"><span class="action-text">Point your wallet to your own node and remove the public server</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="node" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-3" href="/book/en/hardware-wallet/"><span class="pager-dir">Previous · Chapter 17</span><span class="pager-title">Hardware wallets</span></a><a class="pager-next" href="/book/en/checklist/"><span class="pager-dir">Next · Global checklist</span><span class="pager-title">All actions</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/node/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/" aria-current="page"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

@@ -24,10 +24,14 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/"/>
+  </url>
+  <url>
+    <loc>https://proofconference.com/book/en/start/</loc>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://proofconference.com/book/introduction/</loc>
@@ -38,7 +42,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/introduction/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/introduction/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/introduction/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/introduction/"/>
@@ -52,7 +56,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/privacy/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/privacy/"/>
@@ -66,7 +70,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/messages/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/messages/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/messages/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/messages/"/>
@@ -80,7 +84,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/passwords/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/passwords/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/passwords/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/passwords/"/>
@@ -94,7 +98,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/browser/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/browser/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/browser/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/browser/"/>
@@ -108,7 +112,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/email/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/email/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/email/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/email/"/>
@@ -122,7 +126,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/network/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/network/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/network/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/network/"/>
@@ -136,7 +140,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/autonomy/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/autonomy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/autonomy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/autonomy/"/>
@@ -150,7 +154,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/keys/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/keys/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/keys/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/keys/"/>
@@ -164,7 +168,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/nostr/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/nostr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/nostr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/nostr/"/>
@@ -178,7 +182,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/big-tech/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/big-tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/big-tech/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/big-tech/"/>
@@ -192,7 +196,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/phone/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/phone/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/phone/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/phone/"/>
@@ -206,7 +210,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/self-hosting/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/self-hosting/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/self-hosting/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/self-hosting/"/>
@@ -220,7 +224,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/ai/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/ai/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/ai/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/ai/"/>
@@ -234,7 +238,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/work/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/work/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/work/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/work/"/>
@@ -248,7 +252,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/savings/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/savings/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/savings/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/savings/"/>
@@ -262,7 +266,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/first-wallet/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/first-wallet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/first-wallet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/first-wallet/"/>
@@ -276,7 +280,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/seed/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/seed/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/seed/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/seed/"/>
@@ -290,7 +294,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/lightning-and-euros/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/lightning-and-euros/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/lightning-and-euros/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/lightning-and-euros/"/>
@@ -304,7 +308,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/bitcoin-privacy/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/bitcoin-privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/bitcoin-privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/bitcoin-privacy/"/>
@@ -318,7 +322,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/hardware-wallet/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/hardware-wallet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/hardware-wallet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/hardware-wallet/"/>
@@ -332,7 +336,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/node/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/node/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/node/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/node/"/>
@@ -346,7 +350,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/glossary/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/glossary/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/glossary/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/glossary/"/>
@@ -360,7 +364,7 @@
   </url>
   <url>
     <loc>https://proofconference.com/book/en/checklist/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/checklist/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/checklist/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/checklist/"/>

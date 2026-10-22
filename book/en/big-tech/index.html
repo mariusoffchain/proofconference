@@ -1,81 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Replacing Big Tech services, one at a time · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Replacing Big Tech services, one at a time — A Guide to Autonomy</title>
 <meta name="description" content="You do not leave Google, Apple, Meta or Microsoft in 1 day, and you do not have to. Export your data first, then replace 1 service, live with it for 2 weeks…">
 <link rel="canonical" href="https://proofconference.com/book/en/big-tech/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/big-tech/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/big-tech/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/big-tech/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Replacing Big Tech services, one at a time · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Replacing Big Tech services, one at a time — A Guide to Autonomy">
 <meta property="og:description" content="You do not leave Google, Apple, Meta or Microsoft in 1 day, and you do not have to. Export your data first, then replace 1 service, live with it for 2 weeks…">
 <meta property="og:url" content="https://proofconference.com/book/en/big-tech/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Replacing Big Tech services, one at a time · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Replacing Big Tech services, one at a time — A Guide to Autonomy">
 <meta name="twitter:description" content="You do not leave Google, Apple, Meta or Microsoft in 1 day, and you do not have to. Export your data first, then replace 1 service, live with it for 2 weeks…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/big-tech/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/big-tech/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page auto page-top" data-slug="big-tech">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Autonomy · Chapter 8</p>
-    <h1>Replacing Big Tech services, one at a time</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/big-tech/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-2" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/big-tech"><div class="page-layout is-chapter part-2"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/big-tech/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/big-tech/#a-single-account-holds-your-whole-digital-life" data-target="a-single-account-holds-your-whole-digital-life"><span class="toc-no">02</span><span class="toc-label">A single account holds your whole digital life</span></a></li><li><a href="/book/en/big-tech/#export-first-then-1-service-at-a-time" data-target="export-first-then-1-service-at-a-time"><span class="toc-no">03</span><span class="toc-label">Export first, then 1 service at a time</span></a></li><li><a href="/book/en/big-tech/#a-privacy-brand-is-still-1-company" data-target="a-privacy-brand-is-still-1-company"><span class="toc-no">04</span><span class="toc-label">A privacy brand is still 1 company</span></a></li><li><a href="/book/en/big-tech/#choose-your-replacements" data-target="choose-your-replacements"><span class="toc-no">05</span><span class="toc-label">Choose your replacements</span></a></li><li><a href="/book/en/big-tech/#step-by-step" data-target="step-by-step"><span class="toc-no">06</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/big-tech/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">07</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/big-tech/#go-further" data-target="go-further"><span class="toc-no">08</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/big-tech/#sources" data-target="sources"><span class="toc-no">09</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/big-tech/#your-checklist" data-target="your-checklist"><span class="toc-no">10</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-2" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/autonomy/">Part 2 · Autonomy</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 8: </span>Replacing Big Tech services, one at a time</h1><p class="ch-bignum" aria-hidden="true">08</p><div class="ch-meta"><span>Chapter 8 of 18</span><a href="/book/en/big-tech/#your-checklist"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="big-tech"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>You do not leave Google, Apple, Meta or Microsoft in 1 day, and you do not have to. Export your data first, then replace 1 service, live with it for 2 weeks, and only then move to the next. For every need there are several credible alternatives, most of them open source and run by different operators. Each service you move reduces what a single company knows about you, and what you lose if that account is locked.</p>
-<h2>A single account holds your whole digital life</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="a-single-account-holds-your-whole-digital-life"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="a-single-account-holds-your-whole-digital-life" tabindex="-1">A single account holds your whole digital life</h2>
 <p>Most digital lives run inside 1 or 2 companies, with mail, calendar, photos, documents, maps and videos under a single account. It is comfortable, and it creates 2 risks.</p>
 <p>The first is the profile, because a company that sees your searches, your movements, your inbox and your photos knows more about you than any person does. The second is dependency, because if that account is locked (chapter 6), everything goes at the same moment.</p>
-<p>In May 2025 the Associated Press reported that the chief prosecutor of the International Criminal Court had lost access to his Microsoft email account after US sanctions, although Microsoft says it never suspended its services to the court. In October 2025 the court <a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" target="_blank" rel="noopener noreferrer">confirmed that it is replacing Microsoft Office with openDesk</a>, an open source suite developed for the German state.</p>
+<p>In May 2025 the Associated Press reported that the chief prosecutor of the International Criminal Court had lost access to his Microsoft email account after US sanctions, although Microsoft says it never suspended its services to the court. In October 2025 the court <a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" class="ext" rel="noopener noreferrer">confirmed that it is replacing Microsoft Office with openDesk</a>, an open source suite developed for the German state.</p>
 <p>The usual reaction is a burst of motivation, "I delete everything today", and it almost always fails. Too many habits break at once, the family calendar stops working, a document cannot be found before a deadline, and 2 weeks later everything is back where it was, and the conclusion drawn is that alternatives do not work, when what failed was the attempt to change 10 habits at once.</p>
-<h2>Export first, then 1 service at a time</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/">theregister.com</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="export-first-then-1-service-at-a-time"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="export-first-then-1-service-at-a-time" tabindex="-1">Export first, then 1 service at a time</h2>
 <p>The method rests on 3 ideas.</p>
-<p><strong>Export first.</strong> Article 20 of the <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">General Data Protection Regulation</a>, which applies since 25 May 2018, gives you the right to receive your data in a commonly used, machine-readable format. The big companies provide a tool for it: Google Takeout (<a href="https://takeout.google.com" target="_blank" rel="noopener noreferrer">takeout.google.com</a>), Apple's "Data and Privacy" page (<a href="https://privacy.apple.com" target="_blank" rel="noopener noreferrer">privacy.apple.com</a>), and the "download your information" option in the account settings of Facebook and Instagram. The export takes hours or days to arrive. You keep your history whatever happens next, and you see how much they hold, which for many people is the moment the motivation becomes real.</p>
+<p><strong>Export first.</strong> Article 20 of the <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" class="ext" rel="noopener noreferrer">General Data Protection Regulation</a>, which applies since 25 May 2018, gives a right to portability for certain personal data you provided, when it is processed automatically on the basis of consent or a contract. It does not cover every record a provider holds. Covered data must be supplied in a structured, commonly used, machine-readable format. The big companies provide a tool for it: Google Takeout (<a href="https://takeout.google.com" class="tool-link ext" rel="noopener noreferrer">takeout.google.com</a>), Apple's "Data and Privacy" page (<a href="https://privacy.apple.com" class="tool-link ext" rel="noopener noreferrer">privacy.apple.com</a>), and the "download your information" option in the account settings of Facebook and Instagram. The export takes hours or days to arrive. You keep your history whatever happens next, and you see how much they hold, which for many people is the moment the motivation becomes real.</p>
 <p><strong>Pick 1 service.</strong> There are 2 good ways to choose, either the one that knows the most about you (often mail, photos or search) or the easiest one (often maps, notes or search). If you hesitate, take the easiest, because an early success makes the next one simpler.</p>
 <p><strong>Run both in parallel.</strong> Use the new tool for 2 weeks while the old one still exists, and move the data and delete it there only once you have stopped opening the old one.</p>
 <p>Then repeat. 4 services a year is a very good pace.</p>
-<h2>A privacy brand is still 1 company</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">eur-lex.europa.eu</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="a-privacy-brand-is-still-1-company"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="a-privacy-brand-is-still-1-company" tabindex="-1">A privacy brand is still 1 company</h2>
 <p>Moving from Google to a provider with "privacy" in its slogan changes the landlord and leaves the question intact, namely who can read your data, and what happens if that company fails, is sold or changes its terms. 3 tests help to answer it.</p>
 <ul>
 <li><strong>Can the provider read it?</strong> With end-to-end encryption, the data is locked on your device and the provider stores something it cannot open. Without it, the content is protected only by the provider's promise and by the law of its country. Even with it, the provider sees some metadata and delivers the app that does the encrypting, which is why open source apps and published audits matter.</li>
@@ -83,95 +57,95 @@
 <li><strong>Can someone else run it?</strong> Software that you or an association can host (Nextcloud, CryptPad, Immich, PeerTube) does not depend on the survival of 1 operator, and local tools (Syncthing, Joplin, Obsidian, LibreOffice) keep the data on your own devices.</li>
 </ul>
 <p>A well-run company with end-to-end encryption remains a reasonable choice for most readers, and often a safer one than a server that nobody maintains.</p>
-<h2>Choose your replacements</h2>
+</section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-replacements"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-replacements" tabindex="-1">Choose your replacements</h2>
 <p>The table is organised by need. "Open source" means the code is public and can be checked. "Self-hosted" means you, or someone you trust, must run a server (chapter 10). Everything else is ready to use.</p>
 <p>No alternative is an exact copy of what it replaces. Some are better, some ask for a small compromise, and the notes say which. Try 2 options for the same need before you decide, since most are free or cheap to test.</p>
 <p>Some names, Proton in particular, appear in several rows. Taking everything from a single provider is convenient, but it rebuilds the dependency you are leaving, so consider mixing operators.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>10 options · 4 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your replacements"><table>
 <thead>
 <tr>
-<th>Need</th>
-<th>Alternatives</th>
-<th>Notes</th>
-<th>Who can read your data</th>
+<th scope="col">Need</th>
+<th scope="col">Alternatives</th>
+<th scope="col">Notes</th>
+<th scope="col">Who can read your data</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Search</strong></td>
+<tr id="row-search">
+<th scope="row"><strong>Search</strong></th>
 <td>See chapter 3</td>
 <td>The easiest first step, a single setting in your browser.</td>
 <td>See chapter 3.</td>
 </tr>
-<tr>
-<td><strong>Email and calendar</strong></td>
-<td>See chapter 4 for email. Calendars: <a href="https://proton.me/calendar" target="_blank" rel="noopener noreferrer">Proton Calendar</a>, <a href="https://tuta.com/calendar" target="_blank" rel="noopener noreferrer">Tuta Calendar</a>, <a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a></td>
-<td><a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a> and <a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a> encrypt your calendar and publish the code of their apps. Each is a single company. Nextcloud is open source, self-hosted or rented from a provider of your choice.</td>
-<td>Not Proton or Tuta, which <a href="https://proton.me/blog/protoncalendar-security-model" target="_blank" rel="noopener noreferrer">encrypt events end to end</a>. On Nextcloud, whoever runs the server can.</td>
+<tr id="row-email-and-calendar">
+<th scope="row"><strong>Email and calendar</strong></th>
+<td>See chapter 4 for email. Calendars: <a href="https://proton.me/calendar" class="tool-link ext" rel="noopener noreferrer">Proton Calendar</a>, <a href="https://tuta.com/calendar" class="tool-link ext" rel="noopener noreferrer">Tuta Calendar</a>, <a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a></td>
+<td><a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a> and <a href="https://tuta.com/" class="tool-link ext" rel="noopener noreferrer">Tuta</a> encrypt your calendar and publish the code of their apps. Each is a single company. Nextcloud is open source, self-hosted or rented from a provider of your choice.</td>
+<td>Not Proton or Tuta, which <a href="https://proton.me/blog/protoncalendar-security-model" class="ext" rel="noopener noreferrer">encrypt events end to end</a>. On Nextcloud, whoever runs the server can.</td>
 </tr>
-<tr>
-<td><strong>Maps</strong></td>
-<td><a href="https://organicmaps.app/" target="_blank" rel="noopener noreferrer">Organic Maps</a>, <a href="https://www.comaps.app/" target="_blank" rel="noopener noreferrer">CoMaps</a>, <a href="https://osmand.net/" target="_blank" rel="noopener noreferrer">OsmAnd</a>, <a href="https://www.magicearth.com/" target="_blank" rel="noopener noreferrer">Magic Earth</a></td>
-<td>All use <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> data. Organic Maps, its community fork CoMaps, and OsmAnd (more detailed, more complex) are open source and work offline for free, without live traffic. Magic Earth is closed source and does offer live traffic, but as of September 2026 traffic and offline maps are part of its <a href="https://www.magicearth.com/pricing" target="_blank" rel="noopener noreferrer">paid Premium plan</a>. None has the shop reviews of Google Maps.</td>
+<tr id="row-maps">
+<th scope="row"><strong>Maps</strong></th>
+<td><a href="https://organicmaps.app/" class="tool-link ext" rel="noopener noreferrer">Organic Maps</a>, <a href="https://www.comaps.app/" class="tool-link ext" rel="noopener noreferrer">CoMaps</a>, <a href="https://osmand.net/" class="tool-link ext" rel="noopener noreferrer">OsmAnd</a>, <a href="https://www.magicearth.com/" class="tool-link ext" rel="noopener noreferrer">Magic Earth</a></td>
+<td>All use <a href="https://www.openstreetmap.org/" class="tool-link ext" rel="noopener noreferrer">OpenStreetMap</a> data. Organic Maps, its community fork CoMaps, and OsmAnd (more detailed, more complex) are open source and work offline for free, without live traffic. Magic Earth is closed source and does offer live traffic, but as of September 2026 traffic and offline maps are part of its <a href="https://www.magicearth.com/pricing" class="ext" rel="noopener noreferrer">paid Premium plan</a>. None has the shop reviews of Google Maps.</td>
 <td>Offline search and routing run on the phone, without an account. Magic Earth's code cannot be checked.</td>
 </tr>
-<tr>
-<td><strong>Cloud storage and sync</strong></td>
-<td><a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a>, <a href="https://proton.me/drive" target="_blank" rel="noopener noreferrer">Proton Drive</a>, <a href="https://filen.io/" target="_blank" rel="noopener noreferrer">Filen</a>, <a href="https://syncthing.net/" target="_blank" rel="noopener noreferrer">Syncthing</a></td>
-<td>Proton Drive and Filen are end-to-end encrypted, with open source apps, each run by a single company. For Nextcloud, see above. Syncthing is open source and has no cloud at all, because it syncs your own devices directly. It works best between computers. On Android, the official app was <a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" target="_blank" rel="noopener noreferrer">discontinued in December 2024</a>. A community version, Syncthing-Fork, continues on <a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a> and changed maintainer in 2025, so check its current state before you rely on it. On iPhone, only third-party apps exist.</td>
-<td>Not <a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a> or Filen. A Nextcloud host can, unless <a href="https://nextcloud.com/encryption/" target="_blank" rel="noopener noreferrer">folder encryption</a> is on. Syncthing <a href="https://docs.syncthing.net/users/relaying.html" target="_blank" rel="noopener noreferrer">relays carry encrypted data</a>.</td>
+<tr id="row-cloud-storage-and-sync">
+<th scope="row"><strong>Cloud storage and sync</strong></th>
+<td><a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a>, <a href="https://proton.me/drive" class="tool-link ext" rel="noopener noreferrer">Proton Drive</a>, <a href="https://filen.io/" class="tool-link ext" rel="noopener noreferrer">Filen</a>, <a href="https://syncthing.net/" class="tool-link ext" rel="noopener noreferrer">Syncthing</a></td>
+<td>Proton Drive and Filen are end-to-end encrypted, with open source apps, each run by a single company. For Nextcloud, see above. Syncthing is open source and has no cloud at all, because it syncs your own devices directly. It works best between computers. On Android, the official app was <a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" class="ext" rel="noopener noreferrer">discontinued in December 2024</a>. A community version, Syncthing-Fork, continues on <a href="https://f-droid.org/" class="tool-link ext" rel="noopener noreferrer">F-Droid</a> and changed maintainer in 2025, so check its current state before you rely on it. On iPhone, only third-party apps exist.</td>
+<td>Not <a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a> or Filen. A Nextcloud host can, unless you use client-side <a href="https://nextcloud.com/encryption/" class="ext" rel="noopener noreferrer">end-to-end encrypted folders</a>. Server-side encryption alone does not hide files from the administrator. Syncthing <a href="https://docs.syncthing.net/users/relaying.html" class="ext" rel="noopener noreferrer">relays carry encrypted data</a>.</td>
 </tr>
-<tr>
-<td><strong>Documents</strong></td>
-<td><a href="https://cryptpad.org/" target="_blank" rel="noopener noreferrer">CryptPad</a>, <a href="https://www.libreoffice.org/" target="_blank" rel="noopener noreferrer">LibreOffice</a>, <a href="https://www.onlyoffice.com/" target="_blank" rel="noopener noreferrer">OnlyOffice</a></td>
-<td>CryptPad offers encrypted online collaboration, is open source, and can be used on a public instance or hosted yourself. LibreOffice is open source and runs offline on your computer. OnlyOffice is open source, good with Microsoft formats, and often used inside <a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a>.</td>
+<tr id="row-documents">
+<th scope="row"><strong>Documents</strong></th>
+<td><a href="https://cryptpad.org/" class="tool-link ext" rel="noopener noreferrer">CryptPad</a>, <a href="https://www.libreoffice.org/" class="tool-link ext" rel="noopener noreferrer">LibreOffice</a>, <a href="https://www.onlyoffice.com/" class="tool-link ext" rel="noopener noreferrer">OnlyOffice</a></td>
+<td>CryptPad offers encrypted online collaboration, is open source, and can be used on a public instance or hosted yourself. LibreOffice is open source and runs offline on your computer. OnlyOffice is open source, good with Microsoft formats, and often used inside <a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a>.</td>
 <td>Not a CryptPad host (documents are encrypted in your browser). LibreOffice files stay local. OnlyOffice depends on its host.</td>
 </tr>
-<tr>
-<td><strong>Notes</strong></td>
-<td><a href="https://standardnotes.com/" target="_blank" rel="noopener noreferrer">Standard Notes</a>, <a href="https://joplinapp.org/" target="_blank" rel="noopener noreferrer">Joplin</a>, <a href="https://notesnook.com/" target="_blank" rel="noopener noreferrer">Notesnook</a>, <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer">Obsidian</a></td>
-<td>Standard Notes and Notesnook are open source and end-to-end encrypted by default. Standard Notes belongs to <a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>. Joplin is open source and syncs through storage you choose, but its end-to-end encryption <a href="https://joplinapp.org/help/apps/sync/e2ee/" target="_blank" rel="noopener noreferrer">is optional</a>, so turn it on in the settings before the first sync. Obsidian is closed source, but your notes are plain text files on your own disk.</td>
+<tr id="row-notes">
+<th scope="row"><strong>Notes</strong></th>
+<td><a href="https://standardnotes.com/" class="tool-link ext" rel="noopener noreferrer">Standard Notes</a>, <a href="https://joplinapp.org/" class="tool-link ext" rel="noopener noreferrer">Joplin</a>, <a href="https://notesnook.com/" class="tool-link ext" rel="noopener noreferrer">Notesnook</a>, <a href="https://obsidian.md/" class="tool-link ext" rel="noopener noreferrer">Obsidian</a></td>
+<td>Standard Notes and Notesnook are open source and end-to-end encrypted by default. Standard Notes belongs to <a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a>. Joplin is open source and syncs through storage you choose, but its end-to-end encryption <a href="https://joplinapp.org/help/apps/sync/e2ee/" class="ext" rel="noopener noreferrer">is optional</a>, so turn it on in the settings before the first sync. Obsidian is closed source, but your notes are plain text files on your own disk.</td>
 <td>Not Standard Notes or Notesnook. Joplin's storage provider can, until encryption is on. Obsidian files stay local.</td>
 </tr>
-<tr>
-<td><strong>Photos</strong></td>
-<td><a href="https://ente.com/" target="_blank" rel="noopener noreferrer">Ente Photos</a>, <a href="https://immich.app/" target="_blank" rel="noopener noreferrer">Immich</a></td>
-<td><a href="https://ente.com/" target="_blank" rel="noopener noreferrer">Ente</a> is end-to-end encrypted, open source, paid above a small free plan, and can be self-hosted. Immich is open source, self-hosted only, and the closest to the Google Photos experience.</td>
-<td>Not Ente, whose <a href="https://ente.io/architecture/" target="_blank" rel="noopener noreferrer">design is published</a>. With Immich, whoever runs the server, which is normally you.</td>
+<tr id="row-photos">
+<th scope="row"><strong>Photos</strong></th>
+<td><a href="https://ente.com/" class="tool-link ext" rel="noopener noreferrer">Ente Photos</a>, <a href="https://immich.app/" class="tool-link ext" rel="noopener noreferrer">Immich</a></td>
+<td><a href="https://ente.com/" class="tool-link ext" rel="noopener noreferrer">Ente</a> is end-to-end encrypted, open source, paid above a small free plan, and can be self-hosted. Immich is open source, self-hosted only, and the closest to the Google Photos experience.</td>
+<td>Not Ente, whose <a href="https://ente.io/architecture/" class="ext" rel="noopener noreferrer">design is published</a>. With Immich, whoever runs the server, which is normally you.</td>
 </tr>
-<tr>
-<td><strong>Video</strong></td>
-<td><a href="https://newpipe.net/" target="_blank" rel="noopener noreferrer">NewPipe</a>, <a href="https://freetubeapp.io/" target="_blank" rel="noopener noreferrer">FreeTube</a>, <a href="https://invidious.io/" target="_blank" rel="noopener noreferrer">Invidious</a>, <a href="https://joinpeertube.org/" target="_blank" rel="noopener noreferrer">PeerTube</a></td>
+<tr id="row-video">
+<th scope="row"><strong>Video</strong></th>
+<td><a href="https://newpipe.net/" class="tool-link ext" rel="noopener noreferrer">NewPipe</a>, <a href="https://freetubeapp.io/" class="tool-link ext" rel="noopener noreferrer">FreeTube</a>, <a href="https://invidious.io/" class="tool-link ext" rel="noopener noreferrer">Invidious</a>, <a href="https://joinpeertube.org/" class="tool-link ext" rel="noopener noreferrer">PeerTube</a></td>
 <td>NewPipe (Android) and FreeTube (computer) play YouTube without an account or ads. Invidious does the same in a browser through public instances that often break. All 3 are open source and can stop working when YouTube changes something. PeerTube is different, an open source, federated network with its own videos.</td>
 <td>YouTube still sees your IP address. An Invidious or PeerTube instance sees what you watch there.</td>
 </tr>
-<tr>
-<td><strong>Translation</strong></td>
-<td><a href="https://libretranslate.com/" target="_blank" rel="noopener noreferrer">LibreTranslate</a>, the built-in translation of <a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a></td>
-<td>LibreTranslate is open source and can be self-hosted. Firefox translates pages on your device. <a href="https://www.deepl.com/" target="_blank" rel="noopener noreferrer">DeepL</a> gives better quality but is closed source and receives your text, which is fine for a menu and not for a contract.</td>
+<tr id="row-translation">
+<th scope="row"><strong>Translation</strong></th>
+<td><a href="https://libretranslate.com/" class="tool-link ext" rel="noopener noreferrer">LibreTranslate</a>, the built-in translation of <a href="https://www.firefox.com/" class="tool-link ext" rel="noopener noreferrer">Firefox</a></td>
+<td>LibreTranslate is open source and can be self-hosted. Firefox translates pages on your device. <a href="https://www.deepl.com/" class="tool-link ext" rel="noopener noreferrer">DeepL</a> gives better quality but is closed source and receives your text, which is fine for a menu and not for a contract.</td>
 <td>A LibreTranslate instance sees your text unless you host it. Firefox sends nothing. DeepL receives everything you type.</td>
 </tr>
-<tr>
-<td><strong>App store on Android</strong></td>
-<td><a href="https://f-droid.org/" target="_blank" rel="noopener noreferrer">F-Droid</a>, <a href="https://obtainium.imranr.dev/" target="_blank" rel="noopener noreferrer">Obtainium</a>, <a href="https://auroraoss.com/" target="_blank" rel="noopener noreferrer">Aurora Store</a></td>
+<tr id="row-app-store-on-android">
+<th scope="row"><strong>App store on Android</strong></th>
+<td><a href="https://f-droid.org/" class="tool-link ext" rel="noopener noreferrer">F-Droid</a>, <a href="https://obtainium.imranr.dev/" class="tool-link ext" rel="noopener noreferrer">Obtainium</a>, <a href="https://auroraoss.com/" class="tool-link ext" rel="noopener noreferrer">Aurora Store</a></td>
 <td>F-Droid is a catalogue of open source apps only. See chapter 9.</td>
 <td>Nobody reads data here. The question is who builds and signs the apps (chapter 9).</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable start for most people is <strong>search, then maps, then notes</strong>, because they need almost no migration. Mail and photos matter the most, and each deserves a calm weekend.</p>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="06" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example moves your photos, and the logic is the same for every row of the table.</p>
-<ol>
-<li><strong>Export.</strong> Request your full archive from the old service and store it on a disk you own. Check that the files open.</li>
-<li><strong>Choose 1 service</strong> from the table. Read its website, check who runs it, whether the code is open, whether the provider can read your data, and what it costs. This is the step that replaces trust in a brand with verification.</li>
-<li><strong>Run both in parallel for 2 weeks.</strong> Turn on the new photo backup on your phone and leave the old one on. Use the new app every time you want to look at a photo.</li>
-<li><strong>Move the data.</strong> Import your export into the new service. Most alternatives have an import tool or a guide for the big platforms.</li>
-<li><strong>Change the default on every device,</strong> meaning phone, tablet, computer, and the devices of anyone who shares the service with you. Turn off the old backup or sync.</li>
-<li><strong>Delete the data from the old service,</strong> once you have checked that the new copy is complete and that you have a backup of it. Be careful with photos. According to <a href="https://support.google.com/photos/answer/6128858" target="_blank" rel="noopener noreferrer">Google's own help page</a>, deleting a backed-up photo in the Google Photos app also deletes the copy on your phone. To keep the phone copies, turn off backup on every device first and then delete from <a href="https://photos.google.com" target="_blank" rel="noopener noreferrer">photos.google.com</a> on a computer, or use "Undo backup" in the backup settings of the app, which removes the cloud copies and leaves the files on the device. iCloud Photos works the same way, so turn it off on the device and choose to keep the originals before you delete anything. Deleted items stay in the trash for 30 days, which you can empty once you are sure.</li>
-<li><strong>Pick the next one,</strong> but not in the same week.</li>
+<ol class="steps">
+<li id="step-1"><strong>Export.</strong> Request your full archive from the old service and store it on a disk you own. Check that the files open.</li>
+<li id="step-2"><strong>Choose 1 service</strong> from the table. Read its website, check who runs it, whether the code is open, whether the provider can read your data, and what it costs. This is the step that replaces trust in a brand with verification.</li>
+<li id="step-3"><strong>Run both in parallel for 2 weeks.</strong> Turn on the new photo backup on your phone and leave the old one on. Use the new app every time you want to look at a photo.</li>
+<li id="step-4"><strong>Move the data.</strong> Import your export into the new service. Most alternatives have an import tool or a guide for the big platforms.</li>
+<li id="step-5"><strong>Change the default on every device,</strong> meaning phone, tablet, computer, and the devices of anyone who shares the service with you. Turn off the old backup or sync.</li>
+<li id="step-6"><strong>Delete the data from the old service,</strong> once you have checked that the new copy is complete and that you have a backup of it. Be careful with photos. According to <a href="https://support.google.com/photos/answer/6128858/delete-or-restore-your-photos-amp-videos-android?co=GENIE.Platform%3DAndroid" class="ext" rel="noopener noreferrer">Google's own help page</a>, deleting a backed-up photo in the Google Photos app also deletes the copy on your phone. To keep the phone copies, turn off backup on every device first and then delete from <a href="https://photos.google.com" class="tool-link ext" rel="noopener noreferrer">photos.google.com</a> on a computer, or use "Undo backup" in the backup settings of the app, which removes the cloud copies and leaves the files on the device. With iCloud Photos, first <a href="https://support.apple.com/en-ie/102179" class="ext" rel="noopener noreferrer">download the originals</a>, wait for the download to finish and verify the files, then turn off sync on the devices whose copies you want to keep before deleting cloud items. Deleted items stay in the trash for 30 days, which you can empty once you are sure.</li>
+<li id="step-7"><strong>Pick the next one,</strong> but not in the same week.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="07" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Purism.</strong> Replacing 7 services out of 10 is a large gain, and keeping YouTube or a work tool does not cancel the rest.</li>
 <li><strong>Moving everything at once.</strong> It is the main reason people go back. Move 1 service, live with it for 2 weeks, then pick the next.</li>
@@ -180,73 +154,33 @@
 <li><strong>Deleting before verifying.</strong> Open the new copy, count the albums, check the oldest and the newest files, and only then delete the original, in the way described in step 6.</li>
 <li><strong>Replacing a dependency with another.</strong> If everything moves to a single new company, the dependency is the same with a better landlord. Spread your services across several operators.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "How the 'Soldier-Citizen' Can Help Decentralize the World", by Alexis Roussel, on why open and decentralised tools matter for a society.</li>
-<li><strong>Detailed, independent recommendations:</strong> Privacy Guides (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
-<li><strong>Alternatives listed by the service you want to replace:</strong> <a href="https://switching.software" target="_blank" rel="noopener noreferrer">switching.software</a>.</li>
-<li><strong>Services based in Europe:</strong> <a href="https://european-alternatives.eu" target="_blank" rel="noopener noreferrer">european-alternatives.eu</a>.</li>
+</section><section class="sec sec--further" data-no="08" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Detailed, independent recommendations:</strong> Privacy Guides (<a href="https://privacyguides.org" class="tool-link ext" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Alternatives listed by the service you want to replace:</strong> <a href="https://switching.software" class="tool-link ext" rel="noopener noreferrer">switching.software</a>.</li>
+<li><strong>Services based in Europe:</strong> <a href="https://european-alternatives.eu" class="tool-link ext" rel="noopener noreferrer">european-alternatives.eu</a>.</li>
 <li><strong>Next chapter:</strong> taking back control of your phone.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" target="_blank" rel="noopener noreferrer">International Criminal Court dumps Microsoft Office</a>, The Register, 31 October 2025.</li>
-<li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">Regulation (EU) 2016/679, General Data Protection Regulation, Article 20</a>, Official Journal of the European Union, 27 April 2016.</li>
-<li><a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" target="_blank" rel="noopener noreferrer">Discontinuing syncthing-android</a>, Syncthing community forum, 20 October 2024.</li>
-<li><a href="https://support.google.com/photos/answer/6128858" target="_blank" rel="noopener noreferrer">Delete photos and videos</a>, Google Photos Help, consulted in September 2026.</li>
-<li><a href="https://www.magicearth.com/pricing" target="_blank" rel="noopener noreferrer">Magic Earth pricing</a>, Magic Earth, consulted in September 2026.</li>
-<li><a href="https://joplinapp.org/help/apps/sync/e2ee/" target="_blank" rel="noopener noreferrer">End-to-end encryption</a>, Joplin documentation, consulted in September 2026.</li>
-<li><a href="https://proton.me/blog/protoncalendar-security-model" target="_blank" rel="noopener noreferrer">The Proton Calendar security model</a>, Proton, consulted in September 2026.</li>
-<li><a href="https://nextcloud.com/encryption/" target="_blank" rel="noopener noreferrer">Nextcloud encryption</a>, Nextcloud, consulted in September 2026.</li>
-<li><a href="https://docs.syncthing.net/users/relaying.html" target="_blank" rel="noopener noreferrer">Relaying</a>, Syncthing documentation, consulted in September 2026.</li>
-<li><a href="https://ente.io/architecture/" target="_blank" rel="noopener noreferrer">Ente architecture</a>, Ente, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="09" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://www.edpb.europa.eu/sme/be-compliant/respect-individuals-rights_en" class="ext" rel="noopener noreferrer">Respect individuals' rights, including portability</a>, European Data Protection Board, checked 22 October 2026.</li>
+<li><a href="https://docs.nextcloud.com/server/32/admin_manual/configuration_files/encryption_configuration.html" class="ext" rel="noopener noreferrer">Server-side encryption and its limits</a>, Nextcloud Administration Manual, checked 22 October 2026.</li>
+<li><a href="https://support.apple.com/en-ie/102179" class="ext" rel="noopener noreferrer">Turn off iCloud Photos</a>, Apple Support, checked 22 October 2026.</li>
+<li><a href="https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/" class="ext" rel="noopener noreferrer">International Criminal Court dumps Microsoft Office</a>, The Register, 31 October 2025.</li>
+<li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" class="ext" rel="noopener noreferrer">Regulation (EU) 2016/679, General Data Protection Regulation, Article 20</a>, Official Journal of the European Union, 27 April 2016.</li>
+<li><a href="https://forum.syncthing.net/t/discontinuing-syncthing-android/23002" class="ext" rel="noopener noreferrer">Discontinuing syncthing-android</a>, Syncthing community forum, 20 October 2024.</li>
+<li><a href="https://support.google.com/photos/answer/6128858/delete-or-restore-your-photos-amp-videos-android?co=GENIE.Platform%3DAndroid" class="ext" rel="noopener noreferrer">Delete photos and videos</a>, Google Photos Help, checked 22 October 2026.</li>
+<li><a href="https://www.magicearth.com/pricing" class="ext" rel="noopener noreferrer">Magic Earth pricing</a>, Magic Earth, consulted in September 2026.</li>
+<li><a href="https://joplinapp.org/help/apps/sync/e2ee/" class="ext" rel="noopener noreferrer">End-to-end encryption</a>, Joplin documentation, consulted in September 2026.</li>
+<li><a href="https://proton.me/blog/protoncalendar-security-model" class="ext" rel="noopener noreferrer">The Proton Calendar security model</a>, Proton, consulted in September 2026.</li>
+<li><a href="https://nextcloud.com/encryption/" class="ext" rel="noopener noreferrer">Nextcloud encryption</a>, Nextcloud, consulted in September 2026.</li>
+<li><a href="https://docs.syncthing.net/users/relaying.html" class="ext" rel="noopener noreferrer">Relaying</a>, Syncthing documentation, consulted in September 2026.</li>
+<li><a href="https://ente.io/architecture/" class="ext" rel="noopener noreferrer">Ente architecture</a>, Ente, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="big-tech-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="big-tech-1" aria-label="Request your data export from Google, Apple or Meta"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-1">Request your data export from Google, Apple or Meta</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-2" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="big-tech-2" aria-label="Replace 1 easy service: search, maps or notes"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-2">Replace 1 easy service: search, maps or notes</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="big-tech-3" aria-label="Choose your first important service and run it in parallel for 2 weeks"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-3">Choose your first important service and run it in parallel for 2 weeks</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-4" data-effort="3">
-        <label class="bk-check"><input type="checkbox" id="big-tech-4" aria-label="Move the data, change the default on every device, delete the old copy"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-4">Move the data, change the default on every device, delete the old copy</label>
-        <span class="bk-effort">Weekend</span>
-      </li>
-      <li class="bk-cl-item" data-id="big-tech-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="big-tech-5" aria-label="Write the next service to replace in your calendar, 1 month from now"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="big-tech-5">Write the next service to replace in your calendar, 1 month from now</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/nostr/"><span>Previous</span>Nostr: an open network without a company in charge</a>
-<a class="bk-next" href="/book/en/phone/"><span>Next</span>Taking back control of your phone</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="10" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="big-tech">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="big-tech" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-big-tech-request-export"><span class="legacy-anchor" id="big-tech-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-request-export" disabled="disabled"><span class="action-text">Request your data export from Google, Apple or Meta</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-big-tech-replace-easy-service"><span class="legacy-anchor" id="big-tech-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-replace-easy-service" disabled="disabled"><span class="action-text">Replace 1 easy service: search, maps or notes</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-big-tech-run-in-parallel"><span class="legacy-anchor" id="big-tech-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-run-in-parallel" disabled="disabled"><span class="action-text">Choose your first important service and run it in parallel for 2 weeks</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-big-tech-move-data"><span class="legacy-anchor" id="big-tech-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-move-data" disabled="disabled"><span class="action-text">Move the data and change defaults; delete the old cloud copy only after verifying an independent backup and disabling sync on devices you want to keep</span><span class="effort"><span class="sr-only">, effort: </span>weekend</span></label></li><li class="action" id="action-big-tech-plan-next-service"><span class="legacy-anchor" id="big-tech-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="big-tech-plan-next-service" disabled="disabled"><span class="action-text">Write the next service to replace in your calendar, 1 month from now</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="big-tech" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-2" href="/book/en/nostr/"><span class="pager-dir">Previous · Chapter 7</span><span class="pager-title">Nostr: an open network without a company in charge</span></a><a class="pager-next part-2" href="/book/en/phone/"><span class="pager-dir">Next · Chapter 9</span><span class="pager-title">Taking back control of your phone</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/big-tech/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/" aria-current="page"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

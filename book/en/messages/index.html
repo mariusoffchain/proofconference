@@ -1,228 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Your messages · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Your messages — A Guide to Autonomy</title>
 <meta name="description" content="Your conversations are among the most intimate data you produce. Move them to a messenger that is end-to-end encrypted by default, that is open source, and…">
 <link rel="canonical" href="https://proofconference.com/book/en/messages/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/messages/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/messages/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/messages/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Your messages · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Your messages — A Guide to Autonomy">
 <meta property="og:description" content="Your conversations are among the most intimate data you produce. Move them to a messenger that is end-to-end encrypted by default, that is open source, and…">
 <meta property="og:url" content="https://proofconference.com/book/en/messages/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Your messages · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Your messages — A Guide to Autonomy">
 <meta name="twitter:description" content="Your conversations are among the most intimate data you produce. Move them to a messenger that is end-to-end encrypted by default, that is open source, and…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/messages/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/messages/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page priv page-top" data-slug="messages">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Privacy · Chapter 1</p>
-    <h1>Your messages</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/messages/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-1" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/messages"><div class="page-layout is-chapter part-1"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/messages/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/messages/#encrypted-does-not-mean-private" data-target="encrypted-does-not-mean-private"><span class="toc-no">02</span><span class="toc-label">Encrypted does not mean private</span></a></li><li><a href="/book/en/messages/#a-sealed-envelope-the-carrier-cannot-open" data-target="a-sealed-envelope-the-carrier-cannot-open"><span class="toc-no">03</span><span class="toc-label">A sealed envelope the carrier cannot open</span></a></li><li><a href="/book/en/messages/#confidential-does-not-mean-authentic" data-target="confidential-does-not-mean-authentic"><span class="toc-no">04</span><span class="toc-label">Confidential does not mean authentic</span></a></li><li><a href="/book/en/messages/#choose-your-messenger" data-target="choose-your-messenger"><span class="toc-no">05</span><span class="toc-label">Choose your messenger</span></a></li><li><a href="/book/en/messages/#step-by-step" data-target="step-by-step"><span class="toc-no">06</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/messages/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">07</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/messages/#go-further" data-target="go-further"><span class="toc-no">08</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/messages/#sources" data-target="sources"><span class="toc-no">09</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/messages/#your-checklist" data-target="your-checklist"><span class="toc-no">10</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-1" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/privacy/">Part 1 · Privacy</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 1: </span>Your messages</h1><p class="ch-bignum" aria-hidden="true">01</p><div class="ch-meta"><span>Chapter 1 of 18</span><a href="/book/en/messages/#your-checklist"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="messages"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>Your conversations are among the most intimate data you produce. Move them to a messenger that is end-to-end encrypted by default, that is open source, and that collects as little metadata as possible. Several good ones exist, and none wins on every point. Pick one, move your 5 closest contacts first, and keep your old app for everyone else.</p>
-<h2>Encrypted does not mean private</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="encrypted-does-not-mean-private"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="encrypted-does-not-mean-private" tabindex="-1">Encrypted does not mean private</h2>
 <p>Many everyday chat apps belong to advertising companies. WhatsApp and Messenger, both owned by Meta, do encrypt the content of your messages, but they still record who you talk to, when, how often, from which device and which location, and they connect it to the rest of what the group knows about you.</p>
-<p>Others do not encrypt by default at all. On Telegram, ordinary chats and all group chats are stored in a form the company can read. SMS is weaker still, because your operator can read it and it crosses the telephone network unencrypted. After the group known as Salt Typhoon broke into several American telecom operators, the US cybersecurity agency CISA <a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" target="_blank" rel="noopener noreferrer">advised in December 2024</a> that highly targeted people use only end-to-end encrypted messaging and stop relying on SMS for login codes.</p>
+<p>Others do not encrypt by default at all. On Telegram, ordinary chats and all group chats are stored in a form the company can read. SMS is weaker still, because your operator can read it and it crosses the telephone network unencrypted. After the group known as Salt Typhoon broke into several American telecom operators, the US cybersecurity agency CISA <a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" class="ext" rel="noopener noreferrer">advised in December 2024</a> that highly targeted people use only end-to-end encrypted messaging and stop relying on SMS for login codes.</p>
 <p>Then come the backups. A conversation can be encrypted in transit and still end up readable in a cloud backup, yours or that of the person you are talking to.</p>
 <p>The consequences are concrete: leaked conversations, accounts taken over by scammers who then write to your family, and messages handed over on a legal request, years after you forgot you wrote them.</p>
-<h2>A sealed envelope the carrier cannot open</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance">cisa.gov</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="a-sealed-envelope-the-carrier-cannot-open"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="a-sealed-envelope-the-carrier-cannot-open" tabindex="-1">A sealed envelope the carrier cannot open</h2>
 <p>With <strong>end-to-end encryption</strong>, a message is locked on your phone and can only be unlocked on the phone of the person you write to. The company in the middle carries a sealed envelope it cannot open, so if it is hacked or receives a legal request, it has no message content to give. Depending on how the app was designed, it may still hold metadata, such as an IP address, a contact list or the date of your last connection.</p>
-<p>That envelope is also a political subject in Europe. The regulation that the European Commission <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" target="_blank" rel="noopener noreferrer">proposed on 11 May 2022</a>, known to its critics as "Chat Control", would allow authorities to order messaging services to scan private communications. As of September 2026 it is still being negotiated between the Parliament and the Council, and <a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" target="_blank" rel="noopener noreferrer">the round of 29 June 2026</a> ended without agreement. The temporary rule that lets providers scan voluntarily was <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" target="_blank" rel="noopener noreferrer">reinstated on 23 July 2026</a> until 3 April 2028, and at the Parliament's request it <a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" target="_blank" rel="noopener noreferrer">excludes end-to-end encrypted communications</a>.</p>
+<p>That envelope is also a political subject in Europe. The regulation that the European Commission <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" class="ext" rel="noopener noreferrer">proposed on 11 May 2022</a>, known to its critics as "Chat Control", would allow authorities to order messaging services to scan private communications. As of September 2026 it is still being negotiated between the Parliament and the Council, and <a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" class="ext" rel="noopener noreferrer">the round of 29 June 2026</a> ended without agreement. The temporary rule that lets providers scan voluntarily was <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" class="ext" rel="noopener noreferrer">reinstated on 23 July 2026</a> until 3 April 2028, and at the Parliament's request it <a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" class="ext" rel="noopener noreferrer">excludes end-to-end encrypted communications</a>.</p>
 <p>Encryption is necessary, but 3 more things matter:</p>
 <ul>
 <li><strong>Open source.</strong> The code is public, so independent experts can check that the app does what it claims, instead of taking the company's word for it.</li>
 <li><strong>Metadata.</strong> The most careful messengers are designed to know very little about you, which can mean no contact list, no group membership and sometimes no identifier at all.</li>
 <li><strong>Who runs it.</strong> A non-profit or a community has no advertising business to feed, and a network without a central company has no single door to knock on.</li>
 </ul>
-<h2>Confidential does not mean authentic</h2>
-<p>Encryption answers 1 question, whether someone else can read the message, and leaves another open, which is whether the person at the other end is really who you think. Cryptographers call the first property confidentiality and the second authenticity. An SMS or an email offers neither, a phone call is authentic (you recognise the voice) without being confidential, and a secure channel has to offer both.</p>
-<p>Authenticity depends on how your app obtained the other person's key. In Signal, WhatsApp, iMessage and most encrypted messengers, that key comes from a directory run by the company, which makes the company a trusted third party, however well it encrypts. If the directory were compromised, or compelled to hand out a false key, the envelope would still be sealed, but for the wrong reader. Safeguards exist, with <a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" target="_blank" rel="noopener noreferrer">safety numbers in Signal</a> (60 digits to compare), <a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" target="_blank" rel="noopener noreferrer">key transparency in WhatsApp</a> and <a href="https://security.apple.com/blog/imessage-contact-key-verification/" target="_blank" rel="noopener noreferrer">contact key verification in iMessage</a>, but they are optional and rarely used.</p>
-<p>Other designs remove the directory and decentralise that trust. Olvid <a href="https://olvid.io/faq/olvid-secure-channels/" target="_blank" rel="noopener noreferrer">requires 2 codes of 4 digits</a> to be exchanged before the first message, while SimpleX and Briar start from a link or a QR code that you hand over yourself. Security then rests on the 2 people involved, and the price is convenience, since the app cannot find your contacts for you.</p>
-<h2>Choose your messenger</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209">eur-lex.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online">europarl.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/">consilium.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation">europarl.europa.eu (2)</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="confidential-does-not-mean-authentic"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="confidential-does-not-mean-authentic" tabindex="-1">Confidential does not mean authentic</h2>
+<p>Encryption answers 1 question, whether someone else can read the message, and leaves another open, which is whether the person at the other end is really who you think. Cryptographers call the first property confidentiality and the second authenticity. An SMS or an email offers neither, a familiar voice on a phone call can help recognise someone without making the call confidential, but is not proof of identity, since voices can be cloned, and a secure channel has to offer both.</p>
+<p>Authenticity depends on how your app obtained the other person's key. In Signal, WhatsApp, iMessage and most encrypted messengers, that key comes from a directory run by the company, which makes the company a trusted third party, however well it encrypts. If the directory were compromised, or compelled to hand out a false key, the envelope would still be sealed, but for the wrong reader. Safeguards exist, with <a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" class="ext" rel="noopener noreferrer">safety numbers in Signal</a> (60 digits to compare), <a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" class="ext" rel="noopener noreferrer">key transparency in WhatsApp</a> and <a href="https://security.apple.com/blog/imessage-contact-key-verification/" class="ext" rel="noopener noreferrer">contact key verification in iMessage</a>, but they are optional and rarely used.</p>
+<p>Other designs remove the directory and decentralise that trust. Olvid <a href="https://olvid.io/faq/olvid-secure-channels/" class="ext" rel="noopener noreferrer">requires 2 codes of 4 digits</a> to be exchanged before the first message, while SimpleX and Briar start from a link or a QR code that you hand over yourself. Security then rests on the 2 people involved, and the price is convenience, since the app cannot find your contacts for you.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed">support.signal.org</a></li><li><a class="ext" rel="noopener noreferrer" href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/">engineering.fb.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://security.apple.com/blog/imessage-contact-key-verification/">security.apple.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://olvid.io/faq/olvid-secure-channels/">olvid.io</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-messenger"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-messenger" tabindex="-1">Choose your messenger</h2>
 <p>Start with an honest look at what you probably use today. None of these apps is useless, but each has a clear weak point. The table reflects the situation in September 2026.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>7 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your messenger, 1 of 2"><table>
 <thead>
 <tr>
-<th>Messenger</th>
-<th>Owner</th>
-<th>End-to-end encrypted?</th>
-<th>What it still collects or exposes</th>
-<th>Verdict</th>
+<th scope="col">Messenger</th>
+<th scope="col">Owner</th>
+<th scope="col">End-to-end encrypted?</th>
+<th scope="col">What it still collects or exposes</th>
+<th scope="col">Verdict</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer"><strong>WhatsApp</strong></a></td>
+<tr id="row-whatsapp">
+<th scope="row"><a href="https://www.whatsapp.com/" class="ext" rel="noopener noreferrer"><strong>WhatsApp</strong></a></th>
 <td>Meta</td>
-<td>Yes, by default (<a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a> protocol)</td>
+<td>Yes, by default (<a href="https://signal.org/" class="tool-link ext" rel="noopener noreferrer">Signal</a> protocol)</td>
 <td>Extensive metadata: your contacts, who you write to, when, from which device. Closed source. Cloud backups are only end-to-end encrypted if you turn it on.</td>
 <td>Content protected, metadata feeds an advertising group.</td>
 </tr>
-<tr>
-<td><a href="https://www.messenger.com/" target="_blank" rel="noopener noreferrer"><strong>Facebook Messenger</strong></a></td>
+<tr id="row-facebook-messenger">
+<th scope="row"><a href="https://www.messenger.com/" class="ext" rel="noopener noreferrer"><strong>Facebook Messenger</strong></a></th>
 <td>Meta</td>
 <td>Yes, by default for personal chats and calls since December 2023. Not for chats with businesses or Marketplace.</td>
 <td>The same metadata, tied to your Facebook identity. Closed source.</td>
 <td>Better than before, still a Meta product.</td>
 </tr>
-<tr>
-<td><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><strong>Instagram direct messages</strong></a></td>
+<tr id="row-instagram-direct-messages">
+<th scope="row"><a href="https://www.instagram.com/" class="ext" rel="noopener noreferrer"><strong>Instagram direct messages</strong></a></th>
 <td>Meta</td>
 <td>No. The optional encrypted chats were removed on 8 May 2026.</td>
 <td>Meta can read the content of every message, plus the metadata.</td>
 <td>Not for anything private.</td>
 </tr>
-<tr>
-<td><a href="https://telegram.org/" target="_blank" rel="noopener noreferrer"><strong>Telegram</strong></a></td>
+<tr id="row-telegram">
+<th scope="row"><a href="https://telegram.org/" class="ext" rel="noopener noreferrer"><strong>Telegram</strong></a></th>
 <td>Telegram, a private company</td>
 <td>Only in "secret chats", which you start by hand, between 2 people. Ordinary chats, all groups and channels are not.</td>
 <td>Ordinary messages are stored on Telegram's servers, which the company can read. The server code is closed.</td>
 <td>A social network more than a private messenger.</td>
 </tr>
-<tr>
-<td><strong>SMS</strong></td>
+<tr id="row-sms">
+<th scope="row"><strong>SMS</strong></th>
 <td>Your mobile operator</td>
 <td>No</td>
 <td>Content and metadata are readable by operators, can be intercepted, and can be redirected by a SIM swap (a scammer moving your number to their SIM card).</td>
 <td>Avoid for anything sensitive, including login codes when you have the choice.</td>
 </tr>
-<tr>
-<td><a href="https://support.apple.com/messages" target="_blank" rel="noopener noreferrer"><strong>iMessage (Apple Messages)</strong></a></td>
+<tr id="row-imessage-apple-messages">
+<th scope="row"><a href="https://support.apple.com/messages" class="ext" rel="noopener noreferrer"><strong>iMessage (Apple Messages)</strong></a></th>
 <td>Apple</td>
 <td>Yes, between Apple devices (blue bubbles)</td>
 <td>Apple devices only. Closed source. iCloud backups are readable by Apple unless you turn on Advanced Data Protection.</td>
 <td>Good inside the Apple world, and nowhere else.</td>
 </tr>
-<tr>
-<td><a href="https://www.android.com/google-messages/" target="_blank" rel="noopener noreferrer"><strong>Google Messages (RCS)</strong></a></td>
+<tr id="row-google-messages-rcs">
+<th scope="row"><a href="https://www.android.com/google-messages/" class="ext" rel="noopener noreferrer"><strong>Google Messages (RCS)</strong></a></th>
 <td>Google, with the mobile operators</td>
 <td>Yes, by default between Google Messages users. With iPhones, encryption started rolling out in May 2026, in beta, and depends on your operator.</td>
 <td>Tied to your phone number. Metadata is still collected. Closed source. Falls back to plain SMS when RCS is not available.</td>
 <td>Better than SMS. Check for the lock icon.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>Here are better options. There is no single right answer, which is healthy, because a world where everyone depends on a single app is fragile. All 7 encrypt your private conversations end to end by default, and their apps are open source.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>7 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your messenger, 2 of 2"><table>
 <thead>
 <tr>
-<th>Messenger</th>
-<th>Needs a phone number</th>
-<th>Who runs the network</th>
-<th>Who vouches for the keys</th>
-<th>Best for</th>
+<th scope="col">Messenger</th>
+<th scope="col">Needs a phone number</th>
+<th scope="col">Who runs the network</th>
+<th scope="col">Who vouches for the keys</th>
+<th scope="col">Best for</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="https://signal.org/" target="_blank" rel="noopener noreferrer"><strong>Signal</strong></a></td>
+<tr id="row-signal">
+<th scope="row"><a href="https://signal.org/" class="ext" rel="noopener noreferrer"><strong>Signal</strong></a></th>
 <td>Yes (can be hidden from others)</td>
 <td>A single non-profit foundation</td>
-<td>A directory run by <a href="https://signal.org/" target="_blank" rel="noopener noreferrer">Signal</a>. Optional check with a 60-digit safety number.</td>
+<td>A directory run by <a href="https://signal.org/" class="tool-link ext" rel="noopener noreferrer">Signal</a>. Optional check with a 60-digit safety number.</td>
 <td>Replacing WhatsApp with family and friends. The easiest switch.</td>
 </tr>
-<tr>
-<td><a href="https://simplex.chat/" target="_blank" rel="noopener noreferrer"><strong>SimpleX Chat</strong></a></td>
+<tr id="row-simplex-chat">
+<th scope="row"><a href="https://simplex.chat/" class="ext" rel="noopener noreferrer"><strong>SimpleX Chat</strong></a></th>
 <td>No identifier at all</td>
 <td>Relays anyone can run</td>
 <td>Nobody. You hand over a link or a QR code yourself, with an optional security code to compare.</td>
 <td>Strong metadata protection. No account, no username, no identifier to link.</td>
 </tr>
-<tr>
-<td><a href="https://getsession.org/" target="_blank" rel="noopener noreferrer"><strong>Session</strong></a></td>
+<tr id="row-session">
+<th scope="row"><a href="https://getsession.org/" class="ext" rel="noopener noreferrer"><strong>Session</strong></a></th>
 <td>No</td>
 <td>A decentralised network of community-run nodes</td>
-<td>No directory, since your <a href="https://getsession.org/" target="_blank" rel="noopener noreferrer">Session</a> ID is your public key. You must obtain that ID through a channel you trust.</td>
+<td>No directory, since your <a href="https://getsession.org/" class="tool-link ext" rel="noopener noreferrer">Session</a> ID is your public key. You must obtain that ID through a channel you trust.</td>
 <td>Anonymous accounts, messages routed through several nodes. Slower, fewer features. Its current protocol lacks forward secrecy (a key stolen one day could unlock older messages). An upgrade has been announced.</td>
 </tr>
-<tr>
-<td><a href="https://threema.com/" target="_blank" rel="noopener noreferrer"><strong>Threema</strong></a></td>
+<tr id="row-threema">
+<th scope="row"><a href="https://threema.com/" class="ext" rel="noopener noreferrer"><strong>Threema</strong></a></th>
 <td>No</td>
 <td>A single Swiss company, paid app</td>
-<td>A directory run by <a href="https://threema.com/" target="_blank" rel="noopener noreferrer">Threema</a>. Scanning a contact's QR code in person raises them to the highest trust level.</td>
+<td>A directory run by <a href="https://threema.com/" class="tool-link ext" rel="noopener noreferrer">Threema</a>. Scanning a contact's QR code in person raises them to the highest trust level.</td>
 <td>People who want no phone number and a polished, paid product.</td>
 </tr>
-<tr>
-<td><a href="https://olvid.io/" target="_blank" rel="noopener noreferrer"><strong>Olvid</strong></a></td>
+<tr id="row-olvid">
+<th scope="row"><a href="https://olvid.io/" class="ext" rel="noopener noreferrer"><strong>Olvid</strong></a></th>
 <td>No, and no email or other personal data</td>
 <td>A single French company, with servers hosted on Amazon Web Services</td>
 <td>Nobody. The 2 people exchange 2 codes of 4 digits before the first message, and this step is mandatory.</td>
 <td>A European app whose security is certified by ANSSI, the French cybersecurity agency. Messages and receiving calls are free. Making calls and using several devices need a subscription (about 5 euros a month).</td>
 </tr>
-<tr>
-<td><a href="https://element.io/" target="_blank" rel="noopener noreferrer"><strong>Element (Matrix)</strong></a></td>
+<tr id="row-element-matrix">
+<th scope="row"><a href="https://element.io/" class="ext" rel="noopener noreferrer"><strong>Element (Matrix)</strong></a></th>
 <td>No</td>
 <td>Federated: many servers, or your own</td>
 <td>Your server's directory. Optional verification by comparing emoji or scanning a QR code.</td>
 <td>Communities, teams, people who want to host their own server. The servers involved see metadata (who is in which room, and when), so the choice of server matters.</td>
 </tr>
-<tr>
-<td><a href="https://briarproject.org/" target="_blank" rel="noopener noreferrer"><strong>Briar</strong></a></td>
+<tr id="row-briar">
+<th scope="row"><a href="https://briarproject.org/" class="ext" rel="noopener noreferrer"><strong>Briar</strong></a></th>
 <td>No</td>
 <td>Nobody: device to device</td>
 <td>Nobody. Contacts are added by QR code in person, or by exchanging links.</td>
 <td>Extreme situations. Works over Tor, and even over Bluetooth or wifi without internet. Android, plus a desktop version in beta (Windows, macOS, Linux). No iPhone app.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is <strong>Signal for everyday life</strong>, plus <strong>a messenger without a phone number</strong> (SimpleX, Session or Olvid, for example) for contacts you do not want linked to your identity.</p>
-<p>If part of your circle stays on WhatsApp, help them at least turn on encrypted backups (Settings, Chats, Chat backup, End-to-end encrypted backup). WhatsApp explains it in its help centre, under <a href="https://faq.whatsapp.com/490592613091019" target="_blank" rel="noopener noreferrer">About end-to-end encrypted backup</a>.</p>
-<h2>Step by step</h2>
+<p>If part of your circle stays on WhatsApp, help them at least turn on encrypted backups (Settings, Chats, Chat backup, End-to-end encrypted backup). WhatsApp explains it in its help centre, under <a href="https://faq.whatsapp.com/490592613091019" class="ext" rel="noopener noreferrer">About end-to-end encrypted backup</a>.</p>
+</section><section class="sec sec--steps" data-no="06" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example uses Signal because it is the most common first step, and the same logic applies to the others. Menu names are those of September 2026.</p>
-<ol>
-<li><strong>Install it</strong> from the official store or from the project website, and register.</li>
-<li><strong>Lock your account.</strong> In Settings, Account, set a PIN and turn on Registration Lock, so that re-registering your number requires that PIN.</li>
-<li><strong>Hide your number.</strong> Create a username, then in Settings, Privacy, Phone Number set "Who can see my number" to Nobody. You can now give your username instead of your number. The separate setting "Who can find me by number" decides whether someone who already has your number can find you on Signal. Set it to Nobody too if you prefer that, knowing that friends will then need your username.</li>
-<li><strong>Make messages disappear by default.</strong> In Settings, Privacy, Disappearing messages, choose a default timer, for example 4 weeks. A message that has expired can no longer leak from a lost or stolen phone.</li>
-<li><strong>Lock the app</strong> with Settings, Privacy, Screen lock.</li>
-<li><strong>Verify your important contacts.</strong> Open the conversation, tap the name, then View safety number, and compare it in person or by another channel you already trust, such as a phone call where you recognise the voice. This is the step that gives you authenticity and stops you depending on Signal's directory, so do it once with the few people who matter most.</li>
-<li><strong>Move your people</strong> without announcing a revolution. Write to your 5 closest contacts from the new app, create the family group there, and let the old app fade out.</li>
+<ol class="steps">
+<li id="step-1"><strong>Install it</strong> from the official store or from the project website, and register.</li>
+<li id="step-2"><strong>Lock your account.</strong> In Settings, Account, set a PIN and turn on Registration Lock, so that re-registering your number requires that PIN.</li>
+<li id="step-3"><strong>Hide your number.</strong> Create a username, then in Settings, Privacy, Phone Number set "Who can see my number" to Nobody. You can now give your username instead of your number. The separate setting "Who can find me by number" decides whether someone who already has your number can find you on Signal. Set it to Nobody too if you prefer that, knowing that friends will then need your username.</li>
+<li id="step-4"><strong>Make messages disappear by default.</strong> In Settings, Privacy, Disappearing messages, choose a default timer, for example 4 weeks. This reduces the history left on your phone. It cannot remove screenshots, exports or copies made by the recipient.</li>
+<li id="step-5"><strong>Lock the app</strong> with Settings, Privacy, Screen lock.</li>
+<li id="step-6"><strong>Verify your important contacts.</strong> Open the conversation, tap the name, then View safety number, and compare it in person or by another channel you already trust, such as calling a number you already know is theirs. A familiar voice alone is not enough. This is the step that gives you authenticity and stops you depending on Signal's directory, so do it once with the few people who matter most.</li>
+<li id="step-7"><strong>Move your people</strong> without announcing a revolution. Write to your 5 closest contacts from the new app, create the family group there, and let the old app fade out.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="07" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Thinking "encrypted" means "private".</strong> Encryption protects the content, but it does not hide who you talk to unless the messenger was designed for that.</li>
 <li><strong>Forgetting the phone itself.</strong> Anyone holding your unlocked phone can read everything, which makes a strong screen lock part of your messenger's security.</li>
@@ -231,71 +205,30 @@
 <li><strong>Confusing privacy with anonymity.</strong> A messenger tied to your phone number protects what you say, not who you are. If you need to stay unidentified, use a messenger without a phone number.</li>
 <li><strong>Trusting the app more than the person.</strong> Screenshots exist, and the weakest point of a conversation is often the other end.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. The keys that protect your messages are the same idea as the keys that protect your bitcoin.</li>
-<li><strong>Compare messengers in detail:</strong> Privacy Guides, "Real-Time Communication" (<a href="https://privacyguides.org" target="_blank" rel="noopener noreferrer">privacyguides.org</a>).</li>
-<li><strong>Understand your own risks:</strong> Surveillance Self-Defense, by the Electronic Frontier Foundation (<a href="https://ssd.eff.org" target="_blank" rel="noopener noreferrer">ssd.eff.org</a>).</li>
+</section><section class="sec sec--further" data-no="08" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Compare messengers in detail:</strong> Privacy Guides, "Real-Time Communication" (<a href="https://privacyguides.org" class="tool-link ext" rel="noopener noreferrer">privacyguides.org</a>).</li>
+<li><strong>Understand your own risks:</strong> Surveillance Self-Defense, by the Electronic Frontier Foundation (<a href="https://ssd.eff.org" class="tool-link ext" rel="noopener noreferrer">ssd.eff.org</a>).</li>
 <li><strong>Next chapter:</strong> your passwords and your accounts.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" target="_blank" rel="noopener noreferrer">Proposal for a regulation laying down rules to prevent and combat child sexual abuse, COM(2022) 209</a>, European Commission, 11 May 2022.</li>
-<li><a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" target="_blank" rel="noopener noreferrer">Legislative train: combating child sexual abuse online</a>, European Parliament, updated 1 August 2026.</li>
-<li><a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" target="_blank" rel="noopener noreferrer">Combating child sexual abuse online: support for more limited ePrivacy derogation</a>, European Parliament, 9 July 2026.</li>
-<li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" target="_blank" rel="noopener noreferrer">Fighting child sexual abuse online: interim measure protecting children now reinstated</a>, Council of the EU, 23 July 2026.</li>
-<li><a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" target="_blank" rel="noopener noreferrer">Mobile Communications Best Practice Guidance</a>, CISA, 18 December 2024.</li>
-<li><a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" target="_blank" rel="noopener noreferrer">What is a safety number and why do I see that it changed?</a>, Signal Support, consulted in September 2026.</li>
-<li><a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" target="_blank" rel="noopener noreferrer">Deploying key transparency at WhatsApp</a>, Engineering at Meta, 13 April 2023.</li>
-<li><a href="https://security.apple.com/blog/imessage-contact-key-verification/" target="_blank" rel="noopener noreferrer">Advancing iMessage security: iMessage Contact Key Verification</a>, Apple Security Research, 2023.</li>
-<li><a href="https://olvid.io/faq/olvid-secure-channels/" target="_blank" rel="noopener noreferrer">Olvid secure channels</a>, Olvid, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="09" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://support.signal.org/hc/en-us/articles/360007320771-Set-and-manage-disappearing-messages" class="ext" rel="noopener noreferrer">Set and manage disappearing messages</a>, Signal Support, checked 22 October 2026.</li>
+<li><a href="https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money" class="ext" rel="noopener noreferrer">Scammers use fake emergencies to steal your money</a>, Federal Trade Commission, checked 22 October 2026.</li>
+<li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52022PC0209" class="ext" rel="noopener noreferrer">Proposal for a regulation laying down rules to prevent and combat child sexual abuse, COM(2022) 209</a>, European Commission, 11 May 2022.</li>
+<li><a href="https://www.europarl.europa.eu/legislative-train/theme-promoting-our-european-way-of-life/file-combating-child-sexual-abuse-online" class="ext" rel="noopener noreferrer">Legislative train: combating child sexual abuse online</a>, European Parliament, updated 1 August 2026.</li>
+<li><a href="https://www.europarl.europa.eu/news/en/press-room/20260706IPR46318/combating-child-sexual-abuse-support-for-a-more-limited-eprivacy-derogation" class="ext" rel="noopener noreferrer">Combating child sexual abuse online: support for more limited ePrivacy derogation</a>, European Parliament, 9 July 2026.</li>
+<li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/07/23/fighting-child-sexual-abuse-online-interim-measure-protecting-children-now-reinstated/" class="ext" rel="noopener noreferrer">Fighting child sexual abuse online: interim measure protecting children now reinstated</a>, Council of the EU, 23 July 2026.</li>
+<li><a href="https://www.cisa.gov/resources-tools/resources/mobile-communications-best-practice-guidance" class="ext" rel="noopener noreferrer">Mobile Communications Best Practice Guidance</a>, CISA, 18 December 2024.</li>
+<li><a href="https://support.signal.org/hc/en-us/articles/360007060632-What-is-a-safety-number-and-why-do-I-see-that-it-changed" class="ext" rel="noopener noreferrer">What is a safety number and why do I see that it changed?</a>, Signal Support, consulted in September 2026.</li>
+<li><a href="https://engineering.fb.com/2023/04/13/security/whatsapp-key-transparency/" class="ext" rel="noopener noreferrer">Deploying key transparency at WhatsApp</a>, Engineering at Meta, 13 April 2023.</li>
+<li><a href="https://security.apple.com/blog/imessage-contact-key-verification/" class="ext" rel="noopener noreferrer">Advancing iMessage security: iMessage Contact Key Verification</a>, Apple Security Research, 2023.</li>
+<li><a href="https://olvid.io/faq/olvid-secure-channels/" class="ext" rel="noopener noreferrer">Olvid secure channels</a>, Olvid, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="messages-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-1" aria-label="Install a private messenger, lock it with a PIN, hide your number and set disappearing messages"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-1">Install a private messenger, lock it with a PIN, hide your number and set disappearing messages</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="messages-2" aria-label="Move your 5 closest contacts and your family group"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-2">Move your 5 closest contacts and your family group</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-3" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-3" aria-label="Verify the safety number of your 3 most important contacts"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-3">Verify the safety number of your 3 most important contacts</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-4" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-4" aria-label="Install a second messenger that needs no phone number"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-4">Install a second messenger that needs no phone number</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="messages-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="messages-5" aria-label="Turn on encrypted backups in the apps you keep"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="messages-5">Turn on encrypted backups in the apps you keep</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/privacy/"><span>Previous</span>Proof of Privacy</a>
-<a class="bk-next" href="/book/en/passwords/"><span>Next</span>Your passwords and your accounts</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="10" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="messages">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="messages" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-messages-1"><span class="legacy-anchor" id="messages-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-1" disabled="disabled"><span class="action-text">Install a private messenger, lock it with a PIN, hide your number and set disappearing messages</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-messages-2"><span class="legacy-anchor" id="messages-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-2" disabled="disabled"><span class="action-text">Move your 5 closest contacts and your family group</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-messages-3"><span class="legacy-anchor" id="messages-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-3" disabled="disabled"><span class="action-text">Verify the safety number of your 3 most important contacts</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-messages-4"><span class="legacy-anchor" id="messages-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-4" disabled="disabled"><span class="action-text">Install a second messenger that needs no phone number</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-messages-5"><span class="legacy-anchor" id="messages-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="messages-5" disabled="disabled"><span class="action-text">Turn on encrypted backups in the apps you keep</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="messages" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-1" href="/book/en/privacy/"><span class="pager-dir">Previous · Part 1 opening</span><span class="pager-title">Proof of Privacy</span></a><a class="pager-next part-1" href="/book/en/passwords/"><span class="pager-dir">Next · Chapter 2</span><span class="pager-title">Your passwords and your accounts</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/messages/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/" aria-current="page"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

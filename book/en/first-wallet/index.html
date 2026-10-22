@@ -1,175 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Your first wallet and your first sats · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Your first wallet and your first sats — A Guide to Autonomy</title>
 <meta name="description" content="Bitcoin left on an exchange is a promise from a company, whereas bitcoin in a wallet where you hold the keys is under your own control.">
 <link rel="canonical" href="https://proofconference.com/book/en/first-wallet/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/first-wallet/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/first-wallet/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/first-wallet/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Your first wallet and your first sats · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Your first wallet and your first sats — A Guide to Autonomy">
 <meta property="og:description" content="Bitcoin left on an exchange is a promise from a company, whereas bitcoin in a wallet where you hold the keys is under your own control.">
 <meta property="og:url" content="https://proofconference.com/book/en/first-wallet/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Your first wallet and your first sats · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Your first wallet and your first sats — A Guide to Autonomy">
 <meta name="twitter:description" content="Bitcoin left on an exchange is a promise from a company, whereas bitcoin in a wallet where you hold the keys is under your own control.">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/first-wallet/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/first-wallet/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="first-wallet">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Work · Chapter 13</p>
-    <h1>Your first wallet and your first sats</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/first-wallet/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/first-wallet"><div class="page-layout is-chapter part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/first-wallet/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/first-wallet/#an-exchange-balance-is-an-iou" data-target="an-exchange-balance-is-an-iou"><span class="toc-no">02</span><span class="toc-label">An exchange balance is an IOU</span></a></li><li><a href="/book/en/first-wallet/#a-wallet-holds-keys-not-coins" data-target="a-wallet-holds-keys-not-coins"><span class="toc-no">03</span><span class="toc-label">A wallet holds keys, not coins</span></a></li><li><a href="/book/en/first-wallet/#2-choices-you-will-meet" data-target="2-choices-you-will-meet"><span class="toc-no">04</span><span class="toc-label">2 choices you will meet</span></a></li><li><a href="/book/en/first-wallet/#holding-the-keys-is-not-the-whole-story" data-target="holding-the-keys-is-not-the-whole-story"><span class="toc-no">05</span><span class="toc-label">Holding the keys is not the whole story</span></a></li><li><a href="/book/en/first-wallet/#choose-your-wallet" data-target="choose-your-wallet"><span class="toc-no">06</span><span class="toc-label">Choose your wallet</span></a></li><li><a href="/book/en/first-wallet/#step-by-step" data-target="step-by-step"><span class="toc-no">07</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/first-wallet/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">08</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/first-wallet/#go-further" data-target="go-further"><span class="toc-no">09</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/first-wallet/#sources" data-target="sources"><span class="toc-no">10</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/first-wallet/#your-checklist" data-target="your-checklist"><span class="toc-no">11</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/work/">Part 3 · Money and Bitcoin</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 13: </span>Your first wallet and your first sats</h1><p class="ch-bignum" aria-hidden="true">13</p><div class="ch-meta"><span>Chapter 13 of 18</span><a href="/book/en/first-wallet/#your-checklist"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="first-wallet"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>Bitcoin left on an exchange is a promise from a company, whereas bitcoin in a wallet where you hold the keys is under your own control. A wallet is a free app that takes about 10 minutes to set up, and you can learn with an amount close to the price of a lunch. Install one, write down the recovery words, receive a first payment, send part of it back, then try a second wallet from another team to compare.</p>
-<h2>An exchange balance is an IOU</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="an-exchange-balance-is-an-iou"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="an-exchange-balance-is-an-iou" tabindex="-1">An exchange balance is an IOU</h2>
 <p>When you buy bitcoin on an exchange and leave it there, what you hold is a line in the company's database saying that it owes you some. As long as the company stays honest, solvent, secure and allowed to serve you, the difference with real bitcoin is invisible.</p>
-<p>Mt. Gox, which was the largest bitcoin exchange in the world, filed for bankruptcy in February 2014 and announced that <a href="https://www.wired.com/2014/03/bitcoin-exchange/" target="_blank" rel="noopener noreferrer">about 850,000 bitcoin were missing</a>. Its trustee made the first repayments to creditors in July 2024, and in October 2025 he <a href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf" target="_blank" rel="noopener noreferrer">postponed the final deadline to 31 October 2026</a>, more than 12 years after the collapse.</p>
-<p>FTX, one of the largest exchanges of its time, filed for bankruptcy in November 2022, a few days after withdrawals were suspended. Its founder was convicted of fraud in November 2023 and <a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes" target="_blank" rel="noopener noreferrer">sentenced to 25 years in prison</a> in March 2024. Between events of that size there are more ordinary ones, such as frozen accounts, suspended withdrawals and hacked platforms, which Bitcoin users sum up with the saying "Not your keys, not your coins."</p>
-<h2>A wallet holds keys, not coins</h2>
+<p>Mt. Gox, which was the largest bitcoin exchange in the world, filed for bankruptcy in February 2014 and announced that <a href="https://www.wired.com/2014/03/bitcoin-exchange/" class="ext" rel="noopener noreferrer">about 850,000 bitcoin were missing</a>. Its trustee made the first repayments to creditors in July 2024, and in October 2025 he <a href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf" class="ext" rel="noopener noreferrer">postponed the final deadline to 31 October 2026</a>, more than 12 years after the collapse.</p>
+<p>FTX, one of the largest exchanges of its time, filed for bankruptcy in November 2022, a few days after withdrawals were suspended. Its founder was convicted of fraud in November 2023 and <a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes" class="ext" rel="noopener noreferrer">sentenced to 25 years in prison</a> in March 2024. Between events of that size there are more ordinary ones, such as frozen accounts, suspended withdrawals and hacked platforms, which Bitcoin users sum up with the saying "Not your keys, not your coins."</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.wired.com/2014/03/bitcoin-exchange/">wired.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf">mtgox.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes">justice.gov</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="a-wallet-holds-keys-not-coins"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="a-wallet-holds-keys-not-coins" tabindex="-1">A wallet holds keys, not coins</h2>
 <p>Every bitcoin exists only as an entry in the blockchain, the public ledger that thousands of computers keep in sync. What your wallet holds is <strong>keys</strong>, secret numbers that prove to the network that you are allowed to move a given entry. Spending means signing a message with your key, so whoever holds the key controls the coins, without a name, an account or a permission being involved.</p>
-<p>The app is therefore a window and a pen. It shows you what your keys control and it signs when you decide to pay. The keys themselves are backed up as a list of 12 or 24 ordinary words, and chapter 14 is entirely about them.</p>
+<p>The app is therefore a window and a pen. It shows you what your keys control and it signs when you decide to pay. Many wallets back up their keys as 12 or 24 words. Other formats exist, and recovery requires compatible software (chapter 14). Lightning may also need wallet-specific recovery data.</p>
 <p>You do not need a whole bitcoin either. 1 bitcoin divides into 100 million units called <strong>satoshis</strong>, or <strong>sats</strong>, and a wallet works the same way with 20,000 sats as with 2 bitcoin, which allows you to learn with small amounts.</p>
-<h2>2 choices you will meet</h2>
+</section><section class="sec sec--explain" data-no="04" aria-labelledby="2-choices-you-will-meet"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="2-choices-you-will-meet" tabindex="-1">2 choices you will meet</h2>
 <p><strong>On-chain or Lightning.</strong> On-chain transactions are written directly into the blockchain. They take from minutes to hours and cost a fee that depends on demand, which suits larger amounts and savings. Lightning is a payment network built on top of Bitcoin, in practice instant and very cheap, which suits small everyday amounts (chapter 15).</p>
 <p><strong>Custodial or self-custodial.</strong> A custodial wallet works like a small exchange, because a company holds the keys and shows you a balance. A self-custodial wallet keeps the keys on your phone.</p>
 <p>A custodial wallet is the easiest possible start, with nothing to back up and nothing to understand, and it is acceptable for an amount you could lose without pain, like the coins in your pocket. In the EU the option is shrinking, however, because custodial providers now need a licence and must identify their users (chapter 15). Self-custody asks a little more of you, mainly a serious backup. In return no company can freeze or lose your balance on your behalf, although exchanges and brokers can still refuse to serve you.</p>
-<h2>Holding the keys is not the whole story</h2>
+</section><section class="sec sec--explain" data-no="05" aria-labelledby="holding-the-keys-is-not-the-whole-story"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Understand</span></p><h2 id="holding-the-keys-is-not-the-whole-story" tabindex="-1">Holding the keys is not the whole story</h2>
 <p>With a custodial wallet the trusted third party is obvious, because the company holds the keys and can freeze or lose your balance. Holding your own keys removes that party and leaves 3 quieter ones in place.</p>
-<p>The first is the server your wallet asks. A phone wallet does not check the blockchain itself, it queries a server, usually the wallet team's, which learns your addresses and your IP address and could show a wrong balance, although it cannot spend your coins. The second is the delivery channel, because Apple's or Google's store and the developer's signing key decide which code runs on your phone. The third, on Lightning, is the service provider. Phoenix opens its channels only with ACINQ's node, which usually sees where your payments go and could decline to relay them, while wallets built on Spark depend on <a href="https://docs.spark.money/spark/trust-model" target="_blank" rel="noopener noreferrer">a small group of operators</a>. Both designs keep an exit to the blockchain, at a cost.</p>
-<p>Each of these can be partly checked. Open source code can be read, <a href="https://walletscrutiny.com/methodology/" target="_blank" rel="noopener noreferrer">WalletScrutiny</a> tests whether the app in the store can be rebuilt from that code (a reproducible build), and several wallets let you connect to your own node (chapter 18).</p>
-<h2>Choose your wallet</h2>
+<p>The first is the server your wallet asks. A phone wallet does not check the blockchain itself, it queries a server, usually the wallet team's, which learns your addresses and your IP address and could show a wrong balance, although it cannot spend your coins. The second is the delivery channel, because Apple's or Google's store and the developer's signing key decide which code runs on your phone. The third, on Lightning, is the service provider. Phoenix opens its channels only with ACINQ's node, which usually sees where your payments go and could decline to relay them, while wallets built on Spark depend on <a href="https://docs.spark.money/spark/trust-model" class="ext" rel="noopener noreferrer">a small group of operators</a>. Both designs keep an exit to the blockchain, at a cost.</p>
+<p>Each of these can be partly checked. Open source code can be read, <a href="https://walletscrutiny.com/methodology/" class="ext" rel="noopener noreferrer">WalletScrutiny</a> tests whether the app in the store can be rebuilt from that code (a reproducible build), and several wallets let you connect to your own node (chapter 18).</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://docs.spark.money/spark/trust-model">docs.spark.money</a></li><li><a class="ext" rel="noopener noreferrer" href="https://walletscrutiny.com/methodology/">walletscrutiny.com</a></li></ul></div></section><section class="sec sec--compare" data-no="06" aria-labelledby="choose-your-wallet"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-wallet" tabindex="-1">Choose your wallet</h2>
 <p>All the wallets below are free, and it helps to try 2 of them from different teams, so that a problem with one app or one service never leaves you unable to pay.</p>
-<p>The first row, <a href="https://bitkit.to/" target="_blank" rel="noopener noreferrer">Bitkit</a>, is this book's editorial choice for a first wallet. The app, published by Synonym for iPhone and Android, shows 2 balances on one screen, savings held on-chain and spending held on Lightning, behind a single list of 12 words. You can receive over Lightning from the first minute, because Synonym's service provider, Blocktank, opens a channel when the first payment arrives and deducts its fee, <a href="https://github.com/synonymdev/bitkit-android/issues/1265" target="_blank" rel="noopener noreferrer">about 1,800 sats in a case documented in mid-September 2026</a>. Bitkit depends on Blocktank for that channel, and its Lightning connections are <a href="https://help.bitkit.to/hc/help-center/articles/1702656162-how-do-i-manage-my-spending-balance" target="_blank" rel="noopener noreferrer">not offered to residents of the United States or Canada</a>.</p>
-<p>The last 2 rows are built on Ark, a way to make fast, cheap off-chain bitcoin payments in which many users share the same on-chain transactions through an Ark server. You keep pre-signed transactions that allow you to exit to the blockchain by yourself if that server disappears. Ark is young, since it opened on Bitcoin's main network in <a href="https://arklabs.xyz/insights/press-start-arkade-goes-live" target="_blank" rel="noopener noreferrer">October 2025 with Arkade</a> and in <a href="https://second.tech/blog/introducing-noah-and-arke/" target="_blank" rel="noopener noreferrer">June 2026 with Second's Bark</a>, and on Second's server a balance <a href="https://second.tech/docs/learn/intro" target="_blank" rel="noopener noreferrer">expires after 28 days unless the wallet refreshes it</a>. The table is valid as of September 2026, so check each project's website before you install.</p>
-<div class="bk-table"><table>
+<p>The first row, <a href="https://bitkit.to/" class="ext" rel="noopener noreferrer">Bitkit</a>, is this book's editorial choice for a first wallet. The app, published by Synonym for iPhone and Android, shows 2 balances on one screen, savings held on-chain and spending held on Lightning, behind a single list of 12 words. You can receive over Lightning from the first minute, because Synonym's service provider, Blocktank, opens a channel when the first payment arrives and deducts its fee, <a href="https://github.com/synonymdev/bitkit-android/issues/1265" class="ext" rel="noopener noreferrer">about 1,800 sats in a case documented in mid-September 2026</a>. Bitkit depends on Blocktank for that channel, and its Lightning connections are <a href="https://help.bitkit.to/hc/help-center/articles/1702656162-how-do-i-manage-my-spending-balance" class="ext" rel="noopener noreferrer">not offered to residents of the United States or Canada</a>.</p>
+<p>The last 2 rows are built on Ark, a way to make fast, cheap off-chain bitcoin payments in which many users share the same on-chain transactions through an Ark server. You keep pre-signed transactions that allow you to exit to the blockchain by yourself if that server disappears. Ark is young, since it opened on Bitcoin's main network in <a href="https://arklabs.xyz/insights/press-start-arkade-goes-live" class="ext" rel="noopener noreferrer">October 2025 with Arkade</a> and in <a href="https://second.tech/blog/introducing-noah-and-arke/" class="ext" rel="noopener noreferrer">June 2026 with Second's Bark</a>, and on Second's server a balance <a href="https://second.tech/docs/learn/intro" class="ext" rel="noopener noreferrer">expires after 28 days unless the wallet refreshes it</a>. The table is valid as of September 2026, so check each project's website before you install.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>10 options · 6 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your wallet"><table>
 <thead>
 <tr>
-<th>Wallet</th>
-<th>Who holds the keys</th>
-<th>Who it still depends on</th>
-<th>Networks</th>
-<th>Open source</th>
-<th>Honest trade-off</th>
+<th scope="col">Wallet</th>
+<th scope="col">Who holds the keys</th>
+<th scope="col">Who it still depends on</th>
+<th scope="col">Networks</th>
+<th scope="col">Open source</th>
+<th scope="col">Honest trade-off</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://bitkit.to/" target="_blank" rel="noopener noreferrer">Bitkit</a></strong></td>
+<tr id="row-bitkit">
+<th scope="row"><strong><a href="https://bitkit.to/" class="ext" rel="noopener noreferrer">Bitkit</a></strong></th>
 <td>You</td>
 <td>Synonym's provider, Blocktank, for Lightning channels by default. Synonym's Electrum server for blockchain data, replaceable by your own.</td>
 <td>On-chain and Lightning, as 2 balances in one app</td>
 <td>Yes</td>
 <td>A Lightning node on your phone next to an on-chain savings balance, behind 1 backup. The first Lightning payment pays for the channel (about 1,800 sats in mid-September 2026, depending on mining fees), total Lightning capacity is capped near 999 dollars, and Lightning is not offered to residents of the United States or Canada.</td>
 </tr>
-<tr>
-<td><strong><a href="https://phoenix.acinq.co/" target="_blank" rel="noopener noreferrer">Phoenix</a></strong></td>
+<tr id="row-phoenix">
+<th scope="row"><strong><a href="https://phoenix.acinq.co/" class="tool-link ext" rel="noopener noreferrer">Phoenix</a></strong></th>
 <td>You</td>
-<td><a href="https://acinq.co/" target="_blank" rel="noopener noreferrer">ACINQ</a>'s node for every Lightning payment. Electrum servers for blockchain data, replaceable by your own.</td>
+<td><a href="https://acinq.co/" class="tool-link ext" rel="noopener noreferrer">ACINQ</a>'s node for every Lightning payment. Electrum servers for blockchain data, replaceable by your own.</td>
 <td>Lightning (on-chain in and out through swaps)</td>
 <td>Yes</td>
-<td>A real Lightning node on your phone, simple to use. Depends on a single company (ACINQ) for its channels. Opening the first channel <a href="https://phoenix.acinq.co/faq" target="_blank" rel="noopener noreferrer">costs 1,000 sats plus 1% plus the mining fee</a>, so a very small first payment is refused.</td>
+<td>A real Lightning node on your phone, simple to use. Depends on a single company (ACINQ) for its channels. Opening the first channel <a href="https://phoenix.acinq.co/faq" class="ext" rel="noopener noreferrer">costs 1,000 sats plus 1% plus the mining fee</a>, so a very small first payment is refused.</td>
 </tr>
-<tr>
-<td><strong><a href="https://breez.technology/" target="_blank" rel="noopener noreferrer">Breez</a></strong> (Glow, formerly <a href="https://breez.technology/misty/" target="_blank" rel="noopener noreferrer">Misty Breez</a>)</td>
+<tr id="row-breez-glow-formerly-misty-breez">
+<th scope="row"><strong><a href="https://breez.technology/" class="tool-link ext" rel="noopener noreferrer">Breez</a></strong> (Glow, formerly <a href="https://breez.technology/misty/" class="tool-link ext" rel="noopener noreferrer">Misty Breez</a>)</th>
 <td>You</td>
 <td>The Spark operators, who co-sign each transfer, and Breez's software.</td>
 <td>Lightning, through the Spark network</td>
 <td>Yes</td>
-<td>Misty Breez <a href="https://breez.technology/misty/" target="_blank" rel="noopener noreferrer">lost its Lightning and on-chain payments</a> in August 2026. Breez now points to Glow, launched the same month. No channels to manage, but very new, and Spark relies on a small group of operators.</td>
+<td>Misty Breez <a href="https://breez.technology/misty/" class="ext" rel="noopener noreferrer">lost its Lightning and on-chain payments</a> in August 2026. Breez now points to Glow, launched the same month. No channels to manage, but very new, and Spark relies on a small group of operators.</td>
 </tr>
-<tr>
-<td><strong><a href="https://bluewallet.io/" target="_blank" rel="noopener noreferrer">BlueWallet</a></strong></td>
+<tr id="row-bluewallet">
+<th scope="row"><strong><a href="https://bluewallet.io/" class="tool-link ext" rel="noopener noreferrer">BlueWallet</a></strong></th>
 <td>You</td>
 <td>BlueWallet's Electrum servers for balances and broadcasting, replaceable by your own in the settings.</td>
 <td>On-chain</td>
 <td>Yes</td>
 <td>Clear and good for learning on-chain. Its hosted Lightning service closed in 2023.</td>
 </tr>
-<tr>
-<td><strong><a href="https://blockstream.com/app/" target="_blank" rel="noopener noreferrer">Blockstream app</a></strong> (formerly Green)</td>
+<tr id="row-blockstream-app-formerly-green">
+<th scope="row"><strong><a href="https://blockstream.com/app/" class="tool-link ext" rel="noopener noreferrer">Blockstream app</a></strong> (formerly Green)</th>
 <td>You</td>
-<td><a href="https://blockstream.com/" target="_blank" rel="noopener noreferrer">Blockstream</a>'s servers by default, or your own Electrum server. The Liquid federation and a swap service for Lightning.</td>
+<td><a href="https://blockstream.com/" class="tool-link ext" rel="noopener noreferrer">Blockstream</a>'s servers by default, or your own Electrum server. The Liquid federation and a swap service for Lightning.</td>
 <td>On-chain, Liquid, Lightning through swaps</td>
 <td>Yes</td>
 <td>Many options, works with hardware wallets. More menus for a beginner, and its Lightning payments settle on Liquid through swaps.</td>
 </tr>
-<tr>
-<td><strong><a href="https://zeusln.com/" target="_blank" rel="noopener noreferrer">Zeus</a></strong></td>
+<tr id="row-zeus">
+<th scope="row"><strong><a href="https://zeusln.com/" class="tool-link ext" rel="noopener noreferrer">Zeus</a></strong></th>
 <td>You</td>
 <td>Zeus's own service provider (Olympus) for channels, by default. Other Bitcoin nodes for blockchain data, or your own.</td>
 <td>Lightning and on-chain</td>
 <td>Yes</td>
-<td>A real Lightning node in your phone, or a remote control for your own node (chapter 18). Powerful, more to learn. In August 2026 an attack on Zeus's servers <a href="https://zeusln.com/blog/post-mortem-security-update-august-5th-2026/" target="_blank" rel="noopener noreferrer">closed many users' channels</a>, without loss of customer funds.</td>
+<td>A real Lightning node in your phone, or a remote control for your own node (chapter 18). Powerful, more to learn. In August 2026 an attack on Zeus's servers <a href="https://zeusln.com/blog/post-mortem-security-update-august-5th-2026/" class="ext" rel="noopener noreferrer">closed many users' channels</a>, without loss of customer funds.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.walletofsatoshi.com/" target="_blank" rel="noopener noreferrer">Wallet of Satoshi</a></strong></td>
-<td>You in the EU, where its custodial mode <a href="https://www.therage.co/wallet-of-satoshi-eu-mica/" target="_blank" rel="noopener noreferrer">has been unavailable since January 2026</a>. The company elsewhere.</td>
+<tr id="row-wallet-of-satoshi">
+<th scope="row"><strong><a href="https://www.walletofsatoshi.com/" class="tool-link ext" rel="noopener noreferrer">Wallet of Satoshi</a></strong></th>
+<td>You in the EU, where its custodial mode <a href="https://www.therage.co/wallet-of-satoshi-eu-mica/" class="ext" rel="noopener noreferrer">has been unavailable since January 2026</a>. The company elsewhere.</td>
 <td>The company for a custodial balance. In self-custodial mode, the Spark operators and the company's servers.</td>
 <td>Lightning</td>
 <td>No</td>
 <td>The easiest of all. Its self-custodial mode runs on Spark, a recent system that relies on a small group of operators. Pocket money only.</td>
 </tr>
-<tr>
-<td><strong><a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin</a></strong></td>
+<tr id="row-bringin">
+<th scope="row"><strong><a href="https://bringin.app/" class="tool-link ext" rel="noopener noreferrer">Bringin</a></strong></th>
 <td>You</td>
 <td>Bringin for the optional euro account, which it can block like any payment company. The bitcoin wallet is self-custodial, so Bringin does not hold those funds.</td>
 <td>Lightning and on-chain</td>
 <td>Not stated on its website</td>
-<td>Wallet linked to an optional euro account, which requires identity verification (chapter 15). Bringin sponsors this conference.</td>
+<td>Wallet linked to an optional euro account, which requires identity verification (chapter 15).</td>
 </tr>
-<tr>
-<td><strong><a href="https://arkade.money/" target="_blank" rel="noopener noreferrer">Arkade wallet</a></strong></td>
+<tr id="row-arkade-wallet">
+<th scope="row"><strong><a href="https://arkade.money/" class="ext" rel="noopener noreferrer">Arkade wallet</a></strong></th>
 <td>You</td>
 <td>The Arkade server run by Ark Labs, which co-signs each Ark payment. The exit to the blockchain works without it.</td>
 <td>Ark and on-chain</td>
 <td>Yes</td>
 <td>A web app installed from the browser, without an app store. Public beta since October 2025, and Ark Labs wrote at launch that it is not ready for savings.</td>
 </tr>
-<tr>
-<td><strong><a href="https://beta.noahwallet.io/" target="_blank" rel="noopener noreferrer">Noah</a></strong></td>
+<tr id="row-noah">
+<th scope="row"><strong><a href="https://beta.noahwallet.io/" class="ext" rel="noopener noreferrer">Noah</a></strong></th>
 <td>You</td>
 <td>The Ark server run by Second, which co-signs payments and connects the wallet to Lightning. The exit to the blockchain works without it.</td>
 <td>Ark, Lightning and on-chain</td>
@@ -177,20 +151,20 @@
 <td>From the team behind the Blixt wallet. Beta for Android, and for iPhone through TestFlight. Its developers ask you to deposit only what you can afford to lose.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is a self-custodial Lightning wallet for small amounts and an on-chain wallet to understand the base layer, either in one app such as Bitkit or in 2 separate apps, with BlueWallet or the Blockstream app for the on-chain side. Wallets that run their own channels (Bitkit, Phoenix, Zeus) cost more on the first day and depend on fewer outside services, while those built on swaps or on Spark are the other way round. Try 2 and keep the one you find clear.</p>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="07" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example uses Bitkit. The logic is the same for the others.</p>
-<ol>
-<li><strong>Install it</strong> from the official store. Before you tap, check the developer name (Synonym Software for Bitkit) and follow the link from the project's official website, <a href="https://bitkit.to" target="_blank" rel="noopener noreferrer">bitkit.to</a>, rather than a store search. This check, completed by a look at the app's page on <a href="https://walletscrutiny.com" target="_blank" rel="noopener noreferrer">walletscrutiny.com</a>, is the step that replaces trust with verification, as far as a phone allows.</li>
-<li><strong>Create a new wallet.</strong> The app asks for no email, no name and no account, which is normal.</li>
-<li><strong>Write down the recovery words before receiving anything.</strong> Find the 12 words in the backup settings, copy them by hand on paper, and read chapter 14 before adding more than pocket money.</li>
-<li><strong>Receive a first payment larger than the channel fee.</strong> Tap Receive, choose to receive on the spending balance and show the QR code, keeping the app open until the payment appears. Blocktank opens your channel at that moment and takes its fee out of the amount, 1,835 sats in <a href="https://github.com/synonymdev/bitkit-android/issues/1265" target="_blank" rel="noopener noreferrer">a case reported on 15 September 2026</a>, more when mining fees rise. The same report, still open on 20 September, shows that the suggested minimum of 2,000 sats can leave a balance too small to spend. Ask for a realistic amount, for example 20,000 sats, and read the fee the app displays before you accept. To test with a few hundred sats only, use a wallet without channels (Wallet of Satoshi or Glow) and accept its trade-off.</li>
-<li><strong>Send a small amount back.</strong> Scan the other person's QR code, check the amount, confirm. It usually arrives in 1 or 2 seconds.</li>
-<li><strong>Check the fee</strong> in the payment details, so that you know what a normal fee looks like.</li>
-<li><strong>Try a second wallet</strong>, send sats from one to the other, and compare.</li>
+<ol class="steps">
+<li id="step-1"><strong>Install it</strong> from the official store. Before you tap, check the developer name (Synonym Software for Bitkit) and follow the link from the project's official website, <a href="https://bitkit.to" class="tool-link ext" rel="noopener noreferrer">bitkit.to</a>, rather than a store search. This check, completed by a look at the app's page on <a href="https://walletscrutiny.com" class="tool-link ext" rel="noopener noreferrer">walletscrutiny.com</a>, is the step that replaces trust with verification, as far as a phone allows.</li>
+<li id="step-2"><strong>Create a new wallet.</strong> The app asks for no email, no name and no account, which is normal.</li>
+<li id="step-3"><strong>Write down the recovery words before receiving anything.</strong> Find the 12 words in the backup settings, copy them by hand on paper, and read chapter 14 before adding more than pocket money.</li>
+<li id="step-4"><strong>Receive a first payment larger than the channel fee.</strong> Tap Receive, choose to receive on the spending balance and show the QR code, keeping the app open until the payment appears. Blocktank opens your channel at that moment and takes its fee out of the amount, 1,835 sats in <a href="https://github.com/synonymdev/bitkit-android/issues/1265" class="ext" rel="noopener noreferrer">a case reported on 15 September 2026</a>, more when mining fees rise. The same report, still open on 20 September, shows that the suggested minimum of 2,000 sats can leave a balance too small to spend. Ask for a realistic amount, for example 20,000 sats, and read the fee the app displays before you accept. To test with a few hundred sats only, use a wallet without channels (Wallet of Satoshi or Glow) and accept its trade-off.</li>
+<li id="step-5"><strong>Send a small amount back.</strong> Scan the other person's QR code, check the amount, confirm. It usually arrives in 1 or 2 seconds.</li>
+<li id="step-6"><strong>Check the fee</strong> in the payment details, so that you know what a normal fee looks like.</li>
+<li id="step-7"><strong>Try a second wallet</strong>, send sats from one to the other, and compare.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="08" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Leaving savings on an exchange.</strong> An exchange is useful for the time of a purchase. Afterwards, withdraw to a wallet you control.</li>
 <li><strong>Taking a screenshot of your recovery words.</strong> Photos are often synced to the cloud and can be read by other apps. Use paper and a pen (chapter 14).</li>
@@ -199,74 +173,31 @@
 <li><strong>Starting with a large amount.</strong> Beginner mistakes happen in the first weeks, so make them with a small sum.</li>
 <li><strong>Trusting anyone who offers to "help" with your wallet online.</strong> No wallet team, exchange or authority needs your recovery words.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. The keys in your wallet are the same idea as the keys in chapter 6.</li>
-<li><strong>Step-by-step wallet tutorials:</strong> Plan B Academy (<a href="https://planb.academy" target="_blank" rel="noopener noreferrer">planb.academy</a>).</li>
-<li><strong>Check whether a wallet is really open source:</strong> WalletScrutiny (<a href="https://walletscrutiny.com" target="_blank" rel="noopener noreferrer">walletscrutiny.com</a>).</li>
-<li><strong>Plain guides for beginners:</strong> Bitcoiner.Guide (<a href="https://bitcoiner.guide" target="_blank" rel="noopener noreferrer">bitcoiner.guide</a>).</li>
+</section><section class="sec sec--further" data-no="09" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Step-by-step wallet tutorials:</strong> Plan B Academy (<a href="https://planb.academy" class="tool-link ext" rel="noopener noreferrer">planb.academy</a>).</li>
+<li><strong>Check whether a wallet is really open source:</strong> WalletScrutiny (<a href="https://walletscrutiny.com" class="tool-link ext" rel="noopener noreferrer">walletscrutiny.com</a>).</li>
+<li><strong>Plain guides for beginners:</strong> Bitcoiner.Guide (<a href="https://bitcoiner.guide" class="tool-link ext" rel="noopener noreferrer">bitcoiner.guide</a>).</li>
 <li><strong>Next chapter:</strong> backing up your seed phrase.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.wired.com/2014/03/bitcoin-exchange/" target="_blank" rel="noopener noreferrer">The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster</a>, Wired, 3 March 2014.</li>
-<li><a href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf" target="_blank" rel="noopener noreferrer">Notice Concerning Change of Repayments Deadline</a>, MtGox Co., Ltd. Rehabilitation Trustee, 27 October 2025.</li>
-<li><a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes" target="_blank" rel="noopener noreferrer">Samuel Bankman-Fried Sentenced to 25 Years for His Orchestration of Multiple Fraudulent Schemes</a>, U.S. Department of Justice, 28 March 2024.</li>
-<li><a href="https://walletscrutiny.com/methodology/" target="_blank" rel="noopener noreferrer">Methodology</a>, WalletScrutiny, consulted in September 2026.</li>
-<li><a href="https://docs.spark.money/spark/trust-model" target="_blank" rel="noopener noreferrer">Spark trust model</a>, Spark documentation, consulted in September 2026.</li>
-<li><a href="https://phoenix.acinq.co/faq" target="_blank" rel="noopener noreferrer">Phoenix FAQ: fees, restoring a wallet</a>, ACINQ, consulted in September 2026.</li>
-<li><a href="https://help.bitkit.to/hc/help-center/articles/1702656162-how-do-i-manage-my-spending-balance" target="_blank" rel="noopener noreferrer">How do I manage my spending balance?</a> (Blocktank, the 999 dollar cap, United States and Canada), Bitkit Help Center, Synonym, consulted in September 2026.</li>
-<li><a href="https://github.com/synonymdev/bitkit-android/issues/1265" target="_blank" rel="noopener noreferrer">CJIT at suggested minimum yields unspendable channel</a> (Blocktank fee of 1,835 sats on a first payment), Bitkit issue tracker on GitHub, 15 September 2026.</li>
-<li><a href="https://arklabs.xyz/insights/press-start-arkade-goes-live" target="_blank" rel="noopener noreferrer">Press Start: Arkade Goes Live</a>, Ark Labs, 20 October 2025.</li>
-<li><a href="https://second.tech/blog/introducing-noah-and-arke/" target="_blank" rel="noopener noreferrer">Introducing Noah and Arké: Two new Bark-based wallets</a>, Second, 10 June 2026.</li>
-<li><a href="https://second.tech/docs/learn/intro" target="_blank" rel="noopener noreferrer">Intro to the Ark protocol</a>, Second documentation, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="10" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://www.wired.com/2014/03/bitcoin-exchange/" class="ext" rel="noopener noreferrer">The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster</a>, Wired, 3 March 2014.</li>
+<li><a href="https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf" class="ext" rel="noopener noreferrer">Notice Concerning Change of Repayments Deadline</a>, MtGox Co., Ltd. Rehabilitation Trustee, 27 October 2025.</li>
+<li><a href="https://www.justice.gov/archives/opa/pr/samuel-bankman-fried-sentenced-25-years-his-orchestration-multiple-fraudulent-schemes" class="ext" rel="noopener noreferrer">Samuel Bankman-Fried Sentenced to 25 Years for His Orchestration of Multiple Fraudulent Schemes</a>, U.S. Department of Justice, 28 March 2024.</li>
+<li><a href="https://walletscrutiny.com/methodology/" class="ext" rel="noopener noreferrer">Methodology</a>, WalletScrutiny, consulted in September 2026.</li>
+<li><a href="https://docs.spark.money/spark/trust-model" class="ext" rel="noopener noreferrer">Spark trust model</a>, Spark documentation, consulted in September 2026.</li>
+<li><a href="https://phoenix.acinq.co/faq" class="ext" rel="noopener noreferrer">Phoenix FAQ: fees, restoring a wallet</a>, ACINQ, consulted in September 2026.</li>
+<li><a href="https://help.bitkit.to/hc/help-center/articles/1702656162-how-do-i-manage-my-spending-balance" class="ext" rel="noopener noreferrer">How do I manage my spending balance?</a> (Blocktank, the 999 dollar cap, United States and Canada), Bitkit Help Center, Synonym, consulted in September 2026.</li>
+<li><a href="https://github.com/synonymdev/bitkit-android/issues/1265" class="ext" rel="noopener noreferrer">CJIT at suggested minimum yields unspendable channel</a> (Blocktank fee of 1,835 sats on a first payment), Bitkit issue tracker on GitHub, 15 September 2026.</li>
+<li><a href="https://arklabs.xyz/insights/press-start-arkade-goes-live" class="ext" rel="noopener noreferrer">Press Start: Arkade Goes Live</a>, Ark Labs, 20 October 2025.</li>
+<li><a href="https://second.tech/blog/introducing-noah-and-arke/" class="ext" rel="noopener noreferrer">Introducing Noah and Arké: Two new Bark-based wallets</a>, Second, 10 June 2026.</li>
+<li><a href="https://second.tech/docs/learn/intro" class="ext" rel="noopener noreferrer">Intro to the Ark protocol</a>, Second documentation, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="first-wallet-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="first-wallet-1" aria-label="Install a self-custodial wallet from its official source, after checking the developer name and its page on walletscrutiny.com"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="first-wallet-1">Install a self-custodial wallet from its official source, after checking the developer name and its page on walletscrutiny.com</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="first-wallet-2" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="first-wallet-2" aria-label="Write the recovery words on paper before receiving anything"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="first-wallet-2">Write the recovery words on paper before receiving anything</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="first-wallet-3" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="first-wallet-3" aria-label="Receive a first payment larger than the setup fee and send some back"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="first-wallet-3">Receive a first payment larger than the setup fee and send some back</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="first-wallet-4" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="first-wallet-4" aria-label="Install a second wallet from another team and compare"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="first-wallet-4">Install a second wallet from another team and compare</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="first-wallet-5" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="first-wallet-5" aria-label="Move anything you left on an exchange to a wallet you control"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="first-wallet-5">Move anything you left on an exchange to a wallet you control</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/savings/"><span>Previous</span>Where to keep the fruit of your work</a>
-<a class="bk-next" href="/book/en/seed/"><span>Next</span>Backing up your seed phrase</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="11" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="first-wallet">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="first-wallet" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-first-wallet-install"><span class="legacy-anchor" id="first-wallet-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="first-wallet-install" disabled="disabled"><span class="action-text">Install a self-custodial wallet from its official source, after checking the developer name and its page on <a href="https://walletscrutiny.com" class="tool-link ext" rel="noopener noreferrer">walletscrutiny.com</a></span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-first-wallet-write-words"><span class="legacy-anchor" id="first-wallet-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="first-wallet-write-words" disabled="disabled"><span class="action-text">Write the recovery words on paper before receiving anything</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-first-wallet-first-payment"><span class="legacy-anchor" id="first-wallet-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="first-wallet-first-payment" disabled="disabled"><span class="action-text">Receive a first payment larger than the setup fee and send some back</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-first-wallet-second-wallet"><span class="legacy-anchor" id="first-wallet-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="first-wallet-second-wallet" disabled="disabled"><span class="action-text">Install a second wallet from another team and compare</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-first-wallet-leave-exchange"><span class="legacy-anchor" id="first-wallet-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="first-wallet-leave-exchange" disabled="disabled"><span class="action-text">Move anything you left on an exchange to a wallet you control</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="first-wallet" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-3" href="/book/en/savings/"><span class="pager-dir">Previous · Chapter 12</span><span class="pager-title">Where to keep the fruit of your work</span></a><a class="pager-next part-3" href="/book/en/seed/"><span class="pager-dir">Next · Chapter 14</span><span class="pager-title">Backing up your seed phrase</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/first-wallet/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/" aria-current="page"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

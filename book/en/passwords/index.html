@@ -1,240 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Your passwords and your accounts · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Your passwords and your accounts — A Guide to Autonomy</title>
 <meta name="description" content="Reused passwords remain one of the most common ways ordinary accounts get taken over, next to phishing. A password manager creates and remembers a different…">
 <link rel="canonical" href="https://proofconference.com/book/en/passwords/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/passwords/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/passwords/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/passwords/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Your passwords and your accounts · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Your passwords and your accounts — A Guide to Autonomy">
 <meta property="og:description" content="Reused passwords remain one of the most common ways ordinary accounts get taken over, next to phishing. A password manager creates and remembers a different…">
 <meta property="og:url" content="https://proofconference.com/book/en/passwords/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Your passwords and your accounts · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Your passwords and your accounts — A Guide to Autonomy">
 <meta name="twitter:description" content="Reused passwords remain one of the most common ways ordinary accounts get taken over, next to phishing. A password manager creates and remembers a different…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/passwords/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/passwords/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page priv page-top" data-slug="passwords">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Privacy · Chapter 2</p>
-    <h1>Your passwords and your accounts</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/passwords/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-1" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/passwords"><div class="page-layout is-chapter part-1"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/passwords/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/passwords/#a-leaked-password-opens-many-doors" data-target="a-leaked-password-opens-many-doors"><span class="toc-no">02</span><span class="toc-label">A leaked password opens many doors</span></a></li><li><a href="/book/en/passwords/#a-single-passphrase-then-a-second-factor" data-target="a-single-passphrase-then-a-second-factor"><span class="toc-no">03</span><span class="toc-label">A single passphrase, then a second factor</span></a></li><li><a href="/book/en/passwords/#zero-knowledge-still-leaves-a-vault-keeper" data-target="zero-knowledge-still-leaves-a-vault-keeper"><span class="toc-no">04</span><span class="toc-label">Zero knowledge still leaves a vault keeper</span></a></li><li><a href="/book/en/passwords/#choose-your-password-manager" data-target="choose-your-password-manager"><span class="toc-no">05</span><span class="toc-label">Choose your password manager</span></a></li><li><a href="/book/en/passwords/#choose-your-authenticator-app" data-target="choose-your-authenticator-app"><span class="toc-no">06</span><span class="toc-label">Choose your authenticator app</span></a></li><li><a href="/book/en/passwords/#hardware-security-keys" data-target="hardware-security-keys"><span class="toc-no">07</span><span class="toc-label">Hardware security keys</span></a></li><li><a href="/book/en/passwords/#step-by-step" data-target="step-by-step"><span class="toc-no">08</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/passwords/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">09</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/passwords/#go-further" data-target="go-further"><span class="toc-no">10</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/passwords/#sources" data-target="sources"><span class="toc-no">11</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/passwords/#your-checklist" data-target="your-checklist"><span class="toc-no">12</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-1" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/privacy/">Part 1 · Privacy</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 2: </span>Your passwords and your accounts</h1><p class="ch-bignum" aria-hidden="true">02</p><div class="ch-meta"><span>Chapter 2 of 18</span><a href="/book/en/passwords/#your-checklist"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="passwords"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>Reused passwords remain one of the most common ways ordinary accounts get taken over, next to phishing. A password manager creates and remembers a different password for every site, and you protect it with a single strong passphrase. A second factor then goes on the accounts that matter, starting with your email, because whoever holds your email can reset almost everything else.</p>
-<h2>A leaked password opens many doors</h2>
-<p>In January 2019, the security researcher Troy Hunt found a set of files circulating on a hacking forum under the name <a href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/" target="_blank" rel="noopener noreferrer">Collection #1</a>. It contained 773 million unique email addresses and more than 21 million unique passwords, assembled from thousands of older breaches. Attackers feed lists like this one to programs that try each pair of address and password on other services, such as your email, your shops and your social networks, a technique called <strong>credential stuffing</strong>.</p>
-<p>Nobody is targeting you in particular, and the door simply opens wherever you reused a leaked password. Between April and September 2023, the genetic testing company 23andMe was hit in exactly this way. The British regulator <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/" target="_blank" rel="noopener noreferrer">fined it £2.31 million in June 2025</a>, after the data of 155,592 UK residents was exposed, and noted that the company did not require a second factor at login.</p>
-<p>You can check whether your own address appears in known breaches at <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a>, the free service that Troy Hunt runs. People who have been online for 10 years tend to find several. The account that matters most is your email, since whoever controls it can click "forgot my password" on almost everything else you own.</p>
-<h2>A single passphrase, then a second factor</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="a-leaked-password-opens-many-doors"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="a-leaked-password-opens-many-doors" tabindex="-1">A leaked password opens many doors</h2>
+<p>In January 2019, the security researcher Troy Hunt found a set of files circulating on a hacking forum under the name <a href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/" class="ext" rel="noopener noreferrer">Collection #1</a>. It contained 773 million unique email addresses and more than 21 million unique passwords, assembled from thousands of older breaches. Attackers feed lists like this one to programs that try each pair of address and password on other services, such as your email, your shops and your social networks, a technique called <strong>credential stuffing</strong>.</p>
+<p>Nobody is targeting you in particular, and the door simply opens wherever you reused a leaked password. Between April and September 2023, the genetic testing company 23andMe was hit in exactly this way. The British regulator <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/" class="ext" rel="noopener noreferrer">fined it £2.31 million in June 2025</a>, after the data of 155,592 UK residents was exposed, and noted that the company did not require a second factor at login.</p>
+<p>You can check whether your own address appears in known breaches at <a href="https://haveibeenpwned.com/" class="ext" rel="noopener noreferrer">Have I Been Pwned</a>, the free service that Troy Hunt runs. People who have been online for 10 years tend to find several. The account that matters most is your email, since whoever controls it can click "forgot my password" on almost everything else you own.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/">troyhunt.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/">ico.org.uk</a></li><li><a class="ext" rel="noopener noreferrer" href="https://haveibeenpwned.com/">haveibeenpwned.com</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="a-single-passphrase-then-a-second-factor"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="a-single-passphrase-then-a-second-factor" tabindex="-1">A single passphrase, then a second factor</h2>
 <p>A <strong>password manager</strong> is an encrypted vault that creates a long random password for every site, remembers it and fills it in for you. The vault is encrypted on your own device before it is synchronised, so a well-designed provider is not able to read it, and you remember 1 secret instead of 100. That secret should be a <strong>passphrase</strong> of 6 random words, chosen for example by rolling dice against a word list (a method called diceware), which is hard to guess and far easier to remember than "xK9#qL2v".</p>
-<p><strong>Two-factor authentication</strong> (2FA) adds a step after the password, when the site asks for something you have. A code sent by SMS is the weak form, because a criminal can persuade your operator to move your number to their SIM card, an attack called a SIM swap. In March 2020, <a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" target="_blank" rel="noopener noreferrer">Europol announced the arrest of 12 people in Spain</a> who had used duplicate SIM cards to empty bank accounts more than 100 times, for a total above €3 million.</p>
+<p><strong>Two-factor authentication</strong> (2FA) adds a step after the password, when the site asks for something you have. A code sent by SMS is the weak form, because a criminal can persuade your operator to move your number to their SIM card, an attack called a SIM swap. In March 2020, <a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" class="ext" rel="noopener noreferrer">Europol announced the arrest of 12 people in Spain</a> who had used duplicate SIM cards to empty bank accounts more than 100 times, for a total above €3 million.</p>
 <p>An authenticator app is much better, and a hardware security key is the strongest option. <strong>Passkeys</strong> use the same technology as these keys to replace the password itself.</p>
-<h2>Zero knowledge still leaves a vault keeper</h2>
-<p>Encryption keeps a synchronised vault confidential, but the company that stores it and ships your updates remains a trusted third party. Providers call their design zero knowledge, meaning they hold the vault without the passphrase that opens it. In December 2022, LastPass <a href="https://blog.lastpass.com/posts/notice-of-recent-security-incident" target="_blank" rel="noopener noreferrer">confirmed that an attacker had copied a backup of customer vaults</a>. Passwords and notes were encrypted, the website addresses were not, and each stolen vault became only as strong as its owner's master password. The British regulator, which <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/" target="_blank" rel="noopener noreferrer">fined the company £1.2 million in December 2025</a> for up to 1.6 million UK users affected, found no evidence that passwords had been decrypted.</p>
-<p>Open-source apps let experts compare that claim with the code, and published audits add evidence, such as the <a href="https://keepassxc.org/audits/" target="_blank" rel="noopener noreferrer">security certification that the French agency ANSSI gave KeePassXC</a> in 2025. A local file or a server you host removes the vault keeper, and backups, updates and sync then become your job.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers">europol.europa.eu</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="zero-knowledge-still-leaves-a-vault-keeper"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="zero-knowledge-still-leaves-a-vault-keeper" tabindex="-1">Zero knowledge still leaves a vault keeper</h2>
+<p>Encryption keeps a synchronised vault confidential, but the company that stores it and ships your updates remains a trusted third party. Providers call their design zero knowledge, meaning they hold the vault without the passphrase that opens it. In December 2022, LastPass <a href="https://blog.lastpass.com/posts/notice-of-recent-security-incident" class="ext" rel="noopener noreferrer">confirmed that an attacker had copied a backup of customer vaults</a>. Passwords and notes were encrypted, the website addresses were not, and each stolen vault became only as strong as its owner's master password. The British regulator, which <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/" class="ext" rel="noopener noreferrer">fined the company £1.2 million in December 2025</a> for up to 1.6 million UK users affected, found no evidence that passwords had been decrypted.</p>
+<p>Open-source apps let experts compare that claim with the code, and published audits add evidence, such as the <a href="https://keepassxc.org/audits/" class="ext" rel="noopener noreferrer">security certification that the French agency ANSSI gave KeePassXC</a> in 2025. A local file or a server you host removes the vault keeper, and backups, updates and sync then become your job.</p>
 <p>Second factors have third parties too. The site stores the same secret as your authenticator app and a sync service may hold a copy, whereas a hardware key also verifies authenticity in the other direction, by checking which website is asking.</p>
-<h2>Choose your password manager</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://blog.lastpass.com/posts/notice-of-recent-security-incident">blog.lastpass.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/">ico.org.uk</a></li><li><a class="ext" rel="noopener noreferrer" href="https://keepassxc.org/audits/">keepassxc.org</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-password-manager"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-password-manager" tabindex="-1">Choose your password manager</h2>
 <p>All the options below are far better than reusing passwords, and they differ on who holds your encrypted vault, whether the code is public, and how much work you accept.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>5 options · 6 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your password manager"><table>
 <thead>
 <tr>
-<th>Manager</th>
-<th>Open source</th>
-<th>Where the vault lives</th>
-<th>Who you must trust, and what you can check</th>
-<th>Cost</th>
-<th>Trade-offs</th>
+<th scope="col">Manager</th>
+<th scope="col">Open source</th>
+<th scope="col">Where the vault lives</th>
+<th scope="col">Who you must trust, and what you can check</th>
+<th scope="col">Cost</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a></strong></td>
+<tr id="row-bitwarden">
+<th scope="row"><strong><a href="https://bitwarden.com/" class="ext" rel="noopener noreferrer">Bitwarden</a></strong></th>
 <td>Yes</td>
-<td><a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a>'s cloud, or a server you host</td>
+<td><a href="https://bitwarden.com/" class="tool-link ext" rel="noopener noreferrer">Bitwarden</a>'s cloud, or a server you host</td>
 <td>Bitwarden, for storage and app updates. Public code, third-party audits published every year. Self-hosting removes the company.</td>
 <td>Free, optional paid plan</td>
 <td>The easiest open-source choice, on every device. The default service is run by a single US company.</td>
 </tr>
-<tr>
-<td><strong><a href="https://keepassxc.org/" target="_blank" rel="noopener noreferrer">KeePassXC</a></strong></td>
+<tr id="row-keepassxc">
+<th scope="row"><strong><a href="https://keepassxc.org/" class="ext" rel="noopener noreferrer">KeePassXC</a></strong></th>
 <td>Yes</td>
 <td>A file on your own computer</td>
 <td>No vault keeper. You rely on the app's public code, certified by ANSSI in 2025, and on your own backups.</td>
 <td>Free</td>
-<td>No company, no cloud, no account. You handle sync and backups yourself. On phones, use compatible apps such as <a href="https://www.keepassdx.com/" target="_blank" rel="noopener noreferrer">KeePassDX</a> (Android) or <a href="https://keepassium.com/" target="_blank" rel="noopener noreferrer">KeePassium</a> (iPhone).</td>
+<td>No company, no cloud, no account. You handle sync and backups yourself. On phones, use compatible apps such as <a href="https://www.keepassdx.com/" class="ext" rel="noopener noreferrer">KeePassDX</a> (Android) or <a href="https://keepassium.com/" class="ext" rel="noopener noreferrer">KeePassium</a> (iPhone).</td>
 </tr>
-<tr>
-<td><strong><a href="https://proton.me/pass" target="_blank" rel="noopener noreferrer">Proton Pass</a></strong></td>
+<tr id="row-proton-pass">
+<th scope="row"><strong><a href="https://proton.me/pass" class="ext" rel="noopener noreferrer">Proton Pass</a></strong></th>
 <td>Yes</td>
-<td><a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a>'s cloud (Swiss company)</td>
+<td><a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a>'s cloud (Swiss company)</td>
 <td>Proton, for storage and app updates. Public app code, audited by Cure53 in 2023. No self-hosting.</td>
 <td>Free, optional paid plan</td>
 <td>Includes email aliases. Practical if you already use Proton, but it concentrates more of your life in a single company.</td>
 </tr>
-<tr>
-<td><strong><a href="https://1password.com/" target="_blank" rel="noopener noreferrer">1Password</a></strong></td>
+<tr id="row-1password">
+<th scope="row"><strong><a href="https://1password.com/" class="ext" rel="noopener noreferrer">1Password</a></strong></th>
 <td>No, closed source</td>
-<td><a href="https://1password.com/" target="_blank" rel="noopener noreferrer">1Password</a>'s cloud (Canadian company)</td>
+<td><a href="https://1password.com/" class="tool-link ext" rel="noopener noreferrer">1Password</a>'s cloud (Canadian company)</td>
 <td>1Password, for storage, updates and the code itself. It publishes audit reports, not the source.</td>
 <td>Paid subscription only</td>
 <td>Polished, good for families, regularly audited. The public cannot inspect the code.</td>
 </tr>
-<tr>
-<td><strong>Built into your browser or system</strong> (<a href="https://passwords.google.com/" target="_blank" rel="noopener noreferrer">Google</a>, <a href="https://support.apple.com/en-us/120758" target="_blank" rel="noopener noreferrer">Apple</a>, <a href="https://www.firefox.com/en-US/features/password-manager/" target="_blank" rel="noopener noreferrer">Firefox</a>)</td>
+<tr id="row-built-into-your-browser-or-system-google-apple-firefox">
+<th scope="row"><strong>Built into your browser or system</strong> (<a href="https://passwords.google.com/" class="ext" rel="noopener noreferrer">Google</a>, <a href="https://support.apple.com/en-us/120758" class="ext" rel="noopener noreferrer">Apple</a>, <a href="https://www.firefox.com/en-US/features/password-manager/" class="ext" rel="noopener noreferrer">Firefox</a>)</th>
 <td>Varies</td>
-<td>Your Google, Apple or <a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a> account</td>
-<td>Google, Apple or Mozilla, for storage, updates and account recovery. Only <a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>'s code is fully public.</td>
+<td>Your Google, Apple or <a href="https://www.mozilla.org/" class="tool-link ext" rel="noopener noreferrer">Mozilla</a> account</td>
+<td>Google, Apple or Mozilla, for storage, updates and account recovery. Only <a href="https://www.firefox.com/" class="tool-link ext" rel="noopener noreferrer">Firefox</a>'s code is fully public.</td>
 <td>Free</td>
 <td>Already there, and much better than nothing. Ties you to a single browser or ecosystem, and is only as safe as that main account.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is <strong>Bitwarden or Proton Pass</strong> if you want sync without effort, or <strong>KeePassXC</strong> if you prefer that no company holds your vault, even encrypted.</p>
-<h2>Choose your authenticator app</h2>
+</section><section class="sec sec--compare" data-no="06" aria-labelledby="choose-your-authenticator-app"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-authenticator-app" tabindex="-1">Choose your authenticator app</h2>
 <p>An authenticator app shows a 6-digit code that changes every 30 seconds. The site and your phone share a secret (the QR code you scan once), and both calculate the same code from it, even without a network, which makes it the right second factor for most of your accounts. Prefer an open-source app that lets you take your codes out again, because if the secrets live on 1 phone only, a lost or broken phone locks you out everywhere at once. Your password manager can often store these codes too, which is convenient but puts both factors in the same place.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>4 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your authenticator app"><table>
 <thead>
 <tr>
-<th>App</th>
-<th>Platforms</th>
-<th>Open source</th>
-<th>Backup and sync</th>
-<th>Trade-offs</th>
+<th scope="col">App</th>
+<th scope="col">Platforms</th>
+<th scope="col">Open source</th>
+<th scope="col">Backup and sync</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://getaegis.app/" target="_blank" rel="noopener noreferrer">Aegis</a></strong></td>
+<tr id="row-aegis">
+<th scope="row"><strong><a href="https://getaegis.app/" class="ext" rel="noopener noreferrer">Aegis</a></strong></th>
 <td>Android only</td>
 <td>Yes</td>
 <td>Encrypted vault on the phone. You export encrypted backups yourself.</td>
 <td>No cloud and no account, so no sync service to trust. Backups are your job, and there is no iPhone version.</td>
 </tr>
-<tr>
-<td><strong><a href="https://ente.com/auth/" target="_blank" rel="noopener noreferrer">Ente Auth</a></strong></td>
+<tr id="row-ente-auth">
+<th scope="row"><strong><a href="https://ente.com/auth/" class="ext" rel="noopener noreferrer">Ente Auth</a></strong></th>
 <td>Android, iPhone, Windows, Mac, Linux, web</td>
 <td>Yes</td>
-<td>Optional end-to-end encrypted sync, which needs an <a href="https://ente.com/" target="_blank" rel="noopener noreferrer">Ente</a> account. Also works offline without an account.</td>
+<td>Optional end-to-end encrypted sync, which needs an <a href="https://ente.com/" class="tool-link ext" rel="noopener noreferrer">Ente</a> account. Also works offline without an account.</td>
 <td>Your codes on all your devices. The sync depends on a single small company.</td>
 </tr>
-<tr>
-<td><strong><a href="https://2fas.com/" target="_blank" rel="noopener noreferrer">2FAS</a></strong></td>
+<tr id="row-2fas">
+<th scope="row"><strong><a href="https://2fas.com/" class="ext" rel="noopener noreferrer">2FAS</a></strong></th>
 <td>Android, iPhone, plus a browser extension</td>
 <td>Yes</td>
 <td>Backup through your Google Drive or iCloud account.</td>
 <td>Simple. The backup is only as safe as that Google or Apple account.</td>
 </tr>
-<tr>
-<td><strong><a href="https://proton.me/authenticator" target="_blank" rel="noopener noreferrer">Proton Authenticator</a></strong></td>
+<tr id="row-proton-authenticator">
+<th scope="row"><strong><a href="https://proton.me/authenticator" class="ext" rel="noopener noreferrer">Proton Authenticator</a></strong></th>
 <td>Android, iPhone, Windows, Mac, Linux</td>
 <td>Yes</td>
-<td>Works without an account. Optional end-to-end encrypted sync with a <a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a> account, plus local export and import.</td>
+<td>Works without an account. Optional end-to-end encrypted sync with a <a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a> account, plus local export and import.</td>
 <td>Free, launched in July 2025, so younger than the others. Another part of your life at Proton if you already use it.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is <strong>Aegis</strong> on Android if you accept handling backups yourself, or <strong>Ente Auth or Proton Authenticator</strong> if you want your codes on several devices. Whatever you choose, test the export or the backup once.</p>
-<h2>Hardware security keys</h2>
+</section><section class="sec sec--compare" data-no="07" aria-labelledby="hardware-security-keys"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Compare</span></p><h2 id="hardware-security-keys" tabindex="-1">Hardware security keys</h2>
 <p>A hardware security key is a different kind of tool. This small physical device, plugged into a USB port or held against your phone (NFC), holds a private key that is designed never to leave it, and it relies on open standards called FIDO2 and WebAuthn. When you log in, the key checks the real address of the website before it answers, and you touch it to confirm. A fake login page gets nothing from it, whereas a code from an app can still be typed into the wrong page by a tricked user. The same keys can also store <strong>passkeys</strong>.</p>
 <p>Buy 2 and register both on every account, 1 for your keyring and 1 for a safe place. Not every site supports keys, so keep an authenticator app as well, and use the keys first for the accounts that matter most, which are your email, your password manager and your main Apple or Google account.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>4 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Hardware security keys"><table>
 <thead>
 <tr>
-<th>Key</th>
-<th>Maker</th>
-<th>Connection</th>
-<th>Open source</th>
-<th>Trade-offs</th>
+<th scope="col">Key</th>
+<th scope="col">Maker</th>
+<th scope="col">Connection</th>
+<th scope="col">Open source</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://www.yubico.com/" target="_blank" rel="noopener noreferrer">YubiKey</a></strong></td>
+<tr id="row-yubikey">
+<th scope="row"><strong><a href="https://www.yubico.com/" class="ext" rel="noopener noreferrer">YubiKey</a></strong></th>
 <td>Yubico (Sweden and United States)</td>
 <td>USB-A or USB-C, NFC on most models</td>
 <td>No, closed firmware</td>
 <td>The most widely supported and documented. The firmware cannot be inspected or updated. The cheaper "Security Key" series is enough for logins.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.nitrokey.com/" target="_blank" rel="noopener noreferrer">Nitrokey</a></strong></td>
-<td><a href="https://www.nitrokey.com/" target="_blank" rel="noopener noreferrer">Nitrokey</a> (Germany)</td>
+<tr id="row-nitrokey">
+<th scope="row"><strong><a href="https://www.nitrokey.com/" class="ext" rel="noopener noreferrer">Nitrokey</a></strong></th>
+<td><a href="https://www.nitrokey.com/" class="tool-link ext" rel="noopener noreferrer">Nitrokey</a> (Germany)</td>
 <td>USB-A or USB-C, NFC on some models</td>
 <td>Yes, firmware and hardware</td>
 <td>Firmware can be updated. Fewer models, less polished documentation.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.token2.com/" target="_blank" rel="noopener noreferrer">Token2</a></strong></td>
-<td><a href="https://www.token2.com/" target="_blank" rel="noopener noreferrer">Token2</a> (Switzerland)</td>
+<tr id="row-token2">
+<th scope="row"><strong><a href="https://www.token2.com/" class="ext" rel="noopener noreferrer">Token2</a></strong></th>
+<td><a href="https://www.token2.com/" class="tool-link ext" rel="noopener noreferrer">Token2</a> (Switzerland)</td>
 <td>USB-A or USB-C, NFC on most models</td>
 <td>Partly. The FIDO2 part of the firmware is public and was independently reviewed in 2024, the rest is closed</td>
 <td>Lower-priced keys. Less well known.</td>
 </tr>
-<tr>
-<td><strong><a href="https://onlykey.io/" target="_blank" rel="noopener noreferrer">OnlyKey</a></strong></td>
+<tr id="row-onlykey">
+<th scope="row"><strong><a href="https://onlykey.io/" class="ext" rel="noopener noreferrer">OnlyKey</a></strong></th>
 <td>CryptoTrust (United States)</td>
 <td>USB only, no NFC</td>
 <td>Yes, firmware</td>
 <td>Has its own PIN buttons and can also type stored passwords. Bulkier, and more complex than a beginner needs.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is 2 keys from any maker above, plus an authenticator app for the sites that do not accept keys.</p>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="08" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example uses Bitwarden because it is free, open source and works on every system, and the same logic applies to the others.</p>
-<ol>
-<li><strong>Create your passphrase.</strong> Roll dice against <a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">the EFF word list</a>, or use the manager's passphrase generator, until you have 6 words (the EFF recommends 6 as a minimum). Write it on paper and keep that paper somewhere safe at home.</li>
-<li><strong>Install the manager</strong> on your computer (as a browser extension) and on your phone, and create your account with that passphrase. If you forget it, nobody can reset it for you, which is the whole point of the design.</li>
-<li><strong>Start with your email.</strong> Log in to your email account, change the password to one generated by the manager, and save it in the vault.</li>
-<li><strong>Move 4 more accounts:</strong> your main Apple or Google account, your bank or payment app, your main social network, and any shop that stores your card. The rest can follow over the next weeks, each time you log in somewhere.</li>
-<li><strong>Turn on 2FA with your authenticator app</strong> on those 5 accounts, email first, and on the password manager itself. In each account's security settings, look for "two-step verification" or "two-factor authentication", then scan the QR code with the app and type the code it shows. Where the site allows it, remove SMS as a method.</li>
-<li><strong>Register your hardware keys, if you chose them.</strong> In the same security settings, choose "security key" (sometimes "passkey"). Plug in or tap the first key, touch it, and give it a name, then repeat at once with the second key. This is the step that replaces trust with verification, because from then on the key checks the website's address at every login, instead of your eyes. Carry one and store the other in a safe place, and keep the authenticator app as a fallback.</li>
-<li><strong>Save the recovery codes, away from the passphrase.</strong> Most sites give you one-time codes for the day you lose your phone or your keys. Print them and keep them in a different place from your passphrase paper, for example the passphrase at home and the codes in a sealed envelope with a trusted relative, so that someone who finds 1 paper does not get everything.</li>
-<li><strong>Plan emergency access.</strong> Some managers have an emergency access feature for a trusted person (in Bitwarden it is part of the paid plan). Written instructions for your family, telling them where the 2 papers are, also work.</li>
+<ol class="steps">
+<li id="step-1"><strong>Create your passphrase.</strong> Roll dice against <a href="https://www.eff.org/dice" class="ext" rel="noopener noreferrer">the EFF word list</a>, or use the manager's passphrase generator, until you have 6 words (the EFF recommends 6 as a minimum). Write it on paper and keep that paper somewhere safe at home.</li>
+<li id="step-2"><strong>Install the manager</strong> on your computer (as a browser extension) and on your phone, and create your account with that passphrase. Without recovery arranged in advance, forgetting it can mean losing your vault. Bitwarden cannot simply recover your master password; preconfigured emergency access is a separate route (step 8).</li>
+<li id="step-3"><strong>Start with your email.</strong> Log in to your email account, change the password to one generated by the manager, and save it in the vault.</li>
+<li id="step-4"><strong>Move 4 more accounts:</strong> your main Apple or Google account, your bank or payment app, your main social network, and any shop that stores your card. The rest can follow over the next weeks, each time you log in somewhere.</li>
+<li id="step-5"><strong>Turn on 2FA with your authenticator app</strong> on those 5 accounts, email first, and on the password manager itself. In each account's security settings, look for "two-step verification" or "two-factor authentication", then scan the QR code with the app and type the code it shows. Where the site allows it, remove SMS as a method.</li>
+<li id="step-6"><strong>Register your hardware keys, if you chose them.</strong> In the same security settings, choose "security key" (sometimes "passkey"). Plug in or tap the first key, touch it, and give it a name, then repeat at once with the second key. This is the step that replaces trust with verification, because from then on the key checks the website's address at every login, instead of your eyes. Carry one and store the other in a safe place. Where the site permits it, prefer the tested spare key and protected recovery codes. Keeping an authenticator fallback is convenient, but its codes can still be phished, so it leaves a weaker route into the account. Test your recovery options before removing any method.</li>
+<li id="step-7"><strong>Save the recovery codes, away from the passphrase.</strong> Most sites give you one-time codes for the day you lose your phone or your keys. Print them and keep them in a different place from your passphrase paper, for example the passphrase at home and the codes in a sealed envelope with a trusted relative, so that someone who finds 1 paper does not get everything.</li>
+<li id="step-8"><strong>Plan emergency access.</strong> Some managers have an emergency access feature for a trusted person (in Bitwarden it is part of the paid plan). Written instructions for your family, telling them where the 2 papers are, also work.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="09" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Keeping the passphrase only in your head.</strong> Memory can fail after an illness, an accident or a long holiday. A paper copy in a safe place is not a weakness, as long as your recovery codes are kept somewhere else.</li>
 <li><strong>Leaving SMS as a fallback.</strong> If the site still accepts a code by SMS, a SIM swap still works, so remove it wherever the site lets you.</li>
@@ -243,70 +217,29 @@
 <li><strong>Typing a code into a page you reached from a message.</strong> Authenticator codes can be phished too. If your manager does not offer to fill in the password, check the address, because you may be on a fake site.</li>
 <li><strong>Trying to change everything in a single evening.</strong> Start with the 5 accounts above, then move the others over the following weeks, each time you log in somewhere.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. A passphrase, a hardware key and a passkey are all versions of the same idea, a secret that only you hold.</li>
-<li><strong>Check your exposure:</strong> <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a>.</li>
-<li><strong>Make a dice passphrase:</strong> <a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">the word lists of the Electronic Frontier Foundation</a>.</li>
-<li><strong>Compare tools in detail:</strong> Privacy Guides, <a href="https://www.privacyguides.org/en/passwords/" target="_blank" rel="noopener noreferrer">"Password Managers"</a>, <a href="https://www.privacyguides.org/en/multi-factor-authentication/" target="_blank" rel="noopener noreferrer">"Multifactor Authentication"</a> and <a href="https://www.privacyguides.org/en/security-keys/" target="_blank" rel="noopener noreferrer">"Security Keys"</a>.</li>
+</section><section class="sec sec--further" data-no="10" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Check your exposure:</strong> <a href="https://haveibeenpwned.com/" class="ext" rel="noopener noreferrer">Have I Been Pwned</a>.</li>
+<li><strong>Make a dice passphrase:</strong> <a href="https://www.eff.org/dice" class="ext" rel="noopener noreferrer">the word lists of the Electronic Frontier Foundation</a>.</li>
+<li><strong>Compare tools in detail:</strong> Privacy Guides, <a href="https://www.privacyguides.org/en/passwords/" class="ext" rel="noopener noreferrer">"Password Managers"</a>, <a href="https://www.privacyguides.org/en/multi-factor-authentication/" class="ext" rel="noopener noreferrer">"Multifactor Authentication"</a> and <a href="https://www.privacyguides.org/en/security-keys/" class="ext" rel="noopener noreferrer">"Security Keys"</a>.</li>
 <li><strong>Next chapter:</strong> your browser and your searches.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/" target="_blank" rel="noopener noreferrer">The 773 Million Record "Collection #1" Data Breach</a>, Troy Hunt, 17 January 2019.</li>
-<li><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/" target="_blank" rel="noopener noreferrer">23andMe fined £2.31 million for failing to protect UK users' genetic data</a>, Information Commissioner's Office (United Kingdom), 17 June 2025.</li>
-<li><a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" target="_blank" rel="noopener noreferrer">The SIM highjackers: how criminals are stealing millions by highjacking phone numbers</a>, Europol, 13 March 2020.</li>
-<li><a href="https://blog.lastpass.com/posts/notice-of-recent-security-incident" target="_blank" rel="noopener noreferrer">Notice of recent security incident</a>, LastPass, 22 December 2022.</li>
-<li><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/" target="_blank" rel="noopener noreferrer">Password manager provider fined £1.2m by ICO for data breach</a>, Information Commissioner's Office (United Kingdom), 11 December 2025.</li>
-<li><a href="https://keepassxc.org/audits/" target="_blank" rel="noopener noreferrer">KeePassXC security audits and certifications</a>, KeePassXC, consulted in September 2026.</li>
-<li><a href="https://www.eff.org/dice" target="_blank" rel="noopener noreferrer">EFF Dice-Generated Passphrases</a>, Electronic Frontier Foundation, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="11" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf" class="ext" rel="noopener noreferrer">Implementing phishing-resistant MFA</a>, CISA, checked 22 October 2026.</li>
+<li><a href="https://bitwarden.com/help/emergency-access/" class="ext" rel="noopener noreferrer">Emergency access</a>, Bitwarden Help, checked 22 October 2026.</li>
+<li><a href="https://www.troyhunt.com/the-773-million-record-collection-1-data-reach/" class="ext" rel="noopener noreferrer">The 773 Million Record "Collection #1" Data Breach</a>, Troy Hunt, 17 January 2019.</li>
+<li><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/06/23andme-fined-for-failing-to-protect-uk-users-genetic-data/" class="ext" rel="noopener noreferrer">23andMe fined £2.31 million for failing to protect UK users' genetic data</a>, Information Commissioner's Office (United Kingdom), 17 June 2025.</li>
+<li><a href="https://www.europol.europa.eu/media-press/newsroom/news/sim-highjackers-how-criminals-are-stealing-millions-highjacking-phone-numbers" class="ext" rel="noopener noreferrer">The SIM highjackers: how criminals are stealing millions by highjacking phone numbers</a>, Europol, 13 March 2020.</li>
+<li><a href="https://blog.lastpass.com/posts/notice-of-recent-security-incident" class="ext" rel="noopener noreferrer">Notice of recent security incident</a>, LastPass, 22 December 2022.</li>
+<li><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2025/12/password-manager-provider-fined/" class="ext" rel="noopener noreferrer">Password manager provider fined £1.2m by ICO for data breach</a>, Information Commissioner's Office (United Kingdom), 11 December 2025.</li>
+<li><a href="https://keepassxc.org/audits/" class="ext" rel="noopener noreferrer">KeePassXC security audits and certifications</a>, KeePassXC, consulted in September 2026.</li>
+<li><a href="https://www.eff.org/dice" class="ext" rel="noopener noreferrer">EFF Dice-Generated Passphrases</a>, Electronic Frontier Foundation, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="passwords-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="passwords-1" aria-label="Check your email address on Have I Been Pwned"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="passwords-1">Check your email address on Have I Been Pwned</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="passwords-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="passwords-2" aria-label="Install a password manager and create a passphrase of 6 random words"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="passwords-2">Install a password manager and create a passphrase of 6 random words</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="passwords-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="passwords-3" aria-label="Give your email a new unique password and turn on 2FA with an authenticator app, plus your 2 hardware keys if you bought them"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="passwords-3">Give your email a new unique password and turn on 2FA with an authenticator app, plus your 2 hardware keys if you bought them</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="passwords-4" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="passwords-4" aria-label="Move your 4 next most important accounts and remove SMS codes where possible"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="passwords-4">Move your 4 next most important accounts and remove SMS codes where possible</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="passwords-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="passwords-5" aria-label="Put your passphrase on paper in one safe place and your recovery codes in another, and tell 1 trusted person where"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="passwords-5">Put your passphrase on paper in one safe place and your recovery codes in another, and tell 1 trusted person where</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/messages/"><span>Previous</span>Your messages</a>
-<a class="bk-next" href="/book/en/browser/"><span>Next</span>Your browser and your searches</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="12" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">12</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="passwords">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="passwords" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-passwords-1"><span class="legacy-anchor" id="passwords-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="passwords-1" disabled="disabled"><span class="action-text">Check your email address on <a href="https://haveibeenpwned.com/" class="ext" rel="noopener noreferrer">Have I Been Pwned</a></span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-passwords-2"><span class="legacy-anchor" id="passwords-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="passwords-2" disabled="disabled"><span class="action-text">Install a password manager and create a passphrase of 6 random words</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-passwords-3"><span class="legacy-anchor" id="passwords-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="passwords-3" disabled="disabled"><span class="action-text">Give your email a new unique password and turn on 2FA with an authenticator app, plus your 2 hardware keys if you bought them</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-passwords-4"><span class="legacy-anchor" id="passwords-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="passwords-4" disabled="disabled"><span class="action-text">Move your 4 next most important accounts and remove SMS codes where possible</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-passwords-5"><span class="legacy-anchor" id="passwords-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="passwords-5" disabled="disabled"><span class="action-text">Put your passphrase on paper in one safe place and your recovery codes in another, and tell 1 trusted person where</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="passwords" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-1" href="/book/en/messages/"><span class="pager-dir">Previous · Chapter 1</span><span class="pager-title">Your messages</span></a><a class="pager-next part-1" href="/book/en/browser/"><span class="pager-dir">Next · Chapter 3</span><span class="pager-title">Your browser and your searches</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/passwords/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/" aria-current="page"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

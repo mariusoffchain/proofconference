@@ -1,272 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Hosting your own services · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Hosting your own services — A Guide to Autonomy</title>
 <meta name="description" content="&quot;The cloud&quot; is someone else&#x27;s computer. Self-hosting means running some of your services, such as your files, your photos, your notes and later a Bitcoin…">
 <link rel="canonical" href="https://proofconference.com/book/en/self-hosting/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/self-hosting/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/self-hosting/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/self-hosting/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Hosting your own services · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Hosting your own services — A Guide to Autonomy">
 <meta property="og:description" content="&quot;The cloud&quot; is someone else&#x27;s computer. Self-hosting means running some of your services, such as your files, your photos, your notes and later a Bitcoin…">
 <meta property="og:url" content="https://proofconference.com/book/en/self-hosting/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hosting your own services · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Hosting your own services — A Guide to Autonomy">
 <meta name="twitter:description" content="&quot;The cloud&quot; is someone else&#x27;s computer. Self-hosting means running some of your services, such as your files, your photos, your notes and later a Bitcoin…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/self-hosting/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/self-hosting/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read auto" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page auto page-top" data-slug="self-hosting">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Autonomy · Chapter 10</p>
-    <h1>Hosting your own services</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/self-hosting/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-2" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/self-hosting"><div class="page-layout is-chapter part-2"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/self-hosting/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/self-hosting/#in-someone-elses-cloud-you-are-a-tenant" data-target="in-someone-elses-cloud-you-are-a-tenant"><span class="toc-no">02</span><span class="toc-label">In someone else&#x27;s cloud you are a tenant</span></a></li><li><a href="/book/en/self-hosting/#a-server-is-a-computer-that-stays-on" data-target="a-server-is-a-computer-that-stays-on"><span class="toc-no">03</span><span class="toc-label">A server is a computer that stays on</span></a></li><li><a href="/book/en/self-hosting/#you-become-your-own-trusted-third-party" data-target="you-become-your-own-trusted-third-party"><span class="toc-no">04</span><span class="toc-label">You become your own trusted third party</span></a></li><li><a href="/book/en/self-hosting/#choose-your-platform" data-target="choose-your-platform"><span class="toc-no">05</span><span class="toc-label">Choose your platform</span></a></li><li><a href="/book/en/self-hosting/#reaching-it-from-outside-safely" data-target="reaching-it-from-outside-safely"><span class="toc-no">06</span><span class="toc-label">Reaching it from outside, safely</span></a></li><li><a href="/book/en/self-hosting/#step-by-step" data-target="step-by-step"><span class="toc-no">07</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/self-hosting/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">08</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/self-hosting/#go-further" data-target="go-further"><span class="toc-no">09</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/self-hosting/#sources" data-target="sources"><span class="toc-no">10</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/self-hosting/#your-checklist" data-target="your-checklist"><span class="toc-no">11</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-2" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/autonomy/">Part 2 · Autonomy</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 10: </span>Hosting your own services</h1><p class="ch-bignum" aria-hidden="true">10</p><div class="ch-meta"><span>Chapter 10 of 18</span><a href="/book/en/self-hosting/#your-checklist"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="self-hosting"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>"The cloud" is someone else's computer. Self-hosting means running some of your services, such as your files, your photos, your notes and later a Bitcoin node, on a small computer that you own and keep at home. Beginner-friendly platforms now make installing an app about as easy as on a phone, although backups, updates and remote access still ask for some reading and become your job. The sensible path is to start with 1 service, make it reliable, then grow.</p>
-<h2>In someone else's cloud you are a tenant</h2>
-<p>When your files, photos and calendar live in a company's cloud, that company sets the rules. It can read what is not end-to-end encrypted, raise the price, close the product or lock your account through an automated decision, with a support form as your only recourse. It can also change the terms after you have moved in. Google Photos offered free unlimited storage for years, then announced in November 2020 that <a href="https://blog.google/products-and-platforms/products/photos/storage-changes/" target="_blank" rel="noopener noreferrer">every new photo would count toward a 15 GB limit</a> from 1 June 2021.</p>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="in-someone-elses-cloud-you-are-a-tenant"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="in-someone-elses-cloud-you-are-a-tenant" tabindex="-1">In someone else's cloud you are a tenant</h2>
+<p>When your files, photos and calendar live in a company's cloud, that company sets the rules. It can read what is not end-to-end encrypted, raise the price, close the product or lock your account through an automated decision, with a support form as your only recourse. It can also change the terms after you have moved in. Google Photos offered free unlimited storage for years, then announced in November 2020 that <a href="https://blog.google/products-and-platforms/products/photos/storage-changes/" class="ext" rel="noopener noreferrer">every new photo would count toward a 15 GB limit</a> from 1 June 2021.</p>
 <p>Chapter 8 showed how to move to more respectful providers, which is already a big step, but you remain a tenant there too.</p>
 <p>Self-hosting goes a step further, because the service runs on a machine in your home and the data sits on your disk. There is no account that a provider can suspend and no third party between you and your files.</p>
 <p>It is not free, however. You pay for the hardware, the electricity and an off-site backup, you pay with your time, and you become the person responsible when something breaks.</p>
-<h2>A server is a computer that stays on</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://blog.google/products-and-platforms/products/photos/storage-changes/">blog.google</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="a-server-is-a-computer-that-stays-on"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="a-server-is-a-computer-that-stays-on" tabindex="-1">A server is a computer that stays on</h2>
 <p>A server is only a computer that stays on and answers requests from other devices, and a household does not need a data centre for that. An old laptop, a small mini PC or a Raspberry Pi is enough. A mini PC or a laptop with an SSD is usually the most comfortable start, and on a Raspberry Pi an SSD is preferable to a memory card, because cards tend to wear out quickly.</p>
-<p>On that computer you install a <strong>platform</strong>, a system that gives you a web page with an app store. You open it from your browser, click "install" on Nextcloud or Immich, and the platform downloads the app and runs it in a container, a sealed box that keeps each app separate from the others.</p>
+<p>On that computer you install a <strong>platform</strong>, a system that gives you a web page with an app store. You open it from your browser, click "install" on Nextcloud or Immich, and the platform installs and manages the app. Some platforms use containers to isolate apps, but Linux containers share the host kernel and their security depends on configuration; they are not sealed security boxes.</p>
 <p>Your phone and laptop then talk to this box instead of talking to a company. At home this happens over your own wifi, and from outside you need a safe way in, which has its own section below.</p>
 <p>The technology is the smaller part of the change, since backups, updates and security are now yours.</p>
-<h2>You become your own trusted third party</h2>
+</section><section class="sec sec--explain" data-no="04" aria-labelledby="you-become-your-own-trusted-third-party"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="you-become-your-own-trusted-third-party" tabindex="-1">You become your own trusted third party</h2>
 <p>Self-hosting takes the company out of confidentiality, since nobody else holds the data, and it hands you the other properties. Availability now depends on your disk, your electricity and your backups, and the provider's engineers are replaced by whatever you remember to do. For a beginner, a well-run provider with end-to-end encryption can be the safer choice, and hosting a few services while renting the rest is a sound result.</p>
-<p>Some third parties remain, and it helps to name them. The maker of the platform publishes the system updates and curates the app store, so a careless or malicious update would reach every server at once. Open source code, and the possibility to add another store or to install an app by hand, keep that party replaceable. For remote access, Tailscale's coordination server gives each of your devices the public keys of the others. It never sees your traffic, but Tailscale's documentation <a href="https://tailscale.com/kb/1226/tailnet-lock" target="_blank" rel="noopener noreferrer">acknowledges</a> that a malicious coordinator could insert a device into your network, and it offers Tailnet Lock, with which your own devices must sign any newcomer. Headscale or plain WireGuard remove that party, at the price of more configuration.</p>
-<h2>Choose your platform</h2>
-<p>All of these are made for people who are not system administrators, and they differ in focus, licence and who stands behind them. The licence matters in a book that puts open source first. StartOS is published under the <a href="https://github.com/Start9Labs/start-technologies/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT licence</a> and YunoHost is free software too, whereas umbrelOS uses the <a href="https://github.com/getumbrel/umbrel/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer">PolyForm Noncommercial licence</a>, which lets you read and modify the code for personal use but is not an open-source licence. Start9 and Umbrel both sell their own servers, and neither requires them, since both systems install free of charge on a computer you already own.</p>
-<div class="bk-table"><table>
+<p>Some third parties remain, and it helps to name them. The maker of the platform publishes the system updates and curates the app store, so a careless or malicious update would reach every server at once. Open source code, and the possibility to add another store or to install an app by hand, keep that party replaceable. For remote access, Tailscale's coordination server gives each of your devices the public keys of the others. Traffic contents remain encrypted between your devices, including when a relay carries them, but Tailscale's documentation <a href="https://tailscale.com/kb/1226/tailnet-lock" class="ext" rel="noopener noreferrer">acknowledges</a> that a malicious coordinator could insert a device into your network, and it offers Tailnet Lock, with which your own devices must sign any newcomer. Headscale or plain WireGuard remove that party, at the price of more configuration.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://tailscale.com/kb/1226/tailnet-lock">tailscale.com</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-platform"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-platform" tabindex="-1">Choose your platform</h2>
+<p>All of these are made for people who are not system administrators, and they differ in focus, licence and who stands behind them. The licence matters in a book that puts open source first. StartOS is published under the <a href="https://github.com/Start9Labs/start-technologies/blob/master/LICENSE" class="ext" rel="noopener noreferrer">MIT licence</a> and YunoHost is free software too, whereas umbrelOS uses the <a href="https://github.com/getumbrel/umbrel/blob/master/LICENSE.md" class="ext" rel="noopener noreferrer">PolyForm Noncommercial licence</a>, which lets you read and modify the code for personal use but is not an open-source licence. Start9 and Umbrel both sell their own servers, and neither requires them, since both systems install free of charge on a computer you already own.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>5 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your platform, 1 of 2"><table>
 <thead>
 <tr>
-<th>Platform</th>
-<th>Made by</th>
-<th>Strength</th>
-<th>Trade-off</th>
-<th>Who controls apps and updates</th>
+<th scope="col">Platform</th>
+<th scope="col">Made by</th>
+<th scope="col">Strength</th>
+<th scope="col">Trade-off</th>
+<th scope="col">Who controls apps and updates</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://start9.com/" target="_blank" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" target="_blank" rel="noopener noreferrer">StartOS</a>)</strong></td>
+<tr id="row-start9-startos">
+<th scope="row"><strong><a href="https://start9.com/" class="tool-link ext" rel="noopener noreferrer">Start9</a> (<a href="https://start9.com/" class="tool-link ext" rel="noopener noreferrer">StartOS</a>)</strong></th>
 <td>A single company, which also sells servers</td>
 <td>Open source. Built around sovereignty, with Tor by default and encrypted backups built in</td>
 <td>Smaller app catalogue, a little more to learn</td>
-<td>Start9 for the system. 2 default registries, <a href="https://docs.start9.com/start-os/0.4.0.x/marketplace.html" target="_blank" rel="noopener noreferrer">others can be added</a>, and packages installed by hand</td>
+<td>Start9 for the system. 2 default registries, <a href="https://docs.start9.com/start-os/0.4.0.x/marketplace.html" class="ext" rel="noopener noreferrer">others can be added</a>, and packages installed by hand</td>
 </tr>
-<tr>
-<td><strong><a href="https://yunohost.org/" target="_blank" rel="noopener noreferrer">YunoHost</a></strong></td>
+<tr id="row-yunohost">
+<th scope="row"><strong><a href="https://yunohost.org/" class="tool-link ext" rel="noopener noreferrer">YunoHost</a></strong></th>
 <td>A volunteer community, non-profit</td>
-<td>Open source, based on <a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">Debian</a>, many apps, a single login for all of them</td>
+<td>Open source, based on <a href="https://www.debian.org/" class="tool-link ext" rel="noopener noreferrer">Debian</a>, many apps, a single login for all of them</td>
 <td>Designed for services reachable from the internet, so domains and email appear early. Plainer interface</td>
-<td>Volunteers maintain the system and the catalogue. Any app can also be <a href="https://doc.yunohost.org/en/admin/apps/custom_apps/" target="_blank" rel="noopener noreferrer">installed from a URL</a></td>
+<td>Volunteers maintain the system and the catalogue. Any app can also be <a href="https://doc.yunohost.org/en/admin/apps/custom_apps/" class="ext" rel="noopener noreferrer">installed from a URL</a></td>
 </tr>
-<tr>
-<td><strong><a href="https://umbrel.com/" target="_blank" rel="noopener noreferrer">Umbrel</a> (<a href="https://umbrel.com/umbrelos" target="_blank" rel="noopener noreferrer">umbrelOS</a>)</strong></td>
+<tr id="row-umbrel-umbrelos">
+<th scope="row"><strong><a href="https://umbrel.com/" class="tool-link ext" rel="noopener noreferrer">Umbrel</a> (<a href="https://umbrel.com/umbrelos" class="tool-link ext" rel="noopener noreferrer">umbrelOS</a>)</strong></th>
 <td>A single company, which also sells its own hardware</td>
 <td>The most polished interface, large app store, strong Bitcoin and Lightning apps</td>
 <td>The code is public, but the licence is not a true open-source licence (no commercial use)</td>
-<td>Umbrel for the system and the official store. <a href="https://umbrel.com/support/apps/how-to-add-a-community-app-store" target="_blank" rel="noopener noreferrer">Community app stores</a> can be added, without review by Umbrel</td>
+<td>Umbrel for the system and the official store. <a href="https://umbrel.com/support/apps/how-to-add-a-community-app-store" class="ext" rel="noopener noreferrer">Community app stores</a> can be added, without review by Umbrel</td>
 </tr>
-<tr>
-<td><strong><a href="https://casaos.zimaspace.com/" target="_blank" rel="noopener noreferrer">CasaOS</a></strong></td>
+<tr id="row-casaos">
+<th scope="row"><strong><a href="https://casaos.zimaspace.com/" class="tool-link ext" rel="noopener noreferrer">CasaOS</a></strong></th>
 <td>A single company (IceWhale)</td>
 <td>Open source. A simple layer you add on top of an existing Linux system</td>
-<td>In maintenance mode as of September 2026, because the company now focuses on its newer <a href="https://www.zimaspace.com/zimaos" target="_blank" rel="noopener noreferrer">ZimaOS</a>. No built-in backups</td>
+<td>In maintenance mode as of September 2026, because the company now focuses on its newer <a href="https://www.zimaspace.com/zimaos" class="tool-link ext" rel="noopener noreferrer">ZimaOS</a>. No built-in backups</td>
 <td>IceWhale for the layer and its store, which accepts other app sources. Your Linux distribution for the system</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.debian.org/" target="_blank" rel="noopener noreferrer">Debian</a> or <a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">Ubuntu</a> with <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a></strong></td>
+<tr id="row-debian-or-ubuntu-with-docker">
+<th scope="row"><strong><a href="https://www.debian.org/" class="tool-link ext" rel="noopener noreferrer">Debian</a> or <a href="https://ubuntu.com/" class="tool-link ext" rel="noopener noreferrer">Ubuntu</a> with <a href="https://www.docker.com/" class="tool-link ext" rel="noopener noreferrer">Docker</a></strong></th>
 <td>You</td>
 <td>Full control, you learn how everything really works, no platform to depend on</td>
 <td>The command line, and nobody to blame. For the curious</td>
 <td>Debian or Ubuntu for system packages, and the publisher of each container image you pull</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>What to host first:</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>6 options · 3 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your platform, 2 of 2"><table>
 <thead>
 <tr>
-<th>App</th>
-<th>Replaces</th>
-<th>Note</th>
+<th scope="col">App</th>
+<th scope="col">Replaces</th>
+<th scope="col">Note</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://nextcloud.com/" target="_blank" rel="noopener noreferrer">Nextcloud</a></strong></td>
+<tr id="row-nextcloud">
+<th scope="row"><strong><a href="https://nextcloud.com/" class="tool-link ext" rel="noopener noreferrer">Nextcloud</a></strong></th>
 <td>Cloud drive, calendar, contacts</td>
 <td>The classic first app. Keep it simple, do not install every add-on</td>
 </tr>
-<tr>
-<td><strong><a href="https://immich.app/" target="_blank" rel="noopener noreferrer">Immich</a></strong></td>
+<tr id="row-immich">
+<th scope="row"><strong><a href="https://immich.app/" class="tool-link ext" rel="noopener noreferrer">Immich</a></strong></th>
 <td>Cloud photo libraries</td>
 <td>Automatic backup of phone photos. Moves fast, so read update notes</td>
 </tr>
-<tr>
-<td><strong><a href="https://jellyfin.org/" target="_blank" rel="noopener noreferrer">Jellyfin</a></strong></td>
+<tr id="row-jellyfin">
+<th scope="row"><strong><a href="https://jellyfin.org/" class="tool-link ext" rel="noopener noreferrer">Jellyfin</a></strong></th>
 <td>Streaming your own films and music</td>
 <td>Low risk, a good learning project</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer">Home Assistant</a></strong></td>
+<tr id="row-home-assistant">
+<th scope="row"><strong><a href="https://www.home-assistant.io/" class="tool-link ext" rel="noopener noreferrer">Home Assistant</a></strong></th>
 <td>Smart home clouds</td>
 <td>Keeps your home devices local</td>
 </tr>
-<tr>
-<td><strong><a href="https://github.com/dani-garcia/vaultwarden" target="_blank" rel="noopener noreferrer">Vaultwarden</a></strong></td>
+<tr id="row-vaultwarden">
+<th scope="row"><strong><a href="https://github.com/dani-garcia/vaultwarden" class="tool-link ext" rel="noopener noreferrer">Vaultwarden</a></strong></th>
 <td>The server side of a password manager</td>
-<td>Works with the <a href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Bitwarden</a> apps. Not a beginner's project, because a broken server without a tested backup can cost you every password. Wait until restores are routine</td>
+<td>Works with the <a href="https://bitwarden.com/" class="tool-link ext" rel="noopener noreferrer">Bitwarden</a> apps. Not a beginner's project, because a broken server without a tested backup can cost you every password. Wait until restores are routine</td>
 </tr>
-<tr>
-<td><strong>A Bitcoin node</strong></td>
+<tr id="row-a-bitcoin-node">
+<th scope="row"><strong>A Bitcoin node</strong></th>
 <td>Trusting someone else's node</td>
 <td>Later. See chapter 18</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is an open-source platform such as StartOS or YunoHost on a mini PC, with Nextcloud or Immich as the first app. umbrelOS is the most polished alternative if its licence suits you.</p>
-<h2>Reaching it from outside, safely</h2>
+</section><section class="sec sec--explain" data-no="06" aria-labelledby="reaching-it-from-outside-safely"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Understand</span></p><h2 id="reaching-it-from-outside-safely" tabindex="-1">Reaching it from outside, safely</h2>
 <p>A home router normally refuses connections that start from the internet, so a server behind it is not directly reachable from outside. That protection has known gaps, however. Many routers ship with UPnP turned on, a feature that allows any device or app on your network to open a port by itself, and with IPv6 each device can receive a public address that only the router's firewall keeps closed. It is worth opening the router settings to turn UPnP off and to confirm that the IPv6 firewall is on.</p>
 <p>The classic mistake is to open a port on purpose so that your files are reachable from anywhere. It works, and it also shows your login page to every automated scanner on the internet.</p>
 <p>Safer options, from most independent to most convenient:</p>
 <ul>
-<li><strong>A WireGuard VPN into your home.</strong> Your phone opens an encrypted tunnel to your own network and behaves as if it were at home. Open source, nobody in the middle. It needs some router configuration, and it does not work when your internet provider shares 1 public address between several customers (CGNAT), in which case the 2 options below still do.</li>
+<li><strong>A WireGuard VPN into your home.</strong> Your phone opens an encrypted tunnel to your own network and behaves as if it were at home. Open source, nobody in the middle. It needs some router configuration, and CGNAT (a public address shared by several customers) can prevent a direct inbound connection unless you arrange another reachable endpoint or working IPv6. The 2 options below are often easier in that situation.</li>
 <li><strong>Tor onion services.</strong> Umbrel and Start9 have this built in, so your server gets a private .onion address reachable through Tor, with no open port. Slower, but simple and private.</li>
 <li><strong>Tailscale.</strong> Built on WireGuard and very easy to install on the server and on your phone. Your traffic stays encrypted between your devices, but a company coordinates the connections and the accounts. <strong>Headscale</strong> is an open-source replacement for that coordination part, which you host yourself.</li>
 </ul>
 <p>Whatever you choose, change every default password first.</p>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="07" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example uses StartOS because it is open source and installs on ordinary hardware. The logic is the same on YunoHost and umbrelOS.</p>
-<ol>
-<li><strong>Pick the hardware.</strong> An unused laptop or a mini PC with 8 GB of memory and an SSD is plenty. Connect it to your router with a cable, not wifi.</li>
-<li><strong>Install the platform.</strong> Download the image from the project's website, write it to a USB stick, start the computer from it and follow the installer. When the project publishes a checksum (a fingerprint of the file), as Start9 does on its release page, compare it before you write the image, because this is the step that replaces trust in the download with verification. This erases the computer's disk.</li>
-<li><strong>Create your account.</strong> Open the address shown at the end of the installation from another device on the same network. Choose a long, unique password and store it in your password manager. If the platform offers two-factor authentication, as umbrelOS does in its settings, turn it on.</li>
-<li><strong>Install 1 app.</strong> Only 1. Nextcloud or Immich is a good start, so install the phone app, enter your server's address, and let it copy your photos.</li>
-<li><strong>Set up backups.</strong> Follow the 3-2-1 rule, which means 3 copies of your data, on 2 different devices, with 1 copy in another place. In practice that is the server, a second disk and an encrypted copy off-site (a disk at a relative's home, or an encrypted cloud backup). StartOS writes encrypted backups to an external disk or a network folder, and umbrelOS can <a href="https://umbrel.com/support/backups-and-recovery/backing-up-your-data" target="_blank" rel="noopener noreferrer">run them automatically every hour</a>. If your platform does not schedule them, add a recurring reminder to your calendar.</li>
-<li><strong>Test a restore.</strong> Recover 1 file from the backup, because a backup is only proven once something has come back from it.</li>
-<li><strong>Keep it updated.</strong> Install platform and app updates regularly. Once a month is a good rhythm.</li>
-<li><strong>Only then add a second app.</strong> Live with the first one for a few weeks before you grow.</li>
+<ol class="steps">
+<li id="step-1"><strong>Pick the hardware.</strong> An unused laptop or a mini PC with 8 GB of memory and an SSD is plenty. Connect it to your router with a cable, not wifi.</li>
+<li id="step-2"><strong>Install the platform.</strong> Download the image from the project's website, write it to a USB stick, start the computer from it and follow the installer. When the project publishes a checksum (a fingerprint of the file), as Start9 does on its release page, compare it before you write the image, because this is the step that replaces trust in the download with verification. This erases the computer's disk.</li>
+<li id="step-3"><strong>Create your account.</strong> Open the address shown at the end of the installation from another device on the same network. Choose a long, unique password and store it in your password manager. If the platform offers two-factor authentication, as umbrelOS does in its settings, turn it on.</li>
+<li id="step-4"><strong>Install 1 app.</strong> Only 1. Nextcloud or Immich is a good start, so install the phone app, enter your server's address, and let it copy your photos.</li>
+<li id="step-5"><strong>Set up backups.</strong> Follow the 3-2-1 rule, which means 3 copies of your data, on 2 different devices, with 1 copy in another place. In practice that is the server, a second disk and an encrypted copy off-site (a disk at a relative's home, or an encrypted cloud backup). StartOS writes encrypted backups to an external disk or a network folder, and umbrelOS can <a href="https://umbrel.com/support/backups-and-recovery/backing-up-your-data" class="ext" rel="noopener noreferrer">run them automatically every hour</a>. If your platform does not schedule them, add a recurring reminder to your calendar.</li>
+<li id="step-6"><strong>Test a restore.</strong> Recover 1 file from the backup, because a backup is only proven once something has come back from it.</li>
+<li id="step-7"><strong>Keep it updated.</strong> Review platform and app updates at least monthly, read release notes and keep backups current. Apply relevant security fixes promptly; do not wait for the monthly review when a known vulnerability affects your setup.</li>
+<li id="step-8"><strong>Only then add a second app.</strong> Live with the first one for a few weeks before you grow.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="08" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
-<li><strong>Having no backups.</strong> Disks fail without warning, and professional hosts are not immune. On 10 March 2021 a fire <a href="https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/" target="_blank" rel="noopener noreferrer">destroyed the SBG2 datacentre of OVHcloud</a> in Strasbourg, about 120,000 services were affected, and customers without a copy elsewhere lost their data. At home the backup is your job, so set it up before you trust the server with anything you cannot lose.</li>
+<li><strong>Having no backups.</strong> Disks fail without warning, and professional hosts are not immune. On 10 March 2021 a fire <a href="https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/" class="ext" rel="noopener noreferrer">destroyed the SBG2 datacentre of OVHcloud</a> in Strasbourg, about 120,000 services were affected, and customers without a copy elsewhere lost their data. At home the backup is your job, so set it up before you trust the server with anything you cannot lose.</li>
 <li><strong>Exposing services to the internet with default passwords.</strong> Automated scanners find open services quickly. Use one of the safe routes above and unique passwords everywhere.</li>
 <li><strong>Hosting your email or your passwords as a first project.</strong> Email is the hardest service to run, because large providers often reject mail from home servers and a mistake means lost messages. A password server that breaks without a tested backup locks you out of everything else. Use a good provider (chapters 2 and 4) and host other things first.</li>
 <li><strong>Making the family depend on it before it is stable.</strong> Run it for yourself for 1 or 2 months. Move the family photos only when backups and updates have become routine.</li>
 <li><strong>Deleting the cloud copy too early.</strong> Keep your old service in parallel until you have restored from your own backup at least once.</li>
 <li><strong>Installing 20 apps in the first week.</strong> Each app is something more to update and to secure, and the ones you forget become the weak point of the server.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "How the 'Soldier-Citizen' Can Help Decentralize the World", by Alexis Roussel. Many small servers in many homes are harder to switch off than a single big data centre.</li>
-<li><strong>Platforms:</strong> <a href="https://start9.com" target="_blank" rel="noopener noreferrer">start9.com</a>, <a href="https://yunohost.org" target="_blank" rel="noopener noreferrer">yunohost.org</a>, <a href="https://umbrel.com" target="_blank" rel="noopener noreferrer">umbrel.com</a>, <a href="https://casaos.zimaspace.com" target="_blank" rel="noopener noreferrer">casaos.zimaspace.com</a>.</li>
-<li><strong>A large catalogue of software you can host:</strong> the awesome-selfhosted list (<a href="https://awesome-selfhosted.net" target="_blank" rel="noopener noreferrer">awesome-selfhosted.net</a>).</li>
-<li><strong>Remote access:</strong> <a href="https://wireguard.com" target="_blank" rel="noopener noreferrer">wireguard.com</a>, <a href="https://tailscale.com" target="_blank" rel="noopener noreferrer">tailscale.com</a>, and Headscale (<a href="https://headscale.net" target="_blank" rel="noopener noreferrer">headscale.net</a>).</li>
+</section><section class="sec sec--further" data-no="09" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Platforms:</strong> <a href="https://start9.com" class="tool-link ext" rel="noopener noreferrer">start9.com</a>, <a href="https://yunohost.org" class="tool-link ext" rel="noopener noreferrer">yunohost.org</a>, <a href="https://umbrel.com" class="tool-link ext" rel="noopener noreferrer">umbrel.com</a>, <a href="https://casaos.zimaspace.com" class="tool-link ext" rel="noopener noreferrer">casaos.zimaspace.com</a>.</li>
+<li><strong>A large catalogue of software you can host:</strong> the awesome-selfhosted list (<a href="https://awesome-selfhosted.net" class="tool-link ext" rel="noopener noreferrer">awesome-selfhosted.net</a>).</li>
+<li><strong>Remote access:</strong> <a href="https://wireguard.com" class="tool-link ext" rel="noopener noreferrer">wireguard.com</a>, <a href="https://tailscale.com" class="tool-link ext" rel="noopener noreferrer">tailscale.com</a>, and Headscale (<a href="https://headscale.net" class="tool-link ext" rel="noopener noreferrer">headscale.net</a>).</li>
 <li><strong>Next chapter:</strong> AI without giving yourself away, where the same server can run a language model for the family. It comes back once more in chapter 18, as a Bitcoin node.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://blog.google/products-and-platforms/products/photos/storage-changes/" target="_blank" rel="noopener noreferrer">Updating Google Photos' storage policy to build for the future</a>, Google, 11 November 2020.</li>
-<li><a href="https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/" target="_blank" rel="noopener noreferrer">Strasbourg datacentre: latest information</a>, OVHcloud, 18 March 2021, updated until April 2021.</li>
-<li><a href="https://github.com/getumbrel/umbrel/blob/master/LICENSE.md" target="_blank" rel="noopener noreferrer">Umbrel licence (PolyForm Noncommercial 1.0.0)</a>, Umbrel on GitHub, consulted in September 2026.</li>
-<li><a href="https://github.com/Start9Labs/start-technologies/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">StartOS licence (MIT)</a>, Start9 Labs on GitHub, consulted in September 2026.</li>
-<li><a href="https://umbrel.com/support/backups-and-recovery/backing-up-your-data" target="_blank" rel="noopener noreferrer">Backing up your data</a>, umbrelOS Support, consulted in September 2026.</li>
-<li><a href="https://tailscale.com/kb/1226/tailnet-lock" target="_blank" rel="noopener noreferrer">Tailnet Lock</a>, Tailscale documentation, consulted in September 2026.</li>
-<li><a href="https://docs.start9.com/start-os/0.4.0.x/marketplace.html" target="_blank" rel="noopener noreferrer">Marketplace</a>, StartOS documentation, consulted in September 2026.</li>
-<li><a href="https://umbrel.com/support/apps/how-to-add-a-community-app-store" target="_blank" rel="noopener noreferrer">Adding a community app store</a>, umbrelOS Support, consulted in September 2026.</li>
-<li><a href="https://doc.yunohost.org/en/admin/apps/custom_apps/" target="_blank" rel="noopener noreferrer">Installing custom apps</a>, YunoHost documentation, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="10" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://docs.docker.com/engine/security/" class="ext" rel="noopener noreferrer">Docker Engine security</a>, Docker documentation, checked 22 October 2026.</li>
+<li><a href="https://blog.google/products-and-platforms/products/photos/storage-changes/" class="ext" rel="noopener noreferrer">Updating Google Photos' storage policy to build for the future</a>, Google, 11 November 2020.</li>
+<li><a href="https://corporate.ovhcloud.com/en/newsroom/news/informations-site-strasbourg/" class="ext" rel="noopener noreferrer">Strasbourg datacentre: latest information</a>, OVHcloud, 18 March 2021, updated until April 2021.</li>
+<li><a href="https://github.com/getumbrel/umbrel/blob/master/LICENSE.md" class="ext" rel="noopener noreferrer">Umbrel licence (PolyForm Noncommercial 1.0.0)</a>, Umbrel on GitHub, consulted in September 2026.</li>
+<li><a href="https://github.com/Start9Labs/start-technologies/blob/master/LICENSE" class="ext" rel="noopener noreferrer">StartOS licence (MIT)</a>, Start9 Labs on GitHub, consulted in September 2026.</li>
+<li><a href="https://umbrel.com/support/backups-and-recovery/backing-up-your-data" class="ext" rel="noopener noreferrer">Backing up your data</a>, umbrelOS Support, consulted in September 2026.</li>
+<li><a href="https://tailscale.com/kb/1226/tailnet-lock" class="ext" rel="noopener noreferrer">Tailnet Lock</a>, Tailscale documentation, consulted in September 2026.</li>
+<li><a href="https://docs.start9.com/start-os/0.4.0.x/marketplace.html" class="ext" rel="noopener noreferrer">Marketplace</a>, StartOS documentation, consulted in September 2026.</li>
+<li><a href="https://umbrel.com/support/apps/how-to-add-a-community-app-store" class="ext" rel="noopener noreferrer">Adding a community app store</a>, umbrelOS Support, consulted in September 2026.</li>
+<li><a href="https://doc.yunohost.org/en/admin/apps/custom_apps/" class="ext" rel="noopener noreferrer">Installing custom apps</a>, YunoHost documentation, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="self-hosting-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="self-hosting-1" aria-label="Find a computer that can stay on, such as an old laptop, a mini PC or a Raspberry Pi"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="self-hosting-1">Find a computer that can stay on, such as an old laptop, a mini PC or a Raspberry Pi</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="self-hosting-2" data-effort="3">
-        <label class="bk-check"><input type="checkbox" id="self-hosting-2" aria-label="Install a platform and a first app"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="self-hosting-2">Install a platform and a first app</label>
-        <span class="bk-effort">Weekend</span>
-      </li>
-      <li class="bk-cl-item" data-id="self-hosting-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="self-hosting-3" aria-label="Set up automatic backups on a second disk, plus a copy off-site"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="self-hosting-3">Set up automatic backups on a second disk, plus a copy off-site</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="self-hosting-4" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="self-hosting-4" aria-label="Restore a file from the backup to check that it works"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="self-hosting-4">Restore a file from the backup to check that it works</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="self-hosting-5" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="self-hosting-5" aria-label="Choose a safe way to reach it from outside, and change every default password"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="self-hosting-5">Choose a safe way to reach it from outside, and change every default password</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/phone/"><span>Previous</span>Taking back control of your phone</a>
-<a class="bk-next" href="/book/en/ai/"><span>Next</span>AI without giving yourself away</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="11" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="self-hosting">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="self-hosting" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-self-hosting-find-computer"><span class="legacy-anchor" id="self-hosting-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="self-hosting-find-computer" disabled="disabled"><span class="action-text">Find a computer that can stay on, such as an old laptop, a mini PC or a Raspberry Pi</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-self-hosting-install-platform"><span class="legacy-anchor" id="self-hosting-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="self-hosting-install-platform" disabled="disabled"><span class="action-text">Install a platform and a first app</span><span class="effort"><span class="sr-only">, effort: </span>weekend</span></label></li><li class="action" id="action-self-hosting-automatic-backups"><span class="legacy-anchor" id="self-hosting-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="self-hosting-automatic-backups" disabled="disabled"><span class="action-text">Set up automatic backups on a second disk, plus a copy off-site</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-self-hosting-test-restore"><span class="legacy-anchor" id="self-hosting-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="self-hosting-test-restore" disabled="disabled"><span class="action-text">Restore a file from the backup to check that it works</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-self-hosting-remote-access"><span class="legacy-anchor" id="self-hosting-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="self-hosting-remote-access" disabled="disabled"><span class="action-text">Choose a safe way to reach it from outside, and change every default password</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="self-hosting" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-2" href="/book/en/phone/"><span class="pager-dir">Previous · Chapter 9</span><span class="pager-title">Taking back control of your phone</span></a><a class="pager-next part-2" href="/book/en/ai/"><span class="pager-dir">Next · Chapter 11</span><span class="pager-title">AI without giving yourself away</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/self-hosting/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/" aria-current="page"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

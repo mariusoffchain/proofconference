@@ -1,165 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Proof of Work · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Part 3: Proof of Work — A Guide to Autonomy</title>
 <meta name="description" content="You trade hours of your life for money, and what you do not spend today you keep for later, for a home, your children, a bad year or old age.">
 <link rel="canonical" href="https://proofconference.com/book/en/work/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/work/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/work/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/work/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Proof of Work · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Part 3: Proof of Work — A Guide to Autonomy">
 <meta property="og:description" content="You trade hours of your life for money, and what you do not spend today you keep for later, for a home, your children, a bad year or old age.">
 <meta property="og:url" content="https://proofconference.com/book/en/work/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Proof of Work · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Part 3: Proof of Work — A Guide to Autonomy">
 <meta name="twitter:description" content="You trade hours of your life for money, and what you do not spend today you keep for later, for a home, your children, a bad year or old age.">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
-<script defer src="/replays.js?v=5bb51ee4"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/work/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/work/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="work">
-  <header class="bk-head">
-    <p class="bk-label">Part 3</p>
-    <h1>Proof of Work</h1>
-  </header>
-  <article class="bk-article">
-<h2>Why protecting your work matters</h2>
-<h3>Savings are stored work</h3>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/work/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="page/part-3"><div class="page-layout is-chapter is-page part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/work/#why-protecting-your-work-matters" data-target="why-protecting-your-work-matters"><span class="toc-no">01</span><span class="toc-label">Why protecting your work matters</span></a><ol class="toc-list toc-sub"><li><a href="/book/en/work/#savings-are-stored-work" data-target="savings-are-stored-work"><span class="toc-label">Savings are stored work</span></a></li><li><a href="/book/en/work/#money-that-loses-value-by-design" data-target="money-that-loses-value-by-design"><span class="toc-label">Money that loses value by design</span></a></li><li><a href="/book/en/work/#wealth-that-needs-permission" data-target="wealth-that-needs-permission"><span class="toc-label">Wealth that needs permission</span></a></li><li><a href="/book/en/work/#no-perfect-asset" data-target="no-perfect-asset"><span class="toc-label">No perfect asset</span></a></li><li><a href="/book/en/work/#a-skill-to-learn-with-small-amounts" data-target="a-skill-to-learn-with-small-amounts"><span class="toc-label">A skill to learn with small amounts</span></a></li></ol></li><li><a href="/book/en/work/#sources" data-target="sources"><span class="toc-no">02</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/work/#part-chapters" data-target="part-chapters"><span class="toc-label">The chapters of this part</span></a></li></ol></nav></div><div class="page-main"><article class="chapter page-doc part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker">Part 3 · Money and Bitcoin · Opening essay</p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Part 3: </span>Proof of Work</h1><div class="ch-meta"><span>7 chapters · 35 actions</span></div></header><div class="prose"><section class="sec sec--explain" data-no="01" aria-labelledby="why-protecting-your-work-matters"><p class="sec-kicker"><span class="sec-no">01</span><span class="sec-kind">Understand</span></p><h2 id="why-protecting-your-work-matters" tabindex="-1">Why protecting your work matters</h2>
+<h3 id="savings-are-stored-work" tabindex="-1">Savings are stored work</h3>
 <p>You trade hours of your life for money, and what you do not spend today you keep for later, for a home, your children, a bad year or old age. Saving is a way of sending your work through time.</p>
 <p>For that to succeed, whatever holds your savings has to pass 2 tests. It must still be worth something when you need it, and it must still be yours, reachable and usable, on that day. The first test gets most of the attention, while the second tends to be forgotten until an account is blocked or a bank is in the news.</p>
 <p>The name of this part has 2 meanings. It refers to the proof of your own work, what you earned and how to keep it, and to the mechanism that secures Bitcoin, one of the tools examined closely in the following chapters. Bitcoin is not the whole answer, and this part does not pretend it is.</p>
-<h3>Money that loses value by design</h3>
+<h3 id="money-that-loses-value-by-design" tabindex="-1">Money that loses value by design</h3>
 <p>The euro, like every national currency, has no fixed quantity. New money is created by central banks, and by commercial banks when they lend, and when it grows faster than the goods and services it can buy, prices tend to rise.</p>
-<p>A slow rise is the stated goal. Since July 2021 the European Central Bank has aimed for <a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html" target="_blank" rel="noopener noreferrer">inflation of 2% a year over the medium term</a>. The figure looks small, but it compounds, because each year's 2% applies to prices that have already risen. The table shows what this does, when everything goes as planned, to money kept as cash or on an account without interest.</p>
-<div class="bk-table"><table>
+<p>A slow rise is the stated goal. Since July 2021 the European Central Bank has aimed for <a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html" class="ext" rel="noopener noreferrer">inflation of 2% a year over the medium term</a>. The figure looks small, but it compounds, because each year's 2% applies to prices that have already risen. The table shows what this does, when everything goes as planned, to money kept as cash or on an account without interest.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>4 rows · 3 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Table: Why protecting your work matters"><table>
 <thead>
 <tr>
-<th>After</th>
-<th>Prices are higher by about</th>
-<th>Purchasing power left, about</th>
+<th scope="col">After</th>
+<th scope="col">Prices are higher by about</th>
+<th scope="col">Purchasing power left, about</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>10 years</td>
+<th scope="row">10 years</th>
 <td>22%</td>
 <td>82%</td>
 </tr>
 <tr>
-<td>15 years</td>
+<th scope="row">15 years</th>
 <td>35%</td>
 <td>74%</td>
 </tr>
 <tr>
-<td>20 years</td>
+<th scope="row">20 years</th>
 <td>49%</td>
 <td>67%</td>
 </tr>
 <tr>
-<td>50 years</td>
+<th scope="row">50 years</th>
 <td>169%</td>
 <td>37%</td>
 </tr>
 </tbody>
-</table></div>
-<p>This is the good scenario. In other periods inflation rises far above the target, and for October 2022 Eurostat measured <a href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f" target="_blank" rel="noopener noreferrer">annual inflation of 10.6% in the euro area and 22.1% in Lithuania</a>.</p>
-<p>People who own property or shares are partly protected, because those prices tend to rise too, whereas employees, pensioners and anyone putting a little money aside each month are not. The people who decide how much money is created are also not the ones who bear this cost, which Piktas takes further at PROOF in "Why Centralized Money Fails: How Bitcoin Became an Alternative".</p>
-<h3>Wealth that needs permission</h3>
-<p>Cash was used for <a href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html" target="_blank" rel="noopener noreferrer">52% of payments in shops in the euro area in 2024</a>, according to the European Central Bank, against 59% in 2022. Each digital payment is tied to your identity, stored for years and analysed by your bank, the card network or the payment app. A list of your payments says where you were, which doctor you saw and which cause you support.</p>
+</table></div></figure>
+<p>This is the good scenario. In other periods inflation rises far above the target, and for October 2022 Eurostat measured <a href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f" class="ext" rel="noopener noreferrer">annual inflation of 10.6% in the euro area and 22.1% in Lithuania</a>.</p>
+<p>People who own property or shares are partly protected, because those prices tend to rise too, whereas employees, pensioners and anyone putting a little money aside each month are not. The people who decide how much money is created are also not the ones who bear this cost.</p>
+<h3 id="wealth-that-needs-permission" tabindex="-1">Wealth that needs permission</h3>
+<p>Cash was used for <a href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html" class="ext" rel="noopener noreferrer">52% of payments in shops in the euro area in 2024</a>, according to the European Central Bank, against 59% in 2022. Ordinary bank and card payments are tied to your identity, stored for years and analysed by your bank, the card network or the payment app. A list of your payments says where you were, which doctor you saw and which cause you support.</p>
 <p>The same is true of what you own. A bank balance, a share, a fund or a pension is an entry in the database of an intermediary that knows who you are, reports to the authorities and can refuse to serve you. Identity checks (KYC, "know your customer") stand at every entrance, and some of the passport copies they collect end up leaking.</p>
-<p>Central bank digital currencies (CBDCs) would place the issuer of the money in the payment path. On 30 October 2025 the ECB <a href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html" target="_blank" rel="noopener noreferrer">moved the digital euro to its next phase</a>, with a pilot from mid-2027 and a possible first issuance in 2029, provided the EU regulation, still under negotiation as of September 2026, is adopted. Linas K. covers the subject at PROOF in "CBDCs, KYC, and the Fight for Monetary Privacy".</p>
-<h3>No perfect asset</h3>
-<p>There is no perfect place to keep the fruit of your work. Cash is private, but inflation erodes it. A bank deposit is convenient, but it is legally a loan to the bank, which EU law guarantees <a href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html" target="_blank" rel="noopener noreferrer">up to 100,000 euros per depositor and per bank</a> and not beyond. Shares make you a co-owner of real companies, held however through a chain of intermediaries that is centralised, watched and easy to freeze. Gold has no issuer and has kept value over a very long time, but it is heavy, hard to move and hard to spend. Bitcoin has a fixed supply and can be held entirely by you, but it is young, volatile and unforgiving of mistakes. Monero has a similar purpose, money you can hold yourself, with strong privacy by default, but it is much less liquid and much less accepted, its much smaller network is easier for an outside entity to attack, and its development is more centralised (see chapter 12).</p>
+<p>Central bank digital currencies (CBDCs) would place the issuer of the money in the payment path. On 30 October 2025 the ECB <a href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html" class="ext" rel="noopener noreferrer">moved the digital euro to its next phase</a>, with a pilot from mid-2027 and a possible first issuance in 2029, provided the EU regulation, still under negotiation as of September 2026, is adopted.</p>
+<h3 id="no-perfect-asset" tabindex="-1">No perfect asset</h3>
+<p>There is no perfect place to keep the fruit of your work. Cash is private, but inflation erodes it. A bank deposit is convenient, but it is legally a loan to the bank, which EU law guarantees <a href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html" class="ext" rel="noopener noreferrer">up to 100,000 euros per depositor and per bank</a> and not beyond. Shares make you a co-owner of real companies, held however through a chain of intermediaries that is centralised, watched and easy to freeze. Gold has no issuer and has kept value over a very long time, but it is heavy, hard to move and hard to spend. Bitcoin has a fixed supply and can be held entirely by you, but it is young, volatile and unforgiving of mistakes. Monero has a similar purpose, money you can hold yourself, with strong privacy by default, but it is much less liquid and much less accepted, its much smaller network is easier for an outside entity to attack, and its development is more centralised (see chapter 12).</p>
 <p>The useful question is therefore not "what is the best investment?", which this book will not answer, since nothing in it is investment advice. The useful questions are about control, meaning who holds the asset, who can freeze it, who watches it, who can create more of it, and whether you can take it with you.</p>
-<h3>A skill to learn with small amounts</h3>
+<h3 id="a-skill-to-learn-with-small-amounts" tabindex="-1">A skill to learn with small amounts</h3>
 <p>Start by knowing where you stand, then learn the skills that allow you to hold part of your savings yourself. They can be learned with very small amounts, as a skill to acquire and not as a bet to place. Your usual legal and tax obligations still apply.</p>
 <p>The 7 chapters of this part:</p>
 <ol start="12">
 <li><strong>Where to keep the fruit of your work:</strong> cash, banks, shares, gold, Bitcoin and Monero compared, through the questions that matter for your sovereignty.</li>
 <li><strong>Your first wallet and your first sats:</strong> install a Bitcoin wallet where you hold the keys, and receive a first small payment.</li>
-<li><strong>Backing up your seed phrase:</strong> the 12 or 24 words that are your money, and how not to lose them.</li>
+<li><strong>Backing up your seed phrase:</strong> the recovery words that protect your keys, and how not to lose them.</li>
 <li><strong>Lightning and euros in everyday life:</strong> instant small payments, and moving between bitcoin and euros.</li>
 <li><strong>Privacy in Bitcoin:</strong> every transaction is public, so learn what it reveals and how to limit it.</li>
 <li><strong>Hardware wallets:</strong> a dedicated device for amounts you would not keep on a phone.</li>
 <li><strong>Running your own node:</strong> verify everything yourself, and stop asking someone else's server.</li>
 </ol>
 <p>Chapter 12 gives the overall picture. Chapters 13 to 18 go deep on Bitcoin, because it is the tool in the list that asks you to learn the most new skills, and it is designed to be held and verified entirely by yourself.</p>
-<aside class="bk-talk" aria-label="Talk at PROOF 2026">
-<p class="bk-label">Talk at PROOF 2026</p>
-<ul class="rp-list">
-  <li class="rp-item mono rp-has-video" data-video="https://blossom.primal.net/b7031018cd9a0dd500b078750e76b110de82aed4a58c93a1fd878b691ee5ac9e.mp4" data-video-type='video/mp4; codecs="hvc1.1.6.L93.b0,mp4a.40.2"' data-video-sd="https://blossom.primal.net/0211e0875dfbfbd6f14fd76ff4aa56bd0f9f2a8a00680155bd7be02533643b5b.mp4" data-video-sd-type='video/mp4; codecs="avc1.64001f,mp4a.40.2"'>
-    <div class="rp-text"><div class="rp-title">Why Centralized Money Fails: How Bitcoin Became an Alternative</div><div class="rp-spk">Piktas <span class="tl-lang">· in Lithuanian</span></div><div class="rp-alt">Also on <a href="https://youtu.be/ynqMj25Cg8Y" target="_blank" rel="noopener">YouTube</a> · <a href="https://rumble.com/v7gmtoe-kodl-centralizuoti-pinigai-neveikia-ir-k-silo-bitcoin-piktas-proof-2026.html" target="_blank" rel="noopener">Rumble</a> · <a href="https://nostu.be/v/naddr1qvzqqqy9hvpzpnuhcws2rql478l3w5xk95h05zx7ug3w9jh09fecjmyujgqtjq95qyxhwumn8ghj7mn0wvhxcmmvqyt8wumn8ghj7un9d3shjtnswf5k6ctv9ehx2aqpzfmhxue69uhk7enxvd5xz6tw9ec82csqyscn2vf3vgmnsefdxu6rgefdxs6rxwpd893x2cfdvyen2etyvsmkgcf38ycs5k7v4a" target="_blank" rel="noopener">Nostr</a></div><a class="rp-play" href="https://blossom.primal.net/0211e0875dfbfbd6f14fd76ff4aa56bd0f9f2a8a00680155bd7be02533643b5b.mp4">Watch the recording</a></div>
-    <a class="rp-thumb" href="https://blossom.primal.net/0211e0875dfbfbd6f14fd76ff4aa56bd0f9f2a8a00680155bd7be02533643b5b.mp4" tabindex="-1" aria-hidden="true"><img src="/replays/piktas.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></a>
-  </li>
-  <li class="rp-item mono rp-closing rp-has-video" data-video="https://youtu.be/mri4AwKN0gs">
-    <div class="rp-text"><div class="rp-kicker">Closing of the conference</div><div class="rp-title">Bitcoin&rsquo;s 2 Flaws</div><div class="rp-spk">Marius Off-Chain <span class="tl-lang">· in English</span></div><div class="rp-alt">Also on <a href="https://youtu.be/mri4AwKN0gs" target="_blank" rel="noopener">YouTube</a> · <a href="https://rumble.com/v7grlvw-bitcoins-2-main-limitations-marius-off-chain-proof-2026.html" target="_blank" rel="noopener">Rumble</a></div><a class="rp-play" href="https://youtu.be/mri4AwKN0gs">Watch the recording</a></div>
-    <a class="rp-thumb" href="https://youtu.be/mri4AwKN0gs" tabindex="-1" aria-hidden="true"><img src="/replays/closing.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></a>
-  </li>
-</ul>
-</aside>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html" target="_blank" rel="noopener noreferrer">ECB's Governing Council approves its new monetary policy strategy</a>, European Central Bank, 8 July 2021.</li>
-<li><a href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f" target="_blank" rel="noopener noreferrer">Annual inflation up to 10.6% in the euro area</a>, Eurostat, 17 November 2022.</li>
-<li><a href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html" target="_blank" rel="noopener noreferrer">Digital payments continue to rise, albeit at a slower pace; cash remains a key payment method</a>, European Central Bank, 19 December 2024.</li>
-<li><a href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html" target="_blank" rel="noopener noreferrer">Eurosystem moving to next phase of digital euro project</a>, European Central Bank, 30 October 2025.</li>
-<li><a href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html" target="_blank" rel="noopener noreferrer">Deposit guarantee schemes, summary of Directive 2014/49/EU</a>, EUR-Lex, consulted in September 2026.</li>
-</ul>
-  </article>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/ai/"><span>Previous</span>AI without giving yourself away</a>
-<a class="bk-next" href="/book/en/savings/"><span>Next</span>Where to keep the fruit of your work</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html">ecb.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f">ec.europa.eu</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html">ecb.europa.eu (2)</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html">ecb.europa.eu (3)</a></li><li><a class="ext" rel="noopener noreferrer" href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html">eur-lex.europa.eu</a></li></ul></div></section><section class="sec sec--sources" data-no="02" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210708~dc78cc4b0d.en.html" class="ext" rel="noopener noreferrer">ECB's Governing Council approves its new monetary policy strategy</a>, European Central Bank, 8 July 2021.</li>
+<li><a href="https://ec.europa.eu/eurostat/documents/2995521/15265521/2-17112022-AP-EN.pdf/b6953137-786e-ed9c-5ee2-6812c0f8f07f" class="ext" rel="noopener noreferrer">Annual inflation up to 10.6% in the euro area</a>, Eurostat, 17 November 2022.</li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2024/html/ecb.pr241219~172b929461.en.html" class="ext" rel="noopener noreferrer">Digital payments continue to rise, albeit at a slower pace; cash remains a key payment method</a>, European Central Bank, 19 December 2024.</li>
+<li><a href="https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html" class="ext" rel="noopener noreferrer">Eurosystem moving to next phase of digital euro project</a>, European Central Bank, 30 October 2025.</li>
+<li><a href="https://eur-lex.europa.eu/EN/legal-content/summary/deposit-guarantee-schemes.html" class="ext" rel="noopener noreferrer">Deposit guarantee schemes, summary of Directive 2014/49/EU</a>, EUR-Lex, consulted in September 2026.</li>
+</ul></section></div><section class="block" aria-labelledby="part-chapters"><p class="block-kicker">Part 3</p><h2 id="part-chapters" tabindex="-1">The chapters of this part</h2><ol class="ch-list"><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><footer class="chapter-end"><nav class="pager" aria-label="Pages of the book"><a class="pager-prev part-2" href="/book/en/ai/"><span class="pager-dir">Previous · Chapter 11</span><span class="pager-title">AI without giving yourself away</span></a><a class="pager-next part-3" href="/book/en/savings/"><span class="pager-dir">Next · Chapter 12</span><span class="pager-title">Where to keep the fruit of your work</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/work/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/" aria-current="page"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

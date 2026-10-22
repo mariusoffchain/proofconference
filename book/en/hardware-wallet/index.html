@@ -1,74 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Hardware wallets · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Hardware wallets — A Guide to Autonomy</title>
 <meta name="description" content="A phone wallet suits pocket money, but savings call for something more solid. A hardware wallet is a small dedicated device that keeps your private keys…">
 <link rel="canonical" href="https://proofconference.com/book/en/hardware-wallet/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/hardware-wallet/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/hardware-wallet/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/hardware-wallet/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Hardware wallets · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Hardware wallets — A Guide to Autonomy">
 <meta property="og:description" content="A phone wallet suits pocket money, but savings call for something more solid. A hardware wallet is a small dedicated device that keeps your private keys…">
 <meta property="og:url" content="https://proofconference.com/book/en/hardware-wallet/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hardware wallets · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Hardware wallets — A Guide to Autonomy">
 <meta name="twitter:description" content="A phone wallet suits pocket money, but savings call for something more solid. A hardware wallet is a small dedicated device that keeps your private keys…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/hardware-wallet/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/hardware-wallet/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="hardware-wallet">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Work · Chapter 17</p>
-    <h1>Hardware wallets</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/hardware-wallet/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/hardware-wallet"><div class="page-layout is-chapter part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/hardware-wallet/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/hardware-wallet/#keys-on-a-machine-that-is-always-online" data-target="keys-on-a-machine-that-is-always-online"><span class="toc-no">02</span><span class="toc-label">Keys on a machine that is always online</span></a></li><li><a href="/book/en/hardware-wallet/#a-small-computer-that-only-signs" data-target="a-small-computer-that-only-signs"><span class="toc-no">03</span><span class="toc-label">A small computer that only signs</span></a></li><li><a href="/book/en/hardware-wallet/#the-maker-you-still-have-to-trust" data-target="the-maker-you-still-have-to-trust"><span class="toc-no">04</span><span class="toc-label">The maker you still have to trust</span></a></li><li><a href="/book/en/hardware-wallet/#choose-your-device" data-target="choose-your-device"><span class="toc-no">05</span><span class="toc-label">Choose your device</span></a></li><li><a href="/book/en/hardware-wallet/#step-by-step" data-target="step-by-step"><span class="toc-no">06</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/hardware-wallet/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">07</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/hardware-wallet/#go-further" data-target="go-further"><span class="toc-no">08</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/hardware-wallet/#sources" data-target="sources"><span class="toc-no">09</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/hardware-wallet/#your-checklist" data-target="your-checklist"><span class="toc-no">10</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/work/">Part 3 · Money and Bitcoin</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 17: </span>Hardware wallets</h1><p class="ch-bignum" aria-hidden="true">17</p><div class="ch-meta"><span>Chapter 17 of 18</span><a href="/book/en/hardware-wallet/#your-checklist"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="hardware-wallet"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>A phone wallet suits pocket money, but savings call for something more solid. A hardware wallet is a small dedicated device that keeps your private keys offline and signs transactions inside itself, so that malware on your computer or phone does not get to see them. There are several good ones, with different trade-offs, and none of them is infallible. The device does not replace your seed backup (chapter 14), because it can break or be lost, and the backup is then what restores your funds.</p>
-<h2>Keys on a machine that is always online</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="keys-on-a-machine-that-is-always-online"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="keys-on-a-machine-that-is-always-online" tabindex="-1">Keys on a machine that is always online</h2>
 <p>Your phone is online all day. It runs dozens of apps, receives links from strangers, connects to public wifi and installs updates from many companies, and your computer is no better. Each of these is a door, and a wallet app on the same machine keeps its keys behind those doors.</p>
 <p>For the amount you would carry in a physical purse, that risk is acceptable, and the convenience is worth it. For savings, the calculation changes. Malware that reads a wallet file, replaces an address in the clipboard or records the screen exists and is sold as a ready-made product. A Bitcoin transaction cannot be reversed, and there is no support desk to call.</p>
 <p>Nobody needs to become a security expert to deal with this. The practical answer is to move the keys off these machines, onto a device built to keep them out of reach of this kind of software.</p>
-<h2>A small computer that only signs</h2>
+</section><section class="sec sec--explain" data-no="03" aria-labelledby="a-small-computer-that-only-signs"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="a-small-computer-that-only-signs" tabindex="-1">A small computer that only signs</h2>
 <p>A hardware wallet, more precisely called a <strong>signing device</strong>, is a tiny computer with a single job. It generates your seed, stores the private keys on its own chip, and is designed never to let them out.</p>
 <p>When you want to send bitcoin, the work is split in 2:</p>
 <ol>
@@ -76,156 +50,115 @@
 <li>The transaction goes to the device, by cable, Bluetooth, QR code or memory card. The device shows the amount and the destination address on its own screen. You check, you confirm on the device, and it signs internally. Only the signature comes back.</li>
 </ol>
 <p>If your computer is infected, the malware sees a signed transaction and not a key. It can still show you a false address on the computer, which is why the screen of the device is the one you read.</p>
-<p>The seed remains the real wallet, and the device is only a safer tool to use it. You still need the backup from chapter 14, and the seed is only as good as the randomness the device used to create it. In August 2023, the <a href="https://milksad.info/disclosure.html" target="_blank" rel="noopener noreferrer">"Milk Sad" disclosure</a> showed that Libbitcoin Explorer, a software tool, had been creating seeds from only 32 bits of randomness instead of the 128 to 256 expected, and wallets made with it were emptied on 12 July 2023. No update could repair those seeds, and their owners had to create new ones and move their funds.</p>
-<h2>The maker you still have to trust</h2>
+<p>The seed remains the real wallet, and the device is only a safer tool to use it. You still need the backup from chapter 14, and the seed is only as good as the randomness the device used to create it. In August 2023, the <a href="https://milksad.info/disclosure.html" class="ext" rel="noopener noreferrer">"Milk Sad" disclosure</a> showed that Libbitcoin Explorer, a software tool, had been creating seeds from only 32 bits of randomness instead of the 128 to 256 expected, and wallets made with it were emptied on 12 July 2023. No update could repair those seeds, and their owners had to create new ones and move their funds.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://milksad.info/disclosure.html">milksad.info</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="the-maker-you-still-have-to-trust"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="the-maker-you-still-have-to-trust" tabindex="-1">The maker you still have to trust</h2>
 <p>Moving the keys offline protects them from your computer and shifts your trust to the device's maker. The maker writes the firmware that creates your seed and signs your transactions, controls the supply chain, and usually runs the companion app, whose servers can see your addresses and your IP address. The Ledger leak (see the table) did not even come from the device, but from the customer list of the maker's shop.</p>
-<p>Open source firmware can be read by outsiders, and a <a href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md" target="_blank" rel="noopener noreferrer">reproducible build</a> lets anyone confirm that the published code is what you install. A signature check proves the firmware comes from the maker, not that it is sound, and air-gapped signing limits what a computer can send to the device. A secure element resists someone holding the device, but such chips often come with a confidentiality agreement, which is <a href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100" target="_blank" rel="noopener noreferrer">why Ledger keeps part of its system closed</a>. Some devices accept dice rolls as a source of randomness, which lets you add your own to the chip's.</p>
+<p>Open source firmware can be read by outsiders, and a <a href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md" class="ext" rel="noopener noreferrer">reproducible build</a> lets anyone confirm that the published code is what you install. A signature check proves the firmware comes from the maker, not that it is sound, and air-gapped signing limits what a computer can send to the device. A secure element resists someone holding the device, but such chips often come with a confidentiality agreement, which is <a href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100" class="ext" rel="noopener noreferrer">why Ledger keeps part of its system closed</a>. Some devices accept dice rolls as a source of randomness, which lets you add your own to the chip's.</p>
 <p>None of this removes the maker. Multi-signature across 2 makers (explained below) spreads that trust, whereas for a first device the maker's app and its automatic checks remain the safer path.</p>
-<h2>Choose your device</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md">github.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100">ledger.com</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-device"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-device" tabindex="-1">Choose your device</h2>
 <p>The devices below differ in openness, price, comfort and isolation. "Air-gapped" means the device never needs a connection to a computer, because transactions travel by QR code or memory card. Ranges change quickly, and this table is valid as of September 2026.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>6 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your device"><table>
 <thead>
 <tr>
-<th>Device</th>
-<th>Maker</th>
-<th>Strengths</th>
-<th>Trade-offs</th>
-<th>Trust in the maker, and what you can check</th>
+<th scope="col">Device</th>
+<th scope="col">Maker</th>
+<th scope="col">Strengths</th>
+<th scope="col">Trade-offs</th>
+<th scope="col">Trust in the maker, and what you can check</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://bitbox.swiss/bitbox02/" target="_blank" rel="noopener noreferrer">BitBox02</a></strong></td>
-<td><a href="https://bitbox.swiss/" target="_blank" rel="noopener noreferrer">BitBox</a> (<a href="https://bitbox.swiss/" target="_blank" rel="noopener noreferrer">Shift Crypto</a>), Switzerland</td>
-<td>Open source, simple, a Bitcoin-only edition exists. <a href="https://bitcoinmagazine.com/news/bitbox-announces-bitbox02-nova-a-new-hardware-wallet-for-bitcoin" target="_blank" rel="noopener noreferrer">The BitBox02 Nova, announced in June 2025</a>, adds Bluetooth and iPhone support</td>
+<tr id="row-bitbox02">
+<th scope="row"><strong><a href="https://bitbox.swiss/bitbox02/" class="tool-link ext" rel="noopener noreferrer">BitBox02</a></strong></th>
+<td><a href="https://bitbox.swiss/" class="tool-link ext" rel="noopener noreferrer">BitBox</a> (<a href="https://bitbox.swiss/" class="tool-link ext" rel="noopener noreferrer">Shift Crypto</a>), Switzerland</td>
+<td>Open source, simple, a Bitcoin-only edition exists. <a href="https://bitcoinmagazine.com/news/bitbox-announces-bitbox02-nova-a-new-hardware-wallet-for-bitcoin" class="ext" rel="noopener noreferrer">The BitBox02 Nova, announced in June 2025</a>, adds Bluetooth and iPhone support</td>
 <td>Not air-gapped. It connects by USB-C, or by Bluetooth on the Nova</td>
 <td>Open source firmware with reproducible builds, signature checked by the BitBoxApp. The secure chip is not trusted alone</td>
 </tr>
-<tr>
-<td><strong><a href="https://trezor.io/" target="_blank" rel="noopener noreferrer">Trezor</a></strong></td>
-<td><a href="https://satoshilabs.com/" target="_blank" rel="noopener noreferrer">SatoshiLabs</a>, Czech Republic</td>
+<tr id="row-trezor">
+<th scope="row"><strong><a href="https://trezor.io/" class="tool-link ext" rel="noopener noreferrer">Trezor</a></strong></th>
+<td><a href="https://satoshilabs.com/" class="tool-link ext" rel="noopener noreferrer">SatoshiLabs</a>, Czech Republic</td>
 <td>The open source pioneer, easy, widely supported</td>
-<td>Older models connect by cable only, while <a href="https://trezor.io/guides/trezor-devices/trezor-safe-7/trezor-safe-7-faqs" target="_blank" rel="noopener noreferrer">the Safe 7, released in late 2025</a>, adds Bluetooth. Supports many other coins unless you choose Bitcoin-only firmware</td>
+<td>Older models connect by cable only, while <a href="https://trezor.io/guides/trezor-devices/trezor-safe-7/trezor-safe-7-faqs" class="ext" rel="noopener noreferrer">the Safe 7, released in late 2025</a>, adds Bluetooth. Supports many other coins unless you choose Bitcoin-only firmware</td>
 <td>Open source, reproducible firmware, checked by Trezor Suite. The Safe 7 adds an auditable secure element (TROPIC01)</td>
 </tr>
-<tr>
-<td><strong><a href="https://blockstream.com/jade/" target="_blank" rel="noopener noreferrer">Blockstream Jade</a></strong></td>
-<td><a href="https://blockstream.com/" target="_blank" rel="noopener noreferrer">Blockstream</a></td>
+<tr id="row-blockstream-jade">
+<th scope="row"><strong><a href="https://blockstream.com/jade/" class="tool-link ext" rel="noopener noreferrer">Blockstream Jade</a></strong></th>
+<td><a href="https://blockstream.com/" class="tool-link ext" rel="noopener noreferrer">Blockstream</a></td>
 <td>Affordable, open source, can work air-gapped with QR codes</td>
 <td>Its PIN protection relies on a server (Blockstream's, or your own)</td>
 <td>Open source firmware. No secure element, so the PIN server is part of the trust unless you host it</td>
 </tr>
-<tr>
-<td><strong><a href="https://foundation.xyz/" target="_blank" rel="noopener noreferrer">Foundation Passport</a></strong></td>
-<td><a href="https://foundation.xyz/" target="_blank" rel="noopener noreferrer">Foundation Devices</a>, USA</td>
+<tr id="row-foundation-passport">
+<th scope="row"><strong><a href="https://foundation.xyz/" class="tool-link ext" rel="noopener noreferrer">Foundation Passport</a></strong></th>
+<td><a href="https://foundation.xyz/" class="tool-link ext" rel="noopener noreferrer">Foundation Devices</a>, USA</td>
 <td>Open source, comfortable to use, signs by QR code</td>
 <td>Among the more expensive. The recent Passport Prime also uses Bluetooth and does more than Bitcoin (security keys, 2FA codes)</td>
 <td>Open source firmware with reproducible builds, whose hash you can compare with the published one</td>
 </tr>
-<tr>
-<td><strong><a href="https://seedsigner.com/" target="_blank" rel="noopener noreferrer">SeedSigner</a></strong></td>
+<tr id="row-seedsigner">
+<th scope="row"><strong><a href="https://seedsigner.com/" class="tool-link ext" rel="noopener noreferrer">SeedSigner</a></strong></th>
 <td>Community project</td>
 <td>Build it yourself from standard parts, open source, stateless (it stores no seed at all)</td>
 <td>You assemble it, and you load your seed at every use. Not a first device</td>
 <td>No company. You verify the software signature yourself, builds are reproducible, randomness comes from dice or a photo</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.ledger.com/" target="_blank" rel="noopener noreferrer">Ledger</a></strong></td>
+<tr id="row-ledger">
+<th scope="row"><strong><a href="https://www.ledger.com/" class="tool-link ext" rel="noopener noreferrer">Ledger</a></strong></th>
 <td>Ledger, France</td>
 <td>Popular, supports many coins, uses a secure chip</td>
-<td>Firmware not fully open source. <a href="https://www.ledger.com/blog/update-efforts-to-protect-your-data-and-prosecute-the-scammers" target="_blank" rel="noopener noreferrer">A breach of its customer database in 2020</a> exposed about 1 million email addresses, and the names, postal addresses and phone numbers of about 272,000 buyers</td>
+<td>Firmware not fully open source. <a href="https://www.ledger.com/blog/update-efforts-to-protect-your-data-and-prosecute-the-scammers" class="ext" rel="noopener noreferrer">A breach of its customer database in 2020</a> exposed about 1 million email addresses, and the names, postal addresses and phone numbers of about 272,000 buyers</td>
 <td>Part of the system on the secure chip is closed, so outsiders cannot fully verify what the firmware does</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>You also need companion software, either the maker's own app or an independent open source wallet such as Sparrow Wallet, Electrum (computer), Nunchuk (computer and phone) or BlueWallet (phone, mainly with devices that sign by QR code). With an independent wallet, you do not depend on the maker's app staying available.</p>
-<p>For larger amounts, the next level is <strong>multi-signature</strong>, a wallet that needs for example 2 devices out of 3 to sign. With devices from different makers, a flaw at 1 maker or the theft of 1 device is not enough to empty it. It is more work, so master 1 device first.</p>
+<p>For larger amounts, the next level is <strong>multi-signature</strong>, a wallet that needs for example 2 devices out of 3 to sign. With devices from different makers, a flaw at 1 maker or the theft of 1 device is not enough to empty it. Back up the complete multisig configuration or output descriptor, including all cosigner xpubs, as well as enough signing keys (chapter 14). Those public keys cannot spend alone but reveal wallet activity. It is more work, so master 1 device first.</p>
 <p>A reasonable setup for most people is an open source device with a Bitcoin-only firmware, bought new and updated before use, with Sparrow or the maker's app. The choice of maker stays yours.</p>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="06" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The order is broadly the same for every device, but the verification in step 2 differs between makers, so keep the maker's official guide open.</p>
-<ol>
-<li><strong>Buy directly from the maker or an official reseller.</strong> Never second hand, never from a marketplace seller.</li>
-<li><strong>Verify the device the way its maker describes.</strong> Some makers ship in a sealed or numbered security bag. Ledger, on the other hand, <a href="https://donjon.ledger.com/threat-model/device-genuineness/" target="_blank" rel="noopener noreferrer">states that it uses no anti-tamper seals</a>, which it considers easy to copy, and relies on a cryptographic check in its app. The apps of BitBox, Trezor and Ledger check the device and install signed firmware. With SeedSigner, you download the software yourself and verify its signature. In every case, install the latest firmware before creating a seed. This is the step that replaces trust in the delivery chain with verification, although it still rests on the maker's own signature.</li>
-<li><strong>Generate a new seed on the device.</strong> The words must appear on the device screen, for the first time, in front of you. Never use words that came printed in the box.</li>
-<li><strong>Back it up</strong> on paper or metal, as explained in chapter 14. Set a PIN on the device.</li>
-<li><strong>Send a small test amount</strong> to the first receive address.</li>
-<li><strong>Wipe the device and restore it from your backup.</strong> If the test amount reappears, your backup works. The best moment for this proof is when almost nothing is at stake.</li>
-<li><strong>Move the rest,</strong> in 1 or several transactions.</li>
-<li><strong>Verify the receive address on the device screen, every time.</strong> The computer screen can be manipulated, which is much harder to do with the screen of the device.</li>
+<ol class="steps">
+<li id="step-1"><strong>Buy directly from the maker or an official reseller.</strong> Never second hand, never from a marketplace seller.</li>
+<li id="step-2"><strong>Verify the device the way its maker describes.</strong> Some makers ship in a sealed or numbered security bag. Ledger, on the other hand, <a href="https://donjon.ledger.com/threat-model/device-genuineness/" class="ext" rel="noopener noreferrer">states that it uses no anti-tamper seals</a>, which it considers easy to copy, and relies on a cryptographic check in its app. The apps of BitBox, Trezor and Ledger check the device and install signed firmware. With SeedSigner, you download the software yourself and verify its signature. In every case, install the latest firmware before creating a seed. This is the step that replaces trust in the delivery chain with verification, although it still rests on the maker's own signature.</li>
+<li id="step-3"><strong>Generate a new seed on the device.</strong> The words must appear on the device screen, for the first time, in front of you. Never use words that came printed in the box.</li>
+<li id="step-4"><strong>Back it up</strong> on paper or metal, as explained in chapter 14. Set a PIN where the device supports one; stateless devices such as SeedSigner work differently.</li>
+<li id="step-5"><strong>Verify the receive address on the device screen, then send a tiny test amount.</strong> Do this before moving savings, not afterwards.</li>
+<li id="step-6"><strong>Check recovery with only the tiny test balance at stake.</strong> Follow the maker's backup-check or wipe-and-restore procedure on the device, with compatible backup format and any passphrase recorded. Confirm the same addresses and test balance before adding savings. Keep the backup out of ordinary phone or computer wallets. A stateless device is reloaded rather than wiped.</li>
+<li id="step-7"><strong>Move the rest,</strong> in 1 or several transactions.</li>
+<li id="step-8"><strong>Verify the receive address on the device screen, every time.</strong> The computer screen can be manipulated, which is much harder to do with the screen of the device.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="07" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Buying from marketplaces.</strong> A device that passed through unknown hands may have been modified, and the small saving is not worth it.</li>
 <li><strong>Accepting a seed card that arrives filled in.</strong> Treat it as a scam in every case, because the person who printed those words is waiting for your deposit.</li>
-<li><strong>Typing the seed into a computer "to update".</strong> No real update, app or support agent needs your seed. The words are only ever entered on the device itself.</li>
+<li><strong>Typing the seed into a computer "to update".</strong> No real update, app or support agent needs your seed. For recovery, follow the maker's verified procedure and the physical device's instructions. Use on-device entry where supported; never enter words on a website or in response to an update or support request.</li>
 <li><strong>Skipping the test restore.</strong> A wrong or missing word is better discovered now, with a test amount, than in 5 years with your savings.</li>
 <li><strong>Using your home address for delivery without thinking.</strong> Customer lists leak, as the Ledger case showed, and the list then tells strangers where a bitcoin holder lives. Consider a pickup point or a parcel locker.</li>
-<li><strong>Trusting emails that claim to be from the manufacturer.</strong> After the Ledger leak, buyers received convincing phishing, with fake security alerts and fake updates, and in 2021 some even received <a href="https://www.bleepingcomputer.com/news/cryptocurrency/criminals-are-mailing-altered-ledger-devices-to-steal-cryptocurrency/" target="_blank" rel="noopener noreferrer">altered devices by post</a>, presented as replacements. Go to the official website yourself, never through a link.</li>
+<li><strong>Trusting emails that claim to be from the manufacturer.</strong> After the Ledger leak, buyers received convincing phishing, with fake security alerts and fake updates, and in 2021 some even received <a href="https://www.bleepingcomputer.com/news/cryptocurrency/criminals-are-mailing-altered-ledger-devices-to-steal-cryptocurrency/" class="ext" rel="noopener noreferrer">altered devices by post</a>, presented as replacements. Go to the official website yourself, never through a link.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. A signing device is this idea made physical.</li>
-<li><strong>Independent checks of wallets and devices:</strong> WalletScrutiny (<a href="https://walletscrutiny.com" target="_blank" rel="noopener noreferrer">walletscrutiny.com</a>) tests whether the published code matches what you actually install.</li>
-<li><strong>Connecting a device to an independent wallet:</strong> the Sparrow Wallet documentation (<a href="https://sparrowwallet.com/docs" target="_blank" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
-<li><strong>Step-by-step device guides:</strong> Bitcoiner.Guide (<a href="https://bitcoiner.guide" target="_blank" rel="noopener noreferrer">bitcoiner.guide</a>).</li>
+</section><section class="sec sec--further" data-no="08" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Independent checks of wallets and devices:</strong> WalletScrutiny (<a href="https://walletscrutiny.com" class="tool-link ext" rel="noopener noreferrer">walletscrutiny.com</a>) tests whether the published code matches what you actually install.</li>
+<li><strong>Connecting a device to an independent wallet:</strong> the Sparrow Wallet documentation (<a href="https://sparrowwallet.com/docs" class="tool-link ext" rel="noopener noreferrer">sparrowwallet.com/docs</a>).</li>
+<li><strong>Step-by-step device guides:</strong> Bitcoiner.Guide (<a href="https://bitcoiner.guide" class="tool-link ext" rel="noopener noreferrer">bitcoiner.guide</a>).</li>
 <li><strong>Next chapter:</strong> running your own node.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://www.ledger.com/blog/update-efforts-to-protect-your-data-and-prosecute-the-scammers" target="_blank" rel="noopener noreferrer">Update: efforts to protect your data and prosecute the scammers</a>, Ledger, 13 January 2021.</li>
-<li><a href="https://donjon.ledger.com/threat-model/device-genuineness/" target="_blank" rel="noopener noreferrer">Threat model: device genuineness</a>, Ledger Donjon, page consulted in September 2026.</li>
-<li><a href="https://www.bleepingcomputer.com/news/cryptocurrency/criminals-are-mailing-altered-ledger-devices-to-steal-cryptocurrency/" target="_blank" rel="noopener noreferrer">Criminals are mailing altered Ledger devices to steal cryptocurrency</a>, BleepingComputer, 16 June 2021.</li>
-<li><a href="https://milksad.info/disclosure.html" target="_blank" rel="noopener noreferrer">Milk Sad: technical write-up of CVE-2023-39910</a>, Milk Sad research team, August 2023.</li>
-<li><a href="https://bitcoinmagazine.com/news/bitbox-announces-bitbox02-nova-a-new-hardware-wallet-for-bitcoin" target="_blank" rel="noopener noreferrer">BitBox Announces BitBox02 Nova</a>, Bitcoin Magazine, 20 June 2025.</li>
-<li><a href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md" target="_blank" rel="noopener noreferrer">Reproducible builds of the BitBox02 firmware</a>, BitBox on GitHub, consulted in September 2026.</li>
-<li><a href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100" target="_blank" rel="noopener noreferrer">Ledger is 95% open source, why not 100%?</a>, Ledger, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="09" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://trezor.io/guides/backups-recovery/general-standards/how-to-use-a-wallet-backup" class="ext" rel="noopener noreferrer">How to use a wallet backup</a>, Trezor, checked 22 October 2026.</li>
+<li><a href="https://github.com/sparrowwallet/sparrow/blob/master/src/main/java/com/sparrowwallet/sparrow/wallet/MultisigBackupDialog.java" class="ext" rel="noopener noreferrer">Multisig backup warning and descriptor export</a>, Sparrow source code, checked 22 October 2026.</li>
+<li><a href="https://www.ledger.com/blog/update-efforts-to-protect-your-data-and-prosecute-the-scammers" class="ext" rel="noopener noreferrer">Update: efforts to protect your data and prosecute the scammers</a>, Ledger, 13 January 2021.</li>
+<li><a href="https://donjon.ledger.com/threat-model/device-genuineness/" class="ext" rel="noopener noreferrer">Threat model: device genuineness</a>, Ledger Donjon, page consulted in September 2026.</li>
+<li><a href="https://www.bleepingcomputer.com/news/cryptocurrency/criminals-are-mailing-altered-ledger-devices-to-steal-cryptocurrency/" class="ext" rel="noopener noreferrer">Criminals are mailing altered Ledger devices to steal cryptocurrency</a>, BleepingComputer, 16 June 2021.</li>
+<li><a href="https://milksad.info/disclosure.html" class="ext" rel="noopener noreferrer">Milk Sad: technical write-up of CVE-2023-39910</a>, Milk Sad research team, August 2023.</li>
+<li><a href="https://bitcoinmagazine.com/news/bitbox-announces-bitbox02-nova-a-new-hardware-wallet-for-bitcoin" class="ext" rel="noopener noreferrer">BitBox Announces BitBox02 Nova</a>, Bitcoin Magazine, 20 June 2025.</li>
+<li><a href="https://github.com/BitBoxSwiss/bitbox02-firmware/blob/master/releases/README.md" class="ext" rel="noopener noreferrer">Reproducible builds of the BitBox02 firmware</a>, BitBox on GitHub, consulted in September 2026.</li>
+<li><a href="https://www.ledger.com/blog-ledger-is-95-opensource-why-not-100" class="ext" rel="noopener noreferrer">Ledger is 95% open source, why not 100%?</a>, Ledger, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="hardware-wallet-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="hardware-wallet-1" aria-label="Decide what amount is &quot;savings&quot; for you and no longer belongs on a phone"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="hardware-wallet-1">Decide what amount is "savings" for you and no longer belongs on a phone</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="hardware-wallet-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="hardware-wallet-2" aria-label="Choose a device from the table and order it from the maker, to a pickup point"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="hardware-wallet-2">Choose a device from the table and order it from the maker, to a pickup point</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="hardware-wallet-3" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="hardware-wallet-3" aria-label="Check the device and its firmware the way the maker describes, create a new seed and a backup, then send a test amount"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="hardware-wallet-3">Check the device and its firmware the way the maker describes, create a new seed and a backup, then send a test amount</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="hardware-wallet-4" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="hardware-wallet-4" aria-label="Wipe the device and restore it from the backup"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="hardware-wallet-4">Wipe the device and restore it from the backup</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="hardware-wallet-5" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="hardware-wallet-5" aria-label="Verify the address on the device screen at every receive"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="hardware-wallet-5">Verify the address on the device screen at every receive</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/bitcoin-privacy/"><span>Previous</span>Privacy in Bitcoin</a>
-<a class="bk-next" href="/book/en/node/"><span>Next</span>Running your own node</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="10" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="hardware-wallet">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="hardware-wallet" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-hardware-wallet-savings-amount"><span class="legacy-anchor" id="hardware-wallet-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="hardware-wallet-savings-amount" disabled="disabled"><span class="action-text">Decide what amount is "savings" for you and no longer belongs on a phone</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-hardware-wallet-order-device"><span class="legacy-anchor" id="hardware-wallet-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="hardware-wallet-order-device" disabled="disabled"><span class="action-text">Choose a device from the table and order it from the maker, to a pickup point</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-hardware-wallet-set-up"><span class="legacy-anchor" id="hardware-wallet-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="hardware-wallet-set-up" disabled="disabled"><span class="action-text">Check the device and its firmware the way the maker describes, create a new seed and a backup, then send a test amount</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-hardware-wallet-test-restore"><span class="legacy-anchor" id="hardware-wallet-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="hardware-wallet-test-restore" disabled="disabled"><span class="action-text">With only a tiny test balance, follow the maker's hardware backup-check or restore procedure before adding savings</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-hardware-wallet-verify-address"><span class="legacy-anchor" id="hardware-wallet-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="hardware-wallet-verify-address" disabled="disabled"><span class="action-text">Verify the address on the device screen at every receive</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="hardware-wallet" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-3" href="/book/en/bitcoin-privacy/"><span class="pager-dir">Previous · Chapter 16</span><span class="pager-title">Privacy in Bitcoin</span></a><a class="pager-next part-3" href="/book/en/node/"><span class="pager-dir">Next · Chapter 18</span><span class="pager-title">Running your own node</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/hardware-wallet/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/" aria-current="page"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

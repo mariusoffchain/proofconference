@@ -1,283 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Lightning and euros in everyday life · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Lightning and euros in everyday life — A Guide to Autonomy</title>
 <meta name="description" content="Bitcoin&#x27;s base layer is built to be secure, not to sell coffee. Lightning is a payment network on top of it, in practice instant and very cheap, made for…">
 <link rel="canonical" href="https://proofconference.com/book/en/lightning-and-euros/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/lightning-and-euros/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/lightning-and-euros/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/lightning-and-euros/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Lightning and euros in everyday life · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Lightning and euros in everyday life — A Guide to Autonomy">
 <meta property="og:description" content="Bitcoin&#x27;s base layer is built to be secure, not to sell coffee. Lightning is a payment network on top of it, in practice instant and very cheap, made for…">
 <meta property="og:url" content="https://proofconference.com/book/en/lightning-and-euros/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lightning and euros in everyday life · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Lightning and euros in everyday life — A Guide to Autonomy">
 <meta name="twitter:description" content="Bitcoin&#x27;s base layer is built to be secure, not to sell coffee. Lightning is a payment network on top of it, in practice instant and very cheap, made for…">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/lightning-and-euros/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/lightning-and-euros/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read mono" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page mono page-top" data-slug="lightning-and-euros">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Work · Chapter 15</p>
-    <h1>Lightning and euros in everyday life</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/lightning-and-euros/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-3" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/lightning-and-euros"><div class="page-layout is-chapter part-3"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/lightning-and-euros/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/lightning-and-euros/#a-ledger-too-slow-for-a-coffee" data-target="a-ledger-too-slow-for-a-coffee"><span class="toc-no">02</span><span class="toc-label">A ledger too slow for a coffee</span></a></li><li><a href="/book/en/lightning-and-euros/#channels-that-touch-the-blockchain-twice" data-target="channels-that-touch-the-blockchain-twice"><span class="toc-no">03</span><span class="toc-label">Channels that touch the blockchain twice</span></a></li><li><a href="/book/en/lightning-and-euros/#where-to-spend-sats" data-target="where-to-spend-sats"><span class="toc-no">04</span><span class="toc-label">Where to spend sats</span></a></li><li><a href="/book/en/lightning-and-euros/#who-holds-the-funds-who-can-block" data-target="who-holds-the-funds-who-can-block"><span class="toc-no">05</span><span class="toc-label">Who holds the funds, who can block</span></a></li><li><a href="/book/en/lightning-and-euros/#choose-your-bridge-to-euros" data-target="choose-your-bridge-to-euros"><span class="toc-no">06</span><span class="toc-label">Choose your bridge to euros</span></a></li><li><a href="/book/en/lightning-and-euros/#step-by-step" data-target="step-by-step"><span class="toc-no">07</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/lightning-and-euros/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">08</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/lightning-and-euros/#go-further" data-target="go-further"><span class="toc-no">09</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/lightning-and-euros/#sources" data-target="sources"><span class="toc-no">10</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/lightning-and-euros/#your-checklist" data-target="your-checklist"><span class="toc-no">11</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-3" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/work/">Part 3 · Money and Bitcoin</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 15: </span>Lightning and euros in everyday life</h1><p class="ch-bignum" aria-hidden="true">15</p><div class="ch-meta"><span>Chapter 15 of 18</span><a href="/book/en/lightning-and-euros/#your-checklist"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="lightning-and-euros"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>Bitcoin's base layer is built to be secure, not to sell coffee. Lightning is a payment network on top of it, in practice instant and very cheap, made for everyday amounts. This chapter shows how to pay and get paid over Lightning, where to spend sats, and the several routes between bitcoin and euros, each with its cost in fees, convenience and privacy. Nothing here is investment advice, and the tax rules of your country still apply.</p>
-<h2>A ledger too slow for a coffee</h2>
-<p>The Bitcoin blockchain adds a new block about every 10 minutes, and each block has limited space. The limit is deliberate, because it keeps the ledger small enough for ordinary people to verify on their own computer (chapter 18). The price of that choice is that an on-chain payment takes minutes to hours to be final, and that its fee rises when many people want space at the same time, which is acceptable for moving savings and unreasonable for a coffee.</p>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="a-ledger-too-slow-for-a-coffee"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="a-ledger-too-slow-for-a-coffee" tabindex="-1">A ledger too slow for a coffee</h2>
+<p>The Bitcoin blockchain adds a new block about every 10 minutes, and each block has limited space. The limit is deliberate, because it keeps the ledger small enough for ordinary people to verify on their own computer (chapter 18). The price of that choice is that an on-chain payment usually takes minutes to hours to gain confirmations, with no absolute finality, and that its fee rises when many people want space at the same time, which is acceptable for moving savings and unreasonable for a coffee.</p>
 <p>The second difficulty is the bridge. Salaries, rent and taxes are in euros, so using bitcoin at all requires a way in and a way out. The best-known one is a large exchange that holds your coins, your identity documents and the full history of what you do. There are other routes, described further down, and they differ a lot from each other in fees, convenience and privacy.</p>
-<h2>Channels that touch the blockchain twice</h2>
+</section><section class="sec sec--explain" data-no="03" aria-labelledby="channels-that-touch-the-blockchain-twice"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="channels-that-touch-the-blockchain-twice" tabindex="-1">Channels that touch the blockchain twice</h2>
 <p>Lightning rests on <strong>payment channels</strong>. 2 participants lock some bitcoin together in an on-chain transaction, and from then on they can move the balance between them as often as they like, in practice instantly, by exchanging signed updates that never touch the blockchain. Only the opening and the closing of the channel are written on-chain. Channels connect into a network, so you can pay someone you share no channel with, and the payment hops through intermediaries who are not able to keep it and who usually earn a fraction of a cent.</p>
 <p>In practice you see 2 things:</p>
 <ul>
-<li><strong>An invoice</strong>, a payment request shown as a QR code or a long text starting with "lnbc". It is usually for a fixed amount, used once, and it expires.</li>
+<li><strong>An invoice</strong>, a payment request shown as a QR code or long text. Common BOLT11 invoices start with "lnbc"; newer BOLT12 requests use a different format. It is usually for a fixed amount, used once, and it expires.</li>
 <li><strong>A Lightning address</strong>, which looks like an email address (you@provider.com) and can be reused, which is convenient for tips and for getting paid. Most of them rely on a provider's web server. Phoenix's address relies on BOLT12, a newer standard that, for the moment, only some wallets can pay.</li>
 </ul>
 <p>Modern wallets either manage the channels for you or avoid them by swapping through an outside service (chapter 13).</p>
-<h2>Where to spend sats</h2>
+</section><section class="sec sec--compare" data-no="04" aria-labelledby="where-to-spend-sats"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Compare</span></p><h2 id="where-to-spend-sats" tabindex="-1">Where to spend sats</h2>
 <ul>
-<li><strong>In person.</strong> <a href="https://btcmap.org/" target="_blank" rel="noopener noreferrer">BTC Map</a> (<a href="https://btcmap.org" target="_blank" rel="noopener noreferrer">btcmap.org</a>) is the tool to find places, a free, community-run map of the cafés, shops, hotels and freelancers that accept bitcoin. Vilnius, where the conference takes place, has several entries as of September 2026, for example the café <a href="https://btcmap.org/merchant/24824" target="_blank" rel="noopener noreferrer">Baltic Brew</a> (L. Asanavičiūtės g. 29), listed for Lightning and on-chain payments, and <a href="https://zolak.lt/" target="_blank" rel="noopener noreferrer">Zolak</a>, a micro art residence with a bar in a former electronics factory (Vytenio g. 50D), which announces Lightning payments on its own site. A listing can be out of date, so look at its last verification date, ask before you order, and add the places you discover.</li>
+<li><strong>In person.</strong> <a href="https://btcmap.org/" class="ext" rel="noopener noreferrer">BTC Map</a> (<a href="https://btcmap.org" class="tool-link ext" rel="noopener noreferrer">btcmap.org</a>) is the tool to find places, a free, community-run map of the cafés, shops, hotels and freelancers that accept bitcoin. Vilnius, where the conference takes place, has several entries as of September 2026, for example the café <a href="https://btcmap.org/merchant/24824" class="ext" rel="noopener noreferrer">Baltic Brew</a> (L. Asanavičiūtės g. 29), listed for Lightning and on-chain payments, and <a href="https://zolak.lt/" class="ext" rel="noopener noreferrer">Zolak</a>, a micro art residence with a bar in a former electronics factory (Vytenio g. 50D), which announces Lightning payments on its own site. A listing can be out of date, so look at its last verification date, ask before you order, and add the places you discover.</li>
 <li><strong>Tips and zaps.</strong> On Nostr (chapter 7), you can send a few sats to the author of a post you liked, directly, with no platform taking a share. Many podcasts and independent writers publish a Lightning address too.</li>
 <li><strong>People.</strong> Splitting a bill or repaying a friend is often the first real use.</li>
 <li><strong>Online.</strong> Several companies sell gift cards, phone top-ups, eSIMs or travel against bitcoin, an indirect way to live on sats where merchants do not accept them yet. Each one in the table below (valid as of September 2026) is a shop, not a wallet, so pay for what you need and leave no balance there.</li>
 </ul>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>5 options · 4 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Where to spend sats"><table>
 <thead>
 <tr>
-<th>Service</th>
-<th>What you can buy</th>
-<th>Lightning?</th>
-<th>Identity check</th>
+<th scope="col">Service</th>
+<th scope="col">What you can buy</th>
+<th scope="col">Lightning?</th>
+<th scope="col">Identity check</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://www.bitrefill.com/" target="_blank" rel="noopener noreferrer">Bitrefill</a></strong></td>
+<tr id="row-bitrefill">
+<th scope="row"><strong><a href="https://www.bitrefill.com/" class="ext" rel="noopener noreferrer">Bitrefill</a></strong></th>
 <td>Gift cards, phone refills, eSIMs</td>
 <td>Yes</td>
 <td>No account required for ordinary purchases. Verification raises its purchase limits.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.coinsbee.com/en/" target="_blank" rel="noopener noreferrer">CoinsBee</a></strong> (Coinsbee GmbH)</td>
+<tr id="row-coinsbee-coinsbee-gmbh">
+<th scope="row"><strong><a href="https://www.coinsbee.com/en/" class="ext" rel="noopener noreferrer">CoinsBee</a></strong> (Coinsbee GmbH)</th>
 <td>Gift cards, payment cards, phone top-ups</td>
 <td>Yes</td>
-<td><a href="https://www.coinsbee.com/en/kyc-aml/" target="_blank" rel="noopener noreferrer">None up to 1,000 euros per order and 10,000 euros in total</a>, verification beyond.</td>
+<td><a href="https://www.coinsbee.com/en/kyc-aml/" class="ext" rel="noopener noreferrer">None up to 1,000 euros per order and 10,000 euros in total</a>, verification beyond.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.cryptorefills.com/" target="_blank" rel="noopener noreferrer">Cryptorefills</a></strong> (Big Dream Ventures B.V., Amsterdam)</td>
+<tr id="row-cryptorefills-big-dream-ventures-b-v-amsterdam">
+<th scope="row"><strong><a href="https://www.cryptorefills.com/" class="ext" rel="noopener noreferrer">Cryptorefills</a></strong> (Big Dream Ventures B.V., Amsterdam)</th>
 <td>Gift cards, top-ups, eSIMs, flights, stays</td>
 <td>Yes</td>
 <td>None, according to its site</td>
 </tr>
-<tr>
-<td><strong><a href="https://coingate.com/gift-cards" target="_blank" rel="noopener noreferrer">CoinGate gift cards</a></strong> (sold by UAB Rewards distributed, a Lithuanian company)</td>
+<tr id="row-coingate-gift-cards-sold-by-uab-rewards-distributed-a-lithuanian-company">
+<th scope="row"><strong><a href="https://coingate.com/gift-cards" class="ext" rel="noopener noreferrer">CoinGate gift cards</a></strong> (sold by UAB Rewards distributed, a Lithuanian company)</th>
 <td>Gift cards from about 6,000 brands</td>
 <td>Yes</td>
 <td>No sign-up needed, according to its site</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.travala.com/" target="_blank" rel="noopener noreferrer">Travala</a></strong></td>
+<tr id="row-travala">
+<th scope="row"><strong><a href="https://www.travala.com/" class="ext" rel="noopener noreferrer">Travala</a></strong></th>
 <td>Hotels, flights, activities</td>
 <td>Yes</td>
 <td>Traveller details for the booking, and the airline or hotel checks your ID as usual</td>
 </tr>
 </tbody>
-</table></div>
-<h2>Who holds the funds, who can block</h2>
+</table></div></figure>
+</section><section class="sec sec--explain" data-no="05" aria-labelledby="who-holds-the-funds-who-can-block"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Understand</span></p><h2 id="who-holds-the-funds-who-can-block" tabindex="-1">Who holds the funds, who can block</h2>
 <p>For every route, the grid asks who holds the funds while the payment is in progress, and who can stop it.</p>
-<p>With a custodial app, the company holds the bitcoin until you withdraw, and it can freeze the balance or refuse a payment. With a self-custodial Lightning wallet the keys are yours, but payments pass through a Lightning service provider (ACINQ for Phoenix, Blocktank for Bitkit) or a small group of operators (Spark), which cannot take the funds and can decline to relay them. Your remedy is an exit to the blockchain, at the cost of a fee and some time.</p>
-<p>A broker under KYC holds your euros during the purchase, and it can refuse an order, ask where the money comes from or close your account, as can the bank sending the transfer. Peer-to-peer platforms try to remove the holder. Bisq locks the coins in a <a href="https://bisq.wiki/Security_deposit" target="_blank" rel="noopener noreferrer">2-of-2 multi-signature address</a> shared by the 2 traders, and Hodl Hodl in <a href="https://hodlhodl.com/blog/en/escrow-explained" target="_blank" rel="noopener noreferrer">a 2-of-3 address</a> where the platform has 1 key, so no single party can move them. RoboSats uses a <a href="https://learn.robosats.org/docs/escrow/" target="_blank" rel="noopener noreferrer">Lightning payment held</a> towards the coordinator hosting the order. The trust that remains goes to the other trader and to whoever settles a dispute.</p>
-<h2>Choose your bridge to euros</h2>
-<p>No route is best on every count, because each one trades simplicity against fees and privacy. <strong>KYC</strong> ("know your customer") means the service verifies your identity with an ID document, which regulated companies in Europe now have to do, and chapter 16 explains what that implies for your privacy. This market moves fast. The Swiss broker Pocket Bitcoin, for example, <a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" target="_blank" rel="noopener noreferrer">ended its lighter verification in December 2025</a>. On the peer-to-peer side, <a href="https://hodlhodl.com/" target="_blank" rel="noopener noreferrer">Hodl Hodl</a>, <a href="https://bisq.network/" target="_blank" rel="noopener noreferrer">Bisq</a> and <a href="https://learn.robosats.org/" target="_blank" rel="noopener noreferrer">RoboSats</a> let you trade with another person without handing your coins to a company, under the escrow designs described in the previous section. The table is valid as of September 2026, and you should check in each case that the service accepts residents of your country.</p>
-<div class="bk-table"><table>
+<p>With a custodial app, the company holds the bitcoin until you withdraw, and it can freeze the balance or refuse a payment. With a self-custodial Lightning wallet the keys are yours, but payments pass through a Lightning service provider (ACINQ for Phoenix, Blocktank for Bitkit) or, in a different design, a small group of operators (Spark). These services can refuse transfers. Lightning security requires correct channel handling and backups; Spark additionally relies on its <a href="https://docs.spark.money/learn/trust-model" class="ext" rel="noopener noreferrer">operator honesty threshold during transfers</a>. An exit to the blockchain has its own conditions, fees and delays; holding keys alone is not a guarantee against every failure.</p>
+<p>A broker under KYC holds your euros during the purchase, and it can refuse an order, ask where the money comes from or close your account, as can the bank sending the transfer. Peer-to-peer platforms try to remove the holder. Bisq locks the coins in a <a href="https://bisq.wiki/Security_deposit" class="ext" rel="noopener noreferrer">2-of-2 multi-signature address</a> shared by the 2 traders, and Hodl Hodl in <a href="https://hodlhodl.com/blog/en/escrow-explained" class="ext" rel="noopener noreferrer">a 2-of-3 address</a> where the platform has 1 key, so no single party can move them. RoboSats uses a <a href="https://learn.robosats.org/docs/escrow/" class="ext" rel="noopener noreferrer">Lightning payment held</a> towards the coordinator hosting the order. The trust that remains goes to the other trader and to whoever settles a dispute.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://docs.spark.money/learn/trust-model">docs.spark.money</a></li><li><a class="ext" rel="noopener noreferrer" href="https://bisq.wiki/Security_deposit">bisq.wiki</a></li><li><a class="ext" rel="noopener noreferrer" href="https://hodlhodl.com/blog/en/escrow-explained">hodlhodl.com</a></li><li><a class="ext" rel="noopener noreferrer" href="https://learn.robosats.org/docs/escrow/">learn.robosats.org</a></li></ul></div></section><section class="sec sec--compare" data-no="06" aria-labelledby="choose-your-bridge-to-euros"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-bridge-to-euros" tabindex="-1">Choose your bridge to euros</h2>
+<p>No route is best on every count, because each one trades simplicity against fees and privacy. <strong>KYC</strong> ("know your customer") means the service verifies your identity with an ID document, which regulated companies in Europe now have to do, and chapter 16 explains what that implies for your privacy. This market moves fast. The Swiss broker Pocket Bitcoin, for example, <a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" class="ext" rel="noopener noreferrer">ended its lighter verification in December 2025</a>. On the peer-to-peer side, <a href="https://hodlhodl.com/" class="ext" rel="noopener noreferrer">Hodl Hodl</a>, <a href="https://bisq.network/" class="ext" rel="noopener noreferrer">Bisq</a> and <a href="https://learn.robosats.org/" class="ext" rel="noopener noreferrer">RoboSats</a> let you trade with another person without handing your coins to a company, under the escrow designs described in the previous section. The table is valid as of September 2026, and you should check in each case that the service accepts residents of your country.</p>
+<figure class="compare"><figcaption class="compare-cap"><span>5 options · 6 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your bridge to euros"><table>
 <thead>
 <tr>
-<th>Route</th>
-<th>Examples</th>
-<th>Identity check (KYC)</th>
-<th>Who holds the coins</th>
-<th>Who can block it</th>
-<th>Honest trade-off</th>
+<th scope="col">Route</th>
+<th scope="col">Examples</th>
+<th scope="col">Identity check (KYC)</th>
+<th scope="col">Who holds the coins</th>
+<th scope="col">Who can block it</th>
+<th scope="col">Honest trade-off</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Earn sats</strong></td>
+<tr id="row-earn-sats">
+<th scope="row"><strong>Earn sats</strong></th>
 <td>Be paid or tipped in bitcoin for work, sales or content</td>
 <td>None</td>
 <td>You</td>
 <td>Only a Lightning provider on either side, by declining to relay the payment</td>
 <td>No intermediary at all. You need someone willing to pay this way, and income remains taxable.</td>
 </tr>
-<tr>
-<td><strong>Peer-to-peer exchange</strong></td>
-<td><a href="https://hodlhodl.com/" target="_blank" rel="noopener noreferrer">Hodl Hodl</a> (web), <a href="https://bisq.network/" target="_blank" rel="noopener noreferrer">Bisq</a> (desktop), <a href="https://robosats.org/" target="_blank" rel="noopener noreferrer">RoboSats</a> (Lightning, over Tor)</td>
+<tr id="row-peer-to-peer-exchange">
+<th scope="row"><strong>Peer-to-peer exchange</strong></th>
+<td><a href="https://hodlhodl.com/" class="tool-link ext" rel="noopener noreferrer">Hodl Hodl</a> (web), <a href="https://bisq.network/" class="tool-link ext" rel="noopener noreferrer">Bisq</a> (desktop), <a href="https://robosats.org/" class="tool-link ext" rel="noopener noreferrer">RoboSats</a> (Lightning, over Tor)</td>
 <td>Generally none by the platform. Hodl Hodl may ask in a dispute.</td>
 <td>You. Coins are locked in escrow only during the trade, where the platform offers one.</td>
 <td>The other trader, by not paying, and the banks on both sides. A mediator or arbitrator settles disputes.</td>
 <td>You trade with a person by bank transfer. More private, usually more expensive, slower, more to learn.</td>
 </tr>
-<tr>
-<td><strong>European broker, recurring purchases</strong></td>
-<td><a href="https://relai.app/" target="_blank" rel="noopener noreferrer">Relai</a>, <a href="https://pocketbitcoin.com/" target="_blank" rel="noopener noreferrer">Pocket Bitcoin</a> (both Swiss)</td>
+<tr id="row-european-broker-recurring-purchases">
+<th scope="row"><strong>European broker, recurring purchases</strong></th>
+<td><a href="https://relai.app/" class="tool-link ext" rel="noopener noreferrer">Relai</a>, <a href="https://pocketbitcoin.com/" class="tool-link ext" rel="noopener noreferrer">Pocket Bitcoin</a> (both Swiss)</td>
 <td>Yes</td>
 <td>You. They deliver to your own wallet.</td>
 <td>The broker, which can refuse an order or close your account, and your bank, which can block the transfer</td>
 <td>Very simple, automatic. A fee on each purchase, and the company knows who you are and what you bought.</td>
 </tr>
-<tr>
-<td><strong>Euro account plus bitcoin wallet</strong></td>
-<td><a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin</a> (euro IBAN and optional Visa card next to a self-custodial wallet; Bringin sponsors this conference), <a href="https://strike.me/" target="_blank" rel="noopener noreferrer">Strike</a> (SEPA deposits, fully custodial)</td>
+<tr id="row-euro-account-plus-bitcoin-wallet">
+<th scope="row"><strong>Euro account plus bitcoin wallet</strong></th>
+<td><a href="https://bringin.app/" class="tool-link ext" rel="noopener noreferrer">Bringin</a> (euro IBAN and optional Visa card next to a self-custodial wallet), <a href="https://strike.me/" class="tool-link ext" rel="noopener noreferrer">Strike</a> (SEPA deposits, fully custodial)</td>
 <td>Yes</td>
 <td>Bringin: you, for the bitcoin. Strike: the company, for everything, until you withdraw to your own wallet.</td>
 <td>Bringin for the euro account and the card, which it can block like any regulated payment company, but not the bitcoin, which sits in a self-custodial wallet. Strike is custodial, so the company holds the keys to both your euros and your bitcoin and has every right over them: it can freeze the balance, refuse a payment or close the account.</td>
 <td>Convenient for moving between sats and euros. A single company sees both sides, each conversion carries a fee, and the euro side is a regulated account like any other.</td>
 </tr>
-<tr>
-<td><strong>Bitcoin ATM</strong></td>
-<td>Machines listed on <a href="https://coinatmradar.com" target="_blank" rel="noopener noreferrer">coinatmradar.com</a></td>
+<tr id="row-bitcoin-atm">
+<th scope="row"><strong>Bitcoin ATM</strong></th>
+<td>Machines listed on <a href="https://coinatmradar.com" class="tool-link ext" rel="noopener noreferrer">coinatmradar.com</a></td>
 <td>Usually yes in the EU, depending on operator and amount</td>
 <td>You</td>
 <td>The operator, which sets limits and can refuse a transaction</td>
 <td>Cash in, coins out in minutes. Fees are typically the highest of all routes.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people who decide to exchange euros is a regulated route they find clear, used only to deliver coins to their own wallet, and a peer-to-peer route learned with small amounts, so that they do not depend on a single door. Whatever the route, selling or spending bitcoin can create a tax obligation, so keep records and check the rules of your country.</p>
-<aside class="bk-code bk-ticket" id="bk-code">
-  <p class="bk-label">Sole sponsor · conference code</p>
-  <div class="bk-ticket-mid">
-    <span class="bk-code-key">PROOF</span>
-    <button type="button" class="bk-code-copy" onclick="navigator.clipboard&&navigator.clipboard.writeText('PROOF');this.textContent='Copied';var l=document.getElementById('bk-code-live');if(l)l.textContent='Copied'">Copy</button>
-    <span class="sr-only" aria-live="polite" id="bk-code-live"></span>
-  </div>
-  <p class="bk-code-txt">Bringin, the sponsor of the conference, gives PROOF attendees a code to enter in its app when opening an account: 50% off its fees for 3 months.</p>
-  <p class="bk-code-note">Bringin is listed above among the other routes, and the same limits apply: the euro side is a regulated account with identity verification.</p>
-</aside>
-<h2>Step by step</h2>
+</section><section class="sec sec--steps" data-no="07" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
 <p>The example uses Phoenix. The logic is the same in any Lightning wallet.</p>
-<ol>
-<li><strong>Pay an invoice.</strong> At the conference or at a merchant, tap Send and scan the QR code. Check the amount and the fee shown, then confirm. The merchant usually sees the payment within 1 or 2 seconds.</li>
-<li><strong>Receive with an invoice.</strong> Tap Receive, enter an amount if you wish, and show the QR code. Remember that it expires, and that a first payment into Phoenix has to exceed the channel fee (chapter 13).</li>
-<li><strong>Receive with a Lightning address.</strong> If your wallet offers one, find it in the settings or on the receive screen, and test it from a second wallet before you publish it. Phoenix's address uses BOLT12, which many wallets cannot pay yet. An address from a custodial or Spark-based wallet works with almost every sender, with the trade-offs described in chapter 13.</li>
-<li><strong>Withdraw from a broker or app to your OWN wallet.</strong> Choose "withdraw" or "send", paste an address or an invoice generated by your wallet, and start with a small test. Seeing the coins arrive in a wallet whose keys you hold is the step that replaces trust in a displayed balance with verification. For larger amounts, withdraw on-chain to your savings wallet (chapters 14 and 17).</li>
-<li><strong>Keep only spending money on the phone.</strong> Think of the Lightning wallet as the wallet in your pocket. When it holds more than you would carry in cash, move the surplus on-chain.</li>
-<li><strong>Keep records.</strong> Export or note your purchases and sales with dates and amounts, because you will need them for the tax return.</li>
+<ol class="steps">
+<li id="step-1"><strong>Pay an invoice.</strong> At the conference or at a merchant, tap Send and scan the QR code. Check the amount and the fee shown, then confirm. The merchant usually sees the payment within 1 or 2 seconds.</li>
+<li id="step-2"><strong>Receive with an invoice.</strong> Tap Receive, enter an amount if you wish, and show the QR code. Remember that it expires, and that a first payment into Phoenix has to exceed the channel fee (chapter 13).</li>
+<li id="step-3"><strong>Receive with a Lightning address.</strong> If your wallet offers one, find it in the settings or on the receive screen, and test it from a second wallet before you publish it. Phoenix's address uses BOLT12, which many wallets cannot pay yet. An address from a custodial or Spark-based wallet works with almost every sender, with the trade-offs described in chapter 13.</li>
+<li id="step-4"><strong>Withdraw from a broker or app to your OWN wallet.</strong> Choose "withdraw" or "send", paste an address or an invoice generated by your wallet, and start with a small test. Seeing the coins arrive in a wallet whose keys you hold is the step that replaces trust in a displayed balance with verification. For larger amounts, withdraw on-chain to your savings wallet (chapters 14 and 17).</li>
+<li id="step-5"><strong>Keep only spending money on the phone.</strong> Think of the Lightning wallet as the wallet in your pocket. When it holds more than you would carry in cash, move the surplus on-chain.</li>
+<li id="step-6"><strong>Keep records.</strong> Export or note your purchases and sales with dates and amounts, because you will need them for the tax return.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="08" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Keeping savings in a Lightning phone wallet.</strong> It lives on a device you can lose or break, connected to the internet all day, so it suits spending money.</li>
-<li><strong>Confusing an invoice with an on-chain address.</strong> An invoice starts with "lnbc" and expires. An on-chain address starts with "bc1", "1" or "3" and does not. When you withdraw from a service, select the matching network.</li>
+<li><strong>Confusing an invoice with an on-chain address.</strong> A BOLT11 invoice starts with "lnbc" and expires; BOLT12 uses other formats. An on-chain address starts with "bc1", "1" or "3" and does not. When you withdraw from a service, select the matching network.</li>
 <li><strong>Making large payments over Lightning.</strong> Channels have limited capacity, and large payments fail more often. Lightning is for everyday amounts, and on-chain handles the rest.</li>
 <li><strong>Leaving coins with the broker.</strong> A purchase is finished when the coins are in your wallet, not when the app shows a balance (chapter 13).</li>
 <li><strong>Ignoring the total cost.</strong> Compare the final amount of sats you receive, not the advertised fee, because the exchange rate often hides a margin.</li>
 <li><strong>Forgetting the tax side.</strong> Paying with bitcoin can count as selling it, and the rules differ by country.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "CBDCs, KYC, and the Fight for Monetary Privacy", by Linas K., and "Why Centralized Money Fails: How Bitcoin Became an Alternative", by Piktas.</li>
-<li><strong>Find places to spend:</strong> BTC Map (<a href="https://btcmap.org" target="_blank" rel="noopener noreferrer">btcmap.org</a>).</li>
-<li><strong>Tutorials for the wallets and exchanges above:</strong> Plan B Academy (<a href="https://planb.academy" target="_blank" rel="noopener noreferrer">planb.academy</a>).</li>
-<li><strong>Understand Lightning in depth:</strong> "Mastering the Lightning Network", free to read online (<a href="https://github.com/lnbook/lnbook" target="_blank" rel="noopener noreferrer">github.com/lnbook/lnbook</a>).</li>
+</section><section class="sec sec--further" data-no="09" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Find places to spend:</strong> BTC Map (<a href="https://btcmap.org" class="tool-link ext" rel="noopener noreferrer">btcmap.org</a>).</li>
+<li><strong>Tutorials for the wallets and exchanges above:</strong> Plan B Academy (<a href="https://planb.academy" class="tool-link ext" rel="noopener noreferrer">planb.academy</a>).</li>
+<li><strong>Understand Lightning in depth:</strong> "Mastering the Lightning Network", free to read online (<a href="https://github.com/lnbook/lnbook" class="tool-link ext" rel="noopener noreferrer">github.com/lnbook/lnbook</a>).</li>
 <li><strong>Next chapter:</strong> privacy in Bitcoin.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" target="_blank" rel="noopener noreferrer">Important Update: Full Verification Coming to Pocket</a>, Pocket Bitcoin, 16 October 2025.</li>
-<li><a href="https://bisq.wiki/Security_deposit" target="_blank" rel="noopener noreferrer">Security deposit</a>, Bisq Wiki, consulted in September 2026.</li>
-<li><a href="https://hodlhodl.com/blog/en/escrow-explained" target="_blank" rel="noopener noreferrer">What is multisig escrow and how it works</a>, Hodl Hodl, consulted in September 2026.</li>
-<li><a href="https://learn.robosats.org/docs/escrow/" target="_blank" rel="noopener noreferrer">Trade escrow</a>, Learn RoboSats, consulted in September 2026.</li>
-<li><a href="https://bringin.app/" target="_blank" rel="noopener noreferrer">Bringin: wallet, euro account and fees</a>, Bringin, consulted in September 2026.</li>
-<li><a href="https://btcmap.org/merchant/24824" target="_blank" rel="noopener noreferrer">Baltic Brew</a> and <a href="https://btcmap.org/merchant/26604" target="_blank" rel="noopener noreferrer">Zolak Micro Art Residence</a>, BTC Map listings for Vilnius, consulted on 20 September 2026.</li>
-<li><a href="https://www.coinsbee.com/en/kyc-aml/" target="_blank" rel="noopener noreferrer">KYC and AML: purchase limits</a>, CoinsBee, consulted in September 2026.</li>
+</section><section class="sec sec--sources" data-no="10" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://docs.spark.money/learn/trust-model" class="ext" rel="noopener noreferrer">Spark trust model</a>, Spark documentation, checked 22 October 2026.</li>
+<li><a href="https://pocketbitcoin.com/blog/posts/full-verification-coming-to-pocket" class="ext" rel="noopener noreferrer">Important Update: Full Verification Coming to Pocket</a>, Pocket Bitcoin, 16 October 2025.</li>
+<li><a href="https://bisq.wiki/Security_deposit" class="ext" rel="noopener noreferrer">Security deposit</a>, Bisq Wiki, consulted in September 2026.</li>
+<li><a href="https://hodlhodl.com/blog/en/escrow-explained" class="ext" rel="noopener noreferrer">What is multisig escrow and how it works</a>, Hodl Hodl, consulted in September 2026.</li>
+<li><a href="https://learn.robosats.org/docs/escrow/" class="ext" rel="noopener noreferrer">Trade escrow</a>, Learn RoboSats, consulted in September 2026.</li>
+<li><a href="https://bringin.app/" class="ext" rel="noopener noreferrer">Bringin: wallet, euro account and fees</a>, Bringin, consulted in September 2026.</li>
+<li><a href="https://btcmap.org/merchant/24824" class="ext" rel="noopener noreferrer">Baltic Brew</a> and <a href="https://btcmap.org/merchant/26604" class="ext" rel="noopener noreferrer">Zolak Micro Art Residence</a>, BTC Map listings for Vilnius, consulted on 20 September 2026.</li>
+<li><a href="https://www.coinsbee.com/en/kyc-aml/" class="ext" rel="noopener noreferrer">KYC and AML: purchase limits</a>, CoinsBee, consulted in September 2026.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="lightning-and-euros-1" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-1" aria-label="Pay a Lightning invoice, at the conference or at a merchant"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-1">Pay a Lightning invoice, at the conference or at a merchant</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-2" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-2" aria-label="Get a Lightning address and test it from a second wallet"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-2">Get a Lightning address and test it from a second wallet</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-3" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-3" aria-label="Find 3 places near you on btcmap.org"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-3">Find 3 places near you on btcmap.org</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-4" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-4" aria-label="Withdraw any balance from a broker or exchange to your own wallet"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-4">Withdraw any balance from a broker or exchange to your own wallet</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="lightning-and-euros-5" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="lightning-and-euros-5" aria-label="Read how a peer-to-peer exchange works, before you need it"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="lightning-and-euros-5">Read how a peer-to-peer exchange works, before you need it</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/seed/"><span>Previous</span>Backing up your seed phrase</a>
-<a class="bk-next" href="/book/en/bitcoin-privacy/"><span>Next</span>Privacy in Bitcoin</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="11" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="lightning-and-euros">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="lightning-and-euros" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-lightning-and-euros-pay-invoice"><span class="legacy-anchor" id="lightning-and-euros-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-pay-invoice" disabled="disabled"><span class="action-text">Pay a Lightning invoice, at the conference or at a merchant</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-lightning-and-euros-lightning-address"><span class="legacy-anchor" id="lightning-and-euros-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-lightning-address" disabled="disabled"><span class="action-text">Get a Lightning address and test it from a second wallet</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-lightning-and-euros-btcmap"><span class="legacy-anchor" id="lightning-and-euros-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-btcmap" disabled="disabled"><span class="action-text">Find 3 places near you on <a href="https://btcmap.org" class="tool-link ext" rel="noopener noreferrer">btcmap.org</a></span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-lightning-and-euros-withdraw"><span class="legacy-anchor" id="lightning-and-euros-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-withdraw" disabled="disabled"><span class="action-text">Withdraw any balance from a broker or exchange to your own wallet</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-lightning-and-euros-peer-to-peer"><span class="legacy-anchor" id="lightning-and-euros-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="lightning-and-euros-peer-to-peer" disabled="disabled"><span class="action-text">Read how a peer-to-peer exchange works, before you need it</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="lightning-and-euros" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-3" href="/book/en/seed/"><span class="pager-dir">Previous · Chapter 14</span><span class="pager-title">Backing up your seed phrase</span></a><a class="pager-next part-3" href="/book/en/bitcoin-privacy/"><span class="pager-dir">Next · Chapter 16</span><span class="pager-title">Privacy in Bitcoin</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/lightning-and-euros/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/" aria-current="page"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

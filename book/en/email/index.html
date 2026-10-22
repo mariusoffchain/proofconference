@@ -1,343 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<title>Your email and your aliases · PROOF &lt;conference&gt;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="color-scheme" content="dark">
+<title>Your email and your aliases — A Guide to Autonomy</title>
 <meta name="description" content="Your email address is the key to all your other accounts, and the label that links your profiles together across the internet.">
 <link rel="canonical" href="https://proofconference.com/book/en/email/">
 <link rel="alternate" hreflang="lt" href="https://proofconference.com/book/email/">
 <link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/email/">
 <link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/email/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="PROOF &lt;conference&gt;">
-<meta property="og:title" content="Your email and your aliases · PROOF &lt;conference&gt;">
+<meta property="og:title" content="Your email and your aliases — A Guide to Autonomy">
 <meta property="og:description" content="Your email address is the key to all your other accounts, and the label that links your profiles together across the internet.">
 <meta property="og:url" content="https://proofconference.com/book/en/email/">
 <meta property="og:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Your email and your aliases · PROOF &lt;conference&gt;">
+<meta name="twitter:title" content="Your email and your aliases — A Guide to Autonomy">
 <meta name="twitter:description" content="Your email address is the key to all your other accounts, and the label that links your profiles together across the internet.">
 <meta name="twitter:image" content="https://proofconference.com/thumbnail-proof-en.jpg">
-<link rel="preload" href="/fonts/righteous-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrainsmono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/book/book.css?v=18961c46">
-<script defer src="/external-links.js"></script>
+<link rel="preload" href="/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/book/guide-assets/guide.css?v=822a1af9fe20">
+<noscript><style>@media (max-width: 1023px) { .toc-toggle { display: none; } .toc-aside { position: static; } .page-toc, .page-toc .toc-title { display: block; } .page-toc { position: static; max-height: none; box-shadow: none; } }</style></noscript>
+<script defer src="/book/guide-assets/config.js?v=469ac16bceec"></script>
+<script defer src="/book/guide-assets/site-data.js?v=c76ec0562380"></script>
+<script defer src="/book/guide-assets/guide.js?v=93671a5ca6f4"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<!-- NAV -->
-<nav class="bk-inner-nav">
-  <a href="/en/" class="nav-logo-text bk-logo-proof" style="text-decoration:none" title="PROOF &lt;conference&gt;">PROOF</a>
-  <a href="/book/en/" class="nav-logo-text bk-logo-book" style="text-decoration:none" title="Your privacy guide">BOOK</a>
-  <ul class="nav-links">
-    <li><a href="/book/en/#contents">&lt;contents&gt;</a></li>
-    <li><a href="/book/en/#replays">&lt;replays&gt;</a></li>
-    <li><a href="/book/en/checklist/">&lt;checklist&gt;</a></li>
-    <li><a href="/book/en/glossary/">&lt;glossary&gt;</a></li>
-  </ul>
-  <div class="bk-navps"><a href="/book/en/#contents" class="bk-navp bk-navr" id="bk-navr" data-slugs="[&quot;messages&quot;, &quot;passwords&quot;, &quot;browser&quot;, &quot;email&quot;, &quot;network&quot;, &quot;keys&quot;, &quot;nostr&quot;, &quot;big-tech&quot;, &quot;phone&quot;, &quot;self-hosting&quot;, &quot;ai&quot;, &quot;savings&quot;, &quot;first-wallet&quot;, &quot;seed&quot;, &quot;lightning-and-euros&quot;, &quot;bitcoin-privacy&quot;, &quot;hardware-wallet&quot;, &quot;node&quot;]" title="chapters read"><svg class="bk-navp-l" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span class="sr-only">chapters read: </span><span class="bk-navp-n">0 / 18</span><span class="bk-bar" aria-hidden="true"><i></i></span></a><a href="/book/en/checklist/" class="bk-navp" id="bk-navp" data-total="90" data-map="{&quot;messages&quot;: &quot;priv&quot;, &quot;passwords&quot;: &quot;priv&quot;, &quot;browser&quot;: &quot;priv&quot;, &quot;email&quot;: &quot;priv&quot;, &quot;network&quot;: &quot;priv&quot;, &quot;keys&quot;: &quot;auto&quot;, &quot;nostr&quot;: &quot;auto&quot;, &quot;big-tech&quot;: &quot;auto&quot;, &quot;phone&quot;: &quot;auto&quot;, &quot;self-hosting&quot;: &quot;auto&quot;, &quot;ai&quot;: &quot;auto&quot;, &quot;savings&quot;: &quot;mono&quot;, &quot;first-wallet&quot;: &quot;mono&quot;, &quot;seed&quot;: &quot;mono&quot;, &quot;lightning-and-euros&quot;: &quot;mono&quot;, &quot;bitcoin-privacy&quot;: &quot;mono&quot;, &quot;hardware-wallet&quot;: &quot;mono&quot;, &quot;node&quot;: &quot;mono&quot;}" title="Your checklist"><span class="bk-navp-l" aria-hidden="true">✓</span><span class="sr-only">Your checklist: </span><span class="bk-navp-n">0 / 90</span><span class="bk-bar" aria-hidden="true"><i class="priv"></i><i class="auto"></i><i class="mono"></i></span></a></div>
-  <a class="lang-btn" id="lang-btn" href="/book/email/" hreflang="lt" lang="lt" aria-label="Lietuviška versija">LT</a>
-  <button class="bk-menu-btn" id="bk-menu-btn" aria-expanded="false" aria-controls="bk-menu" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<!-- Phone menu: the nav keeps the logo (back to the conference site), the 2 gauges and this button -->
-<div class="bk-menu" id="bk-menu" hidden>
-  <a href="/book/en/#contents">&lt;contents&gt;</a>
-  <a href="/book/en/#replays">&lt;replays&gt;</a>
-  <a href="/book/en/checklist/">&lt;checklist&gt;</a>
-  <a href="/book/en/glossary/">&lt;glossary&gt;</a>
-  <a href="/book/email/" class="bk-menu-lang">LT · Lietuvių</a>
-  <a href="/en/" class="bk-menu-lang">PROOF &lt;conference&gt;</a>
-</div>
-
-<div class="bk-read priv" aria-hidden="true"><i id="bk-read"></i></div>
-<main id="main" class="bk-page priv page-top" data-slug="email">
-  <header class="bk-head">
-    <p class="bk-label">Proof of Privacy · Chapter 4</p>
-    <h1>Your email and your aliases</h1>
-  </header>
-  <article class="bk-article">
-<h2>In brief</h2>
+<header class="site-header"><div class="header-inner"><a class="brand" href="/book/en/"><span class="brand-title">A Guide to Autonomy</span><span class="brand-sub"><span class="wm">PROOF</span> edition</span></a><div class="header-actions"><a class="hbtn" href="/book/en/#contents" data-open="contents"><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Contents</span></a><button type="button" class="hbtn" data-open="search" aria-haspopup="dialog" aria-keyshortcuts="/ Control+K Meta+K" data-js-only hidden><svg class="hbtn-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.6 12.6 17 17" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="hbtn-label">Search</span><kbd class="hbtn-kbd" aria-hidden="true">/</kbd></button><a class="hbtn hbtn--site" href="/en/" title="PROOF &lt;conference&gt;"><span class="wm">PROOF</span><span class="sr-only"> &lt;conference&gt;, the conference site</span></a><a class="hbtn hbtn--lang" href="/book/email/" hreflang="lt" lang="lt" aria-label="LT, lietuviška versija">LT</a></div></div></header>
+<div class="read-progress part-1" id="read-progress" aria-hidden="true"><i></i></div>
+<main id="main" tabindex="-1" data-ssr="chapter/email"><div class="page-layout is-chapter part-1"><div class="toc-aside"><button type="button" class="toc-toggle" aria-expanded="false" aria-controls="page-toc"><span class="toc-toggle-label">On this page</span><span class="toc-current" aria-hidden="true"></span><span class="toc-chevron" aria-hidden="true"></span></button><nav class="page-toc" id="page-toc" aria-labelledby="page-toc-title"><p class="toc-title" id="page-toc-title">On this page</p><ol class="toc-list"><li><a href="/book/en/email/#in-brief" data-target="in-brief"><span class="toc-no">01</span><span class="toc-label">In brief</span></a></li><li><a href="/book/en/email/#the-address-that-links-all-your-accounts" data-target="the-address-that-links-all-your-accounts"><span class="toc-no">02</span><span class="toc-label">The address that links all your accounts</span></a></li><li><a href="/book/en/email/#an-encrypted-mailbox-and-a-different-address-everywhere" data-target="an-encrypted-mailbox-and-a-different-address-everywhere"><span class="toc-no">03</span><span class="toc-label">An encrypted mailbox and a different address everywhere</span></a></li><li><a href="/book/en/email/#who-can-read-forge-or-lock-your-mail" data-target="who-can-read-forge-or-lock-your-mail"><span class="toc-no">04</span><span class="toc-label">Who can read, forge or lock your mail</span></a></li><li><a href="/book/en/email/#choose-your-mail-provider" data-target="choose-your-mail-provider"><span class="toc-no">05</span><span class="toc-label">Choose your mail provider</span></a></li><li><a href="/book/en/email/#choose-your-alias-service" data-target="choose-your-alias-service"><span class="toc-no">06</span><span class="toc-label">Choose your alias service</span></a></li><li><a href="/book/en/email/#disposable-inboxes-for-one-time-use" data-target="disposable-inboxes-for-one-time-use"><span class="toc-no">07</span><span class="toc-label">Disposable inboxes for one-time use</span></a></li><li><a href="/book/en/email/#when-a-site-demands-a-phone-number" data-target="when-a-site-demands-a-phone-number"><span class="toc-no">08</span><span class="toc-label">When a site demands a phone number</span></a></li><li><a href="/book/en/email/#step-by-step" data-target="step-by-step"><span class="toc-no">09</span><span class="toc-label">Step by step</span></a></li><li><a href="/book/en/email/#mistakes-to-avoid" data-target="mistakes-to-avoid"><span class="toc-no">10</span><span class="toc-label">Mistakes to avoid</span></a></li><li><a href="/book/en/email/#go-further" data-target="go-further"><span class="toc-no">11</span><span class="toc-label">Go further</span></a></li><li><a href="/book/en/email/#sources" data-target="sources"><span class="toc-no">12</span><span class="toc-label">Sources</span></a></li><li><a href="/book/en/email/#your-checklist" data-target="your-checklist"><span class="toc-no">13</span><span class="toc-label">Your checklist</span></a></li></ol></nav></div><div class="page-main"><article class="chapter part-1" aria-labelledby="page-title"><header class="chapter-head"><p class="ch-kicker"><a href="/book/en/privacy/">Part 1 · Privacy</a></p><h1 class="ch-title" id="page-title" tabindex="-1"><span class="sr-only">Chapter 4: </span>Your email and your aliases</h1><p class="ch-bignum" aria-hidden="true">04</p><div class="ch-meta"><span>Chapter 4 of 18</span><a href="/book/en/email/#your-checklist"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done</a><span class="ch-readstate" data-read-state="email"></span></div></header><div class="prose"><section class="sec sec--brief" data-no="01" aria-labelledby="in-brief"><p class="sec-kicker"><span class="sec-no">01</span></p><h2 id="in-brief" tabindex="-1">In brief</h2>
 <p>Your email address is the key to all your other accounts, and the label that links your profiles together across the internet. Move your mail to a provider that lives from subscriptions and not from advertising, and that can encrypt your mailbox so that the company itself is not able to read it. Then stop giving your real address to everyone and use aliases instead, with a different address for each service. You will see who leaks or sells your address, and you can switch off 1 alias without touching the rest.</p>
-<h2>The address that links all your accounts</h2>
+</section><section class="sec sec--explain" data-no="02" aria-labelledby="the-address-that-links-all-your-accounts"><p class="sec-kicker"><span class="sec-no">02</span><span class="sec-kind">Understand</span></p><h2 id="the-address-that-links-all-your-accounts" tabindex="-1">The address that links all your accounts</h2>
 <p>Almost every account you own can be reset by email, so whoever controls your mailbox can click "forgot password" on your bank, your social networks and your cloud storage. The mailbox is also an archive of your life, with invoices, tickets, medical appointments and years of conversations.</p>
-<p>The most popular mailboxes are free because the company that carries your mail also runs an advertising business. Google <a href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/" target="_blank" rel="noopener noreferrer">announced in June 2017</a> that it would stop scanning the content of consumer Gmail to personalise ads, but the mailbox remains tied to an account that can also hold your searches, your videos and your location history.</p>
-<p>Then there is the address itself, which you give to shops, newsletters, apps and public offices. Because it never changes, data brokers can use it to join separate databases into a single profile of you. When one of those services is breached, the address ends up on lists used for spam and for phishing, meaning fake messages written to steal your passwords. In 2020, the hardware wallet maker Ledger <a href="https://www.ledger.com/message-ledgers-ceo-data-leak" target="_blank" rel="noopener noreferrer">lost about 1 million customer email addresses</a> from its marketing database, along with the postal details of roughly 272,000 customers, and phishing campaigns by email and SMS followed.</p>
-<h2>An encrypted mailbox and a different address everywhere</h2>
+<p>The most popular mailboxes are free because the company that carries your mail also runs an advertising business. Google <a href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/" class="ext" rel="noopener noreferrer">announced in June 2017</a> that it would stop scanning the content of consumer Gmail to personalise ads, but the mailbox remains tied to an account that can also hold your searches, your videos and your location history.</p>
+<p>Then there is the address itself, which you give to shops, newsletters, apps and public offices. Because it never changes, data brokers can use it to join separate databases into a single profile of you. When one of those services is breached, the address ends up on lists used for spam and for phishing, meaning fake messages written to steal your passwords. In 2020, the hardware wallet maker Ledger <a href="https://www.ledger.com/message-ledgers-ceo-data-leak" class="ext" rel="noopener noreferrer">lost about 1 million customer email addresses</a> from its marketing database, along with the postal details of roughly 272,000 customers, and phishing campaigns by email and SMS followed.</p>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/">blog.google</a></li><li><a class="ext" rel="noopener noreferrer" href="https://www.ledger.com/message-ledgers-ceo-data-leak">ledger.com</a></li></ul></div></section><section class="sec sec--explain" data-no="03" aria-labelledby="an-encrypted-mailbox-and-a-different-address-everywhere"><p class="sec-kicker"><span class="sec-no">03</span><span class="sec-kind">Understand</span></p><h2 id="an-encrypted-mailbox-and-a-different-address-everywhere" tabindex="-1">An encrypted mailbox and a different address everywhere</h2>
 <p>An <strong>encrypted mail provider</strong> stores your mailbox in a form the company cannot read. With Proton Mail and Tuta this is always on, and messages between 2 users of the same provider are end-to-end encrypted. With Mailbox.org and Posteo, you switch it on yourself.</p>
-<p>A message sent to an ordinary Gmail or Outlook address is not end-to-end encrypted and stays readable there. Encryption protects the content, not the metadata (who writes to whom, and when), and a court can still compel a provider to hand over what it holds. In September 2021, Proton <a href="https://proton.me/blog/climate-activist-arrest" target="_blank" rel="noopener noreferrer">confirmed that a Swiss order had obliged it to log the IP address</a> of a climate activist (the number that identifies an internet connection), while the content stayed out of reach. For private conversations, use a messenger from chapter 1.</p>
+<p>A message sent to an ordinary Gmail or Outlook address is not end-to-end encrypted and stays readable there. Encryption protects the content, not the metadata (who writes to whom, and when), and a court can still compel a provider to hand over what it holds. In September 2021, Proton <a href="https://proton.me/blog/climate-activist-arrest" class="ext" rel="noopener noreferrer">confirmed that a Swiss order had obliged it to log the IP address</a> of a climate activist (the number that identifies an internet connection), while the content stayed out of reach. For private conversations, use a messenger from chapter 1.</p>
 <p>An <strong>alias</strong> is a forwarding address such as shop-name@alias-service, created for a single shop. Its messages arrive in your mailbox and the shop never sees your real address. If that alias starts receiving spam, you know who leaked or sold it and you switch it off with 1 click. Brokers find it harder to join your accounts, because every service knows you under a different address.</p>
-<h2>Who can read, forge or lock your mail</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://proton.me/blog/climate-activist-arrest">proton.me</a></li></ul></div></section><section class="sec sec--explain" data-no="04" aria-labelledby="who-can-read-forge-or-lock-your-mail"><p class="sec-kicker"><span class="sec-no">04</span><span class="sec-kind">Understand</span></p><h2 id="who-can-read-forge-or-lock-your-mail" tabindex="-1">Who can read, forge or lock your mail</h2>
 <p>Email was designed without encryption or proof of the sender, so its confidentiality, authenticity and availability all depend on your provider. A message coming from an ordinary mailbox reaches the provider in readable form before it is encrypted for storage, so you rely on the company not to keep a copy, to ship honest apps and to keep your account open. An alias operator is a second third party of the same kind, since every forwarded message crosses its servers.</p>
-<p>End-to-end encryption takes the provider out of the content only when both ends hold keys, inside 1 provider or with PGP between 2 of them. The provider then supplies the other person's key, as a messenger's directory does (chapter 1). Proton lets you <a href="https://proton.me/support/address-verification" target="_blank" rel="noopener noreferrer">mark a contact's key as trusted</a>, and Tuta <a href="https://tuta.com/blog/key-verification" target="_blank" rel="noopener noreferrer">added key verification by QR code in August 2025</a>. With PGP, you compare the key's fingerprint through another channel.</p>
+<p>End-to-end encryption takes the provider out of the content only when both ends hold keys, inside 1 provider or with PGP between 2 of them. The provider then supplies the other person's key, as a messenger's directory does (chapter 1). Proton lets you <a href="https://proton.me/support/address-verification" class="ext" rel="noopener noreferrer">mark a contact's key as trusted</a>, and Tuta <a href="https://tuta.com/blog/key-verification" class="ext" rel="noopener noreferrer">added key verification by QR code in August 2025</a>. With PGP, you compare the key's fingerprint through another channel.</p>
 <p>Availability is the property you can decentralise cheaply. With a domain you own, the provider becomes replaceable and the domain registrar becomes the party to watch. Running your own mail server is possible, but securing it and getting its messages accepted elsewhere make it a poor first project.</p>
-<h2>Choose your mail provider</h2>
+<div class="sec-cited"><p class="sec-cited-label">Cited in this section</p><ul><li><a class="ext" rel="noopener noreferrer" href="https://proton.me/support/address-verification">proton.me</a></li><li><a class="ext" rel="noopener noreferrer" href="https://tuta.com/blog/key-verification">tuta.com</a></li></ul></div></section><section class="sec sec--compare" data-no="05" aria-labelledby="choose-your-mail-provider"><p class="sec-kicker"><span class="sec-no">05</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-mail-provider" tabindex="-1">Choose your mail provider</h2>
 <p>All the options below are funded by their users and not by advertising. They differ in price, in how they encrypt, and in whether you can use an ordinary mail app.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>5 options · 5 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your mail provider"><table>
 <thead>
 <tr>
-<th>Provider</th>
-<th>Based in</th>
-<th>Who you must trust</th>
-<th>Price</th>
-<th>Trade-offs</th>
+<th scope="col">Provider</th>
+<th scope="col">Based in</th>
+<th scope="col">Who you must trust</th>
+<th scope="col">Price</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a></strong></td>
+<tr id="row-proton-mail">
+<th scope="row"><strong><a href="https://proton.me/mail" class="ext" rel="noopener noreferrer">Proton Mail</a></strong></th>
 <td>Switzerland</td>
-<td><a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a> sees ordinary incoming mail before encrypting it, and supplies your contacts' keys. Trusted keys are an optional check.</td>
+<td><a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a> sees ordinary incoming mail before encrypting it, and supplies your contacts' keys. Trusted keys are an optional check.</td>
 <td>Free tier, paid plans</td>
 <td>Mailbox always encrypted. Open-source apps, large ecosystem (calendar, drive, VPN). Subject lines are not end-to-end encrypted. Ordinary mail apps need an extra "bridge" program on a paid plan.</td>
 </tr>
-<tr>
-<td><strong><a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a></strong></td>
+<tr id="row-tuta">
+<th scope="row"><strong><a href="https://tuta.com/" class="ext" rel="noopener noreferrer">Tuta</a></strong></th>
 <td>Germany</td>
-<td><a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a> sees ordinary incoming mail before encrypting it, and supplies your contacts' keys. Key verification is optional.</td>
+<td><a href="https://tuta.com/" class="tool-link ext" rel="noopener noreferrer">Tuta</a> sees ordinary incoming mail before encrypting it, and supplies your contacts' keys. Key verification is optional.</td>
 <td>Free tier, paid plans</td>
 <td>Mailbox always encrypted. Open-source apps, encrypts subject lines too. Uses its own encryption system, so no ordinary mail apps and no PGP (the older standard for encrypting email).</td>
 </tr>
-<tr>
-<td><strong><a href="https://mailbox.org/en/" target="_blank" rel="noopener noreferrer">Mailbox.org</a></strong></td>
+<tr id="row-mailbox-org">
+<th scope="row"><strong><a href="https://mailbox.org/en/" class="ext" rel="noopener noreferrer">Mailbox.org</a></strong></th>
 <td>Germany</td>
-<td><a href="https://mailbox.org/" target="_blank" rel="noopener noreferrer">Mailbox.org</a> can read stored mail until you turn on inbox encryption. With PGP, you verify keys yourself.</td>
+<td><a href="https://mailbox.org/" class="tool-link ext" rel="noopener noreferrer">Mailbox.org</a> can read stored mail until you turn on inbox encryption. With PGP, you verify keys yourself.</td>
 <td>Paid, low price</td>
 <td>Classic mailbox that works with any mail app. Encryption of your inbox (with PGP) is optional, and you switch it on yourself. Less polished on mobile.</td>
 </tr>
-<tr>
-<td><strong><a href="https://posteo.de/en" target="_blank" rel="noopener noreferrer">Posteo</a></strong></td>
+<tr id="row-posteo">
+<th scope="row"><strong><a href="https://posteo.de/en" class="ext" rel="noopener noreferrer">Posteo</a></strong></th>
 <td>Germany</td>
-<td><a href="https://posteo.de/en" target="_blank" rel="noopener noreferrer">Posteo</a> can read stored mail until you turn on encryption. With PGP, you verify keys yourself.</td>
+<td><a href="https://posteo.de/en" class="tool-link ext" rel="noopener noreferrer">Posteo</a> can read stored mail until you turn on encryption. With PGP, you verify keys yourself.</td>
 <td>Paid, low price</td>
 <td>Works with any mail app, can be paid anonymously, including cash by post. Encryption of your stored mail is optional, and you switch it on yourself. Does not support your own domain.</td>
 </tr>
-<tr>
-<td><strong>Your own domain</strong></td>
+<tr id="row-your-own-domain">
+<th scope="row"><strong>Your own domain</strong></th>
 <td>Wherever you host it</td>
 <td>The same provider for content, plus your domain registrar. No provider can keep your address.</td>
 <td>Yearly domain fee plus a paid mailbox</td>
 <td>you@your-name.lt, hosted at one of the providers above. You can change provider later without changing address. You must never forget to renew the domain.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is 1 mailbox from this list, with encryption switched on where it is optional, plus an alias service. If you plan to keep the same address for the next 20 years, consider your own domain from the start.</p>
-<h2>Choose your alias service</h2>
+</section><section class="sec sec--compare" data-no="06" aria-labelledby="choose-your-alias-service"><p class="sec-kicker"><span class="sec-no">06</span><span class="sec-kind">Compare</span></p><h2 id="choose-your-alias-service" tabindex="-1">Choose your alias service</h2>
 <p>An alias service sits between the world and your mailbox. It forwards your mail and can technically see the messages passing through, so pick an operator you trust as much as your mail provider.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>7 options · 4 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Choose your alias service"><table>
 <thead>
 <tr>
-<th>Service</th>
-<th>Who runs it</th>
-<th>Price</th>
-<th>Trade-offs</th>
+<th scope="col">Service</th>
+<th scope="col">Who runs it</th>
+<th scope="col">Price</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">SimpleLogin</a></strong></td>
-<td><a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a> (Switzerland)</td>
+<tr id="row-simplelogin">
+<th scope="row"><strong><a href="https://simplelogin.io/" class="ext" rel="noopener noreferrer">SimpleLogin</a></strong></th>
+<td><a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a> (Switzerland)</td>
 <td>Free tier with a limited number of aliases, paid for unlimited</td>
 <td>Open source. You can also reply and send from an alias. Works with any mailbox, not only Proton. Included in some paid Proton plans.</td>
 </tr>
-<tr>
-<td><strong><a href="https://proton.me/pass/aliases" target="_blank" rel="noopener noreferrer">Proton's built-in aliases</a></strong> ("hide-my-email")</td>
-<td><a href="https://proton.me/" target="_blank" rel="noopener noreferrer">Proton</a> (Switzerland), using <a href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">SimpleLogin</a> technology</td>
+<tr id="row-proton-s-built-in-aliases-hide-my-email">
+<th scope="row"><strong><a href="https://proton.me/pass/aliases" class="ext" rel="noopener noreferrer">Proton's built-in aliases</a></strong> ("hide-my-email")</th>
+<td><a href="https://proton.me/" class="tool-link ext" rel="noopener noreferrer">Proton</a> (Switzerland), using <a href="https://simplelogin.io/" class="tool-link ext" rel="noopener noreferrer">SimpleLogin</a> technology</td>
 <td>A limited number on the free and Mail Plus plans (10 as of September 2026), unlimited with Pass Plus or Proton Unlimited</td>
-<td>Created directly inside <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a> or the <a href="https://proton.me/pass" target="_blank" rel="noopener noreferrer">Proton Pass</a> password manager. Very convenient if your mailbox is at Proton. Your mailbox and your aliases are then in the hands of the same company, so if that account is lost or blocked, both go.</td>
+<td>Created directly inside <a href="https://proton.me/mail" class="tool-link ext" rel="noopener noreferrer">Proton Mail</a> or the <a href="https://proton.me/pass" class="tool-link ext" rel="noopener noreferrer">Proton Pass</a> password manager. Very convenient if your mailbox is at Proton. Your mailbox and your aliases are then in the hands of the same company, so if that account is lost or blocked, both go.</td>
 </tr>
-<tr>
-<td><strong><a href="https://addy.io/" target="_blank" rel="noopener noreferrer">addy.io</a></strong></td>
+<tr id="row-addy-io">
+<th scope="row"><strong><a href="https://addy.io/" class="ext" rel="noopener noreferrer">addy.io</a></strong></th>
 <td>A small independent operator</td>
 <td>Generous free tier, paid plans</td>
 <td>Open source, and you can host it yourself. A small team is also a single point of failure.</td>
 </tr>
-<tr>
-<td><strong><a href="https://duckduckgo.com/email/" target="_blank" rel="noopener noreferrer">DuckDuckGo Email Protection</a></strong></td>
-<td><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">DuckDuckGo</a> (United States)</td>
+<tr id="row-duckduckgo-email-protection">
+<th scope="row"><strong><a href="https://duckduckgo.com/email/" class="ext" rel="noopener noreferrer">DuckDuckGo Email Protection</a></strong></th>
+<td><a href="https://duckduckgo.com/" class="tool-link ext" rel="noopener noreferrer">DuckDuckGo</a> (United States)</td>
 <td>Free</td>
 <td>Very easy, removes trackers hidden in emails. Needs the DuckDuckGo app or browser extension.</td>
 </tr>
-<tr>
-<td><strong><a href="https://relay.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox Relay</a></strong></td>
-<td><a href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer">Mozilla</a> (United States)</td>
+<tr id="row-firefox-relay">
+<th scope="row"><strong><a href="https://relay.firefox.com/" class="ext" rel="noopener noreferrer">Firefox Relay</a></strong></th>
+<td><a href="https://www.mozilla.org/" class="tool-link ext" rel="noopener noreferrer">Mozilla</a> (United States)</td>
 <td>Free tier with a few aliases, paid for more</td>
-<td>Simple, integrated into <a href="https://www.firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>. Few aliases on the free tier.</td>
+<td>Simple, integrated into <a href="https://www.firefox.com/" class="tool-link ext" rel="noopener noreferrer">Firefox</a>. Few aliases on the free tier.</td>
 </tr>
-<tr>
-<td><strong>Extra addresses at your mail provider</strong></td>
+<tr id="row-extra-addresses-at-your-mail-provider">
+<th scope="row"><strong>Extra addresses at your mail provider</strong></th>
 <td>Your mail provider</td>
 <td>Usually in paid plans</td>
-<td><a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Proton Mail</a>, <a href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Tuta</a>, <a href="https://mailbox.org/" target="_blank" rel="noopener noreferrer">Mailbox.org</a> and <a href="https://posteo.de/en" target="_blank" rel="noopener noreferrer">Posteo</a> all let you add a few more addresses to the same mailbox. Nothing new to trust, but the number is limited.</td>
+<td><a href="https://proton.me/mail" class="tool-link ext" rel="noopener noreferrer">Proton Mail</a>, <a href="https://tuta.com/" class="tool-link ext" rel="noopener noreferrer">Tuta</a>, <a href="https://mailbox.org/" class="tool-link ext" rel="noopener noreferrer">Mailbox.org</a> and <a href="https://posteo.de/en" class="tool-link ext" rel="noopener noreferrer">Posteo</a> all let you add a few more addresses to the same mailbox. Nothing new to trust, but the number is limited.</td>
 </tr>
-<tr>
-<td><strong>"Plus addressing"</strong></td>
+<tr id="row-plus-addressing">
+<th scope="row"><strong>"Plus addressing"</strong></th>
 <td>Any provider</td>
 <td>Free</td>
 <td>you+shop@domain.com. Useful for sorting mail, weak for privacy, because your real address is visible inside it and the "+shop" part is easy to remove.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>A reasonable setup for most people is a dedicated alias service with a browser extension, so that creating an alias takes 1 click when you sign up somewhere. Choosing an operator different from your mail provider avoids depending on a single company for both.</p>
-<h2>Disposable inboxes for one-time use</h2>
+</section><section class="sec sec--compare" data-no="07" aria-labelledby="disposable-inboxes-for-one-time-use"><p class="sec-kicker"><span class="sec-no">07</span><span class="sec-kind">Compare</span></p><h2 id="disposable-inboxes-for-one-time-use" tabindex="-1">Disposable inboxes for one-time use</h2>
 <p>Some sites you will never visit again, such as a one-time download, a wifi portal or a forum you read once, and for these a disposable inbox is enough. There is no sign-up. You invent an address on the spot, type it into the form, then open the inbox on the service's website to read the message.</p>
 <p>On public services of this kind there is no password, so anyone who guesses or knows the address can read the inbox. Messages are deleted quickly, you cannot count on finding them later, and many websites refuse these domains. A disposable inbox is therefore fine for a verification code that protects nothing important. It is the wrong tool for an account you want to keep, for anything that contains personal data, or wherever a password reset could be sent later, because whoever types the same address would receive it. For everything else, an alias does the job better.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>3 options · 4 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: Disposable inboxes for one-time use"><table>
 <thead>
 <tr>
-<th>Service</th>
-<th>How you get an address</th>
-<th>How long mail is kept</th>
-<th>Trade-offs</th>
+<th scope="col">Service</th>
+<th scope="col">How you get an address</th>
+<th scope="col">How long mail is kept</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong><a href="https://www.mailinator.com/" target="_blank" rel="noopener noreferrer">Mailinator</a></strong></td>
+<tr id="row-mailinator">
+<th scope="row"><strong><a href="https://www.mailinator.com/" class="ext" rel="noopener noreferrer">Mailinator</a></strong></th>
 <td>Invent any name at its public domain</td>
 <td>A few hours</td>
 <td>Fully public, so anyone who types the same name reads the same inbox. Receive only. Built mainly for software testers, with paid private plans. Widely blocked.</td>
 </tr>
-<tr>
-<td><strong><a href="https://www.guerrillamail.com/" target="_blank" rel="noopener noreferrer">Guerrilla Mail</a></strong></td>
+<tr id="row-guerrilla-mail">
+<th scope="row"><strong><a href="https://www.guerrillamail.com/" class="ext" rel="noopener noreferrer">Guerrilla Mail</a></strong></th>
 <td>A random address is given to you, or you choose one</td>
 <td>1 hour</td>
 <td>No password, so the inbox is protected only by how hard its name is to guess. Offers a "scrambled" address to make guessing harder.</td>
 </tr>
-<tr>
-<td><strong><a href="https://maildrop.cc/" target="_blank" rel="noopener noreferrer">Maildrop</a></strong></td>
+<tr id="row-maildrop">
+<th scope="row"><strong><a href="https://maildrop.cc/" class="ext" rel="noopener noreferrer">Maildrop</a></strong></th>
 <td>Invent any name at its public domain</td>
 <td>At most 10 messages, cleared after 24 hours without new mail</td>
 <td>Fully public, no password. Attachments are removed.</td>
 </tr>
 </tbody>
-</table></div>
-<h2>When a site demands a phone number</h2>
+</table></div></figure>
+</section><section class="sec sec--compare" data-no="08" aria-labelledby="when-a-site-demands-a-phone-number"><p class="sec-kicker"><span class="sec-no">08</span><span class="sec-kind">Compare</span></p><h2 id="when-a-site-demands-a-phone-number" tabindex="-1">When a site demands a phone number</h2>
 <p>Your phone number is an even stronger identifier than your email address. You keep it for years, it links your accounts together, it attracts spam calls, and it is the target of SIM-swap attacks (chapter 2). First check whether the field is truly mandatory. When it is, you have several options, none of them perfect.</p>
-<div class="bk-table"><table>
+<figure class="compare"><figcaption class="compare-cap"><span>5 options · 3 columns</span><span class="compare-hint" aria-hidden="true">Scroll sideways →</span></figcaption><div class="table-scroll" role="region" tabindex="0" aria-label="Comparison table: When a site demands a phone number"><table>
 <thead>
 <tr>
-<th>Option</th>
-<th>How it works</th>
-<th>Trade-offs</th>
+<th scope="col">Option</th>
+<th scope="col">How it works</th>
+<th scope="col">Trade-offs</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>A second SIM or eSIM, used only for sign-ups</strong></td>
+<tr id="row-a-second-sim-or-esim-used-only-for-sign-ups">
+<th scope="row"><strong>A second SIM or eSIM, used only for sign-ups</strong></th>
 <td>A real mobile number from an ordinary operator, kept apart from your personal one</td>
-<td>Accepted everywhere. Prepaid numbers expire if you do not top them up. Many EU countries require an identity document to buy a SIM, including <a href="https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards" target="_blank" rel="noopener noreferrer">Lithuania for new prepaid cards since January 2025</a>. The rules vary, and this option separates your numbers without making you anonymous.</td>
+<td>Accepted everywhere. Prepaid numbers expire if you do not top them up. Many EU countries require an identity document to buy a SIM, including <a href="https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards" class="ext" rel="noopener noreferrer">Lithuania for new prepaid cards since January 2025</a>. The rules vary, and this option separates your numbers without making you anonymous.</td>
 </tr>
-<tr>
-<td><strong>Virtual (VoIP) number apps:</strong> <a href="https://jmp.chat/" target="_blank" rel="noopener noreferrer">JMP.chat</a>, <a href="https://hushed.com/" target="_blank" rel="noopener noreferrer">Hushed</a>, <a href="https://mysudo.com/" target="_blank" rel="noopener noreferrer">MySudo</a></td>
+<tr id="row-virtual-voip-number-apps-jmp-chat-hushed-mysudo">
+<th scope="row"><strong>Virtual (VoIP) number apps:</strong> <a href="https://jmp.chat/" class="ext" rel="noopener noreferrer">JMP.chat</a>, <a href="https://hushed.com/" class="ext" rel="noopener noreferrer">Hushed</a>, <a href="https://mysudo.com/" class="ext" rel="noopener noreferrer">MySudo</a></th>
 <td>A paid number that works over the internet, inside an app</td>
 <td>JMP.chat is open source but offers only US and Canadian numbers. Hushed (closed source) offers US, Canadian and UK numbers. MySudo (closed source) can be installed in only a few countries, so check before you count on it. Many services refuse VoIP numbers, and a European site may refuse a foreign one.</td>
 </tr>
-<tr>
-<td><strong>A data eSIM paid in bitcoin,</strong> for example <a href="https://silent.link/" target="_blank" rel="noopener noreferrer">Silent.link</a></td>
+<tr id="row-a-data-esim-paid-in-bitcoin-for-example-silent-link">
+<th scope="row"><strong>A data eSIM paid in bitcoin,</strong> for example <a href="https://silent.link/" class="ext" rel="noopener noreferrer">Silent.link</a></th>
 <td>No account. Some plans include a US or UK mobile number that can receive SMS</td>
 <td>Costs more than an ordinary SIM. The number is leased by the year, and it is gone if you do not renew it. A single small operator.</td>
 </tr>
-<tr>
-<td><strong>Paid one-time SMS reception services</strong></td>
+<tr id="row-paid-one-time-sms-reception-services">
+<th scope="row"><strong>Paid one-time SMS reception services</strong></th>
 <td>You rent a number for a few minutes to receive a single code</td>
 <td>The number then goes to someone else, who could use it to take over the account. Quality varies widely, and many sites forbid this in their terms.</td>
 </tr>
-<tr>
-<td><strong>Free public "receive SMS online" websites</strong></td>
+<tr id="row-free-public-receive-sms-online-websites">
+<th scope="row"><strong>Free public "receive SMS online" websites</strong></th>
 <td>Shared numbers whose incoming messages are displayed on a web page</td>
 <td>Everyone sees your code. The numbers are recycled and mostly blocked already. Only for something that does not matter at all.</td>
 </tr>
 </tbody>
-</table></div>
+</table></div></figure>
 <p>These options have limits too. If you lose access to the number, you can lose the account, so never use a number you do not control for your bank, for two-factor authentication or for any important account. Respect the terms of service of the site and the law of your country. The goal is simply to avoid handing your personal number to every shop and app.</p>
-<h2>Step by step</h2>
-<p>The example uses Proton Mail for the mailbox and SimpleLogin for the aliases, because they are a common first step. Both belong to Proton, which is convenient but means your mailbox and your aliases depend on a single company. If you prefer to spread the risk, keep the mailbox and choose <a href="https://addy.io" target="_blank" rel="noopener noreferrer">addy.io</a> for the aliases, or keep SimpleLogin and choose another mailbox, since the steps are the same.</p>
-<ol>
-<li><strong>Open the new mailbox.</strong> Choose an address you can keep for years. Protect it with a long, unique password from your password manager and a second factor (chapter 2). Write down the recovery phrase on paper, because if you lose the password, nobody can decrypt your mail for you.</li>
-<li><strong>Set up the alias service.</strong> Create the account, connect it to your new mailbox, and install its browser extension (and its phone app, if it has one).</li>
-<li><strong>Move your most important accounts first.</strong> These are your bank, government services, your phone operator, your Apple or Google account and your password manager. Change the email address in each of them. Use your real new address or a dedicated alias, as you prefer, but note your choice in your password manager.</li>
-<li><strong>Forward the old mailbox.</strong> In the settings of your old mailbox, turn on automatic forwarding to the new one. Most encrypted providers also offer an import tool that copies your old messages and contacts.</li>
-<li><strong>Move the rest as it comes.</strong> Each time a forwarded message arrives from a service you still use, change the address there to a new alias. Delete accounts you no longer use.</li>
-<li><strong>Create a new alias for every signup.</strong> A shop, a newsletter or a wifi portal each gets its own address. Name the alias after the service, so that a leak is easy to trace.</li>
-<li><strong>Keep the old address for at least a year.</strong> Do not delete it, because forgotten accounts, old contacts and password resets will keep arriving there for a long time.</li>
+</section><section class="sec sec--steps" data-no="09" aria-labelledby="step-by-step"><p class="sec-kicker"><span class="sec-no">09</span><span class="sec-kind">Tutorial</span></p><h2 id="step-by-step" tabindex="-1">Step by step</h2>
+<p>The example uses Proton Mail for the mailbox and SimpleLogin for the aliases, because they are a common first step. Both belong to Proton, which is convenient but means your mailbox and your aliases depend on a single company. If you prefer to spread the risk, keep the mailbox and choose <a href="https://addy.io" class="tool-link ext" rel="noopener noreferrer">addy.io</a> for the aliases, or keep SimpleLogin and choose another mailbox, since the steps are the same.</p>
+<ol class="steps">
+<li id="step-1"><strong>Open the new mailbox.</strong> Choose an address you can keep for years. Protect it with a long, unique password from your password manager and a second factor (chapter 2). Enable the recovery phrase and write it on paper. It can restore both access and encrypted data; an email or SMS password reset alone cannot decrypt your old mail. Check the provider's recovery instructions before you rely on it.</li>
+<li id="step-2"><strong>Set up the alias service.</strong> Create the account, connect it to your new mailbox, and install its browser extension (and its phone app, if it has one).</li>
+<li id="step-3"><strong>Move your most important accounts first.</strong> These are your bank, government services, your phone operator, your Apple or Google account and your password manager. Change the email address in each of them. Use your real new address or a dedicated alias, as you prefer, but note your choice in your password manager.</li>
+<li id="step-4"><strong>Forward the old mailbox.</strong> In the settings of your old mailbox, turn on automatic forwarding to the new one. Most encrypted providers also offer an import tool that copies your old messages and contacts.</li>
+<li id="step-5"><strong>Move the rest as it comes.</strong> Each time a forwarded message arrives from a service you still use, change the address there to a new alias. Delete accounts you no longer use.</li>
+<li id="step-6"><strong>Create a new alias for every signup.</strong> A shop, a newsletter or a wifi portal each gets its own address. Name the alias after the service, so that a leak is easy to trace.</li>
+<li id="step-7"><strong>Keep the old address for at least a year.</strong> Do not delete it, because forgotten accounts, old contacts and password resets will keep arriving there for a long time.</li>
 </ol>
-<h2>Mistakes to avoid</h2>
+</section><section class="sec sec--pitfalls" data-no="10" aria-labelledby="mistakes-to-avoid"><p class="sec-kicker"><span class="sec-no">10</span><span class="sec-kind">Watch out</span></p><h2 id="mistakes-to-avoid" tabindex="-1">Mistakes to avoid</h2>
 <ul>
 <li><strong>Thinking an encrypted provider makes all your email private.</strong> It protects your mailbox, while a message sent to an ordinary mailbox stays readable at the other end.</li>
 <li><strong>Deleting the old address too early.</strong> Some providers recycle abandoned addresses, and a stranger could then receive the password resets of accounts you forgot.</li>
-<li><strong>Losing the recovery phrase.</strong> With an encrypted mailbox, resetting the password without it means losing access to your old messages.</li>
+<li><strong>Losing the recovery phrase.</strong> A password reset alone may leave your old messages unreadable. Set up and protect a data recovery method in advance; Proton supports a recovery phrase and other methods.</li>
 <li><strong>Letting your own domain expire.</strong> Whoever registers it after you receives your mail and can reset your accounts. Turn on automatic renewal and keep the payment card up to date.</li>
 <li><strong>Using the same alias for everything.</strong> An alias shared between 10 services is just a second real address, since the value comes from having a different alias for each service.</li>
 <li><strong>Putting the bank behind an alias service you do not fully trust.</strong> For the few accounts that matter most, your real address at your own provider is a perfectly good choice.</li>
 </ul>
-<h2>Go further</h2>
-<ul>
-<li><strong>At PROOF:</strong> "Why Your Internet Security Depends on Your Keys", by Satoshine. An encrypted mailbox works because only you hold the key that opens it.</li>
-<li><strong>Compare providers in detail:</strong> Privacy Guides, <a href="https://www.privacyguides.org/en/email/" target="_blank" rel="noopener noreferrer">"Email Services"</a> and <a href="https://www.privacyguides.org/en/email-aliasing/" target="_blank" rel="noopener noreferrer">"Email Aliasing"</a>.</li>
-<li><strong>Check whether your address has already leaked:</strong> <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a>.</li>
+</section><section class="sec sec--further" data-no="11" aria-labelledby="go-further"><p class="sec-kicker"><span class="sec-no">11</span><span class="sec-kind">Go further</span></p><h2 id="go-further" tabindex="-1">Go further</h2>
+<ul class="refs">
+<li><strong>Compare providers in detail:</strong> Privacy Guides, <a href="https://www.privacyguides.org/en/email/" class="ext" rel="noopener noreferrer">"Email Services"</a> and <a href="https://www.privacyguides.org/en/email-aliasing/" class="ext" rel="noopener noreferrer">"Email Aliasing"</a>.</li>
+<li><strong>Check whether your address has already leaked:</strong> <a href="https://haveibeenpwned.com/" class="ext" rel="noopener noreferrer">Have I Been Pwned</a>.</li>
 <li><strong>Next chapter:</strong> your network.</li>
 </ul>
-<h2>Sources</h2>
-<ul>
-<li><a href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/" target="_blank" rel="noopener noreferrer">As G Suite gains traction in the enterprise, G Suite's Gmail and consumer Gmail to more closely align</a>, Google, 23 June 2017.</li>
-<li><a href="https://www.ledger.com/message-ledgers-ceo-data-leak" target="_blank" rel="noopener noreferrer">Message by Ledger's CEO: update on the July data breach</a>, Ledger, 21 December 2020.</li>
-<li><a href="https://proton.me/blog/climate-activist-arrest" target="_blank" rel="noopener noreferrer">Important clarifications regarding arrest of climate activist</a>, Proton, 6 September 2021.</li>
-<li><a href="https://proton.me/support/address-verification" target="_blank" rel="noopener noreferrer">Address verification with trusted keys</a>, Proton, consulted in September 2026.</li>
-<li><a href="https://tuta.com/blog/key-verification" target="_blank" rel="noopener noreferrer">Tuta introduces key verification</a>, Tuta, 26 August 2025.</li>
-<li><a href="https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards" target="_blank" rel="noopener noreferrer">End to anonymity: Lithuania to require users to register phone SIM cards</a>, LRT, 14 November 2024.</li>
+</section><section class="sec sec--sources" data-no="12" aria-labelledby="sources"><p class="sec-kicker"><span class="sec-no">12</span><span class="sec-kind">References</span></p><h2 id="sources" tabindex="-1">Sources</h2>
+<ul class="refs">
+<li><a href="https://proton.me/support/set-account-recovery-methods" class="ext" rel="noopener noreferrer">Proton Account recovery explained</a>, Proton Support, checked 22 October 2026.</li>
+<li><a href="https://blog.google/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/" class="ext" rel="noopener noreferrer">As G Suite gains traction in the enterprise, G Suite's Gmail and consumer Gmail to more closely align</a>, Google, 23 June 2017.</li>
+<li><a href="https://www.ledger.com/message-ledgers-ceo-data-leak" class="ext" rel="noopener noreferrer">Message by Ledger's CEO: update on the July data breach</a>, Ledger, 21 December 2020.</li>
+<li><a href="https://proton.me/blog/climate-activist-arrest" class="ext" rel="noopener noreferrer">Important clarifications regarding arrest of climate activist</a>, Proton, 6 September 2021.</li>
+<li><a href="https://proton.me/support/address-verification" class="ext" rel="noopener noreferrer">Address verification with trusted keys</a>, Proton, consulted in September 2026.</li>
+<li><a href="https://tuta.com/blog/key-verification" class="ext" rel="noopener noreferrer">Tuta introduces key verification</a>, Tuta, 26 August 2025.</li>
+<li><a href="https://www.lrt.lt/en/news-in-english/19/2412964/end-to-anonymity-lithuania-to-require-users-to-register-phone-sim-cards" class="ext" rel="noopener noreferrer">End to anonymity: Lithuania to require users to register phone SIM cards</a>, LRT, 14 November 2024.</li>
 </ul>
-  </article>
-    <section class="bk-cl-box">
-      <h2>Your checklist</h2>
-      <ul class="bk-cl">
-      <li class="bk-cl-item" data-id="email-1" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="email-1" aria-label="Open a mailbox at a provider funded by its users"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="email-1">Open a mailbox at a provider funded by its users</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="email-2" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="email-2" aria-label="Set up an alias service and its browser extension"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="email-2">Set up an alias service and its browser extension</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="email-3" data-effort="1">
-        <label class="bk-check"><input type="checkbox" id="email-3" aria-label="Create your first alias and use it for your next signup"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="email-3">Create your first alias and use it for your next signup</label>
-        <span class="bk-effort">5 min</span>
-      </li>
-      <li class="bk-cl-item" data-id="email-4" data-effort="2">
-        <label class="bk-check"><input type="checkbox" id="email-4" aria-label="Move your 5 most important accounts to the new address"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="email-4">Move your 5 most important accounts to the new address</label>
-        <span class="bk-effort">1 hour</span>
-      </li>
-      <li class="bk-cl-item" data-id="email-5" data-effort="3">
-        <label class="bk-check"><input type="checkbox" id="email-5" aria-label="Forward the old mailbox and move the remaining accounts"><span class="bk-box"></span></label>
-        <label class="bk-cl-title" for="email-5">Forward the old mailbox and move the remaining accounts</label>
-        <span class="bk-effort">Weekend</span>
-      </li>
-      </ul>
-      <p class="bk-cl-all"><a href="/book/en/checklist/">Your checklist: all →</a></p>
-    </section>
-  <div class="bk-pager">
-<a class="bk-prev" href="/book/en/browser/"><span>Previous</span>Your browser and your searches</a>
-<a class="bk-next" href="/book/en/network/"><span>Next</span>Your network</a>
-</div>
-  <p class="bk-back"><a href="/book/en/#contents">Back to contents</a></p>
-</main>
-
-<!-- FOOTER -->
-<footer>
-  <span>PROOF &lt;conference&gt; Vilnius 2026</span>
-  <span id="footer-center">no cookies · no tracking · no bullshit</span>
-  <span><a href="mailto:contact@proofconference.com">contact</a></span>
-</footer>
-
-<script src="/book/book.js?v=18961c46" defer></script>
+</section><section class="sec sec--checklist" data-no="13" aria-labelledby="your-checklist"><p class="sec-kicker"><span class="sec-no">13</span><span class="sec-kind">Act</span></p><h2 id="your-checklist" tabindex="-1">Your checklist</h2>
+<div class="checklist"><div class="cl-head"><p class="cl-count"><strong data-stat="ch-done" data-ch="email">0</strong> of 5 actions done</p><span class="bar" data-bar="ch" data-ch="email" aria-hidden="true"><i></i></span></div><ul class="actions"><li class="action" id="action-email-open-mailbox"><span class="legacy-anchor" id="email-1" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="email-open-mailbox" disabled="disabled"><span class="action-text">Open a mailbox at a provider funded by its users</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-email-alias-service"><span class="legacy-anchor" id="email-2" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="email-alias-service" disabled="disabled"><span class="action-text">Set up an alias service and its browser extension</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-email-first-alias"><span class="legacy-anchor" id="email-3" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="email-first-alias" disabled="disabled"><span class="action-text">Create your first alias and use it for your next signup</span><span class="effort"><span class="sr-only">, effort: </span>5 min</span></label></li><li class="action" id="action-email-move-5-accounts"><span class="legacy-anchor" id="email-4" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="email-move-5-accounts" disabled="disabled"><span class="action-text">Move your 5 most important accounts to the new address</span><span class="effort"><span class="sr-only">, effort: </span>1 hour</span></label></li><li class="action" id="action-email-forward-old-mailbox"><span class="legacy-anchor" id="email-5" aria-hidden="true"></span><label class="action-row"><input type="checkbox" class="action-cb" data-action="email-forward-old-mailbox" disabled="disabled"><span class="action-text">Forward the old mailbox and move the remaining accounts</span><span class="effort"><span class="sr-only">, effort: </span>weekend</span></label></li></ul><p class="cl-hint">One action at a time is enough. Your ticks and read marks are saved in this browser only, on this device, with no account. <a href="/book/en/checklist/">See all actions on one page</a>.</p><noscript><p class="cl-hint">Ticking an action needs JavaScript. The list stays readable without it.</p></noscript></div></section></div><footer class="chapter-end"><label class="read-row"><input type="checkbox" class="read-cb" data-read="email" disabled><span>I have read this chapter</span></label><noscript><p class="cl-hint">Marking this chapter as read requires JavaScript.</p></noscript><nav class="pager" aria-label="Chapters of the book"><a class="pager-prev part-1" href="/book/en/browser/"><span class="pager-dir">Previous · Chapter 3</span><span class="pager-title">Your browser and your searches</span></a><a class="pager-next part-1" href="/book/en/network/"><span class="pager-dir">Next · Chapter 5</span><span class="pager-title">Your network</span></a></nav></footer></article></div></div></main>
+<footer class="site-footer" id="site-footer"><div class="footer-inner"><p class="footer-mark"><span class="wm">PROOF</span> A Guide to Autonomy</p><p>First edition, PROOF edition. An initiative of Cypher Baltics: 18 chapters and 90 actions.</p><p>Text <a class="ext" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · original code <a class="ext" rel="noopener noreferrer" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0-or-later</a>. Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet.</p><p>Your ticks and read marks are saved in this browser only, on this device, with no account.</p><p class="footer-links"><a href="/en/">PROOF &lt;conference&gt;</a> · <a href="/book/email/" hreflang="lt" lang="lt">Lietuvių</a> · <a href="mailto:contact@proofconference.com">contact@proofconference.com</a></p></div></footer>
+<dialog class="dialog dialog--search" id="search-dialog" aria-labelledby="search-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="search-title">Search the guide</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><form class="search-form" role="search" id="search-form"><label class="search-label" for="search-input">Questions, tools, steps and words</label><input class="search-input" id="search-input" type="search" autocomplete="off" spellcheck="false" aria-describedby="search-scope" aria-controls="search-results"><p class="search-scope" id="search-scope">Full text covers every page of this edition: the chapters, the introduction, the part openings, the glossary, the checklist actions and the guide pages.</p></form><p class="sr-only" id="search-status" aria-live="polite"></p><div class="dialog-scroll search-results" id="search-results"></div></div></dialog>
+<dialog class="dialog dialog--drawer" id="contents-dialog" aria-labelledby="contents-title"><div class="dialog-box"><div class="dialog-head"><h2 class="dialog-title" id="contents-title">Contents</h2><button type="button" class="dialog-close" data-close>Close <span class="dialog-esc" aria-hidden="true">Esc</span></button></div><div class="dialog-scroll" id="contents-body"><nav class="drawer" aria-label="Book contents"><ul class="drawer-links"><li><a href="/book/en/">Cover</a></li><li><a href="/book/en/start/">Where to start?</a></li><li><a href="/book/en/#progress">Your progress</a></li></ul><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/introduction/"><span class="ch-n">00</span><span class="ch-t">Introduction</span><span class="ch-s">Before the chapters</span></a></li></ol><section class="drawer-part part-1" aria-labelledby="dp-1"><h3 class="drawer-part-title" id="dp-1"><span>Part 1</span> Privacy</h3><ol class="ch-list"><li class="ch-item part-1"><a class="ch-row" href="/book/en/privacy/"><span class="ch-n">··</span><span class="ch-t">Proof of Privacy</span><span class="ch-s">Opening essay of part 1</span></a></li><li class="ch-item part-1" data-ch-item="messages"><a class="ch-row" href="/book/en/messages/"><span class="ch-n">01</span><span class="ch-t">Your messages</span><span class="ch-s"><span data-stat="ch-done" data-ch="messages">0</span> of 5 actions done<span data-read-label="messages"></span></span></a></li><li class="ch-item part-1" data-ch-item="passwords"><a class="ch-row" href="/book/en/passwords/"><span class="ch-n">02</span><span class="ch-t">Your passwords and your accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="passwords">0</span> of 5 actions done<span data-read-label="passwords"></span></span></a></li><li class="ch-item part-1" data-ch-item="browser"><a class="ch-row" href="/book/en/browser/"><span class="ch-n">03</span><span class="ch-t">Your browser and your searches</span><span class="ch-s"><span data-stat="ch-done" data-ch="browser">0</span> of 5 actions done<span data-read-label="browser"></span></span></a></li><li class="ch-item part-1" data-ch-item="email"><a class="ch-row" href="/book/en/email/" aria-current="page"><span class="ch-n">04</span><span class="ch-t">Your email and your aliases</span><span class="ch-s"><span data-stat="ch-done" data-ch="email">0</span> of 5 actions done<span data-read-label="email"></span></span></a></li><li class="ch-item part-1" data-ch-item="network"><a class="ch-row" href="/book/en/network/"><span class="ch-n">05</span><span class="ch-t">Your network</span><span class="ch-s"><span data-stat="ch-done" data-ch="network">0</span> of 5 actions done<span data-read-label="network"></span></span></a></li></ol></section><section class="drawer-part part-2" aria-labelledby="dp-2"><h3 class="drawer-part-title" id="dp-2"><span>Part 2</span> Autonomy</h3><ol class="ch-list"><li class="ch-item part-2"><a class="ch-row" href="/book/en/autonomy/"><span class="ch-n">··</span><span class="ch-t">Proof of Autonomy</span><span class="ch-s">Opening essay of part 2</span></a></li><li class="ch-item part-2" data-ch-item="keys"><a class="ch-row" href="/book/en/keys/"><span class="ch-n">06</span><span class="ch-t">Keys instead of accounts</span><span class="ch-s"><span data-stat="ch-done" data-ch="keys">0</span> of 5 actions done<span data-read-label="keys"></span></span></a></li><li class="ch-item part-2" data-ch-item="nostr"><a class="ch-row" href="/book/en/nostr/"><span class="ch-n">07</span><span class="ch-t">Nostr: an open network without a company in charge</span><span class="ch-s"><span data-stat="ch-done" data-ch="nostr">0</span> of 5 actions done<span data-read-label="nostr"></span></span></a></li><li class="ch-item part-2" data-ch-item="big-tech"><a class="ch-row" href="/book/en/big-tech/"><span class="ch-n">08</span><span class="ch-t">Replacing Big Tech services, one at a time</span><span class="ch-s"><span data-stat="ch-done" data-ch="big-tech">0</span> of 5 actions done<span data-read-label="big-tech"></span></span></a></li><li class="ch-item part-2" data-ch-item="phone"><a class="ch-row" href="/book/en/phone/"><span class="ch-n">09</span><span class="ch-t">Taking back control of your phone</span><span class="ch-s"><span data-stat="ch-done" data-ch="phone">0</span> of 5 actions done<span data-read-label="phone"></span></span></a></li><li class="ch-item part-2" data-ch-item="self-hosting"><a class="ch-row" href="/book/en/self-hosting/"><span class="ch-n">10</span><span class="ch-t">Hosting your own services</span><span class="ch-s"><span data-stat="ch-done" data-ch="self-hosting">0</span> of 5 actions done<span data-read-label="self-hosting"></span></span></a></li><li class="ch-item part-2" data-ch-item="ai"><a class="ch-row" href="/book/en/ai/"><span class="ch-n">11</span><span class="ch-t">AI without giving yourself away</span><span class="ch-s"><span data-stat="ch-done" data-ch="ai">0</span> of 5 actions done<span data-read-label="ai"></span></span></a></li></ol></section><section class="drawer-part part-3" aria-labelledby="dp-3"><h3 class="drawer-part-title" id="dp-3"><span>Part 3</span> Money and Bitcoin</h3><ol class="ch-list"><li class="ch-item part-3"><a class="ch-row" href="/book/en/work/"><span class="ch-n">··</span><span class="ch-t">Proof of Work</span><span class="ch-s">Opening essay of part 3</span></a></li><li class="ch-item part-3" data-ch-item="savings"><a class="ch-row" href="/book/en/savings/"><span class="ch-n">12</span><span class="ch-t">Where to keep the fruit of your work</span><span class="ch-s"><span data-stat="ch-done" data-ch="savings">0</span> of 5 actions done<span data-read-label="savings"></span></span></a></li><li class="ch-item part-3" data-ch-item="first-wallet"><a class="ch-row" href="/book/en/first-wallet/"><span class="ch-n">13</span><span class="ch-t">Your first wallet and your first sats</span><span class="ch-s"><span data-stat="ch-done" data-ch="first-wallet">0</span> of 5 actions done<span data-read-label="first-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="seed"><a class="ch-row" href="/book/en/seed/"><span class="ch-n">14</span><span class="ch-t">Backing up your seed phrase</span><span class="ch-s"><span data-stat="ch-done" data-ch="seed">0</span> of 5 actions done<span data-read-label="seed"></span></span></a></li><li class="ch-item part-3" data-ch-item="lightning-and-euros"><a class="ch-row" href="/book/en/lightning-and-euros/"><span class="ch-n">15</span><span class="ch-t">Lightning and euros in everyday life</span><span class="ch-s"><span data-stat="ch-done" data-ch="lightning-and-euros">0</span> of 5 actions done<span data-read-label="lightning-and-euros"></span></span></a></li><li class="ch-item part-3" data-ch-item="bitcoin-privacy"><a class="ch-row" href="/book/en/bitcoin-privacy/"><span class="ch-n">16</span><span class="ch-t">Privacy in Bitcoin</span><span class="ch-s"><span data-stat="ch-done" data-ch="bitcoin-privacy">0</span> of 5 actions done<span data-read-label="bitcoin-privacy"></span></span></a></li><li class="ch-item part-3" data-ch-item="hardware-wallet"><a class="ch-row" href="/book/en/hardware-wallet/"><span class="ch-n">17</span><span class="ch-t">Hardware wallets</span><span class="ch-s"><span data-stat="ch-done" data-ch="hardware-wallet">0</span> of 5 actions done<span data-read-label="hardware-wallet"></span></span></a></li><li class="ch-item part-3" data-ch-item="node"><a class="ch-row" href="/book/en/node/"><span class="ch-n">18</span><span class="ch-t">Running your own node</span><span class="ch-s"><span data-stat="ch-done" data-ch="node">0</span> of 5 actions done<span data-read-label="node"></span></span></a></li></ol></section><div class="drawer-part"><ol class="ch-list"><li class="ch-item"><a class="ch-row" href="/book/en/checklist/"><span class="ch-n">✓</span><span class="ch-t">All actions</span><span class="ch-s"><span data-stat="actions-done">0</span> of 90 actions done</span></a></li><li class="ch-item"><a class="ch-row" href="/book/en/glossary/"><span class="ch-n">Az</span><span class="ch-t">Glossary</span><span class="ch-s">44 terms</span></a></li></ol></div><p class="drawer-scope">18 chapters and 90 actions, in English.</p></nav></div></div></dialog>
 </body>
 </html>

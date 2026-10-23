@@ -16,7 +16,7 @@ sources were revised and rendered as static pages in the guide interface,
 under /book/en/ and /book/ of proofconference.com, with shared checklist
 action IDs, a search index, an offline copy, this notice, a legal page and a
 source archive. The exact sources of this version are in the source archive
-offered on every page (/book/source/proof-guide-source-2026-10-23-r2.zip).
+offered on every page (/book/source/proof-guide-source-2026-10-23-r3.zip).
 
 LICENCES
 

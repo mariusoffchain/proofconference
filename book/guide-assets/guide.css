@@ -923,13 +923,7 @@ a.hbtn { text-decoration: none; }
 /* Former checkbox IDs of the checklist (/book/en/<chapter>/#<chapter>-<n>), kept as anchors */
 .legacy-anchor { display: block; height: 0; }
 
-/* Talk recordings on the cover (#replays), as plain links */
-.rp-guide { margin-top: 28px; max-width: 46rem; border-top: 1px solid var(--line); }
-.rp-guide-item { padding: 16px 4px; border-bottom: 1px solid var(--line); display: grid; gap: 4px; }
-.rp-guide-kicker { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-text); }
-.rp-guide-title { font-size: 0.98rem; line-height: 1.45; color: var(--white); }
-.rp-guide-spk, .rp-guide-links { font-size: 12.5px; line-height: 1.6; color: var(--muted); }
-.rp-guide-links a { display: inline-block; padding: 2px 0; color: var(--white); text-underline-offset: 3px; }
+/* Talk recordings on the cover (#replays): the cards are styled by replays.css, appended to guide.css */
 .block-text a { color: var(--white); text-underline-offset: 3px; }
 
 /* Footer links back to the conference site */
@@ -937,3 +931,80 @@ a.hbtn { text-decoration: none; }
 
 /* Legal page: the SHA-256 of the source archive wraps on narrow screens */
 .legal-hash { overflow-wrap: anywhere; word-break: break-all; }
+
+/* ── Talk recordings of the cover (#replays) ──
+   Scoped copy of the replay styles of the conference home page (style.css, sections "AFTER THE CONFERENCE" and
+   "Replays: thumbnail on the right"), same cards, thumbnail, white button and player box as the home page.
+   Everything sits under .guide-replays so no other part of the guide is affected. Host colours map to the guide
+   variables: --border -> --line, --c-priv -> --part-1, --c-dece -> --part-2, --c-mono -> --part-3.
+   The markup comes from site/build_site.py replay_item; the player is replays.js, the host player with an embed-only referrer policy. */
+.guide-replays { margin-top: 28px; max-width: 46rem; }
+.guide-replays .rp-list { list-style: none; margin: 0; padding: 0; }
+.guide-replays .rp-item {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+  padding: 18px 22px; margin-bottom: 8px;
+  background: rgba(255,255,255,0.03);
+  border-left: 2px solid var(--line);
+}
+.guide-replays .rp-item.priv { border-left-color: var(--part-1); }
+.guide-replays .rp-item.auto { border-left-color: var(--part-2); }
+.guide-replays .rp-item.mono { border-left-color: var(--part-3); }
+.guide-replays .rp-text { flex: 1 1 0; min-width: 0; }
+.guide-replays .rp-title { font-size: 15px; line-height: 1.45; color: var(--white); }
+.guide-replays .rp-spk { font-size: 12px; margin-top: 6px; }
+.guide-replays .rp-item.priv .rp-spk { color: var(--part-1-text); }
+.guide-replays .rp-item.auto .rp-spk { color: var(--part-2-text); }
+.guide-replays .rp-item.mono .rp-spk { color: var(--part-3-text); }
+.guide-replays .rp-badge {
+  flex-shrink: 0;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid rgba(255,255,255,0.15);
+  padding: 5px 9px; white-space: nowrap;
+}
+.guide-replays .rp-has-video { padding: 22px; column-gap: 28px; row-gap: 20px; }
+.guide-replays .rp-alt { font-size: 12px; margin-top: 8px; color: var(--muted); }
+.guide-replays .rp-alt a { color: var(--white); text-underline-offset: 3px; }
+.guide-replays .rp-ext { color: var(--white); border-color: rgba(255,255,255,0.5); text-decoration: none; }
+.guide-replays .rp-play {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 18px;
+  font-family: var(--display); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--black); background: var(--white); border: 1px solid var(--white);
+  padding: 11px 18px; text-decoration: none; cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.guide-replays .rp-play::before {
+  content: ''; width: 0; height: 0;
+  border-left: 9px solid currentColor; border-top: 6px solid transparent; border-bottom: 6px solid transparent;
+}
+.guide-replays .rp-play:hover { background: transparent; color: var(--white); }
+.guide-replays .rp-play:focus-visible, .guide-replays .rp-thumb:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+.guide-replays .rp-thumb {
+  flex: 0 0 280px; position: relative; display: block; overflow: hidden;
+  aspect-ratio: 16 / 9; background: #000; cursor: pointer;
+}
+.guide-replays .rp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s, opacity 0.4s; }
+.guide-replays .rp-thumb::before {
+  content: ''; position: absolute; z-index: 1; left: 50%; top: 50%; width: 52px; height: 52px;
+  transform: translate(-50%, -50%); border-radius: 50%; background: rgba(255,255,255,0.92);
+  transition: transform 0.2s;
+}
+.guide-replays .rp-thumb::after {
+  content: ''; position: absolute; z-index: 2; left: 50%; top: 50%; width: 0; height: 0;
+  transform: translate(-35%, -50%);
+  border-left: 15px solid #000; border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+}
+.guide-replays .rp-thumb:hover img { transform: scale(1.03); opacity: 0.85; }
+.guide-replays .rp-thumb:hover::before { transform: translate(-50%, -50%) scale(1.08); }
+.guide-replays .rp-playing .rp-thumb, .guide-replays .rp-playing .rp-play { display: none; }
+.guide-replays .rp-embed { flex: 1 1 100%; aspect-ratio: 16 / 9; }
+.guide-replays .rp-embed iframe, .guide-replays .rp-embed video { width: 100%; height: 100%; border: 0; display: block; background: #000; }
+.guide-replays .rp-kicker { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--part-3-text); margin-bottom: 8px; }
+.guide-replays .rp-closing { margin-top: 20px; background: rgba(255,255,255,0.06); border-left-width: 4px; }
+@media (max-width: 768px) {
+  .guide-replays .rp-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .guide-replays .rp-text, .guide-replays .rp-thumb, .guide-replays .rp-embed { flex: none; width: 100%; }
+  .guide-replays .rp-thumb { order: -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-replays .rp-thumb img, .guide-replays .rp-thumb::before, .guide-replays .rp-play { transition: none; }
+}

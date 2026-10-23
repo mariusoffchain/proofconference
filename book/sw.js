@@ -8,7 +8,7 @@
 // - On activation it keeps the added files of the former copies, then deletes only the former caches of this book
 //   (proof-book-*), never another cache of the origin.
 // - The source archive (/book/source/) is left to the browser: never precached, never stored, online only.
-const CACHE = 'proof-book-adc7e505';
+const CACHE = 'proof-book-4ee40450';
 const CORE = [
   '/book/',
   '/book/ai/',
@@ -53,10 +53,10 @@ const CORE = [
   '/book/guide-assets/fonts/righteous-latin-ext.woff2?v=6373d7c7c233',
   '/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2',
   '/book/guide-assets/guide.css?v=cda70d6706ad',
-  '/book/guide-assets/guide.js?v=d07b9e7f14e1',
+  '/book/guide-assets/guide.js?v=f0feb894b2ad',
   '/book/guide-assets/legal/LICENSE-CONTENT.txt?v=28a9529c7d0b',
   '/book/guide-assets/legal/LICENSE.txt?v=0d96a4ff68ad',
-  '/book/guide-assets/legal/NOTICE.txt?v=d0a041baf852',
+  '/book/guide-assets/legal/NOTICE.txt?v=09ce1c6a176f',
   '/book/guide-assets/legal/OFL-JetBrainsMono.txt?v=b2fe5e898759',
   '/book/guide-assets/legal/OFL-Righteous.txt?v=1c5bc055869d',
   '/book/guide-assets/search-index-lt.js?v=5df8ad292429',

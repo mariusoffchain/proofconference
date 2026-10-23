@@ -1472,7 +1472,9 @@
 
   function updateActive() {
     if (!tocTargets.length) return;
-    const offset = anchorOffset() + 4;
+    // Match the CSS landing position of anchor links, including desktop scroll margin.
+    const margin = parseFloat(getComputedStyle(tocTargets[0].el).scrollMarginTop) || 0;
+    const offset = Math.max(anchorOffset(), margin) + 4;
     let active = null;
     for (const t of tocTargets) {
       if (t.el.getBoundingClientRect().top - offset <= 0) active = t; else break;

@@ -23,6 +23,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/"/>
   </url>
   <url>
+    <loc>https://proofconference.com/book/legal/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/legal/"/>
+  </url>
+  <url>
+    <loc>https://proofconference.com/book/en/legal/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proofconference.com/book/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://proofconference.com/book/en/legal/"/>
+  </url>
+  <url>
     <loc>https://proofconference.com/book/en/</loc>
     <lastmod>2026-10-22</lastmod>
     <xhtml:link rel="alternate" hreflang="lt" href="https://proofconference.com/book/"/>

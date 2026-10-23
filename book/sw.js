@@ -7,7 +7,8 @@
 // - Offline, a request is matched with its query string; only a page address falls back to the same page without it.
 // - On activation it keeps the added files of the former copies, then deletes only the former caches of this book
 //   (proof-book-*), never another cache of the origin.
-const CACHE = 'proof-book-b10f7efb';
+// - The source archive (/book/source/) is left to the browser: never precached, never stored, online only.
+const CACHE = 'proof-book-cf41e577';
 const CORE = [
   '/book/',
   '/book/ai/',
@@ -30,6 +31,7 @@ const CORE = [
   '/book/en/hardware-wallet/',
   '/book/en/introduction/',
   '/book/en/keys/',
+  '/book/en/legal/',
   '/book/en/lightning-and-euros/',
   '/book/en/messages/',
   '/book/en/network/',
@@ -45,13 +47,18 @@ const CORE = [
   '/book/en/work/',
   '/book/first-wallet/',
   '/book/glossary/',
-  '/book/guide-assets/config.js?v=3d67147f5699',
+  '/book/guide-assets/config.js?v=3a5431c63656',
   '/book/guide-assets/fonts/jetbrainsmono-latin-ext.woff2?v=7db7affbce1f',
   '/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4',
   '/book/guide-assets/fonts/righteous-latin-ext.woff2?v=6373d7c7c233',
   '/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2',
-  '/book/guide-assets/guide.css?v=822a1af9fe20',
+  '/book/guide-assets/guide.css?v=b1a0514801f5',
   '/book/guide-assets/guide.js?v=f361d2b9248c',
+  '/book/guide-assets/legal/LICENSE-CONTENT.txt?v=28a9529c7d0b',
+  '/book/guide-assets/legal/LICENSE.txt?v=0d96a4ff68ad',
+  '/book/guide-assets/legal/NOTICE.txt?v=07b9d77860aa',
+  '/book/guide-assets/legal/OFL-JetBrainsMono.txt?v=b2fe5e898759',
+  '/book/guide-assets/legal/OFL-Righteous.txt?v=1c5bc055869d',
   '/book/guide-assets/search-index-lt.js?v=8c9a6da0fbff',
   '/book/guide-assets/search-index.js?v=e6afda0bb20e',
   '/book/guide-assets/site-data-lt.js?v=66fbe9147120',
@@ -59,6 +66,7 @@ const CORE = [
   '/book/hardware-wallet/',
   '/book/introduction/',
   '/book/keys/',
+  '/book/legal/',
   '/book/lightning-and-euros/',
   '/book/messages/',
   '/book/network/',
@@ -76,6 +84,7 @@ const CORE = [
 ];
 const CORE_PATHS = new Set(CORE.map((u) => new URL(u, self.location.origin).pathname));
 const precached = (url) => CORE_PATHS.has(new URL(url).pathname);
+const BYPASS = '/book/source/';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
@@ -113,7 +122,8 @@ function offline(req) {
 
 self.addEventListener('fetch', (e) => {
   const req = e.request;
-  if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  if (req.method !== 'GET' || url.origin !== self.location.origin || url.pathname.indexOf(BYPASS) === 0) return;
   e.respondWith(
     fetch(req)
       .then((res) => {

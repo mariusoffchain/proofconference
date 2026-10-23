@@ -1,0 +1,99 @@
+A Guide to Autonomy, PROOF edition in English and Lithuanian
+============================================================
+
+ORIGINAL WORK
+
+A Guide to Autonomy is a learning book about personal and digital autonomy,
+privacy and money, written for the first PROOF conference (Vilnius, 2026) and
+carried as a community project by Cypher Baltics.
+
+Copyright (C) 2026 the contributors of A Guide to Autonomy.
+
+MODIFICATIONS IN THIS EDITION
+
+This edition was modified on 2026-10-22. The English and Lithuanian Markdown
+sources were revised and rendered as static pages in the guide interface,
+under /book/en/ and /book/ of proofconference.com, with shared checklist
+action IDs, a search index, an offline copy, this notice, a legal page and a
+source archive. The exact sources of this version are in the source archive
+offered on every page (/book/source/proof-guide-source-2026-10-22.zip).
+
+LICENCES
+
+Two licences apply, to two different layers. Neither one relicenses the
+other.
+
+1. Text: Creative Commons Attribution-ShareAlike 4.0 International
+   (CC-BY-SA-4.0), full text in LICENSE-CONTENT. Covers the book text in both
+   languages (the Markdown sources: introduction, part openings, chapters,
+   glossary, checklist actions) and the editorial wording of the interface,
+   including editorial values written inside code or configuration files
+   (titles, introductions, interface strings, action wording).
+
+2. Code: GNU Affero General Public License, version 3 or (at your option) any
+   later version (AGPL-3.0-or-later), full text in LICENSE. Covers the
+   generator, the importer, the browser script, the style sheets, the service
+   worker template, the packaging scripts and the structure of the
+   configuration and data files.
+
+A generated page combines both layers: its book text stays under
+CC BY-SA 4.0, its markup and scripts come from AGPL-3.0-or-later code. Do not
+describe a whole page as being under only one of the two licences.
+
+Whoever redistributes or adapts this work must keep these notices, credit the
+original work, state their own modifications and follow the conditions of
+each licence that applies. For modified code, this includes offering the
+corresponding source as required by the AGPL (sections 4 to 6 for conveying,
+section 13 for users interacting with it over a network). A public
+repository alone does not guarantee compliance.
+
+A reasonable credit for the text is:
+"Based on A Guide to Autonomy, PROOF edition (Cypher Baltics),
+CC BY-SA 4.0. Modified by <your community> on <date>."
+
+THIRD-PARTY RESOURCES
+
+- JetBrains Mono (jetbrainsmono-latin*.woff2): SIL Open Font License 1.1,
+  Copyright 2020 The JetBrains Mono Project Authors. Full text in
+  OFL-JetBrainsMono.txt.
+- Righteous (righteous-latin*.woff2): SIL Open Font License 1.1,
+  Copyright (c) 2011 by Brian J. Bonislawsky DBA Astigmatic (AOETI), with
+  Reserved Font Name "Righteous". Full text in OFL-Righteous.txt.
+  The fonts are subsets in WOFF2 format. Follow the OFL for any further
+  modification, including its Reserved Font Name clause.
+- Python-Markdown 3.9: BSD 3-Clause licence, full text in
+  Markdown-3.9-LICENSE.md. It is used to build the pages; it is not included
+  in the pages nor in the source archive.
+
+The book links to external websites and names products, tools and brands.
+Those websites, names and identities belong to their owners and are not
+licensed by this work.
+
+NAMES AND BRANDING
+
+Neither licence grants rights to the names, logos or visual identities of
+PROOF, the PROOF conference or Cypher Baltics. The conference pages,
+photographs, videos, recordings and sponsor logos of proofconference.com are
+outside this work and outside these licences. A fork chooses its own name,
+logo and colours.
+
+RESOURCE NOTE
+
+A licence and publication review of this edition was carried out on
+2026-10-22. It records the licences chosen for this work and the terms of the
+third-party resources listed above. It is not a guarantee of the ownership of
+every resource, nor a clearance of every quotation, link or name. Report a
+problem to contact@proofconference.com.
+
+
+Lietuviškai (santrauka)
+-----------------------
+
+„A Guide to Autonomy“ parašyta pirmajai PROOF konferencijai (Vilnius, 2026)
+ir įgyvendinama kaip „Cypher Baltics“ bendruomenės projektas. Šis anglų ir
+lietuvių kalbų leidimas pakeistas 2026-10-22. Tekstui taikoma licencija
+CC BY-SA 4.0 (LICENSE-CONTENT), kodui AGPL-3.0-or-later (LICENSE). Šriftams
+taikoma SIL Open Font License 1.1 (OFL-*.txt). Licencijos nesuteikia teisių į
+PROOF, PROOF konferencijos ir „Cypher Baltics“ pavadinimus, logotipus ar
+vizualinį stilių. 2026-10-22 atlikta licencijų peržiūra negarantuoja, kam
+priklauso kiekvienas išteklius.

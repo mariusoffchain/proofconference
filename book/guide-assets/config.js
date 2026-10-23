@@ -130,6 +130,6 @@ window.GUIDE_CONFIG = {
    "label": "AGPL-3.0-or-later",
    "url": "https://www.gnu.org/licenses/agpl-3.0.en.html"
   },
-  "note": "Fonts and other third-party resources keep their own terms. The rights review for a public distribution is not done yet."
+  "note": "Fonts and other third-party resources keep their own terms. Names, logos and conference media are not covered."
  }
 };

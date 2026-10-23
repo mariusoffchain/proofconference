@@ -933,3 +933,6 @@ a.hbtn { text-decoration: none; }
 
 /* Footer links back to the conference site */
 .footer-links a { display: inline-block; padding: 4px 0; }
+
+/* Legal page: the SHA-256 of the source archive wraps on narrow screens */
+.legal-hash { overflow-wrap: anywhere; word-break: break-all; }

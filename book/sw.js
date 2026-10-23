@@ -8,7 +8,7 @@
 // - On activation it keeps the added files of the former copies, then deletes only the former caches of this book
 //   (proof-book-*), never another cache of the origin.
 // - The source archive (/book/source/) is left to the browser: never precached, never stored, online only.
-const CACHE = 'proof-book-cf41e577';
+const CACHE = 'proof-book-adc7e505';
 const CORE = [
   '/book/',
   '/book/ai/',
@@ -47,22 +47,22 @@ const CORE = [
   '/book/en/work/',
   '/book/first-wallet/',
   '/book/glossary/',
-  '/book/guide-assets/config.js?v=3a5431c63656',
+  '/book/guide-assets/config.js?v=7877ea1663a2',
   '/book/guide-assets/fonts/jetbrainsmono-latin-ext.woff2?v=7db7affbce1f',
   '/book/guide-assets/fonts/jetbrainsmono-latin.woff2?v=1e06740a02a4',
   '/book/guide-assets/fonts/righteous-latin-ext.woff2?v=6373d7c7c233',
   '/book/guide-assets/fonts/righteous-latin.woff2?v=17bb3e21ead2',
-  '/book/guide-assets/guide.css?v=b1a0514801f5',
-  '/book/guide-assets/guide.js?v=f361d2b9248c',
+  '/book/guide-assets/guide.css?v=cda70d6706ad',
+  '/book/guide-assets/guide.js?v=d07b9e7f14e1',
   '/book/guide-assets/legal/LICENSE-CONTENT.txt?v=28a9529c7d0b',
   '/book/guide-assets/legal/LICENSE.txt?v=0d96a4ff68ad',
-  '/book/guide-assets/legal/NOTICE.txt?v=07b9d77860aa',
+  '/book/guide-assets/legal/NOTICE.txt?v=d0a041baf852',
   '/book/guide-assets/legal/OFL-JetBrainsMono.txt?v=b2fe5e898759',
   '/book/guide-assets/legal/OFL-Righteous.txt?v=1c5bc055869d',
-  '/book/guide-assets/search-index-lt.js?v=8c9a6da0fbff',
-  '/book/guide-assets/search-index.js?v=e6afda0bb20e',
-  '/book/guide-assets/site-data-lt.js?v=66fbe9147120',
-  '/book/guide-assets/site-data.js?v=ceca24ecd938',
+  '/book/guide-assets/search-index-lt.js?v=5df8ad292429',
+  '/book/guide-assets/search-index.js?v=da2a06ceccbb',
+  '/book/guide-assets/site-data-lt.js?v=e139e2d5eedc',
+  '/book/guide-assets/site-data.js?v=950ed2c34660',
   '/book/hardware-wallet/',
   '/book/introduction/',
   '/book/keys/',

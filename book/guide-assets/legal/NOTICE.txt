@@ -11,12 +11,12 @@ Copyright (C) 2026 the contributors of A Guide to Autonomy.
 
 MODIFICATIONS IN THIS EDITION
 
-This edition was modified on 2026-10-22. The English and Lithuanian Markdown
+This edition was modified on 2026-10-23. The English and Lithuanian Markdown
 sources were revised and rendered as static pages in the guide interface,
 under /book/en/ and /book/ of proofconference.com, with shared checklist
 action IDs, a search index, an offline copy, this notice, a legal page and a
 source archive. The exact sources of this version are in the source archive
-offered on every page (/book/source/proof-guide-source-2026-10-22.zip).
+offered on every page (/book/source/proof-guide-source-2026-10-23.zip).
 
 LICENCES
 
@@ -91,7 +91,7 @@ Lietuviškai (santrauka)
 
 „A Guide to Autonomy“ parašyta pirmajai PROOF konferencijai (Vilnius, 2026)
 ir įgyvendinama kaip „Cypher Baltics“ bendruomenės projektas. Šis anglų ir
-lietuvių kalbų leidimas pakeistas 2026-10-22. Tekstui taikoma licencija
+lietuvių kalbų leidimas pakeistas 2026-10-23. Tekstui taikoma licencija
 CC BY-SA 4.0 (LICENSE-CONTENT), kodui AGPL-3.0-or-later (LICENSE). Šriftams
 taikoma SIL Open Font License 1.1 (OFL-*.txt). Licencijos nesuteikia teisių į
 PROOF, PROOF konferencijos ir „Cypher Baltics“ pavadinimus, logotipus ar

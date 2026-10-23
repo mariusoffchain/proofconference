@@ -270,11 +270,12 @@ mark { background: rgba(255, 255, 255, 0.2); color: var(--white); padding: 0 0.1
   padding: 16px 0 14px;
   border-top: 1px solid var(--line);
 }
-.cover-parts li::before {
-  content: ''; position: absolute; left: 0; top: -1px; height: 3px;
-  width: calc(var(--share, 1) * 100%); background: var(--accent);
-}
 .cp-no { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-text); }
+/* A fixed colour marker per part: a key to the part colours, not a measure of anything. */
+.cp-no::before {
+  content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 8px;
+  vertical-align: 0.05em; background: var(--accent);
+}
 .cp-name { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.45rem); text-transform: uppercase; letter-spacing: 0.03em; color: var(--white); }
 .cp-range { font-size: 12px; letter-spacing: 0.06em; color: var(--muted); white-space: nowrap; }
 

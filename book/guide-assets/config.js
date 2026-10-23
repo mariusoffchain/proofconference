@@ -22,7 +22,7 @@ window.GUIDE_CONFIG = {
   "wordmarkSuffix": "<conference>",
   "initiative": "Cypher Baltics"
  },
- "startChapter": "passwords",
+ "startChapter": "",
  "storagePrefix": "guide-autonomy.proof.v1",
  "theme": {
   "background": "#080808",
@@ -48,10 +48,6 @@ window.GUIDE_CONFIG = {
    "accentText": "#f5a623"
   }
  ],
- "plan": {
-  "chapters": 18,
-  "actions": 90
- },
  "languages": [
   {
    "code": "en",

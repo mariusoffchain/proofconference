@@ -62,7 +62,6 @@
   const BOOK = CONFIG.book || { title: 'A Guide to Autonomy' };
   const EDITION = CONFIG.edition || {};
   const PARTS = CONFIG.parts || [];
-  const PLAN = CONFIG.plan || {};
 
   const chapters = CONTENT.slice().sort((a, b) => a.number - b.number);
   const byId = new Map(chapters.map((c) => [c.id, c]));
@@ -458,8 +457,6 @@
   PAGES.forEach((p) => { if (p.html) builtPages.set(p.id, buildDoc(p, false)); });
   const available = chapters.filter((c) => built.has(c.id));
   const totalActions = available.reduce((n, c) => n + built.get(c.id).actions.length, 0);
-  const planChapters = PLAN.chapters || chapters.length;
-  const planActions = PLAN.actions || totalActions;
 
   const pageOf = (kind, part) => PAGES.find((p) => p.kind === kind && (part === undefined || p.part === part) && builtPages.has(p.id));
   const intro = pageOf('introduction');
@@ -585,31 +582,39 @@
     return parts.length > 1 ? parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1] : parts.join('');
   }
 
+  // "18 chapters with 90 checklist actions, plus ...": what the book contains, never the reader's ticks.
+  function coverageFacts() {
+    const extras = extrasSentence();
+    return plural(available.length, 'chapter', 'chapters') + ' with ' + totalActions + ' checklist ' +
+      (totalActions === 1 ? 'action' : 'actions') + (extras ? ', plus ' + extras : '') + '.';
+  }
+
   /* ---------- views ---------- */
 
   function viewHome() {
-    const startCh = built.has(CONFIG.startChapter) ? byId.get(CONFIG.startChapter) : available[0];
     const first = available[0];
+    // "Start reading": the chapter named by startChapter in config.js, otherwise the introduction, otherwise the
+    // first chapter. "Open a checklist" always opens a chapter checklist: that chapter, or the first one.
+    const startCh = built.has(CONFIG.startChapter) ? byId.get(CONFIG.startChapter) : intro ? null : first;
+    const checklistCh = startCh || first;
     const lines = (BOOK.titleLines || [BOOK.title]).map((l, i) =>
       '<span class="cover-line' + (i === BOOK.outlinedLine ? ' is-outlined' : '') + '">' + esc(l) + '</span>').join(' ');
-    const partSizes = PARTS.map((p) => chapters.filter((c) => c.part === p.number).length);
-    const maxSize = Math.max.apply(null, partSizes.concat(1));
 
-    const coverParts = PARTS.map((p, i) => {
+    const coverParts = PARTS.map((p) => {
       const list = chapters.filter((c) => c.part === p.number);
-      return '<li class="part-' + p.number + '" style="--share:' + (partSizes[i] / maxSize).toFixed(3) + '">' +
+      return '<li class="part-' + p.number + '">' +
         '<span class="cp-no">Part ' + p.number + '</span><span class="cp-name">' + esc(p.name) + '</span>' +
         '<span class="cp-range">' + rangeLabel(list).replace(/^c/, 'C') + '</span></li>';
     }).join('');
 
-    const actions = startCh
-      ? '<a class="btn btn--dark" href="' + chapterHref(startCh.id) + '"><span class="btn-main">Start reading <span aria-hidden="true">→</span></span>' +
-        '<span class="btn-sub">Chapter ' + startCh.number + ' · ' + esc(startCh.title) + '</span></a>'
-      : '';
+    const startLink = (href, sub) => '<a class="btn btn--dark" href="' + href + '"><span class="btn-main">Start reading <span aria-hidden="true">→</span></span>' +
+      '<span class="btn-sub">' + sub + '</span></a>';
+    const actions = startCh ? startLink(chapterHref(startCh.id), 'Chapter ' + startCh.number + ' · ' + esc(startCh.title))
+      : intro ? startLink(pageHref(intro.id), esc(intro.title)) : '';
 
     const alt = [];
-    if (intro) alt.push('<a href="' + pageHref(intro.id) + '">Read the introduction</a>');
-    if (first && startCh && first.id !== startCh.id) alt.push('<a href="' + chapterHref(first.id) + '">Or begin with chapter ' + first.number + '</a>');
+    if (intro && startCh) alt.push('<a href="' + pageHref(intro.id) + '">Read the introduction</a>');
+    if (first && first !== startCh) alt.push('<a href="' + chapterHref(first.id) + '">Or begin with chapter ' + first.number + '</a>');
     alt.push('<a href="#/home/contents">See all ' + chapters.length + ' chapters</a>');
 
     const cover = '<section class="cover" aria-labelledby="page-title">' +
@@ -648,17 +653,13 @@
         extraList(afterKeys(), null, 'contents-extra') +
       '</section>' +
 
+      // #preview keeps its anchor. Plain facts about the content: no score, fraction or bar, which would read as the
+      // reader's progress (that is the next section).
       '<section class="block" aria-labelledby="preview">' +
-        '<p class="block-kicker">Edition coverage</p>' +
-        '<h2 id="preview" tabindex="-1">This edition</h2>' +
-        '<div class="stats">' +
-          stat(String(available.length), planChapters, 'chapters readable here') +
-          stat(String(totalActions), planActions, 'checklist actions usable here') +
-        '</div>' +
+        '<p class="block-kicker">Overview</p>' +
+        '<h2 id="preview" tabindex="-1">In this guide</h2>' +
         '<div class="block-text">' +
-          '<p>The plan of the book counts ' + planChapters + ' chapters and ' + planActions + ' checklist actions. This local edition contains ' +
-            available.length + ' chapters with their ' + totalActions + ' actions' + (extras ? ', plus ' + extras : '') +
-            '. These numbers describe the available content, not your completion.</p>' +
+          '<p>' + coverageFacts() + '</p>' +
           '<p>The text is in English. A Lithuanian version exists in the original PROOF book and is not part of this edition; a French edition is planned.</p>' +
           '<p>This edition runs from local files and is not published.</p>' +
         '</div>' +
@@ -672,7 +673,7 @@
           stat('<span data-stat="chapters-read">0</span>', available.length, 'chapters marked as read', 'read') +
         '</div>' +
         '<div class="block-text"><p>Tick actions in a chapter checklist, or on the page of all actions, to update the actions count. Use the "I have read this chapter" checkbox at the end of a chapter to update the reading count. Scrolling through a page does not mark it as read.</p>' +
-        (startCh ? '<p><a class="btn" href="' + chapterHref(startCh.id, built.get(startCh.id).checklistId) + '">Open a checklist</a></p>' : '') +
+        (checklistCh ? '<p><a class="btn" href="' + chapterHref(checklistCh.id, built.get(checklistCh.id).checklistId) + '">Open a checklist</a></p>' : '') +
         (totalActions ? '<p><a href="' + actionsHref() + '">See all ' + totalActions + ' actions on one page</a></p>' : '') +
         '<p>' + storageSentence + ' Ticks can be removed at any time from each checklist.</p>' +
         '<p><button type="button" class="btn-quiet" data-reset>Clear my progress in this browser</button></p>' +
@@ -692,7 +693,7 @@
     const toc = [
       { id: 'contents', label: 'Contents', href: route('home', 'contents'),
         children: PARTS.map((p) => ({ id: 'part-' + p.number, label: 'Part ' + p.number + ' · ' + p.name, href: route('home', 'part-' + p.number) })) },
-      { id: 'preview', label: 'This edition', href: route('home', 'preview') },
+      { id: 'preview', label: 'In this guide', href: route('home', 'preview') },
       { id: 'progress', label: 'Your progress', href: route('home', 'progress') },
       { id: 'edition', label: 'About this edition', href: route('home', 'edition') }
     ];
@@ -1011,7 +1012,7 @@
   function pageEntries() {
     const entries = [
       { type: 'page', title: 'Contents', kicker: 'Cover', text: chapters.map((c) => c.title).concat(PAGES.map((p) => p.title)).join(' · '), href: route('home', 'contents') },
-      { type: 'page', title: 'This edition', kicker: 'Cover', text: 'Edition coverage: ' + available.length + ' chapters and ' + totalActions + ' actions available, with ' + extrasSentence() + '. Languages: English; Lithuanian in the original PROOF book; French planned. Local edition, not published.', href: route('home', 'preview') },
+      { type: 'page', title: 'In this guide', kicker: 'Cover', text: coverageFacts() + ' Languages: English; Lithuanian in the original PROOF book; French planned. Local edition, not published.', href: route('home', 'preview') },
       { type: 'page', title: 'Your progress', kicker: 'Cover', text: 'Actions done and chapters read, saved in this browser. Open a checklist. Clear progress.', href: route('home', 'progress') },
       { type: 'page', title: 'About this edition', kicker: 'Cover', text: 'PROOF Conference, ' + (EDITION.initiative || '') + ', licence, fork, independent editions.', href: route('home', 'edition') },
       { type: 'page', title: 'Where to start?', kicker: 'Orientation', text: 'Autonomy is built gradually. Pick a concrete need, explore its chapter, then start with 1 action suited to your situation.', href: route('start') },

@@ -2,7 +2,7 @@
 window.GUIDE_SITE = {
  "lang": "lt",
  "base": "/book/",
- "search": "/book/guide-assets/search-index-lt.js?v=5df8ad292429",
+ "search": "/book/guide-assets/search-index-lt.js?v=420ab667f494",
  "sw": "/book/sw.js",
  "swScope": "/book/",
  "chapters": [

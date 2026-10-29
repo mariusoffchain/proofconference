@@ -8,7 +8,7 @@
 // - On activation it keeps the added files of the former copies, then deletes only the former caches of this book
 //   (proof-book-*), never another cache of the origin.
 // - The source archive (/book/source/) is left to the browser: never precached, never stored, online only.
-const CACHE = 'proof-book-1e14252c';
+const CACHE = 'proof-book-2d27c5ef';
 const CORE = [
   '/book/',
   '/book/ai/',
@@ -56,14 +56,14 @@ const CORE = [
   '/book/guide-assets/guide.js?v=f0feb894b2ad',
   '/book/guide-assets/legal/LICENSE-CONTENT.txt?v=28a9529c7d0b',
   '/book/guide-assets/legal/LICENSE.txt?v=0d96a4ff68ad',
-  '/book/guide-assets/legal/NOTICE.txt?v=459cf36a093c',
+  '/book/guide-assets/legal/NOTICE.txt?v=dd76450784e4',
   '/book/guide-assets/legal/OFL-JetBrainsMono.txt?v=b2fe5e898759',
   '/book/guide-assets/legal/OFL-Righteous.txt?v=1c5bc055869d',
   '/book/guide-assets/replays.js?v=1cffc6a16c9a',
-  '/book/guide-assets/search-index-lt.js?v=5df8ad292429',
-  '/book/guide-assets/search-index.js?v=da2a06ceccbb',
-  '/book/guide-assets/site-data-lt.js?v=e139e2d5eedc',
-  '/book/guide-assets/site-data.js?v=950ed2c34660',
+  '/book/guide-assets/search-index-lt.js?v=420ab667f494',
+  '/book/guide-assets/search-index.js?v=203deef950ba',
+  '/book/guide-assets/site-data-lt.js?v=a992669096a2',
+  '/book/guide-assets/site-data.js?v=7774531f9564',
   '/book/hardware-wallet/',
   '/book/introduction/',
   '/book/keys/',
